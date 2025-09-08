@@ -55,11 +55,14 @@ END ADR_AGENT_PROTOCOL
 
 | ID   | Title                                                        | Date       | Status   | Supersedes | Superseded by |
 | ---- | ------------------------------------------------------------ | ---------- | -------- | ---------- | ------------- |
+| 0008 | [Data-Centric Architecture with Core Tool Separation](#adr-0008) | 2025-09-08 | Accepted | ADR-0001   | —             |
+| 0007 | [Session Continuity and Context Preservation](#adr-0007) | 2025-09-08 | Accepted | —          | —             |
+| 0006 | [Production Readiness Validation Framework](#adr-0006) | 2025-09-08 | Accepted | —          | —             |
 | 0005 | [AI-Powered Page Prioritization with OpenAI](#adr-0005) | 2025-01-08 | Accepted | —          | —             |
 | 0004 | [Parallel Processing for Website Intelligence](#adr-0004) | 2025-01-08 | Accepted | —          | —             |
 | 0003 | [HTTP-Only Website Content Extraction](#adr-0003) | 2025-01-08 | Accepted | —          | —             |
 | 0002 | [Dialogue-Style Prompting System](#adr-0002) | 2025-01-08 | Accepted | —          | —             |
-| 0001 | [Service-Based Modular Architecture](#adr-0001) | 2025-01-08 | Accepted | —          | —             |
+| 0001 | [Service-Based Modular Architecture](#adr-0001) | 2025-01-08 | Superseded | —          | ADR-0008      |
 
 <!-- END:ADR_INDEX -->
 
@@ -109,7 +112,7 @@ END ADR_AGENT_PROTOCOL
 
 <a id="adr-0001"></a>
 **Date**: 2025-01-08
-**Status**: Accepted  
+**Status**: Superseded  
 **Owner**: Cold Outreach Platform Team
 
 ### Context
@@ -131,7 +134,7 @@ Implement a service-based modular architecture where each external service integ
 - **Pros**: Clear separation of concerns, easy service swapping, isolated testing, standardized structure
 - **Cons / risks**: Potential code duplication between services, need for centralized configuration management
 - **Supersedes**: —
-- **Superseded by**: —
+- **Superseded by**: ADR-0008
 
 ### Compliance / Verification
 
@@ -272,6 +275,108 @@ Implement AI-powered page prioritization using OpenAI with dialogue-style prompt
 ### Compliance / Verification
 
 Page prioritization must use dialogue-style prompts stored in prompts/ directory. Classification accuracy must be manually validated on test datasets. Priority categories must be clearly defined and consistently applied.
+
+---
+
+## ADR-0006 — Production Readiness Validation Framework
+
+<a id="adr-0006"></a>
+**Date**: 2025-09-08
+**Status**: Accepted
+**Owner**: Production Deployment Team
+
+### Context
+
+The cold outreach platform has reached a mature state with multiple services and AI integrations. Before production deployment, all system components need comprehensive validation to ensure reliability, performance, and compliance with architectural standards.
+
+### Alternatives
+
+- **Manual Testing**: Ad-hoc validation of system components - rejected due to inconsistency and potential oversight
+- **Unit Testing Only**: Focus on individual component testing - rejected as insufficient for system-level validation
+- **External Audit**: Third-party validation service - rejected due to cost and timeline constraints
+
+### Decision
+
+Implement a comprehensive production readiness validation framework that systematically verifies all system components including file structure, service organization, API integrations, analytics capabilities, and architectural compliance before deployment.
+
+### Consequences
+
+- **Pros**: Ensures system reliability, validates architectural compliance, prevents production issues, provides deployment confidence
+- **Cons / risks**: Requires systematic validation time, may reveal additional issues requiring fixes
+- **Supersedes**: —
+- **Superseded by**: —
+
+### Compliance / Verification
+
+All services must pass validation checklist including proper file structure, working API connections, complete documentation, and performance benchmarks before production deployment.
+
+---
+
+## ADR-0007 — Session Continuity and Context Preservation
+
+<a id="adr-0007"></a>
+**Date**: 2025-09-08
+**Status**: Accepted
+**Owner**: Development Workflow Team
+
+### Context
+
+Complex development sessions often hit context limits or require continuation across multiple sessions. Critical technical decisions, file locations, architectural patterns, and implementation details need to be preserved to maintain development momentum and avoid rework.
+
+### Alternatives
+
+- **Basic Session Summary**: Simple text summary of work done - rejected as insufficient for technical continuity
+- **Git History Only**: Rely on commit messages for context - rejected as git history doesn't capture reasoning or failed attempts
+- **Manual Documentation**: Developers manually document everything - rejected due to human error and inconsistency
+
+### Decision
+
+Implement structured session continuity framework with chronological analysis, technical context tracking, architectural decision preservation, and comprehensive state documentation to enable seamless session continuation.
+
+### Consequences
+
+- **Pros**: Enables seamless development continuation, preserves technical context, reduces rework, maintains architectural consistency
+- **Cons / risks**: Requires structured documentation approach, additional overhead during development
+- **Supersedes**: —
+- **Superseded by**: —
+
+### Compliance / Verification
+
+All major development sessions must be documented with technical achievements, architectural decisions, file changes, and current system state to enable future continuation.
+
+---
+
+## ADR-0008 — Data-Centric Architecture with Core Tool Separation
+
+<a id="adr-0008"></a>
+**Date**: 2025-09-08
+**Status**: Accepted
+**Owner**: Platform Architecture Team
+
+### Context
+
+The initial service-based architecture mixed data management with service integrations, creating confusion between data states (raw leads, processed leads) and external API integrations. This led to unclear responsibility boundaries and made the system harder to understand and maintain.
+
+### Alternatives
+
+- **Pure Service Architecture**: Continue treating everything as a service - rejected due to conceptual confusion between data and services
+- **Monolithic Data Processing**: Single directory for all data operations - rejected as it would lose modularity benefits
+- **Complex Nested Structure**: Deep directory hierarchies - rejected due to path management complexity
+
+### Decision
+
+Implement data-centric architecture with three distinct layers: `leads/` for data management by processing status, `core/` for shared tools and prompts, and `services/` exclusively for external API integrations. Data flows through clear states: raw → processed → enriched → ready.
+
+### Consequences
+
+- **Pros**: Clear conceptual separation, predictable data flow, reusable core tools, easier maintenance, future-proof structure
+- **Cons / risks**: Required migration effort, need to update existing documentation and scripts
+- **Supersedes**: ADR-0001
+- **Superseded by**: —
+
+### Compliance / Verification
+
+Data must progress through defined states in leads/ directory. Core tools must be accessible to all services. Services must only contain external integrations. Path configurations must follow documented patterns in CLAUDE.md.
 
 ---
 

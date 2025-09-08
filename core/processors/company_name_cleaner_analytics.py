@@ -83,7 +83,7 @@ class CompanyNameCleanerAnalytics:
 
 def load_api_key():
     """Load OpenAI API key from .env"""
-    env_path = os.path.join(os.path.dirname(__file__), '..', '..', '..', '.env')
+    env_path = os.path.join(os.path.dirname(__file__), '..', '..', '.env')
     
     if os.path.exists(env_path):
         with open(env_path, 'r') as f:
@@ -95,7 +95,7 @@ def load_api_key():
 
 def load_prompt_with_metadata():
     """Load dialogue-style prompt and extract metadata"""
-    prompt_path = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'prompts', 'company_name_shortener.txt')
+    prompt_path = os.path.join(os.path.dirname(__file__), '..', 'prompts', 'company_name_shortener.txt')
     
     if not os.path.exists(prompt_path):
         raise FileNotFoundError(f"Prompt file not found: {prompt_path}")
@@ -122,7 +122,7 @@ def load_prompt_with_metadata():
     else:
         prompt_content = content.strip()
     
-    # Parse dialogue structure (same as before)
+    # Parse dialogue structure
     lines = prompt_content.split('\n')
     system_prompt = ""
     base_messages = []
