@@ -1,0 +1,53 @@
+{
+  "cleanupPeriodDays": 90,
+  "includeCoAuthoredBy": true,
+  "permissions": {
+    "allow": [
+      "*",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(where python)",
+      "Read(/C:\\Users\\79818\\Desktop\\Outreach - new/**)",
+      "Bash(test_apollo.bat)",
+      "mcp__ide__executeCode",
+      "Bash(curl:*)",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "Read(/C:\\Users\\79818\\Desktop\\Outreach - new\\services\\instantly\\scripts/**)",
+      "Bash(\"C:\\Users\\79818\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe\" \"C:\\Users\\79818\\Desktop\\Outreach - new\\services\\instantly\\scripts\\test_connection.py\")",
+      "Bash(test_instantly.bat)",
+      "Bash(cmd /c:*)",
+      "Bash(C:Users79818AppDataLocalMicrosoftWindowsAppspython.exe apollo_lead_collector.py)",
+      "Read(/C:\\Users\\79818\\Desktop\\Outreach - new\\services\\instantly\\scripts/**)",
+      "Read(/C:\\Users\\79818\\Desktop\\Outreach - new/**)",
+      "Read(/C:\\Users\\79818\\Desktop\\Outreach - new/**)",
+      "Read(/C:\\Users\\79818\\Desktop\\Outreach - new/**)",
+      "Read(/C:\\Users\\79818\\Desktop\\Cold Outreach/**)",
+      "Read(/C:\\Users\\79818\\Desktop\\Cold Outreach/**)",
+      "Bash(py --version)",
+      "Bash(py -m pip install:*)",
+      "Bash(py:*)",
+      "Bash(dir:*)",
+      "Bash(tree:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "C:\\Users\\79818\\Desktop\\MCP Global\\mcp-servers\\google_workspace_mcp",
+      "C:\\Users\\79818\\.claude\\commands",
+      "C:\\Users\\79818\\.google_workspace_mcp",
+      "C:\\Users\\79818\\.claude"
+    ]
+  },
+  "model": "sonnet",
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "*"
+  ],
+  "disabledMcpjsonServers": [],
+  "hooks": {}
+}

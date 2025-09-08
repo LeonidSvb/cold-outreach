@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instantly API Campaign Analyzer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+        .warning { background-color: #fff3cd; color: #856404; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .metric { display: inline-block; margin: 10px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .campaign-card { border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 5px; }
+        button { padding: 10px 20px; margin: 5px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #results { margin-top: 20px; }
+        .recommendation { background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Instantly Campaign Analyzer & Optimizer</h1>
+        <div id="status" class="status info">Ready to connect to Instantly API...</div>
+        
+        <button onclick="startAnalysis()">Start Campaign Analysis & Updates</button>
+        <button onclick="clearResults()">Clear Results</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const API_KEY = "YzZlYTFiZmQtNmZhYy00ZTQxLTkyNWMtNDYyODQ3N2UyOTU0OnpoTXlidndIZ3JuZQ==";
+        const BASE_URL = "https://api.instantly.ai/api/v1";
+        
+        let campaignResults = {
+            total_campaigns: 0,
+            successful_updates: 0,
+            failed_updates: 0,
+            campaign_analyses: [],
+            all_recommendations: []
+        };
+
+        function updateStatus(message, type = 'info') {
+            const statusEl = document.getElementById('status');
+            statusEl.textContent = message;
+            statusEl.className = `status ${type}`;
+        }
+
+        function appendResult(content) {
+            const resultsEl = document.getElementById('results');
+            resultsEl.innerHTML += content;
+        }
+
+        function clearResults() {
+            document.getElementById('results').innerHTML = '';
+            campaignResults = {
+                total_campaigns: 0,
+                successful_updates: 0,
+                failed_updates: 0,
+                campaign_analyses: [],
+                all_recommendations: []
+            };
+        }
+
+        async function makeAPIRequest(endpoint, method = 'GET', data = null) {
+            try {
+                const options = {
+                    method: method,
+                    headers: {
+                        'Authorization': `Bearer ${API_KEY}`,
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
+                    }
+                };
+
+                if (data && method !== 'GET') {
+                    options.body = JSON.stringify(data);
+                }
+
+                const response = await fetch(`${BASE_URL}/${endpoint}`, options);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}, text: ${await response.text()}`);
+                }
+                
+                return await response.json();
+            } catch (error) {
+                console.error('API request failed:', error);
+                throw error;
+            }
+        }
+
+        function analyzeCampaignPerformance(campaignData, analyticsData = null) {
+            const analysis = {
+                campaign_id: campaignData.id || campaignData._id,
+                campaign_name: campaignData.name || 'Unnamed Campaign',
+                status: campaignData.status || 'Unknown',
+                created_at: campaignData.created_at || campaignData.createdAt,
+                total_leads: campaignData.total_leads || campaignData.leads?.length || 0,
+                sent_count: analyticsData?.sent || campaignData.sent || 0,
+                opened_count: analyticsData?.opened || campaignData.opened || 0,
+                clicked_count: analyticsData?.clicked || campaignData.clicked || 0,
+                replied_count: analyticsData?.replied || campaignData.replied || 0,
+                bounced_count: analyticsData?.bounced || campaignData.bounced || 0,
+            };
+
+            // Calculate rates
+            if (analysis.sent_count > 0) {
+                analysis.open_rate = Math.round((analysis.opened_count / analysis.sent_count) * 100 * 100) / 100;
+                analysis.click_rate = Math.round((analysis.clicked_count / analysis.sent_count) * 100 * 100) / 100;
+                analysis.reply_rate = Math.round((analysis.replied_count / analysis.sent_count) * 100 * 100) / 100;
+                analysis.bounce_rate = Math.round((analysis.bounced_count / analysis.sent_count) * 100 * 100) / 100;
+            } else {
+                analysis.open_rate = 0;
+                analysis.click_rate = 0;
+                analysis.reply_rate = 0;
+                analysis.bounce_rate = 0;
+            }
+
+            return analysis;
+        }
+
+        function generateOptimizationRecommendations(analysis) {
+            const recommendations = [];
+
+            // Open rate recommendations
+            if (analysis.open_rate < 20) {
+                recommendations.push({
+                    type: 'Subject Line Optimization',
+                    priority: 'High',
+                    impact: 8,
+                    effort: 3,
+                    recommendation: 'Open rate is below industry average (20-25%). Consider A/B testing subject lines with personalization, urgency, or curiosity gaps.'
+                });
+            }
+
+            // Click rate recommendations
+            if (analysis.click_rate < 2) {
+                recommendations.push({
+                    type: 'Content Optimization',
+                    priority: 'Medium',
+                    impact: 6,
+                    effort: 5,
+                    recommendation: 'Click rate is low. Review email content for clear CTAs, value proposition, and mobile optimization.'
+                });
+            }
+
+            // Reply rate recommendations
+            if (analysis.reply_rate < 1) {
+                recommendations.push({
+                    type: 'Personalization Enhancement',
+                    priority: 'High',
+                    impact: 9,
+                    effort: 6,
+                    recommendation: 'Reply rate suggests low engagement. Increase personalization, research prospects better, and adjust messaging tone.'
+                });
+            }
+
+            // Bounce rate recommendations
+            if (analysis.bounce_rate > 5) {
+                recommendations.push({
+                    type: 'List Hygiene',
+                    priority: 'Critical',
+                    impact: 10,
+                    effort: 4,
+                    recommendation: 'High bounce rate indicates poor list quality. Implement email verification and remove invalid addresses.'
+                });
+            }
+
+            // Add general recommendations based on performance
+            if (analysis.sent_count === 0) {
+                recommendations.push({
+                    type: 'Campaign Activation',
+                    priority: 'Critical',
+                    impact: 10,
+                    effort: 2,
+                    recommendation: 'Campaign has not sent any emails yet. Activate the campaign to start generating data.'
+                });
+            }
+
+            return recommendations;
+        }
+
+        function createCampaignUpdateData(analysis, recommendations) {
+            return {
+                tags: [
+                    `analyzed_${new Date().toISOString().split('T')[0].replace(/-/g, '')}`,
+                    `open_rate_${analysis.open_rate}pct`,
+                    `reply_rate_${analysis.reply_rate}pct`
+                ],
+                notes: `Campaign Analysis Report - ${new Date().toLocaleDateString()}
+
+Performance Metrics:
+- Open Rate: ${analysis.open_rate}%
+- Click Rate: ${analysis.click_rate}%
+- Reply Rate: ${analysis.reply_rate}%
+- Bounce Rate: ${analysis.bounce_rate}%
+
+Total Stats:
+- Sent: ${analysis.sent_count}
+- Opened: ${analysis.opened_count}
+- Clicked: ${analysis.clicked_count}
+- Replied: ${analysis.replied_count}
+- Bounced: ${analysis.bounced_count}
+
+Top Recommendations:
+${recommendations.slice(0, 3).map(rec => `- ${rec.recommendation}`).join('\n')}
+
+Analysis completed by Claude AI Campaign Optimizer`
+            };
+        }
+
+        function displayCampaignAnalysis(analysis, recommendations, updateSuccess) {
+            return `
+                <div class="campaign-card">
+                    <h3>${analysis.campaign_name}</h3>
+                    <div class="metric">
+                        <strong>Status:</strong> ${analysis.status}
+                    </div>
+                    <div class="metric">
+                        <strong>Total Leads:</strong> ${analysis.total_leads}
+                    </div>
+                    <div class="metric">
+                        <strong>Open Rate:</strong> ${analysis.open_rate}%
+                    </div>
+                    <div class="metric">
+                        <strong>Click Rate:</strong> ${analysis.click_rate}%
+                    </div>
+                    <div class="metric">
+                        <strong>Reply Rate:</strong> ${analysis.reply_rate}%
+                    </div>
+                    <div class="metric">
+                        <strong>Bounce Rate:</strong> ${analysis.bounce_rate}%
+                    </div>
+                    <div class="${updateSuccess ? 'success' : 'error'}">
+                        Update Status: ${updateSuccess ? '✓ Successfully updated' : '✗ Update failed'}
+                    </div>
+                    <h4>Recommendations:</h4>
+                    ${recommendations.map(rec => `
+                        <div class="recommendation">
+                            <strong>${rec.type} (${rec.priority} Priority)</strong><br>
+                            ${rec.recommendation}
+                            <br><small>Impact: ${rec.impact}/10 | Effort: ${rec.effort}/10</small>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        async function startAnalysis() {
+            updateStatus('Starting campaign analysis...', 'info');
+            appendResult('<h2>Campaign Analysis Results</h2>');
+
+            try {
+                // Step 1: Retrieve all campaigns
+                updateStatus('Retrieving campaigns from Instantly...', 'info');
+                const campaigns = await makeAPIRequest('campaign/list');
+                
+                if (!campaigns || campaigns.length === 0) {
+                    updateStatus('No campaigns found or failed to retrieve campaigns.', 'error');
+                    appendResult('<div class="error">No campaigns found or API request failed.</div>');
+                    return;
+                }
+
+                campaignResults.total_campaigns = campaigns.length;
+                updateStatus(`Found ${campaigns.length} campaigns. Starting analysis...`, 'success');
+                appendResult(`<div class="success">Found ${campaigns.length} campaigns to analyze</div>`);
+
+                // Step 2: Process each campaign
+                for (let i = 0; i < campaigns.length; i++) {
+                    const campaign = campaigns[i];
+                    updateStatus(`Processing campaign ${i + 1}/${campaigns.length}: ${campaign.name || 'Unnamed'}`, 'info');
+
+                    try {
+                        // Get campaign details
+                        let campaignDetails = campaign;
+                        try {
+                            const details = await makeAPIRequest(`campaign/${campaign.id || campaign._id}`);
+                            if (details) campaignDetails = details;
+                        } catch (e) {
+                            console.warn('Failed to get detailed campaign data, using basic data');
+                        }
+
+                        // Get analytics data
+                        let analyticsData = null;
+                        try {
+                            analyticsData = await makeAPIRequest(`analytics/campaign/${campaign.id || campaign._id}`);
+                        } catch (e) {
+                            console.warn('Failed to get analytics data');
+                        }
+
+                        // Analyze campaign
+                        const analysis = analyzeCampaignPerformance(campaignDetails, analyticsData);
+                        campaignResults.campaign_analyses.push(analysis);
+
+                        // Generate recommendations
+                        const recommendations = generateOptimizationRecommendations(analysis);
+                        campaignResults.all_recommendations.push(...recommendations);
+
+                        // Update campaign
+                        const updateData = createCampaignUpdateData(analysis, recommendations);
+                        let updateSuccess = false;
+                        
+                        try {
+                            const updateResult = await makeAPIRequest(`campaign/${campaign.id || campaign._id}`, 'PATCH', updateData);
+                            updateSuccess = !!updateResult;
+                            if (updateSuccess) {
+                                campaignResults.successful_updates++;
+                            } else {
+                                campaignResults.failed_updates++;
+                            }
+                        } catch (e) {
+                            console.error('Update failed:', e);
+                            campaignResults.failed_updates++;
+                        }
+
+                        // Display results
+                        appendResult(displayCampaignAnalysis(analysis, recommendations, updateSuccess));
+
+                        // Rate limiting
+                        await new Promise(resolve => setTimeout(resolve, 1000));
+
+                    } catch (error) {
+                        console.error(`Error processing campaign ${campaign.name}:`, error);
+                        appendResult(`<div class="error">Failed to process campaign: ${campaign.name} - ${error.message}</div>`);
+                        campaignResults.failed_updates++;
+                    }
+                }
+
+                // Final summary
+                displayFinalSummary();
+                updateStatus('Analysis complete!', 'success');
+
+            } catch (error) {
+                updateStatus(`Analysis failed: ${error.message}`, 'error');
+                console.error('Analysis error:', error);
+            }
+        }
+
+        function displayFinalSummary() {
+            const successRate = campaignResults.total_campaigns > 0 
+                ? (campaignResults.successful_updates / campaignResults.total_campaigns * 100).toFixed(1)
+                : 0;
+
+            const summary = `
+                <div style="margin-top: 30px; padding: 20px; border: 2px solid #007bff; border-radius: 10px;">
+                    <h2>Final Analysis Summary</h2>
+                    <div class="metric"><strong>Total Campaigns Found:</strong> ${campaignResults.total_campaigns}</div>
+                    <div class="metric"><strong>Successful Updates:</strong> ${campaignResults.successful_updates}</div>
+                    <div class="metric"><strong>Failed Updates:</strong> ${campaignResults.failed_updates}</div>
+                    <div class="metric"><strong>Success Rate:</strong> ${successRate}%</div>
+                    <div class="metric"><strong>Total Recommendations Generated:</strong> ${campaignResults.all_recommendations.length}</div>
+                    
+                    <h3>Key Insights:</h3>
+                    <ul>
+                        <li>Average open rate across all campaigns: ${calculateAverageMetric('open_rate')}%</li>
+                        <li>Average reply rate across all campaigns: ${calculateAverageMetric('reply_rate')}%</li>
+                        <li>Total emails sent: ${calculateTotalMetric('sent_count')}</li>
+                        <li>Total replies received: ${calculateTotalMetric('replied_count')}</li>
+                    </ul>
+                </div>
+            `;
+            
+            appendResult(summary);
+        }
+
+        function calculateAverageMetric(metric) {
+            if (campaignResults.campaign_analyses.length === 0) return 0;
+            const total = campaignResults.campaign_analyses.reduce((sum, analysis) => sum + analysis[metric], 0);
+            return (total / campaignResults.campaign_analyses.length).toFixed(2);
+        }
+
+        function calculateTotalMetric(metric) {
+            return campaignResults.campaign_analyses.reduce((sum, analysis) => sum + analysis[metric], 0);
+        }
+    </script>
+</body>
+</html>
