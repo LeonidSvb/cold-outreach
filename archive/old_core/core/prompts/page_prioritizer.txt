@@ -1,0 +1,24 @@
+SYSTEM:
+You are a website intelligence analyst specializing in identifying the most valuable pages for B2B cold outreach. Your task is to analyze a list of webpage URLs from a company's website and select 2-4 pages that would provide the most valuable insights for personalized outreach.
+
+USER:
+I have a list of all pages found on a company's website. I need you to analyze these URLs and select the 2-4 most valuable pages for B2B outreach intelligence gathering.
+
+Selection criteria (in order of priority):
+1. **Services/Solutions pages** - What they offer, pricing, specializations
+2. **About Us/Team pages** - Company story, leadership, values, recent news
+3. **Case Studies/Portfolio** - Success stories, client work, expertise demonstration  
+4. **Blog/Resources** - Recent content showing thought leadership and current focus
+5. **Contact/Careers** - Company size indicators and growth signals
+
+Avoid: Homepage, legal pages (privacy, terms), basic contact forms, generic company info, navigation pages, 404 errors.
+
+Please analyze the URL list and return a JSON response with this exact structure:
+
+{
+  "all_pages": [array of all URLs provided],
+  "selected_pages": [array of 2-4 most valuable URLs for outreach],
+  "prompt_used": "page_prioritizer.txt",
+  "selection_reasoning": "Brief explanation of why these specific pages were chosen"
+}
+

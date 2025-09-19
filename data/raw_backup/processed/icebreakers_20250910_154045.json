@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "generator_version": "1.0.0",
+    "generated_at": "2025-09-10T15:40:52.344372",
+    "session_stats": {
+      "session_start": "2025-09-10T15:40:45.256494",
+      "contacts_processed": 3,
+      "templates_used": {
+        "template_02_location": 3
+      },
+      "api_calls": 3,
+      "total_cost": 0.001988,
+      "errors": []
+    },
+    "total_contacts": 3,
+    "success_rate": 1.0
+  },
+  "results": [
+    {
+      "contact_name": "Renaud",
+      "company_name": "Altitude Stratégies",
+      "template_used": "template_02_location",
+      "icebreaker_text": "Hey Renaud! Fellow Salaberry-de-Valleyfield biz owner here 👋 Love Altitude Stratégies! How's the artistic direction going rn? 🎨 Interested in automating tasks to save time? 🤖 Let's chat!",
+      "processing_time": 2.193084239959717,
+      "success": true,
+      "error": null,
+      "tokens_used": 342,
+      "api_cost": 0.000684
+    },
+    {
+      "contact_name": "Brent",
+      "company_name": "Big Fish Creative",
+      "template_used": "template_02_location",
+      "icebreaker_text": "Hey Brent! \n\nFellow Vancouver business owner here 👋 \n\nLove what you're doing with Big Fish Creative. How's the team handling the workload rn?",
+      "processing_time": 1.3993916511535645,
+      "success": true,
+      "error": null,
+      "tokens_used": 313,
+      "api_cost": 0.000626
+    },
+    {
+      "contact_name": "Grace",
+      "company_name": "Stryve Digital Marketing",
+      "template_used": "template_02_location",
+      "icebreaker_text": "Hey Grace! \n\nFellow Kitchener business owner here 👋 \n\nLove what you're doing with Stryve Digital Marketing. Must be keeping you busy! Wondering - how do you manage your time with such a creative role? 🤔",
+      "processing_time": 1.2630972862243652,
+      "success": true,
+      "error": null,
+      "tokens_used": 339,
+      "api_cost": 0.0006780000000000001
+    }
+  ]
+}

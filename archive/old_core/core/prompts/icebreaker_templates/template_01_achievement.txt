@@ -1,0 +1,5 @@
+Hey {first_name}! 
+
+Just saw {company_name} {achievement_context}. That's pretty impressive tbh. 
+
+Quick q - {relevant_question}?

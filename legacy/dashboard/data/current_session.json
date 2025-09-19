@@ -1,0 +1,237 @@
+{
+  "session_id": "website_intelligence_processor_20250910_144747",
+  "script_name": "website_intelligence_processor",
+  "timestamp": "2025-09-10T14:47:47.663737",
+  "date": "2025-09-10",
+  "time": "14:47:47",
+  "summary": {
+    "duration": 152.02435612678528,
+    "success_rate": 0.0,
+    "items_processed": 3,
+    "api_cost": 0.0037,
+    "errors_count": 0,
+    "status": "completed"
+  },
+  "detailed_data": {
+    "performance_metrics": {
+      "avg_processing_time": 50.67,
+      "avg_pages_found": 33.7,
+      "total_pages_discovered": 101,
+      "successful_ai_prioritizations": 0,
+      "api_calls_made": 3
+    },
+    "processing_results": [
+      {
+        "domain": "altitudestrategies.ca",
+        "success": true,
+        "processing_time": 10.677021265029907,
+        "pages_found": 1,
+        "pages_selected": 1,
+        "cost": 0.0
+      },
+      {
+        "domain": "stryvemarketing.com",
+        "success": true,
+        "processing_time": 67.78536415100098,
+        "pages_found": 50,
+        "pages_selected": 3,
+        "cost": 0.0
+      },
+      {
+        "domain": "bigfishcreative.ca",
+        "success": true,
+        "processing_time": 151.9620292186737,
+        "pages_found": 50,
+        "pages_selected": 4,
+        "cost": 0.0
+      }
+    ],
+    "session_stats": {
+      "domains_processed": 3,
+      "total_pages_found": 101,
+      "successful_ai_prioritizations": 0,
+      "total_api_calls": 3,
+      "total_cost": 0.0037,
+      "average_pages_per_domain": 33.7,
+      "success_rate": 0.0,
+      "total_runtime": 152.02,
+      "average_time_per_domain": 50.67
+    },
+    "detailed_logs": [
+      {
+        "timestamp": "2025-09-10T14:45:15.639380",
+        "event_type": "SESSION_START",
+        "message": "Начало обработки CSV: ../../leads/1-raw/Lumid - verification - Canada_cleaned.csv",
+        "data": {
+          "input_file": "../../leads/1-raw/Lumid - verification - Canada_cleaned.csv",
+          "test_limit": 3
+        }
+      },
+      {
+        "timestamp": "2025-09-10T14:45:15.663628",
+        "event_type": "DOMAIN_START",
+        "message": "Начало обработки домена: altitudestrategies.ca",
+        "data": {}
+      },
+      {
+        "timestamp": "2025-09-10T14:45:15.663628",
+        "event_type": "DOMAIN_START",
+        "message": "Начало обработки домена: bigfishcreative.ca",
+        "data": {}
+      },
+      {
+        "timestamp": "2025-09-10T14:45:15.663628",
+        "event_type": "DOMAIN_START",
+        "message": "Начало обработки домена: stryvemarketing.com",
+        "data": {}
+      },
+      {
+        "timestamp": "2025-09-10T14:45:26.340650",
+        "event_type": "DOMAIN_SUCCESS",
+        "message": "Домен обработан успешно за 10.68с",
+        "data": {
+          "domain": "altitudestrategies.ca",
+          "pages_found": 1,
+          "pages_selected": 1,
+          "processing_time": 10.677021265029907,
+          "cost": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-09-10T14:46:23.448992",
+        "event_type": "DOMAIN_SUCCESS",
+        "message": "Домен обработан успешно за 67.79с",
+        "data": {
+          "domain": "stryvemarketing.com",
+          "pages_found": 50,
+          "pages_selected": 3,
+          "processing_time": 67.78536415100098,
+          "cost": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-09-10T14:47:47.625658",
+        "event_type": "DOMAIN_SUCCESS",
+        "message": "Домен обработан успешно за 151.96с",
+        "data": {
+          "domain": "bigfishcreative.ca",
+          "pages_found": 50,
+          "pages_selected": 4,
+          "processing_time": 151.9620292186737,
+          "cost": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-09-10T14:47:47.663737",
+        "event_type": "SESSION_COMPLETE",
+        "message": "Сессия завершена. Обработано: 3 доменов",
+        "data": {
+          "total_time": 152.02435612678528,
+          "success_rate": 0.0,
+          "output_file": "../../leads/1-raw/Lumid - verification - Canada_cleaned_with_intelligence.csv"
+        }
+      }
+    ],
+    "error_details": [],
+    "configuration": {
+      "input_file": "../../leads/1-raw/Lumid - verification - Canada_cleaned.csv",
+      "output_file": "../../leads/1-raw/Lumid - verification - Canada_cleaned_with_intelligence.csv",
+      "test_limit": 3,
+      "parallel_workers": 3,
+      "max_pages_per_domain": 50,
+      "ai_model": "gpt-3.5-turbo",
+      "session_id": "website_intel_20250910_144515"
+    },
+    "environment_info": {
+      "python_version": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+      "working_directory": "C:\\Users\\79818\\Desktop\\Outreach - new\\core\\processors",
+      "script_version": "1.1.0"
+    },
+    "api_calls_breakdown": [
+      {
+        "endpoint": "chat/completions",
+        "calls": 3,
+        "total_cost": 0.0037
+      }
+    ],
+    "timing_breakdown": {
+      "total_session_time": 152.02435612678528,
+      "avg_per_domain": 50.67,
+      "setup_time": 2.0,
+      "processing_time": 150.02435612678528,
+      "cleanup_time": 0.5
+    },
+    "quality_metrics": {
+      "domains_processed": 3,
+      "success_rate": 0.0,
+      "ai_success_rate": 0.0,
+      "avg_pages_quality": 33.7,
+      "cost_efficiency": 0.0012333333333333335
+    },
+    "raw_output": [
+      {
+        "timestamp": "2025-09-10T14:45:15.639380",
+        "event_type": "SESSION_START",
+        "message": "Начало обработки CSV: ../../leads/1-raw/Lumid - verification - Canada_cleaned.csv",
+        "data": {
+          "input_file": "../../leads/1-raw/Lumid - verification - Canada_cleaned.csv",
+          "test_limit": 3
+        }
+      },
+      {
+        "timestamp": "2025-09-10T14:45:15.663628",
+        "event_type": "DOMAIN_START",
+        "message": "Начало обработки домена: altitudestrategies.ca",
+        "data": {}
+      },
+      {
+        "timestamp": "2025-09-10T14:45:15.663628",
+        "event_type": "DOMAIN_START",
+        "message": "Начало обработки домена: bigfishcreative.ca",
+        "data": {}
+      },
+      {
+        "timestamp": "2025-09-10T14:45:15.663628",
+        "event_type": "DOMAIN_START",
+        "message": "Начало обработки домена: stryvemarketing.com",
+        "data": {}
+      },
+      {
+        "timestamp": "2025-09-10T14:45:26.340650",
+        "event_type": "DOMAIN_SUCCESS",
+        "message": "Домен обработан успешно за 10.68с",
+        "data": {
+          "domain": "altitudestrategies.ca",
+          "pages_found": 1,
+          "pages_selected": 1,
+          "processing_time": 10.677021265029907,
+          "cost": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-09-10T14:46:23.448992",
+        "event_type": "DOMAIN_SUCCESS",
+        "message": "Домен обработан успешно за 67.79с",
+        "data": {
+          "domain": "stryvemarketing.com",
+          "pages_found": 50,
+          "pages_selected": 3,
+          "processing_time": 67.78536415100098,
+          "cost": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-09-10T14:47:47.625658",
+        "event_type": "DOMAIN_SUCCESS",
+        "message": "Домен обработан успешно за 151.96с",
+        "data": {
+          "domain": "bigfishcreative.ca",
+          "pages_found": 50,
+          "pages_selected": 4,
+          "processing_time": 151.9620292186737,
+          "cost": 0.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "total_processed": 1,
+  "successful": 1,
+  "failed": 0,
+  "processed_at": "2025-09-08T13:44:49.317013",
+  "results": [
+    {
+      "domain": "stryvemarketing.com",
+      "company_name": "Stryve Digital Marketing",
+      "processed_at": "2025-09-08T13:44:32.408117",
+      "success": true,
+      "pages_found": 1,
+      "pages_processed": 1,
+      "content_extracted": true,
+      "ai_analysis": {
+        "raw_analysis": "```json\n{\n  \"company_focus\": {\n    \"main_business_focus\": \"Digital marketing services\",\n    \"services\": [\n      \"SEO\",\n      \"PPC advertising\",\n      \"Content marketing\",\n      \"Social media management\",\n      \"Email marketing\"\n    ],\n    \"products\": []\n  },\n  \"company_values\": {\n    \"mission\": \"To help businesses grow through effective digital marketing strategies.\",\n    \"values\": [\n      \"Transparency\",\n      \"Client-centric approach\",\n      \"Innovation\",\n      \"Results-driven\"\n    ],\n    \"culture\": \"Collaborative and supportive environment that encourages creativity and professional growth.\"\n  },\n  \"recent_developments\": {\n    \"new_initiatives\": \"Launch of a new content marketing service aimed at small businesses.\",\n    \"growth\": \"Expanded team size by 20% to accommodate increased client demand.\",\n    \"changes\": \"Updated service packages to include more tailored solutions for different business sizes.\",\n    \"achievements\": \"Recognized as a top digital marketing agency in the region.\"\n  },\n  \"team_info\": {\n    \"leadership\": [\n      {\n        \"name\": \"John Doe\",\n        \"position\": \"CEO\",\n        \"background\": \"10 years in digital marketing with a focus on SEO.\"\n      },\n      {\n        \"name\": \"Jane Smith\",\n        \"position\": \"CMO\",\n        \"background\": \"Expert in content strategy and social media marketing.\"\n      }\n    ],\n    \"team_size\": \"Approximately 50 employees\",\n    \"key_people_mentioned\": [\"John Doe\", \"Jane Smith\"]\n  },\n  \"industry_insights\": {\n    \"industry\": \"Digital Marketing\",\n    \"target_customers\": [\n      \"Small to medium-sized businesses\",\n      \"E-commerce companies\",\n      \"Startups\"\n    ],\n    \"market_position\": \"Competitive with a focus on personalized service and measurable results.\"\n  },\n  \"unique_differentiators\": {\n    \"what_makes_them_special\": \"Highly personalized service with a focus on measurable results.\",\n    \"competitive_advantages\": [\n      \"Dedicated account managers\",\n      \"Customizable service packages\",\n      \"Strong emphasis on client education\"\n    ]\n  },\n  \"pain_points\": {\n    \"challenges\": [\n      \"Helping clients understand the ROI of digital marketing\",\n      \"Navigating the constantly changing digital landscape\",\n      \"Balancing budget constraints with effective marketing strategies\"\n    ],\n    \"solving_for_clients\": \"Providing clear analytics and reporting to demonstrate value.\"\n  },\n  \"personality\": {\n    \"company_tone\": \"Professional yet approachable\",\n    \"style\": \"Informative and supportive\",\n    \"personality_traits\": [\n      \"Innovative\",\n      \"Responsive\",\n      \"Empathetic\"\n    ]\n  },\n  \"contact_preferences\": {\n    \"how_they_prefer_to_be_contacted\": \"Email is preferred for initial outreach, followed by a phone call if necessary.\"\n  },\n  \"personalization_hooks\": [\n    \"Mention their recent expansion and how it reflects their growth.\",\n    \"Reference their new content marketing service tailored for small businesses.\",\n    \"Highlight their focus on measurable results and how your service can align with that.\"\n  ]\n}\n```"
+      },
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+company_name,website,country,links,filtered_links,scraped_content
+httpbin Test,https://httpbin.org,USA,"[""https://httpbin.org/forms/post""]",[],{}
+Example Corp,https://example.com,USA,[],[],{}

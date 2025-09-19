@@ -1,0 +1,348 @@
+[
+  {
+    "timestamp": "2025-09-12T16:28:22.738947",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[3 items]"
+    },
+    "output_size": "0 items",
+    "execution_time_seconds": 0.56,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:28:33.829722",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[3 items]"
+    },
+    "output_size": "1 items",
+    "execution_time_seconds": 2.665,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:30:52.303483",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "1",
+      "max_links": "10"
+    },
+    "output_size": "1 items",
+    "execution_time_seconds": 3.646,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:31:40.241350",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "1",
+      "max_links": "5"
+    },
+    "output_size": "1 items",
+    "execution_time_seconds": 4.078,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:31:41.637498",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "1",
+      "max_links": "5"
+    },
+    "output_size": "0 items",
+    "execution_time_seconds": 1.376,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:40:58.070265",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "50 items",
+    "execution_time_seconds": 8.269,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:41:06.122924",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "4 items",
+    "execution_time_seconds": 8.047,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:41:08.798061",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "50 items",
+    "execution_time_seconds": 2.646,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:41:14.937719",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "6 items",
+    "execution_time_seconds": 6.126,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:41:17.789447",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "0 items",
+    "execution_time_seconds": 2.839,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:41:20.580242",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "0 items",
+    "execution_time_seconds": 2.264,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:41:50.675538",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "31 items",
+    "execution_time_seconds": 30.069,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:41:55.003270",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "1 items",
+    "execution_time_seconds": 4.301,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:42:13.832903",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "15 items",
+    "execution_time_seconds": 18.815,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:42:34.155886",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "50 items",
+    "execution_time_seconds": 20.289,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:45:30.778845",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "50 items",
+    "execution_time_seconds": 4.652,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:45:38.269612",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "4 items",
+    "execution_time_seconds": 7.491,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:45:40.421604",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "50 items",
+    "execution_time_seconds": 2.126,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:45:45.748649",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "6 items",
+    "execution_time_seconds": 4.806,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:46:15.325548",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "31 items",
+    "execution_time_seconds": 29.554,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:46:34.728878",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "15 items",
+    "execution_time_seconds": 19.382,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T16:47:02.774975",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "50 items",
+    "execution_time_seconds": 27.51,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T17:24:28.091692",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "50 items",
+    "execution_time_seconds": 3.935,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T17:24:30.112772",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "50 items",
+    "execution_time_seconds": 2.021,
+    "success": true,
+    "error": null
+  },
+  {
+    "timestamp": "2025-09-12T17:24:57.716964",
+    "module": "link_extractor",
+    "function": "extract_all_links",
+    "input": {
+      "args": "[1 items]",
+      "max_depth": "2",
+      "max_links": "50"
+    },
+    "output_size": "31 items",
+    "execution_time_seconds": 27.587,
+    "success": true,
+    "error": null
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "domain": "stryvemarketing.com",
+      "total_pages": 8,
+      "classification": {
+        "high_priority": [
+          "https://stryvemarketing.com/careers",
+          "https://stryvemarketing.com/blog/digital-trends-2024",
+          "https://stryvemarketing.com/services",
+          "https://stryvemarketing.com/team",
+          "https://stryvemarketing.com/case-studies"
+        ],
+        "medium_priority": [
+          "https://stryvemarketing.com/about",
+          "https://stryvemarketing.com/approach"
+        ],
+        "low_priority": [],
+        "skip": [
+          "https://stryvemarketing.com/privacy-policy"
+        ]
+      },
+      "processed_at": "2025-09-08T14:22:06.425170",
+      "priorities_count": {
+        "high": 5,
+        "medium": 2,
+        "low": 0,
+        "skip": 1
+      }
+    }
+  ],
+  "script_stats": {
+    "version": "1.0.0",
+    "total_runs": 1,
+    "successful_classifications": 1,
+    "failed_classifications": 0,
+    "avg_pages_per_domain": 0,
+    "last_updated": "2025-09-08",
+    "last_run": "2025-09-08T14:22:06.425170"
+  },
+  "run_history": [
+    {
+      "domain": "stryvemarketing.com",
+      "pages_processed": 8,
+      "success": true,
+      "timestamp": "2025-09-08T14:22:06.425170"
+    }
+  ]
+}

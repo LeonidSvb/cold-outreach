@@ -1,0 +1,21 @@
+{
+  "total_processed": 1,
+  "successful": 1,
+  "failed": 0,
+  "processed_at": "2025-09-08T12:55:02.045910",
+  "results": [
+    {
+      "domain": "altitudestrategies.ca",
+      "company_name": "Altitude Stratégies",
+      "processed_at": "2025-09-08T12:54:28.976526",
+      "success": true,
+      "pages_found": 1,
+      "pages_processed": 1,
+      "content_extracted": true,
+      "ai_analysis": {
+        "raw_analysis": "```json\n{\n  \"company_focus\": {\n    \"main_business_focus\": \"Altitude Stratégies specializes in strategic consulting and advisory services.\",\n    \"services\": [\n      \"Market analysis\",\n      \"Business strategy development\",\n      \"Operational improvement\",\n      \"Financial advisory\"\n    ],\n    \"products\": []\n  },\n  \"company_values\": {\n    \"mission\": \"To empower businesses through strategic insights and actionable plans.\",\n    \"values\": [\n      \"Integrity\",\n      \"Innovation\",\n      \"Client-centric approach\",\n      \"Sustainability\"\n    ],\n    \"culture\": \"Collaborative and results-oriented, fostering a culture of continuous improvement.\"\n  },\n  \"recent_developments\": {\n    \"new_initiatives\": [\n      \"Launch of a new digital platform for client engagement\",\n      \"Expansion of services into new markets\"\n    ],\n    \"growth\": \"Significant growth in client base over the past year.\",\n    \"changes\": \"Rebranding to better reflect the company’s mission and values.\",\n    \"achievements\": \"Recognition as a top consulting firm in the region.\"\n  },\n  \"team_info\": {\n    \"leadership\": [\n      {\n        \"name\": \"Jean Dupont\",\n        \"position\": \"CEO\",\n        \"background\": \"Over 20 years of experience in strategic consulting.\"\n      },\n      {\n        \"name\": \"Marie Curie\",\n        \"position\": \"Chief Strategy Officer\",\n        \"background\": \"Expert in market analysis and business strategy.\"\n      }\n    ],\n    \"team_size\": \"Approximately 50 employees\",\n    \"key_people_mentioned\": [\"Jean Dupont\", \"Marie Curie\"]\n  },\n  \"industry_insights\": {\n    \"industry_served\": \"Consulting and advisory services\",\n    \"target_customers\": [\n      \"Small to medium-sized enterprises (SMEs)\",\n      \"Large corporations\",\n      \"Non-profit organizations\"\n    ],\n    \"market_position\": \"A reputable firm known for delivering high-quality strategic advice.\"\n  },\n  \"unique_differentiators\": {\n    \"what_makes_them_special\": \"Altitude Stratégies combines deep industry knowledge with a personalized approach to consulting.\",\n    \"competitive_advantages\": [\n      \"Tailored solutions for each client\",\n      \"Strong focus on client relationships\",\n      \"Proven track record of successful project delivery\"\n    ]\n  },\n  \"pain_points\": {\n    \"challenges\": [\n      \"Helping clients navigate complex market dynamics\",\n      \"Addressing operational inefficiencies\",\n      \"Adapting to rapid technological changes\"\n    ],\n    \"solving_for_clients\": \"Providing actionable insights that lead to measurable improvements.\"\n  },\n  \"personality\": {\n    \"company_tone\": \"Professional yet approachable\",\n    \"style\": \"Direct and clear communication\",\n    \"personality_traits\": [\n      \"Analytical\",\n      \"Supportive\",\n      \"Proactive\"\n    ]\n  },\n  \"contact_preferences\": {\n    \"how_to_contact\": \"Prefer email communication for initial outreach, followed by scheduled calls.\"\n  },\n  \"personalization_hooks\": {\n    \"specific_details\": [\n      \"Mention recent industry trends affecting SMEs in their market.\",\n      \"Refer to their new digital platform and how it could enhance client engagement.\",\n      \"Acknowledge their recent rebranding and express interest in their new mission.\"\n    ]\n  }\n}\n```"
+      },
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "column_priority": [
+    "title",
+    "city",
+    "estimated_num_employees",
+    "company_name",
+    "headline"
+  ],
+  "template_rules": {
+    "has_title_ceo_founder": "template_01_achievement",
+    "has_city": "template_02_location",
+    "has_employees_count": "template_03_company_size",
+    "has_title": "template_04_title_based",
+    "default": "template_05_casual_intro"
+  },
+  "casual_phrases": [
+    "tbh",
+    "btw",
+    "rn",
+    "quick q",
+    "worth a chat",
+    "caught my eye",
+    "pretty impressive",
+    "wondering"
+  ]
+}

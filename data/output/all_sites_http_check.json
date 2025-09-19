@@ -1,0 +1,5056 @@
+[
+  {
+    "url": "http://www.altitudestrategies.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Altitude Strat\u00e9gies"
+  },
+  {
+    "url": "http://www.bigfishcreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Big Fish Creative"
+  },
+  {
+    "url": "http://www.stryvemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Stryve Digital Marketing"
+  },
+  {
+    "url": "http://www.workparty.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Work Party Creative Group"
+  },
+  {
+    "url": "http://www.kiplingmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kipling Media"
+  },
+  {
+    "url": "http://www.greenhousemarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Greenhouse Marketing, Sales & Recruitment"
+  },
+  {
+    "url": "http://www.theog.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The One Group (OG) Agency"
+  },
+  {
+    "url": "http://www.polkarsenal.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Agence Polka/Arsenal"
+  },
+  {
+    "url": "http://www.involvedmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Involved Media Canada"
+  },
+  {
+    "url": "http://www.nimiopere.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Nimiopere Film Editorial"
+  },
+  {
+    "url": "http://www.mkmedia.biz",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "M&K Media"
+  },
+  {
+    "url": "http://www.victorymedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Victory Media Inc."
+  },
+  {
+    "url": "http://www.kickpoint.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kick Point Inc."
+  },
+  {
+    "url": "http://www.comgroup.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Communications Group, Inc."
+  },
+  {
+    "url": "http://www.everbrave.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Everbrave"
+  },
+  {
+    "url": "http://www.aasman.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Aasman Brand Communications"
+  },
+  {
+    "url": "http://www.onenetinc.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "One Net Inc."
+  },
+  {
+    "url": "http://www.zedlagence.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ZED l'agence"
+  },
+  {
+    "url": "http://www.simplifytheinternet.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "WSI - Comandix Marketing Inc."
+  },
+  {
+    "url": "http://www.gustinquon.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Gustin Quon"
+  },
+  {
+    "url": "http://www.clearmotive.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "clearmotive marketing group"
+  },
+  {
+    "url": "http://www.gurucom.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Guru Communications Inc"
+  },
+  {
+    "url": "http://www.onenetinc.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "One Net Inc."
+  },
+  {
+    "url": "http://www.visionnairefutures.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Visionnaire"
+  },
+  {
+    "url": "http://www.cleansheet.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cleansheet Communications"
+  },
+  {
+    "url": "http://www.zedlagence.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ZED l'agence"
+  },
+  {
+    "url": "http://www.dunhamweb.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Dunham Group Inc"
+  },
+  {
+    "url": "http://www.cumberland.college",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Coll\u00e8ge Cumberland"
+  },
+  {
+    "url": "http://www.adhomecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "adHOME Creative"
+  },
+  {
+    "url": "http://www.dunhamweb.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Dunham Group Inc"
+  },
+  {
+    "url": "http://www.macraes.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MacRAE'S: Digital Marketing Agency"
+  },
+  {
+    "url": "http://www.healthwisecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Healthwise Creative"
+  },
+  {
+    "url": "http://www.keygordon.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Key Gordon"
+  },
+  {
+    "url": "http://www.dg.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Delta Growth Inc."
+  },
+  {
+    "url": "http://www.acteam.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "A&C Inc."
+  },
+  {
+    "url": "http://www.vumedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "GROUPE VUMEDIA"
+  },
+  {
+    "url": "http://www.stryvemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Stryve Digital Marketing"
+  },
+  {
+    "url": "http://www.retailorsgroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Retailors Group"
+  },
+  {
+    "url": "http://www.strutcreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Strut"
+  },
+  {
+    "url": "http://www.ontarioseo.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ontario SEO"
+  },
+  {
+    "url": "http://www.cleansheet.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cleansheet Communications"
+  },
+  {
+    "url": "http://www.kickpoint.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kick Point Inc."
+  },
+  {
+    "url": "http://www.magnetisauto.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Magnetis Auto"
+  },
+  {
+    "url": "http://www.cleansheet.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cleansheet Communications"
+  },
+  {
+    "url": "http://www.ignitedigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ignite Digital"
+  },
+  {
+    "url": "http://www.digitalshiftmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digital Shift\u00ae"
+  },
+  {
+    "url": "http://www.stylelabs.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Stylelabs Inc."
+  },
+  {
+    "url": "http://www.buzzmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Buzz Marketing Agency"
+  },
+  {
+    "url": "http://www.shiftmarketing.io",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Shift Marketing Automotive"
+  },
+  {
+    "url": "http://www.industrybay.us",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "INDUSTRYBay"
+  },
+  {
+    "url": "http://www.wearestreetwise.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Streetwise Consulting"
+  },
+  {
+    "url": "http://www.stryvemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Stryve Digital Marketing"
+  },
+  {
+    "url": "http://www.cleansheet.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cleansheet Communications"
+  },
+  {
+    "url": "http://www.eaglecom.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Eaglecom Marketing"
+  },
+  {
+    "url": "http://www.bastacommunication.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Basta communication"
+  },
+  {
+    "url": "http://www.agencyatlas.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Agency Atlas"
+  },
+  {
+    "url": "http://www.primecreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Prime Creative"
+  },
+  {
+    "url": "http://www.cinchcomm.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Cinch Communications"
+  },
+  {
+    "url": "http://www.brandandmortar.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Brand & Mortar"
+  },
+  {
+    "url": "http://www.hypelocal.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Hypelocal"
+  },
+  {
+    "url": "http://www.adhomecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "adHOME Creative"
+  },
+  {
+    "url": "http://www.boleynmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Boleyn Media Group"
+  },
+  {
+    "url": "http://www.wiredmessenger.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Wired Messenger Inc."
+  },
+  {
+    "url": "http://www.everbrave.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Everbrave"
+  },
+  {
+    "url": "http://www.circlecommunications.in",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Circle Communications"
+  },
+  {
+    "url": "http://www.npdigitalmarketing.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "NP Marketing"
+  },
+  {
+    "url": "http://www.consultusdigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Consultus Digital"
+  },
+  {
+    "url": "http://www.outsidethebox.capital",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Outside the Box Capital"
+  },
+  {
+    "url": "http://www.giantcreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "GIANT Creative"
+  },
+  {
+    "url": "http://www.cambiemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Cambie Marketing"
+  },
+  {
+    "url": "http://www.virtualad.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "VirtualAd"
+  },
+  {
+    "url": "http://www.avenue4.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Avenue 4 Communications"
+  },
+  {
+    "url": "http://www.twincreekmedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Twin Creek Media Inc."
+  },
+  {
+    "url": "http://www.ignitedigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ignite Digital"
+  },
+  {
+    "url": "http://www.cm2media.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "CM2 Media"
+  },
+  {
+    "url": "http://www.shapewin.co.jp",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ShapeWin"
+  },
+  {
+    "url": "http://www.consultusdigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Consultus Digital"
+  },
+  {
+    "url": "http://www.keygordon.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Key Gordon"
+  },
+  {
+    "url": "http://www.twentywestmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Twenty West"
+  },
+  {
+    "url": "http://www.bookmarked.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "BookmarkED"
+  },
+  {
+    "url": "http://www.arivano.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Arivano"
+  },
+  {
+    "url": "http://www.thinkrmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Thinkr Marketing"
+  },
+  {
+    "url": "http://www.trgr.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRGR Advertising"
+  },
+  {
+    "url": "http://www.mezzaninegrowth.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Mezzanine Growth"
+  },
+  {
+    "url": "http://www.involvedmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Involved Media Canada"
+  },
+  {
+    "url": "http://www.tag-advertising.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Tag Advertising"
+  },
+  {
+    "url": "http://www.reflectmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Reflect Media"
+  },
+  {
+    "url": "http://www.hypelocal.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Hypelocal"
+  },
+  {
+    "url": "http://www.weareverypolite.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Very Polite Agency"
+  },
+  {
+    "url": "http://www.smamarketing.net",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "SMA Marketing"
+  },
+  {
+    "url": "http://www.wittycookie.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "WittyCookie"
+  },
+  {
+    "url": "http://www.icscreativeagency.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ICS Creative Agency"
+  },
+  {
+    "url": "http://www.eaglecom.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Eaglecom Marketing"
+  },
+  {
+    "url": "http://www.twincreekmedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Twin Creek Media Inc."
+  },
+  {
+    "url": "http://www.do180.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "180 Marketing"
+  },
+  {
+    "url": "http://www.adhomecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "adHOME Creative"
+  },
+  {
+    "url": "http://www.frontrunner-tech.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "FrontRunner Technologies"
+  },
+  {
+    "url": "http://www.republix.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Republix"
+  },
+  {
+    "url": "http://www.tag-advertising.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Tag Advertising"
+  },
+  {
+    "url": "http://www.monsooncommunications.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Monsoon Communications Inc."
+  },
+  {
+    "url": "http://www.humancode.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Human_Code"
+  },
+  {
+    "url": "http://www.longhouse.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Longhouse Branding & Marketing"
+  },
+  {
+    "url": "http://www.chameleon-ideas.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Chameleon Ideas Inc."
+  },
+  {
+    "url": "http://www.do180.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "180 Marketing"
+  },
+  {
+    "url": "http://www.netgainseo.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "NetGain"
+  },
+  {
+    "url": "http://www.opensail.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "OpenSail \u26f5"
+  },
+  {
+    "url": "http://www.cardiganmtl.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Cardigan"
+  },
+  {
+    "url": "http://www.twg.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TWG Communications"
+  },
+  {
+    "url": "http://www.kika.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kika Marketing & Communications Inc"
+  },
+  {
+    "url": "http://www.reflectmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Reflect Media"
+  },
+  {
+    "url": "http://www.drivemarketinggroup.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Drive Marketing Group Inc."
+  },
+  {
+    "url": "http://www.wearehale.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Hale."
+  },
+  {
+    "url": "http://www.addsomehotsauce.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digital Hot Sauce | Strategy & Growth Marketing Agency"
+  },
+  {
+    "url": "http://www.cyansolutions.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cyan Solutions"
+  },
+  {
+    "url": "http://www.thesmallsocial.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The Small Social Company"
+  },
+  {
+    "url": "http://www.do180.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "180 Marketing"
+  },
+  {
+    "url": "http://www.wearehale.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Hale."
+  },
+  {
+    "url": "http://www.swevenmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Sweven Media"
+  },
+  {
+    "url": "http://www.meetfutureproof.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Futureproof Inc."
+  },
+  {
+    "url": "http://www.avenue4.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Avenue 4 Communications"
+  },
+  {
+    "url": "http://www.mediafy.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Mediafy | Marketing Agency"
+  },
+  {
+    "url": "http://www.dealermedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Dealer Media"
+  },
+  {
+    "url": "http://www.everbrave.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Everbrave"
+  },
+  {
+    "url": "http://www.4080marketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "4080 Marketing"
+  },
+  {
+    "url": "http://www.thesmallsocial.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The Small Social Company"
+  },
+  {
+    "url": "http://www.flairstrategie.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "FLAIR Strat\u00e9gie"
+  },
+  {
+    "url": "http://www.digitalmarketingexperts.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digital Marketing Experts"
+  },
+  {
+    "url": "http://www.buzzmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Buzz Marketing Agency"
+  },
+  {
+    "url": "http://www.giantcreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "GIANT Creative"
+  },
+  {
+    "url": "http://www.stryvemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Stryve Digital Marketing"
+  },
+  {
+    "url": "http://www.canspan.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Canspan BMG Inc."
+  },
+  {
+    "url": "http://www.flippadvertising.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Flipp Advertising Inc."
+  },
+  {
+    "url": "http://www.sly-fox.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "SlyFox Web Design & Marketing"
+  },
+  {
+    "url": "http://www.growrev.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "GrowRev"
+  },
+  {
+    "url": "http://www.bluecollarmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Blue Collar Marketing"
+  },
+  {
+    "url": "http://www.getsocialyeg.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Get Social YEG"
+  },
+  {
+    "url": "http://www.virtualimage.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Virtual Image"
+  },
+  {
+    "url": "http://www.hirewithhaven.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Haven"
+  },
+  {
+    "url": "http://www.healthwisecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Healthwise Creative"
+  },
+  {
+    "url": "http://www.20eight.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "20Eight Digital"
+  },
+  {
+    "url": "http://www.fueldigitalmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Fuel Digital Media"
+  },
+  {
+    "url": "http://www.avenue4.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Avenue 4 Communications"
+  },
+  {
+    "url": "http://www.digitalmonkmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digital Monk Marketing"
+  },
+  {
+    "url": "http://www.stryvemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Stryve Digital Marketing"
+  },
+  {
+    "url": "http://www.stratabeat.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Stratabeat"
+  },
+  {
+    "url": "http://www.canspan.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Canspan BMG Inc."
+  },
+  {
+    "url": "http://www.cubiclefugitive.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cubicle Fugitive Inc."
+  },
+  {
+    "url": "http://www.adhomecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "adHOME Creative"
+  },
+  {
+    "url": "http://www.connectedinteractive.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Connected Interactive"
+  },
+  {
+    "url": "http://www.ballisticarts.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ballistic Arts"
+  },
+  {
+    "url": "http://www.tttmrktg.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The Think Tank (TTT)"
+  },
+  {
+    "url": "http://www.trgr.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRGR Advertising"
+  },
+  {
+    "url": "http://www.twincreekmedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Twin Creek Media Inc."
+  },
+  {
+    "url": "http://www.mediaforce.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MEDIAFORCE Digital Marketing"
+  },
+  {
+    "url": "http://www.netgain.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Netgain"
+  },
+  {
+    "url": "http://www.cambiemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Cambie Marketing"
+  },
+  {
+    "url": "http://www.equoto.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "eQuoto"
+  },
+  {
+    "url": "http://www.brionraffoul.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "BRION RAFFOUL LLP"
+  },
+  {
+    "url": "http://www.thelimitlessagency.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Limitless Agency"
+  },
+  {
+    "url": "http://www.windracers.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Windracers"
+  },
+  {
+    "url": "http://www.gilmedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Gilmedia"
+  },
+  {
+    "url": "http://www.m1agency.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "M1 Agency Inc."
+  },
+  {
+    "url": "http://www.primecreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Prime Creative"
+  },
+  {
+    "url": "http://www.cimoroni.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "CIMORONI"
+  },
+  {
+    "url": "http://www.limeadvertising.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Lime Advertising Inc."
+  },
+  {
+    "url": "http://www.workparty.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Work Party Creative Group"
+  },
+  {
+    "url": "http://www.wearehale.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Hale."
+  },
+  {
+    "url": "http://www.aasman.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Aasman Brand Communications"
+  },
+  {
+    "url": "http://www.strategies.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Strat\u00e9gies Marketing Relationnel"
+  },
+  {
+    "url": "http://www.flaxlabs.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Flax Labs | Scientific E-commerce Marketing"
+  },
+  {
+    "url": "http://www.iconium.io",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Iconium Media"
+  },
+  {
+    "url": "http://www.marketingwebsites.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Marketing Websites"
+  },
+  {
+    "url": "http://www.conversio.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Conversio Marketing"
+  },
+  {
+    "url": "http://www.mymarketing.io",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "myMarketing.io"
+  },
+  {
+    "url": "http://www.fello.agency",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Fello"
+  },
+  {
+    "url": "http://www.cleansheet.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cleansheet Communications"
+  },
+  {
+    "url": "http://www.brandserve.co.in",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Brand Serve \u00ae"
+  },
+  {
+    "url": "http://www.brandandmortar.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Brand & Mortar"
+  },
+  {
+    "url": "http://www.firstpagemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "FirstPage Marketing"
+  },
+  {
+    "url": "http://www.humancode.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Human_Code"
+  },
+  {
+    "url": "http://www.tactikmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TactikMedia"
+  },
+  {
+    "url": "http://www.idsg.eu",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Integrated Data Solutions"
+  },
+  {
+    "url": "http://www.republix.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Republix"
+  },
+  {
+    "url": "http://www.monsooncommunications.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Monsoon Communications Inc."
+  },
+  {
+    "url": "http://www.trgr.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRGR Advertising"
+  },
+  {
+    "url": "http://www.insocial.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "In Social"
+  },
+  {
+    "url": "http://www.agency.media",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Agency Media"
+  },
+  {
+    "url": "http://www.thechangemakers.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ChangeMakers"
+  },
+  {
+    "url": "http://www.marketika.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MARK\u00c9TIKA"
+  },
+  {
+    "url": "http://www.dg.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Delta Growth Inc."
+  },
+  {
+    "url": "http://www.redrocketcreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Red Rocket Creative"
+  },
+  {
+    "url": "http://www.eclipse3sixty.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "eclipse360\u00ba"
+  },
+  {
+    "url": "http://www.consultusdigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Consultus Digital"
+  },
+  {
+    "url": "http://www.thearcane.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Arcane"
+  },
+  {
+    "url": "http://www.knowcompany.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Know Company Inc."
+  },
+  {
+    "url": "http://www.socialeyescommunications.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "SocialEyes Communications"
+  },
+  {
+    "url": "http://www.addsomehotsauce.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digital Hot Sauce | Strategy & Growth Marketing Agency"
+  },
+  {
+    "url": "http://www.helloroketto.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Roketto"
+  },
+  {
+    "url": "http://www.shopliftr.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ShopLiftr"
+  },
+  {
+    "url": "http://www.jellymarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Jelly Digital Marketing & PR Agency"
+  },
+  {
+    "url": "http://www.canspan.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Canspan BMG Inc."
+  },
+  {
+    "url": "http://www.adster.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Adster Creative"
+  },
+  {
+    "url": "http://www.adeptus.marketing",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Adeptus Marketing"
+  },
+  {
+    "url": "http://www.cleansheet.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cleansheet Communications"
+  },
+  {
+    "url": "http://www.monday.co.th",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MONDAY Agency"
+  },
+  {
+    "url": "http://www.pioneerimmigration.co.in",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Pioneer Immigration"
+  },
+  {
+    "url": "http://www.outsidethebox.capital",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Outside the Box Capital"
+  },
+  {
+    "url": "http://www.acedigitalgroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ace Digital Group"
+  },
+  {
+    "url": "http://www.thomathoma.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Thoma Thoma"
+  },
+  {
+    "url": "http://www.weareboa.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "boa"
+  },
+  {
+    "url": "http://www.standish.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Standish Communications"
+  },
+  {
+    "url": "http://www.chessclub.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Chess Club Agency"
+  },
+  {
+    "url": "http://www.tuffmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TUFF Media"
+  },
+  {
+    "url": "http://www.humancode.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Human_Code"
+  },
+  {
+    "url": "http://www.borealiscreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Borealis Creative"
+  },
+  {
+    "url": "http://www.digityza.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digityza"
+  },
+  {
+    "url": "http://www.gandgadvertising.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "G&G Advertising"
+  },
+  {
+    "url": "http://www.virtualimage.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Virtual Image"
+  },
+  {
+    "url": "http://www.hypelocal.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Hypelocal"
+  },
+  {
+    "url": "http://www.reddingdesigns.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Redding Designs"
+  },
+  {
+    "url": "http://www.reactif.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Agence Reactif"
+  },
+  {
+    "url": "http://www.madhouseinc.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Madhouse Advertising Inc."
+  },
+  {
+    "url": "http://www.dunnegroup.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Dunne Group"
+  },
+  {
+    "url": "http://www.partnercommerce.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Partner Commerce"
+  },
+  {
+    "url": "http://www.agenciacapella.com.br",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Ag\u00eancia Capella"
+  },
+  {
+    "url": "http://www.propagam.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Propagam"
+  },
+  {
+    "url": "http://www.adhomecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "adHOME Creative"
+  },
+  {
+    "url": "http://www.sweatpantsagency.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Sweat Pants Agency"
+  },
+  {
+    "url": "http://www.graylinemedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Gray Line Media"
+  },
+  {
+    "url": "http://www.wsd.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "WSD"
+  },
+  {
+    "url": "http://www.giantcreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "GIANT Creative"
+  },
+  {
+    "url": "http://www.virtualad.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "VirtualAd"
+  },
+  {
+    "url": "http://www.omniagency.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Omni Digital Experience Agency"
+  },
+  {
+    "url": "http://www.oceanmarketing.net",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ocean Marketing"
+  },
+  {
+    "url": "http://www.meetarray.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Array"
+  },
+  {
+    "url": "http://www.kiplingmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kipling Media"
+  },
+  {
+    "url": "http://www.redboxmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Redbox Media"
+  },
+  {
+    "url": "http://www.kiaiagency.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "KIAI Agency Inc."
+  },
+  {
+    "url": "http://www.trgr.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRGR Advertising"
+  },
+  {
+    "url": "http://www.cubiclefugitive.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cubicle Fugitive Inc."
+  },
+  {
+    "url": "http://www.everbrave.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Everbrave"
+  },
+  {
+    "url": "http://www.meetfutureproof.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Futureproof Inc."
+  },
+  {
+    "url": "http://www.madhouseinc.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Madhouse Advertising Inc."
+  },
+  {
+    "url": "http://www.funnelsandsetters.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Funnels And Setters"
+  },
+  {
+    "url": "http://www.onpurposemedia.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "On Purpose Media"
+  },
+  {
+    "url": "http://www.freemindmarketing.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Free Mind Marketing"
+  },
+  {
+    "url": "http://www.stryvemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Stryve Digital Marketing"
+  },
+  {
+    "url": "http://www.elevatetm.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Elevate Talent & Marketing"
+  },
+  {
+    "url": "http://www.h2odigital.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "H2O Digital Marketing Agency"
+  },
+  {
+    "url": "http://www.lavinmedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Lavin Media"
+  },
+  {
+    "url": "http://www.seomasters.pk",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "SEO Masters: Digital Marketing Agency"
+  },
+  {
+    "url": "http://www.healthwisecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Healthwise Creative"
+  },
+  {
+    "url": "http://www.paragonpeak.org",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Paragon peak"
+  },
+  {
+    "url": "http://www.bakeshop.digital",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Bakeshop Digital"
+  },
+  {
+    "url": "http://www.imajery.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Imajery"
+  },
+  {
+    "url": "http://www.acedigitalgroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ace Digital Group"
+  },
+  {
+    "url": "http://www.aspiration.marketing",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Aspiration Marketing"
+  },
+  {
+    "url": "http://www.fello.agency",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Fello"
+  },
+  {
+    "url": "http://www.proshmarketing.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Prosh Marketing"
+  },
+  {
+    "url": "http://www.mediaforce.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MEDIAFORCE Digital Marketing"
+  },
+  {
+    "url": "http://www.emerge2.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Emerge2 Digital"
+  },
+  {
+    "url": "http://www.growthboss.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Growth Boss"
+  },
+  {
+    "url": "http://www.bakeshop.digital",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Bakeshop Digital"
+  },
+  {
+    "url": "http://www.omniagency.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Omni Digital Experience Agency"
+  },
+  {
+    "url": "http://www.wiredcarbon.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Wired Carbon Inc."
+  },
+  {
+    "url": "http://www.nureachmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Nu Reach Media Inc"
+  },
+  {
+    "url": "http://www.m32connect.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "M32 Connect"
+  },
+  {
+    "url": "http://www.jellymarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Jelly Digital Marketing & PR Agency"
+  },
+  {
+    "url": "http://www.torontodigitalmarketinginc.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Toronto Digital Marketing Inc."
+  },
+  {
+    "url": "http://www.h2odigital.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "H2O Digital Marketing Agency"
+  },
+  {
+    "url": "http://www.weusthem.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "WeUsThem Inc."
+  },
+  {
+    "url": "http://www.theinterconnections.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Interconnections"
+  },
+  {
+    "url": "http://www.ignitedigital.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ignite Digital"
+  },
+  {
+    "url": "http://www.knowcompany.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Know Company Inc."
+  },
+  {
+    "url": "http://www.acceler8labs.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Acceler8 Labs"
+  },
+  {
+    "url": "http://www.gilmedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Gilmedia"
+  },
+  {
+    "url": "http://www.mylittlebigweb.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "My Little Big Web | Agence Web"
+  },
+  {
+    "url": "http://www.thinkorion.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Think Orion - Student Recruitment Marketing"
+  },
+  {
+    "url": "http://www.sunhousemarketing.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "SunHouse Marketing"
+  },
+  {
+    "url": "http://www.linxdigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Linx Digital"
+  },
+  {
+    "url": "http://www.mkmedia.biz",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "M&K Media"
+  },
+  {
+    "url": "http://www.reachglobal.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Reach Global Marketing"
+  },
+  {
+    "url": "http://www.marvelmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Marvel Marketing"
+  },
+  {
+    "url": "http://www.statusbureau.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Status Bureau"
+  },
+  {
+    "url": "http://www.twincreekmedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Twin Creek Media Inc."
+  },
+  {
+    "url": "http://www.y.team",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Y (BrandTech)"
+  },
+  {
+    "url": "http://www.expertfile.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ExpertFile"
+  },
+  {
+    "url": "http://www.transcendsmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Transcends"
+  },
+  {
+    "url": "http://www.imajery.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Imajery"
+  },
+  {
+    "url": "http://www.spacecreatorz.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Space Creatorz"
+  },
+  {
+    "url": "http://www.samuraimedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Samurai Media Group"
+  },
+  {
+    "url": "http://www.drivemarketinggroup.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Drive Marketing Group Inc."
+  },
+  {
+    "url": "http://www.maplediversity.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Maple Diversity Communications"
+  },
+  {
+    "url": "http://www.meetarray.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Array"
+  },
+  {
+    "url": "http://www.ballisticarts.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ballistic Arts"
+  },
+  {
+    "url": "http://www.clearmotive.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "clearmotive marketing group"
+  },
+  {
+    "url": "http://www.strutcreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Strut"
+  },
+  {
+    "url": "http://www.navigator.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Navigator Multimedia Inc."
+  },
+  {
+    "url": "http://www.agencepopinc.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Pop Inc."
+  },
+  {
+    "url": "http://www.icscreativeagency.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ICS Creative Agency"
+  },
+  {
+    "url": "http://www.icscreativeagency.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ICS Creative Agency"
+  },
+  {
+    "url": "http://www.arivano.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Arivano"
+  },
+  {
+    "url": "http://www.growrev.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "GrowRev"
+  },
+  {
+    "url": "http://www.parmacmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Parmac Relationship Marketing Ltd."
+  },
+  {
+    "url": "http://www.relydigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Rely Digital"
+  },
+  {
+    "url": "http://www.consumergenius.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ConsumerGenius"
+  },
+  {
+    "url": "http://www.dunhamweb.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Dunham Group Inc"
+  },
+  {
+    "url": "http://www.ppcninja.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "PPC Ninja"
+  },
+  {
+    "url": "http://www.habithq.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Habit Communications Inc."
+  },
+  {
+    "url": "http://www.shopliftr.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ShopLiftr"
+  },
+  {
+    "url": "http://www.impdigital.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "IMP Digital"
+  },
+  {
+    "url": "http://www.macraes.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MacRAE'S: Digital Marketing Agency"
+  },
+  {
+    "url": "http://www.outsidethebox.capital",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Outside the Box Capital"
+  },
+  {
+    "url": "http://www.kinacommunication.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Kina Communication"
+  },
+  {
+    "url": "http://www.catalystcreative.co.uk",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Catalyst Creative"
+  },
+  {
+    "url": "http://www.connectad.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ConnectAd"
+  },
+  {
+    "url": "http://www.agency59.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Agency59"
+  },
+  {
+    "url": "http://www.coreonlinemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Core Online Marketing"
+  },
+  {
+    "url": "http://www.digitallysavvy.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digitally Savvy Inc"
+  },
+  {
+    "url": "http://www.pointblankmarketing.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Pointblank Marketing"
+  },
+  {
+    "url": "http://www.fullblastcreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Full Blast Creative"
+  },
+  {
+    "url": "http://www.clearmotive.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "clearmotive marketing group"
+  },
+  {
+    "url": "http://www.agency.media",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Agency Media"
+  },
+  {
+    "url": "http://www.pertinencemedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Pertinence Media"
+  },
+  {
+    "url": "http://www.weareverypolite.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Very Polite Agency"
+  },
+  {
+    "url": "http://www.tuffmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TUFF Media"
+  },
+  {
+    "url": "http://www.conversio.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Conversio Marketing"
+  },
+  {
+    "url": "http://www.revenueautomation.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Revenue Automation"
+  },
+  {
+    "url": "http://www.ollometrics.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ollo Metrics"
+  },
+  {
+    "url": "http://www.giantcreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "GIANT Creative"
+  },
+  {
+    "url": "http://www.eclipse3sixty.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "eclipse360\u00ba"
+  },
+  {
+    "url": "http://www.reactif.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Agence Reactif"
+  },
+  {
+    "url": "http://www.dig-digital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Dig Marketing"
+  },
+  {
+    "url": "http://www.adster.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Adster Creative"
+  },
+  {
+    "url": "http://www.corecreate.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "CORE CREATE"
+  },
+  {
+    "url": "http://www.dg.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Delta Growth Inc."
+  },
+  {
+    "url": "http://www.meetfutureproof.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Futureproof Inc."
+  },
+  {
+    "url": "http://www.weareboa.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "boa"
+  },
+  {
+    "url": "http://www.pro-merit.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ProMerit"
+  },
+  {
+    "url": "http://www.hcimarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "HCI Marketing and Communications Inc."
+  },
+  {
+    "url": "http://www.rocketbarn.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "RocketBarn"
+  },
+  {
+    "url": "http://www.pipelineroad.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "PipelineRoad"
+  },
+  {
+    "url": "http://www.pro-merit.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ProMerit"
+  },
+  {
+    "url": "http://www.kika.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kika Marketing & Communications Inc"
+  },
+  {
+    "url": "http://www.spacecreatorz.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Space Creatorz"
+  },
+  {
+    "url": "http://www.zenbranding.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ZEN Branding, Design & Com"
+  },
+  {
+    "url": "http://www.zenbranding.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ZEN Branding, Design & Com"
+  },
+  {
+    "url": "http://www.webacom.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Webacom Media Corporation"
+  },
+  {
+    "url": "http://www.compasscreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Compass Creative"
+  },
+  {
+    "url": "http://www.webconductors.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Web Conductors Inc."
+  },
+  {
+    "url": "http://www.beanstalk-growth.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Beanstalk! Growth Marketing"
+  },
+  {
+    "url": "http://www.virtualad.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "VirtualAd"
+  },
+  {
+    "url": "http://www.rebornmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Reborn Marketing"
+  },
+  {
+    "url": "http://www.dealermedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Dealer Media"
+  },
+  {
+    "url": "http://www.fwdmediamarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Forward Media Marketing"
+  },
+  {
+    "url": "http://www.mymarketing.io",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "myMarketing.io"
+  },
+  {
+    "url": "http://www.effortless.marketing",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Effortless.Marketing"
+  },
+  {
+    "url": "http://www.effortless.marketing",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Effortless.Marketing"
+  },
+  {
+    "url": "http://www.ollometrics.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ollo Metrics"
+  },
+  {
+    "url": "http://www.onenetinc.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "One Net Inc."
+  },
+  {
+    "url": "http://www.movingwaldo.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MovingWaldo"
+  },
+  {
+    "url": "http://www.ventureweb.net",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "VentureWeb Design Ltd"
+  },
+  {
+    "url": "http://www.helloroketto.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Roketto"
+  },
+  {
+    "url": "http://www.elementiq.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ElementIQ (Performance Marketing Agency)"
+  },
+  {
+    "url": "http://www.infrontmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "In Front Marketing"
+  },
+  {
+    "url": "http://www.dnovogroup.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "dNOVO - Digital Marketing & SEO Agency"
+  },
+  {
+    "url": "http://www.movingwaldo.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MovingWaldo"
+  },
+  {
+    "url": "http://www.mezzaninegrowth.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Mezzanine Growth"
+  },
+  {
+    "url": "http://www.fiveringsmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "FiveRings Marketing"
+  },
+  {
+    "url": "http://www.ventureweb.net",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "VentureWeb Design Ltd"
+  },
+  {
+    "url": "http://www.borealiscreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Borealis Creative"
+  },
+  {
+    "url": "http://www.outsidethebox.capital",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Outside the Box Capital"
+  },
+  {
+    "url": "http://www.artifaktdigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Artifakt Digital: A Real Estate Marketing Agency"
+  },
+  {
+    "url": "http://www.thetarogroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The TARO Group"
+  },
+  {
+    "url": "http://www.mezzaninegrowth.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Mezzanine Growth"
+  },
+  {
+    "url": "http://www.gameplanmarketing.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "GamePlan Marketing"
+  },
+  {
+    "url": "http://www.mi6agency.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Mi6 Agency"
+  },
+  {
+    "url": "http://www.nimiopere.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Nimiopere Film Editorial"
+  },
+  {
+    "url": "http://www.wearegrowth.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "GrowthCollective"
+  },
+  {
+    "url": "http://www.emerge2.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Emerge2 Digital"
+  },
+  {
+    "url": "http://www.sway.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Sway"
+  },
+  {
+    "url": "http://www.rushventures.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Rush Ventures"
+  },
+  {
+    "url": "http://www.wiredcarbon.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Wired Carbon Inc."
+  },
+  {
+    "url": "http://www.socialeyescommunications.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "SocialEyes Communications"
+  },
+  {
+    "url": "http://www.madhouseinc.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Madhouse Advertising Inc."
+  },
+  {
+    "url": "http://www.digitalseniority.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digital Seniority | Senior Living Digital Marketing, Web Design & Consulting"
+  },
+  {
+    "url": "http://www.merged.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Merged Media"
+  },
+  {
+    "url": "http://www.rocketbarn.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "RocketBarn"
+  },
+  {
+    "url": "http://www.thepodcastexchange.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The Podcast Exchange - TPX"
+  },
+  {
+    "url": "http://www.simplifytheinternet.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "WSI - Comandix Marketing Inc."
+  },
+  {
+    "url": "http://www.avenue4.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Avenue 4 Communications"
+  },
+  {
+    "url": "http://www.thebestmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The Best Media"
+  },
+  {
+    "url": "http://www.easyamedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Easy A Media Inc."
+  },
+  {
+    "url": "http://www.inboxbooths.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Inbox Booths"
+  },
+  {
+    "url": "http://www.redboxmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Redbox Media"
+  },
+  {
+    "url": "http://www.flaxlabs.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Flax Labs | Scientific E-commerce Marketing"
+  },
+  {
+    "url": "http://www.maverickdigital.nz",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Maverick Digital"
+  },
+  {
+    "url": "http://www.dba.at",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "DBA Communications"
+  },
+  {
+    "url": "http://www.nexus6.io",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Nexus 6"
+  },
+  {
+    "url": "http://www.rushventures.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Rush Ventures"
+  },
+  {
+    "url": "http://www.webconductors.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Web Conductors Inc."
+  },
+  {
+    "url": "http://www.weusthem.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "WeUsThem Inc."
+  },
+  {
+    "url": "http://www.marketika.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MARK\u00c9TIKA"
+  },
+  {
+    "url": "http://www.agencyatlas.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Agency Atlas"
+  },
+  {
+    "url": "http://www.lebonplanmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Le Bon Plan - Certifi\u00e9e B Corp"
+  },
+  {
+    "url": "http://www.bofu.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Bofu Agence Marketing"
+  },
+  {
+    "url": "http://www.kika.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kika Marketing & Communications Inc"
+  },
+  {
+    "url": "http://www.vmgpei.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Versatile Management Group"
+  },
+  {
+    "url": "http://www.folksdigital.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Folks Digital"
+  },
+  {
+    "url": "http://www.planning.media",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Planning Media"
+  },
+  {
+    "url": "http://www.bridgemedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Bridge Media"
+  },
+  {
+    "url": "http://www.greymatter.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Grey Matter Inc."
+  },
+  {
+    "url": "http://www.advendors.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "AdVendors International Inc."
+  },
+  {
+    "url": "http://www.onenetinc.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "One Net Inc."
+  },
+  {
+    "url": "http://www.orchestra.marketing",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Orchestra Marketing"
+  },
+  {
+    "url": "http://www.mashstrategy.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Mash Strategy"
+  },
+  {
+    "url": "http://www.2045.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The 2045 Collective"
+  },
+  {
+    "url": "http://www.infrontmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "In Front Marketing"
+  },
+  {
+    "url": "http://www.gandgadvertising.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "G&G Advertising"
+  },
+  {
+    "url": "http://www.hifens.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "hifens"
+  },
+  {
+    "url": "http://www.pulsead.io",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "PulseAd"
+  },
+  {
+    "url": "http://www.promarketer.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Pro Marketer"
+  },
+  {
+    "url": "http://www.hiddengem.media",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "HiddenGem Media"
+  },
+  {
+    "url": "http://www.mantrahq.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Mantra Media"
+  },
+  {
+    "url": "http://www.firstpagemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "FirstPage Marketing"
+  },
+  {
+    "url": "http://www.ace-marketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ace Marketing Inc."
+  },
+  {
+    "url": "http://www.craftandcrew.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Craft&Crew"
+  },
+  {
+    "url": "http://www.chizsix.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ChizSix Marketing & Media"
+  },
+  {
+    "url": "http://www.fello.agency",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Fello"
+  },
+  {
+    "url": "http://www.thinkrmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Thinkr Marketing"
+  },
+  {
+    "url": "http://www.connectedinteractive.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Connected Interactive"
+  },
+  {
+    "url": "http://www.chessclub.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Chess Club Agency"
+  },
+  {
+    "url": "http://www.eaglecom.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Eaglecom Marketing"
+  },
+  {
+    "url": "http://www.morethanscaling.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "More Than Scaling"
+  },
+  {
+    "url": "http://www.idimpact.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ID Impact"
+  },
+  {
+    "url": "http://www.thinkrmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Thinkr Marketing"
+  },
+  {
+    "url": "http://www.greenlivingenterprises.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Green Living Enterprises"
+  },
+  {
+    "url": "http://www.avenue4.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Avenue 4 Communications"
+  },
+  {
+    "url": "http://www.amplomedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Amplomedia"
+  },
+  {
+    "url": "http://www.empower.social",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Empower Social"
+  },
+  {
+    "url": "http://www.linklumin.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Link Lumin"
+  },
+  {
+    "url": "http://www.connectedinteractive.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Connected Interactive"
+  },
+  {
+    "url": "http://www.influicity.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Influicity"
+  },
+  {
+    "url": "http://www.navigator.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Navigator Multimedia Inc."
+  },
+  {
+    "url": "http://www.navigator.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Navigator Multimedia Inc."
+  },
+  {
+    "url": "http://www.fwdmediamarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Forward Media Marketing"
+  },
+  {
+    "url": "http://www.virtualimage.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Virtual Image"
+  },
+  {
+    "url": "http://www.statusbureau.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Status Bureau"
+  },
+  {
+    "url": "http://www.chizsix.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ChizSix Marketing & Media"
+  },
+  {
+    "url": "http://www.keencreative.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "KEEN Creative"
+  },
+  {
+    "url": "http://www.brandingcentres.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Branding Centres"
+  },
+  {
+    "url": "http://www.dig-digital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Dig Marketing"
+  },
+  {
+    "url": "http://www.marvelmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Marvel Marketing"
+  },
+  {
+    "url": "http://www.dv8communication.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "DV8 Communication"
+  },
+  {
+    "url": "http://www.mylittlebigweb.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "My Little Big Web | Agence Web"
+  },
+  {
+    "url": "http://www.connectionincorporated.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Connection Incorporated"
+  },
+  {
+    "url": "http://www.habithq.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Habit Communications Inc."
+  },
+  {
+    "url": "http://www.bnlmediaconsulting.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "BNL Media Consulting"
+  },
+  {
+    "url": "http://www.acceler8labs.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Acceler8 Labs"
+  },
+  {
+    "url": "http://www.primecreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Prime Creative"
+  },
+  {
+    "url": "http://www.ollometrics.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ollo Metrics"
+  },
+  {
+    "url": "http://www.performlytics.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Performlytics"
+  },
+  {
+    "url": "http://www.bridgemedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Bridge Media"
+  },
+  {
+    "url": "http://www.h2odigital.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "H2O Digital Marketing Agency"
+  },
+  {
+    "url": "http://www.bambassadors.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Bambassadors"
+  },
+  {
+    "url": "http://www.reachglobal.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Reach Global Marketing"
+  },
+  {
+    "url": "http://www.vimoro.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Vimoro Media Inc."
+  },
+  {
+    "url": "http://www.vimoro.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Vimoro Media Inc."
+  },
+  {
+    "url": "http://www.rocketbarn.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "RocketBarn"
+  },
+  {
+    "url": "http://www.drmarketing.io",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Dr. Marketing"
+  },
+  {
+    "url": "http://www.wearehale.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Hale."
+  },
+  {
+    "url": "http://www.cakecommunication.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "CAKE Communication"
+  },
+  {
+    "url": "http://www.ppcninja.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "PPC Ninja"
+  },
+  {
+    "url": "http://www.webreathesocial.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "WBS"
+  },
+  {
+    "url": "http://www.marwickmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Marwick Marketing"
+  },
+  {
+    "url": "http://www.bluecollarmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Blue Collar Marketing"
+  },
+  {
+    "url": "http://www.marvelmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Marvel Marketing"
+  },
+  {
+    "url": "http://www.vimoro.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Vimoro Media Inc."
+  },
+  {
+    "url": "http://www.cakecommunication.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "CAKE Communication"
+  },
+  {
+    "url": "http://www.truthtree.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Truth Tree"
+  },
+  {
+    "url": "http://www.tactikmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TactikMedia"
+  },
+  {
+    "url": "http://www.justdigitalinc.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Just Digital Inc"
+  },
+  {
+    "url": "http://www.bluecollarmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Blue Collar Marketing"
+  },
+  {
+    "url": "http://www.navigator.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Navigator Multimedia Inc."
+  },
+  {
+    "url": "http://www.goodimpressionsmedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Good Impressions"
+  },
+  {
+    "url": "http://www.vgtmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Clinic Lab"
+  },
+  {
+    "url": "http://www.oncoreleads.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "OnCore Leads"
+  },
+  {
+    "url": "http://www.mkh.fr",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MKH"
+  },
+  {
+    "url": "http://www.tamonroe.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TA Monroe Digital"
+  },
+  {
+    "url": "http://www.mashstrategy.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Mash Strategy"
+  },
+  {
+    "url": "http://www.brillmedia.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Brill Media"
+  },
+  {
+    "url": "http://www.opacitydesigngroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Opacity Design Group (ODG)"
+  },
+  {
+    "url": "http://www.easyamedia.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Easy A Media Inc."
+  },
+  {
+    "url": "http://www.constantconcept.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Constant Concept Inc"
+  },
+  {
+    "url": "http://www.gurucom.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Guru Communications Inc"
+  },
+  {
+    "url": "http://www.eclipse3sixty.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "eclipse360\u00ba"
+  },
+  {
+    "url": "http://www.agency.media",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Agency Media"
+  },
+  {
+    "url": "http://www.solia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Solia"
+  },
+  {
+    "url": "http://www.kickpoint.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kick Point Inc."
+  },
+  {
+    "url": "http://www.eclipse3sixty.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "eclipse360\u00ba"
+  },
+  {
+    "url": "http://www.reactif.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Reactif Agence Cr\u00e9ative"
+  },
+  {
+    "url": "http://www.propagam.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Gamache Media \ud83d\ude80"
+  },
+  {
+    "url": "http://www.rtown.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "RTOWN"
+  },
+  {
+    "url": "http://www.chillibyte.co.uk",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Chillibyte"
+  },
+  {
+    "url": "http://www.kickpoint.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Kick Point Inc."
+  },
+  {
+    "url": "http://www.firstpagemarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "FirstPage Marketing"
+  },
+  {
+    "url": "http://www.refreshpr.co.uk",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Refresh"
+  },
+  {
+    "url": "http://www.growyourcenter.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Grow Your Center"
+  },
+  {
+    "url": "http://www.netgain.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Netgain"
+  },
+  {
+    "url": "http://www.involvedmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Involved Media Canada"
+  },
+  {
+    "url": "http://www.involvedmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Involved Media Canada"
+  },
+  {
+    "url": "http://www.netgain.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Netgain"
+  },
+  {
+    "url": "http://www.involvedmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Involved Media Canada"
+  },
+  {
+    "url": "http://www.tequila.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Tequila Communication et Marketing"
+  },
+  {
+    "url": "http://www.gasgrp.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "GAS\u00ae"
+  },
+  {
+    "url": "http://www.involvedmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Involved Media Canada"
+  },
+  {
+    "url": "http://www.trgr.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRGR Advertising"
+  },
+  {
+    "url": "http://www.thesmallsocial.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The Small Social Company"
+  },
+  {
+    "url": "http://www.chessclub.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Chess Club Agency"
+  },
+  {
+    "url": "http://www.trgr.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRGR Advertising"
+  },
+  {
+    "url": "http://www.tequila.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Tequila Communication et Marketing"
+  },
+  {
+    "url": "http://www.westernmediagroup.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Western Media Group"
+  },
+  {
+    "url": "http://www.hifens.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "hifens"
+  },
+  {
+    "url": "http://www.borealiscreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Borealis Creative"
+  },
+  {
+    "url": "http://www.impdigital.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "IMP Digital"
+  },
+  {
+    "url": "http://www.borealiscreative.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Borealis Creative"
+  },
+  {
+    "url": "http://www.adhomecreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "adHOME Creative"
+  },
+  {
+    "url": "http://www.impdigital.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "IMP Digital"
+  },
+  {
+    "url": "http://www.orchestra.marketing",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Orchestra Marketing"
+  },
+  {
+    "url": "http://www.swevenmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Sweven Media"
+  },
+  {
+    "url": "http://www.impdigital.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "IMP Digital"
+  },
+  {
+    "url": "http://www.vivvion.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Vivvion"
+  },
+  {
+    "url": "http://www.aspiration.marketing",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Aspiration Marketing"
+  },
+  {
+    "url": "http://www.digitales.co.in",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Digitales Media"
+  },
+  {
+    "url": "http://www.cpsmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "CPS M\u00e9dia"
+  },
+  {
+    "url": "http://www.marketika.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "MARK\u00c9TIKA"
+  },
+  {
+    "url": "http://www.mkmedia.biz",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "M&K Media"
+  },
+  {
+    "url": "http://www.expertsagency.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Experts Agency"
+  },
+  {
+    "url": "http://www.instalogic.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Instalogic Marketing"
+  },
+  {
+    "url": "http://www.internationaladvertisingsolutions.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "International Advertising Solutions"
+  },
+  {
+    "url": "http://www.cpsmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "CPS M\u00e9dia"
+  },
+  {
+    "url": "http://www.influicity.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Influicity"
+  },
+  {
+    "url": "http://www.faste.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Faste Communication"
+  },
+  {
+    "url": "http://www.knowcompany.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Know Company Inc."
+  },
+  {
+    "url": "http://www.guaranamarketing.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Guarana Marketing"
+  },
+  {
+    "url": "http://www.chatterson.co",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Chatterson"
+  },
+  {
+    "url": "http://www.consumergenius.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ConsumerGenius"
+  },
+  {
+    "url": "http://www.generationmarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Generation Marketing Inc."
+  },
+  {
+    "url": "http://www.faste.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Faste Communication"
+  },
+  {
+    "url": "http://www.do180.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "180 Marketing"
+  },
+  {
+    "url": "http://www.yorkc.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "York Consulting Inc."
+  },
+  {
+    "url": "http://www.reddingdesigns.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Redding Designs"
+  },
+  {
+    "url": "http://www.consumergenius.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ConsumerGenius"
+  },
+  {
+    "url": "http://www.3di.com.au",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "3Di - data powered marketing"
+  },
+  {
+    "url": "http://www.coylemediagroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Coyle Media Group"
+  },
+  {
+    "url": "http://www.outsidethebox.capital",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Outside the Box Capital"
+  },
+  {
+    "url": "http://www.mediapropulsionlaboratory.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Media Propulsion Laboratory"
+  },
+  {
+    "url": "http://www.agency59.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Agency59"
+  },
+  {
+    "url": "http://www.fueldigitalmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Fuel Digital Media"
+  },
+  {
+    "url": "http://www.kimbodesign.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "KIMBO Design Inc."
+  },
+  {
+    "url": "http://www.brandandmortar.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Brand & Mortar"
+  },
+  {
+    "url": "http://www.fueldigitalmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Fuel Digital Media"
+  },
+  {
+    "url": "http://www.mkmedia.biz",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "M&K Media"
+  },
+  {
+    "url": "http://www.mkmedia.biz",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "M&K Media"
+  },
+  {
+    "url": "http://www.brandandmortar.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Brand & Mortar"
+  },
+  {
+    "url": "http://www.gameplanmarketing.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "GamePlan Marketing"
+  },
+  {
+    "url": "http://www.uncutbrands.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Uncut Brands"
+  },
+  {
+    "url": "http://www.standish.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Standish Communications"
+  },
+  {
+    "url": "http://www.buildmediagroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Build Media Group"
+  },
+  {
+    "url": "http://www.dv8communication.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "DV8 Communication"
+  },
+  {
+    "url": "http://www.brandandmortar.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Brand & Mortar"
+  },
+  {
+    "url": "http://www.thenew.business",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The New Business"
+  },
+  {
+    "url": "http://www.fueldigitalmedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Fuel Digital Media"
+  },
+  {
+    "url": "http://www.meetfutureproof.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Futureproof Inc."
+  },
+  {
+    "url": "http://www.renegadedigital.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Renegade Digital Media Inc."
+  },
+  {
+    "url": "http://www.boldcollective.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Bold Collective"
+  },
+  {
+    "url": "http://www.monsooncommunications.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Monsoon Communications Inc."
+  },
+  {
+    "url": "http://www.creativedisplay.net",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Creative Display Technologies"
+  },
+  {
+    "url": "http://www.naidacom.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Naida Communications"
+  },
+  {
+    "url": "http://www.kingstreetmedia.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "King Street Media"
+  },
+  {
+    "url": "http://www.funnelsandsetters.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Funnels And Setters"
+  },
+  {
+    "url": "http://www.quimbydigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Quimby Digital"
+  },
+  {
+    "url": "http://www.mmkmarketing.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "MMK Marketing, The Brand Experience Agency"
+  },
+  {
+    "url": "http://www.func.media",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "func.media"
+  },
+  {
+    "url": "http://www.merged.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Merged Media"
+  },
+  {
+    "url": "http://www.actualmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Actual Media Inc."
+  },
+  {
+    "url": "http://www.funnelsandsetters.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Funnels And Setters"
+  },
+  {
+    "url": "http://www.superproper.ai",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Super Proper"
+  },
+  {
+    "url": "http://www.wearegrowth.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "GrowthCollective"
+  },
+  {
+    "url": "http://www.quimbydigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Quimby Digital"
+  },
+  {
+    "url": "http://www.strutcreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Strut"
+  },
+  {
+    "url": "http://www.superproper.ai",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Super Proper"
+  },
+  {
+    "url": "http://www.superproper.ai",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Super Proper"
+  },
+  {
+    "url": "http://www.superproper.ai",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Super Proper"
+  },
+  {
+    "url": "http://www.ruckusdigital.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "ruckus digital"
+  },
+  {
+    "url": "http://www.actualmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Actual Media Inc."
+  },
+  {
+    "url": "http://www.superproper.ai",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Super Proper"
+  },
+  {
+    "url": "http://www.aasman.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Aasman Brand Communications"
+  },
+  {
+    "url": "http://www.adsever.in",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Adsever Media"
+  },
+  {
+    "url": "http://www.kulapartners.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Kula Partners"
+  },
+  {
+    "url": "http://www.actualmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Actual Media Inc."
+  },
+  {
+    "url": "http://www.strutcreative.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Strut"
+  },
+  {
+    "url": "http://www.wowbranding.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "WOW Branding"
+  },
+  {
+    "url": "http://www.wowbranding.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "WOW Branding"
+  },
+  {
+    "url": "http://www.purposeautomotive.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Purpose Automotive"
+  },
+  {
+    "url": "http://www.nogrowth.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "No Growth"
+  },
+  {
+    "url": "http://www.elementcommunications.co.uk",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Element Communications"
+  },
+  {
+    "url": "http://www.branchup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "BranchUp"
+  },
+  {
+    "url": "http://www.marveta.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Marveta"
+  },
+  {
+    "url": "http://www.2045.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The 2045 Collective"
+  },
+  {
+    "url": "http://www.foreverbooked.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Forever Booked"
+  },
+  {
+    "url": "http://www.withprinciples.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Principles"
+  },
+  {
+    "url": "http://www.withprinciples.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Principles"
+  },
+  {
+    "url": "http://www.arivano.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Arivano"
+  },
+  {
+    "url": "http://www.ulstermedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Ulster Media"
+  },
+  {
+    "url": "http://www.thepodcastexchange.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The Podcast Exchange - TPX"
+  },
+  {
+    "url": "http://www.friendsoffriends.agency",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Friends Of Friends"
+  },
+  {
+    "url": "http://www.capitalcommunications.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Capital Communications Company"
+  },
+  {
+    "url": "http://www.branchup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "BranchUp"
+  },
+  {
+    "url": "http://www.promotivate.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Promotivate LP"
+  },
+  {
+    "url": "http://www.promotivate.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Promotivate LP"
+  },
+  {
+    "url": "http://www.kulapartners.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Kula Partners"
+  },
+  {
+    "url": "http://www.connectionincorporated.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Connection Incorporated"
+  },
+  {
+    "url": "http://www.promotivate.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Promotivate LP"
+  },
+  {
+    "url": "http://www.parmacmarketing.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Parmac Relationship Marketing Ltd."
+  },
+  {
+    "url": "http://www.withprinciples.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Principles"
+  },
+  {
+    "url": "http://www.keencreative.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "KEEN Creative"
+  },
+  {
+    "url": "http://www.m1agency.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "M1 Agency Inc."
+  },
+  {
+    "url": "http://www.mediaplusadvertising.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Mediaplus Advertising"
+  },
+  {
+    "url": "http://www.wiredcarbon.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Wired Carbon Inc."
+  },
+  {
+    "url": "http://www.bnisalberta.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "BNI Alberta South -  A Region of the World's Most Successful Referral Marketing Organization"
+  },
+  {
+    "url": "http://www.loomo.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Loomo Marketing"
+  },
+  {
+    "url": "http://www.asheriamktg.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Asheria Marketing"
+  },
+  {
+    "url": "http://www.upstreammarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Upstream"
+  },
+  {
+    "url": "http://www.m32connect.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "M32 Connect"
+  },
+  {
+    "url": "http://www.shopliftr.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ShopLiftr"
+  },
+  {
+    "url": "http://www.roarcommunications.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Roar Communications Inc."
+  },
+  {
+    "url": "http://www.twg.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TWG Communications"
+  },
+  {
+    "url": "http://www.amplomedia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Amplomedia"
+  },
+  {
+    "url": "http://www.roarcommunications.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Roar Communications Inc."
+  },
+  {
+    "url": "http://www.orionvibesintl.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Orion Media"
+  },
+  {
+    "url": "http://www.snoball.events",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Sn\u00f6ball"
+  },
+  {
+    "url": "http://www.eaglecom.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Eaglecom Marketing"
+  },
+  {
+    "url": "http://www.topsitecanada.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Topsite"
+  },
+  {
+    "url": "http://www.fordebaker.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "FordeBaker"
+  },
+  {
+    "url": "http://www.elementcommunications.co.uk",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Element Communications"
+  },
+  {
+    "url": "http://www.artifaktdigital.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Artifakt Digital: A Real Estate Marketing Agency"
+  },
+  {
+    "url": "http://www.poplocate.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Pop Locate"
+  },
+  {
+    "url": "http://www.roarcommunications.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Roar Communications Inc."
+  },
+  {
+    "url": "http://www.cameleon.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Cam\u00e9l\u00e9on - Agence de Marque"
+  },
+  {
+    "url": "http://www.iconium.io",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Iconium Media"
+  },
+  {
+    "url": "http://www.spacecreatorz.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Space Creatorz"
+  },
+  {
+    "url": "http://www.cruiseaccelerator.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Cruise Accelerator"
+  },
+  {
+    "url": "http://www.orionmarketinginc.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Orion Marketing"
+  },
+  {
+    "url": "http://www.thetarogroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The TARO Group"
+  },
+  {
+    "url": "http://www.growwithamp.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "AMP | Associated Marketing Professionals"
+  },
+  {
+    "url": "http://www.loomo.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Loomo Marketing"
+  },
+  {
+    "url": "http://www.keygordon.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Key Gordon"
+  },
+  {
+    "url": "http://www.bnisalberta.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "BNI Alberta South -  A Region of the World's Most Successful Referral Marketing Organization"
+  },
+  {
+    "url": "http://www.samuraimedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Samurai Media Group"
+  },
+  {
+    "url": "http://www.growwithamp.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "AMP | Associated Marketing Professionals"
+  },
+  {
+    "url": "http://www.marshalyard.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Marshal Yard"
+  },
+  {
+    "url": "http://www.marshalyard.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Marshal Yard"
+  },
+  {
+    "url": "http://www.agenceoasis.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Agence Oasis"
+  },
+  {
+    "url": "http://www.pelotonmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Peloton Media Inc."
+  },
+  {
+    "url": "http://www.thetarogroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "The TARO Group"
+  },
+  {
+    "url": "http://www.kinacommunication.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Kina Communication"
+  },
+  {
+    "url": "http://www.keygordon.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Key Gordon"
+  },
+  {
+    "url": "http://www.upstreammarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Upstream"
+  },
+  {
+    "url": "http://www.connectedinteractive.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Connected Interactive"
+  },
+  {
+    "url": "http://www.twenty6two.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "twenty6two International Inc."
+  },
+  {
+    "url": "http://www.strategies.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Strat\u00e9gies Marketing Relationnel"
+  },
+  {
+    "url": "http://www.shopliftr.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "ShopLiftr"
+  },
+  {
+    "url": "http://www.keygordon.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Key Gordon"
+  },
+  {
+    "url": "http://www.cyberwhyze.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "cyberwhyze"
+  },
+  {
+    "url": "http://www.mogulclients.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Mogul Clients"
+  },
+  {
+    "url": "http://www.adeptus.marketing",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Adeptus Marketing"
+  },
+  {
+    "url": "http://www.agenceoasis.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Agence Oasis"
+  },
+  {
+    "url": "http://www.twg.co",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TWG Communications"
+  },
+  {
+    "url": "http://www.pineappleview.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Pineapple View Media"
+  },
+  {
+    "url": "http://www.truedotdesign.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRUEdotDESIGN"
+  },
+  {
+    "url": "http://www.speakrbrand.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "SpeakrBrand"
+  },
+  {
+    "url": "http://www.clearmotive.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "clearmotive marketing group"
+  },
+  {
+    "url": "http://www.truedotdesign.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRUEdotDESIGN"
+  },
+  {
+    "url": "http://www.clearmotive.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "clearmotive marketing group"
+  },
+  {
+    "url": "http://www.dunnegroup.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Dunne Group"
+  },
+  {
+    "url": "http://www.allspacegroup.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "AllSpace Group Official"
+  },
+  {
+    "url": "http://www.magnitudeofchange.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Magnitude of Change"
+  },
+  {
+    "url": "http://www.exponentiel.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Exponentiel"
+  },
+  {
+    "url": "http://www.clearmotive.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "clearmotive marketing group"
+  },
+  {
+    "url": "http://www.exponentiel.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Exponentiel"
+  },
+  {
+    "url": "http://www.cleansheet.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cleansheet Communications"
+  },
+  {
+    "url": "http://www.dunnegroup.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "The Dunne Group"
+  },
+  {
+    "url": "http://www.truedotdesign.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRUEdotDESIGN"
+  },
+  {
+    "url": "http://www.truedotdesign.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRUEdotDESIGN"
+  },
+  {
+    "url": "http://www.victorymedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Victory Media Inc."
+  },
+  {
+    "url": "http://www.cyclonedesign.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Cyclone Design Communications"
+  },
+  {
+    "url": "http://www.agencesecrete.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "l'Agence secr\u00e8te - communication d'influence"
+  },
+  {
+    "url": "http://www.truedotdesign.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "TRUEdotDESIGN"
+  },
+  {
+    "url": "http://www.y.team",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Y Partners"
+  },
+  {
+    "url": "http://www.morin.marketing",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Morin Partenaire Strat\u00e9gique"
+  },
+  {
+    "url": "http://www.pelotonmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Peloton Media Inc."
+  },
+  {
+    "url": "http://www.upstreammarketing.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Upstream"
+  },
+  {
+    "url": "http://www.stratlab.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "StratLab Marketing"
+  },
+  {
+    "url": "http://www.brandm3dia.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Brand M3dia Group"
+  },
+  {
+    "url": "http://www.forgeandspark.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Forge & Spark Media | Certified B Corp"
+  },
+  {
+    "url": "http://www.frontrunner-tech.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "FrontRunner Technologies"
+  },
+  {
+    "url": "http://www.forgeandspark.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Forge & Spark Media | Certified B Corp"
+  },
+  {
+    "url": "http://www.greenlivingenterprises.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Green Living Enterprises"
+  },
+  {
+    "url": "http://www.frontrunner-tech.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "FrontRunner Technologies"
+  },
+  {
+    "url": "http://www.flairstrategie.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "FLAIR Strat\u00e9gie"
+  },
+  {
+    "url": "http://www.integral.partners",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Int\u00e9gral"
+  },
+  {
+    "url": "http://www.flippadvertising.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Flipp Advertising Inc."
+  },
+  {
+    "url": "http://www.craftandcrew.ca",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Craft&Crew"
+  },
+  {
+    "url": "http://www.polkarsenal.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Agence POLKA/ARSENAL"
+  },
+  {
+    "url": "http://www.10pmcurfew.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "10PM Curfew"
+  },
+  {
+    "url": "http://www.integral.partners",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Int\u00e9gral"
+  },
+  {
+    "url": "http://www.dewarcom.com",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Dewar Communications Group"
+  },
+  {
+    "url": "http://www.polkarsenal.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Agence POLKA/ARSENAL"
+  },
+  {
+    "url": "http://www.polkarsenal.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Agence POLKA/ARSENAL"
+  },
+  {
+    "url": "http://www.dewarcom.com",
+    "http_suitable": true,
+    "needs_apify": false,
+    "error": null,
+    "company_name": "Dewar Communications Group"
+  },
+  {
+    "url": "http://www.redboxmedia.ca",
+    "http_suitable": false,
+    "needs_apify": true,
+    "error": null,
+    "company_name": "Redbox Media"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "total_processed": 1,
+  "successful": 1,
+  "failed": 0,
+  "processed_at": "2025-09-08T13:49:26.486545",
+  "results": [
+    {
+      "domain": "stryvemarketing.com",
+      "company_name": "Stryve Digital Marketing",
+      "processed_at": "2025-09-08T13:49:04.197509",
+      "success": true,
+      "pages_found": 6,
+      "pages_processed": 3,
+      "content_extracted": true,
+      "ai_analysis": {
+        "raw_analysis": "```json\n{\n  \"company_focus\": {\n    \"main_business_focus\": \"Digital marketing services\",\n    \"services\": [\n      \"SEO\",\n      \"PPC advertising\",\n      \"social media marketing\",\n      \"content marketing\",\n      \"web design\"\n    ],\n    \"products\": []\n  },\n  \"company_values\": {\n    \"mission\": \"To help businesses grow their online presence and achieve their marketing goals through innovative digital solutions.\",\n    \"values\": [\n      \"Integrity\",\n      \"Customer-centric approach\",\n      \"Innovation\",\n      \"Collaboration\"\n    ],\n    \"culture\": \"A dynamic and collaborative work environment that encourages creativity and continuous learning.\"\n  },\n  \"recent_developments\": {\n    \"new_initiatives\": [\n      \"Launch of a new SEO tool designed for small businesses\",\n      \"Expansion of services to include video marketing\"\n    ],\n    \"growth\": \"Increased client base by 30% over the past year\",\n    \"changes\": \"Adoption of new AI technologies to enhance service delivery\",\n    \"achievements\": \"Recognition as a top digital marketing agency in the region\"\n  },\n  \"team_info\": {\n    \"leadership\": [\n      {\n        \"name\": \"John Doe\",\n        \"position\": \"CEO\",\n        \"background\": \"Over 15 years of experience in digital marketing\"\n      },\n      {\n        \"name\": \"Jane Smith\",\n        \"position\": \"Chief Marketing Officer\",\n        \"background\": \"Expert in content strategy and brand development\"\n      }\n    ],\n    \"team_size\": \"Approximately 50 employees\",\n    \"key_people_mentioned\": [\"John Doe\", \"Jane Smith\"]\n  },\n  \"industry_insights\": {\n    \"industry_served\": \"Digital marketing\",\n    \"target_customers\": [\n      \"Small to medium-sized businesses\",\n      \"Startups\",\n      \"E-commerce brands\"\n    ],\n    \"market_position\": \"Competitive player in the digital marketing space with a focus on personalized service.\"\n  },\n  \"unique_differentiators\": {\n    \"what_makes_them_special\": \"Tailored marketing strategies that focus on individual client needs\",\n    \"competitive_advantages\": [\n      \"Strong emphasis on data-driven results\",\n      \"Dedicated account managers for personalized service\",\n      \"Innovative use of technology in marketing strategies\"\n    ]\n  },\n  \"pain_points\": {\n    \"challenges_faced\": [\n      \"Helping clients navigate the complexities of digital marketing\",\n      \"Ensuring measurable ROI for clients\",\n      \"Staying ahead of rapidly changing digital trends\"\n    ],\n    \"solving_for_clients\": \"Providing clear, actionable insights and strategies to improve online visibility and engagement.\"\n  },\n  \"personality\": {\n    \"company_tone\": \"Professional yet approachable\",\n    \"style\": \"Informative and engaging\",\n    \"personality_traits\": [\n      \"Innovative\",\n      \"Supportive\",\n      \"Results-oriented\"\n    ]\n  },\n  \"contact_preferences\": {\n    \"how_to_contact\": \"Preferred contact via email or scheduled calls\"\n  },\n  \"personalization_hooks\": {\n    \"specific_details\": [\n      \"Mention of their recent expansion into video marketing\",\n      \"Reference to their new SEO tool for small businesses\",\n      \"Highlighting their recognition as a top agency in the region\"\n    ]\n  }\n}\n```"
+      },
+      "errors": []
+    }
+  ]
+}

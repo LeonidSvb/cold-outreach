@@ -1,0 +1,7 @@
+Hey {first_name}! 
+
+Fellow {city} business owner here 👋 
+
+Love what you're doing with {company_name}. {location_context}
+
+Wondering - {relevant_question}?

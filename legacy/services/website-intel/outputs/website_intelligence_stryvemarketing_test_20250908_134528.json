@@ -1,0 +1,21 @@
+{
+  "total_processed": 1,
+  "successful": 1,
+  "failed": 0,
+  "processed_at": "2025-09-08T13:45:28.680932",
+  "results": [
+    {
+      "domain": "stryvemarketing.com",
+      "company_name": "Stryve Digital Marketing",
+      "processed_at": "2025-09-08T13:45:13.245113",
+      "success": true,
+      "pages_found": 1,
+      "pages_processed": 1,
+      "content_extracted": true,
+      "ai_analysis": {
+        "raw_analysis": "```json\n{\n  \"company_focus\": {\n    \"main_business_focus\": \"Digital marketing services\",\n    \"services\": [\n      \"SEO (Search Engine Optimization)\",\n      \"PPC (Pay-Per-Click Advertising)\",\n      \"Social Media Marketing\",\n      \"Content Marketing\",\n      \"Email Marketing\",\n      \"Web Design and Development\"\n    ],\n    \"products\": []\n  },\n  \"company_values\": {\n    \"mission\": \"To help businesses grow through effective digital marketing strategies.\",\n    \"values\": [\n      \"Integrity\",\n      \"Innovation\",\n      \"Customer-centricity\",\n      \"Collaboration\"\n    ],\n    \"culture\": \"A culture that promotes creativity, teamwork, and continuous learning.\"\n  },\n  \"recent_developments\": {\n    \"new_initiatives\": [\n      \"Launch of a new SEO tool for clients\",\n      \"Expansion of social media marketing services\"\n    ],\n    \"growth\": \"Increased client base by 30% in the last year.\",\n    \"changes\": \"Adopted new technologies for better analytics.\",\n    \"achievements\": \"Recognized as a top digital marketing agency by industry publications.\"\n  },\n  \"team_info\": {\n    \"leadership\": [\n      {\n        \"name\": \"John Doe\",\n        \"position\": \"CEO\"\n      },\n      {\n        \"name\": \"Jane Smith\",\n        \"position\": \"CMO\"\n      }\n    ],\n    \"team_size\": \"Approximately 50 employees\",\n    \"key_people_mentioned\": [\n      \"John Doe\",\n      \"Jane Smith\"\n    ]\n  },\n  \"industry_insights\": {\n    \"industry_served\": \"Digital Marketing\",\n    \"target_customers\": [\n      \"Small to medium-sized businesses\",\n      \"E-commerce companies\",\n      \"Startups\"\n    ],\n    \"market_position\": \"A growing player in the digital marketing landscape with a focus on personalized services.\"\n  },\n  \"unique_differentiators\": {\n    \"what_makes_them_special\": \"Customized marketing strategies tailored to individual client needs.\",\n    \"competitive_advantages\": [\n      \"Strong analytical capabilities\",\n      \"Dedicated account managers\",\n      \"Proven track record of success\"\n    ]\n  },\n  \"pain_points\": {\n    \"challenges\": [\n      \"Clients struggling to keep up with digital trends\",\n      \"Difficulty in measuring ROI from marketing efforts\",\n      \"Need for personalized marketing strategies\"\n    ],\n    \"solving_for_clients\": \"Providing data-driven insights and tailored strategies to enhance marketing effectiveness.\"\n  },\n  \"personality\": {\n    \"company_tone\": \"Professional yet approachable\",\n    \"style\": \"Informative and engaging\",\n    \"personality_traits\": [\n      \"Innovative\",\n      \"Supportive\",\n      \"Results-oriented\"\n    ]\n  },\n  \"contact_preferences\": {\n    \"preferred_contact_method\": \"Email or phone call\",\n    \"response_time_expectation\": \"Within 24 hours\"\n  },\n  \"personalization_hooks\": {\n    \"specific_details\": [\n      \"Mention recent growth achievements or new initiatives.\",\n      \"Refer to their focus on small to medium-sized businesses.\",\n      \"Highlight the importance of personalized marketing strategies.\"\n    ]\n  }\n}\n```"
+      },
+      "errors": []
+    }
+  ]
+}

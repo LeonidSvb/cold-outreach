@@ -1,0 +1,11 @@
+domain,text_extraction_success,total_text_length,total_links_found,pages_scraped,scraping_time,scraping_error,ai_analysis_success,ai_selected_pages,ai_processing_time
+workparty.ca,True,537,0,1,0.6016461849212646,,False,,0
+greenhousemarketing.ca,False,0,0,0,1.8377575874328613,,False,,0
+bigfishcreative.ca,True,54,0,1,2.4658620357513428,,False,,0
+nimiopere.com,True,0,0,1,3.4555461406707764,,False,,0
+involvedmedia.ca,True,10925,140,7,3.4661827087402344,,False,,0
+polkarsenal.com,True,463,20,1,3.7538862228393555,,False,,0
+stryvemarketing.com,True,5359,157,8,4.337727069854736,,False,,0
+altitudestrategies.ca,True,73,0,1,5.310595989227295,,False,,0
+kiplingmedia.com,True,27900,97,14,5.569014549255371,,False,,0
+theog.co,True,13498,75,6,7.080934286117554,,False,,0

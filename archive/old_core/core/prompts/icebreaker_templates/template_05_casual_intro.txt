@@ -1,0 +1,7 @@
+Hey {first_name}! 
+
+{company_name} caught my eye - {company_observation}.
+
+btw we just {recent_success} for a similar company in {city}.
+
+Worth a quick chat about {relevant_topic}?

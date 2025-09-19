@@ -1,0 +1,36 @@
+{
+  "overview": {
+    "total_scripts_run": 1,
+    "total_companies_processed": 3,
+    "total_api_cost": 0.0037,
+    "total_processing_time": 152.02,
+    "average_success_rate": 0.0,
+    "most_used_script": "website_intelligence_processor"
+  },
+  "by_script": {
+    "website_intelligence_processor": {
+      "total_runs": 1,
+      "total_items": 3,
+      "total_cost": 0.0037,
+      "total_time": 152.02435612678528,
+      "avg_success_rate": 0.0,
+      "last_run": "2025-09-10T14:47:47.663737"
+    }
+  },
+  "trends": {
+    "daily_activity": [
+      {
+        "date": "2025-09-10",
+        "sessions_count": 1,
+        "items_processed": 3,
+        "total_cost": 0.0037,
+        "scripts": [
+          "website_intelligence_processor"
+        ]
+      }
+    ],
+    "weekly_summary": [],
+    "monthly_stats": []
+  },
+  "last_calculated": "2025-09-10T14:47:47.692763"
+}

@@ -1,0 +1,7 @@
+Hi {first_name},
+
+{company_name} with {estimated_num_employees} people - nice size for {industry_context}.
+
+We just helped a similar {industry} company {success_story}.
+
+Quick question: {relevant_question}?

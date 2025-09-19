@@ -1,0 +1,7 @@
+Hey {first_name}!
+
+As {title} at {company_name}, you probably deal with {title_challenge} daily.
+
+We just helped another {similar_title} {specific_result}.
+
+Curious - {relevant_question}?
