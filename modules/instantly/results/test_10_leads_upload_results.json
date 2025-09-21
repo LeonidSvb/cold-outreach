@@ -1,0 +1,59 @@
+{
+  "campaign_id": "608002a6-619e-4135-a4f7-02ee54e7ad54",
+  "total_companies": 10,
+  "successful": 10,
+  "failed": 0,
+  "success_rate": 100.0,
+  "created_leads": [
+    {
+      "company": "TestCorp Digital Solutions",
+      "email": "info@testcorp2025.com",
+      "lead_id": "57deef0b-0a7e-42b7-9a57-6d123e3f3fe2"
+    },
+    {
+      "company": "CloudMax Technologies",
+      "email": "info@cloudmaxtech.io",
+      "lead_id": "46604494-8d50-46b2-a791-0668e462ed9e"
+    },
+    {
+      "company": "InnovateLab Studio",
+      "email": "info@innovatelab.ca",
+      "lead_id": "476c1836-8e71-40bc-a543-d1c80fe07b39"
+    },
+    {
+      "company": "DataFlow Analytics",
+      "email": "info@dataflowanalytics.com",
+      "lead_id": "a7352367-8e12-4409-86c7-01f45de5bb0d"
+    },
+    {
+      "company": "SmartScale Systems",
+      "email": "info@smartscalesys.net",
+      "lead_id": "d6b21ac9-58ef-4325-b998-712f27357389"
+    },
+    {
+      "company": "TechBridge Consulting",
+      "email": "info@techbridgeco.com",
+      "lead_id": "4570a526-4f39-4c2b-8414-2740ff2b2b48"
+    },
+    {
+      "company": "NextWave Marketing",
+      "email": "info@nextwaveagency.io",
+      "lead_id": "bdd5685f-66ce-492f-95aa-8de503a66782"
+    },
+    {
+      "company": "CodeCraft Development",
+      "email": "info@codecraftdev.com",
+      "lead_id": "20c0a417-d764-4d41-b9b2-ab964dd7a8f7"
+    },
+    {
+      "company": "GrowthHack Labs",
+      "email": "info@growthhacklabs.ca",
+      "lead_id": "a7bd5fd7-1e4f-4807-93a1-0e294c33aa29"
+    },
+    {
+      "company": "FutureSync Solutions",
+      "email": "info@futuresync.io",
+      "lead_id": "e95b5031-bd31-4b31-ac03-6baf083a39d3"
+    }
+  ]
+}

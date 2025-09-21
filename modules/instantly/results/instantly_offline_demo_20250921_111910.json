@@ -1,0 +1,115 @@
+{
+  "successful": [
+    {
+      "email": "info@altitudestrategies.ca",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Altitude Stratégies",
+      "website": "http://www.altitudestrategies.ca",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@bigfishcreative.ca",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Big Fish Creative",
+      "website": "http://www.bigfishcreative.ca",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@stryvemarketing.com",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Stryve Digital Marketing",
+      "website": "http://www.stryvemarketing.com",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@workparty.ca",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Work Party Creative Group",
+      "website": "http://www.workparty.ca",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@kiplingmedia.com",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Kipling Media",
+      "website": "http://www.kiplingmedia.com",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@greenhousemarketing.ca",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Greenhouse Marketing",
+      "website": "http://www.greenhousemarketing.ca",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@theog.co",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "The One Group Agency",
+      "website": "http://www.theog.co",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@polkarsenal.com",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Agence Polka Arsenal",
+      "website": "http://www.polkarsenal.com",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@involvedmedia.ca",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Involved Media Canada",
+      "website": "http://www.involvedmedia.ca",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    },
+    {
+      "email": "info@nimiopere.com",
+      "first_name": "Business",
+      "last_name": "Owner",
+      "company_name": "Nimiopere Film Editorial",
+      "website": "http://www.nimiopere.com",
+      "country": "Canada",
+      "status": "lead",
+      "notes": ""
+    }
+  ],
+  "failed": [],
+  "skipped": [],
+  "statistics": {
+    "timestamp": "20250921_111910",
+    "total_companies": 10,
+    "leads_created": 10,
+    "success_rate": 100.0,
+    "successful_count": 10,
+    "failed_count": 0,
+    "skipped_count": 0
+  }
+}
