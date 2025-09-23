@@ -81,7 +81,7 @@ export default function Dashboard() {
           { id: '2', name: 'Marketing Coaches US', sent: 720, replies: 18, opportunities: 5 },
           { id: '3', name: 'SaaS Companies CA', sent: 580, replies: 12, opportunities: 2 }
         ],
-        dailyData: generateMockDailyData(startDate, endDate),
+        dailyData: generateMockDailyData(getDateRange(selectedPeriod, customDateRange).startDate, getDateRange(selectedPeriod, customDateRange).endDate),
         lastSync: new Date().toISOString()
       }
 

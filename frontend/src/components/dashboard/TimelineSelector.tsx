@@ -7,10 +7,8 @@ import { Card, CardContent } from '@/components/ui/card'
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 
@@ -118,13 +116,15 @@ export default function TimelineSelector({
         <Dialog open={showCustomDialog} onOpenChange={setShowCustomDialog}>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
-              <DialogTitle className="flex items-center space-x-2">
-                <Calendar className="w-5 h-5 text-blue-500" />
-                <span>Custom Date Range</span>
+              <DialogTitle>
+                <div className="flex items-center space-x-2">
+                  <Calendar className="w-5 h-5 text-blue-500" />
+                  <span>Custom Date Range</span>
+                </div>
               </DialogTitle>
-              <DialogDescription>
+              <p className="text-sm text-gray-600">
                 Select start and end dates for your custom analysis period
-              </DialogDescription>
+              </p>
             </DialogHeader>
 
             <div className="space-y-4 py-4">

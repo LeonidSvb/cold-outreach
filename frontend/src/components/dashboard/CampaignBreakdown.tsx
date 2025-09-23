@@ -212,11 +212,11 @@ export default function CampaignBreakdown({ campaigns, dailyData, loading }: Cam
           {/* Individual Campaign Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {campaigns
-              .filter(campaign => visibleCampaigns.has(campaign.id))
+              .filter(campaign => campaign.id && visibleCampaigns.has(campaign.id))
               .map((campaign, index) => {
                 const color = CAMPAIGN_COLORS[index % CAMPAIGN_COLORS.length]
-                const replyRate = ((campaign.replies / campaign.sent) * 100).toFixed(2)
-                const opportunityRate = ((campaign.opportunities / campaign.sent) * 100).toFixed(2)
+                const replyRate = (((campaign.replies || 0) / (campaign.sent || 1)) * 100).toFixed(2)
+                const opportunityRate = (((campaign.opportunities || 0) / (campaign.sent || 1)) * 100).toFixed(2)
 
                 return (
                   <Card
@@ -242,7 +242,7 @@ export default function CampaignBreakdown({ campaigns, dailyData, loading }: Cam
                           <span className="text-sm text-gray-600">Replies</span>
                           <div className="text-right">
                             <span className="font-semibold">{campaign.replies || campaign.reply_count || 0}</span>
-                            <span className="text-xs text-green-600 ml-1">({replyRate.toFixed(1)}%)</span>
+                            <span className="text-xs text-green-600 ml-1">({replyRate}%)</span>
                           </div>
                         </div>
                         <div className="flex justify-between items-center">
@@ -306,7 +306,7 @@ export default function CampaignBreakdown({ campaigns, dailyData, loading }: Cam
                       ></div>
                       <span className="text-sm font-medium">{campaign.name || campaign.campaign_name || 'Unknown Campaign'}</span>
                     </div>
-                    <span className="text-sm text-gray-600">{replyRate.toFixed(2)}%</span>
+                    <span className="text-sm text-gray-600">{replyRate}%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div
