@@ -1,141 +1,151 @@
-'use client'
+import Link from 'next/link'
 
-import { useState, useEffect } from 'react'
-import FileUpload from '@/components/FileUpload'
-import FilePreview from '@/components/FilePreview'
-import ConfigForm from '@/components/ConfigForm'
-import JobStatus from '@/components/JobStatus'
-import { Button } from '@/components/ui/button'
-
-interface Script {
+interface Tool {
+  id: string
   name: string
   description: string
-  config: any[]
-  requiresFile: boolean
+  href: string
+  status: 'ready' | 'dev' | 'planned'
+  color: string
+}
+
+const tools: Tool[] = [
+  {
+    id: 'script-runner',
+    name: 'Script Runner',
+    description: 'Execute Python scripts with file uploads and configuration',
+    href: '/script-runner',
+    status: 'ready',
+    color: 'bg-blue-500 hover:bg-blue-600'
+  },
+  {
+    id: 'dashboard',
+    name: 'Instantly Dashboard',
+    description: 'Analytics and metrics for email campaigns',
+    href: '/dashboard',
+    status: 'ready',
+    color: 'bg-green-500 hover:bg-green-600'
+  },
+  {
+    id: 'apollo',
+    name: 'Apollo Leads',
+    description: 'Lead collection and management from Apollo API',
+    href: '/apollo',
+    status: 'dev',
+    color: 'bg-purple-500 hover:bg-purple-600'
+  },
+  {
+    id: 'openai',
+    name: 'AI Processor',
+    description: 'OpenAI-powered content analysis and generation',
+    href: '/openai',
+    status: 'dev',
+    color: 'bg-orange-500 hover:bg-orange-600'
+  },
+  {
+    id: 'scraping',
+    name: 'Web Scraper',
+    description: 'Website content extraction and analysis',
+    href: '/scraping',
+    status: 'planned',
+    color: 'bg-red-500 hover:bg-red-600'
+  },
+  {
+    id: 'sheets',
+    name: 'Google Sheets',
+    description: 'Spreadsheet data management and automation',
+    href: '/sheets',
+    status: 'planned',
+    color: 'bg-indigo-500 hover:bg-indigo-600'
+  }
+]
+
+const statusLabels = {
+  ready: 'Ready',
+  dev: 'Development',
+  planned: 'Planned'
+}
+
+const statusColors = {
+  ready: 'bg-green-100 text-green-800',
+  dev: 'bg-yellow-100 text-yellow-800',
+  planned: 'bg-gray-100 text-gray-800'
 }
 
 export default function Home() {
-  const [scripts, setScripts] = useState<Script[]>([])
-  const [selectedScript, setSelectedScript] = useState<string>('')
-  const [selectedFile, setSelectedFile] = useState<File | null>(null)
-  const [currentJob, setCurrentJob] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    fetchScripts()
-  }, [])
-
-  const fetchScripts = async () => {
-    try {
-      const response = await fetch('http://localhost:8001/api/scripts')
-      const data = await response.json()
-      setScripts(data)
-      if (data.length > 0) {
-        setSelectedScript(data[0].name)
-      }
-    } catch (error) {
-      console.error('Failed to fetch scripts:', error)
-    }
-  }
-
-  const handleFileSelect = (file: File) => {
-    setSelectedFile(file)
-  }
-
-  const handleConfigSubmit = async (config: Record<string, any>) => {
-    if (!selectedScript) return
-
-    setLoading(true)
-    try {
-      const formData = new FormData()
-      formData.append('script_name', selectedScript)
-      formData.append('config', JSON.stringify(config))
-
-      if (selectedFile) {
-        formData.append('file', selectedFile)
-      }
-
-      const response = await fetch('http://localhost:8001/api/run-script', {
-        method: 'POST',
-        body: formData,
-      })
-
-      const result = await response.json()
-      if (result.job_id) {
-        setCurrentJob(result.job_id)
-      }
-    } catch (error) {
-      console.error('Failed to start script:', error)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const currentScriptData = scripts.find(s => s.name === selectedScript)
-
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="bg-white rounded-lg shadow-sm border p-6">
-          <h1 className="text-2xl font-bold text-gray-900 mb-6">Script Runner</h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Cold Outreach Platform
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Comprehensive automation platform for lead generation, email campaigns, and analytics
+          </p>
+        </div>
 
-          {/* Script Selection */}
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Select Script
-            </label>
-            <select
-              value={selectedScript}
-              onChange={(e) => setSelectedScript(e.target.value)}
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-            >
-              {scripts.map((script) => (
-                <option key={script.name} value={script.name}>
-                  {script.name} - {script.description}
-                </option>
-              ))}
-            </select>
+        {/* Tools Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tools.map((tool) => (
+            <div key={tool.id} className="group">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 h-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-12 h-12 rounded-lg ${tool.color} flex items-center justify-center transition-colors duration-300`}>
+                    <div className="w-6 h-6 bg-white rounded"></div>
+                  </div>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${statusColors[tool.status]}`}>
+                    {statusLabels[tool.status]}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {tool.name}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 flex-grow">
+                  {tool.description}
+                </p>
+
+                {tool.status === 'ready' ? (
+                  <Link
+                    href={tool.href}
+                    className={`inline-block w-full text-center px-4 py-2 rounded-lg text-white font-medium transition-colors duration-300 ${tool.color}`}
+                  >
+                    Open Tool
+                  </Link>
+                ) : (
+                  <button
+                    disabled
+                    className="w-full px-4 py-2 rounded-lg bg-gray-300 text-gray-500 font-medium cursor-not-allowed"
+                  >
+                    {tool.status === 'dev' ? 'In Development' : 'Coming Soon'}
+                  </button>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Stats */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+            <div className="text-2xl font-bold text-blue-600 mb-2">6</div>
+            <div className="text-gray-600">Active Modules</div>
           </div>
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+            <div className="text-2xl font-bold text-green-600 mb-2">2</div>
+            <div className="text-gray-600">Ready Tools</div>
+          </div>
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+            <div className="text-2xl font-bold text-purple-600 mb-2">v6.3.0</div>
+            <div className="text-gray-600">Current Version</div>
+          </div>
+        </div>
 
-          {/* File Upload */}
-          {currentScriptData?.requiresFile && (
-            <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Upload Data File
-              </label>
-              <FileUpload onFileSelect={handleFileSelect} />
-            </div>
-          )}
-
-          {/* File Preview */}
-          {selectedFile && (
-            <div className="mb-6">
-              <FilePreview file={selectedFile} />
-            </div>
-          )}
-
-          {/* Configuration Form */}
-          {currentScriptData && (
-            <div className="mb-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Configuration</h3>
-              <ConfigForm
-                config={currentScriptData.config}
-                onSubmit={handleConfigSubmit}
-                isLoading={loading}
-              />
-            </div>
-          )}
-
-          {/* Job Status */}
-          {currentJob && (
-            <div className="mt-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Execution Status</h3>
-              <JobStatus
-                jobId={currentJob}
-                onClose={() => setCurrentJob(null)}
-              />
-            </div>
-          )}
+        {/* Footer */}
+        <div className="mt-16 text-center text-gray-500 text-sm">
+          <p>Cold Outreach Automation Platform - Built with Next.js & Python</p>
         </div>
       </div>
     </div>
