@@ -69,6 +69,8 @@
 - Each module contains related functionality only
 - All scripts have embedded configs (no external config files)
 - Results stored in module-specific results/ folders
+- **NEVER create empty folders** - create only when needed
+- **DELETE empty folders** immediately after cleanup
 
 # Data and Testing
 
