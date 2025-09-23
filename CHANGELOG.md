@@ -4,6 +4,113 @@
 
 ## [Unreleased]
 
+## [7.2.0] - 2025-09-23 - Module-Centric Data Architecture & Massive Project Cleanup
+
+### Added
+- **Module-Centric Data Architecture**: Each module now contains its own data/ subdirectory with input/, templates/, campaigns/ for complete self-sufficiency
+- **Clean Root Directory**: Minimal root with only essential files (CHANGELOG.md, CLAUDE.md, vercel.json, requirements.txt, README.md)
+- **Module Data Isolation**: Clear data ownership with modules/apollo/data/, modules/instantly/data/, modules/scraping/data/ structure
+- **Shared Data Structure**: Central data/ folder only for truly cross-module data (master-leads/, shared/)
+- **Archive Organization**: Old code properly archived in archive/old_scripts/, archive/old_modules/ for historical preservation
+
+### Changed
+- **Data Organization**: From scattered data folders to module-centric approach with clear boundaries
+- **Module Structure**: Each module is now self-contained with its own data, scripts, and results
+- **Project Architecture**: Clean separation between modules/ (automation), app/ (web), data/ (shared), archive/ (historical)
+
+### Removed
+- **12 Test Files**: Eliminated all test scripts from modules/instantly/ (test_10_leads_upload.py, test_all_keys.py, etc.)
+- **Duplicate Scripts**: Removed instantly_csv_uploader.py, instantly_data_collector.py, instantly_dashboard_api.py (kept only best 3)
+- **Backup Files**: Deleted all *backup*.csv files cluttering data directories
+- **Root Clutter**: Removed nul, .env.example, test_sample_data.csv, README_MVP.md, DASHBOARD_README.md
+- **Bat Files**: Deleted run_tests.bat, start_backend.bat, start_frontend.bat from root
+- **Obsolete Scripts**: Moved analyze_leads.py, create_segments.py, fix_segments.py to archive/
+
+### Fixed
+- **Module Self-Sufficiency**: Each module now contains all necessary data and templates within its own structure
+- **Clear Data Ownership**: No confusion about where data belongs - either in module/data/ or central data/
+- **Navigation Clarity**: Developers know exactly where to find module-specific vs shared data
+- **Test Pollution**: Eliminated test file clutter that confused production vs development code
+
+### Technical Implementation
+- **Final Module Count**: 11 production scripts across 6 modules (was 23+ with tests)
+- **Instantly Module**: Reduced from 18 files to 3 production scripts (instantly_universal_collector.py, instantly_campaign_optimizer.py, instantly_csv_uploader_curl.py)
+- **Data Structure**:
+  ```
+  modules/[module]/data/input/      # Module-specific input files
+  modules/[module]/data/templates/  # Module-specific templates
+  modules/[module]/results/         # Module output results
+  data/master-leads/               # Cross-module lead data
+  data/shared/                     # Shared templates and configs
+  ```
+
+### Architecture Benefits
+- **Module Portability**: Each module can be copied independently with all its data
+- **Reduced Complexity**: Clear boundaries eliminate confusion about data responsibility
+- **Faster Navigation**: Developers find module data co-located with module code
+- **Maintainability**: Self-contained modules easier to debug and modify
+- **Production Focus**: Zero test files in production codebase
+
+### Migration Impact
+- **Zero Breaking Changes**: Existing functionality preserved while improving organization
+- **Vercel Deployment**: Frontend deployment completely unaffected by backend restructuring
+- **Data Preservation**: All production data properly migrated to appropriate module locations
+- **Documentation Updated**: ADR-0009 documents architectural decision with full rationale
+
+## [7.1.0] - 2025-09-23 - Lead Processing Center & Smart CSV Management
+
+### Added
+- **Complete Lead Processing Center**: Unified interface for CSV upload, analysis, and lead processing workflow
+- **Smart CSV Upload System**: Drag & drop interface with automatic file analysis and column detection
+- **Intelligent Column Detection**: Auto-identification of company_name, website, email, phone, title fields with 8 supported column types
+- **File Manager Interface**: Recent files dropdown showing upload history with metadata (rows, size, date)
+- **Enhanced CSV Preview**: Last 15 rows display with visual column type indicators and filtering options
+- **Real-time File Processing**: Immediate upload and analysis with progress indicators and status feedback
+- **Column Visualization System**: Color-coded column types with icons (🏢 Company, 🌐 Website, 📧 Email, 📞 Phone, 👤 Name, 💼 Title)
+- **Toggle Column Views**: Switch between all columns and detected key columns for focused data review
+
+### Changed
+- **Script Runner Enhancement**: Evolved from generic script runner to specialized lead processing interface
+- **CSV Handling Architecture**: From basic file upload to intelligent analysis with metadata extraction
+- **User Experience**: Streamlined workflow from upload → detect → preview → process lead data
+- **Interface Design**: Professional lead processing center with file management capabilities
+
+### Technical Implementation
+- **FastAPI Backend Extensions**: New API endpoints for file upload, analysis, metadata storage, and preview
+- **Smart CSV Analysis Engine**: Automatic delimiter detection, row counting, and column type classification
+- **Metadata Storage System**: JSON-based file metadata with upload tracking and analysis results
+- **React Component Architecture**: Modular CsvPreview component with TypeScript interfaces
+- **File Storage Organization**: UUID-based file naming with structured uploads directory
+
+### Backend API Endpoints
+- **POST /api/upload**: CSV file upload with automatic analysis and metadata generation
+- **GET /api/uploaded-files**: Retrieve list of uploaded files with metadata and statistics
+- **GET /api/files/{file_id}/preview**: Get CSV preview with last N rows and column information
+- **Column Detection Logic**: Pattern-matching algorithm for automatic field type identification
+
+### Frontend Features
+- **File Manager Dropdown**: Quick access to previously uploaded files with sorting by date
+- **CSV Preview Table**: Responsive table with sticky headers and overflow handling
+- **Column Type Badges**: Visual indicators for detected column types with color coding
+- **Upload Status Indicators**: Real-time feedback for file processing and analysis completion
+- **Responsive Design**: Mobile-friendly interface with proper touch interactions
+
+### Data Processing Pipeline
+```
+Upload CSV → Auto-detect Columns → Generate Metadata → Store Results → Preview Interface → Ready for Processing
+```
+
+### Production Ready
+- **Port Configuration**: Backend running on port 8005 with proper CORS configuration
+- **Error Handling**: Comprehensive error management for file upload and processing failures
+- **File Validation**: CSV format validation and encoding support
+- **Performance Optimization**: Efficient preview generation for large files
+
+### Session Management
+- **File History**: Persistent storage of uploaded files with quick reload capability
+- **Processing State**: Visual indicators for file processing status and completion
+- **Data Persistence**: Metadata preservation across sessions for workflow continuity
+
 ## [7.0.0] - 2025-09-23 - Frontend Navigation System & Vercel Deployment
 
 ### Added

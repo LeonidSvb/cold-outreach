@@ -55,7 +55,8 @@ END ADR_AGENT_PROTOCOL
 
 | ID   | Title                                                        | Date       | Status   | Supersedes | Superseded by |
 | ---- | ------------------------------------------------------------ | ---------- | -------- | ---------- | ------------- |
-| 0008 | [Data-Centric Architecture with Core Tool Separation](#adr-0008) | 2025-09-08 | Accepted | ADR-0001   | —             |
+| 0009 | [Module-Centric Data Architecture & Massive Cleanup](#adr-0009) | 2025-09-23 | Accepted | ADR-0008   | —             |
+| 0008 | [Data-Centric Architecture with Core Tool Separation](#adr-0008) | 2025-09-08 | Superseded | ADR-0001   | ADR-0009      |
 | 0007 | [Session Continuity and Context Preservation](#adr-0007) | 2025-09-08 | Accepted | —          | —             |
 | 0006 | [Production Readiness Validation Framework](#adr-0006) | 2025-09-08 | Accepted | —          | —             |
 | 0005 | [AI-Powered Page Prioritization with OpenAI](#adr-0005) | 2025-01-08 | Accepted | —          | —             |
@@ -350,7 +351,7 @@ All major development sessions must be documented with technical achievements, a
 
 <a id="adr-0008"></a>
 **Date**: 2025-09-08
-**Status**: Accepted
+**Status**: Superseded
 **Owner**: Platform Architecture Team
 
 ### Context
@@ -372,11 +373,45 @@ Implement data-centric architecture with three distinct layers: `leads/` for dat
 - **Pros**: Clear conceptual separation, predictable data flow, reusable core tools, easier maintenance, future-proof structure
 - **Cons / risks**: Required migration effort, need to update existing documentation and scripts
 - **Supersedes**: ADR-0001
-- **Superseded by**: —
+- **Superseded by**: ADR-0009
 
 ### Compliance / Verification
 
 Data must progress through defined states in leads/ directory. Core tools must be accessible to all services. Services must only contain external integrations. Path configurations must follow documented patterns in CLAUDE.md.
+
+---
+
+## ADR-0009 — Module-Centric Data Architecture & Massive Cleanup
+
+<a id="adr-0009"></a>
+**Date**: 2025-09-23
+**Status**: Accepted
+**Owner**: Platform Architecture Team
+
+### Context
+
+The data-centric architecture had scattered test files, duplicate scripts, and unclear data boundaries. With 12 test files in instantly module, backup files throughout, and mixed data responsibilities, the system needed radical cleanup and proper module-centric data organization for maintainability.
+
+### Alternatives
+
+- **Centralized Data Management**: Keep all data in single data/ folder - rejected as creates tight coupling between modules
+- **Status Quo**: Leave test files and duplicates - rejected due to maintenance overhead and confusion
+- **Microservices Split**: Separate each module into independent services - rejected as overkill for current scale
+
+### Decision
+
+Implement module-centric data architecture where each module contains its own data/ subfolder with input/, templates/, campaigns/ as needed. Remove all test scripts, backup files, and duplicate functionality. Establish clean separation: modules/ (automation), app/ (web application), data/ (shared cross-module data only).
+
+### Consequences
+
+- **Pros**: Self-contained modules, eliminated test clutter, clear data ownership, minimal root directory, improved navigation
+- **Cons / risks**: Required massive cleanup effort, some data duplication between modules
+- **Supersedes**: ADR-0008
+- **Superseded by**: —
+
+### Compliance / Verification
+
+Each module must contain its own data/ subdirectory. No test files in production. Root directory contains only essential files (CHANGELOG.md, CLAUDE.md, vercel.json, etc.). Module data stays within module boundaries unless truly shared.
 
 ---
 

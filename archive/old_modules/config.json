@@ -1,0 +1,170 @@
+{
+  "module_info": {
+    "name": "Website Intelligence",
+    "version": "1.0.0",
+    "description": "AI-powered website scraping and analysis system",
+    "author": "Cold Outreach Platform",
+    "created": "2025-09-21"
+  },
+
+  "processing": {
+    "max_concurrent_domains": 20,
+    "http_batch_size": 50,
+    "apify_batch_size": 10,
+    "ai_batch_size": 5,
+    "timeout_seconds": 30,
+    "retry_attempts": 2,
+    "delay_between_requests": 0.1
+  },
+
+  "routing": {
+    "http_confidence_threshold": 0.7,
+    "javascript_risk_threshold": 50,
+    "force_apify_patterns": [
+      "react",
+      "angular",
+      "vue",
+      "spa",
+      "single-page",
+      "javascript-required"
+    ]
+  },
+
+  "scraping": {
+    "http": {
+      "max_workers": 50,
+      "timeout_seconds": 10,
+      "max_pages_per_domain": 15,
+      "max_text_per_page": 3000,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    },
+    "apify": {
+      "max_workers": 10,
+      "timeout_seconds": 60,
+      "max_pages_per_domain": 20,
+      "cost_per_domain": 0.002
+    }
+  },
+
+  "ai_processing": {
+    "enabled": true,
+    "model": "gpt-3.5-turbo",
+    "max_tokens_per_request": 4000,
+    "temperature": 0.3,
+    "max_text_length": 8000,
+    "rate_limit_delay": 1.0,
+    "features": {
+      "summarization": true,
+      "personalization": true,
+      "contact_extraction": true,
+      "company_analysis": true,
+      "technology_detection": true
+    }
+  },
+
+  "output": {
+    "save_raw_data": true,
+    "save_analysis_results": true,
+    "save_ai_summaries": true,
+    "export_csv": true,
+    "export_json": true,
+    "results_directory": "results",
+    "timestamp_format": "%Y%m%d_%H%M%S"
+  },
+
+  "priority_paths": [
+    "/about",
+    "/about-us",
+    "/team",
+    "/leadership",
+    "/contact",
+    "/contact-us",
+    "/careers",
+    "/jobs",
+    "/services",
+    "/products",
+    "/solutions",
+    "/pricing",
+    "/company",
+    "/our-team"
+  ],
+
+  "technology_detection": {
+    "frameworks": {
+      "react": ["react", "react-dom", "reactjs", "__react"],
+      "angular": ["angular", "ng-app", "ng-controller", "@angular"],
+      "vue": ["vue", "vue.js", "vuejs", "v-if", "v-for"],
+      "ember": ["ember", "ember.js", "emberjs"],
+      "backbone": ["backbone", "backbone.js"],
+      "svelte": ["svelte", "_svelte"]
+    },
+    "cms": {
+      "wordpress": ["wp-content", "wp-includes", "wordpress"],
+      "shopify": ["shopify", "cdn.shopify.com"],
+      "wix": ["wix.com", "wixstatic.com"],
+      "squarespace": ["squarespace", "sqsp.com"]
+    },
+    "analytics": {
+      "google_analytics": ["google-analytics.com", "gtag", "ga("],
+      "facebook_pixel": ["facebook.net/tr", "fbevents.js"],
+      "hotjar": ["hotjar.com", "hj("],
+      "mixpanel": ["mixpanel.com"]
+    },
+    "marketing": {
+      "hubspot": ["hubspot", "hs-scripts.com"],
+      "marketo": ["marketo", "mktoresp.com"],
+      "pardot": ["pardot", "pi.pardot.com"],
+      "intercom": ["intercom", "widget.intercom.io"]
+    }
+  },
+
+  "company_analysis": {
+    "size_indicators": {
+      "startup": ["startup", "founded", "we are a", "small team"],
+      "small": ["small business", "family owned", "local", "boutique"],
+      "medium": ["established", "growing team", "offices in", "100+ employees"],
+      "large": ["enterprise", "global", "international", "fortune"],
+      "enterprise": ["multinational", "1000+ employees", "public company", "nasdaq", "nyse"]
+    },
+    "industry_keywords": {
+      "saas": ["software", "saas", "cloud", "platform", "api"],
+      "ecommerce": ["shop", "store", "ecommerce", "retail", "marketplace"],
+      "consulting": ["consulting", "advisory", "services", "solutions"],
+      "agency": ["agency", "marketing", "advertising", "creative"],
+      "manufacturing": ["manufacturing", "production", "factory", "industrial"],
+      "healthcare": ["healthcare", "medical", "hospital", "clinic"],
+      "finance": ["finance", "financial", "banking", "investment"],
+      "education": ["education", "training", "learning", "university"]
+    }
+  },
+
+  "contact_extraction": {
+    "email_patterns": [
+      "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+    ],
+    "phone_patterns": [
+      "\\b(?:\\+?1[-.]?)?\\(?([0-9]{3})\\)?[-.]?([0-9]{3})[-.]?([0-9]{4})\\b"
+    ],
+    "exclude_emails": [
+      "noreply@",
+      "support@",
+      "info@example.com",
+      "test@test.com"
+    ]
+  },
+
+  "performance_limits": {
+    "max_domains_per_session": 1000,
+    "max_processing_time_minutes": 60,
+    "memory_limit_mb": 2048,
+    "disk_space_limit_mb": 1024
+  },
+
+  "logging": {
+    "level": "INFO",
+    "save_logs": true,
+    "log_directory": "logs",
+    "log_rotation": true,
+    "max_log_files": 10
+  }
+}
