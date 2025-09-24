@@ -1,0 +1,419 @@
+{
+  "metadata": {
+    "timestamp": "20250925_004742",
+    "script_version": "2.0.0",
+    "analysis_summary": {
+      "total_pages_analyzed": 9,
+      "successful_analyses": 9,
+      "failed_analyses": 0,
+      "total_processing_time": 61.110546827316284,
+      "avg_time_per_page": 6.790060758590698,
+      "total_api_calls": 7,
+      "total_cost_usd": 0.0030603374999999995,
+      "avg_cost_per_page": 0.00034003749999999996,
+      "high_value_pages_found": 0
+    },
+    "configuration": {
+      "AI": {
+        "MODEL": "gpt-4o-mini",
+        "TEMPERATURE": 0.1,
+        "MAX_TOKENS": 2000,
+        "API_TIMEOUT": 30,
+        "MAX_RETRIES": 3
+      },
+      "ANALYSIS": {
+        "BATCH_SIZE": 5,
+        "MIN_CONTENT_LENGTH": 200,
+        "MAX_CONTENT_LENGTH": 10000,
+        "MIN_PRIORITY_SCORE": 5,
+        "ENABLE_BATCH_MODE": true,
+        "EXTRACT_COMPANY_INSIGHTS": true
+      },
+      "CATEGORIES": {
+        "HIGH_VALUE": [
+          "about",
+          "team",
+          "leadership",
+          "case-studies",
+          "news",
+          "awards"
+        ],
+        "MEDIUM_VALUE": [
+          "services",
+          "products",
+          "solutions",
+          "blog",
+          "insights"
+        ],
+        "LOW_VALUE": [
+          "contact",
+          "careers",
+          "faq",
+          "support"
+        ],
+        "NO_VALUE": [
+          "privacy",
+          "terms",
+          "login",
+          "register",
+          "error"
+        ]
+      },
+      "COSTS": {
+        "GPT4O_MINI_INPUT_PER_1K": 0.00015,
+        "GPT4O_MINI_OUTPUT_PER_1K": 0.0006,
+        "TARGET_COST_PER_PAGE": 0.003,
+        "MAX_DAILY_COST": 10.0
+      },
+      "OUTPUT": {
+        "SAVE_JSON": true,
+        "SAVE_CSV_SUMMARY": true,
+        "RESULTS_DIR": "../results",
+        "INCLUDE_RAW_RESPONSES": false,
+        "DETAILED_LOGGING": true
+      }
+    },
+    "cost_breakdown": {
+      "model_used": "gpt-4o-mini",
+      "total_cost": 0.0030603374999999995,
+      "cost_per_api_call": 0.00043719107142857136,
+      "target_cost_per_page": 0.003,
+      "cost_efficiency": "within_target"
+    }
+  },
+  "results": [
+    {
+      "page_data": {
+        "url": "http://www.workparty.ca",
+        "title": "Work Party – An independent design and media group",
+        "content_length": 1231,
+        "domain": "www.workparty.ca"
+      },
+      "analysis": {
+        "classification": {
+          "category": "MEDIUM_VALUE",
+          "score": 6,
+          "confidence": 8,
+          "reasoning": "The page provides basic team information and a description of services, which can be useful for outreach. However, it lacks detailed achievements or specific case studies that would elevate its value."
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "The team includes experienced professionals like Christie Coughlan, Managing Director, which could be a point of connection for outreach.",
+            "The company emphasizes a playful approach to work, which could resonate with potential clients looking for a creative partner."
+          ],
+          "conversation_starters": [
+            "The company has a long-standing relationship with one of Western Canada’s biggest brands, indicating credibility and experience.",
+            "Their focus on creative brand strategy and media planning suggests they value innovative approaches, which could be a talking point."
+          ],
+          "key_people": [
+            "Christie Coughlan - Managing Director - Key leader with potential insights into company strategy.",
+            "Roshni Parmar - Sr. Manager, Projects & Ops - Could provide operational insights."
+          ],
+          "company_insights": {
+            "size_indicators": "medium",
+            "growth_stage": "growing",
+            "unique_positioning": "They combine creativity with a playful work culture, aiming to make branding enjoyable."
+          }
+        },
+        "outreach_summary": "When reaching out to Work Party, highlight their creative approach and the experience of their leadership team. Mentioning their long-standing relationship with major brands could also establish credibility and relevance in your outreach."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:46:51.395792",
+        "api_processing_time": 9.905766725540161,
+        "cost_estimate_usd": 0.00041024999999999997,
+        "model_used": "gpt-4o-mini"
+      }
+    },
+    {
+      "page_data": {
+        "url": "http://www.bigfishcreative.ca",
+        "title": "Vancouver Digital Marketing Agency | Big Fish Creative",
+        "content_length": 4121,
+        "domain": "www.bigfishcreative.ca"
+      },
+      "analysis": {
+        "classification": {
+          "category": "MEDIUM_VALUE",
+          "score": 6,
+          "confidence": 8,
+          "reasoning": "The page provides a detailed overview of services offered by the agency, showcasing their unique positioning in digital marketing. However, it lacks specific client success stories, leadership information, or recent achievements that would elevate it to high value."
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "The agency specializes in transforming brands and offers a complete solution that articulates brand narratives, which can be referenced in outreach.",
+            "They have over 10 years of experience in Search Engine Optimization, indicating a strong expertise that could be highlighted in conversations."
+          ],
+          "conversation_starters": [
+            "The agency emphasizes building lasting partnerships with clients, which could lead to discussions about collaboration.",
+            "Their focus on creativity and strategy in event design could be a point of interest for potential clients looking for innovative marketing solutions."
+          ],
+          "key_people": [],
+          "company_insights": {
+            "size_indicators": "medium",
+            "growth_stage": "established",
+            "unique_positioning": "They bridge the gap between businesses and their audience through precision-targeted digital advertising solutions."
+          }
+        },
+        "outreach_summary": "When reaching out to Big Fish Creative, emphasize their expertise in transforming brands and their long-standing experience in SEO. Highlight potential collaboration opportunities that align with their focus on building lasting partnerships and innovative marketing strategies."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:46:58.208122",
+        "api_processing_time": 6.812330722808838,
+        "cost_estimate_usd": 0.000514425,
+        "model_used": "gpt-4o-mini"
+      }
+    },
+    {
+      "page_data": {
+        "url": "https://www.altitudestrategies.ca",
+        "title": "Altitude Stratégies | Agence de marketing web créative à Vaudreuil-Dorion",
+        "content_length": 10015,
+        "domain": "www.altitudestrategies.ca"
+      },
+      "analysis": {
+        "classification": {
+          "category": "HIGH",
+          "score": 8,
+          "confidence": 8,
+          "reasoning": "Batch analysis result"
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "Comprehensive overview of services offered",
+            "Strong emphasis on client success stories",
+            "Active presence on multiple social media platforms"
+          ],
+          "conversation_starters": [],
+          "key_people": [],
+          "company_insights": {}
+        },
+        "outreach_summary": "Initiate contact by highlighting shared interests in innovative marketing solutions and propose a discussion on potential collaboration opportunities, leveraging their success stories as a conversation starter."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:47:09.129509",
+        "cost_estimate_usd": 0.00022261875,
+        "model_used": "gpt-4o-mini",
+        "batch_analysis": true
+      }
+    },
+    {
+      "page_data": {
+        "url": "https://www.altitudestrategies.ca/solutions/",
+        "title": "Solutions d'affaires adaptées à votre réalité | Altitude Stratégies",
+        "content_length": 2888,
+        "domain": "www.altitudestrategies.ca"
+      },
+      "analysis": {
+        "classification": {
+          "category": "HIGH",
+          "score": 9,
+          "confidence": 8,
+          "reasoning": "Batch analysis result"
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "Detailed breakdown of tailored business solutions",
+            "Focus on specific marketing strategies and their effectiveness",
+            "Highlighting case studies and results that demonstrate their expertise"
+          ],
+          "conversation_starters": [],
+          "key_people": [],
+          "company_insights": {}
+        },
+        "outreach_summary": "Initiate contact by highlighting shared interests in innovative marketing solutions and propose a discussion on potential collaboration opportunities, leveraging their success stories as a conversation starter."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:47:09.129509",
+        "cost_estimate_usd": 0.00022261875,
+        "model_used": "gpt-4o-mini",
+        "batch_analysis": true
+      }
+    },
+    {
+      "page_data": {
+        "url": "http://www.involvedmedia.ca/case-studies/",
+        "title": "Case Studies | Involved Media",
+        "content_length": 779,
+        "domain": "www.involvedmedia.ca"
+      },
+      "analysis": {
+        "classification": {
+          "category": "MEDIUM_VALUE",
+          "score": 6,
+          "confidence": 7,
+          "reasoning": "The page contains case studies that highlight specific client results and media solutions, which can be useful for outreach personalization. However, it lacks detailed metrics or specific achievements that would elevate it to high value."
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "Case studies showcasing media solutions for Rust-Oleum, indicating expertise in the DIY sector.",
+            "Insights on hyper-targeting strategies used for the Toronto Stock Exchange, which could appeal to financial services."
+          ],
+          "conversation_starters": [
+            "The agency's approach to leveraging client sales data to optimize media budgets.",
+            "Innovative video solutions developed for competitive markets, showcasing creativity and adaptability."
+          ],
+          "key_people": [],
+          "company_insights": {
+            "size_indicators": "medium",
+            "growth_stage": "growing",
+            "unique_positioning": "An egoless agency focused on high-impact media solutions."
+          }
+        },
+        "outreach_summary": "Outreach efforts could focus on Involved Media's innovative media solutions and their expertise in hyper-targeting niche audiences. Highlighting their case studies, particularly with well-known brands like Rust-Oleum, could create a compelling narrative for engagement."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:47:14.082946",
+        "api_processing_time": 4.953437328338623,
+        "cost_estimate_usd": 0.0003492,
+        "model_used": "gpt-4o-mini"
+      }
+    },
+    {
+      "page_data": {
+        "url": "http://www.involvedmedia.ca",
+        "title": "Involved Media | Where service you can trust meets high impact clout.",
+        "content_length": 1658,
+        "domain": "www.involvedmedia.ca"
+      },
+      "analysis": {
+        "classification": {
+          "category": "MEDIUM_VALUE",
+          "score": 6,
+          "confidence": 7,
+          "reasoning": "The page provides insights into the services offered by Involved Media and mentions case studies, which can be useful for outreach. However, it lacks detailed information about leadership, specific achievements, or awards that would elevate its value."
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "Case studies highlight targeted media solutions for clients like Rust-Oleum and the Toronto Stock Exchange, showcasing their expertise in driving leads and innovative video solutions.",
+            "The agency emphasizes a client-focused approach, which can be leveraged to discuss how their services align with potential clients' needs."
+          ],
+          "conversation_starters": [
+            "The agency's claim of being an 'egoless agency' suggests a collaborative culture that could resonate with potential partners.",
+            "Their global support network and media capabilities indicate a broad reach, which could be a point of interest for companies looking to expand their media presence."
+          ],
+          "key_people": [],
+          "company_insights": {
+            "size_indicators": "medium",
+            "growth_stage": "growing",
+            "unique_positioning": "Focus on client trust and high-impact media strategies, with a diverse range of media capabilities."
+          }
+        },
+        "outreach_summary": "Involved Media presents a strong case for collaboration through their client-centric approach and proven media strategies. Highlighting their successful case studies and unique positioning can create a compelling outreach narrative that resonates with potential clients."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:47:27.111477",
+        "api_processing_time": 12.51586127281189,
+        "cost_estimate_usd": 0.000424275,
+        "model_used": "gpt-4o-mini"
+      }
+    },
+    {
+      "page_data": {
+        "url": "http://www.theog.co/team",
+        "title": "Team | The One Group Agency",
+        "content_length": 4425,
+        "domain": "www.theog.co"
+      },
+      "analysis": {
+        "classification": {
+          "category": "HIGH",
+          "score": 9,
+          "confidence": 8,
+          "reasoning": "Batch analysis result"
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "The agency offers a wide range of services including digital marketing, creative branding, and web design.",
+            "They have notable clients and projects, indicating a strong portfolio.",
+            "The homepage emphasizes their strategic approach, which could be a key talking point for outreach."
+          ],
+          "conversation_starters": [],
+          "key_people": [],
+          "company_insights": {}
+        },
+        "outreach_summary": "Reach out to key team members via LinkedIn or email, highlighting specific services that align with their current projects and expressing interest in potential collaborations."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:47:36.184056",
+        "cost_estimate_usd": 0.00024974999999999997,
+        "model_used": "gpt-4o-mini",
+        "batch_analysis": true
+      }
+    },
+    {
+      "page_data": {
+        "url": "http://www.theog.co",
+        "title": "Home | The One Group Agency",
+        "content_length": 2114,
+        "domain": "www.theog.co"
+      },
+      "analysis": {
+        "classification": {
+          "category": "MEDIUM",
+          "score": 7,
+          "confidence": 8,
+          "reasoning": "Batch analysis result"
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "The team consists of diverse professionals with unique backgrounds, which can be leveraged for personalized outreach.",
+            "Key team members have notable achievements that can serve as conversation starters.",
+            "The emphasis on collaboration and creativity suggests they value innovative partnerships."
+          ],
+          "conversation_starters": [],
+          "key_people": [],
+          "company_insights": {}
+        },
+        "outreach_summary": "Reach out to key team members via LinkedIn or email, highlighting specific services that align with their current projects and expressing interest in potential collaborations."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:47:36.184056",
+        "cost_estimate_usd": 0.00024974999999999997,
+        "model_used": "gpt-4o-mini",
+        "batch_analysis": true
+      }
+    },
+    {
+      "page_data": {
+        "url": "http://www.nimiopere.com/contact",
+        "title": "contact — nimiopere",
+        "content_length": 2052,
+        "domain": "www.nimiopere.com"
+      },
+      "analysis": {
+        "classification": {
+          "category": "MEDIUM_VALUE",
+          "score": 6,
+          "confidence": 8,
+          "reasoning": "The page provides contact information for key personnel, which can be useful for outreach. However, it lacks detailed insights into company achievements, culture, or unique positioning."
+        },
+        "intelligence": {
+          "personalization_opportunities": [
+            "Contact details for multiple editors and producers, allowing for targeted outreach based on specific roles.",
+            "Presence of executive producers indicates potential for collaboration on projects."
+          ],
+          "conversation_starters": [
+            "The company has a diverse team of editors and producers, which could lead to interesting discussions about their projects.",
+            "The office location in Toronto may provide insights into regional market trends."
+          ],
+          "key_people": [
+            "Julie Axell - Partner & Executive Producer - Contact for high-level project discussions.",
+            "Jenna Edwards - Executive Producer - Potential for collaboration on production-related inquiries."
+          ],
+          "company_insights": {
+            "size_indicators": "medium",
+            "growth_stage": "growing",
+            "unique_positioning": "Focus on editorial and production services, indicating a creative and collaborative approach."
+          }
+        },
+        "outreach_summary": "Target outreach to specific editors and producers based on their roles to discuss potential collaborations. Highlight the company's creative focus and regional presence in Toronto to establish relevance in conversations."
+      },
+      "processing": {
+        "analyzed_at": "2025-09-25T00:47:42.600572",
+        "api_processing_time": 6.416516065597534,
+        "cost_estimate_usd": 0.00041745,
+        "model_used": "gpt-4o-mini"
+      }
+    }
+  ]
+}

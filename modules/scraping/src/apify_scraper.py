@@ -49,8 +49,8 @@ from shared.logger import auto_log
 CONFIG = {
     # APIFY API SETTINGS
     "APIFY": {
-        "ACTOR_ID": "apify/rag-web-browser",
-        "DEFAULT_ACTOR": "apify/web-scraper",
+        "ACTOR_ID": "apify/web-scraper",
+        "DEFAULT_ACTOR": "apify/website-content-crawler",
         "API_BASE_URL": "https://api.apify.com/v2",
         "TIMEOUT_SECONDS": 120,
         "MAX_RETRIES": 3,
@@ -614,7 +614,7 @@ class ApifyScraper:
         print(f"Total cost: ${self.stats['total_cost']:.4f}")
         print(f"Cost per domain: ${self.stats['total_cost']/len(results):.4f}" if results else "N/A")
         print(f"Target cost per domain: ${self.config['COSTS']['TARGET_COST_PER_DOMAIN']:.4f}")
-        print(f"Cost efficiency: {'✓ Within target' if (self.stats['total_cost']/max(1, len(results))) <= self.config['COSTS']['TARGET_COST_PER_DOMAIN'] else '✗ Over target'}")
+        print(f"Cost efficiency: {'Within target' if (self.stats['total_cost']/max(1, len(results))) <= self.config['COSTS']['TARGET_COST_PER_DOMAIN'] else 'Over target'}")
 
         # Performance metrics
         print(f"\nPERFORMANCE:")

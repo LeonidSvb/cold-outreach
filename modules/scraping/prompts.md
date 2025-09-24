@@ -86,14 +86,14 @@ Rate confidence in the analysis (1-10):
 ## OUTPUT FORMAT:
 Provide structured JSON response:
 
-{
-  "classification": {
+{{
+  "classification": {{
     "category": "HIGH_VALUE|MEDIUM_VALUE|LOW_VALUE|NO_VALUE",
     "score": 0-10,
     "confidence": 0-10,
     "reasoning": "Why this score was assigned"
-  },
-  "intelligence": {
+  }},
+  "intelligence": {{
     "personalization_opportunities": [
       "Specific fact with context for outreach",
       "Another specific insight"
@@ -105,14 +105,14 @@ Provide structured JSON response:
     "key_people": [
       "Name - Title - Key detail"
     ],
-    "company_insights": {
+    "company_insights": {{
       "size_indicators": "small|medium|large|enterprise",
       "growth_stage": "startup|growing|established|mature",
       "unique_positioning": "what makes them different"
-    }
-  },
+    }}
+  }},
   "outreach_summary": "2-3 sentence summary of best outreach angles for this company"
-}
+}}
 
 Focus on actionable intelligence that would make cold outreach more personalized and relevant.
 ```
@@ -157,22 +157,22 @@ Rate content quality (1-10):
 - 1-3: Minimal or poor quality content
 
 ## OUTPUT FORMAT:
-{
-  "cleaned_content": {
+{{
+  "cleaned_content": {{
     "company_description": "Main company overview",
     "key_services": ["Service 1", "Service 2"],
     "leadership": ["Name - Title - Detail"],
     "achievements": ["Recent achievement with context"],
     "unique_elements": ["What makes them different"]
-  },
-  "content_quality": {
+  }},
+  "content_quality": {{
     "score": 0-10,
     "word_count": 0,
     "information_density": "high|medium|low",
     "business_relevance": "high|medium|low"
-  },
+  }},
   "extraction_summary": "Brief summary of content value"
-}
+}}
 ```
 
 ---
@@ -204,23 +204,23 @@ Identify the 3-5 most valuable insights across all pages
 Create comprehensive company intelligence from all pages combined
 
 ## OUTPUT FORMAT:
-{
-  "domain_summary": {
+{{
+  "domain_summary": {{
     "company_overview": "Combined company understanding",
     "key_people": ["Most important contacts identified"],
     "best_outreach_angles": ["Top 3 conversation starters"],
     "company_stage": "startup|growing|established|enterprise"
-  },
+  }},
   "page_rankings": [
-    {
+    {{
       "url": "page_url",
       "priority_score": 0-10,
       "value_category": "HIGH|MEDIUM|LOW|NONE",
       "key_insights": ["Top insights from this page"]
-    }
+    }}
   ],
   "outreach_strategy": "Recommended approach for contacting this company"
-}
+}}
 ```
 
 ---
@@ -269,24 +269,24 @@ Rate confidence in recommendation (0.0-1.0):
 - <0.5: Low confidence, needs testing
 
 ## OUTPUT FORMAT:
-{
-  "recommendation": {
+{{
+  "recommendation": {{
     "method": "HTTP_SUITABLE|APIFY_REQUIRED|HYBRID_APPROACH",
     "confidence": 0.0-1.0,
     "reasoning": ["Primary factors influencing decision"]
-  },
-  "technical_analysis": {
+  }},
+  "technical_analysis": {{
     "javascript_dependency": "none|light|moderate|heavy",
     "bot_protection": "none|light|moderate|strong",
     "content_accessibility": "full|partial|minimal",
     "spa_framework": "none|react|angular|vue|other"
-  },
-  "cost_estimate": {
+  }},
+  "cost_estimate": {{
     "http_cost": 0.0,
     "apify_cost_usd": 0.002,
     "recommended_cost": 0.0
-  }
-}
+  }}
+}}
 ```
 
 ---

@@ -1,0 +1,8 @@
+Domain,Site_Analysis_Method,Site_Analysis_Confidence,Scraping_Success,Pages_Scraped,Content_Length,AI_Analysis_Success,Priority_Score,AI_Cost_USD,Apify_Used,Apify_Cost_USD,Total_Cost_USD
+http://www.bigfishcreative.ca,APIFY_REQUIRED,0.95,success,1,4121,failed,0.0,0.0000,yes,0.0000,0.0000
+http://www.involvedmedia.ca,APIFY_REQUIRED,0.95,success,2,2437,failed,0.0,0.0000,yes,0.0000,0.0000
+http://www.nimiopere.com,APIFY_REQUIRED,0.20,success,2,2157,failed,0.0,0.0000,yes,0.0000,0.0000
+http://www.theog.co,APIFY_REQUIRED,0.95,success,2,6539,failed,0.0,0.0000,yes,0.0000,0.0000
+http://www.workparty.ca,HYBRID_APPROACH,0.55,success,1,1231,failed,0.0,0.0000,yes,0.0000,0.0000
+https://www.altitudestrategies.ca,APIFY_REQUIRED,0.95,success,2,19190,failed,0.0,0.0000,yes,0.0000,0.0000
+https://www.stryvemarketing.com,APIFY_REQUIRED,0.95,failed,0,0,failed,0.0,0.0000,yes,0.0000,0.0000

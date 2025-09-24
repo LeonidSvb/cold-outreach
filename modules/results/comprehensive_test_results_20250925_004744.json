@@ -1,0 +1,2897 @@
+{
+  "metadata": {
+    "timestamp": "20250925_004744",
+    "test_type": "comprehensive_scraping_pipeline",
+    "domains_tested": 7,
+    "total_processing_time": 73.2527916431427,
+    "components_tested": [
+      "site_analysis",
+      "website_scraping",
+      "page_prioritization"
+    ],
+    "configuration": {
+      "TESTING": {
+        "MAX_DOMAINS": 100,
+        "ENABLE_SITE_ANALYSIS": true,
+        "ENABLE_WEBSITE_SCRAPING": true,
+        "ENABLE_PAGE_PRIORITIZATION": true,
+        "ENABLE_APIFY_SCRAPING": true,
+        "DETAILED_LOGGING": true
+      },
+      "PERFORMANCE": {
+        "PARALLEL_LIMIT": 20,
+        "REQUEST_DELAY": 0.1,
+        "TIMEOUT_SECONDS": 30,
+        "MAX_RETRIES": 3
+      },
+      "OUTPUT": {
+        "SAVE_DETAILED_JSON": true,
+        "SAVE_CSV_SUMMARY": true,
+        "SAVE_PERFORMANCE_METRICS": true,
+        "RESULTS_DIR": "../results"
+      }
+    }
+  },
+  "component_results": {
+    "site_analysis": {
+      "total_domains": 7,
+      "successful_analyses": 7,
+      "failed_analyses": 0,
+      "success_rate": 100.0,
+      "processing_time": 4.21206259727478,
+      "domains_per_minute": 99.71361780609374,
+      "results": [
+        {
+          "url": "https://www.stryvemarketing.com",
+          "analyzed_at": "2025-09-25T00:46:30.980355",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "HTTP accessibility failed: None"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": false,
+            "status_code": 403,
+            "error": null
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 0.2624781131744385
+        },
+        {
+          "url": "http://www.workparty.ca",
+          "analyzed_at": "2025-09-25T00:46:30.986424",
+          "recommendation": {
+            "method": "HYBRID_APPROACH",
+            "confidence": 0.5499999999999999,
+            "reasoning": [
+              "High quality HTTP content (score: 65)",
+              "Moderate JavaScript usage (risk: 30)",
+              "Try HTTP first, fallback to Apify if needed (confidence: 0.55)"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 75827,
+            "response_time": 0.6502037048339844,
+            "content_quality": {
+              "quality": "medium",
+              "score": 65,
+              "indicators": [
+                "Good text content (2000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (17 links)",
+                "Has page title"
+              ],
+              "text_length": 2112,
+              "business_relevance": "medium",
+              "keyword_matches": 2
+            },
+            "javascript_analysis": {
+              "dependency_level": "moderate",
+              "spa_frameworks": [],
+              "dynamic_loading_patterns": [
+                "ajax",
+                "async",
+                "defer"
+              ],
+              "protection_detected": false,
+              "risk_score": 30,
+              "risk_factors": [
+                "Dynamic loading: 3 patterns",
+                "Heavy JS usage: 25 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.001
+          },
+          "confidence_factors": [],
+          "processing_time": 0.7911159992218018
+        },
+        {
+          "url": "http://www.involvedmedia.ca",
+          "analyzed_at": "2025-09-25T00:46:30.986424",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "High quality HTTP content (score: 80)",
+              "Heavy JavaScript dependency (risk: 70)",
+              "Bot protection detected"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 56676,
+            "response_time": 1.5292332172393799,
+            "content_quality": {
+              "quality": "high",
+              "score": 80,
+              "indicators": [
+                "Good text content (2000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (53 links)",
+                "High business relevance (7 keywords)",
+                "Has page title"
+              ],
+              "text_length": 3081,
+              "business_relevance": "high",
+              "keyword_matches": 7
+            },
+            "javascript_analysis": {
+              "dependency_level": "heavy",
+              "spa_frameworks": [],
+              "dynamic_loading_patterns": [
+                "ajax",
+                "async",
+                "defer"
+              ],
+              "protection_detected": true,
+              "risk_score": 70,
+              "risk_factors": [
+                "Dynamic loading: 3 patterns",
+                "Protection: cloudflare, captcha",
+                "Heavy JS usage: 23 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 1.8119096755981445
+        },
+        {
+          "url": "https://www.altitudestrategies.ca",
+          "analyzed_at": "2025-09-25T00:46:30.984321",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "High quality HTTP content (score: 93)",
+              "Heavy JavaScript dependency (risk: 75)",
+              "Bot protection detected"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 367098,
+            "response_time": 1.8921782970428467,
+            "content_quality": {
+              "quality": "high",
+              "score": 93,
+              "indicators": [
+                "Rich text content (5000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (275 links)",
+                "Medium business relevance (5 keywords)",
+                "Has meta description",
+                "Has page title"
+              ],
+              "text_length": 19463,
+              "business_relevance": "high",
+              "keyword_matches": 5
+            },
+            "javascript_analysis": {
+              "dependency_level": "heavy",
+              "spa_frameworks": [],
+              "dynamic_loading_patterns": [
+                "spinner",
+                "ajax",
+                "async",
+                "defer",
+                "lazy-load",
+                "loadmore"
+              ],
+              "protection_detected": true,
+              "risk_score": 75,
+              "risk_factors": [
+                "Dynamic loading: 6 patterns",
+                "Protection: captcha",
+                "Heavy JS usage: 71 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 2.1723012924194336
+        },
+        {
+          "url": "http://www.theog.co",
+          "analyzed_at": "2025-09-25T00:46:30.980355",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "High quality HTTP content (score: 85)",
+              "Heavy JavaScript dependency (risk: 100)",
+              "SPA frameworks detected: ember",
+              "Bot protection detected"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 90404,
+            "response_time": 2.2618167400360107,
+            "content_quality": {
+              "quality": "high",
+              "score": 85,
+              "indicators": [
+                "Good text content (2000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (35 links)",
+                "High business relevance (6 keywords)",
+                "Has meta description",
+                "Has page title"
+              ],
+              "text_length": 3614,
+              "business_relevance": "high",
+              "keyword_matches": 6
+            },
+            "javascript_analysis": {
+              "dependency_level": "heavy",
+              "spa_frameworks": [
+                "ember"
+              ],
+              "dynamic_loading_patterns": [
+                "please wait",
+                "spinner",
+                "ajax",
+                "async",
+                "defer"
+              ],
+              "protection_detected": true,
+              "risk_score": 100,
+              "risk_factors": [
+                "SPA framework: ember",
+                "Dynamic loading: 5 patterns",
+                "Protection: cloudflare, captcha, please wait",
+                "Heavy JS usage: 38 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 2.5345349311828613
+        },
+        {
+          "url": "http://www.bigfishcreative.ca",
+          "analyzed_at": "2025-09-25T00:46:30.980355",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "High quality HTTP content (score: 100)",
+              "Heavy JavaScript dependency (risk: 70)",
+              "Bot protection detected"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 193188,
+            "response_time": 3.3552682399749756,
+            "content_quality": {
+              "quality": "high",
+              "score": 100,
+              "indicators": [
+                "Rich text content (5000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (115 links)",
+                "High business relevance (7 keywords)",
+                "Has meta description",
+                "Has page title"
+              ],
+              "text_length": 6574,
+              "business_relevance": "high",
+              "keyword_matches": 7
+            },
+            "javascript_analysis": {
+              "dependency_level": "heavy",
+              "spa_frameworks": [],
+              "dynamic_loading_patterns": [
+                "ajax",
+                "async",
+                "defer"
+              ],
+              "protection_detected": true,
+              "risk_score": 70,
+              "risk_factors": [
+                "Dynamic loading: 3 patterns",
+                "Protection: cloudflare",
+                "Heavy JS usage: 71 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 3.7487642765045166
+        },
+        {
+          "url": "http://www.nimiopere.com",
+          "analyzed_at": "2025-09-25T00:46:30.980355",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.19999999999999996,
+            "reasoning": [
+              "Moderate HTTP content quality (score: 25)",
+              "Moderate JavaScript usage (risk: 40)",
+              "SPA frameworks detected: ember",
+              "Apify recommended - better reliability expected (confidence: 0.20)"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 618460,
+            "response_time": 3.8721468448638916,
+            "content_quality": {
+              "quality": "low",
+              "score": 25,
+              "indicators": [
+                "Has structured headings",
+                "Has meta description",
+                "Has page title"
+              ],
+              "text_length": 214,
+              "business_relevance": "low",
+              "keyword_matches": 1
+            },
+            "javascript_analysis": {
+              "dependency_level": "moderate",
+              "spa_frameworks": [
+                "ember"
+              ],
+              "dynamic_loading_patterns": [],
+              "protection_detected": false,
+              "risk_score": 40,
+              "risk_factors": [
+                "SPA framework: ember",
+                "Heavy JS usage: 26 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 4.204497575759888
+        }
+      ]
+    },
+    "website_scraping": {
+      "total_domains": 7,
+      "successful_scrapes": 6,
+      "failed_scrapes": 1,
+      "success_rate": 85.71428571428571,
+      "total_pages_scraped": 10,
+      "total_content_extracted": 35675,
+      "avg_pages_per_domain": 1.6666666666666667,
+      "processing_time": 5.50165867805481,
+      "pages_per_minute": 109.05801961021301,
+      "results": [
+        {
+          "domain": "https://www.stryvemarketing.com",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [],
+          "discovery": {
+            "total_links_found": 0,
+            "priority_pages_found": 0,
+            "pages_successfully_scraped": 0
+          },
+          "metadata": {
+            "total_content_length": 0,
+            "processing_time": 0,
+            "scraping_method": "HTTP"
+          },
+          "error": "Failed to scrape main page"
+        },
+        {
+          "domain": "http://www.workparty.ca",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.workparty.ca",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:35.696491",
+              "processing_time": 0.5001091957092285,
+              "title": "Work Party – An independent design and media group",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "our\nServices."
+                },
+                {
+                  "level": "h1",
+                  "text": "fancy\t\t\t\n\n\t\t\t\ttitles?"
+                },
+                {
+                  "level": "h2",
+                  "text": "THAT'S\nWHO\nWE ARE"
+                }
+              ],
+              "page_type": "case_studies",
+              "content": "Work Party – An independent design and media group We craft brands. And we bring them to life. Born from a 30-year relationship with one of Western Canada’s biggest brands, Work Party is here to make sure every touchpoint gets the care it deserves — and we have a pretty good time doing it. our Ser vices. Creative Brand Strategy Design Advertising Social Strategy Management Content Media Media Planning Media Buying Data Tracking Analytics fancy titles? Yeah, we’ve got those. But our biggest successes come from the belief that the best work should feel like play. So we surround ourselves with great people, roll up our sleeves, and get to it. . Christie Coughlan Managing Director . Roshni Parmar Sr. Manager, Projects & Ops. . Esteban Mugica Creative Director, Design . Brian Quittenton Creative Director, Copywriter . Dan Bache Creative Director . Maria Folino Account Manager . Chloe Jeanpierre Media Director . Cierra Buck Sr. Manager, Digital Strategy . Annie Lin Director of Analytics . Sydney Bezenar Social Media Coordinator . Johannes Froysaa Director of Production . Steven Fisher Production Artist . Natalie Schirr-Chan Director of Finance . Kathryn Hudson Controller THAT'S WHO WE ARE Want to work with us? Connect",
+              "content_length": 1231,
+              "links": [
+                "http://www.workparty.ca"
+              ],
+              "domain": "http://www.workparty.ca"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 1,
+            "priority_pages_found": 0,
+            "pages_successfully_scraped": 1
+          },
+          "metadata": {
+            "total_content_length": 1231,
+            "processing_time": 0.5139691829681396,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "http://www.bigfishcreative.ca",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.bigfishcreative.ca",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:36.567456",
+              "processing_time": 1.3710744380950928,
+              "title": "Vancouver Digital Marketing Agency | Big Fish Creative",
+              "meta_description": "With nearly 10+ years of experience, we've helped brands worldwide in elevating their website design, SEO, branding and more.",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Welcome to BFC.  we’re glad you’re here."
+                },
+                {
+                  "level": "h2",
+                  "text": "A few things \nwe’re great at"
+                },
+                {
+                  "level": "h2",
+                  "text": "We Build Digital Solutions \nFor Brands & Businesses Worldwide"
+                },
+                {
+                  "level": "h3",
+                  "text": "Crunch Fitness"
+                },
+                {
+                  "level": "h3",
+                  "text": "The Gas Guys Outdoor Designs"
+                },
+                {
+                  "level": "h3",
+                  "text": "Custom Fundraising Solutions"
+                },
+                {
+                  "level": "h3",
+                  "text": "Orca West Developments"
+                },
+                {
+                  "level": "h3",
+                  "text": "Strong Spas"
+                },
+                {
+                  "level": "h3",
+                  "text": "Cadieux Glow"
+                },
+                {
+                  "level": "h2",
+                  "text": "How We Do What We Do"
+                }
+              ],
+              "page_type": "general",
+              "content": "Vancouver Digital Marketing Agency | Big Fish Creative Skip to the content We specialize in transforming brands, offering a complete solution that not only articulates your brand’s narrative, but also captivates and engages your target audience online. We bridge the gap between businesses and their audience through precision-targeted digital advertising solutions, across a multitude of platforms. We specialize in elevating brands in competitive markets where we provide comprehensive solutions that not only tell your story, but build rapport with your audience. We specialize in transforming brands, offering a complete solution that not only articulates your brand’s narrative, but also captivates and engages your target audience online. We bridge the gap between businesses and their audience through precision-targeted digital advertising solutions, across a multitude of platforms. We specialize in elevating brands in competitive markets where we provide comprehensive solutions that not only tell your story, but build rapport with your audience. Welcome to BFC . we’re glad you’re here. We create digital experiences and solutions based on great design and measurable insights. From concept to creation, we work closely with brands and businesses to help them understand their audiences and purposefully navigate their digital journeys. We’re dedicated to building lasting partnerships with our clients that are designed around authentic, people-focused connections. A few things we’re great at Web Design & Development Whether your goal is to have a site refresh or build a new digital identity from the ground up, our team of skilled web designers and developers is committed to turning your vision into reality. Learn More Search Engine Optimization We have been working alongside our clients for 10+ years in getting their websites to the top spot for specific keywords, no matter the difficulty. Learn More Search Engine Marketing We bridge the gap between businesses and their audience through precision-targeted digital advertising, across a multitude of platforms. Learn More Branding & Rebranding We specialize in elevating brands in competitive markets where we provide comprehensive design solutions that not only tells your story, but captivates and engages your target audience. Learn More Email Marketing Our email strategy fully revolves around your business and your goals, and we strive to put you in the best position possible to convert. Learn More Event Design We seamlessly integrate creativity with strategy to provide our clients with standout billboards, trade show displays, exhibit backdrops, and signage. Learn More We Build Digital Solutions For Brands & Businesses Worldwide Crunch Fitness Branding Creative Design Event Design Search Engine Marketing (SEM) The Gas Guys Outdoor Designs Search Engine Marketing (SEM) Website Design & Development Custom Fundraising Solutions Email Marketing Website Design & Development Orca West Developments Branding Website Design & Development Strong Spas Website Design & Development Cadieux Glow Search Engine Marketing (SEM) Website Design & Development How We Do What We Do Remarkable Creative In today’s visual world, you have only a few seconds to capture your audience. We believe that good design is paramount, and because of this, our creative captures the feel of your brand. Get Started Today Strategic Digital Marketing The best digital marketing campaigns require platform-specific expertise, and we reach your intended audience through every available digital touchpoint. Get Started Today Fearless Problem Solving We bring the best of strategy, design, and user experience together. We specialize in both creative and digital, whereby we plan, test, and build customized solutions that deliver results. Get Started Today The Latest From The BFC Blog Marketing bfcweb The Future of AI in Digital Marketing: What’s Next? Read More Marketing bfcweb When Should Your Company Consider a Rebrand? A Guide to Making the Right Move Read More Marketing bfcweb Navigating the Customer Journey: From Awareness to Conversion Read More Play",
+              "content_length": 4121,
+              "links": [
+                "http://www.bigfishcreative.ca"
+              ],
+              "domain": "http://www.bigfishcreative.ca"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 1,
+            "priority_pages_found": 0,
+            "pages_successfully_scraped": 1
+          },
+          "metadata": {
+            "total_content_length": 4121,
+            "processing_time": 1.3806343078613281,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "https://www.altitudestrategies.ca",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "https://www.altitudestrategies.ca",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:36.750018",
+              "processing_time": 1.553636074066162,
+              "title": "Altitude Stratégies | Agence de marketing web créative à Vaudreuil-Dorion",
+              "meta_description": "Découvrez l’agence de marketing web unissant passion, rigueur et créativité pour propulser votre entreprise. Faites confiance à Altitude Stratégies pour obtenir des solutions numériques aux résultats remarquables : (450) 279-0187.",
+              "headings": [
+                {
+                  "level": "h3",
+                  "text": "stratégie marketing"
+                },
+                {
+                  "level": "h3",
+                  "text": "stratégie web"
+                },
+                {
+                  "level": "h3",
+                  "text": "stratégie vidéo"
+                },
+                {
+                  "level": "h3",
+                  "text": "stratégie affichage"
+                },
+                {
+                  "level": "h1",
+                  "text": "Altitude Stratégies"
+                },
+                {
+                  "level": "h2",
+                  "text": "Vous êtes ?"
+                },
+                {
+                  "level": "h3",
+                  "text": "Entreprise"
+                },
+                {
+                  "level": "h3",
+                  "text": "Directeur(trice) marketing"
+                },
+                {
+                  "level": "h3",
+                  "text": "Directeur(trice) R.H."
+                },
+                {
+                  "level": "h3",
+                  "text": "Institution publique ou municipale"
+                }
+              ],
+              "page_type": "general",
+              "content": "Altitude Stratégies | Agence de marketing web créative à Vaudreuil-Dorion Contenu en pleine largeur Nos solutions Faites carrière à l’agence | English Español Top menu Facebook page opens in new window Instagram page opens in new window LinkedIn page opens in new window X page opens in new window VK page opens in new window Pinterest page opens in new window YouTube page opens in new window Accueil Marketing Marketing des médias sociaux (SMMA) Marketing de contenu Marketing par courriel Marketing d’influence Marketing automatisé Marketing de recrutement – Marque Employeur Marketing immobilier Service de communications et de relations publiques Placement média et publicité Image de marque Web Conception de sites web Commerce électronique Référencement naturel (SEO) Référencement payant Référencement local Référencement vocal Hébergement web canadien Messageries professionnelles Web analytics Subventions, contributions et aide financière pour entreprise Vidéo Vidéo corporative Vidéo promotionnelle Vidéo événementielle Captation vidéo avec drone Motion Design Service de photographie Affichage Lettrage Impression Affichage promotionnel Articles promotionnels Produits d’affichage Résultats Études de cas Modèle de croissance et d’engagement sur les médias sociaux Réussite et croissance dans un marché compétitif Résultats impressionnants en SEO Équipe #1 de Vaudreuil-Soulanges chez Sutton pour une 6e année consécutive De l’héritage à l’innovation : une transition réussie Nouveau réseau de concessionnaires et croissance exponentielle Portfolio Témoignages L’agence À propos Le #DreamTeam Pourquoi choisir notre agence Carrières Nous joindre Nouvelles Blogue Actualités Marketing, Communication et Numérique S’abonner à l’infolettre Centre d’aide Portail Client Centre d’aide (Base de connaissance) Foire aux questions Foire aux questions (Google Ads) Glossaire marketing Glossaire Web Glossaire SEO Glossaire vidéo affichage choisissez la bonne stratégie choisissez la bonne stratégie marketing stratégie choisissez la bonne stratégie web vidéo choisissez la bonne stratégie stratégie marketing Combinez outils analytiques précis et connaissances approfondies des tendances web, vous obtiendrez une stratégie complète, réfléchie et efficace ! VOIR NOS SERVICES stratégie web C’est en étroite collaboration avec vous que notre équipe d’experts dévoués concevra un site web à votre image, respectant votre vision d’entreprise. VOIR NOS SERVICES stratégie vidéo Avec la création de vidéos corporatives, de visites virtuelles et de publicités animées, nous ferons en sorte que votre entreprise se démarque. VOIR NOS SERVICES stratégie affichage Service d’impression de tout genre : cartes d’affaires, bannières rétractables, affiches, lettrage de véhicules et de vitrine et encore plus. VOIR NOS SERVICES Agence créative marketing web et vidéo Altitude Stratégies Altitude conçoit des stratégies multiplateformes pour amener votre entreprise toujours plus haut. Notre objectif : vous faire atteindre les vôtres au moyen de nos solutions numériques diverses et adaptées. Les membres de notre équipe du tonnerre unissent leurs talents multiples et redoublent de créativité pour vous aider à atteindre vos buts. Experts en conception de sites web, en rédaction SEO, en production et montage vidéo, en création de contenu, en design graphique et en marketing, nous avons la solution qui vous convient. Visez le ciel et élevez-vous au sommet grâce à nos stratégies réfléchies et parfaitement coordonnées. Altitude, choisissez la bonne stratégie, nous nous chargeons du reste. POURQUOI CHOISIR NOTRE AGENCE Vous êtes ? Choisissez votre profil et découvrez comment notre expertise peut vous accompagner dans vos défis quotidiens et vos projets stratégiques. Entreprise Propulsez votre croissance avec des solutions stratégiques en marketing et développement web. VOIR NOS SOLUTIONS Directeur(trice) marketing Boostez vos campagnes marketing avec des outils performants et des résultats mesurables. VOIR NOS SOLUTIONS Directeur(trice) R.H. Améliorez votre marque employeur et facilitez vos processus de recrutement. VOIR NOS SOLUTIONS Institution publique ou municipale Dynamisez vos communications et engagez votre communauté efficacement. VOIR NOS SOLUTIONS Organisme Maximisez votre impact avec des outils et stratégies adaptés à vos valeurs. VOIR NOS SOLUTIONS Agence marketing Collaborez avec nous pour élargir vos offres et accomplir des projets ambitieux. VOIR NOS SOLUTIONS Ils nous font confiance Comptoir St-Denis www.comptoirst-denis.com ContrebasseClassique.com www.contrebasseclassique.com Accès Croisières et Voyages www.accescroisieres.com Excavation Rolland Chevrier et Fils www.rchevrieretfils.com Odontys www.odontys.ca Auvents Valleyfield www.auventsvalleyfield.com Clinique NeuroLab www.cliniqueneurolab.com Regroupement TDL Québec www.regroupementtdl.ca Clinique Unicité www.cliniqueunicite.ca Groupe FAA Construction Habitation Cousineau www.habitationcousineau.com Hangcha Forklift Canada VOIR LE SITE Sanivac VOIR LE SITE Ordi-Cam www.ordi-cam.ca EDP Drilling www.edpdrilling.com Affichage publicitaire sur abribus www.sandraleemarquis.com Net-O-Pression www.net-o-pression.ca Synapse Location RIVE-SUD GMF Contrecœur www.gmfcontrecoeur.com Ordi-Cam 2000 www.facebook.com Dynamat inc. www.facebook.com Construction SYME Prestige www.facebook.com Boulangerie St-Méthode www.facebook.com Ce que nos clients en pensent Sylvie Gérin-Lajoie, Fondation en coeur La firme Altitude Stratégies joue un rôle clé dans la gestion de notre site web depuis bientôt un an, assurant une performance remarquable et une navigation fluide. Leur expertise technique et leur engagement constant reflètent un partenariat solide et efficace. Rémi L’Écuyer, Boulangerie St-Méthode Altitude offre un service très professionnel et répond très bien aux exigences. L’équipe dynamique assure de bons suivis et offre des services dignes d’une grande agence. Annie Payant, RE/MAX du Cartier J’ai le plaisir de collaborer sur plusieurs projets avec l’équipe de Altitude Stratégies et je suis vraiment satisfaite! Des gens passionnés, organisés et surtout hyper créatifs font de cette entreprise un élément important pour les courtiers de mon agence. Merci d’être un partenaire précieux pour RE/MAX du Cartier. Mélanie Simard, CIUSSS de la Capitale-Nationale Une agence compétente et rigoureuse. Nous n’avons pas été déçu par la stratégie de placement média qu’ils ont produite. Gary Whittaker, John Abbott College Un service de qualité supérieure et rapide, créatif et parfaitement au fait des médias numériques et de leurs utilisations. Excellent contact direct avec les propriétaires qui sont exceptionnellement bilingues et capables de développer des campagnes et du matériel dans les deux langues. Comprendre la nécessité de mesurer les résultats et disposer des outils pour le faire. Jose Tremblay, Plancher JT Excellent service ! Nos délais ont été respectés. Très présent pour notre dossier. On se sent très bien accompagné et tout est dit clairement de façon à ce qu’on puisse comprendre. Merci Mathieu ! Karine, Centre Evexia Toute l’équipe du centre Evexia sommes très satisfaites du service personnalisé et professionnel de l’équipe d’Altitude Stratégies. Ils sont à l’écoute de nos besoins, on se s’en tout de suite à l’aise . Merci à l’équipe de faire grandir notre entreprise. Mathieu Gaudreau, Entreprise MG Un ami m’a référé Altitude stratégie afin d’apporter un nouvel air à mon site web ! J’ai été impressionné par leur service professionnel, leur courtoisie et leur accessibilité. Véronique Bujold, Courtier immobilier RE/MAX Professionnel, à l’écoute, créatif ! Merci Altitude stratégies ! Mes publications sont super !! Julie-Anne Drolet, JAD Immigration au Canada J’offre des services juridiques en droit de l’immigration et cette équipe a vraiment tout mis en œuvre pour répondre à mes besoins et créer un site web de qualité et professionnel. Ils ont toujours été disponibles pour répondre à mes questions avant, pendant et après le mandat de conception. Vraiment une équipe extraordinaire et digne de confiance ! Jasmine Goupil, Courtier immobilier RE/MAX J’ai collaboré avec l’équipe d’Altitude Stratégies et j’ai beaucoup aimé leur approche, le service offert et ils ont une grande expertise au niveau des médias numériques. Les membres de l’équipes sont très proactifs, près de leurs clients et disponibles à tout moment pour répondre aux questions et pour établir une stratégie selon vos besoins. Je vous recommande fortement si vous recherchez une agence compétente et réactive ! Lyne Pelchat, Regroupement TDL Québec En tant qu’organisme à but non lucratif, nous avons nos expertises et sommes habitués à être chefs d’orchestre et musiciens. Cependant, lorsqu’il s’agit d’approches web et numériques, nous ne possédons pas les talents nécessaires pour jouer cette partition. C’est pourquoi nous sommes extrêmement satisfaits d’avoir fait confiance à l’équipe d’Altitude pour nous guider dans ce processus. Grâce à leur expertise, notre site web reflète parfaitement la vision que nous avions et est aussi efficace qu’espéré pour tous ceux et celles qui y accèdent. Pascal Beauchamp, Desjardins Experts Conseils Altitude Stratégies a su être à l’écoute de nos besoins précis. Nous avons également le sentiment qu’ils font partie intégrante de notre équipe par leur approche stratégique ainsi que dans l’échange d’idées. Céline, Familiprix Coteau-du-lac Nous sommes très heureux de travailler avec toute l’équipe professionnelle d’Altitude Stratégies. Ils sont tous extrêmement efficaces, rapides et d’une écoute exceptionnelle face à nos besoins. Merci de nous aider à faire valoir notre entreprise de la plus belle façon qui soit ! Catherine Cadieux, Jeux-Tec Superbe entreprise spécialisée dans le marketing ! L’équipe est géniale et ils font un travail remarquable. N’hésitez surtout pas à faire affaire avec ces gens professionnels. Services impeccables. Chantal Tremb... [truncated]",
+              "content_length": 16302,
+              "links": [
+                "https://www.altitudestrategies.ca",
+                "https://www.altitudestrategies.ca/solutions/",
+                "https://www.altitudestrategies.ca/emplois/",
+                "https://www.altitudestrategies.ca/en/",
+                "https://www.altitudestrategies.ca/es/",
+                "https://www.altitudestrategies.ca/",
+                "https://www.altitudestrategies.ca/marketing/",
+                "https://www.altitudestrategies.ca/marketing/marketing-medias-sociaux/",
+                "https://www.altitudestrategies.ca/marketing/marketing-contenu/",
+                "https://www.altitudestrategies.ca/marketing/marketing-courriel/",
+                "https://www.altitudestrategies.ca/marketing/marketing-influence/",
+                "https://www.altitudestrategies.ca/marketing/marketing-automation/",
+                "https://www.altitudestrategies.ca/marketing/marketing-recrutement/",
+                "https://www.altitudestrategies.ca/marketing/marketing-immobilier/",
+                "https://www.altitudestrategies.ca/marketing/communications-relations-publiques/",
+                "https://www.altitudestrategies.ca/marketing/placement-media-publicite/",
+                "https://www.altitudestrategies.ca/marketing/image-de-marque/",
+                "https://www.altitudestrategies.ca/web/",
+                "https://www.altitudestrategies.ca/web/conception-sites-web/",
+                "https://www.altitudestrategies.ca/web/commerce-electronique/",
+                "https://www.altitudestrategies.ca/web/referencement-naturel-seo/",
+                "https://www.altitudestrategies.ca/web/referencement-payant/",
+                "https://www.altitudestrategies.ca/web/referencement-local/",
+                "https://www.altitudestrategies.ca/web/referencement-vocal/",
+                "https://www.altitudestrategies.ca/web/hebergement-web/",
+                "https://www.altitudestrategies.ca/web/messageries-professionnelles-courriels/",
+                "https://www.altitudestrategies.ca/web/web-analytics/",
+                "https://www.altitudestrategies.ca/subventions-contributions-aide-financiere-pour-entreprise/",
+                "https://www.altitudestrategies.ca/video/",
+                "https://www.altitudestrategies.ca/video/video-corporative/",
+                "https://www.altitudestrategies.ca/video/capsules-video/",
+                "https://www.altitudestrategies.ca/video/video-live-evenementiel/",
+                "https://www.altitudestrategies.ca/video/captation-video-drone/",
+                "https://www.altitudestrategies.ca/video/motion-design/",
+                "https://www.altitudestrategies.ca/video/photographie/",
+                "https://www.altitudestrategies.ca/affichage/",
+                "https://www.altitudestrategies.ca/affichage/lettrage/",
+                "https://www.altitudestrategies.ca/affichage/impression/",
+                "https://www.altitudestrategies.ca/affichage/affichage-promotionnel/",
+                "https://www.altitudestrategies.ca/affichage/articles-promotionnels/",
+                "https://www.altitudestrategies.ca/affichage/produits-affichage/",
+                "https://www.altitudestrategies.ca/resultats/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/boulangerie-st-methode/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/remax-prestige/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/brunet-lefebvre-evaluateurs-conseils/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/equipe-sandra-lee-marquis/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/habitation-raymond-allard-groupe-faa-construction/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/hangcha-forklift-canada/",
+                "https://www.altitudestrategies.ca/temoignages/",
+                "https://www.altitudestrategies.ca/a-propos-agence-altitude-strategies/",
+                "https://www.altitudestrategies.ca/equipe/",
+                "https://www.altitudestrategies.ca/pourquoi-choisir-altitude-strategies/",
+                "https://www.altitudestrategies.ca/nous-joindre/",
+                "https://www.altitudestrategies.ca/blogue/",
+                "https://www.altitudestrategies.ca/nouvelles/",
+                "https://www.altitudestrategies.ca/inscription-infolettre/",
+                "https://www.altitudestrategies.ca/aide/",
+                "https://www.altitudestrategies.ca/foire-aux-questions/",
+                "https://www.altitudestrategies.ca/foire-aux-questions-google-ads/",
+                "https://www.altitudestrategies.ca/glossaire-marketing/",
+                "https://www.altitudestrategies.ca/glossaire-web/",
+                "https://www.altitudestrategies.ca/glossaire-seo/",
+                "https://www.altitudestrategies.ca/glossaire-video/",
+                "https://www.altitudestrategies.ca/entreprises/",
+                "https://www.altitudestrategies.ca/directeurs-marketing/",
+                "https://www.altitudestrategies.ca/directeurs-rh/",
+                "https://www.altitudestrategies.ca/institutions-publiques/",
+                "https://www.altitudestrategies.ca/organismes/",
+                "https://www.altitudestrategies.ca/agences-marketing/",
+                "https://www.altitudestrategies.ca/projet/comptoir-st-denis/",
+                "https://www.altitudestrategies.ca/projet/www-contrebasse-classique/",
+                "https://www.altitudestrategies.ca/projet/acces-croisieres-et-voyages-2/",
+                "https://www.altitudestrategies.ca/projet/excavation-rolland-chevrier-et-fils/",
+                "https://www.altitudestrategies.ca/projet/odontys/",
+                "https://www.altitudestrategies.ca/projet/auvents-valleyfield/",
+                "https://www.altitudestrategies.ca/projet/clinique-neurolab/",
+                "https://www.altitudestrategies.ca/projet/regroupement-tdl-quebec/",
+                "https://www.altitudestrategies.ca/projet/clinique-unicite/",
+                "https://www.altitudestrategies.ca/projet/groupe-faa-construction-3/",
+                "https://www.altitudestrategies.ca/projet/habitation-cousineau/",
+                "https://www.altitudestrategies.ca/projet/hangcha-forklift-canada/",
+                "https://www.altitudestrategies.ca/projet/sanivac-3/",
+                "https://www.altitudestrategies.ca/projet/ordi-cam/",
+                "https://www.altitudestrategies.ca/projet/edp-drilling/",
+                "https://www.altitudestrategies.ca/projet/affichage-publicitaire-sur-abribus/",
+                "https://www.altitudestrategies.ca/projet/net-o-pression/",
+                "https://www.altitudestrategies.ca/projet/synapse/",
+                "https://www.altitudestrategies.ca/projet/location-rive-sud-2/",
+                "https://www.altitudestrategies.ca/projet/gmf-contrecoeur/",
+                "https://www.altitudestrategies.ca/projet/ordi-cam-2000/",
+                "https://www.altitudestrategies.ca/projet/dynamat-inc/",
+                "https://www.altitudestrategies.ca/projet/construction-syme-prestige/",
+                "https://www.altitudestrategies.ca/projet/boulangerie-st-methode/",
+                "https://www.altitudestrategies.ca/externaliser-la-gestion-de-vos-reseaux-sociaux-a-une-agence-marketing-est-ce-rentable/",
+                "https://www.altitudestrategies.ca/marketing-influence-quebec-niches-createurs-de-contenu-authentiques/",
+                "https://www.altitudestrategies.ca/comment-etre-recommande-sur-chatgpt/",
+                "https://www.altitudestrategies.ca/marketing-hotelier-propulsez-votre-etablissement-marche-competitif/",
+                "https://www.altitudestrategies.ca/soutenir-achat-local-grace-aux-medias-numeriques-quebecois-et-canadiens/",
+                "https://www.altitudestrategies.ca/guerre-commerciale-strategies-marketing-gagnantes-pour-valoriser-votre-entreprise/",
+                "https://www.altitudestrategies.ca/calendrier-marketing-2025/",
+                "https://www.altitudestrategies.ca/comment-se-preparer-vendredi-fou-cyberlundi-et-boxing-day/",
+                "https://www.altitudestrategies.ca/calculateur-budget-publicites-facebook/"
+              ],
+              "domain": "https://www.altitudestrategies.ca"
+            },
+            {
+              "url": "https://www.altitudestrategies.ca/solutions/",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:37.145084",
+              "processing_time": 0.3787405490875244,
+              "title": "Solutions d'affaires adaptées à votre réalité | Altitude Stratégies",
+              "meta_description": "Choisissez votre profil et découvrez comment notre expertise peut vous accompagnerdans vos défis quotidiens et vos projets stratégiques.",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Des solutions adaptées à votre réalité"
+                },
+                {
+                  "level": "h2",
+                  "text": "Vous êtes ?"
+                },
+                {
+                  "level": "h3",
+                  "text": "Entreprise"
+                },
+                {
+                  "level": "h3",
+                  "text": "Directeur(trice) marketing"
+                },
+                {
+                  "level": "h3",
+                  "text": "Directeur(trice) R.H."
+                },
+                {
+                  "level": "h3",
+                  "text": "Institution publique ou municipale"
+                },
+                {
+                  "level": "h3",
+                  "text": "Organisme"
+                },
+                {
+                  "level": "h3",
+                  "text": "Agence marketing"
+                }
+              ],
+              "page_type": "products",
+              "content": "Solutions d'affaires adaptées à votre réalité | Altitude Stratégies Contenu en pleine largeur Nos solutions Faites carrière à l’agence | English Español Top menu Facebook page opens in new window Instagram page opens in new window LinkedIn page opens in new window X page opens in new window VK page opens in new window Pinterest page opens in new window YouTube page opens in new window Accueil Marketing Marketing des médias sociaux (SMMA) Marketing de contenu Marketing par courriel Marketing d’influence Marketing automatisé Marketing de recrutement – Marque Employeur Marketing immobilier Service de communications et de relations publiques Placement média et publicité Image de marque Web Conception de sites web Commerce électronique Référencement naturel (SEO) Référencement payant Référencement local Référencement vocal Hébergement web canadien Messageries professionnelles Web analytics Subventions, contributions et aide financière pour entreprise Vidéo Vidéo corporative Vidéo promotionnelle Vidéo événementielle Captation vidéo avec drone Motion Design Service de photographie Affichage Lettrage Impression Affichage promotionnel Articles promotionnels Produits d’affichage Résultats Études de cas Modèle de croissance et d’engagement sur les médias sociaux Réussite et croissance dans un marché compétitif Résultats impressionnants en SEO Équipe #1 de Vaudreuil-Soulanges chez Sutton pour une 6e année consécutive De l’héritage à l’innovation : une transition réussie Nouveau réseau de concessionnaires et croissance exponentielle Portfolio Témoignages L’agence À propos Le #DreamTeam Pourquoi choisir notre agence Carrières Nous joindre Nouvelles Blogue Actualités Marketing, Communication et Numérique S’abonner à l’infolettre Centre d’aide Portail Client Centre d’aide (Base de connaissance) Foire aux questions Foire aux questions (Google Ads) Glossaire marketing Glossaire Web Glossaire SEO Glossaire vidéo Choisissez votre profil et découvrez comment notre expertise peut vous accompagner dans vos défis quotidiens et vos projets stratégiques. Vous êtes ? Entreprise Propulsez votre croissance avec des solutions stratégiques en marketing et développement web. VOIR NOS SOLUTIONS Directeur(trice) marketing Boostez vos campagnes marketing avec des outils performants et des résultats mesurables. VOIR NOS SOLUTIONS Directeur(trice) R.H. Améliorez votre marque employeur et facilitez vos processus de recrutement. VOIR NOS SOLUTIONS Institution publique ou municipale Dynamisez vos communications et engagez votre communauté efficacement. VOIR NOS SOLUTIONS Organisme Maximisez votre impact avec des outils et stratégies adaptés à vos valeurs. VOIR NOS SOLUTIONS Agence marketing Collaborez avec nous pour élargir vos offres et accomplir des projets ambitieux. VOIR NOS SOLUTIONS Go to Top Commandez en ligne vos produits d’affichage et d’impression MAGASINEZ EN LIGNE",
+              "content_length": 2888,
+              "domain": "https://www.altitudestrategies.ca"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 103,
+            "priority_pages_found": 1,
+            "pages_successfully_scraped": 2
+          },
+          "metadata": {
+            "total_content_length": 19190,
+            "processing_time": 1.9602000713348389,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "http://www.involvedmedia.ca",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.involvedmedia.ca",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:36.816575",
+              "processing_time": 1.6201930046081543,
+              "title": "Involved Media | Where service you can trust meets high impact clout.",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "WE ARE INVOLVED MEDIA"
+                },
+                {
+                  "level": "h3",
+                  "text": "Where service you can trust meets high impact clout."
+                },
+                {
+                  "level": "h3",
+                  "text": "We help growing brands across the globe"
+                },
+                {
+                  "level": "h2",
+                  "text": "Media Capabilities"
+                },
+                {
+                  "level": "h2",
+                  "text": "Brands We Partner With"
+                },
+                {
+                  "level": "h3",
+                  "text": "An independent agency with eyes on the client every step of the way. See who we work with and what they have to say about our work."
+                },
+                {
+                  "level": "h2",
+                  "text": "Ready to get Involved?Learn about our services"
+                }
+              ],
+              "page_type": "general",
+              "content": "Involved Media | Where service you can trust meets high impact clout. We Are Involved Media An egoless agency where service you can trust meets high impact clout. Send Email inquiries@involvedmedia.ca Address 55 Commerce Valley Dr W, Markham, ON, L3T7V9, Canada WE ARE INVOLVED MEDIA Where service you can trust meets high impact clout . We help growing brands across the globe 0 + MEDIA EXPERTS 0 OFFICES ACROSS A GLOBAL SUPPORT NETWORK $ 0 + MILLION IN GLOBAL BILLLINGS Media Capabilities Media Strategy Media Strategy Tactical Planning Tactical Planning Digital Media Digital Media Connected TV Online Video Branded Content and more Specialty Digital Teams Specialty Digital Teams Programmatic Paid Search Paid Social and more Traditional Media Traditional Media Broadcast Radio OOH/DOOH and more Operations Operations Ad Ops Analytics Finance and more Brands We Partner With Involved in the wild An independent agency with eyes on the client every step of the way. See who we work with and what they have to say about our work. More Case Studies Case Studies Business Partner Leveraging client sales data to right size media budget and inform the overall business approach... Read More Case Studies Targeting Precision Hyper targeting: Driving leads amongst niche audiences for Toronto Stock Exchange... Read More Case Studies Media Solutions That Drive Action Reaching consumers when it matters: ​Retail audio for Rust-Oleum... Read More Case Studies Holistic Video Planning Breaking through in the competitive DIY landscape with innovative video solutions for Rust-Oleum... Read More Ready to get Involved? Learn about our services Get in touch × Close",
+              "content_length": 1658,
+              "links": [
+                "http://www.involvedmedia.ca",
+                "http://www.involvedmedia.ca/case-studies/",
+                "http://www.involvedmedia.ca/get-in-touch"
+              ],
+              "domain": "http://www.involvedmedia.ca"
+            },
+            {
+              "url": "http://www.involvedmedia.ca/case-studies/",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:38.237311",
+              "processing_time": 1.420736312866211,
+              "title": "Case Studies | Involved Media",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Case Studies"
+                },
+                {
+                  "level": "h2",
+                  "text": "Business Partner"
+                },
+                {
+                  "level": "h2",
+                  "text": "Targeting Precision"
+                },
+                {
+                  "level": "h2",
+                  "text": "Media Solutions That Drive Action"
+                },
+                {
+                  "level": "h2",
+                  "text": "Holistic Video Planning"
+                },
+                {
+                  "level": "h2",
+                  "text": "Ready to get Involved?Learn about our services"
+                }
+              ],
+              "page_type": "case_studies",
+              "content": "Case Studies | Involved Media We Are Involved Media An egoless agency where service you can trust meets high impact clout. Send Email inquiries@involvedmedia.ca Address 55 Commerce Valley Dr W, Markham, ON, L3T7V9, Canada Case Studies Business Partner Leveraging client sales data to right size media budget and inform the overall business approach Read More Targeting Precision Hyper targeting: Driving leads amongst niche audiences for Toronto Stock Exchange Read More Media Solutions That Drive Action Reaching consumers when it matters: ​Retail audio for Rust-Oleum Read More Holistic Video Planning Breaking through in the competitive DIY landscape with innovative video solutions for Rust-Oleum Read More Ready to get Involved? Learn about our services Get in touch × Close",
+              "content_length": 779,
+              "domain": "http://www.involvedmedia.ca"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 3,
+            "priority_pages_found": 1,
+            "pages_successfully_scraped": 2
+          },
+          "metadata": {
+            "total_content_length": 2437,
+            "processing_time": 3.0439326763153076,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "http://www.theog.co",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.theog.co",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:37.402276",
+              "processing_time": 2.2058942317962646,
+              "title": "Home | The One Group Agency",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "One Group Agency"
+                },
+                {
+                  "level": "h2",
+                  "text": "A Creative Collective."
+                },
+                {
+                  "level": "h3",
+                  "text": "Site Links"
+                },
+                {
+                  "level": "h2",
+                  "text": "We are"
+                },
+                {
+                  "level": "h1",
+                  "text": "One Group"
+                },
+                {
+                  "level": "h2",
+                  "text": "Where Ideas Take Shape."
+                },
+                {
+                  "level": "h2",
+                  "text": "From Visionaries to Creators."
+                },
+                {
+                  "level": "h2",
+                  "text": "01. Production"
+                },
+                {
+                  "level": "h3",
+                  "text": "IPA NominationParadox Hotels"
+                },
+                {
+                  "level": "h3",
+                  "text": "BrandLocal Tourist"
+                }
+              ],
+              "page_type": "general",
+              "content": "Home | The One Group Agency We are One Group Where Ideas Take Shape. From Visionaries to Creators. We are here to guide you toward efficient and effective marketing strategy and execution. We are a full-suite agency specializing in the strategic development and creation of engaging content. Meet the Team 01. Production Videography Photography Motion Graphic Design Animation 3D Rendering Storyboarding Concept Ideation Styling Location Scouting IPA Nomination Paradox Hotels Brand Local Tourist 02. Digital Marketing Pinterest Ads Twitter Ads LinkedIn Ads Facebook & Instagram Ads Google Ads YouTube Ads Microsoft Ads Technical & Content SEO Local SEO CRO Google Analytics Google Tag Manager Media Buying Programmatic Media Campaign Marketing Parq Vancouver Whistler Adventure Tag Whistler 03. Creative Brand & Visual Identity Development Copywriting App Design Illustration Graphic Design Print & Brand Collateral Business Stationery Brand Rework Franks Pizza & Bar Brand Rework Way Back Brew 04. Web Design & Development UI/UX Website Development Mobile & Tablet Application E-Commerce Development Web Application Development Custom Plugin Development Email Marketing Website Redesign Resurrection Gallery Digitization BC Sports Hall of Fame 05. Social Media Management Twitter Instagram Facebook Pinterest YouTube Digital Engagement Reputation Management TikTok LinkedIn Trip Advisor Influencer & Media Coordination Social Media Campaign Various Clients Work Showcase 06. Events Photography Video Trade Exhibitions Speaker Series Podcasts Private Showcases Indigenous Opportunities Forum 2024 Greater Vancouver Board of trade Building The Future Greater Vancouver Board of Trade Who We Work With We are here to guide you toward efficient and effective marketing strategy. Contact Us Get in Touch! We are here to guide you toward efficient and effective marketing strategy. \" * \" indicates required fields URL This field is for validation purposes and should be left unchanged. Full Name * Business Name Email * Phone What are you looking for help with? Request for Services General Inquiry Additional Comments",
+              "content_length": 2114,
+              "links": [
+                "http://www.theog.co/team",
+                "http://www.theog.co"
+              ],
+              "domain": "http://www.theog.co"
+            },
+            {
+              "url": "http://www.theog.co/team",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:38.652659",
+              "processing_time": 1.2463698387145996,
+              "title": "Team | The One Group Agency",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "One Group Agency"
+                },
+                {
+                  "level": "h2",
+                  "text": "A Creative Collective."
+                },
+                {
+                  "level": "h3",
+                  "text": "Site Links"
+                },
+                {
+                  "level": "h1",
+                  "text": "The OG Team"
+                },
+                {
+                  "level": "h2",
+                  "text": "From scroll-stopping content to pixel-perfect websites, OG brings the vibes across production, social, and web. We don’t just make things look good — we make them work hard."
+                },
+                {
+                  "level": "h2",
+                  "text": "MATT BORCK"
+                },
+                {
+                  "level": "h3",
+                  "text": "MATT BORCKPartner & Head, Videography"
+                },
+                {
+                  "level": "h3",
+                  "text": "MATT BORCK"
+                },
+                {
+                  "level": "h2",
+                  "text": "JAIMIE ASHWORTH"
+                },
+                {
+                  "level": "h3",
+                  "text": "JAIMIE ASHWORTHDirector, Operations"
+                }
+              ],
+              "page_type": "team",
+              "content": "Team | The One Group Agency The OG Team WE DO COOL STUFF From scroll-stopping content to pixel-perfect websites, OG brings the vibes across production, social, and web. We don’t just make things look good — we make them work hard. Meet the creative minds behind OG — the team turning bold ideas into unforgettable brand experiences. MATT BORCK Partner & Head, Videography MATT BORCK Partner & Head, Videography MATT BORCK Partner & Head, Videography What is your claim to fame? Once performed in a literal bullring in Mexico… and also sang on the French Riviera. Same guy, same guitar - very different vibes. JAIMIE ASHWORTH Director, Operations JAIMIE ASHWORTH Director, Operations JAIMIE ASHWORTH Director, Operations What is your favourite part of your job? Collaborating with a team of experts with all different specialties—there’s always something new to learn. I also really enjoy meeting with clients and turning complex ideas into clear, actionable plans. JONATHAN SPOONER Director, Content & Creative JONATHAN SPOONER Director, Content & Creative JONATHAN SPOONER Director, Content & Creative What is your claim to fame? Swam competitively for 10 years MATT BOURNE Head, Photography MATT BOURNE Head, Photography MATT BOURNE Head, Photography What is your claim to fame? I was part of the team that won an award for best live broadcast during the Stanley cup riots from CNN PAMELA CHUA Senior Manager, Content & Strategy PAMELA CHUA Senior Manager, Content & Strategy PAMELA CHUA Senior Manager, Content & Strategy What is your claim to fame? I was blonde for about 4 years! Some people don't even recognize me without the blonde hair. BERNI SAMSON PROJECT MANAGER BERNI SAMSON PROJECT MANAGER BERNI SAMSON PROJECT MANAGER What is your claim to fame? I once hit the high note in the song Hallelujah SHELBY WICK Project Manager (remove Producer) SHELBY WICK Project Manager (remove Producer) SHELBY WICK Project Manager (remove Producer) What is your favourite part of your job? Working with other creatives on shoots and bringing a vision to life! JACQUI OZGUR Manager, Operations JACQUI OZGUR Manager, Operations JACQUI OZGUR Manager, Operations What is your claim to fame? I am also a permanent makeup artist. ETHAN JOHNSON CONTENT CREATOR ETHAN JOHNSON CONTENT CREATOR ETHAN JOHNSON CONTENT CREATOR Favourite Pastime? A good drive REGAN VARNIER SOCIAL MEDIA COORDINATOR REGAN VARNIER SOCIAL MEDIA COORDINATOR REGAN VARNIER SOCIAL MEDIA COORDINATOR What is your claim to fame? I’m Italian, and my name in Italian is Regina. I also just so happened to be born on Saint Regina’s Day. KASIA LAJLO Graphic Designer KASIA LAJLO Graphic Designer KASIA LAJLO Graphic Designer What is your claim to fame? One time I created a painting using anything but a paint brush. Some of the tools included a cheese grater, skipping rope and a tennis racket. MANOJ MANATHUNGA DIGITAL ADS STRATEGIST MANOJ MANATHUNGA DIGITAL ADS STRATEGIST MANOJ MANATHUNGA DIGITAL ADS STRATEGIST Favourite Part of your Job? Trading attention. Testing ideas fast, scaling what works, and driving real ROI. JUSTIN CUNANAN Head, Design JUSTIN CUNANAN Head, Design JUSTIN CUNANAN Head, Design What is your claim to fame? Eating a full order of pasta at Anton's twice. LORI CRUMP Project Manager LORI CRUMP Project Manager LORI CRUMP Project Manager Whats your claim to fame? My husband and I lived in Bali for a few years before we had kids and I got to work as a Project Manager for the building of an Equestrian centre which has now become one of the leading horse riding centres in southeast Asia. KAREN NGUYEN SOCIAL MEDIA COORDINATOR KAREN NGUYEN SOCIAL MEDIA COORDINATOR KAREN NGUYEN SOCIAL MEDIA COORDINATOR Whats your claim to fame? According to my Lifestyle DNA test results, I metabolize caffeine pretty quickly—which means my body breaks it down and clears it out faster than average. So I’m less likely to get those jittery or anxious side effects. That probably explains why I felt totally fine after downing seven shots of espresso during my visit to the Illy Coffee headquarters in Italy. JARED HARMAN CEO & CO-FOUNDER JARED HARMAN CEO & CO-FOUNDER JARED HARMAN CEO & CO-FOUNDER What is your claim to fame? I was in the movie MVP: Most Valuable Primate Join the Team Behind the Magic We’re always looking for passionate creatives to grow with us. If you’ve got big ideas and love bringing them to life, we’d love to meet you. See Openings",
+              "content_length": 4425,
+              "domain": "http://www.theog.co"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 2,
+            "priority_pages_found": 1,
+            "pages_successfully_scraped": 2
+          },
+          "metadata": {
+            "total_content_length": 6539,
+            "processing_time": 3.4618582725524902,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "http://www.nimiopere.com",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.nimiopere.com",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:38.816237",
+              "processing_time": 3.6198556423187256,
+              "title": "nimiopere",
+              "meta_description": "nimiopere - film editorial",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Christopher ChangGraham ChisholmLeah LalichSteve Puhach\nRaj Ramnauth\nBryan Reuben\nContact"
+                }
+              ],
+              "page_type": "general",
+              "content": "nimiopere ︎ Christopher Chang Graham Chisholm Leah Lalich Steve Puhach Raj Ramnauth Bryan Reuben Contact",
+              "content_length": 105,
+              "links": [
+                "http://www.nimiopere.com/",
+                "http://www.nimiopere.com",
+                "http://www.nimiopere.com/christopher-chang",
+                "http://www.nimiopere.com/graham-chisholm",
+                "http://www.nimiopere.com/leah-lalich",
+                "http://www.nimiopere.com/steve-puhach",
+                "http://www.nimiopere.com/raj-ramnauth",
+                "http://www.nimiopere.com/bryan-reuben",
+                "http://www.nimiopere.com/contact"
+              ],
+              "warning": "Low content length: 105 chars",
+              "domain": "http://www.nimiopere.com"
+            },
+            {
+              "url": "http://www.nimiopere.com/contact",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:40.675317",
+              "processing_time": 1.8563661575317383,
+              "title": "contact — nimiopere",
+              "meta_description": "nimiopere - film editorial",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Editors"
+                },
+                {
+                  "level": "h1",
+                  "text": "Contact"
+                },
+                {
+                  "level": "h1",
+                  "text": "Editors"
+                },
+                {
+                  "level": "h1",
+                  "text": "Contact"
+                },
+                {
+                  "level": "h1",
+                  "text": "CONTACT"
+                },
+                {
+                  "level": "h3",
+                  "text": "PRODUCERS"
+                },
+                {
+                  "level": "h3",
+                  "text": "EDITORS"
+                },
+                {
+                  "level": "h3",
+                  "text": "ASSISTANT EDITORS"
+                },
+                {
+                  "level": "h3",
+                  "text": "OFFICE"
+                },
+                {
+                  "level": "h3",
+                  "text": "EXECUTIVE PRODUCERS"
+                }
+              ],
+              "page_type": "contact",
+              "content": "contact — nimiopere ︎ Editors Christopher Chang Graham Chisholm Leah Lalich Steve Puhach Raj Ramnauth Bryan Reuben Contact Editors Christopher Chang Graham Chisholm Leah Lalich Steve Puhach Raj Ramnauth Bryan Reuben Contact CONTACT PRODUCERS Julie Axell julie@nimiopere.com 416.712.0407 Partner & Executive Producer Jenna Edwards jenna@nimiopere.com 416.569.8309 Executive Producer Nicole Hann nicole@nimiopere.com Junior Producer EDITORS Christopher Chang chris@nimiopere.com @cm.chang28 Graham Chisholm graham@nimiopere.com @instagrahamchisholm Leah Lalich leah@nimiopere.com @leahlalich Steve Puhach steve@nimiopere.com @steve.puhach Raj Ramnauth raj@nimiopere.com @rajramnauth Bryan Reuben bryan @nimiopere.com @bryanreubn ASSISTANT EDITORS Bianca Bissada bianca@nimiopere.com @biancabissada Jack Considine jack@nimiopere.com @sceal_amhairc Shalini Menon shalini@nimiopere.com @shalini.menon_ Dylan Reymer dylan@nimiopere.com @dylanreymer Mariana Rossi mariana@nimiopere.com @mariana.rossi.b Lucas Wurstlin lucas@nimiopere.com @lucaswurstlin OFFICE MOCA Building 158 Sterling Rd, 7th Floor Toronto, ON M6R 2B7 Google Maps Directions EXECUTIVE PRODUCERS Julie Axell julie@nimiopere.com 416.712.0407 Partner & Executive Producer Jenna Edwards jenna@nimiopere.com 416.569.8309 Executive Producer Nicole Hann nicole@nimiopere.com Junior Producer EDITORS Christopher Chang chris@nimiopere.com @cm.chang28 Graham Chisholm graham@nimiopere.com @instagrahamchisholm Leah Lalich leah@nimiopere.com @leahlalich Steve Puhach steve@nimiopere.com @steve.puhach Raj Ramnauth raj@nimiopere.com @rajramnauth Bryan Reuben bryan @nimiopere.com @bryanreubn ASSISTANT EDITORS Bianca Bissada bianca@nimiopere.com @biancabissada Jack Considine jack@nimiopere.com @sceal_amhairc Shalini Menon shalini@nimiopere.com @shalini.menon_ Dylan Reymer dylan@nimiopere.com @dylanreymer Mariana Rossi mariana@nimiopere.com @mariana.rossi.b Lucas Wurstlin lucas@nimiopere.com @lucaswurstlin OFFICE MOCA Building 158 Sterling Rd, 7th Floor Toronto, ON M6R 2B7 Google Maps Directions",
+              "content_length": 2052,
+              "domain": "http://www.nimiopere.com"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 9,
+            "priority_pages_found": 1,
+            "pages_successfully_scraped": 2
+          },
+          "metadata": {
+            "total_content_length": 2157,
+            "processing_time": 5.485487699508667,
+            "scraping_method": "HTTP"
+          }
+        }
+      ]
+    },
+    "page_prioritization": {
+      "total_pages_analyzed": 10,
+      "successful_analyses": 9,
+      "failed_analyses": 0,
+      "success_rate": 100.0,
+      "high_value_pages_found": 3,
+      "total_ai_cost_usd": 0.0030603375,
+      "avg_cost_per_page": 0.0003400375,
+      "processing_time": 61.911052227020264,
+      "pages_per_minute": 9.691322928899243,
+      "results": [
+        {
+          "page_data": {
+            "url": "http://www.workparty.ca",
+            "title": "Work Party – An independent design and media group",
+            "content_length": 1231,
+            "domain": "www.workparty.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 8,
+              "reasoning": "The page provides basic team information and a description of services, which can be useful for outreach. However, it lacks detailed achievements or specific case studies that would elevate its value."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "The team includes experienced professionals like Christie Coughlan, Managing Director, which could be a point of connection for outreach.",
+                "The company emphasizes a playful approach to work, which could resonate with potential clients looking for a creative partner."
+              ],
+              "conversation_starters": [
+                "The company has a long-standing relationship with one of Western Canada’s biggest brands, indicating credibility and experience.",
+                "Their focus on creative brand strategy and media planning suggests they value innovative approaches, which could be a talking point."
+              ],
+              "key_people": [
+                "Christie Coughlan - Managing Director - Key leader with potential insights into company strategy.",
+                "Roshni Parmar - Sr. Manager, Projects & Ops - Could provide operational insights."
+              ],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "growing",
+                "unique_positioning": "They combine creativity with a playful work culture, aiming to make branding enjoyable."
+              }
+            },
+            "outreach_summary": "When reaching out to Work Party, highlight their creative approach and the experience of their leadership team. Mentioning their long-standing relationship with major brands could also establish credibility and relevance in your outreach."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:46:51.395792",
+            "api_processing_time": 9.905766725540161,
+            "cost_estimate_usd": 0.00041024999999999997,
+            "model_used": "gpt-4o-mini"
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.bigfishcreative.ca",
+            "title": "Vancouver Digital Marketing Agency | Big Fish Creative",
+            "content_length": 4121,
+            "domain": "www.bigfishcreative.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 8,
+              "reasoning": "The page provides a detailed overview of services offered by the agency, showcasing their unique positioning in digital marketing. However, it lacks specific client success stories, leadership information, or recent achievements that would elevate it to high value."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "The agency specializes in transforming brands and offers a complete solution that articulates brand narratives, which can be referenced in outreach.",
+                "They have over 10 years of experience in Search Engine Optimization, indicating a strong expertise that could be highlighted in conversations."
+              ],
+              "conversation_starters": [
+                "The agency emphasizes building lasting partnerships with clients, which could lead to discussions about collaboration.",
+                "Their focus on creativity and strategy in event design could be a point of interest for potential clients looking for innovative marketing solutions."
+              ],
+              "key_people": [],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "established",
+                "unique_positioning": "They bridge the gap between businesses and their audience through precision-targeted digital advertising solutions."
+              }
+            },
+            "outreach_summary": "When reaching out to Big Fish Creative, emphasize their expertise in transforming brands and their long-standing experience in SEO. Highlight potential collaboration opportunities that align with their focus on building lasting partnerships and innovative marketing strategies."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:46:58.208122",
+            "api_processing_time": 6.812330722808838,
+            "cost_estimate_usd": 0.000514425,
+            "model_used": "gpt-4o-mini"
+          }
+        },
+        {
+          "page_data": {
+            "url": "https://www.altitudestrategies.ca",
+            "title": "Altitude Stratégies | Agence de marketing web créative à Vaudreuil-Dorion",
+            "content_length": 10015,
+            "domain": "www.altitudestrategies.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "HIGH",
+              "score": 8,
+              "confidence": 8,
+              "reasoning": "Batch analysis result"
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Comprehensive overview of services offered",
+                "Strong emphasis on client success stories",
+                "Active presence on multiple social media platforms"
+              ],
+              "conversation_starters": [],
+              "key_people": [],
+              "company_insights": {}
+            },
+            "outreach_summary": "Initiate contact by highlighting shared interests in innovative marketing solutions and propose a discussion on potential collaboration opportunities, leveraging their success stories as a conversation starter."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:09.129509",
+            "cost_estimate_usd": 0.00022261875,
+            "model_used": "gpt-4o-mini",
+            "batch_analysis": true
+          }
+        },
+        {
+          "page_data": {
+            "url": "https://www.altitudestrategies.ca/solutions/",
+            "title": "Solutions d'affaires adaptées à votre réalité | Altitude Stratégies",
+            "content_length": 2888,
+            "domain": "www.altitudestrategies.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "HIGH",
+              "score": 9,
+              "confidence": 8,
+              "reasoning": "Batch analysis result"
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Detailed breakdown of tailored business solutions",
+                "Focus on specific marketing strategies and their effectiveness",
+                "Highlighting case studies and results that demonstrate their expertise"
+              ],
+              "conversation_starters": [],
+              "key_people": [],
+              "company_insights": {}
+            },
+            "outreach_summary": "Initiate contact by highlighting shared interests in innovative marketing solutions and propose a discussion on potential collaboration opportunities, leveraging their success stories as a conversation starter."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:09.129509",
+            "cost_estimate_usd": 0.00022261875,
+            "model_used": "gpt-4o-mini",
+            "batch_analysis": true
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.involvedmedia.ca/case-studies/",
+            "title": "Case Studies | Involved Media",
+            "content_length": 779,
+            "domain": "www.involvedmedia.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 7,
+              "reasoning": "The page contains case studies that highlight specific client results and media solutions, which can be useful for outreach personalization. However, it lacks detailed metrics or specific achievements that would elevate it to high value."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Case studies showcasing media solutions for Rust-Oleum, indicating expertise in the DIY sector.",
+                "Insights on hyper-targeting strategies used for the Toronto Stock Exchange, which could appeal to financial services."
+              ],
+              "conversation_starters": [
+                "The agency's approach to leveraging client sales data to optimize media budgets.",
+                "Innovative video solutions developed for competitive markets, showcasing creativity and adaptability."
+              ],
+              "key_people": [],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "growing",
+                "unique_positioning": "An egoless agency focused on high-impact media solutions."
+              }
+            },
+            "outreach_summary": "Outreach efforts could focus on Involved Media's innovative media solutions and their expertise in hyper-targeting niche audiences. Highlighting their case studies, particularly with well-known brands like Rust-Oleum, could create a compelling narrative for engagement."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:14.082946",
+            "api_processing_time": 4.953437328338623,
+            "cost_estimate_usd": 0.0003492,
+            "model_used": "gpt-4o-mini"
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.involvedmedia.ca",
+            "title": "Involved Media | Where service you can trust meets high impact clout.",
+            "content_length": 1658,
+            "domain": "www.involvedmedia.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 7,
+              "reasoning": "The page provides insights into the services offered by Involved Media and mentions case studies, which can be useful for outreach. However, it lacks detailed information about leadership, specific achievements, or awards that would elevate its value."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Case studies highlight targeted media solutions for clients like Rust-Oleum and the Toronto Stock Exchange, showcasing their expertise in driving leads and innovative video solutions.",
+                "The agency emphasizes a client-focused approach, which can be leveraged to discuss how their services align with potential clients' needs."
+              ],
+              "conversation_starters": [
+                "The agency's claim of being an 'egoless agency' suggests a collaborative culture that could resonate with potential partners.",
+                "Their global support network and media capabilities indicate a broad reach, which could be a point of interest for companies looking to expand their media presence."
+              ],
+              "key_people": [],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "growing",
+                "unique_positioning": "Focus on client trust and high-impact media strategies, with a diverse range of media capabilities."
+              }
+            },
+            "outreach_summary": "Involved Media presents a strong case for collaboration through their client-centric approach and proven media strategies. Highlighting their successful case studies and unique positioning can create a compelling outreach narrative that resonates with potential clients."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:27.111477",
+            "api_processing_time": 12.51586127281189,
+            "cost_estimate_usd": 0.000424275,
+            "model_used": "gpt-4o-mini"
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.theog.co/team",
+            "title": "Team | The One Group Agency",
+            "content_length": 4425,
+            "domain": "www.theog.co"
+          },
+          "analysis": {
+            "classification": {
+              "category": "HIGH",
+              "score": 9,
+              "confidence": 8,
+              "reasoning": "Batch analysis result"
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "The agency offers a wide range of services including digital marketing, creative branding, and web design.",
+                "They have notable clients and projects, indicating a strong portfolio.",
+                "The homepage emphasizes their strategic approach, which could be a key talking point for outreach."
+              ],
+              "conversation_starters": [],
+              "key_people": [],
+              "company_insights": {}
+            },
+            "outreach_summary": "Reach out to key team members via LinkedIn or email, highlighting specific services that align with their current projects and expressing interest in potential collaborations."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:36.184056",
+            "cost_estimate_usd": 0.00024974999999999997,
+            "model_used": "gpt-4o-mini",
+            "batch_analysis": true
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.theog.co",
+            "title": "Home | The One Group Agency",
+            "content_length": 2114,
+            "domain": "www.theog.co"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM",
+              "score": 7,
+              "confidence": 8,
+              "reasoning": "Batch analysis result"
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "The team consists of diverse professionals with unique backgrounds, which can be leveraged for personalized outreach.",
+                "Key team members have notable achievements that can serve as conversation starters.",
+                "The emphasis on collaboration and creativity suggests they value innovative partnerships."
+              ],
+              "conversation_starters": [],
+              "key_people": [],
+              "company_insights": {}
+            },
+            "outreach_summary": "Reach out to key team members via LinkedIn or email, highlighting specific services that align with their current projects and expressing interest in potential collaborations."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:36.184056",
+            "cost_estimate_usd": 0.00024974999999999997,
+            "model_used": "gpt-4o-mini",
+            "batch_analysis": true
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.nimiopere.com/contact",
+            "title": "contact — nimiopere",
+            "content_length": 2052,
+            "domain": "www.nimiopere.com"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 8,
+              "reasoning": "The page provides contact information for key personnel, which can be useful for outreach. However, it lacks detailed insights into company achievements, culture, or unique positioning."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Contact details for multiple editors and producers, allowing for targeted outreach based on specific roles.",
+                "Presence of executive producers indicates potential for collaboration on projects."
+              ],
+              "conversation_starters": [
+                "The company has a diverse team of editors and producers, which could lead to interesting discussions about their projects.",
+                "The office location in Toronto may provide insights into regional market trends."
+              ],
+              "key_people": [
+                "Julie Axell - Partner & Executive Producer - Contact for high-level project discussions.",
+                "Jenna Edwards - Executive Producer - Potential for collaboration on production-related inquiries."
+              ],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "growing",
+                "unique_positioning": "Focus on editorial and production services, indicating a creative and collaborative approach."
+              }
+            },
+            "outreach_summary": "Target outreach to specific editors and producers based on their roles to discuss potential collaborations. Highlight the company's creative focus and regional presence in Toronto to establish relevance in conversations."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:42.600572",
+            "api_processing_time": 6.416516065597534,
+            "cost_estimate_usd": 0.00041745,
+            "model_used": "gpt-4o-mini"
+          }
+        }
+      ]
+    },
+    "apify_scraping": {
+      "error": "'charmap' codec can't encode character '\\u2713' in position 17: character maps to <undefined>",
+      "results": []
+    }
+  },
+  "performance_summary": {
+    "site_analysis": {
+      "total_domains": 7,
+      "successful_analyses": 7,
+      "failed_analyses": 0,
+      "success_rate": 100.0,
+      "processing_time": 4.21206259727478,
+      "domains_per_minute": 99.71361780609374,
+      "results": [
+        {
+          "url": "https://www.stryvemarketing.com",
+          "analyzed_at": "2025-09-25T00:46:30.980355",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "HTTP accessibility failed: None"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": false,
+            "status_code": 403,
+            "error": null
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 0.2624781131744385
+        },
+        {
+          "url": "http://www.workparty.ca",
+          "analyzed_at": "2025-09-25T00:46:30.986424",
+          "recommendation": {
+            "method": "HYBRID_APPROACH",
+            "confidence": 0.5499999999999999,
+            "reasoning": [
+              "High quality HTTP content (score: 65)",
+              "Moderate JavaScript usage (risk: 30)",
+              "Try HTTP first, fallback to Apify if needed (confidence: 0.55)"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 75827,
+            "response_time": 0.6502037048339844,
+            "content_quality": {
+              "quality": "medium",
+              "score": 65,
+              "indicators": [
+                "Good text content (2000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (17 links)",
+                "Has page title"
+              ],
+              "text_length": 2112,
+              "business_relevance": "medium",
+              "keyword_matches": 2
+            },
+            "javascript_analysis": {
+              "dependency_level": "moderate",
+              "spa_frameworks": [],
+              "dynamic_loading_patterns": [
+                "ajax",
+                "async",
+                "defer"
+              ],
+              "protection_detected": false,
+              "risk_score": 30,
+              "risk_factors": [
+                "Dynamic loading: 3 patterns",
+                "Heavy JS usage: 25 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.001
+          },
+          "confidence_factors": [],
+          "processing_time": 0.7911159992218018
+        },
+        {
+          "url": "http://www.involvedmedia.ca",
+          "analyzed_at": "2025-09-25T00:46:30.986424",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "High quality HTTP content (score: 80)",
+              "Heavy JavaScript dependency (risk: 70)",
+              "Bot protection detected"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 56676,
+            "response_time": 1.5292332172393799,
+            "content_quality": {
+              "quality": "high",
+              "score": 80,
+              "indicators": [
+                "Good text content (2000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (53 links)",
+                "High business relevance (7 keywords)",
+                "Has page title"
+              ],
+              "text_length": 3081,
+              "business_relevance": "high",
+              "keyword_matches": 7
+            },
+            "javascript_analysis": {
+              "dependency_level": "heavy",
+              "spa_frameworks": [],
+              "dynamic_loading_patterns": [
+                "ajax",
+                "async",
+                "defer"
+              ],
+              "protection_detected": true,
+              "risk_score": 70,
+              "risk_factors": [
+                "Dynamic loading: 3 patterns",
+                "Protection: cloudflare, captcha",
+                "Heavy JS usage: 23 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 1.8119096755981445
+        },
+        {
+          "url": "https://www.altitudestrategies.ca",
+          "analyzed_at": "2025-09-25T00:46:30.984321",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "High quality HTTP content (score: 93)",
+              "Heavy JavaScript dependency (risk: 75)",
+              "Bot protection detected"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 367098,
+            "response_time": 1.8921782970428467,
+            "content_quality": {
+              "quality": "high",
+              "score": 93,
+              "indicators": [
+                "Rich text content (5000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (275 links)",
+                "Medium business relevance (5 keywords)",
+                "Has meta description",
+                "Has page title"
+              ],
+              "text_length": 19463,
+              "business_relevance": "high",
+              "keyword_matches": 5
+            },
+            "javascript_analysis": {
+              "dependency_level": "heavy",
+              "spa_frameworks": [],
+              "dynamic_loading_patterns": [
+                "spinner",
+                "ajax",
+                "async",
+                "defer",
+                "lazy-load",
+                "loadmore"
+              ],
+              "protection_detected": true,
+              "risk_score": 75,
+              "risk_factors": [
+                "Dynamic loading: 6 patterns",
+                "Protection: captcha",
+                "Heavy JS usage: 71 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 2.1723012924194336
+        },
+        {
+          "url": "http://www.theog.co",
+          "analyzed_at": "2025-09-25T00:46:30.980355",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "High quality HTTP content (score: 85)",
+              "Heavy JavaScript dependency (risk: 100)",
+              "SPA frameworks detected: ember",
+              "Bot protection detected"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 90404,
+            "response_time": 2.2618167400360107,
+            "content_quality": {
+              "quality": "high",
+              "score": 85,
+              "indicators": [
+                "Good text content (2000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (35 links)",
+                "High business relevance (6 keywords)",
+                "Has meta description",
+                "Has page title"
+              ],
+              "text_length": 3614,
+              "business_relevance": "high",
+              "keyword_matches": 6
+            },
+            "javascript_analysis": {
+              "dependency_level": "heavy",
+              "spa_frameworks": [
+                "ember"
+              ],
+              "dynamic_loading_patterns": [
+                "please wait",
+                "spinner",
+                "ajax",
+                "async",
+                "defer"
+              ],
+              "protection_detected": true,
+              "risk_score": 100,
+              "risk_factors": [
+                "SPA framework: ember",
+                "Dynamic loading: 5 patterns",
+                "Protection: cloudflare, captcha, please wait",
+                "Heavy JS usage: 38 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 2.5345349311828613
+        },
+        {
+          "url": "http://www.bigfishcreative.ca",
+          "analyzed_at": "2025-09-25T00:46:30.980355",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.95,
+            "reasoning": [
+              "High quality HTTP content (score: 100)",
+              "Heavy JavaScript dependency (risk: 70)",
+              "Bot protection detected"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 193188,
+            "response_time": 3.3552682399749756,
+            "content_quality": {
+              "quality": "high",
+              "score": 100,
+              "indicators": [
+                "Rich text content (5000+ chars)",
+                "Has structured headings",
+                "Has paragraph content",
+                "Good navigation (115 links)",
+                "High business relevance (7 keywords)",
+                "Has meta description",
+                "Has page title"
+              ],
+              "text_length": 6574,
+              "business_relevance": "high",
+              "keyword_matches": 7
+            },
+            "javascript_analysis": {
+              "dependency_level": "heavy",
+              "spa_frameworks": [],
+              "dynamic_loading_patterns": [
+                "ajax",
+                "async",
+                "defer"
+              ],
+              "protection_detected": true,
+              "risk_score": 70,
+              "risk_factors": [
+                "Dynamic loading: 3 patterns",
+                "Protection: cloudflare",
+                "Heavy JS usage: 71 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 3.7487642765045166
+        },
+        {
+          "url": "http://www.nimiopere.com",
+          "analyzed_at": "2025-09-25T00:46:30.980355",
+          "recommendation": {
+            "method": "APIFY_REQUIRED",
+            "confidence": 0.19999999999999996,
+            "reasoning": [
+              "Moderate HTTP content quality (score: 25)",
+              "Moderate JavaScript usage (risk: 40)",
+              "SPA frameworks detected: ember",
+              "Apify recommended - better reliability expected (confidence: 0.20)"
+            ]
+          },
+          "technical_analysis": {
+            "http_accessible": true,
+            "status_code": 200,
+            "content_length": 618460,
+            "response_time": 3.8721468448638916,
+            "content_quality": {
+              "quality": "low",
+              "score": 25,
+              "indicators": [
+                "Has structured headings",
+                "Has meta description",
+                "Has page title"
+              ],
+              "text_length": 214,
+              "business_relevance": "low",
+              "keyword_matches": 1
+            },
+            "javascript_analysis": {
+              "dependency_level": "moderate",
+              "spa_frameworks": [
+                "ember"
+              ],
+              "dynamic_loading_patterns": [],
+              "protection_detected": false,
+              "risk_score": 40,
+              "risk_factors": [
+                "SPA framework: ember",
+                "Heavy JS usage: 26 script tags"
+              ]
+            }
+          },
+          "cost_estimate": {
+            "http_cost": 0.0,
+            "apify_cost_usd": 0.002,
+            "recommended_cost": 0.002
+          },
+          "confidence_factors": [],
+          "processing_time": 4.204497575759888
+        }
+      ]
+    },
+    "website_scraping": {
+      "total_domains": 7,
+      "successful_scrapes": 6,
+      "failed_scrapes": 1,
+      "success_rate": 85.71428571428571,
+      "total_pages_scraped": 10,
+      "total_content_extracted": 35675,
+      "avg_pages_per_domain": 1.6666666666666667,
+      "processing_time": 5.50165867805481,
+      "pages_per_minute": 109.05801961021301,
+      "results": [
+        {
+          "domain": "https://www.stryvemarketing.com",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [],
+          "discovery": {
+            "total_links_found": 0,
+            "priority_pages_found": 0,
+            "pages_successfully_scraped": 0
+          },
+          "metadata": {
+            "total_content_length": 0,
+            "processing_time": 0,
+            "scraping_method": "HTTP"
+          },
+          "error": "Failed to scrape main page"
+        },
+        {
+          "domain": "http://www.workparty.ca",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.workparty.ca",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:35.696491",
+              "processing_time": 0.5001091957092285,
+              "title": "Work Party – An independent design and media group",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "our\nServices."
+                },
+                {
+                  "level": "h1",
+                  "text": "fancy\t\t\t\n\n\t\t\t\ttitles?"
+                },
+                {
+                  "level": "h2",
+                  "text": "THAT'S\nWHO\nWE ARE"
+                }
+              ],
+              "page_type": "case_studies",
+              "content": "Work Party – An independent design and media group We craft brands. And we bring them to life. Born from a 30-year relationship with one of Western Canada’s biggest brands, Work Party is here to make sure every touchpoint gets the care it deserves — and we have a pretty good time doing it. our Ser vices. Creative Brand Strategy Design Advertising Social Strategy Management Content Media Media Planning Media Buying Data Tracking Analytics fancy titles? Yeah, we’ve got those. But our biggest successes come from the belief that the best work should feel like play. So we surround ourselves with great people, roll up our sleeves, and get to it. . Christie Coughlan Managing Director . Roshni Parmar Sr. Manager, Projects & Ops. . Esteban Mugica Creative Director, Design . Brian Quittenton Creative Director, Copywriter . Dan Bache Creative Director . Maria Folino Account Manager . Chloe Jeanpierre Media Director . Cierra Buck Sr. Manager, Digital Strategy . Annie Lin Director of Analytics . Sydney Bezenar Social Media Coordinator . Johannes Froysaa Director of Production . Steven Fisher Production Artist . Natalie Schirr-Chan Director of Finance . Kathryn Hudson Controller THAT'S WHO WE ARE Want to work with us? Connect",
+              "content_length": 1231,
+              "links": [
+                "http://www.workparty.ca"
+              ],
+              "domain": "http://www.workparty.ca"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 1,
+            "priority_pages_found": 0,
+            "pages_successfully_scraped": 1
+          },
+          "metadata": {
+            "total_content_length": 1231,
+            "processing_time": 0.5139691829681396,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "http://www.bigfishcreative.ca",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.bigfishcreative.ca",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:36.567456",
+              "processing_time": 1.3710744380950928,
+              "title": "Vancouver Digital Marketing Agency | Big Fish Creative",
+              "meta_description": "With nearly 10+ years of experience, we've helped brands worldwide in elevating their website design, SEO, branding and more.",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Welcome to BFC.  we’re glad you’re here."
+                },
+                {
+                  "level": "h2",
+                  "text": "A few things \nwe’re great at"
+                },
+                {
+                  "level": "h2",
+                  "text": "We Build Digital Solutions \nFor Brands & Businesses Worldwide"
+                },
+                {
+                  "level": "h3",
+                  "text": "Crunch Fitness"
+                },
+                {
+                  "level": "h3",
+                  "text": "The Gas Guys Outdoor Designs"
+                },
+                {
+                  "level": "h3",
+                  "text": "Custom Fundraising Solutions"
+                },
+                {
+                  "level": "h3",
+                  "text": "Orca West Developments"
+                },
+                {
+                  "level": "h3",
+                  "text": "Strong Spas"
+                },
+                {
+                  "level": "h3",
+                  "text": "Cadieux Glow"
+                },
+                {
+                  "level": "h2",
+                  "text": "How We Do What We Do"
+                }
+              ],
+              "page_type": "general",
+              "content": "Vancouver Digital Marketing Agency | Big Fish Creative Skip to the content We specialize in transforming brands, offering a complete solution that not only articulates your brand’s narrative, but also captivates and engages your target audience online. We bridge the gap between businesses and their audience through precision-targeted digital advertising solutions, across a multitude of platforms. We specialize in elevating brands in competitive markets where we provide comprehensive solutions that not only tell your story, but build rapport with your audience. We specialize in transforming brands, offering a complete solution that not only articulates your brand’s narrative, but also captivates and engages your target audience online. We bridge the gap between businesses and their audience through precision-targeted digital advertising solutions, across a multitude of platforms. We specialize in elevating brands in competitive markets where we provide comprehensive solutions that not only tell your story, but build rapport with your audience. Welcome to BFC . we’re glad you’re here. We create digital experiences and solutions based on great design and measurable insights. From concept to creation, we work closely with brands and businesses to help them understand their audiences and purposefully navigate their digital journeys. We’re dedicated to building lasting partnerships with our clients that are designed around authentic, people-focused connections. A few things we’re great at Web Design & Development Whether your goal is to have a site refresh or build a new digital identity from the ground up, our team of skilled web designers and developers is committed to turning your vision into reality. Learn More Search Engine Optimization We have been working alongside our clients for 10+ years in getting their websites to the top spot for specific keywords, no matter the difficulty. Learn More Search Engine Marketing We bridge the gap between businesses and their audience through precision-targeted digital advertising, across a multitude of platforms. Learn More Branding & Rebranding We specialize in elevating brands in competitive markets where we provide comprehensive design solutions that not only tells your story, but captivates and engages your target audience. Learn More Email Marketing Our email strategy fully revolves around your business and your goals, and we strive to put you in the best position possible to convert. Learn More Event Design We seamlessly integrate creativity with strategy to provide our clients with standout billboards, trade show displays, exhibit backdrops, and signage. Learn More We Build Digital Solutions For Brands & Businesses Worldwide Crunch Fitness Branding Creative Design Event Design Search Engine Marketing (SEM) The Gas Guys Outdoor Designs Search Engine Marketing (SEM) Website Design & Development Custom Fundraising Solutions Email Marketing Website Design & Development Orca West Developments Branding Website Design & Development Strong Spas Website Design & Development Cadieux Glow Search Engine Marketing (SEM) Website Design & Development How We Do What We Do Remarkable Creative In today’s visual world, you have only a few seconds to capture your audience. We believe that good design is paramount, and because of this, our creative captures the feel of your brand. Get Started Today Strategic Digital Marketing The best digital marketing campaigns require platform-specific expertise, and we reach your intended audience through every available digital touchpoint. Get Started Today Fearless Problem Solving We bring the best of strategy, design, and user experience together. We specialize in both creative and digital, whereby we plan, test, and build customized solutions that deliver results. Get Started Today The Latest From The BFC Blog Marketing bfcweb The Future of AI in Digital Marketing: What’s Next? Read More Marketing bfcweb When Should Your Company Consider a Rebrand? A Guide to Making the Right Move Read More Marketing bfcweb Navigating the Customer Journey: From Awareness to Conversion Read More Play",
+              "content_length": 4121,
+              "links": [
+                "http://www.bigfishcreative.ca"
+              ],
+              "domain": "http://www.bigfishcreative.ca"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 1,
+            "priority_pages_found": 0,
+            "pages_successfully_scraped": 1
+          },
+          "metadata": {
+            "total_content_length": 4121,
+            "processing_time": 1.3806343078613281,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "https://www.altitudestrategies.ca",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "https://www.altitudestrategies.ca",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:36.750018",
+              "processing_time": 1.553636074066162,
+              "title": "Altitude Stratégies | Agence de marketing web créative à Vaudreuil-Dorion",
+              "meta_description": "Découvrez l’agence de marketing web unissant passion, rigueur et créativité pour propulser votre entreprise. Faites confiance à Altitude Stratégies pour obtenir des solutions numériques aux résultats remarquables : (450) 279-0187.",
+              "headings": [
+                {
+                  "level": "h3",
+                  "text": "stratégie marketing"
+                },
+                {
+                  "level": "h3",
+                  "text": "stratégie web"
+                },
+                {
+                  "level": "h3",
+                  "text": "stratégie vidéo"
+                },
+                {
+                  "level": "h3",
+                  "text": "stratégie affichage"
+                },
+                {
+                  "level": "h1",
+                  "text": "Altitude Stratégies"
+                },
+                {
+                  "level": "h2",
+                  "text": "Vous êtes ?"
+                },
+                {
+                  "level": "h3",
+                  "text": "Entreprise"
+                },
+                {
+                  "level": "h3",
+                  "text": "Directeur(trice) marketing"
+                },
+                {
+                  "level": "h3",
+                  "text": "Directeur(trice) R.H."
+                },
+                {
+                  "level": "h3",
+                  "text": "Institution publique ou municipale"
+                }
+              ],
+              "page_type": "general",
+              "content": "Altitude Stratégies | Agence de marketing web créative à Vaudreuil-Dorion Contenu en pleine largeur Nos solutions Faites carrière à l’agence | English Español Top menu Facebook page opens in new window Instagram page opens in new window LinkedIn page opens in new window X page opens in new window VK page opens in new window Pinterest page opens in new window YouTube page opens in new window Accueil Marketing Marketing des médias sociaux (SMMA) Marketing de contenu Marketing par courriel Marketing d’influence Marketing automatisé Marketing de recrutement – Marque Employeur Marketing immobilier Service de communications et de relations publiques Placement média et publicité Image de marque Web Conception de sites web Commerce électronique Référencement naturel (SEO) Référencement payant Référencement local Référencement vocal Hébergement web canadien Messageries professionnelles Web analytics Subventions, contributions et aide financière pour entreprise Vidéo Vidéo corporative Vidéo promotionnelle Vidéo événementielle Captation vidéo avec drone Motion Design Service de photographie Affichage Lettrage Impression Affichage promotionnel Articles promotionnels Produits d’affichage Résultats Études de cas Modèle de croissance et d’engagement sur les médias sociaux Réussite et croissance dans un marché compétitif Résultats impressionnants en SEO Équipe #1 de Vaudreuil-Soulanges chez Sutton pour une 6e année consécutive De l’héritage à l’innovation : une transition réussie Nouveau réseau de concessionnaires et croissance exponentielle Portfolio Témoignages L’agence À propos Le #DreamTeam Pourquoi choisir notre agence Carrières Nous joindre Nouvelles Blogue Actualités Marketing, Communication et Numérique S’abonner à l’infolettre Centre d’aide Portail Client Centre d’aide (Base de connaissance) Foire aux questions Foire aux questions (Google Ads) Glossaire marketing Glossaire Web Glossaire SEO Glossaire vidéo affichage choisissez la bonne stratégie choisissez la bonne stratégie marketing stratégie choisissez la bonne stratégie web vidéo choisissez la bonne stratégie stratégie marketing Combinez outils analytiques précis et connaissances approfondies des tendances web, vous obtiendrez une stratégie complète, réfléchie et efficace ! VOIR NOS SERVICES stratégie web C’est en étroite collaboration avec vous que notre équipe d’experts dévoués concevra un site web à votre image, respectant votre vision d’entreprise. VOIR NOS SERVICES stratégie vidéo Avec la création de vidéos corporatives, de visites virtuelles et de publicités animées, nous ferons en sorte que votre entreprise se démarque. VOIR NOS SERVICES stratégie affichage Service d’impression de tout genre : cartes d’affaires, bannières rétractables, affiches, lettrage de véhicules et de vitrine et encore plus. VOIR NOS SERVICES Agence créative marketing web et vidéo Altitude Stratégies Altitude conçoit des stratégies multiplateformes pour amener votre entreprise toujours plus haut. Notre objectif : vous faire atteindre les vôtres au moyen de nos solutions numériques diverses et adaptées. Les membres de notre équipe du tonnerre unissent leurs talents multiples et redoublent de créativité pour vous aider à atteindre vos buts. Experts en conception de sites web, en rédaction SEO, en production et montage vidéo, en création de contenu, en design graphique et en marketing, nous avons la solution qui vous convient. Visez le ciel et élevez-vous au sommet grâce à nos stratégies réfléchies et parfaitement coordonnées. Altitude, choisissez la bonne stratégie, nous nous chargeons du reste. POURQUOI CHOISIR NOTRE AGENCE Vous êtes ? Choisissez votre profil et découvrez comment notre expertise peut vous accompagner dans vos défis quotidiens et vos projets stratégiques. Entreprise Propulsez votre croissance avec des solutions stratégiques en marketing et développement web. VOIR NOS SOLUTIONS Directeur(trice) marketing Boostez vos campagnes marketing avec des outils performants et des résultats mesurables. VOIR NOS SOLUTIONS Directeur(trice) R.H. Améliorez votre marque employeur et facilitez vos processus de recrutement. VOIR NOS SOLUTIONS Institution publique ou municipale Dynamisez vos communications et engagez votre communauté efficacement. VOIR NOS SOLUTIONS Organisme Maximisez votre impact avec des outils et stratégies adaptés à vos valeurs. VOIR NOS SOLUTIONS Agence marketing Collaborez avec nous pour élargir vos offres et accomplir des projets ambitieux. VOIR NOS SOLUTIONS Ils nous font confiance Comptoir St-Denis www.comptoirst-denis.com ContrebasseClassique.com www.contrebasseclassique.com Accès Croisières et Voyages www.accescroisieres.com Excavation Rolland Chevrier et Fils www.rchevrieretfils.com Odontys www.odontys.ca Auvents Valleyfield www.auventsvalleyfield.com Clinique NeuroLab www.cliniqueneurolab.com Regroupement TDL Québec www.regroupementtdl.ca Clinique Unicité www.cliniqueunicite.ca Groupe FAA Construction Habitation Cousineau www.habitationcousineau.com Hangcha Forklift Canada VOIR LE SITE Sanivac VOIR LE SITE Ordi-Cam www.ordi-cam.ca EDP Drilling www.edpdrilling.com Affichage publicitaire sur abribus www.sandraleemarquis.com Net-O-Pression www.net-o-pression.ca Synapse Location RIVE-SUD GMF Contrecœur www.gmfcontrecoeur.com Ordi-Cam 2000 www.facebook.com Dynamat inc. www.facebook.com Construction SYME Prestige www.facebook.com Boulangerie St-Méthode www.facebook.com Ce que nos clients en pensent Sylvie Gérin-Lajoie, Fondation en coeur La firme Altitude Stratégies joue un rôle clé dans la gestion de notre site web depuis bientôt un an, assurant une performance remarquable et une navigation fluide. Leur expertise technique et leur engagement constant reflètent un partenariat solide et efficace. Rémi L’Écuyer, Boulangerie St-Méthode Altitude offre un service très professionnel et répond très bien aux exigences. L’équipe dynamique assure de bons suivis et offre des services dignes d’une grande agence. Annie Payant, RE/MAX du Cartier J’ai le plaisir de collaborer sur plusieurs projets avec l’équipe de Altitude Stratégies et je suis vraiment satisfaite! Des gens passionnés, organisés et surtout hyper créatifs font de cette entreprise un élément important pour les courtiers de mon agence. Merci d’être un partenaire précieux pour RE/MAX du Cartier. Mélanie Simard, CIUSSS de la Capitale-Nationale Une agence compétente et rigoureuse. Nous n’avons pas été déçu par la stratégie de placement média qu’ils ont produite. Gary Whittaker, John Abbott College Un service de qualité supérieure et rapide, créatif et parfaitement au fait des médias numériques et de leurs utilisations. Excellent contact direct avec les propriétaires qui sont exceptionnellement bilingues et capables de développer des campagnes et du matériel dans les deux langues. Comprendre la nécessité de mesurer les résultats et disposer des outils pour le faire. Jose Tremblay, Plancher JT Excellent service ! Nos délais ont été respectés. Très présent pour notre dossier. On se sent très bien accompagné et tout est dit clairement de façon à ce qu’on puisse comprendre. Merci Mathieu ! Karine, Centre Evexia Toute l’équipe du centre Evexia sommes très satisfaites du service personnalisé et professionnel de l’équipe d’Altitude Stratégies. Ils sont à l’écoute de nos besoins, on se s’en tout de suite à l’aise . Merci à l’équipe de faire grandir notre entreprise. Mathieu Gaudreau, Entreprise MG Un ami m’a référé Altitude stratégie afin d’apporter un nouvel air à mon site web ! J’ai été impressionné par leur service professionnel, leur courtoisie et leur accessibilité. Véronique Bujold, Courtier immobilier RE/MAX Professionnel, à l’écoute, créatif ! Merci Altitude stratégies ! Mes publications sont super !! Julie-Anne Drolet, JAD Immigration au Canada J’offre des services juridiques en droit de l’immigration et cette équipe a vraiment tout mis en œuvre pour répondre à mes besoins et créer un site web de qualité et professionnel. Ils ont toujours été disponibles pour répondre à mes questions avant, pendant et après le mandat de conception. Vraiment une équipe extraordinaire et digne de confiance ! Jasmine Goupil, Courtier immobilier RE/MAX J’ai collaboré avec l’équipe d’Altitude Stratégies et j’ai beaucoup aimé leur approche, le service offert et ils ont une grande expertise au niveau des médias numériques. Les membres de l’équipes sont très proactifs, près de leurs clients et disponibles à tout moment pour répondre aux questions et pour établir une stratégie selon vos besoins. Je vous recommande fortement si vous recherchez une agence compétente et réactive ! Lyne Pelchat, Regroupement TDL Québec En tant qu’organisme à but non lucratif, nous avons nos expertises et sommes habitués à être chefs d’orchestre et musiciens. Cependant, lorsqu’il s’agit d’approches web et numériques, nous ne possédons pas les talents nécessaires pour jouer cette partition. C’est pourquoi nous sommes extrêmement satisfaits d’avoir fait confiance à l’équipe d’Altitude pour nous guider dans ce processus. Grâce à leur expertise, notre site web reflète parfaitement la vision que nous avions et est aussi efficace qu’espéré pour tous ceux et celles qui y accèdent. Pascal Beauchamp, Desjardins Experts Conseils Altitude Stratégies a su être à l’écoute de nos besoins précis. Nous avons également le sentiment qu’ils font partie intégrante de notre équipe par leur approche stratégique ainsi que dans l’échange d’idées. Céline, Familiprix Coteau-du-lac Nous sommes très heureux de travailler avec toute l’équipe professionnelle d’Altitude Stratégies. Ils sont tous extrêmement efficaces, rapides et d’une écoute exceptionnelle face à nos besoins. Merci de nous aider à faire valoir notre entreprise de la plus belle façon qui soit ! Catherine Cadieux, Jeux-Tec Superbe entreprise spécialisée dans le marketing ! L’équipe est géniale et ils font un travail remarquable. N’hésitez surtout pas à faire affaire avec ces gens professionnels. Services impeccables. Chantal Tremb... [truncated]",
+              "content_length": 16302,
+              "links": [
+                "https://www.altitudestrategies.ca",
+                "https://www.altitudestrategies.ca/solutions/",
+                "https://www.altitudestrategies.ca/emplois/",
+                "https://www.altitudestrategies.ca/en/",
+                "https://www.altitudestrategies.ca/es/",
+                "https://www.altitudestrategies.ca/",
+                "https://www.altitudestrategies.ca/marketing/",
+                "https://www.altitudestrategies.ca/marketing/marketing-medias-sociaux/",
+                "https://www.altitudestrategies.ca/marketing/marketing-contenu/",
+                "https://www.altitudestrategies.ca/marketing/marketing-courriel/",
+                "https://www.altitudestrategies.ca/marketing/marketing-influence/",
+                "https://www.altitudestrategies.ca/marketing/marketing-automation/",
+                "https://www.altitudestrategies.ca/marketing/marketing-recrutement/",
+                "https://www.altitudestrategies.ca/marketing/marketing-immobilier/",
+                "https://www.altitudestrategies.ca/marketing/communications-relations-publiques/",
+                "https://www.altitudestrategies.ca/marketing/placement-media-publicite/",
+                "https://www.altitudestrategies.ca/marketing/image-de-marque/",
+                "https://www.altitudestrategies.ca/web/",
+                "https://www.altitudestrategies.ca/web/conception-sites-web/",
+                "https://www.altitudestrategies.ca/web/commerce-electronique/",
+                "https://www.altitudestrategies.ca/web/referencement-naturel-seo/",
+                "https://www.altitudestrategies.ca/web/referencement-payant/",
+                "https://www.altitudestrategies.ca/web/referencement-local/",
+                "https://www.altitudestrategies.ca/web/referencement-vocal/",
+                "https://www.altitudestrategies.ca/web/hebergement-web/",
+                "https://www.altitudestrategies.ca/web/messageries-professionnelles-courriels/",
+                "https://www.altitudestrategies.ca/web/web-analytics/",
+                "https://www.altitudestrategies.ca/subventions-contributions-aide-financiere-pour-entreprise/",
+                "https://www.altitudestrategies.ca/video/",
+                "https://www.altitudestrategies.ca/video/video-corporative/",
+                "https://www.altitudestrategies.ca/video/capsules-video/",
+                "https://www.altitudestrategies.ca/video/video-live-evenementiel/",
+                "https://www.altitudestrategies.ca/video/captation-video-drone/",
+                "https://www.altitudestrategies.ca/video/motion-design/",
+                "https://www.altitudestrategies.ca/video/photographie/",
+                "https://www.altitudestrategies.ca/affichage/",
+                "https://www.altitudestrategies.ca/affichage/lettrage/",
+                "https://www.altitudestrategies.ca/affichage/impression/",
+                "https://www.altitudestrategies.ca/affichage/affichage-promotionnel/",
+                "https://www.altitudestrategies.ca/affichage/articles-promotionnels/",
+                "https://www.altitudestrategies.ca/affichage/produits-affichage/",
+                "https://www.altitudestrategies.ca/resultats/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/boulangerie-st-methode/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/remax-prestige/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/brunet-lefebvre-evaluateurs-conseils/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/equipe-sandra-lee-marquis/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/habitation-raymond-allard-groupe-faa-construction/",
+                "https://www.altitudestrategies.ca/etudes-de-cas/hangcha-forklift-canada/",
+                "https://www.altitudestrategies.ca/temoignages/",
+                "https://www.altitudestrategies.ca/a-propos-agence-altitude-strategies/",
+                "https://www.altitudestrategies.ca/equipe/",
+                "https://www.altitudestrategies.ca/pourquoi-choisir-altitude-strategies/",
+                "https://www.altitudestrategies.ca/nous-joindre/",
+                "https://www.altitudestrategies.ca/blogue/",
+                "https://www.altitudestrategies.ca/nouvelles/",
+                "https://www.altitudestrategies.ca/inscription-infolettre/",
+                "https://www.altitudestrategies.ca/aide/",
+                "https://www.altitudestrategies.ca/foire-aux-questions/",
+                "https://www.altitudestrategies.ca/foire-aux-questions-google-ads/",
+                "https://www.altitudestrategies.ca/glossaire-marketing/",
+                "https://www.altitudestrategies.ca/glossaire-web/",
+                "https://www.altitudestrategies.ca/glossaire-seo/",
+                "https://www.altitudestrategies.ca/glossaire-video/",
+                "https://www.altitudestrategies.ca/entreprises/",
+                "https://www.altitudestrategies.ca/directeurs-marketing/",
+                "https://www.altitudestrategies.ca/directeurs-rh/",
+                "https://www.altitudestrategies.ca/institutions-publiques/",
+                "https://www.altitudestrategies.ca/organismes/",
+                "https://www.altitudestrategies.ca/agences-marketing/",
+                "https://www.altitudestrategies.ca/projet/comptoir-st-denis/",
+                "https://www.altitudestrategies.ca/projet/www-contrebasse-classique/",
+                "https://www.altitudestrategies.ca/projet/acces-croisieres-et-voyages-2/",
+                "https://www.altitudestrategies.ca/projet/excavation-rolland-chevrier-et-fils/",
+                "https://www.altitudestrategies.ca/projet/odontys/",
+                "https://www.altitudestrategies.ca/projet/auvents-valleyfield/",
+                "https://www.altitudestrategies.ca/projet/clinique-neurolab/",
+                "https://www.altitudestrategies.ca/projet/regroupement-tdl-quebec/",
+                "https://www.altitudestrategies.ca/projet/clinique-unicite/",
+                "https://www.altitudestrategies.ca/projet/groupe-faa-construction-3/",
+                "https://www.altitudestrategies.ca/projet/habitation-cousineau/",
+                "https://www.altitudestrategies.ca/projet/hangcha-forklift-canada/",
+                "https://www.altitudestrategies.ca/projet/sanivac-3/",
+                "https://www.altitudestrategies.ca/projet/ordi-cam/",
+                "https://www.altitudestrategies.ca/projet/edp-drilling/",
+                "https://www.altitudestrategies.ca/projet/affichage-publicitaire-sur-abribus/",
+                "https://www.altitudestrategies.ca/projet/net-o-pression/",
+                "https://www.altitudestrategies.ca/projet/synapse/",
+                "https://www.altitudestrategies.ca/projet/location-rive-sud-2/",
+                "https://www.altitudestrategies.ca/projet/gmf-contrecoeur/",
+                "https://www.altitudestrategies.ca/projet/ordi-cam-2000/",
+                "https://www.altitudestrategies.ca/projet/dynamat-inc/",
+                "https://www.altitudestrategies.ca/projet/construction-syme-prestige/",
+                "https://www.altitudestrategies.ca/projet/boulangerie-st-methode/",
+                "https://www.altitudestrategies.ca/externaliser-la-gestion-de-vos-reseaux-sociaux-a-une-agence-marketing-est-ce-rentable/",
+                "https://www.altitudestrategies.ca/marketing-influence-quebec-niches-createurs-de-contenu-authentiques/",
+                "https://www.altitudestrategies.ca/comment-etre-recommande-sur-chatgpt/",
+                "https://www.altitudestrategies.ca/marketing-hotelier-propulsez-votre-etablissement-marche-competitif/",
+                "https://www.altitudestrategies.ca/soutenir-achat-local-grace-aux-medias-numeriques-quebecois-et-canadiens/",
+                "https://www.altitudestrategies.ca/guerre-commerciale-strategies-marketing-gagnantes-pour-valoriser-votre-entreprise/",
+                "https://www.altitudestrategies.ca/calendrier-marketing-2025/",
+                "https://www.altitudestrategies.ca/comment-se-preparer-vendredi-fou-cyberlundi-et-boxing-day/",
+                "https://www.altitudestrategies.ca/calculateur-budget-publicites-facebook/"
+              ],
+              "domain": "https://www.altitudestrategies.ca"
+            },
+            {
+              "url": "https://www.altitudestrategies.ca/solutions/",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:37.145084",
+              "processing_time": 0.3787405490875244,
+              "title": "Solutions d'affaires adaptées à votre réalité | Altitude Stratégies",
+              "meta_description": "Choisissez votre profil et découvrez comment notre expertise peut vous accompagnerdans vos défis quotidiens et vos projets stratégiques.",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Des solutions adaptées à votre réalité"
+                },
+                {
+                  "level": "h2",
+                  "text": "Vous êtes ?"
+                },
+                {
+                  "level": "h3",
+                  "text": "Entreprise"
+                },
+                {
+                  "level": "h3",
+                  "text": "Directeur(trice) marketing"
+                },
+                {
+                  "level": "h3",
+                  "text": "Directeur(trice) R.H."
+                },
+                {
+                  "level": "h3",
+                  "text": "Institution publique ou municipale"
+                },
+                {
+                  "level": "h3",
+                  "text": "Organisme"
+                },
+                {
+                  "level": "h3",
+                  "text": "Agence marketing"
+                }
+              ],
+              "page_type": "products",
+              "content": "Solutions d'affaires adaptées à votre réalité | Altitude Stratégies Contenu en pleine largeur Nos solutions Faites carrière à l’agence | English Español Top menu Facebook page opens in new window Instagram page opens in new window LinkedIn page opens in new window X page opens in new window VK page opens in new window Pinterest page opens in new window YouTube page opens in new window Accueil Marketing Marketing des médias sociaux (SMMA) Marketing de contenu Marketing par courriel Marketing d’influence Marketing automatisé Marketing de recrutement – Marque Employeur Marketing immobilier Service de communications et de relations publiques Placement média et publicité Image de marque Web Conception de sites web Commerce électronique Référencement naturel (SEO) Référencement payant Référencement local Référencement vocal Hébergement web canadien Messageries professionnelles Web analytics Subventions, contributions et aide financière pour entreprise Vidéo Vidéo corporative Vidéo promotionnelle Vidéo événementielle Captation vidéo avec drone Motion Design Service de photographie Affichage Lettrage Impression Affichage promotionnel Articles promotionnels Produits d’affichage Résultats Études de cas Modèle de croissance et d’engagement sur les médias sociaux Réussite et croissance dans un marché compétitif Résultats impressionnants en SEO Équipe #1 de Vaudreuil-Soulanges chez Sutton pour une 6e année consécutive De l’héritage à l’innovation : une transition réussie Nouveau réseau de concessionnaires et croissance exponentielle Portfolio Témoignages L’agence À propos Le #DreamTeam Pourquoi choisir notre agence Carrières Nous joindre Nouvelles Blogue Actualités Marketing, Communication et Numérique S’abonner à l’infolettre Centre d’aide Portail Client Centre d’aide (Base de connaissance) Foire aux questions Foire aux questions (Google Ads) Glossaire marketing Glossaire Web Glossaire SEO Glossaire vidéo Choisissez votre profil et découvrez comment notre expertise peut vous accompagner dans vos défis quotidiens et vos projets stratégiques. Vous êtes ? Entreprise Propulsez votre croissance avec des solutions stratégiques en marketing et développement web. VOIR NOS SOLUTIONS Directeur(trice) marketing Boostez vos campagnes marketing avec des outils performants et des résultats mesurables. VOIR NOS SOLUTIONS Directeur(trice) R.H. Améliorez votre marque employeur et facilitez vos processus de recrutement. VOIR NOS SOLUTIONS Institution publique ou municipale Dynamisez vos communications et engagez votre communauté efficacement. VOIR NOS SOLUTIONS Organisme Maximisez votre impact avec des outils et stratégies adaptés à vos valeurs. VOIR NOS SOLUTIONS Agence marketing Collaborez avec nous pour élargir vos offres et accomplir des projets ambitieux. VOIR NOS SOLUTIONS Go to Top Commandez en ligne vos produits d’affichage et d’impression MAGASINEZ EN LIGNE",
+              "content_length": 2888,
+              "domain": "https://www.altitudestrategies.ca"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 103,
+            "priority_pages_found": 1,
+            "pages_successfully_scraped": 2
+          },
+          "metadata": {
+            "total_content_length": 19190,
+            "processing_time": 1.9602000713348389,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "http://www.involvedmedia.ca",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.involvedmedia.ca",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:36.816575",
+              "processing_time": 1.6201930046081543,
+              "title": "Involved Media | Where service you can trust meets high impact clout.",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "WE ARE INVOLVED MEDIA"
+                },
+                {
+                  "level": "h3",
+                  "text": "Where service you can trust meets high impact clout."
+                },
+                {
+                  "level": "h3",
+                  "text": "We help growing brands across the globe"
+                },
+                {
+                  "level": "h2",
+                  "text": "Media Capabilities"
+                },
+                {
+                  "level": "h2",
+                  "text": "Brands We Partner With"
+                },
+                {
+                  "level": "h3",
+                  "text": "An independent agency with eyes on the client every step of the way. See who we work with and what they have to say about our work."
+                },
+                {
+                  "level": "h2",
+                  "text": "Ready to get Involved?Learn about our services"
+                }
+              ],
+              "page_type": "general",
+              "content": "Involved Media | Where service you can trust meets high impact clout. We Are Involved Media An egoless agency where service you can trust meets high impact clout. Send Email inquiries@involvedmedia.ca Address 55 Commerce Valley Dr W, Markham, ON, L3T7V9, Canada WE ARE INVOLVED MEDIA Where service you can trust meets high impact clout . We help growing brands across the globe 0 + MEDIA EXPERTS 0 OFFICES ACROSS A GLOBAL SUPPORT NETWORK $ 0 + MILLION IN GLOBAL BILLLINGS Media Capabilities Media Strategy Media Strategy Tactical Planning Tactical Planning Digital Media Digital Media Connected TV Online Video Branded Content and more Specialty Digital Teams Specialty Digital Teams Programmatic Paid Search Paid Social and more Traditional Media Traditional Media Broadcast Radio OOH/DOOH and more Operations Operations Ad Ops Analytics Finance and more Brands We Partner With Involved in the wild An independent agency with eyes on the client every step of the way. See who we work with and what they have to say about our work. More Case Studies Case Studies Business Partner Leveraging client sales data to right size media budget and inform the overall business approach... Read More Case Studies Targeting Precision Hyper targeting: Driving leads amongst niche audiences for Toronto Stock Exchange... Read More Case Studies Media Solutions That Drive Action Reaching consumers when it matters: ​Retail audio for Rust-Oleum... Read More Case Studies Holistic Video Planning Breaking through in the competitive DIY landscape with innovative video solutions for Rust-Oleum... Read More Ready to get Involved? Learn about our services Get in touch × Close",
+              "content_length": 1658,
+              "links": [
+                "http://www.involvedmedia.ca",
+                "http://www.involvedmedia.ca/case-studies/",
+                "http://www.involvedmedia.ca/get-in-touch"
+              ],
+              "domain": "http://www.involvedmedia.ca"
+            },
+            {
+              "url": "http://www.involvedmedia.ca/case-studies/",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:38.237311",
+              "processing_time": 1.420736312866211,
+              "title": "Case Studies | Involved Media",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Case Studies"
+                },
+                {
+                  "level": "h2",
+                  "text": "Business Partner"
+                },
+                {
+                  "level": "h2",
+                  "text": "Targeting Precision"
+                },
+                {
+                  "level": "h2",
+                  "text": "Media Solutions That Drive Action"
+                },
+                {
+                  "level": "h2",
+                  "text": "Holistic Video Planning"
+                },
+                {
+                  "level": "h2",
+                  "text": "Ready to get Involved?Learn about our services"
+                }
+              ],
+              "page_type": "case_studies",
+              "content": "Case Studies | Involved Media We Are Involved Media An egoless agency where service you can trust meets high impact clout. Send Email inquiries@involvedmedia.ca Address 55 Commerce Valley Dr W, Markham, ON, L3T7V9, Canada Case Studies Business Partner Leveraging client sales data to right size media budget and inform the overall business approach Read More Targeting Precision Hyper targeting: Driving leads amongst niche audiences for Toronto Stock Exchange Read More Media Solutions That Drive Action Reaching consumers when it matters: ​Retail audio for Rust-Oleum Read More Holistic Video Planning Breaking through in the competitive DIY landscape with innovative video solutions for Rust-Oleum Read More Ready to get Involved? Learn about our services Get in touch × Close",
+              "content_length": 779,
+              "domain": "http://www.involvedmedia.ca"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 3,
+            "priority_pages_found": 1,
+            "pages_successfully_scraped": 2
+          },
+          "metadata": {
+            "total_content_length": 2437,
+            "processing_time": 3.0439326763153076,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "http://www.theog.co",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.theog.co",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:37.402276",
+              "processing_time": 2.2058942317962646,
+              "title": "Home | The One Group Agency",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "One Group Agency"
+                },
+                {
+                  "level": "h2",
+                  "text": "A Creative Collective."
+                },
+                {
+                  "level": "h3",
+                  "text": "Site Links"
+                },
+                {
+                  "level": "h2",
+                  "text": "We are"
+                },
+                {
+                  "level": "h1",
+                  "text": "One Group"
+                },
+                {
+                  "level": "h2",
+                  "text": "Where Ideas Take Shape."
+                },
+                {
+                  "level": "h2",
+                  "text": "From Visionaries to Creators."
+                },
+                {
+                  "level": "h2",
+                  "text": "01. Production"
+                },
+                {
+                  "level": "h3",
+                  "text": "IPA NominationParadox Hotels"
+                },
+                {
+                  "level": "h3",
+                  "text": "BrandLocal Tourist"
+                }
+              ],
+              "page_type": "general",
+              "content": "Home | The One Group Agency We are One Group Where Ideas Take Shape. From Visionaries to Creators. We are here to guide you toward efficient and effective marketing strategy and execution. We are a full-suite agency specializing in the strategic development and creation of engaging content. Meet the Team 01. Production Videography Photography Motion Graphic Design Animation 3D Rendering Storyboarding Concept Ideation Styling Location Scouting IPA Nomination Paradox Hotels Brand Local Tourist 02. Digital Marketing Pinterest Ads Twitter Ads LinkedIn Ads Facebook & Instagram Ads Google Ads YouTube Ads Microsoft Ads Technical & Content SEO Local SEO CRO Google Analytics Google Tag Manager Media Buying Programmatic Media Campaign Marketing Parq Vancouver Whistler Adventure Tag Whistler 03. Creative Brand & Visual Identity Development Copywriting App Design Illustration Graphic Design Print & Brand Collateral Business Stationery Brand Rework Franks Pizza & Bar Brand Rework Way Back Brew 04. Web Design & Development UI/UX Website Development Mobile & Tablet Application E-Commerce Development Web Application Development Custom Plugin Development Email Marketing Website Redesign Resurrection Gallery Digitization BC Sports Hall of Fame 05. Social Media Management Twitter Instagram Facebook Pinterest YouTube Digital Engagement Reputation Management TikTok LinkedIn Trip Advisor Influencer & Media Coordination Social Media Campaign Various Clients Work Showcase 06. Events Photography Video Trade Exhibitions Speaker Series Podcasts Private Showcases Indigenous Opportunities Forum 2024 Greater Vancouver Board of trade Building The Future Greater Vancouver Board of Trade Who We Work With We are here to guide you toward efficient and effective marketing strategy. Contact Us Get in Touch! We are here to guide you toward efficient and effective marketing strategy. \" * \" indicates required fields URL This field is for validation purposes and should be left unchanged. Full Name * Business Name Email * Phone What are you looking for help with? Request for Services General Inquiry Additional Comments",
+              "content_length": 2114,
+              "links": [
+                "http://www.theog.co/team",
+                "http://www.theog.co"
+              ],
+              "domain": "http://www.theog.co"
+            },
+            {
+              "url": "http://www.theog.co/team",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:38.652659",
+              "processing_time": 1.2463698387145996,
+              "title": "Team | The One Group Agency",
+              "meta_description": "",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "One Group Agency"
+                },
+                {
+                  "level": "h2",
+                  "text": "A Creative Collective."
+                },
+                {
+                  "level": "h3",
+                  "text": "Site Links"
+                },
+                {
+                  "level": "h1",
+                  "text": "The OG Team"
+                },
+                {
+                  "level": "h2",
+                  "text": "From scroll-stopping content to pixel-perfect websites, OG brings the vibes across production, social, and web. We don’t just make things look good — we make them work hard."
+                },
+                {
+                  "level": "h2",
+                  "text": "MATT BORCK"
+                },
+                {
+                  "level": "h3",
+                  "text": "MATT BORCKPartner & Head, Videography"
+                },
+                {
+                  "level": "h3",
+                  "text": "MATT BORCK"
+                },
+                {
+                  "level": "h2",
+                  "text": "JAIMIE ASHWORTH"
+                },
+                {
+                  "level": "h3",
+                  "text": "JAIMIE ASHWORTHDirector, Operations"
+                }
+              ],
+              "page_type": "team",
+              "content": "Team | The One Group Agency The OG Team WE DO COOL STUFF From scroll-stopping content to pixel-perfect websites, OG brings the vibes across production, social, and web. We don’t just make things look good — we make them work hard. Meet the creative minds behind OG — the team turning bold ideas into unforgettable brand experiences. MATT BORCK Partner & Head, Videography MATT BORCK Partner & Head, Videography MATT BORCK Partner & Head, Videography What is your claim to fame? Once performed in a literal bullring in Mexico… and also sang on the French Riviera. Same guy, same guitar - very different vibes. JAIMIE ASHWORTH Director, Operations JAIMIE ASHWORTH Director, Operations JAIMIE ASHWORTH Director, Operations What is your favourite part of your job? Collaborating with a team of experts with all different specialties—there’s always something new to learn. I also really enjoy meeting with clients and turning complex ideas into clear, actionable plans. JONATHAN SPOONER Director, Content & Creative JONATHAN SPOONER Director, Content & Creative JONATHAN SPOONER Director, Content & Creative What is your claim to fame? Swam competitively for 10 years MATT BOURNE Head, Photography MATT BOURNE Head, Photography MATT BOURNE Head, Photography What is your claim to fame? I was part of the team that won an award for best live broadcast during the Stanley cup riots from CNN PAMELA CHUA Senior Manager, Content & Strategy PAMELA CHUA Senior Manager, Content & Strategy PAMELA CHUA Senior Manager, Content & Strategy What is your claim to fame? I was blonde for about 4 years! Some people don't even recognize me without the blonde hair. BERNI SAMSON PROJECT MANAGER BERNI SAMSON PROJECT MANAGER BERNI SAMSON PROJECT MANAGER What is your claim to fame? I once hit the high note in the song Hallelujah SHELBY WICK Project Manager (remove Producer) SHELBY WICK Project Manager (remove Producer) SHELBY WICK Project Manager (remove Producer) What is your favourite part of your job? Working with other creatives on shoots and bringing a vision to life! JACQUI OZGUR Manager, Operations JACQUI OZGUR Manager, Operations JACQUI OZGUR Manager, Operations What is your claim to fame? I am also a permanent makeup artist. ETHAN JOHNSON CONTENT CREATOR ETHAN JOHNSON CONTENT CREATOR ETHAN JOHNSON CONTENT CREATOR Favourite Pastime? A good drive REGAN VARNIER SOCIAL MEDIA COORDINATOR REGAN VARNIER SOCIAL MEDIA COORDINATOR REGAN VARNIER SOCIAL MEDIA COORDINATOR What is your claim to fame? I’m Italian, and my name in Italian is Regina. I also just so happened to be born on Saint Regina’s Day. KASIA LAJLO Graphic Designer KASIA LAJLO Graphic Designer KASIA LAJLO Graphic Designer What is your claim to fame? One time I created a painting using anything but a paint brush. Some of the tools included a cheese grater, skipping rope and a tennis racket. MANOJ MANATHUNGA DIGITAL ADS STRATEGIST MANOJ MANATHUNGA DIGITAL ADS STRATEGIST MANOJ MANATHUNGA DIGITAL ADS STRATEGIST Favourite Part of your Job? Trading attention. Testing ideas fast, scaling what works, and driving real ROI. JUSTIN CUNANAN Head, Design JUSTIN CUNANAN Head, Design JUSTIN CUNANAN Head, Design What is your claim to fame? Eating a full order of pasta at Anton's twice. LORI CRUMP Project Manager LORI CRUMP Project Manager LORI CRUMP Project Manager Whats your claim to fame? My husband and I lived in Bali for a few years before we had kids and I got to work as a Project Manager for the building of an Equestrian centre which has now become one of the leading horse riding centres in southeast Asia. KAREN NGUYEN SOCIAL MEDIA COORDINATOR KAREN NGUYEN SOCIAL MEDIA COORDINATOR KAREN NGUYEN SOCIAL MEDIA COORDINATOR Whats your claim to fame? According to my Lifestyle DNA test results, I metabolize caffeine pretty quickly—which means my body breaks it down and clears it out faster than average. So I’m less likely to get those jittery or anxious side effects. That probably explains why I felt totally fine after downing seven shots of espresso during my visit to the Illy Coffee headquarters in Italy. JARED HARMAN CEO & CO-FOUNDER JARED HARMAN CEO & CO-FOUNDER JARED HARMAN CEO & CO-FOUNDER What is your claim to fame? I was in the movie MVP: Most Valuable Primate Join the Team Behind the Magic We’re always looking for passionate creatives to grow with us. If you’ve got big ideas and love bringing them to life, we’d love to meet you. See Openings",
+              "content_length": 4425,
+              "domain": "http://www.theog.co"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 2,
+            "priority_pages_found": 1,
+            "pages_successfully_scraped": 2
+          },
+          "metadata": {
+            "total_content_length": 6539,
+            "processing_time": 3.4618582725524902,
+            "scraping_method": "HTTP"
+          }
+        },
+        {
+          "domain": "http://www.nimiopere.com",
+          "scraped_at": "2025-09-25T00:46:35.196382",
+          "pages": [
+            {
+              "url": "http://www.nimiopere.com",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:38.816237",
+              "processing_time": 3.6198556423187256,
+              "title": "nimiopere",
+              "meta_description": "nimiopere - film editorial",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Christopher ChangGraham ChisholmLeah LalichSteve Puhach\nRaj Ramnauth\nBryan Reuben\nContact"
+                }
+              ],
+              "page_type": "general",
+              "content": "nimiopere ︎ Christopher Chang Graham Chisholm Leah Lalich Steve Puhach Raj Ramnauth Bryan Reuben Contact",
+              "content_length": 105,
+              "links": [
+                "http://www.nimiopere.com/",
+                "http://www.nimiopere.com",
+                "http://www.nimiopere.com/christopher-chang",
+                "http://www.nimiopere.com/graham-chisholm",
+                "http://www.nimiopere.com/leah-lalich",
+                "http://www.nimiopere.com/steve-puhach",
+                "http://www.nimiopere.com/raj-ramnauth",
+                "http://www.nimiopere.com/bryan-reuben",
+                "http://www.nimiopere.com/contact"
+              ],
+              "warning": "Low content length: 105 chars",
+              "domain": "http://www.nimiopere.com"
+            },
+            {
+              "url": "http://www.nimiopere.com/contact",
+              "status_code": 200,
+              "scraped_at": "2025-09-25T00:46:40.675317",
+              "processing_time": 1.8563661575317383,
+              "title": "contact — nimiopere",
+              "meta_description": "nimiopere - film editorial",
+              "headings": [
+                {
+                  "level": "h1",
+                  "text": "Editors"
+                },
+                {
+                  "level": "h1",
+                  "text": "Contact"
+                },
+                {
+                  "level": "h1",
+                  "text": "Editors"
+                },
+                {
+                  "level": "h1",
+                  "text": "Contact"
+                },
+                {
+                  "level": "h1",
+                  "text": "CONTACT"
+                },
+                {
+                  "level": "h3",
+                  "text": "PRODUCERS"
+                },
+                {
+                  "level": "h3",
+                  "text": "EDITORS"
+                },
+                {
+                  "level": "h3",
+                  "text": "ASSISTANT EDITORS"
+                },
+                {
+                  "level": "h3",
+                  "text": "OFFICE"
+                },
+                {
+                  "level": "h3",
+                  "text": "EXECUTIVE PRODUCERS"
+                }
+              ],
+              "page_type": "contact",
+              "content": "contact — nimiopere ︎ Editors Christopher Chang Graham Chisholm Leah Lalich Steve Puhach Raj Ramnauth Bryan Reuben Contact Editors Christopher Chang Graham Chisholm Leah Lalich Steve Puhach Raj Ramnauth Bryan Reuben Contact CONTACT PRODUCERS Julie Axell julie@nimiopere.com 416.712.0407 Partner & Executive Producer Jenna Edwards jenna@nimiopere.com 416.569.8309 Executive Producer Nicole Hann nicole@nimiopere.com Junior Producer EDITORS Christopher Chang chris@nimiopere.com @cm.chang28 Graham Chisholm graham@nimiopere.com @instagrahamchisholm Leah Lalich leah@nimiopere.com @leahlalich Steve Puhach steve@nimiopere.com @steve.puhach Raj Ramnauth raj@nimiopere.com @rajramnauth Bryan Reuben bryan @nimiopere.com @bryanreubn ASSISTANT EDITORS Bianca Bissada bianca@nimiopere.com @biancabissada Jack Considine jack@nimiopere.com @sceal_amhairc Shalini Menon shalini@nimiopere.com @shalini.menon_ Dylan Reymer dylan@nimiopere.com @dylanreymer Mariana Rossi mariana@nimiopere.com @mariana.rossi.b Lucas Wurstlin lucas@nimiopere.com @lucaswurstlin OFFICE MOCA Building 158 Sterling Rd, 7th Floor Toronto, ON M6R 2B7 Google Maps Directions EXECUTIVE PRODUCERS Julie Axell julie@nimiopere.com 416.712.0407 Partner & Executive Producer Jenna Edwards jenna@nimiopere.com 416.569.8309 Executive Producer Nicole Hann nicole@nimiopere.com Junior Producer EDITORS Christopher Chang chris@nimiopere.com @cm.chang28 Graham Chisholm graham@nimiopere.com @instagrahamchisholm Leah Lalich leah@nimiopere.com @leahlalich Steve Puhach steve@nimiopere.com @steve.puhach Raj Ramnauth raj@nimiopere.com @rajramnauth Bryan Reuben bryan @nimiopere.com @bryanreubn ASSISTANT EDITORS Bianca Bissada bianca@nimiopere.com @biancabissada Jack Considine jack@nimiopere.com @sceal_amhairc Shalini Menon shalini@nimiopere.com @shalini.menon_ Dylan Reymer dylan@nimiopere.com @dylanreymer Mariana Rossi mariana@nimiopere.com @mariana.rossi.b Lucas Wurstlin lucas@nimiopere.com @lucaswurstlin OFFICE MOCA Building 158 Sterling Rd, 7th Floor Toronto, ON M6R 2B7 Google Maps Directions",
+              "content_length": 2052,
+              "domain": "http://www.nimiopere.com"
+            }
+          ],
+          "discovery": {
+            "total_links_found": 9,
+            "priority_pages_found": 1,
+            "pages_successfully_scraped": 2
+          },
+          "metadata": {
+            "total_content_length": 2157,
+            "processing_time": 5.485487699508667,
+            "scraping_method": "HTTP"
+          }
+        }
+      ]
+    },
+    "page_prioritization": {
+      "total_pages_analyzed": 10,
+      "successful_analyses": 9,
+      "failed_analyses": 0,
+      "success_rate": 100.0,
+      "high_value_pages_found": 3,
+      "total_ai_cost_usd": 0.0030603375,
+      "avg_cost_per_page": 0.0003400375,
+      "processing_time": 61.911052227020264,
+      "pages_per_minute": 9.691322928899243,
+      "results": [
+        {
+          "page_data": {
+            "url": "http://www.workparty.ca",
+            "title": "Work Party – An independent design and media group",
+            "content_length": 1231,
+            "domain": "www.workparty.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 8,
+              "reasoning": "The page provides basic team information and a description of services, which can be useful for outreach. However, it lacks detailed achievements or specific case studies that would elevate its value."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "The team includes experienced professionals like Christie Coughlan, Managing Director, which could be a point of connection for outreach.",
+                "The company emphasizes a playful approach to work, which could resonate with potential clients looking for a creative partner."
+              ],
+              "conversation_starters": [
+                "The company has a long-standing relationship with one of Western Canada’s biggest brands, indicating credibility and experience.",
+                "Their focus on creative brand strategy and media planning suggests they value innovative approaches, which could be a talking point."
+              ],
+              "key_people": [
+                "Christie Coughlan - Managing Director - Key leader with potential insights into company strategy.",
+                "Roshni Parmar - Sr. Manager, Projects & Ops - Could provide operational insights."
+              ],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "growing",
+                "unique_positioning": "They combine creativity with a playful work culture, aiming to make branding enjoyable."
+              }
+            },
+            "outreach_summary": "When reaching out to Work Party, highlight their creative approach and the experience of their leadership team. Mentioning their long-standing relationship with major brands could also establish credibility and relevance in your outreach."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:46:51.395792",
+            "api_processing_time": 9.905766725540161,
+            "cost_estimate_usd": 0.00041024999999999997,
+            "model_used": "gpt-4o-mini"
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.bigfishcreative.ca",
+            "title": "Vancouver Digital Marketing Agency | Big Fish Creative",
+            "content_length": 4121,
+            "domain": "www.bigfishcreative.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 8,
+              "reasoning": "The page provides a detailed overview of services offered by the agency, showcasing their unique positioning in digital marketing. However, it lacks specific client success stories, leadership information, or recent achievements that would elevate it to high value."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "The agency specializes in transforming brands and offers a complete solution that articulates brand narratives, which can be referenced in outreach.",
+                "They have over 10 years of experience in Search Engine Optimization, indicating a strong expertise that could be highlighted in conversations."
+              ],
+              "conversation_starters": [
+                "The agency emphasizes building lasting partnerships with clients, which could lead to discussions about collaboration.",
+                "Their focus on creativity and strategy in event design could be a point of interest for potential clients looking for innovative marketing solutions."
+              ],
+              "key_people": [],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "established",
+                "unique_positioning": "They bridge the gap between businesses and their audience through precision-targeted digital advertising solutions."
+              }
+            },
+            "outreach_summary": "When reaching out to Big Fish Creative, emphasize their expertise in transforming brands and their long-standing experience in SEO. Highlight potential collaboration opportunities that align with their focus on building lasting partnerships and innovative marketing strategies."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:46:58.208122",
+            "api_processing_time": 6.812330722808838,
+            "cost_estimate_usd": 0.000514425,
+            "model_used": "gpt-4o-mini"
+          }
+        },
+        {
+          "page_data": {
+            "url": "https://www.altitudestrategies.ca",
+            "title": "Altitude Stratégies | Agence de marketing web créative à Vaudreuil-Dorion",
+            "content_length": 10015,
+            "domain": "www.altitudestrategies.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "HIGH",
+              "score": 8,
+              "confidence": 8,
+              "reasoning": "Batch analysis result"
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Comprehensive overview of services offered",
+                "Strong emphasis on client success stories",
+                "Active presence on multiple social media platforms"
+              ],
+              "conversation_starters": [],
+              "key_people": [],
+              "company_insights": {}
+            },
+            "outreach_summary": "Initiate contact by highlighting shared interests in innovative marketing solutions and propose a discussion on potential collaboration opportunities, leveraging their success stories as a conversation starter."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:09.129509",
+            "cost_estimate_usd": 0.00022261875,
+            "model_used": "gpt-4o-mini",
+            "batch_analysis": true
+          }
+        },
+        {
+          "page_data": {
+            "url": "https://www.altitudestrategies.ca/solutions/",
+            "title": "Solutions d'affaires adaptées à votre réalité | Altitude Stratégies",
+            "content_length": 2888,
+            "domain": "www.altitudestrategies.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "HIGH",
+              "score": 9,
+              "confidence": 8,
+              "reasoning": "Batch analysis result"
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Detailed breakdown of tailored business solutions",
+                "Focus on specific marketing strategies and their effectiveness",
+                "Highlighting case studies and results that demonstrate their expertise"
+              ],
+              "conversation_starters": [],
+              "key_people": [],
+              "company_insights": {}
+            },
+            "outreach_summary": "Initiate contact by highlighting shared interests in innovative marketing solutions and propose a discussion on potential collaboration opportunities, leveraging their success stories as a conversation starter."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:09.129509",
+            "cost_estimate_usd": 0.00022261875,
+            "model_used": "gpt-4o-mini",
+            "batch_analysis": true
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.involvedmedia.ca/case-studies/",
+            "title": "Case Studies | Involved Media",
+            "content_length": 779,
+            "domain": "www.involvedmedia.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 7,
+              "reasoning": "The page contains case studies that highlight specific client results and media solutions, which can be useful for outreach personalization. However, it lacks detailed metrics or specific achievements that would elevate it to high value."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Case studies showcasing media solutions for Rust-Oleum, indicating expertise in the DIY sector.",
+                "Insights on hyper-targeting strategies used for the Toronto Stock Exchange, which could appeal to financial services."
+              ],
+              "conversation_starters": [
+                "The agency's approach to leveraging client sales data to optimize media budgets.",
+                "Innovative video solutions developed for competitive markets, showcasing creativity and adaptability."
+              ],
+              "key_people": [],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "growing",
+                "unique_positioning": "An egoless agency focused on high-impact media solutions."
+              }
+            },
+            "outreach_summary": "Outreach efforts could focus on Involved Media's innovative media solutions and their expertise in hyper-targeting niche audiences. Highlighting their case studies, particularly with well-known brands like Rust-Oleum, could create a compelling narrative for engagement."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:14.082946",
+            "api_processing_time": 4.953437328338623,
+            "cost_estimate_usd": 0.0003492,
+            "model_used": "gpt-4o-mini"
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.involvedmedia.ca",
+            "title": "Involved Media | Where service you can trust meets high impact clout.",
+            "content_length": 1658,
+            "domain": "www.involvedmedia.ca"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 7,
+              "reasoning": "The page provides insights into the services offered by Involved Media and mentions case studies, which can be useful for outreach. However, it lacks detailed information about leadership, specific achievements, or awards that would elevate its value."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Case studies highlight targeted media solutions for clients like Rust-Oleum and the Toronto Stock Exchange, showcasing their expertise in driving leads and innovative video solutions.",
+                "The agency emphasizes a client-focused approach, which can be leveraged to discuss how their services align with potential clients' needs."
+              ],
+              "conversation_starters": [
+                "The agency's claim of being an 'egoless agency' suggests a collaborative culture that could resonate with potential partners.",
+                "Their global support network and media capabilities indicate a broad reach, which could be a point of interest for companies looking to expand their media presence."
+              ],
+              "key_people": [],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "growing",
+                "unique_positioning": "Focus on client trust and high-impact media strategies, with a diverse range of media capabilities."
+              }
+            },
+            "outreach_summary": "Involved Media presents a strong case for collaboration through their client-centric approach and proven media strategies. Highlighting their successful case studies and unique positioning can create a compelling outreach narrative that resonates with potential clients."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:27.111477",
+            "api_processing_time": 12.51586127281189,
+            "cost_estimate_usd": 0.000424275,
+            "model_used": "gpt-4o-mini"
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.theog.co/team",
+            "title": "Team | The One Group Agency",
+            "content_length": 4425,
+            "domain": "www.theog.co"
+          },
+          "analysis": {
+            "classification": {
+              "category": "HIGH",
+              "score": 9,
+              "confidence": 8,
+              "reasoning": "Batch analysis result"
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "The agency offers a wide range of services including digital marketing, creative branding, and web design.",
+                "They have notable clients and projects, indicating a strong portfolio.",
+                "The homepage emphasizes their strategic approach, which could be a key talking point for outreach."
+              ],
+              "conversation_starters": [],
+              "key_people": [],
+              "company_insights": {}
+            },
+            "outreach_summary": "Reach out to key team members via LinkedIn or email, highlighting specific services that align with their current projects and expressing interest in potential collaborations."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:36.184056",
+            "cost_estimate_usd": 0.00024974999999999997,
+            "model_used": "gpt-4o-mini",
+            "batch_analysis": true
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.theog.co",
+            "title": "Home | The One Group Agency",
+            "content_length": 2114,
+            "domain": "www.theog.co"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM",
+              "score": 7,
+              "confidence": 8,
+              "reasoning": "Batch analysis result"
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "The team consists of diverse professionals with unique backgrounds, which can be leveraged for personalized outreach.",
+                "Key team members have notable achievements that can serve as conversation starters.",
+                "The emphasis on collaboration and creativity suggests they value innovative partnerships."
+              ],
+              "conversation_starters": [],
+              "key_people": [],
+              "company_insights": {}
+            },
+            "outreach_summary": "Reach out to key team members via LinkedIn or email, highlighting specific services that align with their current projects and expressing interest in potential collaborations."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:36.184056",
+            "cost_estimate_usd": 0.00024974999999999997,
+            "model_used": "gpt-4o-mini",
+            "batch_analysis": true
+          }
+        },
+        {
+          "page_data": {
+            "url": "http://www.nimiopere.com/contact",
+            "title": "contact — nimiopere",
+            "content_length": 2052,
+            "domain": "www.nimiopere.com"
+          },
+          "analysis": {
+            "classification": {
+              "category": "MEDIUM_VALUE",
+              "score": 6,
+              "confidence": 8,
+              "reasoning": "The page provides contact information for key personnel, which can be useful for outreach. However, it lacks detailed insights into company achievements, culture, or unique positioning."
+            },
+            "intelligence": {
+              "personalization_opportunities": [
+                "Contact details for multiple editors and producers, allowing for targeted outreach based on specific roles.",
+                "Presence of executive producers indicates potential for collaboration on projects."
+              ],
+              "conversation_starters": [
+                "The company has a diverse team of editors and producers, which could lead to interesting discussions about their projects.",
+                "The office location in Toronto may provide insights into regional market trends."
+              ],
+              "key_people": [
+                "Julie Axell - Partner & Executive Producer - Contact for high-level project discussions.",
+                "Jenna Edwards - Executive Producer - Potential for collaboration on production-related inquiries."
+              ],
+              "company_insights": {
+                "size_indicators": "medium",
+                "growth_stage": "growing",
+                "unique_positioning": "Focus on editorial and production services, indicating a creative and collaborative approach."
+              }
+            },
+            "outreach_summary": "Target outreach to specific editors and producers based on their roles to discuss potential collaborations. Highlight the company's creative focus and regional presence in Toronto to establish relevance in conversations."
+          },
+          "processing": {
+            "analyzed_at": "2025-09-25T00:47:42.600572",
+            "api_processing_time": 6.416516065597534,
+            "cost_estimate_usd": 0.00041745,
+            "model_used": "gpt-4o-mini"
+          }
+        }
+      ]
+    }
+  },
+  "overall_metrics": {
+    "overall_success_rate": 95.65217391304348,
+    "total_pipeline_cost_usd": 0.0030603375,
+    "cost_per_domain": 0.0004371910714285714,
+    "total_processing_time": 73.2527916431427,
+    "domains_per_minute": 5.733569882852605,
+    "pipeline_efficiency": "excellent"
+  }
+}
