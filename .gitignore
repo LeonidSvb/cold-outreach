@@ -44,3 +44,16 @@ node_modules/
 # Temporary files
 *.tmp
 *.temp
+
+# Large result files
+modules/results/*.json
+modules/results/*.csv
+modules/results/*.txt
+data/processed/*.csv
+data/raw/*.csv
+
+# Frontend build files
+frontend/.next/
+frontend/node_modules/
+frontend/build/
+frontend/dist/
