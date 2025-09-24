@@ -1,8 +1,0 @@
-Domain,Site_Analysis_Method,Site_Analysis_Confidence,Scraping_Success,Pages_Scraped,Total_Content_Length
-https://www.stryvemarketing.com,APIFY_REQUIRED,0.95,failed,0,0
-http://www.workparty.ca,HYBRID_APPROACH,0.55,success,1,1231
-http://www.bigfishcreative.ca,APIFY_REQUIRED,0.95,success,1,4023
-https://www.altitudestrategies.ca,APIFY_REQUIRED,0.95,success,2,19190
-http://www.involvedmedia.ca,APIFY_REQUIRED,0.95,success,2,2437
-http://www.theog.co,APIFY_REQUIRED,0.95,success,2,6540
-http://www.nimiopere.com,APIFY_REQUIRED,0.20,success,2,2157
