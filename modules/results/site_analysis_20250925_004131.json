@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "timestamp": "20250925_004131",
+    "script_version": "2.0.0",
+    "total_sites": 7,
+    "processing_time_seconds": 0,
+    "cost_estimate_usd": 0.013000000000000001,
+    "method_distribution": {
+      "http_suitable": 0,
+      "apify_required": 5,
+      "hybrid_approach": 1
+    },
+    "config_used": {
+      "ANALYSIS": {
+        "TIMEOUT_SECONDS": 15,
+        "MAX_REDIRECTS": 5,
+        "USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "CONFIDENCE_THRESHOLD": 0.7,
+        "MIN_CONTENT_LENGTH": 500,
+        "CONCURRENT_REQUESTS": 20
+      },
+      "DETECTION": {
+        "SPA_FRAMEWORKS": {
+          "react": [
+            "react",
+            "react-dom",
+            "reactjs",
+            "__react",
+            "_react"
+          ],
+          "angular": [
+            "angular",
+            "ng-app",
+            "ng-controller",
+            "@angular",
+            "angularjs"
+          ],
+          "vue": [
+            "vue",
+            "vue.js",
+            "vuejs",
+            "v-if",
+            "v-for",
+            "v-model"
+          ],
+          "ember": [
+            "ember",
+            "ember.js",
+            "emberjs",
+            "ember-cli"
+          ],
+          "svelte": [
+            "svelte",
+            "_svelte",
+            "svelte-"
+          ],
+          "backbone": [
+            "backbone",
+            "backbone.js"
+          ]
+        },
+        "PROTECTION_PATTERNS": [
+          "cloudflare",
+          "captcha",
+          "bot detection",
+          "access denied",
+          "blocked",
+          "security check",
+          "ddos protection",
+          "rate limit",
+          "please wait",
+          "checking your browser",
+          "anti-bot"
+        ],
+        "DYNAMIC_LOADING": [
+          "loading...",
+          "please wait",
+          "spinner",
+          "loading content",
+          "fetch(",
+          "xmlhttprequest",
+          "ajax",
+          "async",
+          "defer",
+          "lazy-load",
+          "infinite-scroll",
+          "loadmore"
+        ]
+      },
+      "COSTS": {
+        "HTTP_COST_PER_REQUEST": 0.0,
+        "APIFY_COST_PER_DOMAIN": 0.002,
+        "ANALYSIS_COST_FACTOR": 1.2
+      },
+      "OUTPUT": {
+        "SAVE_JSON": true,
+        "SAVE_CSV": true,
+        "RESULTS_DIR": "../results",
+        "INCLUDE_RAW_HTML": false,
+        "DETAILED_LOGGING": true
+      }
+    }
+  },
+  "results": [
+    {
+      "url": "https://www.stryvemarketing.com",
+      "analyzed_at": "2025-09-25T00:41:27.361708",
+      "recommendation": {
+        "method": "APIFY_REQUIRED",
+        "confidence": 0.95,
+        "reasoning": [
+          "HTTP accessibility failed: None"
+        ]
+      },
+      "technical_analysis": {
+        "http_accessible": false,
+        "status_code": 403,
+        "error": null
+      },
+      "cost_estimate": {
+        "http_cost": 0.0,
+        "apify_cost_usd": 0.002,
+        "recommended_cost": 0.002
+      },
+      "confidence_factors": [],
+      "processing_time": 0.19744277000427246
+    },
+    {
+      "url": "http://www.workparty.ca",
+      "analyzed_at": "2025-09-25T00:41:27.367807",
+      "recommendation": {
+        "method": "HYBRID_APPROACH",
+        "confidence": 0.5499999999999999,
+        "reasoning": [
+          "High quality HTTP content (score: 65)",
+          "Moderate JavaScript usage (risk: 30)",
+          "Try HTTP first, fallback to Apify if needed (confidence: 0.55)"
+        ]
+      },
+      "technical_analysis": {
+        "http_accessible": true,
+        "status_code": 200,
+        "content_length": 75827,
+        "response_time": 0.5601725578308105,
+        "content_quality": {
+          "quality": "medium",
+          "score": 65,
+          "indicators": [
+            "Good text content (2000+ chars)",
+            "Has structured headings",
+            "Has paragraph content",
+            "Good navigation (17 links)",
+            "Has page title"
+          ],
+          "text_length": 2112,
+          "business_relevance": "medium",
+          "keyword_matches": 2
+        },
+        "javascript_analysis": {
+          "dependency_level": "moderate",
+          "spa_frameworks": [],
+          "dynamic_loading_patterns": [
+            "ajax",
+            "async",
+            "defer"
+          ],
+          "protection_detected": false,
+          "risk_score": 30,
+          "risk_factors": [
+            "Dynamic loading: 3 patterns",
+            "Heavy JS usage: 25 script tags"
+          ]
+        }
+      },
+      "cost_estimate": {
+        "http_cost": 0.0,
+        "apify_cost_usd": 0.002,
+        "recommended_cost": 0.001
+      },
+      "confidence_factors": [],
+      "processing_time": 0.6208407878875732
+    },
+    {
+      "url": "http://www.involvedmedia.ca",
+      "analyzed_at": "2025-09-25T00:41:27.361708",
+      "recommendation": {
+        "method": "APIFY_REQUIRED",
+        "confidence": 0.95,
+        "reasoning": [
+          "High quality HTTP content (score: 80)",
+          "Heavy JavaScript dependency (risk: 70)",
+          "Bot protection detected"
+        ]
+      },
+      "technical_analysis": {
+        "http_accessible": true,
+        "status_code": 200,
+        "content_length": 56676,
+        "response_time": 1.3315706253051758,
+        "content_quality": {
+          "quality": "high",
+          "score": 80,
+          "indicators": [
+            "Good text content (2000+ chars)",
+            "Has structured headings",
+            "Has paragraph content",
+            "Good navigation (53 links)",
+            "High business relevance (7 keywords)",
+            "Has page title"
+          ],
+          "text_length": 3081,
+          "business_relevance": "high",
+          "keyword_matches": 7
+        },
+        "javascript_analysis": {
+          "dependency_level": "heavy",
+          "spa_frameworks": [],
+          "dynamic_loading_patterns": [
+            "ajax",
+            "async",
+            "defer"
+          ],
+          "protection_detected": true,
+          "risk_score": 70,
+          "risk_factors": [
+            "Dynamic loading: 3 patterns",
+            "Protection: cloudflare, captcha",
+            "Heavy JS usage: 23 script tags"
+          ]
+        }
+      },
+      "cost_estimate": {
+        "http_cost": 0.0,
+        "apify_cost_usd": 0.002,
+        "recommended_cost": 0.002
+      },
+      "confidence_factors": [],
+      "processing_time": 1.4942069053649902
+    },
+    {
+      "url": "https://www.altitudestrategies.ca",
+      "analyzed_at": "2025-09-25T00:41:27.361708",
+      "recommendation": {
+        "method": "APIFY_REQUIRED",
+        "confidence": 0.95,
+        "reasoning": [
+          "High quality HTTP content (score: 93)",
+          "Heavy JavaScript dependency (risk: 75)",
+          "Bot protection detected"
+        ]
+      },
+      "technical_analysis": {
+        "http_accessible": true,
+        "status_code": 200,
+        "content_length": 367098,
+        "response_time": 1.6942384243011475,
+        "content_quality": {
+          "quality": "high",
+          "score": 93,
+          "indicators": [
+            "Rich text content (5000+ chars)",
+            "Has structured headings",
+            "Has paragraph content",
+            "Good navigation (275 links)",
+            "Medium business relevance (5 keywords)",
+            "Has meta description",
+            "Has page title"
+          ],
+          "text_length": 19463,
+          "business_relevance": "high",
+          "keyword_matches": 5
+        },
+        "javascript_analysis": {
+          "dependency_level": "heavy",
+          "spa_frameworks": [],
+          "dynamic_loading_patterns": [
+            "spinner",
+            "ajax",
+            "async",
+            "defer",
+            "lazy-load",
+            "loadmore"
+          ],
+          "protection_detected": true,
+          "risk_score": 75,
+          "risk_factors": [
+            "Dynamic loading: 6 patterns",
+            "Protection: captcha",
+            "Heavy JS usage: 71 script tags"
+          ]
+        }
+      },
+      "cost_estimate": {
+        "http_cost": 0.0,
+        "apify_cost_usd": 0.002,
+        "recommended_cost": 0.002
+      },
+      "confidence_factors": [],
+      "processing_time": 1.9299099445343018
+    },
+    {
+      "url": "http://www.theog.co",
+      "analyzed_at": "2025-09-25T00:41:27.359021",
+      "recommendation": {
+        "method": "APIFY_REQUIRED",
+        "confidence": 0.95,
+        "reasoning": [
+          "High quality HTTP content (score: 85)",
+          "Heavy JavaScript dependency (risk: 100)",
+          "SPA frameworks detected: ember",
+          "Bot protection detected"
+        ]
+      },
+      "technical_analysis": {
+        "http_accessible": true,
+        "status_code": 200,
+        "content_length": 90402,
+        "response_time": 2.2849273681640625,
+        "content_quality": {
+          "quality": "high",
+          "score": 85,
+          "indicators": [
+            "Good text content (2000+ chars)",
+            "Has structured headings",
+            "Has paragraph content",
+            "Good navigation (35 links)",
+            "High business relevance (6 keywords)",
+            "Has meta description",
+            "Has page title"
+          ],
+          "text_length": 3612,
+          "business_relevance": "high",
+          "keyword_matches": 6
+        },
+        "javascript_analysis": {
+          "dependency_level": "heavy",
+          "spa_frameworks": [
+            "ember"
+          ],
+          "dynamic_loading_patterns": [
+            "please wait",
+            "spinner",
+            "ajax",
+            "async",
+            "defer"
+          ],
+          "protection_detected": true,
+          "risk_score": 100,
+          "risk_factors": [
+            "SPA framework: ember",
+            "Dynamic loading: 5 patterns",
+            "Protection: cloudflare, captcha, please wait",
+            "Heavy JS usage: 38 script tags"
+          ]
+        }
+      },
+      "cost_estimate": {
+        "http_cost": 0.0,
+        "apify_cost_usd": 0.002,
+        "recommended_cost": 0.002
+      },
+      "confidence_factors": [],
+      "processing_time": 2.342620611190796
+    },
+    {
+      "url": "http://www.bigfishcreative.ca",
+      "analyzed_at": "2025-09-25T00:41:27.367807",
+      "recommendation": {
+        "method": "APIFY_REQUIRED",
+        "confidence": 0.95,
+        "reasoning": [
+          "High quality HTTP content (score: 100)",
+          "Heavy JavaScript dependency (risk: 70)",
+          "Bot protection detected"
+        ]
+      },
+      "technical_analysis": {
+        "http_accessible": true,
+        "status_code": 200,
+        "content_length": 193474,
+        "response_time": 2.854081630706787,
+        "content_quality": {
+          "quality": "high",
+          "score": 100,
+          "indicators": [
+            "Rich text content (5000+ chars)",
+            "Has structured headings",
+            "Has paragraph content",
+            "Good navigation (115 links)",
+            "High business relevance (7 keywords)",
+            "Has meta description",
+            "Has page title"
+          ],
+          "text_length": 6629,
+          "business_relevance": "high",
+          "keyword_matches": 7
+        },
+        "javascript_analysis": {
+          "dependency_level": "heavy",
+          "spa_frameworks": [],
+          "dynamic_loading_patterns": [
+            "ajax",
+            "async",
+            "defer"
+          ],
+          "protection_detected": true,
+          "risk_score": 70,
+          "risk_factors": [
+            "Dynamic loading: 3 patterns",
+            "Protection: cloudflare",
+            "Heavy JS usage: 71 script tags"
+          ]
+        }
+      },
+      "cost_estimate": {
+        "http_cost": 0.0,
+        "apify_cost_usd": 0.002,
+        "recommended_cost": 0.002
+      },
+      "confidence_factors": [],
+      "processing_time": 3.154860019683838
+    },
+    {
+      "url": "http://www.nimiopere.com",
+      "analyzed_at": "2025-09-25T00:41:27.367807",
+      "recommendation": {
+        "method": "APIFY_REQUIRED",
+        "confidence": 0.19999999999999996,
+        "reasoning": [
+          "Moderate HTTP content quality (score: 25)",
+          "Moderate JavaScript usage (risk: 40)",
+          "SPA frameworks detected: ember",
+          "Apify recommended - better reliability expected (confidence: 0.20)"
+        ]
+      },
+      "technical_analysis": {
+        "http_accessible": true,
+        "status_code": 200,
+        "content_length": 618460,
+        "response_time": 3.8282251358032227,
+        "content_quality": {
+          "quality": "low",
+          "score": 25,
+          "indicators": [
+            "Has structured headings",
+            "Has meta description",
+            "Has page title"
+          ],
+          "text_length": 214,
+          "business_relevance": "low",
+          "keyword_matches": 1
+        },
+        "javascript_analysis": {
+          "dependency_level": "moderate",
+          "spa_frameworks": [
+            "ember"
+          ],
+          "dynamic_loading_patterns": [],
+          "protection_detected": false,
+          "risk_score": 40,
+          "risk_factors": [
+            "SPA framework: ember",
+            "Heavy JS usage: 26 script tags"
+          ]
+        }
+      },
+      "cost_estimate": {
+        "http_cost": 0.0,
+        "apify_cost_usd": 0.002,
+        "recommended_cost": 0.002
+      },
+      "confidence_factors": [],
+      "processing_time": 4.245803117752075
+    }
+  ]
+}

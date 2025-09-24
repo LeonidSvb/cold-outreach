@@ -1,6 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/script-runner/page": "app/script-runner/page.js"
+  "/components-test/page": "app/components-test/page.js",
+  "/dashboard/page": "app/dashboard/page.js"
 }

@@ -1,12 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { toast } from 'sonner'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, RefreshCw, TrendingUp, Mail, Target } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Badge } from '@/components/ui/badge'
+import { Alert, AlertDescription } from '@/components/ui/alert'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts'
 
 interface DailyData {
@@ -42,6 +44,7 @@ interface DashboardData {
 export default function InstantlyDashboard() {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [selectedPeriod, setSelectedPeriod] = useState<string>('all')
   const [selectedCampaigns, setSelectedCampaigns] = useState<string[]>([])
 
@@ -51,7 +54,13 @@ export default function InstantlyDashboard() {
 
   const loadDashboardData = async () => {
     setLoading(true)
+    setError(null)
     try {
+      // Simulate API call with potential failure
+      if (Math.random() > 0.8) {
+        throw new Error('Failed to fetch dashboard data from API')
+      }
+
       // Mock data loading - later we'll replace with real API
       const mockData: DashboardData = {
         dailyData: [
@@ -119,7 +128,11 @@ export default function InstantlyDashboard() {
       setData(mockData)
       // Initialize with all campaigns selected
       setSelectedCampaigns(mockData.campaigns.map(c => c.campaign_id))
+      toast.success('Dashboard data loaded successfully')
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
+      setError(errorMessage)
+      toast.error(`Failed to load dashboard: ${errorMessage}`)
       console.error('Failed to load dashboard data:', error)
     } finally {
       setLoading(false)
@@ -185,6 +198,26 @@ export default function InstantlyDashboard() {
         <div className="text-center space-y-4">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
           <p className="text-muted-foreground">Loading dashboard...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <div className="max-w-md w-full">
+          <Alert className="border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive">
+            <AlertDescription className="text-sm">
+              {error}
+            </AlertDescription>
+          </Alert>
+          <div className="mt-4 text-center">
+            <Button onClick={loadDashboardData} variant="outline">
+              <RefreshCw className="w-4 h-4 mr-2" />
+              Try Again
+            </Button>
+          </div>
         </div>
       </div>
     )

@@ -27,6 +27,14 @@ const tools: Tool[] = [
     color: 'bg-green-500 hover:bg-green-600'
   },
   {
+    id: 'components-test',
+    name: 'UI Components Test',
+    description: 'Test and showcase shadcn/ui components and interactions',
+    href: '/components-test',
+    status: 'ready',
+    color: 'bg-pink-500 hover:bg-pink-600'
+  },
+  {
     id: 'apollo',
     name: 'Apollo Leads',
     description: 'Lead collection and management from Apollo API',
@@ -130,15 +138,15 @@ export default function Home() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-blue-600 mb-2">6</div>
+            <div className="text-2xl font-bold text-blue-600 mb-2">7</div>
             <div className="text-gray-600">Active Modules</div>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-green-600 mb-2">2</div>
+            <div className="text-2xl font-bold text-green-600 mb-2">3</div>
             <div className="text-gray-600">Ready Tools</div>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-purple-600 mb-2">v6.3.0</div>
+            <div className="text-2xl font-bold text-purple-600 mb-2">v7.2.0</div>
             <div className="text-gray-600">Current Version</div>
           </div>
         </div>
