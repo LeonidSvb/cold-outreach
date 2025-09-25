@@ -42,7 +42,7 @@ export default function ScriptRunner() {
 
   const fetchScripts = async () => {
     try {
-      const response = await fetch('http://localhost:8001/api/scripts')
+      const response = await fetch('/api/scripts')
       const data = await response.json()
       setScripts(data)
       if (data.length > 0) {
@@ -55,7 +55,7 @@ export default function ScriptRunner() {
 
   const fetchUploadedFiles = async () => {
     try {
-      const response = await fetch('http://localhost:8005/api/uploaded-files')
+      const response = await fetch('/api/uploaded-files')
       const data = await response.json()
       setUploadedFiles(data)
     } catch (error) {
@@ -71,7 +71,7 @@ export default function ScriptRunner() {
     formData.append('file', file)
 
     try {
-      const response = await fetch('http://localhost:8005/api/upload', {
+      const response = await fetch('/api/upload', {
         method: 'POST',
         body: formData,
       })
@@ -92,7 +92,7 @@ export default function ScriptRunner() {
 
     // Load file preview
     try {
-      const response = await fetch(`http://localhost:8005/api/files/${fileId}/preview`)
+      const response = await fetch(`/api/files/${fileId}/preview`)
       const data = await response.json()
       // Update preview component with loaded data
     } catch (error) {
@@ -113,7 +113,7 @@ export default function ScriptRunner() {
         formData.append('file', selectedFile)
       }
 
-      const response = await fetch('http://localhost:8001/api/run-script', {
+      const response = await fetch('/api/run-script', {
         method: 'POST',
         body: formData,
       })

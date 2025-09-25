@@ -8,18 +8,11 @@ interface CsvPreviewProps {
 }
 
 interface PreviewData {
-  metadata: {
-    id: string
-    original_name: string
-    rows: number
-    columns: string[]
-    detected_columns: Record<string, string>
-    upload_date: string
-  }
-  headers: string[]
-  preview: Record<string, string>[]
+  columns: string[]
+  column_types: Record<string, any>
+  rows: Record<string, string>[]
   total_rows: number
-  showing: number
+  preview_rows: number
 }
 
 const COLUMN_TYPES = {
@@ -50,15 +43,17 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
   useEffect(() => {
     if (previewData) {
       // Initialize visible columns - show detected columns by default
-      const detectedCols = Object.values(previewData.metadata.detected_columns)
-      setVisibleColumns(showAllColumns ? previewData.headers : detectedCols)
+      const detectedCols = Object.keys(previewData.column_types).filter(col =>
+        ['company', 'website', 'email', 'phone', 'name', 'title', 'location'].includes(previewData.column_types[col]?.type)
+      )
+      setVisibleColumns(showAllColumns ? previewData.columns : detectedCols)
     }
   }, [previewData, showAllColumns])
 
   const fetchPreview = async (id: string) => {
     setLoading(true)
     try {
-      const response = await fetch(`http://localhost:8005/api/files/${id}/preview`)
+      const response = await fetch(`/api/files/${id}/preview`)
       const data = await response.json()
       setPreviewData(data)
     } catch (error) {
@@ -70,16 +65,10 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
   }
 
   const getColumnType = (columnName: string) => {
-    const detected = previewData?.metadata.detected_columns
-    if (!detected) return null
+    const columnInfo = previewData?.column_types[columnName]
+    if (!columnInfo) return null
 
-    // Find which type this column is detected as
-    for (const [type, detectedCol] of Object.entries(detected)) {
-      if (detectedCol === columnName) {
-        return type as keyof typeof COLUMN_TYPES
-      }
-    }
-    return null
+    return columnInfo.type as keyof typeof COLUMN_TYPES
   }
 
   if (!fileId) {
@@ -134,9 +123,9 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
 
       {/* File Info */}
       <div className="mb-6">
-        <h4 className="font-medium text-gray-900">{previewData.metadata.original_name}</h4>
+        <h4 className="font-medium text-gray-900">CSV File Preview</h4>
         <p className="text-sm text-gray-500">
-          Uploaded {new Date(previewData.metadata.upload_date).toLocaleDateString()}
+          {previewData.total_rows} rows with {previewData.columns.length} columns
         </p>
       </div>
 
@@ -155,7 +144,7 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
             <Columns className="h-4 w-4 text-green-600" />
             <span className="text-sm font-medium text-green-900">Total Columns</span>
           </div>
-          <p className="text-2xl font-bold text-green-600">{previewData.headers.length}</p>
+          <p className="text-2xl font-bold text-green-600">{previewData.columns.length}</p>
         </div>
 
         <div className="bg-purple-50 rounded-lg p-3">
@@ -164,7 +153,9 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
             <span className="text-sm font-medium text-purple-900">Detected Types</span>
           </div>
           <p className="text-2xl font-bold text-purple-600">
-            {Object.keys(previewData.metadata.detected_columns).length}
+            {Object.keys(previewData.column_types).filter(col =>
+              ['company', 'website', 'email', 'phone', 'name', 'title', 'location'].includes(previewData.column_types[col]?.type)
+            ).length}
           </p>
         </div>
       </div>
@@ -173,19 +164,23 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
       <div className="mb-6">
         <h4 className="text-sm font-medium text-gray-700 mb-3">Detected Column Types:</h4>
         <div className="flex flex-wrap gap-2">
-          {Object.entries(previewData.metadata.detected_columns).map(([type, column]) => {
-            const typeInfo = COLUMN_TYPES[type as keyof typeof COLUMN_TYPES]
+          {Object.entries(previewData.column_types).map(([columnName, columnInfo]) => {
+            if (!['company', 'website', 'email', 'phone', 'name', 'title', 'location'].includes(columnInfo.type)) return null
+
+            const typeInfo = COLUMN_TYPES[columnInfo.type as keyof typeof COLUMN_TYPES]
             return (
               <div
-                key={type}
+                key={columnName}
                 className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${typeInfo?.color || 'bg-gray-100 text-gray-800'}`}
               >
-                <span className="mr-1">{typeInfo?.icon}</span>
-                {typeInfo?.label}: {column}
+                <span className="mr-1">{columnInfo.icon || typeInfo?.icon}</span>
+                {typeInfo?.label}: {columnName}
               </div>
             )
           })}
-          {Object.keys(previewData.metadata.detected_columns).length === 0 && (
+          {Object.keys(previewData.column_types).filter(col =>
+            ['company', 'website', 'email', 'phone', 'name', 'title', 'location'].includes(previewData.column_types[col]?.type)
+          ).length === 0 && (
             <span className="text-sm text-gray-500">No columns detected automatically</span>
           )}
         </div>
@@ -195,10 +190,10 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
       <div className="mb-4">
         <div className="flex items-center justify-between mb-2">
           <h4 className="text-sm font-medium text-gray-700">
-            Last {previewData.showing} rows preview:
+            Preview ({previewData.preview_rows} rows):
           </h4>
           <span className="text-xs text-gray-500">
-            Showing {visibleColumns.length} of {previewData.headers.length} columns
+            Showing {visibleColumns.length} of {previewData.columns.length} columns
           </span>
         </div>
 
@@ -231,10 +226,10 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {previewData.preview.map((row, rowIndex) => (
+              {previewData.rows.map((row, rowIndex) => (
                 <tr key={rowIndex} className={rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td className="px-3 py-2 text-xs text-gray-500 font-mono">
-                    {previewData.total_rows - previewData.showing + rowIndex + 1}
+                    {rowIndex + 1}
                   </td>
                   {visibleColumns.map((header) => (
                     <td
@@ -252,18 +247,19 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
         </div>
 
         <p className="text-xs text-gray-500 mt-2">
-          Showing last {previewData.showing} rows out of {previewData.total_rows} total rows
+          Showing {previewData.preview_rows} rows out of {previewData.total_rows} total rows
         </p>
       </div>
 
       {/* All Columns List */}
       {!showAllColumns && (
         <div className="bg-gray-50 rounded p-3">
-          <h4 className="text-sm font-medium text-gray-700 mb-2">All Columns ({previewData.headers.length}):</h4>
+          <h4 className="text-sm font-medium text-gray-700 mb-2">All Columns ({previewData.columns.length}):</h4>
           <div className="flex flex-wrap gap-1">
-            {previewData.headers.map((header) => {
+            {previewData.columns.map((header) => {
               const columnType = getColumnType(header)
               const isVisible = visibleColumns.includes(header)
+              const columnInfo = previewData.column_types[header]
 
               return (
                 <span
@@ -276,8 +272,8 @@ export default function CsvPreview({ fileId }: CsvPreviewProps) {
                         : 'bg-gray-100 text-gray-600'
                   }`}
                 >
-                  {columnType && COLUMN_TYPES[columnType].icon && (
-                    <span className="mr-1">{COLUMN_TYPES[columnType].icon}</span>
+                  {columnInfo?.icon && (
+                    <span className="mr-1">{columnInfo.icon}</span>
                   )}
                   {header}
                   {columnType && <CheckCircle className="h-3 w-3 ml-1" />}
