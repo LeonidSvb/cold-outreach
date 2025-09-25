@@ -180,6 +180,45 @@ def get_available_scripts() -> List[Dict[str, Any]]:
     """Get list of available scripts with their configurations"""
     scripts = []
 
+    # CSV Column Transformer
+    csv_transformer = Path("../modules/csv_transformer/csv_column_transformer.py")
+    if csv_transformer.exists():
+        scripts.append({
+            "name": "csv_column_transformer",
+            "description": "AI-powered CSV column transformation with customizable prompts",
+            "path": str(csv_transformer),
+            "requiresFile": True,
+            "config": [
+                {
+                    "name": "Transformation Settings",
+                    "fields": [
+                        {
+                            "key": "new_column_name",
+                            "label": "New Column Name",
+                            "type": "text",
+                            "defaultValue": "transformed_column",
+                            "description": "Name for the new transformed column"
+                        },
+                        {
+                            "key": "max_rows",
+                            "label": "Max Rows to Process",
+                            "type": "number",
+                            "defaultValue": 100,
+                            "description": "Limit processing for cost control"
+                        },
+                        {
+                            "key": "prompt_type",
+                            "label": "Transformation Type",
+                            "type": "select",
+                            "defaultValue": "COMPANY_NAME_NORMALIZER",
+                            "options": ["COMPANY_NAME_NORMALIZER", "CITY_NORMALIZER"],
+                            "description": "Select transformation prompt"
+                        }
+                    ]
+                }
+            ]
+        })
+
     # Check for openai_mass_processor
     openai_script = Path("../modules/openai/openai_mass_processor.py")
     if openai_script.exists():

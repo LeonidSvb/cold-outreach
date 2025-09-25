@@ -9,6 +9,7 @@ import os
 import subprocess
 import uuid
 import csv
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
@@ -19,6 +20,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from script_runner import get_available_scripts, run_openai_processor_with_monitoring
+
+# Import CSV transformer
+sys.path.append(str(Path(__file__).parent.parent / "modules" / "csv_transformer"))
+from api_wrapper import csv_transformer_api
 
 app = FastAPI(title="Script Runner API", version="1.0.0")
 
@@ -70,6 +75,46 @@ class UploadResponse(BaseModel):
     columns: List[str]
     detected_columns: Dict[str, str]
     message: str
+
+# CSV Transformer Models
+class ColumnInfo(BaseModel):
+    type: str
+    dtype: str
+    non_null_count: int
+    null_percentage: float
+    sample_values: List[str]
+    avg_length: Optional[float] = None
+    max_length: Optional[int] = None
+
+class PromptInfo(BaseModel):
+    id: str
+    section: str
+    name: str
+    purpose: str
+    input_columns: List[str]
+    output: str
+
+class CSVAnalysisResponse(BaseModel):
+    success: bool
+    file_info: Optional[Dict[str, Any]] = None
+    column_details: Dict[str, ColumnInfo] = {}
+    preview_data: List[Dict[str, Any]] = []
+    available_prompts: List[PromptInfo] = []
+    error: Optional[str] = None
+
+class TransformRequest(BaseModel):
+    file_id: str
+    selected_columns: List[str]
+    prompt_id: str
+    new_column_name: str
+    max_rows: Optional[int] = None
+
+class TransformResponse(BaseModel):
+    success: bool
+    summary: Optional[Dict[str, Any]] = None
+    sample_results: List[Dict[str, Any]] = []
+    output_file: Optional[str] = None
+    error: Optional[str] = None
 
 def parse_script_config(script_path: str) -> Optional[Dict[str, Any]]:
     """Extract CONFIG from Python script"""
@@ -468,6 +513,111 @@ async def execute_openai_processor(job_id: str, config: Dict, file_path: Optiona
         job["status"] = "error"
         job["error"] = str(e)
         job["logs"].append(f"Execution failed: {str(e)}")
+
+# CSV Transformer Endpoints
+@app.post("/api/csv/analyze/{file_id}", response_model=CSVAnalysisResponse)
+async def analyze_csv_file(file_id: str):
+    """Analyze uploaded CSV file for transformation"""
+    upload_dir = Path("uploads")
+    metadata_file = upload_dir / f"{file_id}_metadata.json"
+
+    if not metadata_file.exists():
+        raise HTTPException(status_code=404, detail="File not found")
+
+    try:
+        # Load metadata
+        with open(metadata_file, "r") as f:
+            metadata = json.load(f)
+
+        # Get actual file path
+        csv_file = upload_dir / metadata["filename"]
+        if not csv_file.exists():
+            raise HTTPException(status_code=404, detail="CSV file not found")
+
+        # Analyze with our CSV transformer
+        analysis = csv_transformer_api.analyze_csv_file(str(csv_file))
+
+        if not analysis["success"]:
+            return CSVAnalysisResponse(
+                success=False,
+                error=analysis["error"]
+            )
+
+        # Convert to response format
+        column_details = {}
+        for col, info in analysis["column_details"].items():
+            column_details[col] = ColumnInfo(**info)
+
+        prompts = [PromptInfo(**prompt) for prompt in analysis["available_prompts"]]
+
+        return CSVAnalysisResponse(
+            success=True,
+            file_info=analysis["file_info"],
+            column_details=column_details,
+            preview_data=analysis["preview_data"],
+            available_prompts=prompts
+        )
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Analysis failed: {str(e)}")
+
+@app.post("/api/csv/transform", response_model=TransformResponse)
+async def transform_csv_file(request: TransformRequest):
+    """Transform CSV file with selected columns and prompt"""
+    upload_dir = Path("uploads")
+    metadata_file = upload_dir / f"{request.file_id}_metadata.json"
+
+    if not metadata_file.exists():
+        raise HTTPException(status_code=404, detail="File not found")
+
+    try:
+        # Load metadata
+        with open(metadata_file, "r") as f:
+            metadata = json.load(f)
+
+        # Get actual file path
+        csv_file = upload_dir / metadata["filename"]
+        if not csv_file.exists():
+            raise HTTPException(status_code=404, detail="CSV file not found")
+
+        # Perform transformation
+        result = await csv_transformer_api.transform_csv(
+            file_path=str(csv_file),
+            selected_columns=request.selected_columns,
+            prompt_id=request.prompt_id,
+            new_column_name=request.new_column_name,
+            max_rows=request.max_rows
+        )
+
+        if not result["success"]:
+            return TransformResponse(
+                success=False,
+                error=result["error"]
+            )
+
+        return TransformResponse(
+            success=True,
+            summary=result["summary"],
+            sample_results=result["sample_results"],
+            output_file=result["output_file"]
+        )
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Transformation failed: {str(e)}")
+
+@app.get("/api/csv/prompts")
+async def get_available_prompts():
+    """Get all available transformation prompts"""
+    try:
+        # Use a dummy file path to get prompts (we only need the prompt manager)
+        analysis = csv_transformer_api.analyze_csv_file("dummy")
+        return {
+            "prompts": analysis["available_prompts"]
+        }
+    except Exception as e:
+        return {
+            "prompts": []
+        }
 
 if __name__ == "__main__":
     import uvicorn

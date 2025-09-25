@@ -4,6 +4,28 @@
 
 ## [Unreleased]
 
+## [8.0.0] - 2025-09-25 - CSV Column Transformer with Full API Integration
+
+### Added
+- **CSV Column Transformer Module**: Complete AI-powered CSV transformation system with interactive column detection and custom prompt application
+- **Interactive Column Selection**: Auto-detection of CSV structure with type analysis (email, URL, phone, text lengths) and sample value preview
+- **Flexible Prompt System**: Markdown-based prompt library with company name normalization and city abbreviation transformers
+- **FastAPI Integration**: Full REST API endpoints for CSV analysis (/api/csv/analyze), transformation (/api/csv/transform), and prompt management
+- **Web UI Backend Support**: Added csv_column_transformer to available scripts list with configuration forms
+- **API Response Models**: Complete Pydantic models for CSV analysis, transformation requests, and structured responses
+- **Production Testing**: Successfully tested on real lead data (50 leads) with company name normalization and city processing
+
+### Changed
+- **API Architecture**: Extended existing FastAPI backend with specialized CSV transformation endpoints
+- **Script Registry**: Enhanced script_runner.py to include CSV transformer in available processing scripts
+- **OpenAI Integration**: Updated to latest OpenAI Python SDK (v1.0+) with proper client initialization
+- **Module Structure**: Added api_wrapper.py for seamless integration between standalone scripts and web API
+
+### Fixed
+- **Windows Encoding Issues**: Resolved Unicode display problems in console output with character encoding fixes
+- **OpenAI API Compatibility**: Fixed deprecated ChatCompletion.create() calls to use new client.chat.completions.create() syntax
+- **Path Resolution**: Corrected module imports and environment variable loading for nested API integration
+
 ## [7.5.0] - 2025-09-25 - Complete Modular Scraping System with AI Intelligence
 
 ### Added
