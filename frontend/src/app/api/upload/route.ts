@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { writeFile, mkdir } from 'fs/promises'
-import { existsSync } from 'fs'
-import path from 'path'
 import { v4 as uuidv4 } from 'uuid'
 import { spawn } from 'child_process'
+import path from 'path'
+import { uploadCSVToSupabase } from '../../../../lib/supabase'
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,23 +13,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'No file uploaded' }, { status: 400 })
     }
 
-    // Create uploads directory in /tmp for Vercel
-    const uploadsDir = '/tmp/uploads'
-    if (!existsSync(uploadsDir)) {
-      await mkdir(uploadsDir, { recursive: true })
-    }
-
-    // Generate unique file ID and save file
+    // Generate unique file ID
     const fileId = uuidv4()
-    const fileExtension = path.extname(file.name)
-    const fileName = `${fileId}${fileExtension}`
-    const filePath = path.join(uploadsDir, fileName)
-
-    const bytes = await file.arrayBuffer()
-    const buffer = Buffer.from(bytes)
-    await writeFile(filePath, buffer)
 
     // Call Python CSV transformer API integration for analysis
+    const buffer = Buffer.from(await file.arrayBuffer())
     const analysisResult = await callPythonModule('analyze_csv_structure', {
       file_content: buffer.toString('base64'),
       filename: file.name
@@ -40,27 +27,31 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: analysisResult.error }, { status: 500 })
     }
 
-    // Store file metadata for later use
-    const fileMetadata = {
-      id: fileId,
-      filename: fileName,
+    // Upload to Supabase Storage and save metadata
+    const uploadResult = await uploadCSVToSupabase(file, fileId, {
+      filename: `${fileId}.csv`,
       original_name: file.name,
-      upload_date: new Date().toISOString(),
-      analysis: analysisResult,
-      path: filePath
+      total_rows: analysisResult.total_rows || 0,
+      total_columns: analysisResult.columns?.length || 0,
+      column_types: analysisResult.column_types || {},
+      detected_key_columns: analysisResult.detected_key_columns || {},
+      file_size: file.size
+    })
+
+    if (!uploadResult.success) {
+      return NextResponse.json({ error: uploadResult.error }, { status: 500 })
     }
 
-    // In production, you'd store this in a database
-    // For now, we rely on the file system
-
     return NextResponse.json({
+      success: true,
       file_id: fileId,
       analysis: {
         rows: analysisResult.total_rows,
         columns: analysisResult.columns,
         column_types: analysisResult.column_types,
         detected_types: analysisResult.detected_key_columns
-      }
+      },
+      metadata: uploadResult.data
     })
 
   } catch (error) {

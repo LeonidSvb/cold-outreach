@@ -1,41 +1,21 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { readdir, stat } from 'fs/promises'
-import { existsSync } from 'fs'
-import path from 'path'
+import { NextResponse } from 'next/server'
+import { getUploadedFiles } from '../../../../lib/supabase'
 
 export async function GET() {
   try {
-    const uploadsDir = '/tmp/uploads'
+    const files = await getUploadedFiles()
 
-    if (!existsSync(uploadsDir)) {
-      return NextResponse.json([])
-    }
-
-    const files = await readdir(uploadsDir)
-    const fileList = []
-
-    for (const filename of files) {
-      if (filename.endsWith('.csv')) {
-        const filePath = path.join(uploadsDir, filename)
-        const fileStat = await stat(filePath)
-
-        // Extract UUID from filename (before extension)
-        const fileId = path.basename(filename, path.extname(filename))
-
-        fileList.push({
-          id: fileId,
-          filename: filename,
-          original_name: filename, // In real app, store original names
-          upload_date: fileStat.mtime.toISOString(),
-          rows: 0, // Would be stored in metadata
-          columns: [], // Would be stored in metadata
-          size: fileStat.size
-        })
-      }
-    }
-
-    // Sort by upload date (newest first)
-    fileList.sort((a, b) => new Date(b.upload_date).getTime() - new Date(a.upload_date).getTime())
+    // Transform to match frontend expectations
+    const fileList = files.map(file => ({
+      id: file.id,
+      filename: file.filename,
+      original_name: file.original_name,
+      upload_date: file.upload_date,
+      rows: file.total_rows,
+      columns: Object.keys(file.column_types || {}),
+      size: file.file_size,
+      detected_types: file.detected_key_columns
+    }))
 
     return NextResponse.json(fileList)
 

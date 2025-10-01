@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFile } from 'fs/promises'
-import { existsSync } from 'fs'
-import path from 'path'
+import { getFileContent } from '../../../../../../lib/supabase'
 
 export async function GET(
   request: NextRequest,
@@ -9,15 +7,16 @@ export async function GET(
 ) {
   try {
     const { fileId } = params
-    const uploadsDir = '/tmp/uploads'
-    const filePath = path.join(uploadsDir, `${fileId}.csv`)
 
-    if (!existsSync(filePath)) {
-      return NextResponse.json({ error: 'File not found' }, { status: 404 })
+    // Get file content from Supabase
+    const result = await getFileContent(fileId)
+
+    if (result.error || !result.content) {
+      return NextResponse.json({ error: result.error || 'File not found' }, { status: 404 })
     }
 
     // Read and parse CSV
-    const content = await readFile(filePath, 'utf-8')
+    const content = result.content
     const lines = content.split('\n').filter(line => line.trim())
 
     if (lines.length === 0) {
