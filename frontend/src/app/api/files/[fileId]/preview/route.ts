@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getFileContent } from '../../../../../../lib/supabase'
+import { getFileContent } from '../../../../../lib/supabase'
 
 export async function GET(
   request: NextRequest,

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { v4 as uuidv4 } from 'uuid'
 import { spawn } from 'child_process'
 import path from 'path'
-import { uploadCSVToSupabase } from '../../../../lib/supabase'
+import { uploadCSVToSupabase } from '../../../lib/supabase'
 
 export async function POST(request: NextRequest) {
   try {

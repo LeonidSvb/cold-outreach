@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { getUploadedFiles } from '../../../../lib/supabase'
+import { getUploadedFiles } from '../../../lib/supabase'
 
 export async function GET() {
   try {
