@@ -34,7 +34,12 @@
   - Level 5: Frontend (Next.js UI)
 - **Modular Architecture Decision**: Backend orchestrates individual scripts from modules, not entire modules
 - **Service vs Endpoint Pattern**: Thin endpoints (HTTP wrappers) + thick services (reusable business logic)
-- **Sprint Documentation**: architecture-levels-and-data-flow.md with complete system design rationale
+- **Sprint Documentation System**: Organized structure for dynamic task management
+  - `docs/sprints/01-first-campaign-launch/README.md` - Sprint overview with progress tracking
+  - `docs/sprints/01-first-campaign-launch/tasks/_template.md` - Comprehensive task template
+  - `docs/sprints/01-first-campaign-launch/docs/` - Reference documentation folder
+  - `docs/sprints/01-first-campaign-launch/docs/architecture-levels-and-data-flow.md` - System architecture
+  - `docs/sprints/01-first-campaign-launch/docs/modular-vs-wizard-decision-and-implementation-plan.md` - Architecture decisions + 4-day implementation plan
 
 ### Changed
 - **Database Strategy**: Raw layer first (Instantly JSON → Supabase), normalized layer later
