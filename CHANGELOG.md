@@ -7,27 +7,49 @@
 ## [Unreleased]
 
 ### Next Session Plan
-**Sprint:** First Campaign Launch (see [docs/sprints/2025-10-02_first-campaign-launch.md](docs/sprints/2025-10-02_first-campaign-launch.md))
+**Sprint:** First Campaign Launch (see [docs/sprints/01-first-campaign-launch/](docs/sprints/01-first-campaign-launch/))
 
 **Priority Tasks:**
-1. Create Supabase database schema (users, offers, leads, batches, campaigns, events, email_accounts)
-2. Configure table relationships and foreign keys
-3. Set up default user for single-user mode
-4. Test schema with sample data inserts
-5. Prepare backend scripts for normalization and icebreaker generation
+1. Execute Supabase migrations (001_users_table.sql, 002_instantly_raw_layer.sql)
+2. Test raw data layer with sample JSON inserts
+3. Create modules/instantly sync scripts (instantly_sources.py, instantly_transform.py)
+4. Build backend/services/instantly_sync.py orchestration layer
+5. Create FastAPI endpoints for Instantly sync
 
-**Goal:** Database foundation operational, ready for Python script integration
+**Goal:** Raw data layer operational, sync scripts ready for JSON → Supabase pipeline
 
 ### Added
-- **Sprint Documentation System**: Created docs/sprints/ folder with detailed sprint plans
-- **Sprint Archive**: docs/sprints/2025-10-02_first-campaign-launch.md with complete database schema, API endpoints, implementation plan
-- **Organized Documentation**: Moved PRD.md and ADR.md to docs/ folder for better structure
-- **Professional README.md**: Updated with Live Demo link, clean structure, removed npm commands (agentic coding workflow)
+- **Supabase Database Schema**: Complete SQL migrations for raw data layer
+  - `001_users_table.sql` - Users table with single-user mode, multi-user ready
+  - `002_instantly_raw_layer.sql` - 4 raw tables (campaigns, accounts, daily_analytics, emails)
+- **SQL Documentation**: Comprehensive migration guides in docs/sql/
+  - `README.md` - Step-by-step migration instructions with testing queries
+  - `STRUCTURE.md` - Complete database structure visualization with relationships
+- **Architecture Documentation**: 5-level system architecture defined
+  - Level 0: External Services (Supabase, APIs)
+  - Level 1: Scripts (individual .py files in modules/)
+  - Level 2: Modules (logical grouping folders)
+  - Level 3: Backend Services (orchestration layer)
+  - Level 4: Backend Endpoints (FastAPI routers)
+  - Level 5: Frontend (Next.js UI)
+- **Modular Architecture Decision**: Backend orchestrates individual scripts from modules, not entire modules
+- **Service vs Endpoint Pattern**: Thin endpoints (HTTP wrappers) + thick services (reusable business logic)
+- **Sprint Documentation**: architecture-levels-and-data-flow.md with complete system design rationale
 
 ### Changed
-- **README.md**: Removed direct sprint link (reduces update frequency), added Vercel deploy link, removed installation commands
-- **Documentation Structure**: All docs now in docs/ folder (PRD.md, ADR.md, sprints/)
-- **CHANGELOG Rules**: Added [Unreleased] section usage guidelines for next session planning
+- **Database Strategy**: Raw layer first (Instantly JSON → Supabase), normalized layer later
+- **Data Transformation Approach**: JSONB storage for full API responses + extracted columns for fast queries
+- **Sync Script Architecture**: Modular design (sources → transform → upload) supporting JSON files now, API later
+
+### Technical Implementation
+- **Raw Data Tables**:
+  - `instantly_campaigns_raw` - Campaign metrics with JSONB full data preservation
+  - `instantly_accounts_raw` - Email account warmup and status tracking
+  - `instantly_daily_analytics_raw` - Aggregated daily metrics per campaign
+  - `instantly_emails_raw` - Individual email events (prepared for future)
+- **Indexes**: Optimized for campaign_id, status, sync date, event type queries
+- **Triggers**: Automatic updated_at timestamp management
+- **RLS**: Row Level Security enabled, prepared for Supabase Auth integration
 
 ## [8.4.0] - 2025-10-02 - Unified CLAUDE.md Rules & Documentation Cleanup
 
