@@ -5,7 +5,7 @@
   "description": "AI-powered cold outreach automation platform",
   "scripts": {
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "backend": "cd backend && python -m uvicorn main:app --reload --port 8000",
+    "backend": "cd backend && py -m uvicorn main:app --reload --port 8000",
     "frontend": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build",
     "start": "cd frontend && npm start"
