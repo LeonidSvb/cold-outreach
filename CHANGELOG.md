@@ -10,40 +10,36 @@
 **Sprint:** First Campaign Launch (see [docs/sprints/01-first-campaign-launch/](docs/sprints/01-first-campaign-launch/))
 
 **Priority Tasks:**
-1. ✅ Complete normalized layer SQL migrations (003-009)
-2. Execute migrations 003-006 in Supabase (CSV imports + leads foundation)
-3. Create Python CSV import script (CSV → csv_imports_raw → companies + leads)
-4. Execute migrations 007-009 (campaigns + workflow + events)
-5. Create modules/instantly sync scripts (instantly_raw → events)
+1. Install Supabase MCP server and test connection
+2. Create Python CSV import script (CSV → csv_imports_raw → companies + leads)
+3. Test CSV import with real data
+4. Create modules/instantly sync scripts (instantly_raw → events)
+5. Test Instantly sync with sample JSON data
 
-**Goal:** Complete database schema ready, CSV import working, ready for Instantly sync
+**Goal:** Database operational with real data, MCP working, ready for sync scripts
 
 ### Added
-- **Normalized Layer SQL Migrations**: Complete business logic tables (migrations 003-009)
-  - `003_csv_imports_raw.sql` - Preserves original CSV uploads in JSONB for reprocessing
-  - `004_offers.sql` - Services/products we sell with pricing and target audience
-  - `005_companies.sql` - Deduplicated company data with UNIQUE domain constraint
-  - `006_leads.sql` - Individual people linked to companies + CSV source tracking
-  - `007_campaigns.sql` - Multi-channel campaigns (email/calls/LinkedIn) with Instantly/VAPI integration
-  - `008_campaign_leads.sql` - M2M workflow tracking: Email → No reply → Call
-  - `009_events.sql` - Unified timeline from all sources (Instantly/VAPI/LinkedIn/manual)
+- **Complete Database Schema**: All 9 migrations applied in Supabase (Vercel)
+  - RAW LAYER: users, instantly_campaigns_raw, instantly_accounts_raw, instantly_daily_analytics_raw, instantly_emails_raw
+  - NORMALIZED LAYER: csv_imports_raw, offers, companies, leads, campaigns, campaign_leads, events
+- **Simplified Migrations**: Removed Apollo dependencies, over-engineering, unnecessary complexity
+  - `003_csv_imports_raw.sql` - Original CSV uploads preserved in JSONB
+  - `004_offers.sql` - Minimal: name, description, dates only
+  - `005_companies.sql` - Universal source tracking (source_type, source_id, raw_data JSONB)
+  - `006_leads.sql` - Minimal fields + universal source tracking
+  - `007_campaigns.sql` - Basic fields: name, offer_id, channels, status
+  - `008_campaign_leads.sql` - M2M workflow: email_status + call_status
+  - `009_events.sql` - Multi-source timeline (instantly, vapi, linkedin, manual)
 - **Migration Strategy Guide**: Industry-standard multiple files approach with rollback procedures
   - Migration dependencies documented (005-009 depend on 003, etc.)
   - Rollback SQL for each migration (009 → 008 → 007 → ... → 001)
   - Recommended execution batches (003-006, 007-008, 009)
-- **Complete Database Architecture**: Visual diagrams for all 9 migrations with relationships
-  - Two-layer design (RAW + NORMALIZED) with full relationship mappings
-  - Companies deduplication proven by CSV analysis (26% of leads share companies)
-  - Multi-source events with event_source field (instantly, vapi, linkedin, manual)
-- **Helper Functions**: PostgreSQL functions for common queries
-  - `get_lead_timeline(lead_id)` - Chronological event timeline for a lead
-  - `get_campaign_event_stats(campaign_id)` - Event distribution by source/type
-- **Supabase Database Schema**: Complete SQL migrations for raw data layer
-  - `001_users_table.sql` - Users table with single-user mode, multi-user ready
-  - `002_instantly_raw_layer.sql` - 4 raw tables (campaigns, accounts, daily_analytics, emails)
-- **SQL Documentation**: Comprehensive migration guides in docs/sql/
-  - `README.md` - Step-by-step migration instructions with testing queries
-  - `STRUCTURE.md` - Complete database structure visualization with relationships
+- **Migrations Location**: Moved to `/migrations/` folder (industry standard, not in docs/)
+- **Minimal Documentation**: Simplified README from 457 to 80 lines
+  - Only high-level overview, order, batches, rollback
+  - Details in migration .sql file comments (single source of truth)
+  - `docs/sql/README.md` - Migration status table and quick reference
+  - `docs/sql/STRUCTURE.md` - Visual database schema with relationships
 - **Architecture Documentation**: 5-level system architecture defined
   - Level 0: External Services (Supabase, APIs)
   - Level 1: Scripts (individual .py files in modules/)
@@ -61,38 +57,27 @@
   - `docs/sprints/01-first-campaign-launch/docs/modular-vs-wizard-decision-and-implementation-plan.md` - Architecture decisions + 4-day implementation plan
 
 ### Changed
-- **Database Strategy**: Two-layer architecture (RAW + NORMALIZED) with complete 9-migration roadmap
-- **Data Transformation Approach**: JSONB storage for full API responses + extracted columns for fast queries
-- **Sync Script Architecture**: Modular design (sources → transform → upload) supporting JSON files now, API later
-- **Companies Architecture**: Separate companies table with UNIQUE domain constraint (26% lead deduplication)
-- **Events Architecture**: Unified multi-source timeline instead of separate tables per service
+- **Migration Structure**: Moved from `docs/sql/*.sql` to `/migrations/*.sql` (industry standard)
+- **Documentation Philosophy**: Minimal high-level docs, details in code comments only
+- **Universal Source Tracking**: Replaced Apollo-specific fields with `source_type` + `source_id` + `raw_data` JSONB
+- **Simplified Schema**: Removed unnecessary fields from all tables (pricing, scoring, engagement, sequences, etc.)
 
-### Technical Implementation
-- **Raw Data Tables** (001-002):
-  - `instantly_campaigns_raw` - Campaign metrics with JSONB full data preservation
-  - `instantly_accounts_raw` - Email account warmup and status tracking
-  - `instantly_daily_analytics_raw` - Aggregated daily metrics per campaign
-  - `instantly_emails_raw` - Individual email events (prepared for future)
-- **Normalized Tables** (003-009):
-  - `csv_imports_raw` - Full CSV preservation with import_status tracking
-  - `offers` - Service definitions with target_industries[], value_proposition
-  - `companies` - Deduplicated with apollo_data JSONB, first_seen_in_csv_id tracking
-  - `leads` - FK to companies + csv_imports, full_name auto-generated, lead_status lifecycle
-  - `campaigns` - Multi-channel (uses_email, uses_calls, uses_linkedin) with template fields
-  - `campaign_leads` - UNIQUE(campaign_id, lead_id), email_status + call_status + sequence_step
-  - `events` - event_source discrimination with service-specific fields (email_subject, call_duration, etc.)
-- **Indexes**: Optimized for campaign_id, status, sync date, event type, timeline queries, full-text search
-- **Triggers**: Automatic updated_at timestamps, last_activity_at tracking on status changes
-- **RLS**: Row Level Security enabled for all tables, prepared for Supabase Auth integration
-- **Auto-seed Data**: Example offer "AI Automation Services" and example campaign created on migration
+### Removed
+- **Apollo-specific fields**: `apollo_organization_id`, `apollo_data`, `apollo_contact_id` from companies/leads
+- **Over-engineered features**: pricing tiers, target audiences, value propositions, pain points, key features
+- **Unnecessary complexity**: engagement scoring, sequence tracking, email templates, campaign timing/limits
+- **Social profiles**: twitter_url, facebook_url, personal_email, mobile_phone
+- **CSV tracking**: first_seen_in_csv_id, last_seen_in_csv_id, csv_appearance_count, csv_row_number
+- **Helper functions**: get_lead_timeline(), get_campaign_event_stats() (can add later if needed)
+- **Verbose documentation**: 377 lines removed from README (kept only 80 lines)
 
-### Architecture Decisions
-- **Multiple Files Strategy**: Industry standard over single file (easier tracking, rollback, git history)
-- **Companies Deduplication**: Proven by data analysis - 1,791 leads but only 1,521 unique companies
-- **Unified Events Table**: Single timeline with event_source field instead of separate tables (easier queries, extensible)
-- **CSV Import Tracking**: csv_import_id links leads back to source for debugging and reprocessing
-- **Email → Call Workflow**: campaign_leads.email_status + call_status tracks multi-channel outreach
-- **VAPI Integration Ready**: vapi_call_id and call-specific fields in events table
+### Technical Summary
+- **9 migrations total**: 001-002 (RAW), 003-009 (NORMALIZED)
+- **All applied**: Database fully operational on Supabase (Vercel)
+- **Universal pattern**: source_type + source_id + raw_data JSONB for all external data
+- **Deduplication**: company_domain UNIQUE (26% of leads share companies)
+- **Multi-channel**: email_status + call_status workflow in campaign_leads
+- **Unified timeline**: events table with event_source field (instantly/vapi/linkedin/manual)
 
 ## [8.4.0] - 2025-10-02 - Unified CLAUDE.md Rules & Documentation Cleanup
 
