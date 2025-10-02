@@ -1,9 +1,3 @@
----
-description: Cold Outreach Automation Platform - Production Requirements
-globs:
-alwaysApply: false
----
-
 # Cold Outreach AI Automation Platform
 
 Modular AI-powered system for processing 10K-30K leads/month with intelligent personalization and multi-channel outreach.
@@ -147,7 +141,7 @@ python orchestrator.py "Batch process all CSVs in /raw folder with Apify enhance
 {
   "script_execution": {
     "start_time": "2025-09-10T10:30:00Z",
-    "end_time": "2025-09-10T11:45:00Z", 
+    "end_time": "2025-09-10T11:45:00Z",
     "total_leads_processed": 1500,
     "success_rate": 97.3,
     "avg_processing_time_per_lead": 2.1,
@@ -172,7 +166,7 @@ python orchestrator.py "Batch process all CSVs in /raw folder with Apify enhance
 
 ### Phase 1: Core Processing Engine (Week 1-2)
 1. Modular function architecture setup
-2. CSV input handler with flexible field mapping  
+2. CSV input handler with flexible field mapping
 3. Basic icebreaker generation with 10+ options
 4. Google Sheets output integration
 5. Comprehensive logging framework
@@ -217,7 +211,7 @@ python orchestrator.py "Batch process all CSVs in /raw folder with Apify enhance
 # Process full pipeline
 "Process 2000 leads from latest Apollo export with full enrichment"
 
-# Partial processing  
+# Partial processing
 "Generate icebreakers only for existing enriched data"
 "Enrich websites for apollo_leads.csv without icebreakers"
 
@@ -240,7 +234,7 @@ python orchestrator.py "Batch process all CSVs in /raw folder with Apify enhance
 - Performance optimization for 30K+ lead processing
 - Modular design enabling function reusability
 
-### Data Quality  
+### Data Quality
 - Input validation and data cleaning
 - Duplicate detection and handling
 - Output verification before Google Sheets upload

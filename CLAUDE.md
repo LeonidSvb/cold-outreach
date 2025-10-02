@@ -1,140 +1,216 @@
 # Cold Outreach Automation Platform - Claude Coding Guidelines
 
-# Core Principles
+## 🌍 ОБЩИЕ ПРАВИЛА (Python + Next.js)
 
-## Simplicity First
-- Always prefer simple solutions over complex ones
-- Avoid over-engineering or premature optimization
-- Choose straightforward implementations that are easy to understand and maintain
-- **CRITICAL: NEVER use emojis in Python scripts, console output, or any code files due to Windows encoding issues**
-- **MANDATORY: Always escape JSON placeholders in prompts using double braces before .format() calls**
+### Основные принципы
 
-## DRY (Don't Repeat Yourself)
-- Avoid duplication of code whenever possible
-- Before writing new functionality, check for similar existing code in the codebase
-- Refactor common patterns into reusable utilities or components
-- Share logic across components rather than duplicating it
+- **Простота превыше всего** - предпочитайте простые решения сложным
+- **DRY (Don't Repeat Yourself)** - избегайте дублирования кода
+- **Environment Awareness** - код работает одинаково в dev, test, prod
+- **Focused Changes** - только запрошенные изменения, никакого scope creep
+- **Conservative Technology** - исчерпайте существующие решения перед добавлением нового
 
-## Environment Awareness
-- Write code that works consistently across different environments: dev, test, and prod
-- Use environment variables for configuration differences
-- Avoid hardcoding values that might differ between environments
-- Test code behavior in all target environments
+### Критически важно
 
-## Focused Changes
-- Only make changes that are requested or directly related to the task at hand
-- Be confident that changes are well understood and necessary
-- Avoid scope creep or tangential improvements unless explicitly requested
+- **НИКОГДА не используйте эмодзи** в Python/Next.js коде (проблемы с Windows encoding)
+- **Все комментарии только на английском** (для обоих стеков)
+- **MANDATORY:** Экранируйте JSON placeholders двойными скобками перед .format() вызовами
 
-## Conservative Technology Choices
-- When fixing issues or bugs, exhaust all options within the existing implementation first
-- Avoid introducing new patterns or technologies without strong justification
-- If new patterns are introduced, ensure old implementations are properly removed to prevent duplicate logic
-- Maintain consistency with existing codebase patterns
+---
 
-# Code Organization
+## 📂 Организация кода
 
-## Clean Codebase
-- Keep the codebase very clean and organized
-- Follow existing file structure and naming conventions
-- Group related functionality together
-- Remove unused code and imports
+### Чистота кодовой базы
+- Держите codebase очень чистым и организованным
+- Следуйте существующей структуре файлов и naming conventions
+- Группируйте связанную функциональность вместе
+- Удаляйте неиспользуемый код и imports
 
-## File Management
-- Avoid writing one-time scripts directly in files
-- If scripts are needed, create them in appropriate directories (e.g., `services/[service]/scripts/`)
-- Consider whether a script will be reused before embedding it in the codebase
+### Размер файлов
+- Держите файлы под 200-300 строк кода
+- Рефакторьте большие файлы, разбивая на модули
+- Разбивайте сложные компоненты на composable части
 
-## File Size Limits
-- Keep files under 200-300 lines of code
-- Refactor larger files by splitting them into smaller, focused modules
-- Break down complex components into smaller, composable pieces
+### Именование файлов (January 2025)
 
-## Naming Conventions
-- Use descriptive, self-documenting names for variables, functions, and files
-- Follow Python naming conventions (snake_case for functions/variables, PascalCase for classes)
-- Avoid abbreviations unless they're industry standard
-- Use consistent naming patterns across the project
-
-### NEW: File Naming Standards (January 2025)
-**Scripts:** `{purpose}.py`
-- Examples: `apollo_lead_collector.py`, `openai_mass_processor.py`
-- Simple, descriptive names without dates
+**Python Scripts:** `{purpose}.py`
+- Примеры: `apollo_lead_collector.py`, `openai_mass_processor.py`
+- Простые описательные имена без дат
 
 **Results:** `{script_name}_{YYYYMMDD_HHMMSS}.json`
-- Examples: `apollo_leads_20250119_143022.json`, `openai_analysis_20250119_143515.json`
-- Timestamp ensures uniqueness and chronological order
+- Примеры: `apollo_leads_20250119_143022.json`
+- Timestamp обеспечивает уникальность и хронологию
 
-**Module Organization:**
-- Each module contains related functionality only
-- All scripts have embedded configs (no external config files)
-- Results stored in module-specific results/ folders
-- **NEVER create empty folders** - create only when needed
-- **DELETE empty folders** immediately after cleanup
+**React Components:** `{ComponentName}.tsx`
+- Примеры: `FileUpload.tsx`, `DashboardPage.tsx`
+- PascalCase для компонентов
 
-# Data and Testing
+**Directories:**
+- Python: `snake_case` (например, `modules/apollo/`)
+- Next.js: `kebab-case` (например, `script-runner/`)
 
-## No Fake Data in Production
-- Mocking data is only acceptable for tests
-- Never add stubbing or fake data patterns that affect dev or prod environments
-- Use real data sources and proper error handling for development and production
+### Организация модулей
+- Каждый модуль содержит только связанную функциональность
+- Все скрипты имеют embedded configs (no external config files)
+- Results в module-specific results/ folders
+- **НИКОГДА не создавайте пустые папки** - только когда нужно
+- **УДАЛЯЙТЕ пустые папки** сразу после cleanup
 
-## Environment Files
-- Never overwrite `.env` files without explicit permission and confirmation
-- Always ask before modifying environment configuration
-- Back up existing environment files when changes are necessary
+---
 
-# Git and Version Control
+## ⚠️ Error Handling
 
-## Commit Standards
-- Write clear, descriptive commit messages: "fix user login bug", not "fix"
-- Make atomic commits - one commit = one feature/fix
-- Review changes before committing via git diff
-- Never commit secrets, .env files, or temporary files
+### Guard Clauses (Early Returns)
+- Обрабатывайте errors и edge cases в начале функций
+- Используйте early returns для ошибок
+- Избегайте глубокой вложенности if
+- Помещайте "happy path" последним
 
-## Branch Management
-- Use descriptive branch names: feature/add-auth, fix/login-crash
-- One branch = one task, don't mix different features
-- Delete merged branches to keep repository clean
-- For solo projects can work in main, but make frequent commits
+**Python пример:**
+```python
+def process_csv(file_path: str):
+    if not file_path:
+        raise ValueError("File path is required")
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"File not found: {file_path}")
 
-# Code Quality
+    # Happy path
+    return pd.read_csv(file_path)
+```
 
-## Error Handling
-- Always wrap API calls in try-catch blocks
-- Write meaningful error messages: "Failed to save user data", not "Error 500"
-- Don't swallow errors - log them or show to user
-- Fail fast and clearly - don't let app hang in unknown state
+**Next.js пример:**
+```typescript
+export async function fetchData(id: string) {
+  if (!id) throw new Error('ID is required');
 
-## Performance Considerations
-- Optimize for readability first, performance second
-- Don't add libraries without necessity - each one adds weight
-- Profile before optimizing, don't guess at bottlenecks
-- For small projects: readability > performance
+  const response = await fetch(`/api/data/${id}`);
+  if (!response.ok) throw new Error('Fetch failed');
 
-# Batch Processing Optimization
+  return await response.json();
+}
+```
 
-Where possible, make massive batches first. See what needs to be changed, then change everything massively to make it as fast as possible.
+### Error Messages
+- Пишите понятные сообщения: "Failed to save user data", не "Error 500"
+- Логируйте ошибки с контекстом
+- Не глотайте errors - показывайте пользователю или логируйте
+- Fail fast and clearly
 
-- Plan changes in advance - what needs to be changed across all files
-- Make massive changes in one batch, not file by file
-- Use find/replace, regex for mass edits
-- Commit batches of changes, not each file separately
+---
 
-# Project-Specific Requirements
+## 📊 Data и Testing
 
-## HTTP-Only Scraping
-- Never use external services like Firecrawl
-- Use only built-in Python libraries (urllib, requests)
-- Implement proper error handling for network requests
+### No Fake Data in Production
+- Mocking только для тестов
+- **Никогда не добавляйте** stubbing или fake data в dev/prod
+- Используйте реальные данные и proper error handling
 
-## Self-Documenting Scripts
-- Embed statistics, changelogs, and run history directly in script files
-- Track version, total runs, success rates within SCRIPT_STATS dictionary
-- Include PURPOSE, IMPROVEMENTS, USAGE sections in script headers
+### Environment Files
+- **НИКОГДА не перезаписывайте .env** без явного разрешения
+- Всегда спрашивайте перед изменением environment конфигурации
+- Делайте backup существующих .env при необходимости изменений
 
-### NEW: Script Structure Standard (January 2025)
-All scripts must follow this structure:
+---
+
+## 🔧 Git и Version Control
+
+### Commit Standards
+- Чёткие описательные commit messages: "fix user login bug", не "fix"
+- Atomic commits - один commit = одна feature/fix
+- Review изменений через git diff перед коммитом
+- **Никогда не коммитьте:** secrets, .env файлы, временные файлы
+
+### Branch Management
+- Описательные branch names: `feature/add-auth`, `fix/login-crash`
+- Один branch = одна задача, не мешайте фичи
+- Удаляйте merged branches для чистоты репозитория
+- Для solo projects можно работать в main, но делайте частые commits
+
+---
+
+## ⚡ Performance
+
+### Оптимизация
+- Оптимизируйте для читаемости сначала, производительность потом
+- Не добавляйте библиотеки без необходимости - каждая добавляет вес
+- Профилируйте перед оптимизацией, не гадайте
+- Для небольших проектов: readability > performance
+
+### Batch Processing
+- Планируйте изменения заранее - что нужно изменить во всех файлах
+- Делайте массовые изменения одним batch, не файл за файлом
+- Используйте find/replace, regex для массовых правок
+- Коммитьте batches изменений, не каждый файл отдельно
+
+---
+
+## 🐍 PYTHON-СПЕЦИФИЧНЫЕ ПРАВИЛА
+
+### Основные принципы
+- Пишите чёткий технический код с точными примерами
+- Функциональное программирование; избегайте классов где возможно
+- Описательные имена переменных: `is_active`, `has_permission`
+- `snake_case` для директорий и файлов
+
+### FastAPI Backend
+
+**Структура функций:**
+- `def` для чистых функций, `async def` для асинхронных
+- Type hints для всех сигнатур функций
+- Pydantic модели вместо словарей для валидации
+- Структура файла: router, sub-routes, utilities, типы
+
+**Роуты и эндпоинты:**
+- Функциональные компоненты и Pydantic модели
+- Декларативные определения роутов с type annotations
+- Минимизируйте `@app.on_event("startup")`, используйте lifespan context managers
+- Middleware для логирования, мониторинга, оптимизации
+
+**Валидация:**
+- Pydantic `BaseModel` для input/output
+- Schema классы для каждой модели данных
+- Валидация на уровне роутов, бизнес-логика отдельно
+
+**API Response Format:**
+```python
+# Success
+{"success": true, "data": {...}, "message": "Success"}
+
+# Error
+{"success": false, "error": "Error message", "details": {...}}
+```
+
+### Web Scraping (HTTP-Only)
+- **ТОЛЬКО встроенные Python библиотеки** (urllib, requests)
+- **НИКОГДА внешние сервисы** типа Firecrawl, Selenium
+- requests для HTTP GET/POST
+- BeautifulSoup для parsing HTML
+- Rate limiting и random delays между запросами
+- Retry с exponential backoff
+
+### CSV/Pandas Processing
+- pandas для манипуляции и анализа
+- Method chaining для трансформаций
+- `loc` и `iloc` для явного выбора данных
+- `groupby` для агрегации
+- Автоопределение delimiter
+- Валидация column types
+- Обработка encoding (UTF-8, latin1)
+
+### Асинхронность
+- `async def` для I/O-bound задач
+- httpx для асинхронных HTTP запросов
+- Connection pooling для database
+- Background tasks для длительных операций
+
+### Dependencies
+- FastAPI
+- Pydantic v2
+- httpx (HTTP requests)
+- pandas (CSV processing)
+- python-dotenv (.env files)
+
+### Стандарт структуры скрипта
 ```python
 #!/usr/bin/env python3
 """
@@ -142,14 +218,13 @@ All scripts must follow this structure:
 Version: 1.0.0 | Created: YYYY-MM-DD
 
 PURPOSE:
-Brief description of what the script does
+Brief description
 
 FEATURES:
 - Key capabilities
-- Main features
 
 USAGE:
-1. Configure CONFIG section below
+1. Configure CONFIG section
 2. Run: python script_name.py
 3. Results saved to results/
 
@@ -157,14 +232,12 @@ IMPROVEMENTS:
 v1.0.0 - Initial version
 """
 
-# CONFIG SECTION - All settings here
 CONFIG = {
     "API_SETTINGS": {...},
     "PROCESSING": {...},
     "OUTPUT": {...}
 }
 
-# SCRIPT STATISTICS - Auto-updated
 SCRIPT_STATS = {
     "version": "1.0.0",
     "total_runs": 0,
@@ -172,85 +245,328 @@ SCRIPT_STATS = {
     "success_rate": 0.0
 }
 
-# MAIN LOGIC
-class MainClass:
-    @auto_log("module_name")
-    def main_function(self):
-        pass
+def main():
+    pass
 
 if __name__ == "__main__":
     main()
 ```
 
-## Service Organization
-- Each service in `services/[service-name]/` with scripts/, outputs/, prompts/ folders
-- No files in project root except .env, CHANGELOG.md, CLAUDE.md
-- Use centralized .env for all API keys and configuration
+### Testing (Python)
+- pytest для unit тестов
+- **ТОЛЬКО реальные данные** (no mocks в production)
+- Тестируйте edge cases и error handling
+- Integration тесты для API endpoints
+- Structured logging (JSON)
+- Performance metrics (время, API costs)
 
-### Project Structure (Updated January 2025):
+---
+
+## ⚛️ NEXT.JS-СПЕЦИФИЧНЫЕ ПРАВИЛА
+
+### Основные принципы
+- Пишите краткий технический TypeScript код
+- Функциональное и декларативное программирование
+- Описательные имена переменных: `isLoading`, `hasError`
+- Структура файла: component, subcomponents, helpers, types
+
+### TypeScript
+- TypeScript для всего кода
+- **Предпочитайте `interface` вместо `type`**
+- Избегайте enums; используйте maps
+- Всегда определяйте proper types для props и state
+
+```typescript
+// ✅ Хорошо
+interface FileUploadProps {
+  onUpload: (file: File) => void;
+  maxSize?: number;
+}
+
+export function FileUpload({ onUpload, maxSize }: FileUploadProps) {
+  // Component logic
+}
+```
+
+### React Server Components (RSC)
+- **Минимизируйте `'use client'`** - используйте Server Components по умолчанию
+- `'use client'` только для Web API access в небольших компонентах
+- Избегайте для data fetching или state management
+- Wrap client components в Suspense с fallback
+
+```typescript
+// ✅ Server Component (по умолчанию)
+async function DashboardPage() {
+  const data = await fetchData();
+  return <Dashboard data={data} />;
+}
+
+// ✅ Client Component (минимальный)
+'use client';
+export function FileUpload() {
+  const [file, setFile] = useState<File | null>(null);
+  // Только client-side логика
+}
+```
+
+### UI и Styling
+
+**Tailwind CSS:**
+- Tailwind для всех стилей; избегайте CSS files
+- **Desktop-first подход** (НЕ mobile-first для этого проекта)
+- `cn()` utility из `lib/utils.ts` для conditional classes
+
+**shadcn/ui:**
+- shadcn/ui + Radix UI для компонентов
+- Следуйте shadcn/ui conventions
+- Кастомизация в `components/ui/`
+
+```typescript
+import { cn } from "@/lib/utils";
+
+export function Button({ variant, isLoading, children }: ButtonProps) {
+  return (
+    <button
+      className={cn(
+        "px-4 py-2 rounded-md font-medium",
+        variant === 'primary' && "bg-blue-600 text-white",
+        isLoading && "opacity-50 cursor-not-allowed"
+      )}
+    >
+      {children}
+    </button>
+  );
+}
+```
+
+### Performance Optimization
+
+**Images:**
+- Next.js Image component
+- WebP format, size data
+- Lazy loading для изображений
+
+**Code Splitting:**
+- Dynamic imports для тяжелых компонентов
+- Lazy loading для non-critical компонентов
+
+```typescript
+import dynamic from 'next/dynamic';
+
+const CSVTransformer = dynamic(() => import('./CSVTransformer'), {
+  loading: () => <Spinner />,
+  ssr: false
+});
+```
+
+### Data Fetching
+
+**Server-Side:**
+- Server Components для data fetching
+- Proper error handling и loading states
+- React Suspense для async компонентов
+
+**Client-Side:**
+- SWR или TanStack Query
+- Proper caching strategies
+
+```typescript
+// Server Component
+async function DashboardPage() {
+  const data = await fetch('http://localhost:8000/api/data', {
+    cache: 'no-store'
+  });
+  return <Dashboard data={await data.json()} />;
+}
+
+// Client Component
+'use client';
+import useSWR from 'swr';
+
+export function FileList() {
+  const { data, error, isLoading } = useSWR('/api/files', fetcher);
+  if (isLoading) return <Skeleton />;
+  return <FileListView files={data} />;
+}
+```
+
+### State Management
+- `nuqs` для URL search parameter state
+- `useState` только для truly local UI state
+- Избегайте `useEffect` когда возможно
+- Zustand для complex global state (если нужен)
+
+### Backend Integration (FastAPI)
+- Next.js API routes как proxy к FastAPI backend
+- Backend URL: `http://localhost:8000` (dev)
+- Proper CORS handling в FastAPI
+- Environment variables для API endpoints
+
+```typescript
+// src/app/api/upload/route.ts
+export async function POST(request: NextRequest) {
+  const formData = await request.formData();
+
+  const response = await fetch('http://localhost:8000/api/upload', {
+    method: 'POST',
+    body: formData,
+  });
+
+  return NextResponse.json(await response.json());
+}
+```
+
+### Supabase Integration
+
+**КРИТИЧНО ВАЖНО:**
+- Используйте `@supabase/ssr` (НЕ deprecated `auth-helpers-nextjs`)
+- Используйте ТОЛЬКО `getAll` и `setAll` методы
+- **НИКОГДА не используйте** `get`, `set`, `remove` методы
+
+```typescript
+// Browser Client
+import { createBrowserClient } from '@supabase/ssr';
+
+export function createClient() {
+  return createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+}
+
+// Server Client
+import { createServerClient } from '@supabase/ssr';
+import { cookies } from 'next/headers';
+
+export async function createClient() {
+  const cookieStore = await cookies();
+
+  return createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+        setAll(cookiesToSet) {
+          try {
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options)
+            );
+          } catch {
+            // Ignore if called from Server Component
+          }
+        },
+      },
+    }
+  );
+}
+```
+
+### Component Structure
+```typescript
+'use client';
+
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+
+// Types/Interfaces
+interface FileUploadProps {
+  onUpload: (file: File) => void;
+}
+
+// Main Component
+export function FileUpload({ onUpload }: FileUploadProps) {
+  // State
+  const [file, setFile] = useState<File | null>(null);
+
+  // Event handlers
+  const handleUpload = () => {
+    if (file) onUpload(file);
+  };
+
+  // Render
+  return <div>...</div>;
+}
+
+// Helper functions
+function formatSize(bytes: number) {
+  return `${bytes / 1024} KB`;
+}
+```
+
+---
+
+## 📁 PROJECT STRUCTURE (Updated January 2025)
+
 ```
 ├── modules/             # MODULAR ARCHITECTURE
 │   ├── shared/          # Common utilities
 │   │   ├── logger.py    # Auto-logging system
-│   │   └── google_sheets.py  # Google Sheets integration
+│   │   └── google_sheets.py
 │   ├── apollo/          # Apollo API integration
 │   │   ├── apollo_lead_collector.py
-│   │   ├── apollo_mass_processor.py
 │   │   └── results/     # Timestamped JSON results
 │   ├── openai/          # OpenAI processing
-│   │   ├── openai_content_analyzer.py
 │   │   ├── openai_mass_processor.py
 │   │   └── results/
-│   ├── scraping/        # Web scraping
-│   │   ├── domain_analyzer.py
-│   │   ├── content_extractor.py
+│   ├── scraping/        # Web scraping (HTTP-only)
 │   │   └── results/
 │   ├── sheets/          # Google Sheets operations
-│   │   ├── sheets_mass_updater.py
-│   │   ├── sheets_data_processor.py
 │   │   └── results/
 │   └── instantly/       # Instantly API
-│       ├── instantly_campaign_optimizer.py
 │       └── results/
 ├── data/                # DATA MANAGEMENT
 │   ├── raw/            # Original CSVs
 │   ├── processed/      # Final processed data
 │   └── logs/           # Auto-logger outputs
-├── archive/             # ARCHIVED FILES
-│   ├── old_scripts/    # Old root scripts
-│   ├── old_services/   # Old services folder
-│   └── old_core/       # Old core folder
+├── frontend/            # NEXT.JS APP
+│   ├── src/
+│   │   ├── app/        # App Router pages
+│   │   ├── components/ # React components
+│   │   │   └── ui/     # shadcn/ui components
+│   │   └── lib/        # Utilities
+├── backend/             # FASTAPI BACKEND
+│   ├── main.py
+│   ├── routers/
+│   └── models/
 ├── dashboard/           # AUTO-GENERATED ANALYTICS
-│   ├── index.html      # Interactive dashboard
-│   └── README.md       # Usage instructions
+│   └── index.html      # Interactive dashboard
+└── archive/             # ARCHIVED FILES
 ```
 
-### Path Configuration Rules:
-- Core tools use: `../../.env` for root config
-- Service scripts use: `../../../.env` for root config  
-- Core prompts: `../prompts/[prompt-name].txt`
-- Service prompts: `../prompts/[prompt-name].txt` 
-- Lead data flows: raw → processed (simplified 2-stage pipeline)
-- File naming: raw files use YYYYMMDD, processed files use YYYYMMDD format (local Bali time zone)
-- Dashboard integration: All processors automatically update `dashboard/index.html` with session data
+### Path Configuration
+- Core tools: `../../.env` для root config
+- Service scripts: `../../../.env` для root config
+- Frontend API routes: `http://localhost:8000` (FastAPI backend)
+- Lead data flow: raw → processed (2-stage pipeline)
+- File naming: YYYYMMDD format (local Bali timezone)
 
-## Smart Analytics Dashboard
+---
 
-### Dashboard System
-- **Auto-Generation**: Every script run automatically updates HTML dashboard with embedded data
-- **Intelligent Detail Levels**: Recent 5 sessions show maximum detail, older sessions show brief summary
-- **Autonomous Operation**: Self-contained HTML file with no server dependencies or external resources
-- **Real-Time Updates**: 30-second auto-refresh in browser, manual refresh with F5
+## ✅ КЛЮЧЕВЫЕ КОНВЕНЦИИ
 
-### Session Data Management
-- **Comprehensive Logging**: All processors log detailed session data including performance metrics, API costs, timing breakdown
-- **Historical Preservation**: Session history preserved indefinitely with intelligent data compression for older entries
-- **Aggregated Analytics**: Automatic calculation of trends, success rates, cost efficiency across all script types
-- **Interactive Access**: Click-through details for recent sessions, tabular overview for historical data
+### Python
+1. Простота превыше всего
+2. DRY принцип
+3. Real data only (no mocks в production)
+4. HTTP-only scraping (встроенные библиотеки)
+5. Embedded configs (no external config files)
+6. No emojis (Windows encoding issues)
+7. English comments
 
-### Integration Requirements
-- All new processors must integrate `dashboard_manager.save_session_data()` and `dashboard_generator.generate_dashboard_now()`
-- Session data must include: performance_metrics, processing_results, api_calls, timing_details, quality_metrics
-- Dashboard updates are automatic and require no manual intervention
-- All icebreakers and emails are written in English or any other language you need, not Russian.
-- When you create scripts, never use emojis. And all comments should be in English.
+### Next.js
+1. Server Components First (RSC по умолчанию)
+2. Type Safety (TypeScript + interfaces)
+3. Tailwind Only (no CSS files)
+4. Desktop-first (НЕ mobile для этого проекта)
+5. Performance (code splitting, lazy loading)
+6. Error Handling (early returns, guard clauses)
+7. No Emojis (consistency с Python)
+8. English Comments
+
+### Общие
+- All icebreakers и emails на английском (или другом нужном языке, НЕ русском)
+- Никогда не используйте эмодзи в скриптах
+- Все комментарии на английском

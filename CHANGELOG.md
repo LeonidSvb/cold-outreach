@@ -4,6 +4,40 @@
 
 ## [Unreleased]
 
+## [8.4.0] - 2025-10-02 - Unified CLAUDE.md Rules & Documentation Cleanup
+
+### Added
+- **Unified CLAUDE.md**: Single source of truth for all coding rules (Python + Next.js) in one optimized file
+- **Root Documentation**: Moved PRD.md and ADR.md to project root for better visibility
+- **Organized Rules Structure**: Clear sections - General Rules, Python-specific, Next.js-specific
+
+### Changed
+- **CLAUDE.md Structure**: Combined all rules into single file with Russian language for better readability
+- **Next.js Rules**: Desktop-first approach (removed mobile-first), removed accessibility requirements (not needed for this project)
+- **File Size Optimization**: CLAUDE.md reduced to 572 lines (~4,500 tokens = 2.25% context window)
+
+### Removed
+- **`.cursor/` Folder**: Removed entire .cursor directory (rules now in CLAUDE.md)
+- **Duplicate Rules**: Eliminated .cursor/rules/python.md and nextjs.md duplicates
+- **Dashboard Section**: Removed HTML dashboard rules from CLAUDE.md (replaced by React Dashboard)
+- **Old Documentation**: Cleaned up .cursor/PRD.md and .cursor/ADR.md duplicates
+
+### Technical Implementation
+- **Single Source of Truth**: CLAUDE.md in root as only rules file for Claude Code
+- **Token Efficiency**: Rules optimized for minimal context window usage
+- **Language**: Russian for rules text, English for code examples and comments
+- **Structure**: 🌍 General → 🐍 Python → ⚛️ Next.js → 📁 Project Structure → ✅ Key Conventions
+
+### Architecture Decision
+- **Documentation Location**: PRD.md and ADR.md moved to project root for easier access
+- **Claude Code vs Cursor**: Confirmed .cursor/ folder has no effect on Claude Code (only CLAUDE.md matters)
+- **Desktop-First**: Explicitly removed mobile-first approach from Next.js rules
+
+### Migration Notes
+- **No Breaking Changes**: Only organizational improvements and documentation cleanup
+- **Rules Access**: All coding rules now in single CLAUDE.md file
+- **Context Window**: Optimized rules use minimal tokens (~2.25% of 200K context window)
+
 ## [8.3.0] - 2025-10-02 - Backend/Frontend Architecture Refactoring & Multi-User Foundation
 
 ### Added
