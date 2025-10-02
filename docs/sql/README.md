@@ -14,12 +14,14 @@ We use **separate numbered migration files** instead of a single file:
 
 **Naming Convention:**
 ```
-001_users_table.sql
-002_instantly_raw_layer.sql
-003_csv_imports_raw.sql
-004_offers.sql
+migrations/001_users_table.sql
+migrations/002_instantly_raw_layer.sql
+migrations/003_csv_imports_raw.sql
+migrations/004_offers.sql
 ...
 ```
+
+**Location:** All migration files are in `/migrations/` folder in project root (industry standard)
 
 ### How to Track Applied Migrations
 
@@ -84,7 +86,7 @@ SELECT EXISTS (
 ## 📋 Порядок выполнения
 
 ### Migration 001: Users Table
-**Файл:** `001_users_table.sql`
+**Файл:** `migrations/001_users_table.sql`
 **Что делает:**
 - Создаёт таблицу `users` (single-user mode)
 - Добавляет дефолтного пользователя
@@ -92,14 +94,14 @@ SELECT EXISTS (
 
 **Запуск:**
 1. Открой Supabase Dashboard → SQL Editor
-2. Скопируй весь код из `001_users_table.sql`
+2. Скопируй весь код из `migrations/001_users_table.sql`
 3. Нажми "Run"
 4. Проверь: `SELECT * FROM users;` — должен быть 1 пользователь
 
 ---
 
 ### Migration 002: Instantly Raw Layer
-**Файл:** `002_instantly_raw_layer.sql`
+**Файл:** `migrations/002_instantly_raw_layer.sql`
 **Что делает:**
 - Создаёт 4 таблицы для сырых данных из Instantly:
   - `instantly_campaigns_raw` (кампании)
@@ -109,14 +111,14 @@ SELECT EXISTS (
 
 **Запуск:**
 1. Supabase Dashboard → SQL Editor
-2. Скопируй весь код из `002_instantly_raw_layer.sql`
+2. Скопируй весь код из `migrations/002_instantly_raw_layer.sql`
 3. Нажми "Run"
 4. Проверь: `SELECT table_name FROM information_schema.tables WHERE table_schema='public';`
 
 ---
 
 ### Migration 003: CSV Imports Raw
-**Файл:** `003_csv_imports_raw.sql`
+**Файл:** `migrations/003_csv_imports_raw.sql`
 **Что делает:**
 - Создаёт таблицу `csv_imports_raw`
 - Сохраняет полные CSV файлы в JSONB (для reprocessing)
@@ -129,14 +131,14 @@ SELECT EXISTS (
 
 **Запуск:**
 1. Supabase Dashboard → SQL Editor
-2. Скопируй код из `003_csv_imports_raw.sql`
+2. Скопируй код из `migrations/003_csv_imports_raw.sql`
 3. Run
 4. Проверь: `SELECT file_name, total_rows, import_status FROM csv_imports_raw;`
 
 ---
 
 ### Migration 004: Offers
-**Файл:** `004_offers.sql`
+**Файл:** `migrations/004_offers.sql`
 **Что делает:**
 - Создаёт таблицу `offers`
 - Описывает что мы продаём (services, products)
@@ -149,14 +151,14 @@ SELECT EXISTS (
 
 **Запуск:**
 1. Supabase Dashboard → SQL Editor
-2. Скопируй код из `004_offers.sql`
+2. Скопируй код из `migrations/004_offers.sql`
 3. Run
 4. Проверь: `SELECT offer_name, price_min, price_max FROM offers;`
 
 ---
 
 ### Migration 005: Companies
-**Файл:** `005_companies.sql`
+**Файл:** `migrations/005_companies.sql`
 **Что делает:**
 - Создаёт таблицу `companies`
 - UNIQUE constraint на `company_domain` (предотвращает дубликаты)
@@ -169,14 +171,14 @@ SELECT EXISTS (
 
 **Запуск:**
 1. Supabase Dashboard → SQL Editor
-2. Скопируй код из `005_companies.sql`
+2. Скопируй код из `migrations/005_companies.sql`
 3. Run
 4. Проверь: `SELECT company_name, company_domain, industry FROM companies;`
 
 ---
 
 ### Migration 006: Leads
-**Файл:** `006_leads.sql`
+**Файл:** `migrations/006_leads.sql`
 **Что делает:**
 - Создаёт таблицу `leads`
 - FK к `companies` (company_id)
@@ -191,7 +193,7 @@ SELECT EXISTS (
 
 **Запуск:**
 1. Supabase Dashboard → SQL Editor
-2. Скопируй код из `006_leads.sql`
+2. Скопируй код из `migrations/006_leads.sql`
 3. Run
 4. Проверь:
 ```sql
@@ -203,7 +205,7 @@ JOIN companies c ON l.company_id = c.id;
 ---
 
 ### Migration 007: Campaigns
-**Файл:** `007_campaigns.sql`
+**Файл:** `migrations/007_campaigns.sql`
 **Что делает:**
 - Создаёт таблицу `campaigns`
 - FK к `offers` (offer_id)
@@ -219,7 +221,7 @@ JOIN companies c ON l.company_id = c.id;
 
 **Запуск:**
 1. Supabase Dashboard → SQL Editor
-2. Скопируй код из `007_campaigns.sql`
+2. Скопируй код из `migrations/007_campaigns.sql`
 3. Run
 4. Проверь:
 ```sql
@@ -231,7 +233,7 @@ JOIN offers o ON c.offer_id = o.id;
 ---
 
 ### Migration 008: Campaign Leads (M2M)
-**Файл:** `008_campaign_leads.sql`
+**Файл:** `migrations/008_campaign_leads.sql`
 **Что делает:**
 - Создаёт таблицу `campaign_leads`
 - Many-to-Many: campaigns ↔ leads
@@ -247,7 +249,7 @@ JOIN offers o ON c.offer_id = o.id;
 
 **Запуск:**
 1. Supabase Dashboard → SQL Editor
-2. Скопируй код из `008_campaign_leads.sql`
+2. Скопируй код из `migrations/008_campaign_leads.sql`
 3. Run
 4. Проверь:
 ```sql
@@ -265,7 +267,7 @@ JOIN leads l ON cl.lead_id = l.id;
 ---
 
 ### Migration 009: Events (Multi-Source)
-**Файл:** `009_events.sql`
+**Файл:** `migrations/009_events.sql`
 **Что делает:**
 - Создаёт таблицу `events`
 - Unified timeline всех взаимодействий с leads
@@ -281,7 +283,7 @@ JOIN leads l ON cl.lead_id = l.id;
 
 **Запуск:**
 1. Supabase Dashboard → SQL Editor
-2. Скопируй код из `009_events.sql`
+2. Скопируй код из `migrations/009_events.sql`
 3. Run
 4. Проверь:
 ```sql
