@@ -4,6 +4,45 @@
 
 ## [Unreleased]
 
+## [8.3.0] - 2025-10-02 - Backend/Frontend Architecture Refactoring & Multi-User Foundation
+
+### Added
+- **Monorepo Package Management**: Root package.json with unified npm run dev command for simultaneous backend + frontend development
+- **Multi-User Database Foundation**: SQL migration adding user_id column to all tables with default '1' for current single-user mode
+- **Organized Documentation Structure**: Created /docs folder for all documentation files (migrations, setup guides, testing)
+- **Future-Proof User System**: Database prepared for Supabase Auth integration and Row Level Security (RLS)
+
+### Changed
+- **Backend Directory**: Renamed api/ → backend/ for clearer separation from Next.js API routes
+- **Project Structure**: Clean root directory with only essential files (CHANGELOG.md, CLAUDE.md, README.md, package.json)
+- **Development Workflow**: Single command (npm run dev) launches both Python FastAPI backend and Next.js frontend
+- **File Organization**: Documentation moved from root to /docs for better project clarity
+
+### Removed
+- **Duplicate Files**: Removed lib/supabase.ts duplicate (kept frontend/lib/supabase.ts only)
+- **Root Clutter**: Moved technical documentation to /docs folder
+
+### Fixed
+- **Architecture Clarity**: Clear separation between backend (Python FastAPI) and frontend (Next.js) without confusion
+- **Development Experience**: Simplified local development with unified npm scripts and concurrently package
+
+### Technical Implementation
+- **Root package.json Scripts**:
+  - `npm run dev`: Launches backend + frontend simultaneously
+  - `npm run backend`: Python FastAPI on port 8000
+  - `npm run frontend`: Next.js on port 3000
+- **Database Migration**: docs/migrations/001_add_user_id.sql for multi-user preparation
+- **Updated .gitignore**: Added backend/venv/, backend/uploads/, data/temp/ exclusions
+
+### Architecture Decision
+- **ADR-0010**: Backend/Frontend Separation & Monorepo Management (documented in .cursor/ADR.md)
+- **Future-Ready**: Foundation laid for Docker, Redis queues, and multi-user mode without breaking changes
+
+### Migration Notes
+- **Zero Breaking Changes**: Existing functionality preserved, only organizational improvements
+- **Optional SQL Migration**: Run docs/migrations/001_add_user_id.sql when ready for multi-user mode
+- **Development Setup**: Run `npm install` in root, then `npm run dev` to start everything
+
 ## [8.2.0] - 2025-10-01 - Complete Supabase Storage Integration & Persistent File Management
 
 ### Added

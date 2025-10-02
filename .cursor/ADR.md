@@ -55,6 +55,7 @@ END ADR_AGENT_PROTOCOL
 
 | ID   | Title                                                        | Date       | Status   | Supersedes | Superseded by |
 | ---- | ------------------------------------------------------------ | ---------- | -------- | ---------- | ------------- |
+| 0010 | [Backend/Frontend Separation & Monorepo Management](#adr-0010) | 2025-10-02 | Accepted | —          | —             |
 | 0009 | [Module-Centric Data Architecture & Massive Cleanup](#adr-0009) | 2025-09-23 | Accepted | ADR-0008   | —             |
 | 0008 | [Data-Centric Architecture with Core Tool Separation](#adr-0008) | 2025-09-08 | Superseded | ADR-0001   | ADR-0009      |
 | 0007 | [Session Continuity and Context Preservation](#adr-0007) | 2025-09-08 | Accepted | —          | —             |
@@ -412,6 +413,40 @@ Implement module-centric data architecture where each module contains its own da
 ### Compliance / Verification
 
 Each module must contain its own data/ subdirectory. No test files in production. Root directory contains only essential files (CHANGELOG.md, CLAUDE.md, vercel.json, etc.). Module data stays within module boundaries unless truly shared.
+
+---
+
+## ADR-0010 — Backend/Frontend Separation & Monorepo Management
+
+<a id="adr-0010"></a>
+**Date**: 2025-10-02
+**Status**: Accepted
+**Owner**: Platform Architecture Team
+
+### Context
+
+The project had unclear separation between Python FastAPI backend (in `api/`) and Next.js frontend API routes (in `frontend/src/app/api/`), causing confusion about which API to use. Additionally, running backend and frontend required two separate terminal commands, complicating development workflow.
+
+### Alternatives
+
+- **Keep api/ folder**: Continue with current structure - rejected due to confusion with Next.js API routes
+- **Separate repositories**: Split backend and frontend into different repos - rejected as overkill for current scale
+- **Docker Compose only**: Use Docker for development - rejected due to added complexity and slower iteration
+
+### Decision
+
+Rename `api/` to `backend/` for clear separation from Next.js API routes, implement root `package.json` with monorepo management using `concurrently` to run both backend and frontend with single `npm run dev` command, and prepare database for multi-user mode by adding `user_id` column with default '1'.
+
+### Consequences
+
+- **Pros**: Clear backend/frontend separation, simplified development workflow, future-ready for multi-user mode, clean project structure
+- **Cons / risks**: Required migration of existing references, developers need to learn new structure
+- **Supersedes**: —
+- **Superseded by**: —
+
+### Compliance / Verification
+
+Backend must be in `backend/` directory. Root package.json must have `dev` script launching both services. All Supabase tables must have `user_id` column with default '1'. Development must work with single `npm run dev` command.
 
 ---
 

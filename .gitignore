@@ -51,9 +51,19 @@ modules/results/*.csv
 modules/results/*.txt
 data/processed/*.csv
 data/raw/*.csv
+data/temp/
+
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/uploads/
 
 # Frontend build files
 frontend/.next/
 frontend/node_modules/
 frontend/build/
 frontend/dist/
+
+# Root node_modules
+node_modules/
+package-lock.json
