@@ -149,27 +149,176 @@ Relationships will be in normalized layer (migration 003+).
 
 ---
 
-## 📈 Next Layer: NORMALIZED (To be designed)
+---
+
+## 🎯 NORMALIZED LAYER (Migrations 003-009)
 
 ```
-Future structure:
+┌─────────────────────────────────────────────────────────────┐
+│                    NORMALIZED DATA LAYER                     │
+│           (Business Logic & Application Tables)              │
+└─────────────────────────────────────────────────────────────┘
 
+┌──────────────────────────────────┐
+│  csv_imports_raw (003)           │
+├──────────────────────────────────┤
+│  id (PK)                         │
+│  file_name                       │
+│  raw_data (JSONB) ★              │ ← Full CSV as JSON array
+│  total_rows                      │
+│  import_status                   │ ← uploaded, processing, completed
+│  uploaded_by → users.id          │
+└──────────────────────────────────┘
+        │
+        │ Source for CSV imports
+        ├──────────────────────┐
+        ↓                      ↓
+┌──────────────────────────────────┐    ┌──────────────────────────────────┐
+│  companies (005)                 │    │  leads (006)                     │
+├──────────────────────────────────┤    ├──────────────────────────────────┤
+│  id (PK)                         │    │  id (PK)                         │
+│  company_name                    │    │  first_name                      │
+│  company_domain (UNIQUE) ★       │    │  last_name                       │
+│  industry                        │    │  email                           │
+│  company_size                    │    │  job_title                       │
+│  apollo_data (JSONB) ★           │    │  seniority                       │
+│  first_seen_in_csv_id → (003)    │    │  company_id → companies.id       │
+└──────────────────────────────────┘    │  csv_import_id → (003)           │
+        ↑                                │  apollo_data (JSONB) ★           │
+        │                                │  lead_status                     │
+        └────────────────────────────────┴──────────────────────────────────┘
+                                                 │
+                                                 │
+┌──────────────────────────────────┐            │
+│  offers (004)                    │            │
+├──────────────────────────────────┤            │
+│  id (PK)                         │            │
+│  offer_name                      │            │
+│  offer_type                      │            │
+│  price_min                       │            │
+│  price_max                       │            │
+│  target_industries []            │            │
+│  value_proposition               │            │
+│  created_by → users.id           │            │
+└──────────────────────────────────┘            │
+        │                                       │
+        │                                       │
+        ↓                                       │
+┌──────────────────────────────────┐            │
+│  campaigns (007)                 │            │
+├──────────────────────────────────┤            │
+│  id (PK)                         │            │
+│  campaign_name                   │            │
+│  offer_id → offers.id            │            │
+│  uses_email                      │            │
+│  uses_calls                      │            │
+│  uses_linkedin                   │            │
+│  instantly_campaign_id (opt)     │ ← Links to instantly_campaigns_raw
+│  vapi_campaign_id (opt)          │ ← Future VAPI integration
+│  campaign_status                 │            │
+│  email_body_template             │            │
+│  created_by → users.id           │            │
+└──────────────────────────────────┘            │
+        │                                       │
+        │ Many-to-Many                          │
+        ↓                                       │
+┌──────────────────────────────────┐            │
+│  campaign_leads (008)            │ ←──────────┘
+├──────────────────────────────────┤
+│  id (PK)                         │
+│  campaign_id → campaigns.id      │
+│  lead_id → leads.id              │
+│  UNIQUE(campaign_id, lead_id) ★  │ ← One lead only once per campaign
+│                                  │
+│  email_status                    │ ← pending, sent, opened, replied
+│  email_sent_at                   │
+│  email_replied_at                │
+│                                  │
+│  call_status                     │ ← not_scheduled, completed, voicemail
+│  call_scheduled_at               │
+│  call_completed_at               │
+│                                  │
+│  linkedin_status                 │ ← Future: connection_sent, replied
+│  overall_status                  │ ← active, replied, converted
+│  sequence_step                   │ ← 1, 2, 3 (email sequence)
+│  next_followup_at                │
+└──────────────────────────────────┘
+        │
+        │ Timeline of all interactions
+        ↓
+┌──────────────────────────────────┐
+│  events (009)                    │
+├──────────────────────────────────┤
+│  id (PK)                         │
+│  event_source ★                  │ ← instantly, vapi, linkedin, manual
+│  event_type                      │ ← email_sent, call_completed, etc.
+│  lead_id → leads.id              │
+│  campaign_id → campaigns.id      │
+│  campaign_lead_id → (008)        │
+│  event_timestamp                 │
+│                                  │
+│  --- Email fields (instantly) ---│
+│  email_subject                   │
+│  email_body                      │
+│  instantly_email_id → (raw)      │
+│                                  │
+│  --- Call fields (vapi) ---------│
+│  call_duration_seconds           │
+│  call_recording_url              │
+│  call_transcript                 │
+│  vapi_call_id                    │
+│                                  │
+│  --- LinkedIn fields (future) ---│
+│  linkedin_message_text           │
+│                                  │
+│  --- Manual events --------------│
+│  note_text                       │
+│  performed_by → users.id         │
+│                                  │
+│  raw_data (JSONB) ★              │ ← Full event data from source
+└──────────────────────────────────┘
+```
+
+---
+
+## 🔗 Relationships Summary
+
+### RAW LAYER → NORMALIZED LAYER
+```
+instantly_campaigns_raw.instantly_campaign_id
+  ← campaigns.instantly_campaign_id (optional link)
+
+instantly_emails_raw.instantly_email_id
+  ← events.instantly_email_id (optional link)
+```
+
+### NORMALIZED LAYER (Full Relationships)
+```
 users (1)
-  ├─→ offers (N)
-  ├─→ leads (N)
-  ├─→ batches (N)
-  ├─→ campaigns (N)
-  └─→ events (N)
+  ├─→ csv_imports_raw.uploaded_by (N)
+  ├─→ offers.created_by (N)
+  ├─→ campaigns.created_by (N)
+  └─→ events.performed_by (N) [manual events]
 
-campaigns
-  ├─→ instantly_campaigns_raw (FK instantly_campaign_id)
-  └─→ Normalized: offer, batch, analytics
+csv_imports_raw (1)
+  ├─→ companies.first_seen_in_csv_id (N)
+  └─→ leads.csv_import_id (N)
 
-email_accounts
-  └─→ instantly_accounts_raw (FK email)
+companies (1)
+  └─→ leads.company_id (N)  ★ Deduplication: multiple leads per company
 
-events
-  └─→ instantly_emails_raw (FK instantly_email_id)
+offers (1)
+  └─→ campaigns.offer_id (N)
+
+campaigns (1)
+  └─→ campaign_leads.campaign_id (N)
+
+leads (1)
+  ├─→ campaign_leads.lead_id (N)
+  └─→ events.lead_id (N)
+
+campaign_leads (1)
+  └─→ events.campaign_lead_id (N)
 ```
 
 ---
@@ -225,9 +374,21 @@ events
 
 ## 📝 Migration Status
 
-- ✅ Migration 001: Users table
-- ✅ Migration 002: Instantly raw layer
-- ⏳ Migration 003: Offers table (planned)
-- ⏳ Migration 004: Leads table (planned)
-- ⏳ Migration 005: Campaigns normalized (planned)
-- ⏳ Migration 006: Events table (planned)
+| Migration | Table | Status | Dependencies |
+|-----------|-------|--------|--------------|
+| 001 | users | ✅ Applied | None |
+| 002 | instantly_*_raw (4 tables) | ✅ Applied | 001 |
+| 003 | csv_imports_raw | ⏳ Ready to apply | 001 |
+| 004 | offers | ⏳ Ready to apply | 001 |
+| 005 | companies | ⏳ Ready to apply | 003 |
+| 006 | leads | ⏳ Ready to apply | 003, 005 |
+| 007 | campaigns | ⏳ Ready to apply | 004 |
+| 008 | campaign_leads | ⏳ Ready to apply | 006, 007 |
+| 009 | events | ⏳ Ready to apply | 006, 007, 008 |
+
+**Apply in order:** 003 → 004 → 005 → 006 → 007 → 008 → 009
+
+**Recommended batches:**
+- **Batch 1:** 003-006 (CSV imports + leads foundation)
+- **Batch 2:** 007-008 (Campaigns + workflow)
+- **Batch 3:** 009 (Unified events timeline)
