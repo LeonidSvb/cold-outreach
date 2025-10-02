@@ -2,7 +2,32 @@
 
 **RULES: Follow [Keep a Changelog](https://keepachangelog.com/) standard strictly. Only 6 categories: Added/Changed/Deprecated/Removed/Fixed/Security. Be concise, technical, no fluff.**
 
+**[Unreleased] Section:** Always maintain "Next Session Plan" with 3-5 priority tasks. Link to active sprint in docs/sprints/ for detailed implementation. Update after each session.
+
 ## [Unreleased]
+
+### Next Session Plan
+**Sprint:** First Campaign Launch (see [docs/sprints/2025-10-02_first-campaign-launch.md](docs/sprints/2025-10-02_first-campaign-launch.md))
+
+**Priority Tasks:**
+1. Create Supabase database schema (users, offers, leads, batches, campaigns, events, email_accounts)
+2. Configure table relationships and foreign keys
+3. Set up default user for single-user mode
+4. Test schema with sample data inserts
+5. Prepare backend scripts for normalization and icebreaker generation
+
+**Goal:** Database foundation operational, ready for Python script integration
+
+### Added
+- **Sprint Documentation System**: Created docs/sprints/ folder with detailed sprint plans
+- **Sprint Archive**: docs/sprints/2025-10-02_first-campaign-launch.md with complete database schema, API endpoints, implementation plan
+- **Organized Documentation**: Moved PRD.md and ADR.md to docs/ folder for better structure
+- **Professional README.md**: Updated with Live Demo link, clean structure, removed npm commands (agentic coding workflow)
+
+### Changed
+- **README.md**: Removed direct sprint link (reduces update frequency), added Vercel deploy link, removed installation commands
+- **Documentation Structure**: All docs now in docs/ folder (PRD.md, ADR.md, sprints/)
+- **CHANGELOG Rules**: Added [Unreleased] section usage guidelines for next session planning
 
 ## [8.4.0] - 2025-10-02 - Unified CLAUDE.md Rules & Documentation Cleanup
 

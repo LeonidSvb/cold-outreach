@@ -1,42 +1,142 @@
-# Cold Outreach Automation Platform
+# Cold Outreach AI Automation Platform
 
-## Modular Website Intelligence System
+AI-powered cold outreach automation with 10K-30K leads/month capacity. Modular system for CSV lead processing, AI normalization, icebreaker generation, and Instantly campaign management.
 
-### Quick Start:
-```bash
-# Preview any CSV structure
-py core/processor/flexible_csv.py companies.csv --workflow extract_links --preview
+**🌐 Live Demo:** [cold-outreach-khaki.vercel.app](https://cold-outreach-khaki.vercel.app/)
 
-# Full workflow: extract → filter → scrape → summarize  
-py core/processor/flexible_csv.py companies.csv --workflow extract_links filter_links scrape_content summarize_content
+---
 
-# Single modules
-py core/modules/link_extractor/function.py "https://example.com" --depth=2
-py core/modules/content_scraper/function.py links.json --output content.json
+## Overview
+
+This platform automates the complete cold outreach pipeline:
+
+```
+CSV Upload → AI Normalization → Icebreaker Generation → Batch Processing → Instantly Campaign Launch
 ```
 
-### Architecture:
+**Current Focus:** First campaign launch with 1500 leads using offer-based A/B testing.
+
+---
+
+## Tech Stack
+
+- **Backend:** Python (FastAPI), OpenAI GPT-4o-mini, Supabase (PostgreSQL + Storage)
+- **Frontend:** Next.js 15 (App Router, RSC), TypeScript, shadcn/ui, Tailwind CSS
+- **Integrations:** Instantly API, Apollo API, Google Sheets API
+
+---
+
+## Features
+
+### ✅ Implemented
+- CSV upload with auto-column detection
+- AI-powered normalization (company names, cities)
+- Icebreaker generation from CSV data
+- Batch processing (200-300 leads per batch)
+- Instantly campaign integration
+- Offer management for A/B testing
+
+### 🔄 In Progress
+- Database schema setup (users, offers, leads, batches, campaigns, events)
+- Full wizard UI for lead processing workflow
+- Event sync from Instantly to Supabase
+
+### 📋 Planned
+- Website scraping for enhanced icebreakers
+- Advanced segmentation (seniority, industry, company size)
+- Email sequence builder
+- Dashboard analytics with performance visualizations
+- Multi-user authentication
+
+---
+
+## Current Status
+
+**Version:** 8.4.0 (2025-10-02)
+
+**Current Focus:**
+- Launch first real campaign with 1500 leads
+- Complete CSV → normalization → icebreakers → batch splitting → Instantly upload pipeline
+- Implement offer tracking for A/B testing
+
+See [docs/sprints/](docs/sprints/) for detailed sprint documentation.
+
+---
+
+## Documentation
+
+### Core Documents
+- **[docs/PRD.md](docs/PRD.md)** - Product requirements and vision
+- **[CHANGELOG.md](CHANGELOG.md)** - Version history (Keep a Changelog format)
+- **[CLAUDE.md](CLAUDE.md)** - Coding guidelines (Python + Next.js)
+- **[docs/ADR.md](docs/ADR.md)** - Architecture decision records
+
+### Sprint Documents
+- **[docs/sprints/](docs/sprints/)** - Sprint-specific implementation plans
+- **Current:** [2025-10-02_first-campaign-launch.md](docs/sprints/2025-10-02_first-campaign-launch.md)
+
+---
+
+## Project Structure
+
 ```
-├── core/
-│   ├── modules/              # Independent modular functions
-│   │   ├── link_extractor/   # Extract all site links
-│   │   ├── link_filter/      # Filter relevant pages  
-│   │   ├── content_scraper/  # Scrape → clean JSON
-│   │   └── content_summarizer/ # Extract personalization hooks
-│   ├── processor/            # Flexible CSV workflow engine
-│   └── prompts/              # Editable AI prompts
-├── data/
-│   ├── input/               # Source CSV files
-│   ├── output/              # Processed results
-│   └── logs/                # Auto-generated logs
-├── leads/                   # Lead data management
-└── legacy/                  # Archived old code
+├── backend/             # Python FastAPI API
+├── frontend/            # Next.js application
+├── modules/             # Processing scripts
+│   ├── apollo/          # Apollo API integration
+│   ├── instantly/       # Instantly API integration
+│   ├── openai/          # AI processing
+│   ├── scraping/        # Web scraping
+│   └── sheets/          # Google Sheets
+├── data/                # CSV files and processing results
+├── docs/                # Documentation
+│   ├── PRD.md           # Product requirements
+│   ├── ADR.md           # Architecture decisions
+│   └── sprints/         # Sprint plans
+└── archive/             # Legacy code
 ```
 
-### Features:
-- ✅ **Auto-detect** any CSV column structure
-- ✅ **Modular functions** - use separately or combined
-- ✅ **HTTP-only scraping** - no external dependencies
-- ✅ **Auto-logging** with performance tracking
-- ✅ **Flexible workflows** - combine functions like n8n nodes
-- ✅ **Editable prompts** - modify AI behavior without code changes
+---
+
+## Success Metrics
+
+**Primary Goals:**
+- High reply rate and positive responses leading to booked calls
+- Scalable processing of 10K-30K leads/month (target: 30K/month by Q2 2025)
+
+**Current Performance:**
+- 1.5K leads/campaign with A/B testing capability
+- Full pipeline from CSV upload to Instantly campaign operational
+- Multi-offer tracking for conversion optimization
+
+---
+
+## Development Approach
+
+**Agentic Coding:** This project is developed using Claude Code (AI-powered development).
+
+**Key Conventions:**
+- Python: Functional programming, `snake_case`, embedded configs, no emojis
+- Next.js: Server Components first, TypeScript, desktop-first design
+- All comments in English, icebreakers in English (or target language)
+- Real data only - no mocks in production
+
+See [CLAUDE.md](CLAUDE.md) for complete coding guidelines.
+
+---
+
+## License
+
+**Private Project** - All rights reserved
+
+---
+
+## Links
+
+- **Live Application:** [cold-outreach-khaki.vercel.app](https://cold-outreach-khaki.vercel.app/)
+- **GitHub:** [LeonidSvb/cold-outreach](https://github.com/LeonidSvb/cold-outreach)
+- **Author:** Leonid Svibunov
+
+---
+
+**Last Updated:** 2025-10-02 (v8.4.0)
