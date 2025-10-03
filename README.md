@@ -63,6 +63,27 @@ See [docs/sprints/](docs/sprints/) for detailed sprint documentation.
 
 ---
 
+## For AI: Quick Module Reference
+
+**Production Scripts by Module:**
+- **Instantly** → [modules/instantly/README.md](modules/instantly/README.md) - Campaign management, data collection, lead upload
+- **CSV Transformer** → [modules/csv_transformer/README.md](modules/csv_transformer/README.md) - AI-powered CSV column transformation
+- **OpenAI** → [modules/openai/README.md](modules/openai/README.md) - Mass parallel AI processing
+- **Apollo** → [modules/apollo/README.md](modules/apollo/README.md) - Lead collection from Apollo API
+- **Scraping** → [modules/scraping/README.md](modules/scraping/README.md) - Website content extraction
+- **Sheets** → [modules/sheets/README.md](modules/sheets/README.md) - Google Sheets operations
+- **Shared** → [modules/shared/README.md](modules/shared/README.md) - Common utilities (logger, Google Sheets client)
+
+**By Feature:**
+- CSV Processing → modules/csv_transformer/
+- Lead Collection → modules/apollo/, modules/scraping/
+- Campaign Management → modules/instantly/
+- AI Processing → modules/openai/
+
+**Architecture:** See [docs/ADR.md](docs/ADR.md) for architectural decisions
+
+---
+
 ## Documentation
 
 ### Core Documents

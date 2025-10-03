@@ -4,6 +4,7 @@
 
 | ID   | Title                                                        | Date       | Status   |
 | ---- | ------------------------------------------------------------ | ---------- | -------- |
+| 0011 | [Hierarchical README Pattern for AI-First Development](#adr-0011) | 2025-10-03 | Accepted |
 | 0010 | [Backend/Frontend Separation & Monorepo Management](#adr-0010) | 2025-10-02 | Accepted |
 | 0009 | [Module-Centric Data Architecture & Massive Cleanup](#adr-0009) | 2025-09-23 | Accepted |
 | 0008 | [Data-Centric Architecture with Core Tool Separation](#adr-0008) | 2025-09-08 | Superseded |
@@ -14,6 +15,39 @@
 | 0003 | [HTTP-Only Website Content Extraction](#adr-0003) | 2025-01-08 | Accepted |
 | 0002 | [Dialogue-Style Prompting System](#adr-0002) | 2025-01-08 | Accepted |
 | 0001 | [Service-Based Modular Architecture](#adr-0001) | 2025-01-08 | Superseded |
+
+---
+
+## ADR-0011 — Hierarchical README Pattern for AI-First Development
+
+<a id="adr-0011"></a>
+**Date**: 2025-10-03
+**Status**: Accepted
+**Owner**: Documentation Team
+
+### Context
+
+The project had a 579-line SCRIPTS_INVENTORY.md file that AI agents read first, consuming excessive context tokens (74K/200K). This created documentation maintenance burden as the file required updates for every script change and duplicated information already in code. For AI-first (agentic coding) projects, documentation must be optimized for AI consumption while remaining human-readable.
+
+### Decision
+
+Implement Hierarchical README Pattern with module-level documentation:
+- Enhanced Root README.md with "For AI: Quick Module Reference" section linking to all modules
+- Created README.md for each module (instantly, csv_transformer, openai, apollo, scraping, sheets, shared)
+- Each module README includes: Priority (High/Medium/Low), Status, Usage, Scripts, Configuration, Performance Metrics
+- Removed 579-line SCRIPTS_INVENTORY.md in favor of distributed documentation
+- Standardized README format across all modules (50-70 lines each)
+
+### Consequences
+
+- **Pros**: Token-efficient AI navigation (AI reads only needed module ~50 lines vs 579 lines all at once), localized documentation (updates near code), industry-standard pattern (common in modular projects), reduced maintenance (changes scoped to affected module only), better human readability (each module self-contained)
+- **Cons**: More files to maintain (7 module READMEs vs 1 inventory), requires discipline to keep READMEs updated, slight learning curve for new contributors
+
+### Metrics
+
+- **Before**: 579 lines in SCRIPTS_INVENTORY.md (100% read by AI on every session)
+- **After**: Root README ~150 lines + module READMEs ~50 lines each (AI reads root + 1-2 modules = ~150-250 lines)
+- **Token Savings**: ~50-60% reduction in documentation tokens consumed per session
 
 ---
 
