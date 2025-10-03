@@ -34,6 +34,16 @@
         "mcp-remote@latest",
         "https://mcp.neon.tech/mcp"
       ]
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_10b4ce3e77c2fb770870a579e64536a15c90fb79"
+      }
     }
   }
 }

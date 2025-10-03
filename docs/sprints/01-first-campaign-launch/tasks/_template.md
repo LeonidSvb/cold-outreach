@@ -9,13 +9,29 @@
 ```yaml
 id: "TASK-XXX"              # Например: TASK-001, TASK-002
 title: "{{НАЗВАНИЕ_ЗАДАЧИ}}"  # Например: "Setup Supabase Database Schema"
-status: "planned"           # planned | in-progress | blocked | done
+status: "planned"           # planned | in_progress | blocked | completed
 priority: "P1"              # P0 (critical) | P1 (high) | P2 (medium) | P3 (low)
 labels: ["backend", "database"]  # Теги для категоризации
 dependencies: []            # Список task-файлов, которые должны быть выполнены первыми
 created: "2025-10-02"
+updated: "2025-10-02"       # Последнее обновление (обновляется при каждом изменении)
 assignee: "AI Agent"        # Кто выполняет (обычно AI Agent или твоё имя)
 ```
+
+**Progress Notes:**
+_(AI Agent автоматически обновляет эту секцию по мере выполнения)_
+- ✅ Completed step 1
+- ✅ Completed step 2
+- ⏳ In progress step 3
+- ⚠️ Blocked by issue X
+- 🔄 Requires restart/reload (e.g., Claude Code, backend server)
+
+**AI Agent Instructions:**
+- Update `status` field as work progresses
+- Update `updated` timestamp on every change
+- Mark checkboxes `[ ]` → `[x]` in Acceptance Criteria when completed
+- Add Progress Notes after metadata block
+- Note any blockers, restarts needed, or manual steps required
 
 ---
 
