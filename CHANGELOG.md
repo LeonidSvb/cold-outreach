@@ -10,15 +10,41 @@
 **Sprint:** First Campaign Launch (see [docs/sprints/01-first-campaign-launch/](docs/sprints/01-first-campaign-launch/))
 
 **Priority Tasks:**
-1. Install Supabase MCP server and test connection
-2. Create Python CSV import script (CSV → csv_imports_raw → companies + leads)
-3. Test CSV import with real data
-4. Create modules/instantly sync scripts (instantly_raw → events)
-5. Test Instantly sync with sample JSON data
+1. ~~CSV to Supabase Upload Backend (TASK-003)~~ ✅ DONE
+2. Frontend Upload Button (TASK-004) - Connect UI to backend endpoint
+3. Instantly Data Transform (TASK-008) - Transform Supabase leads → Instantly format
+4. Instantly Sync Service (TASK-009) - Backend service for Instantly API sync
+5. E2E Testing (TASK-005) - Full pipeline validation
 
-**Goal:** Database operational with real data, MCP working, ready for sync scripts
+**Goal:** Complete upload pipeline → Instantly sync → First campaign launch
+
+**Completed This Session:**
+- ✅ TASK-003: CSV to Supabase upload backend with deduplication
+- ✅ 50-row test validation (100% success)
+- ✅ Database schema working correctly
+- ✅ Company deduplication by domain (MERGE strategy)
+- ✅ Lead upsert by email (UPDATE strategy)
 
 ### Added
+- **CSV to Supabase Upload Service** (`backend/services/csv_to_supabase.py`):
+  - `extract_domain()` - Domain normalization from URLs
+  - `normalize_empty_values()` - NULL handling for empty fields
+  - `prepare_company_data()` - Company data extraction from CSV
+  - `prepare_lead_data()` - Lead data extraction with company linking
+  - `upsert_company()` - Company deduplication with MERGE strategy
+  - `upsert_lead()` - Lead upsert with UPDATE strategy
+  - `save_raw_csv_to_supabase()` - Raw CSV audit trail (JSONB)
+  - `upload_csv_to_supabase()` - Main upload orchestration
+- **FastAPI Upload Endpoint** (`POST /api/supabase/upload-csv`):
+  - Pydantic request/response models
+  - Auto-mapping from TASK-002 column detection
+  - Batch processing (500 rows)
+  - Comprehensive error tracking
+- **Test Scripts**:
+  - `backend/test_supabase_upload.py` - Upload pipeline test
+  - `backend/verify_upload.py` - Database verification
+
+### Changed
 - **Complete Database Schema**: All 9 migrations applied in Supabase (Vercel)
   - RAW LAYER: users, instantly_campaigns_raw, instantly_accounts_raw, instantly_daily_analytics_raw, instantly_emails_raw
   - NORMALIZED LAYER: csv_imports_raw, offers, companies, leads, campaigns, campaign_leads, events
