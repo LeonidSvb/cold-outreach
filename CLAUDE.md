@@ -500,22 +500,27 @@ function formatSize(bytes: number) {
 
 ## 📁 PROJECT STRUCTURE (Updated January 2025)
 
+**📖 Module Template:** See `/docs/MODULE_TEMPLATE.md` for standard module structure
+**🎯 Reference Implementation:** `modules/instantly/` (perfect example)
+
 ```
 ├── modules/             # MODULAR ARCHITECTURE
 │   ├── shared/          # Common utilities
 │   │   ├── logger.py    # Auto-logging system
 │   │   └── google_sheets.py
+│   ├── instantly/       # ⭐ Reference implementation (follow this structure)
+│   │   ├── docs/        # Documentation
+│   │   ├── scripts/     # Executable scripts
+│   │   ├── tests/       # Integration tests
+│   │   ├── results/     # JSON outputs
+│   │   └── data/        # Input files & cache
 │   ├── apollo/          # Apollo API integration
-│   │   ├── apollo_lead_collector.py
 │   │   └── results/     # Timestamped JSON results
 │   ├── openai/          # OpenAI processing
-│   │   ├── openai_mass_processor.py
 │   │   └── results/
 │   ├── scraping/        # Web scraping (HTTP-only)
 │   │   └── results/
-│   ├── sheets/          # Google Sheets operations
-│   │   └── results/
-│   └── instantly/       # Instantly API
+│   └── sheets/          # Google Sheets operations
 │       └── results/
 ├── data/                # DATA MANAGEMENT
 │   ├── raw/            # Original CSVs

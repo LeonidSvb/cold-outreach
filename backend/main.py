@@ -28,6 +28,9 @@ from api_wrapper import csv_transformer_api
 # Import enhanced column detector
 from lib.column_detector import detect_all_columns
 
+# Import CSV to Supabase service
+from services.csv_to_supabase import upload_csv_to_supabase
+
 app = FastAPI(title="Script Runner API", version="1.0.0")
 
 # Enable CORS for frontend
@@ -646,6 +649,88 @@ async def get_available_prompts():
         return {
             "prompts": []
         }
+
+# Pydantic models for Supabase upload
+class SupabaseUploadRequest(BaseModel):
+    file_id: str
+    user_id: Optional[str] = 'ce8ac78e-1bb6-4a89-83ee-3cbac618ad25'
+    batch_size: Optional[int] = 500
+
+class SupabaseUploadResponse(BaseModel):
+    success: bool
+    import_id: Optional[str]
+    total_rows: int
+    companies_created: int
+    companies_merged: int
+    leads_created: int
+    leads_updated: int
+    errors: List[str]
+    message: str
+
+@app.post("/api/supabase/upload-csv", response_model=SupabaseUploadResponse)
+async def upload_csv_to_supabase_endpoint(request: SupabaseUploadRequest):
+    """
+    Upload CSV file to Supabase with normalization and deduplication
+
+    Process:
+    1. Read CSV file from uploads/
+    2. Detect column types (TASK-002)
+    3. Normalize to companies + leads
+    4. Deduplicate companies by domain
+    5. Upsert leads with UPDATE strategy
+    6. Save raw CSV to csv_imports_raw
+
+    Returns upload statistics and any errors
+    """
+    try:
+        upload_dir = Path("uploads")
+        file_path = upload_dir / request.file_id
+
+        if not file_path.exists():
+            raise HTTPException(status_code=404, detail=f"File not found: {request.file_id}")
+
+        # Read CSV for column detection
+        import pandas as pd
+        df = pd.read_csv(file_path)
+
+        # Detect columns using TASK-002 system
+        sample_data = {}
+        for col in df.columns:
+            sample_data[col] = df[col].head(10).tolist()
+
+        detected_columns = detect_all_columns(
+            columns=df.columns.tolist(),
+            sample_data=sample_data,
+            sample_size=10
+        )
+
+        # Upload to Supabase
+        results = upload_csv_to_supabase(
+            file_path=str(file_path),
+            detected_columns=detected_columns,
+            user_id=request.user_id,
+            batch_size=request.batch_size
+        )
+
+        # Prepare response
+        message = "Upload completed successfully"
+        if results['errors']:
+            message = f"Upload completed with {len(results['errors'])} errors"
+
+        return SupabaseUploadResponse(
+            success=results['success'],
+            import_id=results['import_id'],
+            total_rows=results['total_rows'],
+            companies_created=results['companies_created'],
+            companies_merged=results['companies_merged'],
+            leads_created=results['leads_created'],
+            leads_updated=results['leads_updated'],
+            errors=results['errors'][:10],  # Limit to first 10 errors
+            message=message
+        )
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Upload failed: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn
