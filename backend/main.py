@@ -25,6 +25,9 @@ from script_runner import get_available_scripts, run_openai_processor_with_monit
 sys.path.append(str(Path(__file__).parent.parent / "modules" / "csv_transformer"))
 from api_wrapper import csv_transformer_api
 
+# Import enhanced column detector
+from lib.column_detector import detect_all_columns
+
 app = FastAPI(title="Script Runner API", version="1.0.0")
 
 # Enable CORS for frontend
@@ -197,7 +200,10 @@ def parse_script_config(script_path: str) -> Optional[Dict[str, Any]]:
         return None
 
 def detect_column_types(columns: List[str]) -> Dict[str, str]:
-    """Detect column types based on column names"""
+    """
+    DEPRECATED: Old keyword-only detection function
+    Use detect_column_types_enhanced() instead for better accuracy
+    """
     detected = {}
 
     for col in columns:
@@ -234,31 +240,53 @@ def detect_column_types(columns: List[str]) -> Dict[str, str]:
 
     return detected
 
-def analyze_csv_file(file_path: str) -> Dict[str, Any]:
-    """Analyze CSV file and extract metadata"""
+
+def detect_column_types_enhanced(
+    columns: List[str],
+    sample_data: Dict[str, List[Any]],
+    sample_size: int = 10
+) -> Dict[str, Dict[str, Any]]:
+    """
+    Enhanced column detection using hybrid approach (keyword + regex validation)
+
+    Args:
+        columns: List of column names
+        sample_data: Dict mapping column names to sample values
+        sample_size: Number of samples to analyze per column
+
+    Returns:
+        Dict mapping column names to detection results with confidence scores
+    """
+    return detect_all_columns(columns, sample_data, sample_size)
+
+def analyze_csv_file_enhanced(file_path: str) -> Dict[str, Any]:
+    """Analyze CSV file and extract metadata with enhanced column detection"""
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            # Try to detect delimiter
-            sample = f.read(1024)
-            f.seek(0)
+        import pandas as pd
 
-            sniffer = csv.Sniffer()
-            delimiter = sniffer.sniff(sample).delimiter
+        # Read CSV with pandas for better handling
+        df = pd.read_csv(file_path)
+        columns = df.columns.tolist()
+        rows = len(df)
 
-            reader = csv.reader(f, delimiter=delimiter)
-            columns = next(reader)  # First row as headers
+        # Prepare sample data for enhanced detection
+        sample_size = 10
+        sample_data = {}
+        for col in columns:
+            sample_data[col] = df[col].head(sample_size).tolist()
 
-            # Count rows
-            rows = sum(1 for row in reader)
+        # Enhanced column detection
+        detected_columns = detect_column_types_enhanced(
+            columns=columns,
+            sample_data=sample_data,
+            sample_size=sample_size
+        )
 
-            # Detect column types
-            detected_columns = detect_column_types(columns)
-
-            return {
-                'columns': columns,
-                'rows': rows,
-                'detected_columns': detected_columns
-            }
+        return {
+            'columns': columns,
+            'rows': rows,
+            'detected_columns': detected_columns
+        }
 
     except Exception as e:
         print(f"Error analyzing CSV: {e}")
