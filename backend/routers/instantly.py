@@ -73,6 +73,10 @@ async def preview_upload(file: UploadFile = File(...)):
         content = await file.read()
         data = json.loads(content)
 
+        print(f"\n=== PREVIEW UPLOAD DEBUG ===")
+        print(f"File size: {len(content)} bytes")
+        print(f"Data keys: {data.keys() if isinstance(data, dict) else 'Not a dict'}")
+
         # Extract data using instantly module functions
         from sources import extract_campaigns, extract_accounts, extract_daily_analytics
         from transform import transform_campaigns, transform_accounts, transform_daily_analytics
@@ -81,22 +85,50 @@ async def preview_upload(file: UploadFile = File(...)):
         accounts = extract_accounts(data)
         daily = extract_daily_analytics(data)
 
+        print(f"Extracted - Campaigns: {len(campaigns)}, Accounts: {len(accounts)}, Daily: {len(daily)}")
+
         # Transform data
         transformed_campaigns = transform_campaigns(campaigns) if campaigns else []
         transformed_accounts = transform_accounts(accounts) if accounts else []
         transformed_daily = transform_daily_analytics(daily) if daily else []
+
+        print(f"Transformed - Campaigns: {len(transformed_campaigns)}, Accounts: {len(transformed_accounts)}, Daily: {len(transformed_daily)}")
 
         # Get existing data from DB
         existing_campaigns = query_table('instantly_campaigns_raw', limit=1000)
         existing_accounts = query_table('instantly_accounts_raw', limit=1000)
         existing_daily = query_table('instantly_daily_analytics_raw', limit=1000)
 
-        existing_campaign_ids = {c['instantly_campaign_id'] for c in existing_campaigns.get('data', [])}
-        existing_account_emails = {a['email'] for a in existing_accounts.get('data', [])}
-        existing_daily_keys = {d.get('analytics_date') for d in existing_daily.get('data', []) if d.get('analytics_date')}
+        print(f"Existing in DB - Campaigns: {len(existing_campaigns.get('data', []))}, Accounts: {len(existing_accounts.get('data', []))}, Daily: {len(existing_daily.get('data', []))}")
+
+        try:
+            existing_campaign_ids = {c['instantly_campaign_id'] for c in existing_campaigns.get('data', [])}
+            print(f"Existing campaign IDs: {existing_campaign_ids}")
+        except Exception as e:
+            print(f"Error building campaign IDs: {e}")
+            existing_campaign_ids = set()
+
+        try:
+            existing_account_emails = {a['email'] for a in existing_accounts.get('data', [])}
+            print(f"Existing account emails count: {len(existing_account_emails)}")
+        except Exception as e:
+            print(f"Error building account emails: {e}")
+            existing_account_emails = set()
+
+        try:
+            existing_daily_keys = {d.get('analytics_date') for d in existing_daily.get('data', []) if d.get('analytics_date')}
+            print(f"Existing daily keys count: {len(existing_daily_keys)}")
+        except Exception as e:
+            print(f"Error building daily keys: {e}")
+            existing_daily_keys = set()
 
         # Analyze campaigns
-        campaigns_new = sum(1 for c in transformed_campaigns if c['instantly_campaign_id'] not in existing_campaign_ids)
+        try:
+            campaigns_new = sum(1 for c in transformed_campaigns if c['instantly_campaign_id'] not in existing_campaign_ids)
+            print(f"DEBUG: campaigns_new = {campaigns_new}")
+        except Exception as e:
+            print(f"Error analyzing campaigns: {e}")
+            campaigns_new = 0
         campaigns_updates = len(transformed_campaigns) - campaigns_new
         campaigns_duplicates = []
 
@@ -127,6 +159,12 @@ async def preview_upload(file: UploadFile = File(...)):
 
         # Combine all duplicates
         all_duplicates = campaigns_duplicates + accounts_duplicates
+
+        print(f"Analysis - Campaigns: new={campaigns_new}, updates={campaigns_updates}")
+        print(f"Analysis - Accounts: new={accounts_new}, updates={accounts_updates}")
+        print(f"Analysis - Daily: new={daily_new}, updates={daily_updates}")
+        print(f"Total duplicates: {len(all_duplicates)}")
+        print("=== END DEBUG ===\n")
 
         return PreviewResponse(
             valid=True,

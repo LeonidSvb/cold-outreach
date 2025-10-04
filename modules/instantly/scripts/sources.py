@@ -63,21 +63,17 @@ def detect_data_type(data: Dict) -> str:
 
 def extract_campaigns(data: Dict) -> List[Dict[str, Any]]:
     """
-    Extract campaigns from JSON (handles both formats)
+    Extract campaigns from RAW DATA ONLY
 
     Args:
-        data: Parsed JSON data
+        data: Parsed JSON data (raw_data format)
 
     Returns:
         List of campaign dictionaries
     """
-    data_type = detect_data_type(data)
-
-    if data_type == 'dashboard_data':
-        return data.get('campaigns', [])
-    elif data_type == 'raw_data':
-        # Use campaigns_detailed if available, else campaigns_overview
-        return data.get('campaigns_detailed', data.get('campaigns_overview', []))
+    # ONLY raw_data format supported
+    # Use campaigns_detailed if available (has more info), else campaigns_overview
+    return data.get('campaigns_detailed', data.get('campaigns_overview', []))
 
     return []
 
@@ -105,21 +101,16 @@ def extract_accounts(data: Dict) -> List[Dict[str, Any]]:
 
 def extract_daily_analytics(data: Dict) -> List[Dict[str, Any]]:
     """
-    Extract daily analytics from JSON
+    Extract daily analytics from RAW DATA ONLY
 
     Args:
-        data: Parsed JSON data
+        data: Parsed JSON data (raw_data format)
 
     Returns:
         List of daily analytics dictionaries
     """
-    # Dashboard format
-    if 'daily_trends' in data:
-        return data['daily_trends']
-
-    # Raw format
-    if 'daily_analytics_all' in data:
-        return data['daily_analytics_all']
+    # ONLY raw_data format supported
+    return data.get('daily_analytics_all', [])
 
     return []
 
