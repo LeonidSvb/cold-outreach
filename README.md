@@ -72,7 +72,8 @@ See [docs/sprints/](docs/sprints/) for detailed sprint documentation.
 - **Apollo** → [modules/apollo/README.md](modules/apollo/README.md) - Lead collection from Apollo API
 - **Scraping** → [modules/scraping/README.md](modules/scraping/README.md) - Website content extraction
 - **Sheets** → [modules/sheets/README.md](modules/sheets/README.md) - Google Sheets operations
-- **Shared** → [modules/shared/README.md](modules/shared/README.md) - Common utilities (logger, Google Sheets client)
+- **Logging** → [modules/logging/README.md](modules/logging/README.md) - Centralized logging system (Python, FastAPI, Next.js)
+- **Shared** → [modules/shared/README.md](modules/shared/README.md) - Common utilities (Google Sheets client)
 
 **By Feature:**
 - CSV Processing → modules/csv_transformer/

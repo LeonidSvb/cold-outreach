@@ -232,6 +232,15 @@ IMPROVEMENTS:
 v1.0.0 - Initial version
 """
 
+import sys
+from pathlib import Path
+
+# Add project root to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
+
 CONFIG = {
     "API_SETTINGS": {...},
     "PROCESSING": {...},
@@ -246,7 +255,13 @@ SCRIPT_STATS = {
 }
 
 def main():
-    pass
+    logger.info("Script started")
+    try:
+        # Main logic here
+        logger.info("Script completed successfully")
+    except Exception as e:
+        logger.error("Script failed", error=e)
+        raise
 
 if __name__ == "__main__":
     main()
@@ -560,6 +575,7 @@ function formatSize(bytes: number) {
 5. Embedded configs (no external config files)
 6. No emojis (Windows encoding issues)
 7. English comments
+8. **MANDATORY: Universal Logger in ALL new scripts** - `from modules.logging.shared.universal_logger import get_logger`
 
 ### Next.js
 1. Server Components First (RSC по умолчанию)

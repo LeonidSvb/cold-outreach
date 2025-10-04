@@ -10,8 +10,12 @@ from pathlib import Path
 # Add backend to path
 backend_path = Path(__file__).parent.parent
 sys.path.append(str(backend_path))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from lib.supabase_client import get_supabase
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def apply_migration():
@@ -135,4 +139,10 @@ Return only the normalized company name, nothing else.""",
 
 
 if __name__ == "__main__":
-    apply_migration()
+    logger.info("Prompts migration started")
+    try:
+        apply_migration()
+        logger.info("Prompts migration completed")
+    except Exception as e:
+        logger.error("Prompts migration failed", error=e)
+        raise

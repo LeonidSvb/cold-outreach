@@ -8,8 +8,12 @@ from pathlib import Path
 
 # Add backend to path
 sys.path.append(str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from lib.supabase_client import get_supabase
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
 
 def apply_migration():
     supabase = get_supabase()
@@ -53,4 +57,10 @@ def apply_migration():
     print("\nMigration completed!")
 
 if __name__ == '__main__':
-    apply_migration()
+    logger.info("Migration 010 started")
+    try:
+        apply_migration()
+        logger.info("Migration 010 completed")
+    except Exception as e:
+        logger.error("Migration 010 failed", error=e)
+        raise

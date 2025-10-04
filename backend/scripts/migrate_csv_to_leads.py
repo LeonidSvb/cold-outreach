@@ -10,8 +10,12 @@ import sys
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from lib.supabase_client import get_supabase
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def format_phone(phone_raw):
@@ -36,6 +40,7 @@ def migrate_csv_to_leads():
     """
     Main migration function
     """
+    logger.info("CSV to leads migration started")
     supabase = get_supabase()
 
     # Get CSV data
@@ -44,10 +49,12 @@ def migrate_csv_to_leads():
 
     if not response.data:
         print("ERROR: No CSV data found")
+        logger.error("No CSV data found in csv_imports_raw")
         return
 
     csv_import = response.data[0]
     raw_data_str = csv_import['raw_data']
+    logger.info("CSV data fetched", csv_id=csv_import.get('id'))
 
     # Parse JSON string
     print("Parsing CSV rows...")
@@ -102,11 +109,17 @@ def migrate_csv_to_leads():
 
     print(f"\nMigration complete!")
     print(f"Total leads inserted: {total_inserted}")
+    logger.info("Migration completed", total_inserted=total_inserted)
 
     # Verify
     count_result = supabase.table('leads').select('id', count='exact').execute()
     print(f"Total leads in database: {count_result.count}")
+    logger.info("Migration verified", total_in_db=count_result.count)
 
 
 if __name__ == '__main__':
-    migrate_csv_to_leads()
+    try:
+        migrate_csv_to_leads()
+    except Exception as e:
+        logger.error("Migration failed", error=e)
+        raise

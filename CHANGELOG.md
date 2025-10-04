@@ -18,15 +18,53 @@
 **Goal:** Column management → AI processing UI → Production ready
 
 **Completed This Session:**
-- ✅ Prompts table in Supabase with versioning support
-- ✅ Backend API for prompts (GET, POST, version history)
-- ✅ 3 default prompts extracted from existing scripts
-- ✅ Auto-increment version numbering
-- ✅ Full CRUD operations tested
+- ✅ Universal logging system implemented across entire platform
+- ✅ All Python scripts, FastAPI backend, Next.js frontend integrated with logger
+- ✅ Daily log rotation with separate error logs
+- ✅ JSON structured logging (modules/logging/logs/)
+- ✅ Zero maintenance required (automatic file creation)
+- ✅ Integration tests passing (ALL TESTS PASSED)
 
 **Known Issues (WIP):**
 - ⚠️ Column visibility UI not yet implemented
 - ⚠️ AI processing integration pending
+
+## [12.0.0] - 2025-10-04 - Universal Logging System
+
+### Added
+- **Centralized Logging Module**: Industry-standard logging system in `modules/logging/`
+- **UniversalLogger Class**: Singleton logger with daily rotation and JSON structured output
+- **Auto-log Decorator**: Performance tracking decorator for function execution time
+- **FastAPI Middleware**: Automatic API request/response logging with duration tracking
+- **Frontend Logger**: TypeScript logger sending logs to backend endpoint
+- **Separate Error Logs**: Errors duplicated to `logs/errors/` directory for quick access
+- **Daily Log Rotation**: Automatic file creation per day (YYYY-MM-DD.log) using local timezone
+- **Zero Maintenance**: No manual file management or cleanup required
+
+### Changed
+- **All Python Scripts**: Updated with universal logger import and error handling
+- **Backend Scripts**: All 6 scripts in backend/scripts/ integrated with logging
+- **Instantly Scripts**: All scripts in modules/instantly/scripts/ integrated with logging
+- **CLAUDE.md**: Added MANDATORY logger requirement for all new scripts
+- **Module Template**: Updated with logger integration standard
+
+### Technical Implementation
+- **Log Location**: `modules/logging/logs/` (modular architecture)
+- **Log Format**: Single-line JSON per entry with timestamp, level, message, context
+- **Log Levels**: ERROR, WARNING, INFO, DEBUG
+- **Integration**: Python (get_logger), FastAPI (middleware), Next.js (logger.ts)
+- **Full Test Suite**: test_full_system.py validates all components (ALL TESTS PASSED)
+
+### Files Modified
+- Created: `modules/logging/shared/universal_logger.py` (212 lines)
+- Created: `backend/middleware/logging_middleware.py`
+- Created: `backend/routers/logs.py`
+- Created: `frontend/src/lib/logger.ts`
+- Created: `modules/logging/tests/test_full_system.py`
+- Updated: All scripts in modules/instantly/scripts/ (3 files)
+- Updated: All scripts in backend/scripts/ (6 files)
+- Updated: backend/main.py (middleware registration)
+- Updated: CLAUDE.md (logging standards)
 
 ## [11.0.0] - 2025-10-04 - AI Prompts Management System
 

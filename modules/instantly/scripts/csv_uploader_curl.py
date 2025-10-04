@@ -33,11 +33,14 @@ import csv
 import re
 import subprocess
 from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Any, Optional
+
+# Add project root to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 from modules.logging.shared.universal_logger import get_logger
 
 logger = get_logger(__name__)
-from pathlib import Path
-from typing import Dict, List, Any, Optional
 
 # Simple logging function
 def auto_log(module_name):

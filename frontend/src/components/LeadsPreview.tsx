@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { FileText, Eye, Users, Columns } from 'lucide-react'
+import ColumnVisibilityDropdown, { ColumnDefinition } from './ColumnVisibilityDropdown'
 
 interface LeadsPreviewProps {
   uploadBatchId?: number | null
@@ -31,10 +32,47 @@ interface LeadsData {
   upload_batch_id?: string
 }
 
+// Column definitions
+const COLUMN_DEFINITIONS: ColumnDefinition[] = [
+  { key: 'name', label: 'Name', alwaysVisible: true },
+  { key: 'email', label: 'Email', alwaysVisible: true },
+  { key: 'company_name', label: 'Company', alwaysVisible: true },
+  { key: 'job_title', label: 'Title' },
+  { key: 'phone', label: 'Phone' },
+  { key: 'location', label: 'Location' },
+  { key: 'linkedin_url', label: 'LinkedIn' },
+  { key: 'country', label: 'Country' },
+  { key: 'state', label: 'State' },
+  { key: 'city', label: 'City' },
+]
+
+const DEFAULT_VISIBLE_COLUMNS = new Set([
+  'name',
+  'email',
+  'company_name',
+  'job_title',
+  'phone',
+  'location',
+])
+
 export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPreviewProps) {
   const [leadsData, setLeadsData] = useState<LeadsData | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [visibleColumns, setVisibleColumns] = useState<Set<string>>(DEFAULT_VISIBLE_COLUMNS)
+
+  // Load column preferences from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('leadsColumnVisibility')
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved)
+        setVisibleColumns(new Set(parsed))
+      } catch (e) {
+        console.error('Failed to parse column visibility preferences', e)
+      }
+    }
+  }, [])
 
   useEffect(() => {
     fetchLeads()
@@ -64,6 +102,22 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleColumnVisibilityChange = (columnKey: string, visible: boolean) => {
+    setVisibleColumns(prev => {
+      const newSet = new Set(prev)
+      if (visible) {
+        newSet.add(columnKey)
+      } else {
+        newSet.delete(columnKey)
+      }
+
+      // Save to localStorage
+      localStorage.setItem('leadsColumnVisibility', JSON.stringify(Array.from(newSet)))
+
+      return newSet
+    })
   }
 
   if (loading) {
@@ -105,6 +159,11 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
           <Eye className="h-5 w-5 text-blue-500" />
           <h3 className="text-lg font-medium text-gray-900">Leads Preview</h3>
         </div>
+        <ColumnVisibilityDropdown
+          columns={COLUMN_DEFINITIONS}
+          visibleColumns={visibleColumns}
+          onVisibilityChange={handleColumnVisibilityChange}
+        />
       </div>
 
       <div className="mb-6">
@@ -155,47 +214,115 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50 sticky top-0">
               <tr>
-                <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Name
-                </th>
-                <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Email
-                </th>
-                <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Company
-                </th>
-                <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Title
-                </th>
-                <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Phone
-                </th>
-                <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Location
-                </th>
+                {visibleColumns.has('name') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Name
+                  </th>
+                )}
+                {visibleColumns.has('email') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Email
+                  </th>
+                )}
+                {visibleColumns.has('company_name') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Company
+                  </th>
+                )}
+                {visibleColumns.has('job_title') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Title
+                  </th>
+                )}
+                {visibleColumns.has('phone') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Phone
+                  </th>
+                )}
+                {visibleColumns.has('location') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Location
+                  </th>
+                )}
+                {visibleColumns.has('linkedin_url') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    LinkedIn
+                  </th>
+                )}
+                {visibleColumns.has('city') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    City
+                  </th>
+                )}
+                {visibleColumns.has('state') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    State
+                  </th>
+                )}
+                {visibleColumns.has('country') && (
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Country
+                  </th>
+                )}
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {leads.map((lead, index) => (
                 <tr key={lead.id} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-3 py-2 text-sm text-gray-900">
-                    {lead.first_name} {lead.last_name || ''}
-                  </td>
-                  <td className="px-3 py-2 text-sm text-gray-900 max-w-xs truncate" title={lead.email}>
-                    {lead.email}
-                  </td>
-                  <td className="px-3 py-2 text-sm text-gray-900">
-                    {lead.company_name || '-'}
-                  </td>
-                  <td className="px-3 py-2 text-sm text-gray-600">
-                    {lead.job_title || '-'}
-                  </td>
-                  <td className="px-3 py-2 text-sm text-gray-600">
-                    {lead.phone || '-'}
-                  </td>
-                  <td className="px-3 py-2 text-sm text-gray-600">
-                    {lead.city ? `${lead.city}, ${lead.state || lead.country}` : '-'}
-                  </td>
+                  {visibleColumns.has('name') && (
+                    <td className="px-3 py-2 text-sm text-gray-900">
+                      {lead.first_name} {lead.last_name || ''}
+                    </td>
+                  )}
+                  {visibleColumns.has('email') && (
+                    <td className="px-3 py-2 text-sm text-gray-900 max-w-xs truncate" title={lead.email}>
+                      {lead.email}
+                    </td>
+                  )}
+                  {visibleColumns.has('company_name') && (
+                    <td className="px-3 py-2 text-sm text-gray-900">
+                      {lead.company_name || '-'}
+                    </td>
+                  )}
+                  {visibleColumns.has('job_title') && (
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      {lead.job_title || '-'}
+                    </td>
+                  )}
+                  {visibleColumns.has('phone') && (
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      {lead.phone || '-'}
+                    </td>
+                  )}
+                  {visibleColumns.has('location') && (
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      {lead.city ? `${lead.city}, ${lead.state || lead.country}` : '-'}
+                    </td>
+                  )}
+                  {visibleColumns.has('linkedin_url') && (
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      {lead.linkedin_url ? (
+                        <a href={lead.linkedin_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                          View
+                        </a>
+                      ) : '-'}
+                    </td>
+                  )}
+                  {visibleColumns.has('city') && (
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      {lead.city || '-'}
+                    </td>
+                  )}
+                  {visibleColumns.has('state') && (
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      {lead.state || '-'}
+                    </td>
+                  )}
+                  {visibleColumns.has('country') && (
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      {lead.country || '-'}
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>

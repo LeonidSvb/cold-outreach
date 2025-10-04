@@ -13,6 +13,11 @@ from dotenv import load_dotenv
 root_path = Path(__file__).parent.parent.parent
 load_dotenv(root_path / '.env')
 
+sys.path.insert(0, str(root_path))
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
+
 SUPABASE_URL = os.getenv('NEXT_PUBLIC_SUPABASE_URL')
 SERVICE_ROLE_KEY = os.getenv('SUPABASE_SERVICE_ROLE_KEY')
 
@@ -97,4 +102,10 @@ def apply_migration():
     print(f"{SUPABASE_URL.replace('https://', 'https://supabase.com/dashboard/project/')}/editor")
 
 if __name__ == '__main__':
-    apply_migration()
+    logger.info("SQL migration script started")
+    try:
+        apply_migration()
+        logger.info("SQL migration completed")
+    except Exception as e:
+        logger.error("SQL migration failed", error=e)
+        raise
