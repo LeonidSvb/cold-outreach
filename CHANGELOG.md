@@ -10,19 +10,51 @@
 **Sprint:** First Campaign Launch (see [docs/sprints/01-first-campaign-launch/](docs/sprints/01-first-campaign-launch/))
 
 **Priority Tasks:**
-1. AI Processing Pipeline - Generate company_name_short, city_short, icebreaker for 1,189 leads
-2. Frontend Upload Button (TASK-004) - Connect UI to backend endpoint
-3. Instantly Sync Frontend (TASK-010) - Frontend interface for sync service
-4. E2E Testing (TASK-005) - Full pipeline validation
+1. Implement centralized logging system across all modules (Python + Next.js)
+2. Debug Instantly preview upload feature with comprehensive logs
+3. Get Instantly API subscription for real data testing
+4. AI Processing Pipeline - Generate icebreakers for 1,189 leads
 
-**Goal:** AI-process leads → Generate icebreakers → First campaign launch
+**Goal:** Fix logging → Debug preview → Get Instantly subscription → AI processing
 
 **Completed This Session:**
-- ✅ Database schema redesign: Unified leads table (no more companies/leads split)
-- ✅ Full CSV upload: 1,189 leads from original CSV file
-- ✅ Phone formatting: International format (+13213096900)
-- ✅ RAW + AI fields architecture: Raw data preserved, AI fields ready for processing
-- ✅ MCP-based migration: Using Supabase MCP tools instead of one-off scripts
+- ✅ Two-step upload preview UI (needs debugging)
+- ✅ Preview endpoint with duplicate detection
+- ✅ Simplified sources.py to support ONLY raw_data format
+- ✅ Professional SaaS-style sync interface
+- ✅ Backend validation and analysis logic
+
+**Known Issues (WIP):**
+- ⚠️ Preview data not displaying in frontend
+- ⚠️ Mock data in stats cards (hardcoded values)
+- ⚠️ Need comprehensive logging for debugging
+- ⚠️ Requires real Instantly API subscription for testing
+
+## [9.1.0] - 2025-10-04 - Instantly Two-Step Upload Preview (WIP)
+
+### Added
+- **Two-step upload preview endpoint**: `/api/instantly/preview-upload` for dry-run validation
+- **Duplicate detection**: Compare uploaded data with existing Supabase records
+- **Preview UI**: Professional SaaS-style interface with stats cards and duplicate warnings
+- **RAW data support**: Simplified sources.py to support ONLY raw_data format (no dashboard_data)
+- **Backend validation**: Extract → Transform → Compare workflow before DB writes
+
+### Changed
+- **Instantly sync page**: Redesigned with industry-standard patterns (Vercel/GitHub/Stripe style)
+- **sources.py**: Removed dashboard_data format support, only raw_data accepted
+- **Preview flow**: File select → Preview analysis → Confirm → Upload (two-step process)
+
+### Known Issues
+- Preview data not rendering correctly in frontend (backend returns data, frontend doesn't display)
+- Stats cards show hardcoded mock data instead of real DB values
+- Missing comprehensive logging system for debugging data flow
+- Requires real Instantly API subscription for end-to-end testing
+
+### Technical Debt
+- Need centralized logging system across Python backend and Next.js frontend
+- Remove all mock/hardcoded data from UI components
+- Debug preview data flow: backend extraction works but frontend state not updating
+- Add proper error handling and user feedback for failed uploads
 
 ## [9.0.0] - 2025-10-04 - Unified Leads Table & Full CSV Migration
 

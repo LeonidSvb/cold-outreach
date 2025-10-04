@@ -134,6 +134,9 @@ export default function InstantlySyncPage() {
     const file = e.target.files?.[0]
     if (!file) return
 
+    console.log('=== FILE SELECT DEBUG ===')
+    console.log('File:', file.name, file.size, 'bytes')
+
     setSelectedFile(file)
     setSyncing(true)
     setPreview(null)
@@ -143,14 +146,19 @@ export default function InstantlySyncPage() {
     formData.append('file', file)
 
     try {
+      console.log('Fetching preview from backend...')
       const response = await fetch('http://localhost:8002/api/instantly/preview-upload', {
         method: 'POST',
         body: formData
       })
 
+      console.log('Response status:', response.status)
       const data = await response.json()
+      console.log('Preview data received:', data)
+
       setPreview(data)
       setShowPreview(true)
+      console.log('Preview state updated, showPreview:', true)
 
     } catch (error) {
       setPreview({
