@@ -10,23 +10,79 @@
 **Sprint:** First Campaign Launch (see [docs/sprints/01-first-campaign-launch/](docs/sprints/01-first-campaign-launch/))
 
 **Priority Tasks:**
-1. ~~CSV to Supabase Upload Backend (TASK-003)~~ ✅ DONE
+1. AI Processing Pipeline - Generate company_name_short, city_short, icebreaker for 1,189 leads
 2. Frontend Upload Button (TASK-004) - Connect UI to backend endpoint
-3. ~~Instantly Data Transform (TASK-008)~~ ✅ DONE
-4. ~~Instantly Sync Service (TASK-009)~~ ✅ DONE
-5. **INCOMPLETE: Email Events Upload** - ~30 email events NOT uploaded to instantly_emails_raw
-6. Instantly Sync Frontend (TASK-010) - Frontend interface for sync service
-7. E2E Testing (TASK-005) - Full pipeline validation
+3. Instantly Sync Frontend (TASK-010) - Frontend interface for sync service
+4. E2E Testing (TASK-005) - Full pipeline validation
 
-**Goal:** Complete upload pipeline → Instantly sync → First campaign launch
+**Goal:** AI-process leads → Generate icebreakers → First campaign launch
 
 **Completed This Session:**
-- ✅ TASK-008: Instantly data transformation module (campaigns, accounts, daily analytics)
-- ✅ TASK-009: Production-ready sync orchestration service
-- ✅ Module reorganization: industry-standard structure (docs/, scripts/, tests/, results/)
-- ✅ MODULE_TEMPLATE.md: Gold standard for future modules
-- ✅ All tests passing with real data (4 campaigns, 10 accounts, 17 daily records)
-- ⚠️ INCOMPLETE: Email events data exists but NOT uploaded (~30 records missing)
+- ✅ Database schema redesign: Unified leads table (no more companies/leads split)
+- ✅ Full CSV upload: 1,189 leads from original CSV file
+- ✅ Phone formatting: International format (+13213096900)
+- ✅ RAW + AI fields architecture: Raw data preserved, AI fields ready for processing
+- ✅ MCP-based migration: Using Supabase MCP tools instead of one-off scripts
+
+## [9.0.0] - 2025-10-04 - Unified Leads Table & Full CSV Migration
+
+### Added
+- **Unified leads table schema**: Single table with RAW + AI-processed fields
+  - RAW fields: first_name, email, phone, linkedin_url, company_name, company_website, city, state, country, raw_data (full CSV row)
+  - AI fields: company_name_short, city_short, icebreaker (empty, for AI processing)
+- **Full CSV upload pipeline**: 1,189 leads from original PPC US/Canada CSV file
+- **International phone formatting**: Automatic conversion to +1... format for US/Canada numbers
+- **MCP-based data migration**: Using Supabase MCP tools for all database operations
+- **Upload script**: backend/scripts/upload_full_csv.py for batch CSV processing
+
+### Changed
+- **Database architecture**: From 2-table (companies + leads) to 1-table (leads only) design
+- **LinkedIn URL storage**: From raw_data JSONB to dedicated linkedin_url column
+- **Phone format**: From raw pandas float (14154046407.0) to international string (+14154046407)
+- **Data preservation**: Full CSV row stored in raw_data JSONB for future reprocessing
+
+### Removed
+- **companies table**: No longer needed, company data denormalized into leads table
+- **Foreign key complexity**: Eliminated company_id relationships and JOIN queries
+- **Old leads table**: Dropped and recreated with new unified structure
+
+### Fixed
+- **Missing data issue**: All CSV columns now properly mapped to database fields
+- **raw_data completeness**: Full CSV row preserved, not just linkedin_url
+- **Phone format issues**: Clean international format without .0 decimal artifacts
+
+### Technical Implementation
+- **1,189 leads loaded**: From 1,691 CSV rows (500 duplicates filtered)
+- **660 leads with phones**: Proper international format validation
+- **898 leads with LinkedIn**: Direct column access (no JSONB extraction needed)
+- **1,087 unique companies**: Denormalized but efficient for cold outreach use case
+- **Batch processing**: 500 records per batch with proper error handling
+
+### Migration Strategy
+- Drop old tables (companies, leads, campaign_leads, events)
+- Create new unified leads table with RAW + AI field structure
+- Load data via Python script with pandas + Supabase client
+- Verify data integrity via MCP SQL queries
+
+### Database Schema
+```sql
+leads (
+  -- RAW DATA
+  first_name, last_name, email, phone, linkedin_url,
+  job_title, seniority, headline,
+  company_name, company_website, company_linkedin,
+  city, state, country,
+  raw_data JSONB,
+
+  -- AI FIELDS (empty, for processing)
+  company_name_short, city_short, icebreaker
+)
+```
+
+### Next Steps
+- AI processing pipeline for company_name_short (Google Inc. → Google)
+- AI processing for city_short (San Francisco → SF)
+- Icebreaker generation using RAW + normalized data
 
 ## [8.5.0] - 2025-10-03 - Instantly Module Complete Reorganization & Sync Service
 

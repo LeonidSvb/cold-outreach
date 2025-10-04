@@ -31,12 +31,18 @@ from lib.column_detector import detect_all_columns
 # Import CSV to Supabase service
 from services.csv_to_supabase import upload_csv_to_supabase
 
+# Import routers
+from routers import instantly
+
 app = FastAPI(title="Script Runner API", version="1.0.0")
+
+# Register routers
+app.include_router(instantly.router)
 
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3003"],
+    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3003", "http://localhost:3004"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

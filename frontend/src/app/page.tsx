@@ -27,6 +27,14 @@ const tools: Tool[] = [
     color: 'bg-green-500 hover:bg-green-600'
   },
   {
+    id: 'instantly-sync',
+    name: 'Instantly Sync',
+    description: 'Sync campaigns and analytics from Instantly API',
+    href: '/instantly-sync',
+    status: 'ready',
+    color: 'bg-cyan-500 hover:bg-cyan-600'
+  },
+  {
     id: 'components-test',
     name: 'UI Components Test',
     description: 'Test and showcase shadcn/ui components and interactions',
@@ -138,11 +146,11 @@ export default function Home() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-blue-600 mb-2">7</div>
+            <div className="text-2xl font-bold text-blue-600 mb-2">8</div>
             <div className="text-gray-600">Active Modules</div>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-green-600 mb-2">3</div>
+            <div className="text-2xl font-bold text-green-600 mb-2">4</div>
             <div className="text-gray-600">Ready Tools</div>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
