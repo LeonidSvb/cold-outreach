@@ -26,7 +26,7 @@ router = APIRouter(prefix="/api/csv", tags=["csv"])
 # Response Models
 class UploadResponse(BaseModel):
     success: bool
-    upload_batch_id: str
+    upload_batch_id: int
     total_rows: int
     new_leads: int
     updated_leads: int
@@ -46,16 +46,16 @@ class Lead(BaseModel):
     country: Optional[str]
     linkedin_url: Optional[str]
     uploaded_at: Optional[str]
-    upload_batch_id: Optional[str]
+    upload_batch_id: Optional[int]
 
 class LeadsResponse(BaseModel):
     success: bool
     leads: List[Lead]
     total: int
-    upload_batch_id: Optional[str]
+    upload_batch_id: Optional[int]
 
 class UploadHistoryItem(BaseModel):
-    upload_batch_id: str
+    upload_batch_id: int
     uploaded_at: str
     total_leads: int
     new_leads: int
@@ -92,8 +92,14 @@ async def upload_csv(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail="Only CSV files accepted")
 
     try:
-        # Generate batch ID
-        batch_id = str(uuid.uuid4())
+        # Get next batch ID (max + 1)
+        supabase = get_supabase()
+        max_batch = supabase.table('leads').select('upload_batch_id').order('upload_batch_id', desc=True).limit(1).execute()
+
+        if max_batch.data and len(max_batch.data) > 0:
+            batch_id = max_batch.data[0]['upload_batch_id'] + 1
+        else:
+            batch_id = 1
 
         # Read CSV
         content = await file.read()
@@ -104,7 +110,6 @@ async def upload_csv(file: UploadFile = File(...)):
         print(f"Read CSV: {total_rows} rows")
 
         # Get existing emails for duplicate detection
-        supabase = get_supabase()
         existing = supabase.table('leads').select('email').execute()
         existing_emails = {lead['email'] for lead in existing.data}
 
@@ -182,8 +187,8 @@ async def upload_csv(file: UploadFile = File(...)):
 
 @router.get("/leads", response_model=LeadsResponse)
 async def get_leads(
-    limit: int = Query(100, ge=1, le=1000),
-    upload_batch_id: Optional[str] = None
+    limit: int = Query(100, ge=1, le=10000),
+    upload_batch_id: Optional[int] = None
 ):
     """
     Get leads from database
@@ -193,8 +198,16 @@ async def get_leads(
     try:
         supabase = get_supabase()
 
-        query = supabase.table('leads').select('*').limit(limit)
+        # Get total count first
+        count_query = supabase.table('leads').select('id', count='exact')
+        if upload_batch_id:
+            count_query = count_query.eq('upload_batch_id', upload_batch_id)
 
+        count_result = count_query.execute()
+        total_count = count_result.count
+
+        # Get actual data
+        query = supabase.table('leads').select('*').limit(limit)
         if upload_batch_id:
             query = query.eq('upload_batch_id', upload_batch_id)
 
@@ -203,7 +216,7 @@ async def get_leads(
         return LeadsResponse(
             success=True,
             leads=result.data,
-            total=len(result.data),
+            total=total_count,
             upload_batch_id=upload_batch_id
         )
 

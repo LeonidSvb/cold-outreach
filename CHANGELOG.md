@@ -11,24 +11,96 @@
 
 **Priority Tasks:**
 1. Implement centralized logging system across all modules (Python + Next.js)
-2. Debug Instantly preview upload feature with comprehensive logs
-3. Get Instantly API subscription for real data testing
-4. AI Processing Pipeline - Generate icebreakers for 1,189 leads
+2. Get Instantly API subscription for real data testing
+3. AI Processing Pipeline - Generate icebreakers for 1,189 leads
+4. Test CSV upload workflow end-to-end
 
-**Goal:** Fix logging → Debug preview → Get Instantly subscription → AI processing
+**Goal:** Logging → Instantly subscription → AI processing → Production ready
 
 **Completed This Session:**
-- ✅ Two-step upload preview UI (needs debugging)
-- ✅ Preview endpoint with duplicate detection
-- ✅ Simplified sources.py to support ONLY raw_data format
-- ✅ Professional SaaS-style sync interface
-- ✅ Backend validation and analysis logic
+- ✅ Frontend Supabase integration with Leads Database UI
+- ✅ Integer batch IDs instead of UUIDs (Batch #1, #2, #3...)
+- ✅ Accurate total count display (100 of 1189)
+- ✅ Upload history with statistics
+- ✅ CSV upload with batch tracking
 
 **Known Issues (WIP):**
-- ⚠️ Preview data not displaying in frontend
-- ⚠️ Mock data in stats cards (hardcoded values)
 - ⚠️ Need comprehensive logging for debugging
 - ⚠️ Requires real Instantly API subscription for testing
+
+## [10.0.0] - 2025-10-04 - Frontend Supabase Integration & Leads Database UI
+
+### Added
+- **Complete Frontend Supabase Integration**: Full integration with Supabase database displaying 1,189 leads
+- **Leads Database UI**: Professional interface at /leads with upload history and leads preview
+- **Upload History Component**: Shows all upload batches with statistics (new/updated leads, phone/LinkedIn counts)
+- **Leads Preview Component**: Displays leads from database with filtering by upload batch
+- **CSV Upload Interface**: Drag & drop file upload with automatic batch tracking
+- **Integer Batch IDs**: Simple auto-increment batch IDs (1, 2, 3...) instead of UUIDs
+- **Accurate Total Counts**: Proper total count queries showing "100 of 1189" instead of "100 of 100"
+- **Upload Statistics View**: PostgreSQL VIEW aggregating upload metrics per batch
+
+### Changed
+- **Batch ID Format**: From UUID (00000000-0000-0000-0000-000000000001) to INTEGER (1)
+- **Total Count Strategy**: From `len(result.data)` to separate `count='exact'` query
+- **Data Flow**: Frontend now reads from Supabase database instead of CSV files
+- **API Architecture**: FastAPI backend on port 8003 with Next.js proxy routes
+
+### Fixed
+- **Total Count Display**: Shows actual database total (1,189) instead of limited result count (100)
+- **Batch ID Display**: Clean "Batch #1" instead of long UUID strings
+- **Pydantic Validation**: All models use `int` for batch IDs, not `str`
+- **Frontend Type Safety**: TypeScript interfaces use `number` for batch IDs
+
+### Technical Implementation
+- **Backend (FastAPI on port 8003)**:
+  - `/api/csv/upload` - CSV upload with auto-increment batch ID (max + 1)
+  - `/api/csv/leads` - Leads with proper total count and batch filtering
+  - `/api/csv/history` - Upload statistics from PostgreSQL VIEW
+- **Frontend (Next.js on port 3004)**:
+  - `/leads` page - Main leads database interface
+  - API proxy routes - Forward requests to FastAPI backend
+  - UploadHistory component - Batch selection and statistics
+  - LeadsPreview component - Leads table with accurate counts
+- **Database Changes**:
+  - `upload_batch_id INTEGER` with auto-increment logic
+  - `upload_history` VIEW with aggregated statistics
+  - All existing leads set to batch_id = 1
+
+### Performance Features
+- **Accurate Counts**: Separate count query with `count='exact'` parameter
+- **Batch Filtering**: Efficient filtering by upload_batch_id
+- **Auto-increment IDs**: Simple max + 1 logic for new batches
+- **No Mock Data**: All data from real Supabase database
+
+### User Experience
+- **Upload History Sidebar**: Click batch to filter leads
+- **Statistics Cards**: Total leads, with phone, with LinkedIn
+- **Batch Information**: See when uploaded, how many new/updated
+- **Clean Interface**: Professional SaaS-style design
+
+### Database Schema
+```sql
+-- Added columns
+ALTER TABLE leads ADD COLUMN upload_batch_id INTEGER;
+ALTER TABLE leads ADD COLUMN uploaded_at TIMESTAMPTZ DEFAULT NOW();
+
+-- Upload history VIEW
+CREATE OR REPLACE VIEW upload_history AS
+SELECT
+  upload_batch_id,
+  MIN(uploaded_at) as uploaded_at,
+  COUNT(*) as total_leads,
+  COUNT(CASE WHEN created_at = uploaded_at THEN 1 END) as new_leads,
+  COUNT(CASE WHEN created_at < uploaded_at THEN 1 END) as updated_leads,
+  COUNT(DISTINCT email) as unique_emails,
+  COUNT(CASE WHEN phone IS NOT NULL THEN 1 END) as leads_with_phone,
+  COUNT(CASE WHEN linkedin_url IS NOT NULL THEN 1 END) as leads_with_linkedin
+FROM leads
+WHERE upload_batch_id IS NOT NULL
+GROUP BY upload_batch_id
+ORDER BY upload_batch_id DESC;
+```
 
 ## [9.1.0] - 2025-10-04 - Instantly Two-Step Upload Preview (WIP)
 
