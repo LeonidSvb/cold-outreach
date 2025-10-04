@@ -157,39 +157,11 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
         />
       </div>
 
-      <div className="mb-6">
-        <h4 className="font-medium text-gray-900">Database Leads</h4>
-        <p className="text-sm text-gray-500">
-          Showing {leads.length} of {leadsData.total} total leads
-        </p>
-      </div>
-
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="bg-blue-50 rounded-lg p-3">
-          <div className="flex items-center space-x-2">
-            <Users className="h-4 w-4 text-blue-600" />
-            <span className="text-sm font-medium text-blue-900">Total Leads</span>
-          </div>
-          <p className="text-2xl font-bold text-blue-600">{leadsData.total}</p>
-        </div>
-
-        <div className="bg-green-50 rounded-lg p-3">
-          <div className="flex items-center space-x-2">
-            <Columns className="h-4 w-4 text-green-600" />
-            <span className="text-sm font-medium text-green-900">With Phone</span>
-          </div>
-          <p className="text-2xl font-bold text-green-600">
-            {leads.filter(l => l.phone).length}
-          </p>
-        </div>
-
-        <div className="bg-purple-50 rounded-lg p-3">
-          <div className="flex items-center space-x-2">
-            <Columns className="h-4 w-4 text-purple-600" />
-            <span className="text-sm font-medium text-purple-900">With LinkedIn</span>
-          </div>
-          <p className="text-2xl font-bold text-purple-600">
-            {leads.filter(l => l.linkedin_url).length}
+      <div className="mb-4 flex items-center justify-between">
+        <div>
+          <h4 className="font-medium text-gray-900">Total: {leadsData.total} leads</h4>
+          <p className="text-sm text-gray-500">
+            Showing {leads.length} of {leadsData.total}
           </p>
         </div>
       </div>

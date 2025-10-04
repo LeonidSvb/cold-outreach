@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import LeadsPreview from '@/components/LeadsPreview'
-import UploadHistory from '@/components/UploadHistory'
+import UploadHistoryDrawer from '@/components/UploadHistoryDrawer'
 import FileUpload from '@/components/FileUpload'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft, Upload } from 'lucide-react'
@@ -69,13 +69,20 @@ export default function LeadsPage() {
             Back to Home
           </Link>
 
-          <Button
-            onClick={() => setShowUpload(!showUpload)}
-            className="flex items-center gap-2"
-          >
-            <Upload className="h-4 w-4" />
-            {showUpload ? 'Cancel Upload' : 'Upload CSV'}
-          </Button>
+          <div className="flex items-center gap-2">
+            <UploadHistoryDrawer
+              onSelectBatch={setSelectedBatchId}
+              selectedBatch={selectedBatchId}
+            />
+
+            <Button
+              onClick={() => setShowUpload(!showUpload)}
+              className="flex items-center gap-2"
+            >
+              <Upload className="h-4 w-4" />
+              {showUpload ? 'Cancel Upload' : 'Upload CSV'}
+            </Button>
+          </div>
         </div>
 
         <div className="mb-6">
@@ -100,18 +107,10 @@ export default function LeadsPage() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-1">
-            <UploadHistory onSelectBatch={setSelectedBatchId} />
-          </div>
-
-          <div className="lg:col-span-2">
-            <LeadsPreview
-              uploadBatchId={selectedBatchId}
-              limit={selectedBatchId ? 1000 : 100}
-            />
-          </div>
-        </div>
+        <LeadsPreview
+          uploadBatchId={selectedBatchId}
+          limit={selectedBatchId ? 1000 : 100}
+        />
       </div>
     </div>
   )

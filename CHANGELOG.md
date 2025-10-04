@@ -10,24 +10,66 @@
 **Sprint:** AI Column Processing System
 
 **Priority Tasks:**
-1. Column visibility management (Airtable-style dropdown with show/hide)
-2. AI Transform modal integration
-3. Test mode (10 rows) before full processing
-4. Custom prompt saving after successful tests
+1. AI Transform modal integration
+2. Test mode (10 rows) before full processing
+3. Custom prompt saving after successful tests
 
-**Goal:** Column management → AI processing UI → Production ready
+**Goal:** AI processing UI → Production ready
 
 **Completed This Session:**
-- ✅ Universal logging system implemented across entire platform
-- ✅ All Python scripts, FastAPI backend, Next.js frontend integrated with logger
-- ✅ Daily log rotation with separate error logs
-- ✅ JSON structured logging (modules/logging/logs/)
-- ✅ Zero maintenance required (automatic file creation)
-- ✅ Integration tests passing (ALL TESTS PASSED)
+- ✅ Column visibility dropdown with Apply/Cancel buttons
+- ✅ Upload History collapsible drawer (replacing sidebar)
+- ✅ Removed unnecessary statistics cards (With Phone/LinkedIn)
+- ✅ LinkedIn URL display instead of "View" button
+- ✅ Full-width leads table layout
+- ✅ localStorage persistence for column preferences
 
 **Known Issues (WIP):**
-- ⚠️ Column visibility UI not yet implemented
-- ⚠️ AI processing integration pending
+- None currently
+
+## [13.0.0] - 2025-10-04 - Column Visibility UI & Upload History Drawer
+
+### Added
+- **Column Visibility Dropdown**: Airtable-style multi-select with Apply/Cancel buttons
+- **Upload History Drawer**: Collapsible side panel replacing sidebar layout
+- **LinkedIn URL Display**: Show actual LinkedIn URL instead of generic "View" button
+- **Full-Width Leads Table**: Removed grid layout for maximum horizontal space
+- **localStorage Persistence**: Column visibility preferences saved across sessions
+- **Pending Changes System**: Apply/Cancel pattern preventing auto-close on selection
+
+### Changed
+- **Upload History UI**: From sidebar (1/3 screen) to compact drawer button
+- **Statistics Display**: Removed "With Phone/LinkedIn" cards, kept only "Total: X leads"
+- **Layout Strategy**: From grid layout to full-width table with drawer
+- **Column Selection UX**: From instant apply to pending changes with explicit Apply
+
+### Removed
+- **Statistics Cards**: Removed unnecessary "With Phone" and "With LinkedIn" statistics
+- **Grid Layout**: Eliminated 1/3 sidebar + 2/3 table layout
+- **Sidebar Component**: Replaced with Sheet drawer component
+
+### Fixed
+- **Dropdown Auto-Close**: Prevented dropdown closing after each column selection
+- **LinkedIn Display**: Changed from "View" button to actual URL text
+- **Screen Space**: Optimized upload history to not occupy 1/3 of screen
+
+### Technical Implementation
+- **ColumnVisibilityDropdown**: 10 columns with 3 always-visible (Name, Email, Company)
+- **UploadHistoryDrawer**: Sheet component from shadcn/ui sliding from right
+- **Component API**: Updated to use Set<string> for column visibility state
+- **Event Prevention**: onSelect/onInteractOutside handlers to keep dropdown open
+
+### Files Modified
+- `frontend/src/components/ColumnVisibilityDropdown.tsx` - Complete rewrite with pending changes
+- `frontend/src/components/LeadsPreview.tsx` - Removed statistics, updated LinkedIn display
+- `frontend/src/components/UploadHistoryDrawer.tsx` - New drawer component created
+- `frontend/src/components/ui/sheet.tsx` - Added shadcn/ui Sheet component
+- `frontend/src/app/leads/page.tsx` - Switched from grid to full-width layout
+
+### UI Patterns
+- **Industry Standard**: Collapsible drawer pattern (Notion, Linear, Airtable)
+- **Multi-Select**: Apply/Cancel buttons pattern for bulk changes
+- **Column Management**: Hybrid approach (always-visible + optional columns)
 
 ## [12.0.0] - 2025-10-04 - Universal Logging System
 
