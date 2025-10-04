@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { Columns, Eye, EyeOff } from 'lucide-react'
+import { useState } from 'react'
+import { Columns, Eye, EyeOff, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -21,7 +21,7 @@ export interface ColumnDefinition {
 interface ColumnVisibilityDropdownProps {
   columns: ColumnDefinition[]
   visibleColumns: Set<string>
-  onVisibilityChange: (columnKey: string, visible: boolean) => void
+  onVisibilityChange: (updates: Set<string>) => void
 }
 
 export default function ColumnVisibilityDropdown({
@@ -30,12 +30,41 @@ export default function ColumnVisibilityDropdown({
   onVisibilityChange,
 }: ColumnVisibilityDropdownProps) {
   const [open, setOpen] = useState(false)
+  const [pendingChanges, setPendingChanges] = useState<Set<string>>(visibleColumns)
 
   const visibleCount = columns.filter(col => visibleColumns.has(col.key)).length
   const totalCount = columns.length
+  const hasChanges = JSON.stringify(Array.from(pendingChanges).sort()) !== JSON.stringify(Array.from(visibleColumns).sort())
+
+  const handleToggle = (columnKey: string, checked: boolean) => {
+    setPendingChanges(prev => {
+      const newSet = new Set(prev)
+      if (checked) {
+        newSet.add(columnKey)
+      } else {
+        newSet.delete(columnKey)
+      }
+      return newSet
+    })
+  }
+
+  const handleApply = () => {
+    onVisibilityChange(pendingChanges)
+    setOpen(false)
+  }
+
+  const handleCancel = () => {
+    setPendingChanges(visibleColumns)
+    setOpen(false)
+  }
 
   return (
-    <DropdownMenu open={open} onOpenChange={setOpen}>
+    <DropdownMenu open={open} onOpenChange={(newOpen) => {
+      if (!newOpen) {
+        setPendingChanges(visibleColumns)
+      }
+      setOpen(newOpen)
+    }}>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
@@ -48,7 +77,7 @@ export default function ColumnVisibilityDropdown({
           </span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-56">
+      <DropdownMenuContent align="end" className="w-56" onInteractOutside={(e) => e.preventDefault()}>
         <DropdownMenuLabel className="flex items-center gap-2">
           <Columns className="h-4 w-4" />
           Toggle Columns
@@ -56,7 +85,7 @@ export default function ColumnVisibilityDropdown({
         <DropdownMenuSeparator />
 
         {columns.map((column) => {
-          const isVisible = visibleColumns.has(column.key)
+          const isVisible = pendingChanges.has(column.key)
           const isDisabled = column.alwaysVisible
 
           return (
@@ -66,9 +95,10 @@ export default function ColumnVisibilityDropdown({
               disabled={isDisabled}
               onCheckedChange={(checked) => {
                 if (!isDisabled) {
-                  onVisibilityChange(column.key, checked)
+                  handleToggle(column.key, checked)
                 }
               }}
+              onSelect={(e) => e.preventDefault()}
               className="flex items-center gap-2"
             >
               {isVisible ? (
@@ -87,8 +117,31 @@ export default function ColumnVisibilityDropdown({
         })}
 
         <DropdownMenuSeparator />
-        <div className="px-2 py-1.5 text-xs text-gray-500">
-          {visibleCount} of {totalCount} columns visible
+
+        <div className="p-2 space-y-2">
+          <div className="text-xs text-gray-500">
+            {pendingChanges.size} of {totalCount} columns will be visible
+          </div>
+
+          <div className="flex gap-2">
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={handleCancel}
+              className="flex-1 h-8"
+            >
+              Cancel
+            </Button>
+            <Button
+              size="sm"
+              onClick={handleApply}
+              disabled={!hasChanges}
+              className="flex-1 h-8 gap-1"
+            >
+              <Check className="h-3 w-3" />
+              Apply
+            </Button>
+          </div>
         </div>
       </DropdownMenuContent>
     </DropdownMenu>

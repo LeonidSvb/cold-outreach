@@ -25,8 +25,12 @@ v1.0.0 - Универсальный сборщик с конфигом
 import subprocess
 import json
 import os
+import sys
 from datetime import datetime, timedelta
 from pathlib import Path
+
+# Add project root to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 from modules.logging.shared.universal_logger import get_logger
 
 logger = get_logger(__name__)

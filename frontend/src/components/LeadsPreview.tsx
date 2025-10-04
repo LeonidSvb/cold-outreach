@@ -104,20 +104,11 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
     }
   }
 
-  const handleColumnVisibilityChange = (columnKey: string, visible: boolean) => {
-    setVisibleColumns(prev => {
-      const newSet = new Set(prev)
-      if (visible) {
-        newSet.add(columnKey)
-      } else {
-        newSet.delete(columnKey)
-      }
+  const handleColumnVisibilityChange = (updates: Set<string>) => {
+    setVisibleColumns(updates)
 
-      // Save to localStorage
-      localStorage.setItem('leadsColumnVisibility', JSON.stringify(Array.from(newSet)))
-
-      return newSet
-    })
+    // Save to localStorage
+    localStorage.setItem('leadsColumnVisibility', JSON.stringify(Array.from(updates)))
   }
 
   if (loading) {
@@ -300,10 +291,10 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
                     </td>
                   )}
                   {visibleColumns.has('linkedin_url') && (
-                    <td className="px-3 py-2 text-sm text-gray-600">
+                    <td className="px-3 py-2 text-sm text-gray-600 max-w-xs truncate">
                       {lead.linkedin_url ? (
-                        <a href={lead.linkedin_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                          View
+                        <a href={lead.linkedin_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline" title={lead.linkedin_url}>
+                          {lead.linkedin_url.replace('https://', '').replace('http://', '')}
                         </a>
                       ) : '-'}
                     </td>
