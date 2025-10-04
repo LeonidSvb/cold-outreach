@@ -13,6 +13,9 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
 from lib.supabase_client import get_supabase
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def format_phone(phone_raw):
@@ -31,13 +34,13 @@ def upload_csv():
     """Main upload function"""
     csv_path = r'C:\Users\79818\Downloads\ppc US - Canada, 11-20 _ 4 Sep   - Us - founders (1).csv'
 
-    print(f"Reading CSV: {csv_path}")
+    logger.info("CSV upload started", csv_path=csv_path)
     df = pd.read_csv(csv_path)
-    print(f"Total rows: {len(df)}")
+    logger.info("CSV loaded", total_rows=len(df))
 
     # Clear existing test data
     supabase = get_supabase()
-    print("Clearing test data...")
+    logger.debug("Clearing test data")
     supabase.table('leads').delete().neq('id', '00000000-0000-0000-0000-000000000000').execute()
 
     # Prepare leads data

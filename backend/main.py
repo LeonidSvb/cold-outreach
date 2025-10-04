@@ -32,13 +32,18 @@ from lib.column_detector import detect_all_columns
 from services.csv_to_supabase import upload_csv_to_supabase
 
 # Import routers
-from routers import instantly, csv_upload
+from routers import instantly, csv_upload, prompts, logs
+
+# Import logging
+from middleware.logging_middleware import log_requests
 
 app = FastAPI(title="Script Runner API", version="1.0.0")
 
 # Register routers
 app.include_router(instantly.router)
 app.include_router(csv_upload.router)
+app.include_router(prompts.router)
+app.include_router(logs.router)
 
 # Enable CORS for frontend
 app.add_middleware(
@@ -48,6 +53,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Add logging middleware
+app.middleware("http")(log_requests)
 
 # Job storage (in production, use a database)
 jobs: Dict[str, Dict[str, Any]] = {}

@@ -7,6 +7,12 @@ Campaigns + Accounts + Daily Analytics
 import sys
 from pathlib import Path
 
+# Add project root to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
+
 # Add backend to path
 sys.path.append(str(Path(__file__).parent.parent.parent / "backend"))
 from lib.supabase_client import upsert_rows, query_table, get_supabase
@@ -152,32 +158,41 @@ def verify_all():
         print(f"  Error querying daily analytics: {str(e)}")
 
 def main():
+    logger.info("Instantly upload_all started")
     print("="*50)
     print("UPLOAD ALL INSTANTLY DATA TO SUPABASE")
     print("="*50)
 
-    file_path = str(Path(__file__).parent.parent / 'results/raw_data_20250921_125555.json')
+    try:
+        file_path = str(Path(__file__).parent.parent / 'results/raw_data_20250921_125555.json')
 
-    # Upload all data
-    campaigns_ok = upload_campaigns(file_path)
-    accounts_ok = upload_accounts(file_path)
-    daily_ok = upload_daily_analytics(file_path)
+        # Upload all data
+        campaigns_ok = upload_campaigns(file_path)
+        accounts_ok = upload_accounts(file_path)
+        daily_ok = upload_daily_analytics(file_path)
 
-    # Verify
-    verify_all()
+        # Verify
+        verify_all()
 
-    # Summary
-    print("\n" + "="*50)
-    print("SUMMARY")
-    print("="*50)
-    print(f"Campaigns: {'SUCCESS' if campaigns_ok else 'FAILED'}")
-    print(f"Accounts: {'SUCCESS' if accounts_ok else 'FAILED'}")
-    print(f"Daily Analytics: {'SUCCESS' if daily_ok else 'FAILED'}")
+        # Summary
+        print("\n" + "="*50)
+        print("SUMMARY")
+        print("="*50)
+        print(f"Campaigns: {'SUCCESS' if campaigns_ok else 'FAILED'}")
+        print(f"Accounts: {'SUCCESS' if accounts_ok else 'FAILED'}")
+        print(f"Daily Analytics: {'SUCCESS' if daily_ok else 'FAILED'}")
 
-    if all([campaigns_ok, accounts_ok, daily_ok]):
-        print("\nALL DATA UPLOADED SUCCESSFULLY")
-    else:
-        print("\nSOME UPLOADS FAILED")
+        if all([campaigns_ok, accounts_ok, daily_ok]):
+            print("\nALL DATA UPLOADED SUCCESSFULLY")
+            logger.info("Upload all completed successfully", campaigns=campaigns_ok,
+                       accounts=accounts_ok, daily_analytics=daily_ok)
+        else:
+            print("\nSOME UPLOADS FAILED")
+            logger.error("Upload all failed", campaigns=campaigns_ok, accounts=accounts_ok,
+                        daily_analytics=daily_ok)
+    except Exception as e:
+        logger.error("Upload all process failed", error=e)
+        raise
 
 if __name__ == "__main__":
     main()

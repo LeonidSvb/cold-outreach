@@ -28,6 +28,9 @@ import asyncio
 import aiohttp
 import json
 import time
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
 import os
 from datetime import datetime
 from pathlib import Path
@@ -224,8 +227,14 @@ class InstantlyCampaignOptimizer:
         print(f"Results saved: {filename}")
 
 async def main():
-    optimizer = InstantlyCampaignOptimizer()
-    await optimizer.optimize_campaigns()
+    logger.info("Campaign Optimizer started")
+    try:
+        optimizer = InstantlyCampaignOptimizer()
+        await optimizer.optimize_campaigns()
+        logger.info("Campaign optimization completed")
+    except Exception as e:
+        logger.error("Campaign optimization failed", error=e)
+        raise
 
 if __name__ == "__main__":
     asyncio.run(main())

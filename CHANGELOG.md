@@ -7,26 +7,47 @@
 ## [Unreleased]
 
 ### Next Session Plan
-**Sprint:** First Campaign Launch (see [docs/sprints/01-first-campaign-launch/](docs/sprints/01-first-campaign-launch/))
+**Sprint:** AI Column Processing System
 
 **Priority Tasks:**
-1. Implement centralized logging system across all modules (Python + Next.js)
-2. Get Instantly API subscription for real data testing
-3. AI Processing Pipeline - Generate icebreakers for 1,189 leads
-4. Test CSV upload workflow end-to-end
+1. Column visibility management (Airtable-style dropdown with show/hide)
+2. AI Transform modal integration
+3. Test mode (10 rows) before full processing
+4. Custom prompt saving after successful tests
 
-**Goal:** Logging → Instantly subscription → AI processing → Production ready
+**Goal:** Column management → AI processing UI → Production ready
 
 **Completed This Session:**
-- ✅ Frontend Supabase integration with Leads Database UI
-- ✅ Integer batch IDs instead of UUIDs (Batch #1, #2, #3...)
-- ✅ Accurate total count display (100 of 1189)
-- ✅ Upload history with statistics
-- ✅ CSV upload with batch tracking
+- ✅ Prompts table in Supabase with versioning support
+- ✅ Backend API for prompts (GET, POST, version history)
+- ✅ 3 default prompts extracted from existing scripts
+- ✅ Auto-increment version numbering
+- ✅ Full CRUD operations tested
 
 **Known Issues (WIP):**
-- ⚠️ Need comprehensive logging for debugging
-- ⚠️ Requires real Instantly API subscription for testing
+- ⚠️ Column visibility UI not yet implemented
+- ⚠️ AI processing integration pending
+
+## [11.0.0] - 2025-10-04 - AI Prompts Management System
+
+### Added
+- **Prompts Table in Supabase**: Version-controlled prompts storage with parent_id references
+- **Prompts API Router**: Full CRUD operations for prompt management (/api/prompts)
+- **Version History System**: Auto-increment versioning with change comments tracking
+- **Default Prompts**: 3 production-ready prompts (Icebreaker Generator, City Abbreviator, Company Name Normalizer)
+- **GET /api/prompts/**: List all prompts or filter by name with version history
+- **POST /api/prompts/**: Create new prompt versions with automatic version increment
+- **GET /api/prompts/{id}/history**: Retrieve complete version history for any prompt
+
+### Changed
+- **Backend Router Registration**: Added prompts router to main.py
+- **Database Schema**: Migration 011 creates prompts table with indexes
+
+### Technical Details
+- Auto-increment version numbering (v1, v2, v3...)
+- Parent-child relationship tracking via parent_id UUID references
+- Change comment system for version audit trail
+- Performance indexes on name, version, parent_id, user_id
 
 ## [10.0.0] - 2025-10-04 - Frontend Supabase Integration & Leads Database UI
 

@@ -7,6 +7,7 @@ import UploadHistory from '@/components/UploadHistory'
 import FileUpload from '@/components/FileUpload'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft, Upload } from 'lucide-react'
+import { logger } from '@/lib/logger'
 
 export default function LeadsPage() {
   const [selectedBatchId, setSelectedBatchId] = useState<number | null>(null)
@@ -17,6 +18,8 @@ export default function LeadsPage() {
   const handleFileSelect = async (file: File) => {
     setUploading(true)
     setUploadResult(null)
+
+    logger.info('CSV upload started', { filename: file.name, size: file.size })
 
     try {
       const formData = new FormData()
@@ -30,14 +33,24 @@ export default function LeadsPage() {
       const result = await response.json()
 
       if (result.success) {
+        logger.info('CSV upload successful', {
+          filename: file.name,
+          rows: result.data?.count
+        })
         setUploadResult(result)
         setShowUpload(false)
         window.location.reload()
       } else {
+        logger.error('CSV upload failed', null, {
+          filename: file.name,
+          error: result.error
+        })
         alert('Upload failed: ' + (result.error || 'Unknown error'))
       }
     } catch (error) {
-      console.error('Upload error:', error)
+      logger.error('CSV upload error', error as Error, {
+        filename: file.name
+      })
       alert('Upload failed')
     } finally {
       setUploading(false)

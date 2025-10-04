@@ -27,6 +27,9 @@ import json
 import os
 from datetime import datetime, timedelta
 from pathlib import Path
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
 
 # ============================================================================
 # CONFIG SECTION - НАСТРОЙТЕ ЗДЕСЬ
@@ -406,8 +409,14 @@ Timestamp: {self.timestamp}
         return summary
 
 def main():
-    collector = InstantlyUniversalCollector()
-    collector.collect_all_data()
+    logger.info("Instantly Universal Collector started")
+    try:
+        collector = InstantlyUniversalCollector()
+        collector.collect_all_data()
+        logger.info("Data collection completed successfully")
+    except Exception as e:
+        logger.error("Data collection failed", error=e)
+        raise
 
 if __name__ == "__main__":
     main()

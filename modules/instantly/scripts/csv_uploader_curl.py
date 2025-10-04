@@ -33,6 +33,9 @@ import csv
 import re
 import subprocess
 from datetime import datetime
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
@@ -485,31 +488,39 @@ class InstantlyCsvUploaderCurl:
 
 def main():
     """Main execution function"""
+    logger.info("Instantly CSV Uploader (curl) started")
     print("=== INSTANTLY CSV COMPANY UPLOADER (CURL VERSION) ===")
     print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
 
-    uploader = InstantlyCsvUploaderCurl()
+    try:
+        uploader = InstantlyCsvUploaderCurl()
 
-    # You can specify a specific CSV file or let it process all CSV files in input directory
-    csv_file = None  # Process all CSV files in input directory
+        # You can specify a specific CSV file or let it process all CSV files in input directory
+        csv_file = None  # Process all CSV files in input directory
 
-    # Campaign ID - use the Marketing agencies campaign
-    campaign_id = "8ad64aaf-8294-4538-8400-4a99dcf016e8"
+        # Campaign ID - use the Marketing agencies campaign
+        campaign_id = "8ad64aaf-8294-4538-8400-4a99dcf016e8"
 
-    print(f"Using campaign ID: {campaign_id}")
+        print(f"Using campaign ID: {campaign_id}")
 
-    results = uploader.upload_companies_from_csv(csv_file, campaign_id)
+        results = uploader.upload_companies_from_csv(csv_file, campaign_id)
 
-    if results:
-        print(f"\nUpload process completed!")
-        print(f"Results saved to: {uploader.results_dir}")
-        stats = results.get('statistics', {})
-        print(f"Companies processed: {stats.get('total_companies', 0)}")
-        print(f"Leads created: {stats.get('leads_created', 0)}")
-        print(f"Success rate: {stats.get('success_rate', 0):.1f}%")
-    else:
-        print(f"\nUpload process failed!")
+        if results:
+            print(f"\nUpload process completed!")
+            print(f"Results saved to: {uploader.results_dir}")
+            stats = results.get('statistics', {})
+            print(f"Companies processed: {stats.get('total_companies', 0)}")
+            print(f"Leads created: {stats.get('leads_created', 0)}")
+            print(f"Success rate: {stats.get('success_rate', 0):.1f}%")
+            logger.info("CSV upload completed successfully", total_companies=stats.get('total_companies', 0),
+                       leads_created=stats.get('leads_created', 0), success_rate=stats.get('success_rate', 0))
+        else:
+            print(f"\nUpload process failed!")
+            logger.error("CSV upload process failed")
+    except Exception as e:
+        logger.error("CSV uploader failed", error=e)
+        raise
 
 if __name__ == "__main__":
     main()
