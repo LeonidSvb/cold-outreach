@@ -17,15 +17,30 @@
 **Goal:** AI processing UI → Production ready
 
 **Completed This Session:**
-- ✅ Column visibility dropdown with Apply/Cancel buttons
-- ✅ Upload History collapsible drawer (replacing sidebar)
-- ✅ Removed unnecessary statistics cards (With Phone/LinkedIn)
-- ✅ LinkedIn URL display instead of "View" button
-- ✅ Full-width leads table layout
-- ✅ localStorage persistence for column preferences
+- ✅ Airtable-style column selection with checkboxes
+- ✅ Sticky toolbar with "Transform with AI" button
+- ✅ Multi-select columns using Set state management
+- ✅ Clean selection state with Clear Selection button
 
 **Known Issues (WIP):**
 - None currently
+
+## [14.0.0] - 2025-10-04 - Airtable-Style Column Selection
+
+### Added
+- **Column Checkboxes**: Airtable-style checkboxes in every table header for multi-select
+- **Sticky Selection Toolbar**: Blue toolbar appears when columns selected (z-10, top-0)
+- **Transform with AI Button**: Sparkles icon button in selection toolbar
+- **Clear Selection**: One-click button to deselect all columns
+- **Selection Counter**: Shows "N column(s) selected" in toolbar
+
+### Changed
+- **Column Selection UX**: From visibility toggle to multi-select for AI processing
+- **Selection State**: Using Set<string> for efficient add/remove operations
+- **Upload Flow**: Simplified to auto-upload with page reload (stable version)
+
+### Removed
+- **Obsolete API Route**: Deleted frontend/src/app/api/uploaded-files/route.ts
 
 ## [13.0.0] - 2025-10-04 - Column Visibility UI & Upload History Drawer
 

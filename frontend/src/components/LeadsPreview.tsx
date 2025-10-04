@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { FileText, Eye, Users, Columns } from 'lucide-react'
+import { FileText, Eye, Users, Columns, Sparkles } from 'lucide-react'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Button } from '@/components/ui/button'
 import ColumnVisibilityDropdown, { ColumnDefinition } from './ColumnVisibilityDropdown'
 
 interface LeadsPreviewProps {
@@ -60,6 +62,7 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [visibleColumns, setVisibleColumns] = useState<Set<string>>(DEFAULT_VISIBLE_COLUMNS)
+  const [selectedColumns, setSelectedColumns] = useState<Set<string>>(new Set())
 
   // Load column preferences from localStorage
   useEffect(() => {
@@ -111,6 +114,23 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
     localStorage.setItem('leadsColumnVisibility', JSON.stringify(Array.from(updates)))
   }
 
+  const toggleColumnSelection = (columnKey: string) => {
+    setSelectedColumns(prev => {
+      const next = new Set(prev)
+      if (next.has(columnKey)) {
+        next.delete(columnKey)
+      } else {
+        next.add(columnKey)
+      }
+      return next
+    })
+  }
+
+  const handleAITransform = () => {
+    // TODO: Open AI Transform modal
+    console.log('Transform columns:', Array.from(selectedColumns))
+  }
+
   if (loading) {
     return (
       <div className="bg-white rounded-lg border p-6">
@@ -157,6 +177,34 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
         />
       </div>
 
+      {selectedColumns.size > 0 && (
+        <div className="sticky top-0 z-10 mb-4 bg-blue-50 border border-blue-200 rounded-lg p-3 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Checkbox checked disabled />
+            <span className="text-sm font-medium text-blue-900">
+              {selectedColumns.size} column{selectedColumns.size > 1 ? 's' : ''} selected
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setSelectedColumns(new Set())}
+            >
+              Clear Selection
+            </Button>
+            <Button
+              size="sm"
+              onClick={handleAITransform}
+              className="gap-2"
+            >
+              <Sparkles className="h-4 w-4" />
+              Transform with AI
+            </Button>
+          </div>
+        </div>
+      )}
+
       <div className="mb-4 flex items-center justify-between">
         <div>
           <h4 className="font-medium text-gray-900">Total: {leadsData.total} leads</h4>
@@ -179,52 +227,112 @@ export default function LeadsPreview({ uploadBatchId, limit = 100 }: LeadsPrevie
               <tr>
                 {visibleColumns.has('name') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Name
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('name')}
+                        onCheckedChange={() => toggleColumnSelection('name')}
+                      />
+                      Name
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('email') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Email
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('email')}
+                        onCheckedChange={() => toggleColumnSelection('email')}
+                      />
+                      Email
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('company_name') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Company
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('company_name')}
+                        onCheckedChange={() => toggleColumnSelection('company_name')}
+                      />
+                      Company
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('job_title') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Title
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('job_title')}
+                        onCheckedChange={() => toggleColumnSelection('job_title')}
+                      />
+                      Title
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('phone') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Phone
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('phone')}
+                        onCheckedChange={() => toggleColumnSelection('phone')}
+                      />
+                      Phone
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('location') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Location
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('location')}
+                        onCheckedChange={() => toggleColumnSelection('location')}
+                      />
+                      Location
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('linkedin_url') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    LinkedIn
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('linkedin_url')}
+                        onCheckedChange={() => toggleColumnSelection('linkedin_url')}
+                      />
+                      LinkedIn
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('city') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    City
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('city')}
+                        onCheckedChange={() => toggleColumnSelection('city')}
+                      />
+                      City
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('state') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    State
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('state')}
+                        onCheckedChange={() => toggleColumnSelection('state')}
+                      />
+                      State
+                    </div>
                   </th>
                 )}
                 {visibleColumns.has('country') && (
                   <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Country
+                    <div className="flex items-center gap-2">
+                      <Checkbox
+                        checked={selectedColumns.has('country')}
+                        onCheckedChange={() => toggleColumnSelection('country')}
+                      />
+                      Country
+                    </div>
                   </th>
                 )}
               </tr>

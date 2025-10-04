@@ -19,7 +19,7 @@ export default function LeadsPage() {
     setUploading(true)
     setUploadResult(null)
 
-    logger.info('CSV upload started', { filename: file.name, size: file.size })
+    logger.info('CSV upload to Supabase started', { filename: file.name })
 
     try {
       const formData = new FormData()
@@ -38,8 +38,9 @@ export default function LeadsPage() {
           rows: result.data?.count
         })
         setUploadResult(result)
-        setShowUpload(false)
-        window.location.reload()
+        setTimeout(() => {
+          window.location.reload()
+        }, 1500)
       } else {
         logger.error('CSV upload failed', null, {
           filename: file.name,
@@ -95,14 +96,34 @@ export default function LeadsPage() {
         {showUpload && (
           <div className="mb-6 bg-white rounded-lg border p-6">
             <h2 className="text-lg font-medium text-gray-900 mb-4">Upload CSV File</h2>
-            <FileUpload onFileSelect={handleFileSelect} />
-            {uploading && (
-              <div className="mt-4 text-center">
-                <div className="inline-flex items-center gap-2 text-blue-600">
-                  <div className="h-5 w-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-                  Uploading and processing...
+
+            {uploadResult ? (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0">
+                    <svg className="h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-medium text-green-900">
+                      Upload Successful!
+                    </h3>
+                    <p className="text-sm text-green-700 mt-1">
+                      {uploadResult.data?.count} leads uploaded to Supabase. Page will reload...
+                    </p>
+                  </div>
                 </div>
               </div>
+            ) : uploading ? (
+              <div className="text-center py-8">
+                <div className="inline-flex items-center gap-2 text-blue-600">
+                  <div className="h-5 w-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                  Uploading to Supabase...
+                </div>
+              </div>
+            ) : (
+              <FileUpload onFileSelect={handleFileSelect} />
             )}
           </div>
         )}
