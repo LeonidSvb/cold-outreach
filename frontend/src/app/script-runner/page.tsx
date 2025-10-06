@@ -54,13 +54,9 @@ export default function ScriptRunner() {
   }
 
   const fetchUploadedFiles = async () => {
-    try {
-      const response = await fetch('/api/uploaded-files')
-      const data = await response.json()
-      setUploadedFiles(data)
-    } catch (error) {
-      console.error('Failed to fetch uploaded files:', error)
-    }
+    // Note: /api/uploaded-files removed - files now managed via /api/upload
+    // This function kept for future implementation if needed
+    setUploadedFiles([])
   }
 
   const handleFileSelect = async (file: File) => {
@@ -79,7 +75,6 @@ export default function ScriptRunner() {
       const result = await response.json()
       if (result.file_id) {
         setCurrentFileId(result.file_id)
-        fetchUploadedFiles() // Refresh the list
       }
     } catch (error) {
       console.error('Failed to upload file:', error)
