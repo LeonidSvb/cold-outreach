@@ -29,37 +29,37 @@ CSV Upload → AI Normalization → Icebreaker Generation → Batch Processing �
 ## Features
 
 ### ✅ Implemented
-- CSV upload with auto-column detection
-- AI-powered normalization (company names, cities)
-- Icebreaker generation from CSV data
-- Batch processing (200-300 leads per batch)
-- Instantly campaign integration
-- Offer management for A/B testing
+- **Leads Database** - Supabase-powered lead management with CSV upload
+- **Column Selection** - Airtable-style multi-select for AI transformations
+- **Instantly Sync** - Automated campaign and analytics synchronization
+- **Analytics Dashboard** - Real-time campaign performance visualizations
+- **Script Runner** - Execute Python modules with file uploads
+- **Universal Logging** - Centralized logging across Python, FastAPI, Next.js
+- **AI Processing** - Mass parallel OpenAI transformations
 
 ### 🔄 In Progress
-- Database schema setup (users, offers, leads, batches, campaigns, events)
-- Full wizard UI for lead processing workflow
-- Event sync from Instantly to Supabase
+- AI column transformation modal (test mode + custom prompts)
+- Website scraping for enhanced icebreakers
+- Advanced lead segmentation
 
 ### 📋 Planned
-- Website scraping for enhanced icebreakers
-- Advanced segmentation (seniority, industry, company size)
-- Email sequence builder
-- Dashboard analytics with performance visualizations
+- Email sequence builder with A/B testing
 - Multi-user authentication
+- Apollo API integration page
 
 ---
 
 ## Current Status
 
-**Version:** 8.4.0 (2025-10-02)
+**Version:** 14.0.0 (2025-10-06)
 
-**Current Focus:**
-- Launch first real campaign with 1500 leads
-- Complete CSV → normalization → icebreakers → batch splitting → Instantly upload pipeline
-- Implement offer tracking for A/B testing
+**Latest Updates:**
+- Airtable-style column selection for AI transformations
+- Leads database UI with Supabase integration
+- Universal logging system across platform
+- Instantly campaign sync and analytics dashboard
 
-See [docs/sprints/](docs/sprints/) for detailed sprint documentation.
+See [CHANGELOG.md](CHANGELOG.md) for complete version history.
 
 ---
 
@@ -104,10 +104,19 @@ See [docs/sprints/](docs/sprints/) for detailed sprint documentation.
 ```
 ├── backend/             # Python FastAPI API
 ├── frontend/            # Next.js application
+│   ├── src/app/         # Next.js App Router pages
+│   │   ├── page.tsx           # Home page
+│   │   ├── leads/             # Leads database page
+│   │   ├── dashboard/         # Instantly analytics
+│   │   ├── instantly-sync/    # Campaign sync
+│   │   └── script-runner/     # Python script executor
+│   ├── src/components/  # React components
+│   └── ROUTES.md        # Frontend route documentation
 ├── modules/             # Processing scripts
 │   ├── apollo/          # Apollo API integration
 │   ├── instantly/       # Instantly API integration
 │   ├── openai/          # AI processing
+│   ├── logging/         # Universal logging system
 │   ├── scraping/        # Web scraping
 │   └── sheets/          # Google Sheets
 ├── data/                # CSV files and processing results
@@ -117,6 +126,24 @@ See [docs/sprints/](docs/sprints/) for detailed sprint documentation.
 │   └── sprints/         # Sprint plans
 └── archive/             # Legacy code
 ```
+
+### Frontend Pages
+
+See **[frontend/ROUTES.md](frontend/ROUTES.md)** for complete route documentation.
+
+**Active Pages (5):**
+- `/` - Home page with navigation
+- `/leads` - Leads database with AI column selection
+- `/dashboard` - Instantly campaign analytics
+- `/instantly-sync` - Campaign synchronization
+- `/script-runner` - Python script execution
+
+**API Routes (7):**
+- `POST /api/csv-upload` - Upload CSV to Supabase
+- `GET /api/leads` - Fetch leads from database
+- `GET /api/upload-history` - Upload batch history
+- `POST /api/run-script` - Execute Python scripts
+- And more (see [frontend/ROUTES.md](frontend/ROUTES.md))
 
 ---
 
@@ -161,4 +188,4 @@ See [CLAUDE.md](CLAUDE.md) for complete coding guidelines.
 
 ---
 
-**Last Updated:** 2025-10-02 (v8.4.0)
+**Last Updated:** 2025-10-06 (v14.0.0)

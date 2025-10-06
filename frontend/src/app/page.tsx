@@ -11,6 +11,14 @@ interface Tool {
 
 const tools: Tool[] = [
   {
+    id: 'leads',
+    name: 'Leads Database',
+    description: 'View and manage leads from Supabase with AI column transformation',
+    href: '/leads',
+    status: 'ready',
+    color: 'bg-purple-500 hover:bg-purple-600'
+  },
+  {
     id: 'script-runner',
     name: 'Script Runner',
     description: 'Execute Python scripts with file uploads and configuration',
@@ -41,38 +49,6 @@ const tools: Tool[] = [
     href: '/components-test',
     status: 'ready',
     color: 'bg-pink-500 hover:bg-pink-600'
-  },
-  {
-    id: 'apollo',
-    name: 'Apollo Leads',
-    description: 'Lead collection and management from Apollo API',
-    href: '/apollo',
-    status: 'dev',
-    color: 'bg-purple-500 hover:bg-purple-600'
-  },
-  {
-    id: 'openai',
-    name: 'AI Processor',
-    description: 'OpenAI-powered content analysis and generation',
-    href: '/openai',
-    status: 'dev',
-    color: 'bg-orange-500 hover:bg-orange-600'
-  },
-  {
-    id: 'scraping',
-    name: 'Web Scraper',
-    description: 'Website content extraction and analysis',
-    href: '/scraping',
-    status: 'planned',
-    color: 'bg-red-500 hover:bg-red-600'
-  },
-  {
-    id: 'sheets',
-    name: 'Google Sheets',
-    description: 'Spreadsheet data management and automation',
-    href: '/sheets',
-    status: 'planned',
-    color: 'bg-indigo-500 hover:bg-indigo-600'
   }
 ]
 
@@ -146,15 +122,15 @@ export default function Home() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-blue-600 mb-2">8</div>
-            <div className="text-gray-600">Active Modules</div>
+            <div className="text-2xl font-bold text-blue-600 mb-2">5</div>
+            <div className="text-gray-600">Active Pages</div>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-green-600 mb-2">4</div>
-            <div className="text-gray-600">Ready Tools</div>
+            <div className="text-2xl font-bold text-green-600 mb-2">7</div>
+            <div className="text-gray-600">API Routes</div>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-purple-600 mb-2">v7.2.0</div>
+            <div className="text-2xl font-bold text-purple-600 mb-2">v14.0.0</div>
             <div className="text-gray-600">Current Version</div>
           </div>
         </div>
