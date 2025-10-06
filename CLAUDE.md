@@ -154,20 +154,11 @@ refactor(logging): Simplify module structure
 ### CHANGELOG Management
 **Source of Truth:** Git commits (Conventional Commits)
 
-**Auto-generation:**
-```bash
-# Python script (primary method)
-python scripts/generate_changelog.py
-
-# NPM alternative (universal)
-npm run changelog
-```
-
 **Rules:**
-- CHANGELOG.md генерируется из git commits автоматически
-- Ручные правки только в секциях: "Next Session Plan", "Known Issues"
-- Все остальные секции (Added/Fixed/Changed) = auto-generated
-- Не дублируйте информацию между commits и CHANGELOG
+- AI updates CHANGELOG at end of session based on commits
+- AI reads git log, understands context, writes quality entries
+- User approves before commit
+- Manual edits only in: "Next Session Plan", "Known Issues"
 
 ---
 
@@ -706,38 +697,24 @@ chore(deps): Update Supabase to v2.58.0
 ### CHANGELOG Generation
 
 **When to generate:**
-- End of work session (primary)
-- User explicitly requests it
-- Before major git push
+- End of work session
+- User says "обнови CHANGELOG" or "update changelog"
 
-**Primary Method: AI Direct Generation (Recommended)**
-
-AI generates CHANGELOG with context and understanding:
+**How it works:**
 
 ```
-1. Read git log (all commits since last release)
-2. Understand context and relationships between commits
-3. Group by logical features (not just commit type)
-4. Improve formulations for readability
-5. Add relevant details and explanations
-6. Format with proper structure and hierarchy
-7. Preserve "Next Session Plan" and "Known Issues"
-8. Show user diff for review
-9. Commit and push after approval
+1. AI reads git log (all commits since last release)
+2. Understands context and relationships between commits
+3. Groups by logical features (not just commit type)
+4. Improves formulations for readability
+5. Adds relevant details and explanations
+6. Preserves "Next Session Plan" and "Known Issues"
+7. Shows user diff for review
+8. Commits after user approval
 ```
 
-**Quality comparison:**
-- Python script: Mechanical parsing, copies commit messages as-is (6/10)
-- AI Direct: Understands context, groups logically, improves wording (9/10)
-
-**Example:**
+**Example output:**
 ```markdown
-# Python Script output (mechanical):
-### Added
-- Add button
-- Fix timeout
-
-# AI Direct output (contextual):
 ### Added
 - **CSV Upload Interface**:
   - Upload to Supabase button with preview
@@ -747,20 +724,6 @@ AI generates CHANGELOG with context and understanding:
 ### Fixed
 - **Instantly Sync**: Increased API timeout from 30s to 60s to prevent failures on large datasets
 ```
-
-**Fallback Method: Python Script**
-
-Available as backup when AI unavailable:
-```bash
-python scripts/generate_changelog.py
-# or
-npm run changelog
-```
-
-**Use Python script only when:**
-- AI agent unavailable
-- Need speed (automated CI/CD)
-- Other developers without AI agent
 
 **Manual edits allowed only in:**
 - `### Next Session Plan` - user's notes about next tasks
