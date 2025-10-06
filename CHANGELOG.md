@@ -4,6 +4,8 @@
 
 **[Unreleased] Section:** Always maintain "Next Session Plan" with 3-5 priority tasks. Link to active sprint in docs/sprints/ for detailed implementation. Update after each session.
 
+
+
 ## [Unreleased]
 
 ### Next Session Plan
@@ -24,6 +26,38 @@
 
 **Known Issues (WIP):**
 - None currently
+
+### Added
+- Add Airtable-style column selection for AI processing
+- Column visibility UI & Upload History drawer
+- implement universal logging system across platform (v12.0.0)
+- AI Prompts Management System with versioning (v11.0.0)
+- Complete frontend Supabase integration with Leads Database UI
+- Add two-step upload preview for Instantly sync (WIP - v9.1.0)
+- Complete database redesign with unified leads table (v9.0.0)
+- Complete TASK-003 CSV to Supabase upload with deduplication
+- Complete TASK-009 - Instantly Sync Service
+- Enhanced CSV column detection with regex validation (TASK-002)
+- Complete TASK-006 (Supabase Client) and TASK-007 (Instantly Sources)
+
+### Changed
+- Reorganize instantly module with industry-standard structure
+- Simplify all migrations - remove Apollo, over-engineering, complexity
+- Move SQL migrations to root /migrations/ folder (industry standard)
+
+### Documentation
+- add ADR-0012 for Universal Logging System
+- Complete TASK-008 & TASK-009 - Instantly module reorganization
+- Implement hierarchical README pattern for AI-first development
+- Update TASK-006 and TASK-007 status to 'done' with test results
+- Update CHANGELOG - Database complete, all migrations applied
+- Simplify SQL README - remove verbose descriptions
+
+### Known Issues
+- Preview data not rendering correctly in frontend (backend returns data, frontend doesn't display)
+- Stats cards show hardcoded mock data instead of real DB values
+- Missing comprehensive logging system for debugging data flow
+- Requires real Instantly API subscription for end-to-end testing
 
 ## [14.0.0] - 2025-10-04 - Airtable-Style Column Selection
 

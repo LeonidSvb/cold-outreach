@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "changelog": "cd .. && python scripts/generate_changelog.py",
+    "changelog:npm": "conventional-changelog -p angular -i ../CHANGELOG.md -s"
   },
   "keywords": [],
   "author": "",

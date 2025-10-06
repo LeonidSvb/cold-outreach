@@ -114,8 +114,33 @@ export async function fetchData(id: string) {
 
 ## 🔧 Git и Version Control
 
-### Commit Standards
-- Чёткие описательные commit messages: "fix user login bug", не "fix"
+### Commit Standards (Conventional Commits)
+**MANDATORY: Always use Conventional Commits format**
+
+```
+<type>(<scope>): <subject>
+
+[optional body]
+[optional footer]
+```
+
+**Types:**
+- `feat(scope):` - новая фича
+- `fix(scope):` - баг фикс
+- `docs(scope):` - только документация
+- `refactor(scope):` - рефакторинг без изменения функциональности
+- `test(scope):` - добавление тестов
+- `chore(scope):` - техническая работа (dependencies, config)
+
+**Examples:**
+```bash
+feat(csv-upload): Add preview before upload
+fix(instantly-sync): Resolve API timeout in sync service
+docs(task-004): Update status to done with test results
+refactor(logging): Simplify module structure
+```
+
+**Rules:**
 - Atomic commits - один commit = одна feature/fix
 - Review изменений через git diff перед коммитом
 - **Никогда не коммитьте:** secrets, .env файлы, временные файлы
@@ -125,6 +150,24 @@ export async function fetchData(id: string) {
 - Один branch = одна задача, не мешайте фичи
 - Удаляйте merged branches для чистоты репозитория
 - Для solo projects можно работать в main, но делайте частые commits
+
+### CHANGELOG Management
+**Source of Truth:** Git commits (Conventional Commits)
+
+**Auto-generation:**
+```bash
+# Python script (primary method)
+python scripts/generate_changelog.py
+
+# NPM alternative (universal)
+npm run changelog
+```
+
+**Rules:**
+- CHANGELOG.md генерируется из git commits автоматически
+- Ручные правки только в секциях: "Next Session Plan", "Known Issues"
+- Все остальные секции (Added/Fixed/Changed) = auto-generated
+- Не дублируйте информацию между commits и CHANGELOG
 
 ---
 
@@ -591,3 +634,229 @@ function formatSize(bytes: number) {
 - All icebreakers и emails на английском (или другом нужном языке, НЕ русском)
 - Никогда не используйте эмодзи в скриптах
 - Все комментарии на английском
+
+---
+
+## 🤖 AI AGENT AUTOMATION RULES
+
+### Workflow Philosophy
+**User speaks natural language → AI does everything automatically**
+
+User should NEVER manually:
+- ❌ Write `git commit` commands
+- ❌ Run `npm run changelog`
+- ❌ Edit CHANGELOG.md manually
+- ❌ Update TASK-XXX.md files
+- ❌ Run Python scripts manually
+
+AI Agent does automatically:
+- ✅ Write code
+- ✅ Commit with Conventional Commits format
+- ✅ Generate CHANGELOG from commits
+- ✅ Update TASK status when done
+- ✅ Show user what was done
+
+### Commit Automation (MANDATORY)
+
+**Every time AI makes significant changes:**
+
+1. **Write code** (user requested feature/fix)
+2. **Commit immediately** with Conventional Commits:
+   ```bash
+   git add .
+   git commit -m "feat(scope): Description of change"
+   ```
+3. **Generate CHANGELOG** (after batch of commits):
+   ```bash
+   python scripts/generate_changelog.py
+   ```
+4. **Show user** what was done (brief summary)
+
+**Conventional Commits Examples:**
+```bash
+feat(csv-upload): Add preview button with deduplication
+fix(instantly-sync): Resolve timeout in API calls
+docs(task-004): Mark status as done
+refactor(logging): Simplify module structure
+chore(deps): Update Supabase to v2.58.0
+```
+
+### Control Points (Safety Gates)
+
+**Auto-execute (no approval needed):**
+- ✅ Code changes (user sees result in chat)
+- ✅ `git add .` (safe, reversible)
+- ✅ `git commit -m` (safe, can revert)
+- ✅ CHANGELOG updates (auto-generated, user sees diff)
+- ✅ TASK-XXX.md status updates (documentation only)
+
+**Ask before executing (require approval):**
+- ⏸️ `git push` - Ask: "Ready to push to GitHub. Push now?"
+- ⏸️ Database migrations (production) - Ask: "Apply migration to production DB?"
+- ⏸️ `.env` changes - Show what's changing, wait for approval
+- ⏸️ Dependency updates - Show new versions before installing
+- ⏸️ API key rotation - Always ask before changing
+
+**Never auto-execute:**
+- ❌ `npm publish` (public release)
+- ❌ `rm -rf` (destructive)
+- ❌ Production deployments without approval
+- ❌ Billing/payment operations
+
+### CHANGELOG Generation
+
+**When to generate:**
+- After batch of related commits (3-5 commits)
+- End of work session
+- Before git push
+- User explicitly requests it
+
+**How it works:**
+```bash
+# AI runs automatically:
+python scripts/generate_changelog.py
+
+# Script does:
+# 1. Get commits since last release
+# 2. Parse Conventional Commits
+# 3. Group by type (Added/Fixed/Changed)
+# 4. Update CHANGELOG.md [Unreleased] section
+# 5. Preserve "Next Session Plan" and "Known Issues"
+```
+
+**Manual edits allowed only in:**
+- `### Next Session Plan` - user's notes about next tasks
+- `### Known Issues` - current bugs/WIP items
+- All other sections = auto-generated (don't edit manually)
+
+### TASK File Updates
+
+**When to update:**
+- Task started: `status: "in_progress"`
+- Task completed: `status: "done"` + `completed: "YYYY-MM-DD"`
+- Major blockers found: update in task notes
+
+**Format:**
+```yaml
+# Before:
+status: "planned"
+
+# During:
+status: "in_progress"
+
+# After completion:
+status: "done"
+completed: "2025-10-05"
+```
+
+**Commit after update:**
+```bash
+git commit -m "docs(task-004): Mark as completed"
+```
+
+### User Workflow Examples
+
+**Example 1: New Feature**
+```
+User: "Add upload button to CSV preview"
+
+AI:
+1. [writes code for button]
+2. [git add .]
+3. [git commit -m "feat(csv-upload): Add upload button to preview"]
+4. [python scripts/generate_changelog.py]
+5. Responds: "✅ Upload button added! CHANGELOG updated."
+
+User sees: Summary of what was done
+User does NOT see: Git commands, script execution
+```
+
+**Example 2: Bug Fix**
+```
+User: "Fix timeout in Instantly sync"
+
+AI:
+1. [fixes code]
+2. [git commit -m "fix(instantly-sync): Increase timeout to 60s"]
+3. [generate changelog]
+4. Responds: "✅ Fixed! Timeout increased to 60s"
+```
+
+**Example 3: Git Push (requires approval)**
+```
+AI: [batch of commits done]
+AI: "All changes committed. Ready to push to GitHub. Push now?"
+User: "Yes" or "No, wait"
+AI: [git push] only after approval
+```
+
+### Universal Solution (Multi-Language Projects)
+
+**Tools available:**
+
+1. **Python script** (current project, full control):
+   ```bash
+   python scripts/generate_changelog.py
+   ```
+
+2. **NPM conventional-changelog** (JavaScript projects):
+   ```bash
+   npm run changelog
+   # or
+   conventional-changelog -p angular -i CHANGELOG.md -s
+   ```
+
+**AI chooses automatically:**
+- Python project → use Python script
+- JavaScript/TypeScript project → use NPM script
+- Both available → prefer Python (more customizable)
+
+### Error Handling in Automation
+
+**If commit fails:**
+```bash
+# AI should:
+1. Show error message
+2. Ask user if should retry
+3. Suggest fix if known issue
+```
+
+**If CHANGELOG generation fails:**
+```bash
+# AI should:
+1. Commits still succeeded (safe state)
+2. Notify user: "Commits done, but CHANGELOG generation failed"
+3. Offer to retry or skip
+```
+
+**If git push fails:**
+```bash
+# AI should:
+1. Show git error (e.g., "rejected - non-fast-forward")
+2. Suggest: "Need to pull first? Run git pull --rebase?"
+3. Wait for user decision
+```
+
+### Summary: AI Agent Responsibilities
+
+**AI always does:**
+- Write code based on natural language requests
+- Commit with proper Conventional Commits format
+- Generate CHANGELOG from commits
+- Update TASK files when done
+- Show user summary of actions taken
+
+**AI asks before:**
+- Git push to remote
+- Production database changes
+- Environment variable updates
+- Destructive operations
+
+**User only does:**
+- Speak natural language: "Add feature X"
+- Approve critical operations when asked
+- Review final results
+
+**Result:**
+- User focuses on WHAT to build (strategy)
+- AI handles HOW to build (implementation + automation)
