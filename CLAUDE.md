@@ -706,28 +706,66 @@ chore(deps): Update Supabase to v2.58.0
 ### CHANGELOG Generation
 
 **When to generate:**
-- After batch of related commits (3-5 commits)
-- End of work session
-- Before git push
+- End of work session (primary)
 - User explicitly requests it
+- Before major git push
 
-**How it works:**
-```bash
-# AI runs automatically:
-python scripts/generate_changelog.py
+**Primary Method: AI Direct Generation (Recommended)**
 
-# Script does:
-# 1. Get commits since last release
-# 2. Parse Conventional Commits
-# 3. Group by type (Added/Fixed/Changed)
-# 4. Update CHANGELOG.md [Unreleased] section
-# 5. Preserve "Next Session Plan" and "Known Issues"
+AI generates CHANGELOG with context and understanding:
+
 ```
+1. Read git log (all commits since last release)
+2. Understand context and relationships between commits
+3. Group by logical features (not just commit type)
+4. Improve formulations for readability
+5. Add relevant details and explanations
+6. Format with proper structure and hierarchy
+7. Preserve "Next Session Plan" and "Known Issues"
+8. Show user diff for review
+9. Commit and push after approval
+```
+
+**Quality comparison:**
+- Python script: Mechanical parsing, copies commit messages as-is (6/10)
+- AI Direct: Understands context, groups logically, improves wording (9/10)
+
+**Example:**
+```markdown
+# Python Script output (mechanical):
+### Added
+- Add button
+- Fix timeout
+
+# AI Direct output (contextual):
+### Added
+- **CSV Upload Interface**:
+  - Upload to Supabase button with preview
+  - Real-time validation before upload
+  - Deduplication based on email field
+
+### Fixed
+- **Instantly Sync**: Increased API timeout from 30s to 60s to prevent failures on large datasets
+```
+
+**Fallback Method: Python Script**
+
+Available as backup when AI unavailable:
+```bash
+python scripts/generate_changelog.py
+# or
+npm run changelog
+```
+
+**Use Python script only when:**
+- AI agent unavailable
+- Need speed (automated CI/CD)
+- Other developers without AI agent
 
 **Manual edits allowed only in:**
 - `### Next Session Plan` - user's notes about next tasks
 - `### Known Issues` - current bugs/WIP items
-- All other sections = auto-generated (don't edit manually)
+- All other sections = AI-generated (don't edit manually)
 
 ### TASK File Updates
 
