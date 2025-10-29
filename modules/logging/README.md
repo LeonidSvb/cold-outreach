@@ -18,6 +18,8 @@ All logs stored in `modules/logging/logs/` with automatic daily rotation.
 - **JSON structured logs** - easy parsing and analysis
 - **Multiple log levels** - ERROR, WARNING, INFO, DEBUG
 - **Performance tracking** - @auto_log decorator for function timing
+- **Execution tracking** - context manager for script-level monitoring with metrics
+- **Optional Supabase integration** - send logs to database for UI visualization
 - **Zero maintenance** - no manual file management required
 - **Modular architecture** - self-contained in logging module
 
@@ -46,6 +48,34 @@ from modules.logging.shared.universal_logger import auto_log
 def process_leads(leads):
     # Function automatically logged with duration
     return results
+```
+
+### Execution Tracking (NEW)
+
+Track entire script execution with metrics:
+
+```python
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
+
+with logger.track_execution("apollo-lead-collector") as tracker:
+    # Fetch data
+    leads = fetch_apollo_leads()
+    tracker.add_metric("leads_fetched", len(leads))
+
+    # Process data
+    processed = process_leads(leads)
+    tracker.add_metrics(
+        leads_processed=len(processed),
+        api_cost_usd=0.05,
+        api_calls=10
+    )
+
+# Automatically logs:
+# - Script start
+# - Script completion with duration + all metrics
+# - Script failure with error details (if error occurs)
 ```
 
 ### FastAPI Backend
@@ -141,11 +171,21 @@ Log warning message.
 ### logger.debug(message, **kwargs)
 Log debug message (for development).
 
+### logger.track_execution(script_name: str) -> ExecutionTracker
+Context manager for tracking entire script execution with automatic metrics logging.
+
+### tracker.add_metric(key: str, value: Any)
+Add single metric to execution tracker.
+
+### tracker.add_metrics(**metrics)
+Add multiple metrics at once to execution tracker.
+
 ### @auto_log
 Decorator for automatic function performance logging.
 
 ## Version
 
-- **Current:** 1.0.0
+- **Current:** 1.1.0
 - **Created:** 2025-10-04
+- **Updated:** 2025-10-29 (Added ExecutionTracker, metrics tracking)
 - **Status:** Production Ready

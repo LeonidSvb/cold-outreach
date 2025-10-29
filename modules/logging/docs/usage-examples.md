@@ -84,6 +84,92 @@ async def fetch_data(url):
         return response.json()
 ```
 
+## Execution Tracking (NEW)
+
+### Full Script Tracking with Metrics
+
+```python
+from modules.logging.shared.universal_logger import get_logger
+
+logger = get_logger(__name__)
+
+def main():
+    with logger.track_execution("apollo-lead-collector") as tracker:
+        # Fetch leads from Apollo API
+        logger.info("Fetching leads from Apollo API")
+        leads = fetch_apollo_leads(limit=1000)
+        tracker.add_metric("leads_fetched", len(leads))
+
+        # Process and enrich leads
+        logger.info("Processing and enriching leads")
+        enriched = enrich_leads(leads)
+        tracker.add_metric("leads_enriched", len(enriched))
+
+        # Save to CSV
+        output_file = save_to_csv(enriched)
+        tracker.add_metric("output_file", output_file)
+
+        # Track API costs
+        tracker.add_metrics(
+            api_calls=10,
+            api_cost_usd=0.05
+        )
+
+if __name__ == "__main__":
+    main()
+```
+
+**Logs generated:**
+```json
+{"timestamp":"2025-10-29T10:00:00","module":"apollo","level":"INFO","message":"apollo-lead-collector started","script":"apollo-lead-collector"}
+{"timestamp":"2025-10-29T10:00:05","module":"apollo","level":"INFO","message":"apollo-lead-collector completed successfully","script":"apollo-lead-collector","duration_seconds":45.23,"leads_fetched":1000,"leads_enriched":950,"output_file":"leads_20251029.csv","api_calls":10,"api_cost_usd":0.05}
+```
+
+### Execution Tracking with Error Handling
+
+```python
+with logger.track_execution("instantly-sync") as tracker:
+    try:
+        # Fetch campaigns
+        campaigns = instantly_client.get_campaigns()
+        tracker.add_metric("campaigns_fetched", len(campaigns))
+
+        # Process each campaign
+        for campaign in campaigns:
+            emails = process_campaign(campaign)
+            tracker.add_metric(f"emails_{campaign['id']}", len(emails))
+
+    except Exception as e:
+        # Error automatically logged with all metrics collected so far
+        raise
+```
+
+**On error:**
+```json
+{"timestamp":"2025-10-29T10:05:00","module":"instantly","level":"ERROR","message":"instantly-sync failed","script":"instantly-sync","duration_seconds":12.45,"error_type":"APIError","error_details":"Rate limit exceeded","campaigns_fetched":5}
+```
+
+### Multiple Metrics at Once
+
+```python
+with logger.track_execution("openai-enrichment") as tracker:
+    total_cost = 0
+    total_tokens = 0
+
+    for lead in leads:
+        result = enrich_with_openai(lead)
+        total_cost += result['cost']
+        total_tokens += result['tokens']
+
+    # Add all metrics at end
+    tracker.add_metrics(
+        leads_processed=len(leads),
+        total_cost_usd=round(total_cost, 4),
+        total_tokens=total_tokens,
+        avg_tokens_per_lead=round(total_tokens / len(leads), 2)
+    )
+```
+
 ## API Integration Logging
 
 ### FastAPI Endpoint

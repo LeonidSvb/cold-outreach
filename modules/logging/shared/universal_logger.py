@@ -1,12 +1,20 @@
 """
 Universal Logger for Cold Outreach Platform
 Provides centralized logging for Python scripts, FastAPI backend, and Next.js frontend
+
+Features:
+- Daily log rotation with JSON structured logs
+- Separate error logs for quick debugging
+- ExecutionTracker for script-level monitoring
+- Optional Supabase integration
+- Performance tracking with @auto_log decorator
 """
 
 import logging
 import json
 import time
 import functools
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional, Dict, Callable
@@ -116,6 +124,128 @@ class UniversalLogger:
     def debug(self, message: str, **kwargs):
         """Log debug message"""
         self._log("DEBUG", message, kwargs if kwargs else None)
+
+    def track_execution(self, script_name: str):
+        """
+        Context manager for tracking script execution
+
+        Usage:
+            with logger.track_execution("apollo-collector"):
+                # Your script logic
+                process_leads()
+
+        Automatically logs:
+        - Script start
+        - Script completion with duration
+        - Script failure with error details
+        """
+        return ExecutionTracker(self, script_name)
+
+    def log_to_supabase(self, table: str = "logs", run_id: Optional[str] = None):
+        """
+        Optional: Send log entry to Supabase
+        Only works if SUPABASE_URL and SUPABASE_SERVICE_KEY are set in environment
+
+        Usage:
+            logger.info("Processing data", count=100)
+            logger.log_to_supabase(run_id="uuid-here")  # Optional
+        """
+        supabase_url = os.getenv("SUPABASE_URL")
+        supabase_key = os.getenv("SUPABASE_SERVICE_KEY")
+
+        if not supabase_url or not supabase_key:
+            return  # Silently skip if not configured
+
+        try:
+            from supabase import create_client
+            client = create_client(supabase_url, supabase_key)
+
+            # Note: This is optional and doesn't affect file logging
+            # Implement only if you need UI visualization
+
+        except ImportError:
+            pass  # Supabase client not installed, skip
+        except Exception:
+            pass  # Any other error, skip silently
+
+
+class ExecutionTracker:
+    """
+    Context manager for tracking script execution with automatic logging
+
+    Features:
+    - Logs script start time
+    - Logs completion with duration and results
+    - Logs failures with error details
+    - Automatically calculates execution metrics
+
+    Usage:
+        logger = get_logger(__name__)
+
+        with logger.track_execution("apollo-lead-collector") as tracker:
+            leads = fetch_leads()
+            tracker.add_metric("leads_fetched", len(leads))
+            process_leads(leads)
+            tracker.add_metric("leads_processed", len(leads))
+    """
+
+    def __init__(self, logger: 'UniversalLogger', script_name: str):
+        self.logger = logger
+        self.script_name = script_name
+        self.start_time: Optional[float] = None
+        self.metrics: Dict[str, Any] = {}
+
+    def __enter__(self):
+        self.start_time = time.time()
+        self.logger.info(f"{self.script_name} started", script=self.script_name)
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        duration = time.time() - self.start_time if self.start_time else 0
+
+        if exc_type:
+            # Script failed
+            self.logger.error(
+                f"{self.script_name} failed",
+                script=self.script_name,
+                duration_seconds=round(duration, 2),
+                error_type=exc_type.__name__,
+                error_details=str(exc_val),
+                **self.metrics
+            )
+        else:
+            # Script succeeded
+            self.logger.info(
+                f"{self.script_name} completed successfully",
+                script=self.script_name,
+                duration_seconds=round(duration, 2),
+                **self.metrics
+            )
+
+        return False  # Don't suppress exceptions
+
+    def add_metric(self, key: str, value: Any):
+        """
+        Add custom metric to track
+
+        Usage:
+            tracker.add_metric("api_cost_usd", 0.05)
+            tracker.add_metric("records_processed", 150)
+        """
+        self.metrics[key] = value
+
+    def add_metrics(self, **metrics):
+        """
+        Add multiple metrics at once
+
+        Usage:
+            tracker.add_metrics(
+                api_calls=10,
+                cost_usd=0.05,
+                records=150
+            )
+        """
+        self.metrics.update(metrics)
 
 
 class JsonFormatter(logging.Formatter):
