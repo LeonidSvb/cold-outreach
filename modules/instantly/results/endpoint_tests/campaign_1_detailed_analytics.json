@@ -1,0 +1,27 @@
+{
+  "endpoint": "/campaigns/analytics?id=8ad64aaf-8294-4538-8400-4a99dcf016e8",
+  "method": "GET",
+  "post_data": null,
+  "status_code": 200,
+  "timestamp": "2025-11-01T15:33:11.267295",
+  "response": [
+    {
+      "campaign_name": "Marketing agencies",
+      "campaign_id": "8ad64aaf-8294-4538-8400-4a99dcf016e8",
+      "campaign_status": 1,
+      "campaign_is_evergreen": false,
+      "leads_count": 735,
+      "contacted_count": 735,
+      "open_count": 0,
+      "reply_count": 10,
+      "link_click_count": 0,
+      "bounced_count": 20,
+      "unsubscribed_count": 0,
+      "completed_count": 310,
+      "emails_sent_count": 1039,
+      "new_leads_contacted_count": 735,
+      "total_opportunities": 2,
+      "total_opportunity_value": 200
+    }
+  ]
+}

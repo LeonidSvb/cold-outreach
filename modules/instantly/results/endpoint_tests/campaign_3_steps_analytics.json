@@ -1,0 +1,42 @@
+{
+  "endpoint": "/campaigns/analytics/steps?campaign_id=23189011-78cc-49db-8e32-da035d1b1135",
+  "method": "GET",
+  "post_data": null,
+  "status_code": 200,
+  "timestamp": "2025-11-01T15:33:22.910948",
+  "response": [
+    {
+      "step": "1",
+      "variant": "0",
+      "sent": 127,
+      "opened": 82,
+      "unique_opened": 62,
+      "replies": 0,
+      "unique_replies": 0,
+      "clicks": 0,
+      "unique_clicks": 0
+    },
+    {
+      "step": null,
+      "variant": null,
+      "sent": 0,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 0,
+      "unique_replies": 0,
+      "clicks": 0,
+      "unique_clicks": 0
+    },
+    {
+      "step": "0",
+      "variant": "0",
+      "sent": 138,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 0,
+      "unique_replies": 0,
+      "clicks": 0,
+      "unique_clicks": 0
+    }
+  ]
+}

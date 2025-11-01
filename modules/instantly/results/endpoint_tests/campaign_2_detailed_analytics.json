@@ -1,0 +1,27 @@
+{
+  "endpoint": "/campaigns/analytics?id=864e8605-a24e-4881-9e96-8544b912d7e7",
+  "method": "GET",
+  "post_data": null,
+  "status_code": 200,
+  "timestamp": "2025-11-01T15:33:17.164268",
+  "response": [
+    {
+      "campaign_name": "coaches 200 US b2b C-lvl",
+      "campaign_id": "864e8605-a24e-4881-9e96-8544b912d7e7",
+      "campaign_status": -1,
+      "campaign_is_evergreen": false,
+      "leads_count": 0,
+      "contacted_count": 250,
+      "open_count": 0,
+      "reply_count": 7,
+      "link_click_count": 0,
+      "bounced_count": 12,
+      "unsubscribed_count": 0,
+      "completed_count": 0,
+      "emails_sent_count": 482,
+      "new_leads_contacted_count": 250,
+      "total_opportunities": 1,
+      "total_opportunity_value": 100
+    }
+  ]
+}

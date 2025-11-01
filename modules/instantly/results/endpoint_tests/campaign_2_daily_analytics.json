@@ -1,0 +1,105 @@
+{
+  "endpoint": "/campaigns/analytics/daily?campaign_id=864e8605-a24e-4881-9e96-8544b912d7e7&start_date=2025-08-03&end_date=2025-11-01",
+  "method": "GET",
+  "post_data": null,
+  "status_code": 200,
+  "timestamp": "2025-11-01T15:33:19.789731",
+  "response": [
+    {
+      "date": "2025-08-25",
+      "sent": 90,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 1,
+      "unique_replies": 1,
+      "clicks": 0,
+      "unique_clicks": 0,
+      "opportunities": 0,
+      "unique_opportunities": 0
+    },
+    {
+      "date": "2025-08-26",
+      "sent": 0,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 2,
+      "unique_replies": 2,
+      "clicks": 0,
+      "unique_clicks": 0,
+      "opportunities": 1,
+      "unique_opportunities": 1
+    },
+    {
+      "date": "2025-08-27",
+      "sent": 90,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 0,
+      "unique_replies": 0,
+      "clicks": 0,
+      "unique_clicks": 0,
+      "opportunities": 1,
+      "unique_opportunities": 1
+    },
+    {
+      "date": "2025-08-28",
+      "sent": 90,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 1,
+      "unique_replies": 1,
+      "clicks": 0,
+      "unique_clicks": 0,
+      "opportunities": 0,
+      "unique_opportunities": 0
+    },
+    {
+      "date": "2025-08-29",
+      "sent": 70,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 2,
+      "unique_replies": 2,
+      "clicks": 0,
+      "unique_clicks": 0,
+      "opportunities": 0,
+      "unique_opportunities": 0
+    },
+    {
+      "date": "2025-08-30",
+      "sent": 0,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 1,
+      "unique_replies": 1,
+      "clicks": 0,
+      "unique_clicks": 0,
+      "opportunities": 0,
+      "unique_opportunities": 0
+    },
+    {
+      "date": "2025-09-01",
+      "sent": 139,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 0,
+      "unique_replies": 0,
+      "clicks": 0,
+      "unique_clicks": 0,
+      "opportunities": 0,
+      "unique_opportunities": 0
+    },
+    {
+      "date": "2025-09-02",
+      "sent": 3,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 0,
+      "unique_replies": 0,
+      "clicks": 0,
+      "unique_clicks": 0,
+      "opportunities": 0,
+      "unique_opportunities": 0
+    }
+  ]
+}

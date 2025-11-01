@@ -1,0 +1,20 @@
+{
+  "endpoint": "/campaigns/analytics/steps?campaign_id=bfa00ac1-2fe7-4da7-936f-0b93afeedc80",
+  "method": "GET",
+  "post_data": null,
+  "status_code": 200,
+  "timestamp": "2025-11-01T15:33:28.707635",
+  "response": [
+    {
+      "step": "0",
+      "variant": "0",
+      "sent": 221,
+      "opened": 0,
+      "unique_opened": 0,
+      "replies": 2,
+      "unique_replies": 2,
+      "clicks": 0,
+      "unique_clicks": 0
+    }
+  ]
+}

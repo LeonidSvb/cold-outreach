@@ -1,0 +1,28 @@
+{
+  "endpoint": "/campaigns/analytics/overview",
+  "method": "GET",
+  "post_data": null,
+  "status_code": 200,
+  "timestamp": "2025-11-01T15:33:06.338652",
+  "response": {
+    "open_count": 82,
+    "open_count_unique": 63,
+    "open_count_unique_by_step": 62,
+    "link_click_count": 0,
+    "link_click_count_unique": 0,
+    "link_click_count_unique_by_step": 0,
+    "reply_count": 19,
+    "reply_count_unique": 19,
+    "reply_count_unique_by_step": 19,
+    "bounced_count": 62,
+    "unsubscribed_count": 0,
+    "emails_sent_count": 2007,
+    "new_leads_contacted_count": 1344,
+    "total_opportunities": 4,
+    "total_opportunity_value": 400,
+    "total_interested": 4,
+    "total_meeting_booked": 0,
+    "total_meeting_completed": 0,
+    "total_closed": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "endpoint": "/leads/list",
+  "method": "POST",
+  "post_data": {
+    "campaign_id": "8ad64aaf-8294-4538-8400-4a99dcf016e8",
+    "limit": 1000
+  },
+  "status_code": 400,
+  "timestamp": "2025-11-01T15:33:16.152146",
+  "response": {
+    "statusCode": 400,
+    "code": "FST_ERR_VALIDATION",
+    "error": "Bad Request",
+    "message": "body/limit must be <= 100"
+  }
+}
