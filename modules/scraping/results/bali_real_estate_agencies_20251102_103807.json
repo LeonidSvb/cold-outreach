@@ -1,0 +1,1911 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-02T10:38:07.552936",
+    "location": "Bali, Indonesia",
+    "total_agencies": 82,
+    "target_count": 300,
+    "progress_percent": 27.3,
+    "version": "1.0.0"
+  },
+  "filters": {
+    "min_rating": 4.0,
+    "min_reviews": 10
+  },
+  "companies": [
+    {
+      "name": "iyandana property by PT IYAN DANA GROUP Rumah Villa Tanah Hotel Jual Sewa Rent Sale Real Estate Bali Kontruksi Terpercaya",
+      "address": "Jl. Gatot Subroto Tim. No.900D Kapling 8, Kesiman Kertalangu, East Denpasar, Denpasar City, Bali 80237, Indonesia",
+      "phone": "+62 878-6002-4499",
+      "website": "http://www.iyandanaproperty.com/",
+      "rating": 5,
+      "reviews_count": 190,
+      "place_id": "ChIJl6j98ps_0i0RquFF_Z9DSiA",
+      "location": {
+        "latitude": -8.6353501,
+        "longitude": 115.2459983
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:21.016006"
+    },
+    {
+      "name": "Yolla Realty | Real Estate Agency",
+      "address": "Jl. Labuansait No.83, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 822-6622-0431",
+      "website": "https://yollarealty.com/",
+      "rating": 5,
+      "reviews_count": 88,
+      "place_id": "ChIJJSVIa9hF0i0R3lUflTfr2KY",
+      "location": {
+        "latitude": -8.813822199999999,
+        "longitude": 115.1098195
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@yollarealty.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:54.104908"
+    },
+    {
+      "name": "Gravity Bali - Villa Management, Marketing & Investment",
+      "address": "Jl. Mertanadi No.39, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 813-5370-4430",
+      "website": "http://www.gravitybali.com/",
+      "rating": 5,
+      "reviews_count": 82,
+      "place_id": "ChIJ_7qHZOZH0i0RfyfrTOy6fYQ",
+      "location": {
+        "latitude": -8.6790778,
+        "longitude": 115.16750049999999
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "contact@gravitybali.com",
+        "sales@gravitybali.com",
+        "example@mail.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:35:12.067516"
+    },
+    {
+      "name": "DYNASTY REAL ESTATE I Agent Properti Melayani Jual Beli Sewa dan KPR #2 Bali",
+      "address": "Jl. Tukad Sanghyang No.99x, Dauh Puri Klod, Denpasar Selatan, Kota Denpasar, Bali 80225, Indonesia",
+      "phone": "+62 858-6944-4004",
+      "website": "https://sites.google.com/view/dynastyrealestatebali",
+      "rating": 5,
+      "reviews_count": 68,
+      "place_id": "ChIJ79rR4qxH0i0RFA_8hF802Mc",
+      "location": {
+        "latitude": -8.682703499999999,
+        "longitude": 115.22490150000002
+      },
+      "types": [
+        "real_estate_agency",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "adm.dynastyrealestate@gmail.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:52.039195"
+    },
+    {
+      "name": "Pellago Real Estate & Property Management",
+      "address": "Jalan Canggu Shortcut No.7, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80351, Indonesia",
+      "phone": "+62 811-3821-7238",
+      "website": "https://pellago.com/",
+      "rating": 5,
+      "reviews_count": 56,
+      "place_id": "ChIJt5G0Q7I50i0RPrkQ_HDKfEI",
+      "location": {
+        "latitude": -8.654007,
+        "longitude": 115.13961429999998
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "flags@2x.webp",
+        "info@pellago.com",
+        "globe@2x.webp"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:36:05.873005"
+    },
+    {
+      "name": "Integrity Property Planner",
+      "address": "No 91 blok no 2, Jl. Mahendradatta, Padangsambian, Kec. Denpasar Bar., Kota Denpasar, Bali 80119, Indonesia",
+      "phone": "+62 878-1833-3939",
+      "website": "https://integritypropertyplanner.id/",
+      "rating": 5,
+      "reviews_count": 41,
+      "place_id": "ChIJY1KKXA9B0i0RpAXilhiXLq0",
+      "location": {
+        "latitude": -8.667024399999999,
+        "longitude": 115.18949230000001
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "hello@integritypropertyplanner.id",
+        "integritypropertyplanner.acc@gmail.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:29:34.333738"
+    },
+    {
+      "name": "Bali Kubu Asri | Estate Agent",
+      "address": "Jl. Nangka Utara Gg Murai No.30, Tonja, Kec. Denpasar Utara, Kota Denpasar, Bali 80234, Indonesia",
+      "phone": "+62 819-9905-6888",
+      "website": "http://balikubu.com/",
+      "rating": 5,
+      "reviews_count": 31,
+      "place_id": "ChIJ26WZXt0_0i0RYTtYjcXuzSw",
+      "location": {
+        "latitude": -8.6341501,
+        "longitude": 115.22151269999999
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@balikubu.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:25:38.095960"
+    },
+    {
+      "name": "Richter Real Estate",
+      "address": "9583+9V6, Jl. Panggang, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 857-9247-5804",
+      "website": "",
+      "rating": 5,
+      "reviews_count": 31,
+      "place_id": "ChIJsfP6UAA50i0RqbcNJq49cYw",
+      "location": {
+        "latitude": -8.6337022,
+        "longitude": 115.15425
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:27:58.780699"
+    },
+    {
+      "name": "Blue Beach Bali | Real Estate - Uluwatu Office",
+      "address": "54CP+7QH, Jl. Raya Uluwatu Pecatu, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80364, Indonesia",
+      "phone": "+62 822-6669-1098",
+      "website": "http://www.bluebeachbali.com/",
+      "rating": 5,
+      "reviews_count": 31,
+      "place_id": "ChIJmUzSZrVb0i0RcRS41MGh8fo",
+      "location": {
+        "latitude": -8.829336,
+        "longitude": 115.13696200000001
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:30:48.781185"
+    },
+    {
+      "name": "EPIC Property Bali",
+      "address": "Pertokoan Kunti Plaza Jl. Kunti I No.5, Seminyak, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 819-9919-9277",
+      "website": "",
+      "rating": 5,
+      "reviews_count": 28,
+      "place_id": "ChIJJ6TdZvxH0i0RBWSLEw-gD4Q",
+      "location": {
+        "latitude": -8.6886821,
+        "longitude": 115.1711163
+      },
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:28:31.028822"
+    },
+    {
+      "name": "Bali Immobilier",
+      "address": "Jl. Umalas Lestari (Dukuh Indah Umalas, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 812-3928-9654",
+      "website": "http://bali-immobilier.com/",
+      "rating": 5,
+      "reviews_count": 26,
+      "place_id": "ChIJ_Ysn52hH0i0RA9_hJJ085wM",
+      "location": {
+        "latitude": -8.666326699999999,
+        "longitude": 115.1604088
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@bali-immobilier.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:25:09.302893"
+    },
+    {
+      "name": "Bali Holiday Villas",
+      "address": "No Jl. Tunjung Sari No.69, Padangsambian Kaja, Kec. Denpasar Bar., Kota Denpasar, Bali 80117, Indonesia",
+      "phone": "+62 361 8444529",
+      "website": "",
+      "rating": 5,
+      "reviews_count": 23,
+      "place_id": "ChIJYb-8mrE40i0RXI_dxdaU_i8",
+      "location": {
+        "latitude": -8.640090599999999,
+        "longitude": 115.1827441
+      },
+      "types": [
+        "travel_agency",
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:33:08.158858"
+    },
+    {
+      "name": "Bali Dream Living Real Estate",
+      "address": "Jl. Pantai Suluban, Pecatu, Kec. Kuta Sel., Uluwatu, Bali 80361, Indonesia",
+      "phone": "+62 822-4798-6996",
+      "website": "http://www.balidreamliving.com/",
+      "rating": 5,
+      "reviews_count": 21,
+      "place_id": "ChIJ45c-2AdP0i0RovAlPrLfPkY",
+      "location": {
+        "latitude": -8.819381,
+        "longitude": 115.0898435
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "team@balidreamliving.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:27:58.780699"
+    },
+    {
+      "name": "Bali land and property for sales",
+      "address": "Jl. Raya Cebok, Kedisan, Kec. Tegallalang, Kabupaten Gianyar, Bali 80561, Indonesia",
+      "phone": "+62 812-3630-4665",
+      "website": "http://balilandandpropertyforsale.com/?utm_source=gmb&utm_medium=referral",
+      "rating": 5,
+      "reviews_count": 20,
+      "place_id": "ChIJjy9tvIEZ0i0RJW5r_tub_Fc",
+      "location": {
+        "latitude": -8.439280499999999,
+        "longitude": 115.28901079999999
+      },
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:33:23.318014"
+    },
+    {
+      "name": "Discovery Property Central Bali",
+      "address": "Jl. Sunset Road No.88, Seminyak, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 823-4006-8758",
+      "website": "http://www.discoveryproperty.id/",
+      "rating": 5,
+      "reviews_count": 17,
+      "place_id": "ChIJVbbnIlRH0i0R7yCrG3Zmyjc",
+      "location": {
+        "latitude": -8.690504299999999,
+        "longitude": 115.1725417
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@discoveryproperty.id"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:37:05.900688"
+    },
+    {
+      "name": "Prestige Property Bali",
+      "address": "84MX+C38, Jl. Subak Sari Unit No. 1, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 823-2255-4909",
+      "website": "https://prestigepropertybali.com/",
+      "rating": 5,
+      "reviews_count": 14,
+      "place_id": "ChIJlblZ2ZJH0i0R064Y8LgDI8U",
+      "location": {
+        "latitude": -8.666437499999999,
+        "longitude": 115.14768749999999
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "contact@prestigepropertybali.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:36:15.734806"
+    },
+    {
+      "name": "Bali Land List / Elevation",
+      "address": "Gg. Kenanga, Kerobokan, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 811-390-023",
+      "website": "https://balilandlist.com/",
+      "rating": 5,
+      "reviews_count": 12,
+      "place_id": "ChIJJTosAPZH0i0RAVKAl35E4IY",
+      "location": {
+        "latitude": -8.6800547,
+        "longitude": 115.16628480000001
+      },
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "flags@2x.png",
+        "hello@balilandlist.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:33:26.876311"
+    },
+    {
+      "name": "UNA PROPERTY BALI",
+      "address": "Jl. Raya Padang Luwih No.80, Dalung, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 811-3866-049",
+      "website": "https://www.instagram.com/unapropertiesbali?igsh=MWx0NGF2bWNtcmM4bQ==",
+      "rating": 5,
+      "reviews_count": 11,
+      "place_id": "ChIJvUh-WgA50i0RoURnlR28RM4",
+      "location": {
+        "latitude": -8.6198286,
+        "longitude": 115.1749637
+      },
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:28:49.293407"
+    },
+    {
+      "name": "Balizen Property Group",
+      "address": "f79c+8m9 kawan banjar teges kawan, Jl. Raya Teges, Mas, Kecamatan Ubud, Kabupaten Gianyar, Bali 80571, Indonesia",
+      "phone": "+62 812-3962-2639",
+      "website": "http://www.balizenproperty.com/",
+      "rating": 5,
+      "reviews_count": 11,
+      "place_id": "ChIJASGAczg90i0RcivXzD6yNto",
+      "location": {
+        "latitude": -8.5316875,
+        "longitude": 115.2716875
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:22.674737"
+    },
+    {
+      "name": "LEYLINES Bingin Office",
+      "address": "Jl. Bangbang Metuug Jl. Buana Sari No.Br, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "",
+      "website": "http://www.leylines.com/",
+      "rating": 5,
+      "reviews_count": 11,
+      "place_id": "ChIJFbMcKwBF0i0RH3ZBDzGWaSc",
+      "location": {
+        "latitude": -8.8074586,
+        "longitude": 115.1182559
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@leylines.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:58.655960"
+    },
+    {
+      "name": "LUXO PROPERTY",
+      "address": "Jl. Pantai Pererenan No.80, Pererenan, Kec. Mengwi, Kabupaten Badung, Bali 80351, Indonesia",
+      "phone": "+62 823-1352-4101",
+      "website": "https://www.luxoproperty.co.id/",
+      "rating": 5,
+      "reviews_count": 11,
+      "place_id": "ChIJkYwh_is50i0Rucj649xiWkk",
+      "location": {
+        "latitude": -8.642277499999999,
+        "longitude": 115.1291755
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "contact@luxoproperty.co.id"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:35:59.214902"
+    },
+    {
+      "name": "Cuan Bali Land | Property Real Estate",
+      "address": "Jl. Goa Gong lingk. Br. Anggaswara No.163, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80364, Indonesia",
+      "phone": "+62 812-3958-9580",
+      "website": "http://cuanbaliland.com/",
+      "rating": 5,
+      "reviews_count": 10,
+      "place_id": "ChIJD-LKmWBF0i0Raf_crJARVsc",
+      "location": {
+        "latitude": -8.8037061,
+        "longitude": 115.17772439999999
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:33:45.568473"
+    },
+    {
+      "name": "Bali Nexus Investments Partners",
+      "address": "Jl. Raya Ubud, Ubud, Kecamatan Ubud, Kabupaten Gianyar, Bali 80571, Indonesia",
+      "phone": "+62 815-1927-1701",
+      "website": "https://www.balinexus.com/",
+      "rating": 5,
+      "reviews_count": 10,
+      "place_id": "ChIJEymRoyU90i0R5616M31Bfyk",
+      "location": {
+        "latitude": -8.5061239,
+        "longitude": 115.2604113
+      },
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "email@gmail.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:35:06.643556"
+    },
+    {
+      "name": "BALI SMART INVESTMENT",
+      "address": "Jl. Abimanyu, Seminyak, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "",
+      "website": "http://www.balismartinvestment.com/",
+      "rating": 5,
+      "reviews_count": 10,
+      "place_id": "ChIJY6eMLjZH0i0RPDGKulwqMV0",
+      "location": {
+        "latitude": -8.6949171,
+        "longitude": 115.1627143
+      },
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "contact@balismartinvestment.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:35:32.992190"
+    },
+    {
+      "name": "Bali Realty",
+      "address": "Jl. Sunset Road No.7X, Seminyak, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 361 8475977",
+      "website": "https://www.balirealty.com/",
+      "rating": 4.9,
+      "reviews_count": 304,
+      "place_id": "ChIJPZ3bMKRH0i0ROaKbV-BJNww",
+      "location": {
+        "latitude": -8.683389,
+        "longitude": 115.1672645
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:34.283230"
+    },
+    {
+      "name": "Legal Legends Indonesia | Canggu | Visas, Business & Property Consulting in Bali",
+      "address": "Jl. Subak Canggu No.1B, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 812-3995-1929",
+      "website": "https://www.legallegendsindonesia.com/",
+      "rating": 4.9,
+      "reviews_count": 185,
+      "place_id": "ChIJs3R2UxVH0i0RfY3cgT5xg9M",
+      "location": {
+        "latitude": -8.652940899999999,
+        "longitude": 115.13803209999999
+      },
+      "types": [
+        "real_estate_agency",
+        "local_government_office",
+        "consultant",
+        "travel_agency",
+        "government_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:28:42.393012"
+    },
+    {
+      "name": "Balitecture - Bali Villa Investments",
+      "address": "Jl. Pemelisan Agung, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 813-3978-3231",
+      "website": "https://www.balitecture.com/",
+      "rating": 4.9,
+      "reviews_count": 173,
+      "place_id": "ChIJuY5JjE9H0i0Rxn9JSliFlMU",
+      "location": {
+        "latitude": -8.659765,
+        "longitude": 115.13762969999999
+      },
+      "types": [
+        "real_estate_agency",
+        "finance",
+        "consultant",
+        "point_of_interest",
+        "general_contractor",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:29:08.358086"
+    },
+    {
+      "name": "Bali Treasure Properties",
+      "address": "Brawa, Jl. Subak Sari No.2c, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 851-0015-2013",
+      "website": "https://www.balitreasureproperties.com/",
+      "rating": 4.9,
+      "reviews_count": 124,
+      "place_id": "ChIJD8B9zXZH0i0Rf8NW_tOYfRI",
+      "location": {
+        "latitude": -8.6694957,
+        "longitude": 115.14627399999999
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "ezc@q.mcd",
+        "info@balitreasureproperties.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:31.822757"
+    },
+    {
+      "name": "Bali Invest",
+      "address": "84RX+R5J, Gg. Batu Sari No.6, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 811-3960-3136",
+      "website": "http://baliinvest.com/",
+      "rating": 4.9,
+      "reviews_count": 94,
+      "place_id": "ChIJa_gcxRRH0i0RJMz6RS3WyM8",
+      "location": {
+        "latitude": -8.6579214,
+        "longitude": 115.1478923
+      },
+      "types": [
+        "general_contractor",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "social@baliinvest.com",
+        "kevin@baliinvest.com",
+        "info@bali-invest.de",
+        "info@baliinvest.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:34:28.736910"
+    },
+    {
+      "name": "Investland Bali Properties",
+      "address": "No.150 a, Jl. Pantai Berawa, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+372 5683 2434",
+      "website": "https://investlandbali.com/",
+      "rating": 4.9,
+      "reviews_count": 60,
+      "place_id": "ChIJUajBNvk50i0R-4xcv2sIb4c",
+      "location": {
+        "latitude": -8.6497692,
+        "longitude": 115.14950780000001
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@investlandbali.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:00.389393"
+    },
+    {
+      "name": "LaChance Real Estate",
+      "address": "Jl. Pantai Munggu No.8, Munggu, Kec. Mengwi, Kabupaten Badung, Bali 80351, Indonesia",
+      "phone": "+62 812-3911-7885",
+      "website": "https://lachance.estate/",
+      "rating": 4.9,
+      "reviews_count": 54,
+      "place_id": "ChIJM0jsWXs50i0Rc7oEyW6QrFg",
+      "location": {
+        "latitude": -8.637152799999999,
+        "longitude": 115.12148010000001
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@lachance.estate"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:36:20.457589"
+    },
+    {
+      "name": "Villa Jepun Bali",
+      "address": "Jl. Canggu Padang Linjong, Canggu, Kec. Kuta Utara, bali, Bali 80361, Indonesia",
+      "phone": "+62 811-4600-070",
+      "website": "https://villajepunbali.com/",
+      "rating": 4.9,
+      "reviews_count": 31,
+      "place_id": "ChIJte2DsX9R76oRimBnfVe7x3w",
+      "location": {
+        "latitude": -8.6436745,
+        "longitude": 115.13966459999999
+      },
+      "types": [
+        "travel_agency",
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "booking@villajepunbali.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:55.566415"
+    },
+    {
+      "name": "Apex Property",
+      "address": "Jl. Sukunan No.10, Cemagi, Kec. Mengwi, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 823-4219-4697",
+      "website": "https://www.apexbali.com/",
+      "rating": 4.9,
+      "reviews_count": 29,
+      "place_id": "ChIJRS_VJ_M50i0RnyFNlvfgrbU",
+      "location": {
+        "latitude": -8.6291231,
+        "longitude": 115.11313519999999
+      },
+      "types": [
+        "real_estate_agency",
+        "finance",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@apexproperty.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:29:24.399336"
+    },
+    {
+      "name": "Villa Belle by Exotic Bali Properties",
+      "address": "Jl. Pangkung Sari No.4, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 853-3781-3496",
+      "website": "http://www.exoticbaliproperties.com/",
+      "rating": 4.9,
+      "reviews_count": 28,
+      "place_id": "ChIJDdhQJhRH0i0RQsM8N4v30Fw",
+      "location": {
+        "latitude": -8.679103999999999,
+        "longitude": 115.16128970000001
+      },
+      "types": [
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@exoticbaliproperties.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:55.782284"
+    },
+    {
+      "name": "Legion Real Estate",
+      "address": "Jl. Sunset Road No.900b, Seminyak, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 895-0019-76098",
+      "website": "https://legion-real-estate.com/",
+      "rating": 4.9,
+      "reviews_count": 27,
+      "place_id": "ChIJqdst9V5H0i0RwmE08h7_hYY",
+      "location": {
+        "latitude": -8.6873237,
+        "longitude": 115.1708883
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:25:22.869593"
+    },
+    {
+      "name": "Bali Home Immo Property - Head Office",
+      "address": "Jl. Pantai Berawa No.18, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 821-9435-9401",
+      "website": "https://www.bali-home-immo.com/",
+      "rating": 4.8,
+      "reviews_count": 325,
+      "place_id": "ChIJI5I4n35H0i0RRJS9CCtl-h8",
+      "location": {
+        "latitude": -8.6546729,
+        "longitude": 115.14796240000001
+      },
+      "types": [
+        "real_estate_agency",
+        "finance",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@bali-home-immo.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:29.185578"
+    },
+    {
+      "name": "Bali Management Villas",
+      "address": "Jl. Raya Kerobokan No.5x, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 878-6185-4989",
+      "website": "https://balimanagement.villas/",
+      "rating": 4.8,
+      "reviews_count": 248,
+      "place_id": "ChIJFYixMF1H0i0RclBacnrB1IY",
+      "location": {
+        "latitude": -8.663180400000002,
+        "longitude": 115.1671403
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:28:41.120803"
+    },
+    {
+      "name": "Bali Coconut Living",
+      "address": "Jl. Bumbak No.89b, Kerobokan, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 361 8476727",
+      "website": "http://www.balicoconutliving.com/?UTM_source=GMB_listing&UTM_medium=organic",
+      "rating": 4.8,
+      "reviews_count": 132,
+      "place_id": "ChIJhUdCrGJH0i0RgqIXK8GAbo4",
+      "location": {
+        "latitude": -8.6546141,
+        "longitude": 115.15357730000001
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:59.190170"
+    },
+    {
+      "name": "Bali Home Immo Property - Uluwatu",
+      "address": "55J3+67V, Uluwatu St, Ungasan, South Kuta, Badung Regency, Bali 80361, Ungasan, Kec. Kuta Sel., Uluwatu, Bali 80362, Indonesia",
+      "phone": "+62 853-3774-3862",
+      "website": "https://bali-home-immo.com/villa-for-sale-uluwatu",
+      "rating": 4.8,
+      "reviews_count": 77,
+      "place_id": "ChIJCWBwUK9b0i0Rg0bw5q0BYMM",
+      "location": {
+        "latitude": -8.819380299999999,
+        "longitude": 115.15320140000001
+      },
+      "types": [
+        "real_estate_agency",
+        "finance",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@bali-home-immo.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:28.874865"
+    },
+    {
+      "name": "BREIG Property Office Bali",
+      "address": "Shortcut, Canggu, Canggu, Jl. Anggrek, Tibubeneng, Kuta Utara, Badung Regency, Bali 80361, Indonesia",
+      "phone": "+62 813-3776-8228",
+      "website": "http://breig-property.com/",
+      "rating": 4.8,
+      "reviews_count": 71,
+      "place_id": "ChIJA3Y6cwA50i0RrOkS3P9rBBM",
+      "location": {
+        "latitude": -8.652869200000001,
+        "longitude": 115.13836359999999
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "cooperation@breig-property.com",
+        "sales@breig-property.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:43.189069"
+    },
+    {
+      "name": "The Bali Agent",
+      "address": "Jl. Raya Kerobokan No.88X, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 819-9977-7288",
+      "website": "http://www.thebaliagent.com/",
+      "rating": 4.8,
+      "reviews_count": 47,
+      "place_id": "ChIJBYGVcr5H0i0Rut3pymtPcBI",
+      "location": {
+        "latitude": -8.671154099999999,
+        "longitude": 115.16507299999999
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:56.615939"
+    },
+    {
+      "name": "Nagisa Bali Villa Management and Marketing",
+      "address": "Jl. Nakula No.5p, Pemecutan Klod, Kec. Denpasar Bar., Kota Denpasar, Bali 80119, Indonesia",
+      "phone": "+62 361 490165",
+      "website": "https://www.nagisa-bali.com/",
+      "rating": 4.8,
+      "reviews_count": 45,
+      "place_id": "ChIJcRLFMNlG0i0RnhnZxyVTET0",
+      "location": {
+        "latitude": -8.700274199999999,
+        "longitude": 115.1842313
+      },
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@nagisa-bali.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:28:55.865964"
+    },
+    {
+      "name": "Palm Living Luxury Real Estate & Holiday Rentals",
+      "address": "Jl. Seririt- Singaraja No.168, Kalibukbuk, Kec. Buleleng, Kabupaten Buleleng, Bali 81119, Indonesia",
+      "phone": "+62 362 3392773",
+      "website": "https://palm-living.com/",
+      "rating": 4.8,
+      "reviews_count": 44,
+      "place_id": "ChIJCyNrOkeb0S0RNeUrI82sjKA",
+      "location": {
+        "latitude": -8.162205499999999,
+        "longitude": 115.02661629999999
+      },
+      "types": [
+        "real_estate_agency",
+        "travel_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:35:52.866306"
+    },
+    {
+      "name": "Coco Development Group",
+      "address": "Jl. Raya Canggu No.163B, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80351, Indonesia",
+      "phone": "+62 878-1915-1251",
+      "website": "https://cocodevelopmentgroup.com/",
+      "rating": 4.8,
+      "reviews_count": 39,
+      "place_id": "ChIJ9dHTR4A50i0RFxY7k-gBiAc",
+      "location": {
+        "latitude": -8.6363342,
+        "longitude": 115.1433372
+      },
+      "types": [
+        "general_contractor",
+        "consultant",
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "hello@cocodevelopmentgroup.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:54.414251"
+    },
+    {
+      "name": "Villas of Bali",
+      "address": "Jl. Raya Kerobokan No.120, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 811-3960-8685",
+      "website": "https://www.balivillasales.com/",
+      "rating": 4.8,
+      "reviews_count": 37,
+      "place_id": "ChIJv96Hy3g40i0RoKEfKiZykko",
+      "location": {
+        "latitude": -8.6809882,
+        "longitude": 115.16437979999998
+      },
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@balivillasales.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:41.022888"
+    },
+    {
+      "name": "Great Bali Villas",
+      "address": "Jln Bukit Sari Utara No.88X, Padangsambian Kaja, Kec. Denpasar Bar., Kota Denpasar, Bali 80117, Indonesia",
+      "phone": "+62 821-2297-3363",
+      "website": "http://greatbalivillas.com/",
+      "rating": 4.8,
+      "reviews_count": 32,
+      "place_id": "ChIJI0Qvv5FA0i0RYMcS7oKNl10",
+      "location": {
+        "latitude": -8.6328005,
+        "longitude": 115.18514669999999
+      },
+      "types": [
+        "corporate_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@greatbalivillas.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:50.939415"
+    },
+    {
+      "name": "Bali Luxury Villas",
+      "address": "SIMPANG SIUR SQUARE, Jl. Setia Budi Blok C3, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 361 754344",
+      "website": "https://www.baliluxuryvillas.com/",
+      "rating": 4.8,
+      "reviews_count": 26,
+      "place_id": "ChIJG7Iof-BG0i0R9uAaYOLEVw4",
+      "location": {
+        "latitude": -8.7196891,
+        "longitude": 115.18292789999998
+      },
+      "types": [
+        "travel_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@baliluxuryvillas.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:44.152911"
+    },
+    {
+      "name": "Luxury Bali Estate",
+      "address": "Luxury Bali Estate Jalan Raya Munggu Br. Batan Duren Desa, Cepaka, Kec. Kediri, Kabupaten Tabanan, Bali 82121, Indonesia",
+      "phone": "+852 9312 1637",
+      "website": "",
+      "rating": 4.8,
+      "reviews_count": 12,
+      "place_id": "ChIJb_N9wKk50i0Rq1Oo48ReBRk",
+      "location": {
+        "latitude": -8.608354799999999,
+        "longitude": 115.1400301
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:36:05.873005"
+    },
+    {
+      "name": "Next Property",
+      "address": "Jl. Sentanu No.37, Peguyangan Kaja, Kec. Denpasar Utara, Kota Denpasar, Bali 80115, Indonesia",
+      "phone": "+62 813-7059-4555",
+      "website": "https://nextproperty.co.id/",
+      "rating": 4.8,
+      "reviews_count": 12,
+      "place_id": "ChIJ0y2laD0_0i0RywTBLno5OFQ",
+      "location": {
+        "latitude": -8.606641,
+        "longitude": 115.21514429999999
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "sales@nextproperty.co.id",
+        "adminnp@nextproperty.co.id"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:38:03.472149"
+    },
+    {
+      "name": "Villa Marbella | Villa Rental in Bali",
+      "address": "Kec, Gg. 06, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 829-9977-7288",
+      "website": "http://www.thebaliagent.com/",
+      "rating": 4.8,
+      "reviews_count": 10,
+      "place_id": "ChIJSdEhwY1H0i0RVa9U4EtTYag",
+      "location": {
+        "latitude": -8.6629741,
+        "longitude": 115.1633025
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:34.170643"
+    },
+    {
+      "name": "Bali Villas Holiday Vacation Rentals",
+      "address": "Jl. Dewi Saraswati No.121, Seminyak, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 811-3901-068",
+      "website": "",
+      "rating": 4.7,
+      "reviews_count": 189,
+      "place_id": "ChIJPzCmVSNH0i0RVfPJCCXfstU",
+      "location": {
+        "latitude": -8.6817891,
+        "longitude": 115.17299759999999
+      },
+      "types": [
+        "corporate_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:34.170643"
+    },
+    {
+      "name": "Ubud Property",
+      "address": "Peliatan, Ubud, Gianyar Regency, Bali 80571, Indonesia",
+      "phone": "+62 361 970888",
+      "website": "http://www.ubudproperty.com/",
+      "rating": 4.7,
+      "reviews_count": 158,
+      "place_id": "ChIJecy1umg90i0RTHxrlimlsYE",
+      "location": {
+        "latitude": -8.5089694,
+        "longitude": 115.27113059999998
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@ubudproperty.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:25:19.751551"
+    },
+    {
+      "name": "Bali Exception Real Estate Agency",
+      "address": "Umalas, Jl. Bumbak Dauh Jl. Umalas No.88, Kerobokan, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 813-9959-4112",
+      "website": "https://baliexception.com/",
+      "rating": 4.7,
+      "reviews_count": 120,
+      "place_id": "ChIJoYjJ_Qs50i0R7StPnKANA4U",
+      "location": {
+        "latitude": -8.6562106,
+        "longitude": 115.1521316
+      },
+      "types": [
+        "real_estate_agency",
+        "finance",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@baliexception.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:35.697934"
+    },
+    {
+      "name": "TOTAL PROPERTY",
+      "address": "Jl. Tukad Balian No.556, Sidakarya, Denpasar Selatan, Kota Denpasar, Bali 80224, Indonesia",
+      "phone": "+62 361 4480955",
+      "website": "http://www.totalproperty.co.id/",
+      "rating": 4.7,
+      "reviews_count": 89,
+      "place_id": "ChIJbTT43KZB0i0RfsRo1BPeg28",
+      "location": {
+        "latitude": -8.7030431,
+        "longitude": 115.2398207
+      },
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "ragita.totalproperty@gmail.com",
+        "yogi.totalproperty@gmail.com",
+        "totalproperty@gmail.com",
+        "rani.totalproperty@gmail.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:22.214917"
+    },
+    {
+      "name": "OriVista (Azure Bali) Villa rentals & Management",
+      "address": "95G8+H9H, Jl. Raya Padonan, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 811-3803-600",
+      "website": "http://www.orivista.com/",
+      "rating": 4.7,
+      "reviews_count": 88,
+      "place_id": "ChIJjXSsb21H0i0RZ6mEUz5k_B4",
+      "location": {
+        "latitude": -8.6235727,
+        "longitude": 115.1658199
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "iamramkrs@gmail.com",
+        "support@azurebali.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:33:11.579583"
+    },
+    {
+      "name": "Krisna Loka Property",
+      "address": "Jl. Jaya Giri Gg. XIX No.A/B3, Renon, Kec. Denpasar Tim., Kota Denpasar, Bali 80361, Indonesia",
+      "phone": "+62 811-3866-211",
+      "website": "https://krisnaloka.com/",
+      "rating": 4.7,
+      "reviews_count": 87,
+      "place_id": "ChIJw5EDHeZB0i0R2Udx7UFFOJY",
+      "location": {
+        "latitude": -8.661019999999999,
+        "longitude": 115.22719699999999
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info.kl@krisnaloka.com",
+        "brokerbali888@gmail.com",
+        "samsul.arivean@gmail.com",
+        "samsul@krisnaloka.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:16.031333"
+    },
+    {
+      "name": "Sunny Development Group",
+      "address": "Jl. Pemelisan Agung Gg. Anggrek No.4, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 811-3830-8920",
+      "website": "http://sunnydg.com/?utm_source=google&utm_medium=cpc&utm_campaign=maps",
+      "rating": 4.7,
+      "reviews_count": 30,
+      "place_id": "ChIJx6C1AExH0i0RlzaGx_iioFQ",
+      "location": {
+        "latitude": -8.658157899999999,
+        "longitude": 115.1386366
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@sunnydgthai.com",
+        "anastasiya@sunnydg.com",
+        "hello@sunnydg.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:51.020982"
+    },
+    {
+      "name": "Loyal Bali Property",
+      "address": "Komp. Pertokoan Jimbaran Arcade, Jl. Uluwatu II no.6, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 361 9384008",
+      "website": "",
+      "rating": 4.7,
+      "reviews_count": 28,
+      "place_id": "ChIJHR62Cixb0i0Rjls0EvDL_B4",
+      "location": {
+        "latitude": -8.7811797,
+        "longitude": 115.1764414
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:28.874865"
+    },
+    {
+      "name": "Bali Real Estate Consultants",
+      "address": "Jl. Bypass Ngurah Rai No.67, Kedonganan, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 877-6131-1941",
+      "website": "https://balirealestateconsultants.com/",
+      "rating": 4.7,
+      "reviews_count": 26,
+      "place_id": "ChIJE0ZMZ8xB0i0RkhU6pFrglZ4",
+      "location": {
+        "latitude": -8.7667387,
+        "longitude": 115.17856400000001
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@balirec.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:50.320140"
+    },
+    {
+      "name": "Uma di Bali Properties",
+      "address": "Jl. Raya Canggu No.100, Kerobokan, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "",
+      "website": "http://www.umadibali.com/",
+      "rating": 4.7,
+      "reviews_count": 26,
+      "place_id": "ChIJeXgU4RdH0i0RTO9w25osq2g",
+      "location": {
+        "latitude": -8.642709,
+        "longitude": 115.1560439
+      },
+      "types": [
+        "travel_agency",
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@umadibali.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:47.002295"
+    },
+    {
+      "name": "Exotiq Property",
+      "address": "Jl. Pantai Berawa No.88, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 361 737358",
+      "website": "https://www.exotiqproperty.com/",
+      "rating": 4.7,
+      "reviews_count": 23,
+      "place_id": "ChIJgV5e9Q1H0i0R8OZ9fDmOFUI",
+      "location": {
+        "latitude": -8.6606311,
+        "longitude": 115.14435579999999
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@exotiqproperty.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:36:46.480194"
+    },
+    {
+      "name": "Suasa Real Estate",
+      "address": "Jl. Tegal Sari No.5, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 878-2551-7684",
+      "website": "https://www.suasarealestate.com/",
+      "rating": 4.7,
+      "reviews_count": 21,
+      "place_id": "ChIJYe5_9RdH0i0R7WA7gg_EYLE",
+      "location": {
+        "latitude": -8.657278699999999,
+        "longitude": 115.14654159999999
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "contact@suarealestate.com",
+        "contact@suasarealestate.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:25:33.552635"
+    },
+    {
+      "name": "Bali Villa Realty By Ilot Property Bali",
+      "address": "Jl. Petitenget No.882, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 877-6604-5736",
+      "website": "https://balivillarealty.com/",
+      "rating": 4.7,
+      "reviews_count": 19,
+      "place_id": "ChIJ0dLACXRH0i0RPirVMJSSMUA",
+      "location": {
+        "latitude": -8.678922199999999,
+        "longitude": 115.1536437
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "office@ilotpropertybali.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:48.052727"
+    },
+    {
+      "name": "Alex Villas Sales Office",
+      "address": "Jl. Echo Beach No.2, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 811-3830-4587",
+      "website": "https://alex-villas.com/",
+      "rating": 4.7,
+      "reviews_count": 13,
+      "place_id": "ChIJ_bJM8Sg50i0RPDgs1-Noa_k",
+      "location": {
+        "latitude": -8.6543533,
+        "longitude": 115.1404769
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "alexvillasmarketing@gmail.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:42.579576"
+    },
+    {
+      "name": "Kibarer Property",
+      "address": "Jl. Petitenget No.9, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 882-1908-2080",
+      "website": "https://www.villabalisale.com/?utm_source=Kibarer+Google+business&utm_medium=Business+google&utm_campaign=Google+business+kp&utm_id=Business+",
+      "rating": 4.6,
+      "reviews_count": 324,
+      "place_id": "ChIJ_dyPn2tH0i0RTzuY_upLKTw",
+      "location": {
+        "latitude": -8.6714246,
+        "longitude": 115.16070309999999
+      },
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "jakarta@kibarerproperty.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:37.222134"
+    },
+    {
+      "name": "Bukit Vista - Bali Property Management",
+      "address": "Sektor Bunga, Jl. Anggrek Jl. Puri Gading No.I5 No. 2, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 821-4522-4584",
+      "website": "https://www.bukitvista.com/bali-villa-management",
+      "rating": 4.6,
+      "reviews_count": 124,
+      "place_id": "ChIJa2E6NW9F0i0Ryd0ZgGcKIr0",
+      "location": {
+        "latitude": -8.8003274,
+        "longitude": 115.1480102
+      },
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "pr@bukitvistabali.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:28:57.536679"
+    },
+    {
+      "name": "Ray White Kuta",
+      "address": "Jl. Merta Nadi No.88 D, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 819-1500-1000",
+      "website": "https://www.raywhitekuta.com/",
+      "rating": 4.6,
+      "reviews_count": 65,
+      "place_id": "ChIJtY1g8MhG0i0RAyA2JEWmfZs",
+      "location": {
+        "latitude": -8.7101066,
+        "longitude": 115.182727
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@raywhitekuta.com",
+        "ellin@raywhitekuta.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:42.140154"
+    },
+    {
+      "name": "PROPERTIA REAL ESTATE BERAWA",
+      "address": "Berawa, Jl. Pantai Berawa No.41, Canggu, Kuta Utara, Badung Regency, Bali 80361, Indonesia",
+      "phone": "+62 818-0888-7711",
+      "website": "http://www.propertia.com/",
+      "rating": 4.6,
+      "reviews_count": 43,
+      "place_id": "ChIJU3QrPu5H0i0RowcJPS0rEKw",
+      "location": {
+        "latitude": -8.6569466,
+        "longitude": 115.1474325
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:24:40.066093"
+    },
+    {
+      "name": "Sanur Bali Property",
+      "address": "Jl. Tukad Balian, Renon, Denpasar Selatan, Kota Denpasar, Bali 80226, Indonesia",
+      "phone": "+62 813-3720-2045",
+      "website": "http://www.sanurbaliproperty.com/",
+      "rating": 4.6,
+      "reviews_count": 31,
+      "place_id": "ChIJZTF9NLdB0i0R5NDtHoRYxMc",
+      "location": {
+        "latitude": -8.686621599999999,
+        "longitude": 115.24175909999998
+      },
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@sanurbaliproperty.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:26:14.597065"
+    },
+    {
+      "name": "Listings Bali",
+      "address": "Jl. By Pass Tanah Lot No.13, Beraban, Kec. Kediri, Kabupaten Tabanan, Bali 80351, Indonesia",
+      "phone": "+62 822-4766-3578",
+      "website": "https://listingsbali.com/",
+      "rating": 4.6,
+      "reviews_count": 28,
+      "place_id": "ChIJTb-Kq_U50i0R25NL7W4MX6M",
+      "location": {
+        "latitude": -8.605282899999999,
+        "longitude": 115.1066808
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:34:07.823192"
+    },
+    {
+      "name": "Bali Land Office - Full Service Realtor - Land - Villas - Longterm Rentals",
+      "address": "Jl. Umalas No.1A, Kerobokan Kelod, Kuta/Kerobokan, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 361 738803",
+      "website": "http://www.balilandoffice.com/",
+      "rating": 4.6,
+      "reviews_count": 26,
+      "place_id": "ChIJk0VY5GlH0i0RSmZmNRwq3D4",
+      "location": {
+        "latitude": -8.668055599999999,
+        "longitude": 115.1647222
+      },
+      "types": [
+        "real_estate_agency",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:29:56.359328"
+    },
+    {
+      "name": "Miraland Developer Villa Bali",
+      "address": "Jl. Goa Gong No.157A lt.1, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 858-5782-6065",
+      "website": "http://miraland.id/",
+      "rating": 4.6,
+      "reviews_count": 25,
+      "place_id": "ChIJ5XKBtJRF0i0ReaXSKCy_z6w",
+      "location": {
+        "latitude": -8.8035826,
+        "longitude": 115.17740119999999
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@miraland.id"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:20.288139"
+    },
+    {
+      "name": "DEVATHA PROPERTY",
+      "address": "Gg. Pandan III No.4, Padangsambian Klod, Kec. Denpasar Bar., Kota Denpasar, Bali 80117, Indonesia",
+      "phone": "+62 813-3526-8787",
+      "website": "http://www.devathagroup.com/",
+      "rating": 4.6,
+      "reviews_count": 11,
+      "place_id": "ChIJlZOOaiBH0i0RqnLr38a_Qu4",
+      "location": {
+        "latitude": -8.6644924,
+        "longitude": 115.17546890000001
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "hello@favethemes.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:34:16.070918"
+    },
+    {
+      "name": "Revolt Group",
+      "address": "Jl. Pemelisan Agung No.77, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 888-8887-777",
+      "website": "http://revolt-group.com/",
+      "rating": 4.6,
+      "reviews_count": 10,
+      "place_id": "ChIJx7rkdixH0i0Rqp4sWR3a2wg",
+      "location": {
+        "latitude": -8.6604837,
+        "longitude": 115.13704609999998
+      },
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "revolt_b2b@revolt-group.com",
+        "sales@revolt-group.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:34:46.766392"
+    },
+    {
+      "name": "Bali Villa Management",
+      "address": "Jl. Tunjung Sari No.69, Padangsambian Kaja, Kec. Denpasar Bar., Kota Denpasar, Bali 80117, Indonesia",
+      "phone": "+62 361 9004777",
+      "website": "",
+      "rating": 4.5,
+      "reviews_count": 14,
+      "place_id": "ChIJfcuFAq440i0RA8NavCJAwdE",
+      "location": {
+        "latitude": -8.6401243,
+        "longitude": 115.18271000000001
+      },
+      "types": [
+        "travel_agency",
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:42.536464"
+    },
+    {
+      "name": "Villa Seminyak Estate & Spa by Astadala",
+      "address": "Jl. Nakula Gg. Baik-Baik, Seminyak, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 361 735566",
+      "website": "https://www.villaseminyak.com/",
+      "rating": 4.4,
+      "reviews_count": 833,
+      "place_id": "ChIJB6Ot2GE_0i0Rax2bqN1BeDM",
+      "location": {
+        "latitude": -8.6953792,
+        "longitude": 115.17139119999999
+      },
+      "types": [
+        "resort_hotel",
+        "hotel",
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:27:04.183611"
+    },
+    {
+      "name": "Mirah Investment & Development - Head Office",
+      "address": "Jl. Raya Anyar No.24, Kerobokan, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 851-0080-0800",
+      "website": "https://www.mirahdevelopments.com/",
+      "rating": 4.4,
+      "reviews_count": 150,
+      "place_id": "ChIJozBL1J440i0ROhJhqObgewc",
+      "location": {
+        "latitude": -8.648981,
+        "longitude": 115.1621551
+      },
+      "types": [
+        "corporate_office",
+        "general_contractor",
+        "consultant",
+        "finance",
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "sales@mirahdevelopments.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:31:17.811293"
+    },
+    {
+      "name": "Bali Villa Long Term Rentals",
+      "address": "Jl. Raya Kerobokan No.120, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 821-1159-8787",
+      "website": "https://www.balilongtermrentals.com/",
+      "rating": 4.4,
+      "reviews_count": 56,
+      "place_id": "ChIJVVVVVXw40i0RJXXMOxB6hMs",
+      "location": {
+        "latitude": -8.6809882,
+        "longitude": 115.16437979999998
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@balilongtermrentals.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:28.229422"
+    },
+    {
+      "name": "Pertama Property",
+      "address": "Jl. Braban No.82, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "",
+      "website": "http://pertamaproperty.com/",
+      "rating": 4.4,
+      "reviews_count": 26,
+      "place_id": "ChIJ9-vsTctH0i0RYpFUQ7MgOKc",
+      "location": {
+        "latitude": -8.6820358,
+        "longitude": 115.1597555
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:18.217718"
+    },
+    {
+      "name": "Bali Villa Exotic",
+      "address": "Perum Griya Tansa Trisna, Jl. Cendana III No.13, Dalung, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 821-4616-3049",
+      "website": "https://balivillaexotic.com/",
+      "rating": 4.4,
+      "reviews_count": 14,
+      "place_id": "ChIJPwFMz2BH0i0RastWt_7BTE8",
+      "location": {
+        "latitude": -8.6170227,
+        "longitude": 115.16429749999999
+      },
+      "types": [
+        "travel_agency",
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@balivillaexotic.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:33:08.158858"
+    },
+    {
+      "name": "Magnitude Construction",
+      "address": "Jl. Hanoman No.14, Ubud, Kecamatan Ubud, Kabupaten Gianyar, Bali 80571, Indonesia",
+      "phone": "+62 813-3836-2610",
+      "website": "https://magnitudeconstruction.com/",
+      "rating": 4.3,
+      "reviews_count": 70,
+      "place_id": "ChIJnTMr3h490i0RW1cRH4_kPlw",
+      "location": {
+        "latitude": -8.5176769,
+        "longitude": 115.2633901
+      },
+      "types": [
+        "general_contractor",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [
+        "info@magnitudeconstruction.com",
+        "abdelilah.blali@gmail.com"
+      ],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:32:10.271653"
+    },
+    {
+      "name": "Puri Warisan Agung",
+      "address": "Jl. Raya Canggu Gg. Puri Warisan Agung No.100x, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia",
+      "phone": "+62 819-9939-6009",
+      "website": "",
+      "rating": 4.2,
+      "reviews_count": 44,
+      "place_id": "ChIJgYg4Z5A40i0RfaknrZLpdM0",
+      "location": {
+        "latitude": -8.6429251,
+        "longitude": 115.1557913
+      },
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "emails": [],
+      "source": "Google Places API",
+      "collected_at": "2025-11-02T10:33:39.391119"
+    }
+  ],
+  "statistics": {
+    "with_emails": 54,
+    "with_website": 74,
+    "without_contact": -46,
+    "average_rating": 4.79,
+    "average_reviews": 72.3
+  }
+}

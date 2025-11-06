@@ -1,0 +1,64 @@
+﻿email,first_name,last_name,email_status,title,seniority,headline,company_name,company_name+,company_url,company_linkedin_url,linkedin_url,country,state,city,loction+,Unnamed: 16,phone_number,icebreaker
+abbie@extramilemarketing.com,Abbie,Heironimus,verified,Owner & President,owner,"Customer Success Manager | Marketing Strategist | Owner & President, EMM",Extra Mile Marketing,its a company,http://www.extramilemarketing.com,http://www.linkedin.com/company/extramilemarketing,http://www.linkedin.com/in/abbievancil,United States,Texas,Beaumont,,"You are an outreach message generator.  
+Your role: create short, casual, human-sounding icebreaker messages for LinkedIn-style outreach.  
+Goal: make the recipient feel recognized for their work without sounding pushy or overly formal.  
+
+Your task:
+- If ""full_name"" looks like a company (contains words such as Company, Inc, LLC, Ltd, Group, Realty, Properties, Brokers, UAE, Dubai, Abu Dhabi):
+    → Output ONLY:
+    its a company
+
+- Else (if ""full_name"" is a person):
+    1. Extract firstName = first word of full_name.
+    2. Normalize company_name into shortCompany:
+        - If ALL CAPS → convert to Title Case (only first letter uppercase).
+        - Remove corporate suffixes: Properties, Realty, Group, Brokers, LLC, Ltd, Inc, UAE, Dubai, Abu Dhabi.
+        - Remove apostrophes or special symbols.
+    3. Normalize region into shortRegion:
+        - Dubai, Abu Dhabi → Dubai
+        - San Francisco → SF
+        - New York City → NYC
+        - Else keep original.
+    4. Generate opening = pick randomly, in casual tone:
+        - love how you
+        - really like how you
+        - awesome to see you
+        - impressed by how you
+        - great track with how you
+        - cool to see you
+    5. specializationPhrase:
+        - Look at headline or title.
+        - If clear keyword (luxury, sales, marketing, engineering, talent acquisition, product, design, etc.) → rewrite naturally as an action (2–3 words).
+            • Example: “Luxury Consultant” → “drive luxury sales”  
+            • “Marketing Manager” → “lead marketing”  
+            • “Talent Acquisition” → “grow teams”  
+            • “Software Engineer” → “build products”
+        - If generic title → simplify to meaningful action:
+            • “Consultant” → “work with clients”  
+            • “Broker” → “push sales”  
+            • “Analyst” → “dig into insights”
+        - If nothing useful → fallback: “bring industry experience”.
+    6. regionPhrase = pick randomly:
+        - I’m also in the {shortRegion} market
+        - I work across {shortRegion} as well
+        - I’m active in {shortRegion} too
+        - I also focus on {shortRegion}
+    7. closingPhrase = pick randomly:
+        - Wanted to run something by you.
+        - Thought I’d share an idea with you.
+        - Had something you might find interesting.
+        - Figured I’d reach out quickly.
+
+Final Output (always one line, no labels, no JSON):
+Hey {firstName}, {opening} {specializationPhrase} at {shortCompany} – {regionPhrase}. {closingPhrase}
+",,"Hey Abbie, really like how you drive marketing at Extra Mile – I'm also in the Beaumont market. Thought I'd share an idea with you."
+erik.martinez@bluetangerine.com,Erik,Martinez,verified,Executive Vice President,vp,Executive Vice President at Blue Tangerine | Dedicated Digital Marketing and eCommerce Enthusiast,Blue Tangerine,"Blue Tangerine is a digital marketing and web design agency that specializes in providing powerful digital solutions and results-driven strategies for home builders, including SEO, Paid Search, and Social Media.",http://www.bluetangerine.com,http://www.linkedin.com/company/blue-tangerine-llc,http://www.linkedin.com/in/erikmartinez,United States,Kansas,Lawrence,,,13213096900.0,"Hey Erik, awesome to see you drive digital marketing at Blue Tangerine – I'm also in the Lawrence market. Thought I'd share an idea with you."
+jeanette@parklifecomm.com,Jeanette,Castle,verified,Co-owner and Marketing Strategist,owner,Co-owner and Marketing Strategist at Parklife Communications,Parklife,,http://www.parklifecomm.com,http://www.linkedin.com/company/parklife-communications,http://www.linkedin.com/in/jeanettecastle,United States,North Carolina,Hillsborough,,,,"Hey Jeanette, awesome to see you lead marketing at Parklife – I'm also in the Hillsborough market. Thought I'd share an idea with you."
+clark@cakewebsites.com,Clark,Mackey,verified,"Director of Web Marketing, Co-Owner",owner,"Web marketer and SEO, lifelong learner, friend.",Cake Websites & More,,http://www.cakewebsites.com,http://www.linkedin.com/company/cake-websites,http://www.linkedin.com/in/clarkmackey,United States,North Carolina,Asheville,,,18283508563.0,"Hey Clark, awesome to see you drive web marketing at Cake Websites – I'm also in the Asheville market. Thought I'd share an idea with you."
+kirti@diyamarketing.com,Kirti,Dwivedi,verified,Owner,owner,Marketing & Digital Media Consultant | Adjunct Professor - Social Media for Business | Speaker | Strategist | Trainer,Diya Marketing,,http://www.diyamarketing.com,http://www.linkedin.com/company/diya-marketing,http://www.linkedin.com/in/kirtidwivedi,United States,Arizona,Phoenix,,,,"Hey Kirti, awesome to see you drive marketing at Diya – I'm also in the Phoenix market. Wanted to run something by you."
+brian@matchnode.com,Brian,D,verified,Member,entry,"Co-Founder Matchnode Digital Marketing,  Facebook Ads Expert,
+Public Speaker",Entrepreneurs'​ Organization,,http://www.eonetwork.org,http://www.linkedin.com/company/entrepreneursorg,,United States,Indiana,Westfield,,,17035196700.0,"Hey Brian, awesome to see you drive digital marketing at Matchnode – I'm also in the Westfield market. Thought I'd share an idea with you."
+cmccracken@trellismarketing.com,Catharine,McCracken,verified,Founder & CEO,founder,"Owner, Trellis Marketing, Inc","Trellis Marketing, Inc.",,http://www.trellismarketing.com,http://www.linkedin.com/company/trellis-marketing,http://www.linkedin.com/in/catharinemccracken,United States,New York,,,,17168737199.0,"Hey Catharine, love how you drive marketing at Trellis – I'm also in the market. Thought I'd share an idea with you."
+lindsay@stellaredgegroup.com,Lindsay,C,verified,Owner / Marketing Strategist,owner,Owner / Marketing Strategist,Stellar Edge Marketing Group,,http://www.stellaredgegroup.com,http://www.linkedin.com/company/stellar-edge-pr,,United States,Illinois,Gilberts,,,12246999789.0,"Hey Lindsay, cool to see you drive marketing at Stellar Edge – I'm also in the Gilberts market. Thought I'd share an idea with you."
+ry@onholdmarketingworks.com,Robert,Younger,verified,Owner,owner,"Owner, On Hold Marketing / Audio & On Hold Marketing Specialist/ B2B Entrepreneur/ Business Growth Specialist/ Founding Member Network In Action-Galleria    713-594-9136",On Hold Marketing,,http://www.onholdmarketinginc.com,http://www.linkedin.com/company/on-hold-marketing-va,http://www.linkedin.com/in/robert-younger,United States,Texas,Houston,,,,"Hey Robert, awesome to see you drive business growth at On Hold Marketing – I'm also in the Houston market. Thought I'd share an idea with you."
+sam@bigpicturepro.net,Sam,Nigro,verified,Owner/Creative Director,owner,Owner/Creative Director at Big Picture Productions,"Big Picture Productions, Inc.",,http://www.bigpicturepro.com,http://www.linkedin.com/company/big-picture-productions-inc,http://www.linkedin.com/in/samnigro,United States,Nebraska,Omaha,,,14023423000.0,"Hey Sam, awesome to see you drive creative projects at Big Picture Productions – I'm also in the Omaha market. Wanted to run something by you."

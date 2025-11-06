@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-02T10:14:26.220124",
+    "location": "Bali, Indonesia",
+    "total_agencies": 0,
+    "target_count": 300,
+    "progress_percent": 0.0,
+    "version": "1.0.0"
+  },
+  "filters": {
+    "min_rating": 4.0,
+    "min_reviews": 10
+  },
+  "companies": [],
+  "statistics": {
+    "with_emails": 0,
+    "with_website": 0,
+    "without_contact": 0,
+    "average_rating": 0,
+    "average_reviews": 0
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-02T10:17:18.410655",
+    "total_contacts": 23
+  },
+  "contacts": [
+    {
+      "name": "AUSREENACT",
+      "website": "https://www.ausreenact.com.au/",
+      "email": "",
+      "location": "NSW, Australia",
+      "period": "WWII European Theatre",
+      "source": "Manual Research",
+      "facebook": "facebook.com/ausreenact/",
+      "notes": "Non-political WW2 Living History organisation"
+    },
+    {
+      "name": "Re-enact SA",
+      "website": "https://www.reenactsa.com/",
+      "email": "cplusk@bigpond.com.au",
+      "location": "South Australia",
+      "period": "WWI & WWII",
+      "source": "Manual Research",
+      "phone": "0403 175 353",
+      "contact_person": "Chris Thompson (Secretary)",
+      "address": "86 Baker Street Glengowrie SA 5044"
+    },
+    {
+      "name": "National Military Reenactment Group",
+      "website": "https://www.nmrg.com.au/",
+      "email": "",
+      "location": "Australia",
+      "period": "WWII (Australian Army, Navy, British Paratrooper)",
+      "source": "Manual Research"
+    },
+    {
+      "name": "Geelong Military Re-enactment Group",
+      "website": "http://geelongmrg.com/",
+      "email": "",
+      "location": "Victoria, Australia",
+      "period": "WWII",
+      "source": "Manual Research"
+    },
+    {
+      "name": "Australasian Living History Federation",
+      "website": "https://www.alhf.org.au/",
+      "email": "",
+      "location": "Australia (Umbrella Organization)",
+      "period": "Multi-period",
+      "source": "Manual Research",
+      "notes": "Umbrella organization - member groups list available"
+    },
+    {
+      "name": "Australian Re-enactors Association",
+      "website": "http://re-enactors.org.au/",
+      "email": "",
+      "location": "Australia (National)",
+      "period": "Multi-period",
+      "source": "Manual Research",
+      "notes": "Provides insurance and guidance for reenactment groups"
+    },
+    {
+      "name": "Alberta World War Living History Association",
+      "website": "https://www.awwlha.com/",
+      "email": "",
+      "location": "Calgary, Alberta, Canada",
+      "period": "WWI (Black Watch)",
+      "source": "Manual Research",
+      "facebook": "facebook.com/thealhertaworldwarlha/"
+    },
+    {
+      "name": "WWII Historical Reenactment Society",
+      "website": "https://worldwartwohrs.org/",
+      "email": "",
+      "location": "USA (Multi-state)",
+      "period": "WWII",
+      "source": "Manual Research",
+      "notes": "One of largest WWII reenactment organizations"
+    },
+    {
+      "name": "26th Infantry Division - Yankee Division",
+      "website": "https://26yd.com/",
+      "email": "",
+      "location": "USA",
+      "period": "WWII",
+      "source": "Manual Research"
+    },
+    {
+      "name": "D-Day Conneaut",
+      "website": "https://www.ddayohio.us/",
+      "email": "",
+      "location": "Ohio, USA",
+      "period": "WWII D-Day",
+      "source": "Manual Research",
+      "notes": "Major annual reenactment event"
+    },
+    {
+      "name": "California Historical Group",
+      "website": "https://www.chgww2.net/",
+      "email": "",
+      "location": "Southern California, USA",
+      "period": "WWII",
+      "source": "Manual Research"
+    },
+    {
+      "name": "East Penn Reenactors Group",
+      "website": "https://eastpennreenactorsgroup.weebly.com/",
+      "email": "",
+      "location": "Pennsylvania, USA",
+      "period": "WWII",
+      "source": "Manual Research"
+    },
+    {
+      "name": "Finland At War",
+      "website": "",
+      "email": "info@atwar.fi",
+      "location": "Finland",
+      "period": "WWII (Winter War, Continuation War)",
+      "source": "Manual Research"
+    },
+    {
+      "name": "Air Transport Auxiliary Re-Enactment Group",
+      "website": "",
+      "email": "carolechalmers1@gmail.com",
+      "location": "UK",
+      "period": "WWII (ATA)",
+      "source": "Manual Research"
+    },
+    {
+      "name": "2nd Ranger US Infantry Battalion Inc",
+      "website": "",
+      "email": "",
+      "location": "St. Louis, Missouri, USA",
+      "period": "WWII",
+      "source": "Manual Research"
+    },
+    {
+      "name": "Crew 1944",
+      "website": "http://worldwar2reenactors.org/",
+      "email": "",
+      "location": "USA",
+      "period": "WWII Living History",
+      "source": "Manual Research"
+    },
+    {
+      "name": "Army Group 1944",
+      "website": "https://www.armygroup1944.org/",
+      "email": "",
+      "location": "USA",
+      "period": "WWII",
+      "source": "Manual Research"
+    },
+    {
+      "name": "WWII Reenacting Corps",
+      "website": "https://www.wwiirc.org/",
+      "email": "",
+      "location": "USA (Multi-state)",
+      "period": "WWII",
+      "source": "Manual Research"
+    },
+    {
+      "name": "WW2 USO Preservation Association",
+      "website": "http://www.ww2uso.org/",
+      "email": "",
+      "location": "USA",
+      "period": "WWII (USO shows)",
+      "source": "Manual Research"
+    },
+    {
+      "name": "Cold War Reenactment Group",
+      "website": "https://sites.google.com/view/coldwarrreenactmentgroup/",
+      "email": "",
+      "location": "International",
+      "period": "Cold War era",
+      "source": "Manual Research"
+    },
+    {
+      "name": "29th Division Living History Group",
+      "website": "http://www.29thdivision.com/",
+      "email": "29th.id.lhu@gmail.com",
+      "location": "USA",
+      "period": "WWII",
+      "source": "Manual Research"
+    },
+    {
+      "name": "Finland At War (UK)",
+      "website": "",
+      "email": "finlandatwar@gmail.com",
+      "location": "UK",
+      "period": "WWII (Finland)",
+      "source": "Manual Research"
+    },
+    {
+      "name": "National Museum of the Pacific War - Living History",
+      "website": "https://www.pacificwarmuseum.org/",
+      "email": "ghanson@nimitzfoundation.org",
+      "location": "Texas, USA",
+      "period": "WWII Pacific Theatre",
+      "source": "Manual Research",
+      "contact_person": "Grant Hanson (Living History Coordinator)"
+    }
+  ]
+}

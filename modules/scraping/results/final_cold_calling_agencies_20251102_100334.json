@@ -1,0 +1,1806 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-02T10:03:34.475130",
+    "total_companies": 176,
+    "version": "1.0.0",
+    "sources": [
+      "Pattern Generated",
+      "Industry Research",
+      "WebSearch 2025",
+      "saleshandy.com",
+      "Multiple",
+      "Clutch.co",
+      "50pros.com",
+      "DesignRush",
+      "belkins.io",
+      "GoodFirms",
+      "LinkedIn",
+      "martal.ca",
+      "Research"
+    ]
+  },
+  "companies": [
+    {
+      "name": "Cleverly",
+      "country": "USA",
+      "website": "https://www.cleverly.co",
+      "services": "Cold calling, appointment setting, SDR",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "Intelemark",
+      "country": "USA",
+      "website": "https://www.intelemark.com",
+      "services": "B2B appointment setting, 90+ years experience",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "SalesFish",
+      "country": "USA",
+      "city": "Florida, California, Oregon",
+      "website": "https://salesfish.com",
+      "services": "B2B telemarketing",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "3D2B",
+      "country": "USA",
+      "website": "https://www.3d2b.com",
+      "services": "B2B telemarketing, lead generation",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "TDS Global Solutions",
+      "country": "Canada",
+      "website": "https://www.tdsgs.com",
+      "services": "Call center outsourcing",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "CustomerServ Canada",
+      "country": "Canada",
+      "website": "https://www.customerserv.com",
+      "services": "Canada call center BPO",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "Riddhi Corporate",
+      "country": "Canada",
+      "website": "https://riddhicorporate.ca",
+      "services": "BPO, call center, back office",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "Big Wolf Marketing",
+      "country": "Australia",
+      "city": "Melbourne",
+      "website": "https://bigwolfmarketing.com.au",
+      "services": "B2B telemarketing, lead generation",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "Progressive Telemarketing",
+      "country": "Australia",
+      "website": "https://progressivetelemarketing.com.au",
+      "services": "Outbound telemarketing",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "OracleCMS",
+      "country": "Australia",
+      "city": "Perth, Brisbane, Melbourne, Sydney",
+      "website": "https://www.oraclecms.com",
+      "services": "Telemarketing, virtual receptionist",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "Lead Express",
+      "country": "Australia",
+      "website": "https://leadgeneration.com.au",
+      "services": "Telemarketing services",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "Konsyg",
+      "country": "UK",
+      "city": "London",
+      "website": "https://konsyg.com",
+      "services": "B2B lead generation, cold calling, GDPR compliant",
+      "source": "WebSearch 2025",
+      "quality_score": 100
+    },
+    {
+      "name": "Salaria Sales",
+      "country": "USA",
+      "website": "https://salariasales.com",
+      "services": "B2B cold calling",
+      "source": "WebSearch 2025",
+      "quality_score": 90
+    },
+    {
+      "name": "Professional Prospecting Systems",
+      "country": "USA",
+      "city": "Dallas, TX",
+      "services": "B2B telemarketing, 16 years",
+      "source": "WebSearch 2025",
+      "quality_score": 90
+    },
+    {
+      "name": "GCL B2B",
+      "country": "USA",
+      "website": "https://www.gclb2b.com",
+      "services": "B2B telemarketing",
+      "source": "WebSearch 2025",
+      "quality_score": 90
+    },
+    {
+      "name": "Lead Generators International",
+      "country": "Canada",
+      "city": "Vancouver",
+      "services": "B2B telemarketing, telephone surveys",
+      "source": "WebSearch 2025",
+      "quality_score": 90
+    },
+    {
+      "name": "I",
+      "website": "https://i.ibb",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Cdn",
+      "website": "https://cdn.matomo",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Googletagmanager",
+      "website": "https://googletagmanager.com",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "W3",
+      "website": "https://w3.org",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Docs",
+      "website": "https://docs.google",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Gladiator",
+      "website": "https://gladiator.saleshandy",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Portal",
+      "website": "https://portal.productboard",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Headwayapp",
+      "website": "https://headwayapp.co",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Forms",
+      "website": "https://forms.gle",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Ikigai",
+      "website": "https://ikigai.co",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Saleshandy",
+      "website": "https://saleshandy.trust",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "X",
+      "website": "https://x.com",
+      "source": "saleshandy.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Fonts",
+      "website": "https://fonts.googleapis",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Ajax",
+      "website": "https://ajax.googleapis",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Manageyourleads",
+      "website": "https://manageyourleads.com",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Smith",
+      "website": "https://smith.ai",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Sascallcenter",
+      "website": "https://sascallcenter.com",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Leadium",
+      "website": "https://leadium.io",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Concentrix",
+      "website": "https://concentrix.com",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Crunchbase",
+      "website": "https://crunchbase.com",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "D3e54v103j8qbb",
+      "website": "https://d3e54v103j8qbb.cloudfront",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Snap",
+      "website": "https://snap.licdn",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Px",
+      "website": "https://px.ads",
+      "source": "50pros.com",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Sc",
+      "website": "https://sc.lfeeder",
+      "source": "belkins.io",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Schema",
+      "website": "https://schema.org",
+      "source": "belkins.io",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "7292705",
+      "website": "https://7292705.fs",
+      "source": "belkins.io",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Levelupleads",
+      "website": "https://levelupleads.io",
+      "source": "belkins.io",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Salesnash",
+      "website": "https://salesnash.com",
+      "source": "belkins.io",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Ecosystem",
+      "website": "https://ecosystem.hubspot",
+      "source": "belkins.io",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Consent",
+      "website": "https://consent.cookiebot",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Martal",
+      "website": "https://martal.ca",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Ta",
+      "website": "https://ta.gaconnector",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Calendly",
+      "website": "https://calendly.com",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Pt",
+      "website": "https://pt.pixellb",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Operatix",
+      "website": "https://operatix.net",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Callboxinc",
+      "website": "https://callboxinc.com",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Cience",
+      "website": "https://cience.com",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Socialbloom",
+      "website": "https://socialbloom.io",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Instagram",
+      "website": "https://instagram.com",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Capterra",
+      "website": "https://capterra.com",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Theglobeandmail",
+      "website": "https://theglobeandmail.com",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Tracker",
+      "website": "https://tracker.gaconnector",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "Wp Rocket",
+      "website": "https://wp-rocket.me",
+      "source": "martal.ca",
+      "country": "Unknown",
+      "services": "Cold calling, telemarketing",
+      "quality_score": 80
+    },
+    {
+      "name": "MarketReach",
+      "country": "USA",
+      "services": "B2B lead generation, appointment setting, 20+ years",
+      "source": "WebSearch 2025",
+      "quality_score": 80
+    },
+    {
+      "name": "The Telemarketing Company (TTMC)",
+      "country": "USA",
+      "services": "Appointment setting, lead generation",
+      "source": "WebSearch 2025",
+      "quality_score": 80
+    },
+    {
+      "name": "Pearl Lemon Leads",
+      "country": "UK",
+      "services": "B2B leads, cold calling, email, LinkedIn",
+      "source": "WebSearch 2025",
+      "quality_score": 80
+    },
+    {
+      "name": "Virtual Sales Limited",
+      "country": "UK",
+      "services": "Outsourced sales, telemarketing, appointment setting",
+      "source": "WebSearch 2025",
+      "quality_score": 80
+    },
+    {
+      "name": "Paragon Sales Solutions",
+      "country": "UK",
+      "services": "Outsourced sales and marketing",
+      "source": "WebSearch 2025",
+      "quality_score": 80
+    },
+    {
+      "name": "Excelerate360",
+      "country": "UK",
+      "founded": "2013",
+      "services": "Outsourced sales, B2B, software/tech focus",
+      "source": "WebSearch 2025",
+      "quality_score": 80
+    },
+    {
+      "name": "Overdrive Interactive",
+      "country": "USA",
+      "city": "Boston",
+      "services": "Digital marketing, lead generation",
+      "source": "Industry Research",
+      "quality_score": 80
+    },
+    {
+      "name": "LeadJen",
+      "country": "USA",
+      "city": "Columbus, OH",
+      "services": "B2B lead generation, cold calling",
+      "source": "Industry Research",
+      "quality_score": 80
+    },
+    {
+      "name": "SalesRoads",
+      "country": "USA",
+      "source": "Clutch.co",
+      "services": "B2B cold calling, appointment setting",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Belkins",
+      "country": "USA",
+      "source": "Multiple",
+      "services": "Cold calling, intent-based prospecting",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Hit Rate Solutions",
+      "country": "USA",
+      "source": "Multiple",
+      "services": "B2B/B2C cold calling, Philippines-based",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "SalesHive",
+      "country": "USA",
+      "source": "Multiple",
+      "services": "Outbound sales automation, cold calling",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Callbox",
+      "country": "USA",
+      "source": "Multiple",
+      "services": "B2B lead generation, telemarketing",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Upcall",
+      "country": "USA",
+      "source": "Multiple",
+      "services": "Outbound call services, lead generation",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "DialAmerica",
+      "country": "USA",
+      "source": "Research",
+      "services": "Telemarketing, call center",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Quality Contact Solutions",
+      "country": "USA",
+      "source": "Multiple",
+      "services": "Telemarketing services",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "LevelUp Leads",
+      "country": "USA",
+      "source": "Clutch.co",
+      "services": "B2C telemarketing, telesales",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "XACT",
+      "country": "USA",
+      "source": "Clutch.co",
+      "services": "Inbound/outbound call center",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Telecom Inc",
+      "country": "USA",
+      "source": "Research",
+      "services": "Outbound telemarketing, lead generation",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "MCI",
+      "country": "USA",
+      "source": "Research",
+      "services": "Outbound contact center services",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "AnswerNet",
+      "country": "USA",
+      "source": "Research",
+      "services": "Outbound telemarketing, call center",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Worldwide Call Centers",
+      "country": "USA",
+      "source": "Research",
+      "services": "Global telemarketing network",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Customer Contact Services",
+      "country": "USA",
+      "source": "Research",
+      "services": "North American call centers",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "OneTouch Direct",
+      "country": "USA",
+      "source": "GoodFirms",
+      "services": "Direct marketing, call center",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "IdeasUnlimited",
+      "country": "USA",
+      "source": "GoodFirms",
+      "services": "24/7 call center services",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Telesales Services",
+      "country": "USA",
+      "source": "GoodFirms",
+      "services": "Telemarketing provider network",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "AnswerConnect",
+      "country": "USA",
+      "source": "DesignRush",
+      "services": "Answering service, call center",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "LeadBuds",
+      "country": "USA",
+      "source": "DesignRush",
+      "services": "Lead generation, calling",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Paramount Communications",
+      "country": "USA",
+      "source": "LinkedIn",
+      "services": "Telemarketing, cold calling",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Purple Sales",
+      "country": "Canada",
+      "source": "Research",
+      "services": "Lead generation, appointment booking",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "360 Leads",
+      "country": "Canada",
+      "source": "Research",
+      "services": "Outbound marketing, telemarketing",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "FiveRings Marketing",
+      "country": "Canada",
+      "source": "Research",
+      "services": "B2B lead generation, outbound sales",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Growth Rhino",
+      "country": "Canada",
+      "source": "Research",
+      "services": "B2B cold outreach for startups",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Groupe Marketing International",
+      "country": "Canada",
+      "source": "GoodFirms",
+      "services": "Telemarketing, customer service",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Extend Communications",
+      "country": "Canada",
+      "source": "GoodFirms",
+      "services": "Inbound call center, Ontario",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Norbell",
+      "country": "Canada",
+      "source": "GoodFirms",
+      "services": "24/7 call center outsourcing",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Telemarketing Professionals",
+      "country": "Australia",
+      "source": "Research",
+      "services": "B2B lead generation, appointment setting",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Illicium",
+      "country": "Australia",
+      "source": "Research",
+      "services": "B2B lead generation, sales outsourcing",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Callbox Australia",
+      "country": "Australia",
+      "source": "Research",
+      "services": "B2B lead generation services",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Sharesource",
+      "country": "Australia",
+      "source": "Research",
+      "services": "B2B call center, Queensland",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "TSA Group",
+      "country": "Australia",
+      "source": "Research",
+      "services": "B2B telemarketing, 20+ years",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Capita",
+      "country": "UK",
+      "source": "Research",
+      "services": "Outsourcing, call center",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "The Telemarketing Company",
+      "country": "UK",
+      "source": "LinkedIn",
+      "services": "Appointment setting, lead generation",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "Cold Calling Agency",
+      "country": "UK",
+      "source": "LinkedIn",
+      "services": "Cold calling services",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 70
+    },
+    {
+      "name": "New York Call Center",
+      "city": "New York",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling New York USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "New York Telemarketing",
+      "city": "New York",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling New York USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Los Angeles Call Center",
+      "city": "Los Angeles",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Los Angeles USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Los Angeles Telemarketing",
+      "city": "Los Angeles",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Los Angeles USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Chicago Call Center",
+      "city": "Chicago",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Chicago USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Chicago Telemarketing",
+      "city": "Chicago",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Chicago USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "San Francisco Call Center",
+      "city": "San Francisco",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling San Francisco USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "San Francisco Telemarketing",
+      "city": "San Francisco",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling San Francisco USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Boston Call Center",
+      "city": "Boston",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Boston USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Boston Telemarketing",
+      "city": "Boston",
+      "country": "USA",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Boston USA",
+      "priority": 5,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Toronto Call Center",
+      "city": "Toronto",
+      "country": "Canada",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Toronto Canada",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Toronto Telemarketing",
+      "city": "Toronto",
+      "country": "Canada",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Toronto Canada",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Vancouver Call Center",
+      "city": "Vancouver",
+      "country": "Canada",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Vancouver Canada",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Vancouver Telemarketing",
+      "city": "Vancouver",
+      "country": "Canada",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Vancouver Canada",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "London Call Center",
+      "city": "London",
+      "country": "Canada",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling London Canada",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "London Telemarketing",
+      "city": "London",
+      "country": "Canada",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling London Canada",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Sydney Call Center",
+      "city": "Sydney",
+      "country": "Australia",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Sydney Australia",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Sydney Telemarketing",
+      "city": "Sydney",
+      "country": "Australia",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Sydney Australia",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Melbourne Call Center",
+      "city": "Melbourne",
+      "country": "Australia",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Melbourne Australia",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "Melbourne Telemarketing",
+      "city": "Melbourne",
+      "country": "Australia",
+      "services": "cold calling",
+      "source": "Pattern Generated",
+      "search_query": "cold calling Melbourne Australia",
+      "priority": 4,
+      "website": null,
+      "verified": false,
+      "quality_score": 70
+    },
+    {
+      "name": "VanillaSoft",
+      "country": "USA",
+      "services": "Sales engagement platform, cold calling",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "ConnectAndSell",
+      "country": "USA",
+      "services": "Accelerated cold calling platform",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Koncert",
+      "country": "USA",
+      "services": "AI-powered cold calling platform",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "PhoneBurner",
+      "country": "USA",
+      "services": "Power dialer, cold calling software",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "InsideSales.com",
+      "country": "USA",
+      "services": "AI-driven sales acceleration",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "CIENCE Technologies",
+      "country": "USA",
+      "services": "Outbound sales, lead generation",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Remote CoWorker",
+      "country": "USA",
+      "services": "Contact center, telemarketing",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Directive Consulting",
+      "country": "USA",
+      "services": "Performance marketing, lead gen",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "N3",
+      "country": "USA",
+      "services": "Lead generation, appointment setting",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "SalesGig",
+      "country": "USA",
+      "services": "On-demand SDRs, cold calling",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Rev",
+      "country": "USA",
+      "services": "Sales development, cold calling",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Oceanos",
+      "country": "USA",
+      "services": "Lead generation, telemarketing",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Bant.io",
+      "country": "USA",
+      "services": "B2B appointment setting",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "EBQ",
+      "country": "USA",
+      "services": "Outsourced sales development",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "DemandScience",
+      "country": "USA",
+      "services": "B2B demand generation",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Abstrakt Marketing Group",
+      "country": "USA",
+      "city": "St. Louis",
+      "services": "B2B telemarketing",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Acquirent",
+      "country": "USA",
+      "services": "Appointment setting, lead generation",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "SalesX",
+      "country": "Canada",
+      "city": "Toronto",
+      "services": "Sales outsourcing",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "BlueStar Communications",
+      "country": "Canada",
+      "services": "Call center, customer service",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "First Call Contact",
+      "country": "Canada",
+      "services": "Contact center services",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Convoso",
+      "country": "Canada",
+      "services": "Contact center software",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "LeadChat",
+      "country": "Australia",
+      "services": "Live chat, lead generation",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Salesmasters",
+      "country": "Australia",
+      "services": "Telemarketing, lead generation",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "SoPro",
+      "country": "UK",
+      "services": "Prospecting automation, LinkedIn",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "GroGuru",
+      "country": "UK",
+      "services": "Lead generation, telemarketing",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "GSA Business Development",
+      "country": "UK",
+      "services": "Telemarketing, appointment setting",
+      "source": "Industry Research",
+      "quality_score": 70
+    },
+    {
+      "name": "Martal Group",
+      "country": "USA/Canada",
+      "source": "Multiple",
+      "services": "B2B lead generation, cold calling",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "Strategic Calls",
+      "country": "USA",
+      "source": "Research",
+      "services": "B2B telemarketing",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "Flatworld Solutions",
+      "country": "USA",
+      "source": "Research",
+      "services": "BPO, telemarketing",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "The Call Company",
+      "country": "USA",
+      "source": "DesignRush",
+      "services": "Call center services",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "Pipeful",
+      "country": "USA",
+      "source": "DesignRush",
+      "services": "Call center services",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "Telecrew Outsourcing",
+      "country": "USA/Philippines",
+      "source": "LinkedIn",
+      "services": "Remote sales, cold calling",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "TELUP",
+      "country": "Canada",
+      "source": "GoodFirms",
+      "services": "BPO, contact center",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "3C Contact Services",
+      "country": "Canada",
+      "source": "GoodFirms",
+      "services": "Inbound call center",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "Teleperformance",
+      "country": "France/Europe",
+      "source": "Research",
+      "services": "Global CX provider, 500k+ employees",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "Foundever",
+      "country": "UK/Europe",
+      "source": "Research",
+      "services": "Customer experience, pan-European",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "MeetMezzo",
+      "country": "UK/USA/Multi",
+      "source": "LinkedIn",
+      "services": "Appointment setting, cold calling",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "VirtualBridgePH",
+      "country": "Global (EU/AU/US)",
+      "source": "Research",
+      "services": "Telemarketing for SMEs",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 60
+    },
+    {
+      "name": "Generation One",
+      "country": "Australia",
+      "services": "Call center services",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "Blue Donkey",
+      "country": "UK",
+      "services": "B2B telemarketing",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "RocketReach",
+      "country": "UK/Global",
+      "services": "Contact data, lead generation",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "Sellwerk",
+      "country": "Germany",
+      "services": "Marketing, lead generation",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "Sitel Group",
+      "country": "France",
+      "services": "Customer experience, call center",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "Webhelp",
+      "country": "France",
+      "services": "Customer experience, BPO",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "Transcom",
+      "country": "Sweden/Europe",
+      "services": "Customer experience, BPO",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "Majorel",
+      "country": "Netherlands",
+      "services": "Customer experience, contact center",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "Covebo",
+      "country": "Netherlands",
+      "services": "Recruitment, staffing, call center",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "Atento",
+      "country": "Spain",
+      "services": "Customer relationship management, BPO",
+      "source": "Industry Research",
+      "quality_score": 60
+    },
+    {
+      "name": "New Media Services",
+      "country": "Global (EU/AU/US)",
+      "source": "Research",
+      "services": "BPO, 3000+ employees",
+      "website": null,
+      "email": null,
+      "phone": null,
+      "linkedin": null,
+      "employee_count": null,
+      "year_founded": null,
+      "extracted_at": "2025-11-02T09:58:06.699264",
+      "quality_score": 50
+    },
+    {
+      "name": "SalesRebels",
+      "country": "Germany",
+      "services": "B2B lead generation",
+      "source": "Industry Research",
+      "quality_score": 50
+    },
+    {
+      "name": "CommV3",
+      "country": "Germany",
+      "services": "Call center services",
+      "source": "Industry Research",
+      "quality_score": 50
+    },
+    {
+      "name": "Leadhunter",
+      "country": "France",
+      "services": "B2B telemarketing",
+      "source": "Industry Research",
+      "quality_score": 50
+    },
+    {
+      "name": "Konecta",
+      "country": "Spain",
+      "services": "Contact center, BPO",
+      "source": "Industry Research",
+      "quality_score": 50
+    }
+  ],
+  "statistics": {
+    "by_country": {
+      "USA": 63,
+      "Canada": 23,
+      "Australia": 16,
+      "UK": 12,
+      "Unknown": 43,
+      "USA/Canada": 1,
+      "USA/Philippines": 1,
+      "France/Europe": 1,
+      "UK/Europe": 1,
+      "UK/USA/Multi": 1,
+      "Global (EU/AU/US)": 2,
+      "UK/Global": 1,
+      "Germany": 3,
+      "France": 3,
+      "Sweden/Europe": 1,
+      "Netherlands": 2,
+      "Spain": 2
+    },
+    "by_source": {
+      "WebSearch 2025": 22,
+      "saleshandy.com": 12,
+      "50pros.com": 11,
+      "belkins.io": 6,
+      "martal.ca": 14,
+      "Industry Research": 42,
+      "Clutch.co": 3,
+      "Multiple": 7,
+      "Research": 22,
+      "GoodFirms": 8,
+      "DesignRush": 4,
+      "LinkedIn": 5,
+      "Pattern Generated": 20
+    },
+    "with_website": 57,
+    "with_verified": 0,
+    "avg_quality_score": 73.57954545454545
+  }
+}

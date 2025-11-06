@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "google_workspace": {
+      "command": "uvx",
+      "args": ["workspace-mcp", "--tools", "gmail", "drive", "sheets", "--tool-tier", "core"],
+      "env": {
+        "GOOGLE_OAUTH_CLIENT_ID": "1048500780903-bk9nbe79o42lg1dvmceqpd5vag3mch1l.apps.googleusercontent.com",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "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",
+        "OAUTHLIB_INSECURE_TRANSPORT": "1",
+        "MCP_ENABLE_OAUTH21": "true"
+      }
+    },
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp?project_ref=hhbjftbomfuwnjkjnrke",
+      "headers": {
+        "Authorization": "Bearer sbp_83207082e3f84673ecf84606e026f39330328058"
+      }
+    }
+  }
+}
