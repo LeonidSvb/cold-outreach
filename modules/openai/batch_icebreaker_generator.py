@@ -1,21 +1,13 @@
 #!/usr/bin/env python3
 """
-=== ICEBREAKER MESSAGE GENERATOR ===
-Version: 1.0.0 | Created: 2025-01-19
+=== BATCH ICEBREAKER GENERATOR ===
+Version: 1.0.0 | Created: 2025-11-06
 
 PURPOSE:
-Generate personalized icebreaker messages for LinkedIn outreach using OpenAI
-
-FEATURES:
-- Custom prompt-based message generation
-- Batch processing with OpenAI API
-- CSV input/output
-- Cost tracking and rate limiting
+Process multiple CSV files with LinkedIn-style icebreaker generation
 
 USAGE:
-1. Configure CONFIG section with your settings
-2. Run: python icebreaker_generator.py
-3. Results saved to results/
+python batch_icebreaker_generator.py
 """
 
 import os
@@ -30,38 +22,25 @@ import asyncio
 import aiohttp
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
-# Add parent directories to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-try:
-    from modules.logging.shared.universal_logger import get_logger
-    logger = get_logger(__name__)
-    HAS_LOGGER = True
-except ImportError:
-    HAS_LOGGER = False
-    logger = None
+from modules.logging.shared.universal_logger import get_logger
 
-# Simple decorator if logger not available
-def auto_log(name):
-    def decorator(func):
-        return func
-    return decorator if not HAS_LOGGER else lambda f: f
+logger = get_logger(__name__)
 
-# ============================================================================
-# CONFIG SECTION - EDIT HERE
-# ============================================================================
+FILES_TO_PROCESS = [
+    {
+        "name": "C-level Executives",
+        "path": r"C:\Users\79818\Downloads\ppc US - Canada, 11-20 _ 4 Sep   - US С - level (1).csv"
+    },
+    {
+        "name": "Founders",
+        "path": r"C:\Users\79818\Downloads\ppc US - Canada, 11-20 _ 4 Sep   - Us - founders (3).csv"
+    }
+]
 
 CONFIG = {
-    # INPUT FILE
-    "INPUT": {
-        "FILE_PATH": r"C:\Users\79818\Downloads\ppc US - Canada, 11-20 _ 4 Sep   - US С - level (1).csv",
-        "TEST_ROWS": None,  # None = process all rows
-        "SKIP_ROWS": 0  # Skip first N rows
-    },
-
-    # OPENAI API SETTINGS
     "OPENAI_API": {
         "API_KEY": os.getenv("OPENAI_API_KEY"),
         "BASE_URL": "https://api.openai.com/v1",
@@ -70,15 +49,13 @@ CONFIG = {
         "TEMPERATURE": 0.7
     },
 
-    # PROCESSING SETTINGS
     "PROCESSING": {
-        "CONCURRENCY": 5,  # Parallel requests
+        "CONCURRENCY": 10,
         "RETRY_ATTEMPTS": 3,
         "RETRY_DELAY": 1.0,
-        "RATE_LIMIT_DELAY": 0.2
+        "RATE_LIMIT_DELAY": 0.1
     },
 
-    # PROMPT
     "PROMPT": """You are an outreach message generator.
 Your role: create short, casual, human-sounding icebreaker messages for LinkedIn-style outreach.
 Goal: make the recipient feel recognized for their work without sounding pushy or overly formal.
@@ -139,113 +116,114 @@ region: {region}
 headline: {headline}
 title: {title}
 
-Output ONLY the icebreaker message, nothing else.""",
-
-    # OUTPUT SETTINGS
-    "OUTPUT": {
-        "RESULTS_DIR": "results",
-        "SAVE_JSON": True,
-        "SAVE_CSV": True
-    }
+Output ONLY the icebreaker message, nothing else."""
 }
 
-# ============================================================================
-# MAIN LOGIC
-# ============================================================================
-
-class IcebreakerGenerator:
-    """Generate icebreaker messages using OpenAI API"""
+class BatchIcebreakerGenerator:
+    """Generate icebreakers for multiple CSV files"""
 
     def __init__(self):
         self.config = CONFIG
         self.session = None
-        self.results_dir = Path(__file__).parent / self.config["OUTPUT"]["RESULTS_DIR"]
+        self.results_dir = Path(__file__).parent / "results"
         self.results_dir.mkdir(exist_ok=True)
-        self.total_cost = 0.0
-        self.processed_count = 0
 
-    @auto_log("icebreaker_generator")
-    async def process_csv(self, test_mode: bool = False) -> pd.DataFrame:
-        """Process CSV file and generate icebreakers"""
+    async def process_all_files(self):
+        """Process all CSV files"""
 
         print("="*80)
-        print("ICEBREAKER GENERATOR v1.0.0")
+        print("BATCH ICEBREAKER GENERATOR")
         print("="*80)
 
-        # Load CSV
-        print(f"\nLoading CSV: {self.config['INPUT']['FILE_PATH']}")
-        df = pd.read_csv(self.config['INPUT']['FILE_PATH'])
-        print(f"Loaded {len(df):,} rows")
+        total_start = time.time()
 
-        # Process only test rows if in test mode
-        if test_mode and self.config['INPUT']['TEST_ROWS']:
-            rows_to_process = self.config['INPUT']['TEST_ROWS']
-            skip_rows = self.config['INPUT']['SKIP_ROWS']
-            df = df.iloc[skip_rows:skip_rows + rows_to_process]
-            print(f"\nTest mode: Processing {len(df)} rows")
+        for file_config in FILES_TO_PROCESS:
+            print(f"\n{'='*80}")
+            print(f"Processing: {file_config['name']}")
+            print(f"{'='*80}")
 
-        # Display preview
+            try:
+                await self.process_single_file(
+                    file_config['path'],
+                    file_config['name']
+                )
+            except Exception as e:
+                logger.error(f"Failed to process {file_config['name']}", error=e)
+                print(f"Error: {e}")
+
+        total_time = time.time() - total_start
+        print(f"\n{'='*80}")
+        print(f"All files processed in {total_time:.1f} seconds")
+        print(f"{'='*80}")
+
+    async def process_single_file(self, file_path: str, file_name: str):
+        """Process single CSV file"""
+
+        logger.info(f"Loading CSV: {file_path}")
+        print(f"\nLoading: {file_path}")
+
+        df = pd.read_csv(file_path, encoding='utf-8-sig')
+        total_rows = len(df)
+
+        print(f"Total rows: {total_rows:,}")
+
         print("\nData preview:")
-        print(df[['first_name', 'last_name', 'company_name', 'city', 'title']].head(3).to_string())
+        preview_cols = ['first_name', 'last_name', 'company_name', 'city']
+        available_cols = [col for col in preview_cols if col in df.columns]
+        if available_cols:
+            print(df[available_cols].head(3).to_string())
 
-        # Generate icebreakers
-        print(f"\nGenerating icebreakers with OpenAI...")
         start_time = time.time()
+        print(f"\nGenerating icebreakers...")
 
-        timeout = aiohttp.ClientTimeout(total=60)
+        timeout = aiohttp.ClientTimeout(total=120)
         async with aiohttp.ClientSession(timeout=timeout) as session:
             self.session = session
             icebreakers = await self._process_batch(df)
 
-        # Add icebreakers to dataframe
         df['icebreaker'] = icebreakers
 
         processing_time = time.time() - start_time
+        success_count = sum(1 for ice in icebreakers if not ice.startswith('Error'))
 
-        print(f"\n{'='*80}")
-        print(f"Processing completed!")
+        print(f"\n{'='*60}")
+        print(f"Completed: {file_name}")
         print(f"Time: {processing_time:.1f} seconds")
-        print(f"Processed: {self.processed_count}/{len(df)} rows")
-        print(f"Total cost: ${self.total_cost:.4f}")
-        print(f"{'='*80}")
+        print(f"Success: {success_count}/{total_rows} rows ({success_count/total_rows*100:.1f}%)")
+        print(f"{'='*60}")
 
-        # Save results
-        self._save_results(df)
+        self._save_results(df, file_name)
 
-        return df
+        self._show_samples(df)
 
     async def _process_batch(self, df: pd.DataFrame) -> List[str]:
-        """Process batch of rows with OpenAI"""
+        """Process batch with concurrency control"""
 
         semaphore = asyncio.Semaphore(self.config['PROCESSING']['CONCURRENCY'])
+        total = len(df)
 
         async def process_with_semaphore(index_row):
             index, row = index_row
             async with semaphore:
                 result = await self._process_single_row(row)
-                if (index + 1) % 5 == 0 or (index + 1) == len(df):
-                    print(f"Progress: {index + 1}/{len(df)} rows processed")
+                if (index + 1) % 50 == 0 or (index + 1) == total:
+                    print(f"Progress: {index + 1}/{total} rows")
                 return result
 
-        # Use gather to preserve order
         tasks = [process_with_semaphore((i, row)) for i, (_, row) in enumerate(df.iterrows())]
         results = await asyncio.gather(*tasks)
 
         return results
 
     async def _process_single_row(self, row: pd.Series) -> str:
-        """Process single row and generate icebreaker"""
+        """Process single row"""
 
         for attempt in range(self.config['PROCESSING']['RETRY_ATTEMPTS']):
             try:
-                # Prepare prompt with row data
                 prompt = self._prepare_prompt(row)
-
-                # Call OpenAI API
                 response = await self._call_openai_api(prompt)
 
                 if response:
-                    self.processed_count += 1
                     return response
 
                 await asyncio.sleep(self.config['PROCESSING']['RETRY_DELAY'])
@@ -255,24 +233,19 @@ class IcebreakerGenerator:
                     await asyncio.sleep(self.config['PROCESSING']['RETRY_DELAY'] * (attempt + 1))
                     continue
                 else:
-                    print(f"Error processing row: {e}")
-                    return f"Error: {str(e)}"
+                    return f"Error: {str(e)[:100]}"
 
         return "Error: Max retries exceeded"
 
     def _prepare_prompt(self, row: pd.Series) -> str:
         """Prepare prompt with row data"""
 
-        # Combine first_name and last_name for full_name
         full_name = f"{row.get('first_name', '')} {row.get('last_name', '')}".strip()
-
-        # Get other fields
         company_name = str(row.get('company_name', '')).strip()
         city = str(row.get('city', '')).strip()
         headline = str(row.get('headline', '')).strip()
         title = str(row.get('title', '')).strip()
 
-        # Format prompt
         prompt = self.config['PROMPT'].format(
             full_name=full_name or "Not provided",
             company_name=company_name or "Not provided",
@@ -294,9 +267,7 @@ class IcebreakerGenerator:
 
         payload = {
             "model": self.config['OPENAI_API']['MODEL'],
-            "messages": [
-                {"role": "user", "content": prompt}
-            ],
+            "messages": [{"role": "user", "content": prompt}],
             "max_tokens": self.config['OPENAI_API']['MAX_TOKENS'],
             "temperature": self.config['OPENAI_API']['TEMPERATURE']
         }
@@ -304,81 +275,50 @@ class IcebreakerGenerator:
         async with self.session.post(url, json=payload, headers=headers) as response:
             if response.status == 200:
                 data = await response.json()
-
-                # Calculate cost
-                usage = data.get("usage", {})
-                input_tokens = usage.get("prompt_tokens", 0)
-                output_tokens = usage.get("completion_tokens", 0)
-
-                # GPT-4o-mini pricing
-                cost = (input_tokens * 0.00015 + output_tokens * 0.0006) / 1000
-                self.total_cost += cost
-
                 return data["choices"][0]["message"]["content"].strip()
             else:
                 error_text = await response.text()
-                print(f"API error {response.status}: {error_text}")
+                logger.error(f"API error {response.status}", error=error_text[:200])
                 return None
 
         await asyncio.sleep(self.config['PROCESSING']['RATE_LIMIT_DELAY'])
 
-    def _save_results(self, df: pd.DataFrame):
-        """Save results to CSV and JSON"""
+    def _save_results(self, df: pd.DataFrame, file_name: str):
+        """Save results to CSV"""
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        safe_name = file_name.replace(" ", "_").replace("/", "_")
 
-        # Save CSV
-        if self.config['OUTPUT']['SAVE_CSV']:
-            csv_filename = f"icebreakers_{timestamp}.csv"
-            csv_path = self.results_dir / csv_filename
-            df.to_csv(csv_path, index=False, encoding='utf-8-sig')
-            print(f"\nCSV saved: {csv_filename}")
+        csv_filename = f"icebreakers_{safe_name}_{timestamp}.csv"
+        csv_path = self.results_dir / csv_filename
 
-        # Save JSON
-        if self.config['OUTPUT']['SAVE_JSON']:
-            json_filename = f"icebreakers_{timestamp}.json"
-            json_path = self.results_dir / json_filename
+        df.to_csv(csv_path, index=False, encoding='utf-8-sig')
+        logger.info(f"Results saved: {csv_filename}")
+        print(f"Saved: {csv_filename}")
 
-            results_data = {
-                "metadata": {
-                    "timestamp": timestamp,
-                    "total_rows": len(df),
-                    "processed_rows": self.processed_count,
-                    "total_cost_usd": round(self.total_cost, 4),
-                    "model_used": self.config['OPENAI_API']['MODEL']
-                },
-                "results": df.to_dict(orient='records')
-            }
+    def _show_samples(self, df: pd.DataFrame):
+        """Show sample results"""
 
-            with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump(results_data, f, indent=2, ensure_ascii=False)
+        print("\nSample icebreakers:")
+        print("-" * 80)
 
-            print(f"JSON saved: {json_filename}")
+        success_df = df[~df['icebreaker'].str.startswith('Error', na=False)]
 
-# ============================================================================
-# EXECUTION
-# ============================================================================
+        for i, (idx, row) in enumerate(success_df.head(5).iterrows()):
+            first_name = str(row.get('first_name', ''))
+            last_name = str(row.get('last_name', ''))
+            company = str(row.get('company_name', ''))
+            icebreaker = str(row.get('icebreaker', ''))
+
+            print(f"\n{i+1}. {first_name} {last_name}")
+            print(f"   Company: {company}")
+            print(f"   Icebreaker: {icebreaker}")
 
 async def main():
-    """Main execution function"""
+    """Main execution"""
 
-    generator = IcebreakerGenerator()
-
-    # Process CSV (full file)
-    df_results = await generator.process_csv(test_mode=False)
-
-    # Display sample results
-    print("\nSample icebreakers:")
-    print("-" * 80)
-    for i, row in df_results.head(10).iterrows():
-        first_name = str(row.get('first_name', '')).encode('ascii', errors='ignore').decode('ascii')
-        last_name = str(row.get('last_name', '')).encode('ascii', errors='ignore').decode('ascii')
-        company = str(row.get('company_name', '')).encode('ascii', errors='ignore').decode('ascii')
-        icebreaker = str(row.get('icebreaker', '')).encode('ascii', errors='ignore').decode('ascii')
-
-        print(f"\n{i+1}. {first_name} {last_name}")
-        print(f"   Company: {company}")
-        print(f"   Icebreaker: {icebreaker}")
+    generator = BatchIcebreakerGenerator()
+    await generator.process_all_files()
 
 if __name__ == "__main__":
     asyncio.run(main())

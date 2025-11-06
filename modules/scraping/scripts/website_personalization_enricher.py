@@ -151,16 +151,15 @@ def generate_personalization_summary(company_name: str, website: str, content: s
     Generate personalization summary using OpenAI
 
     Extracts:
-    - Type of service/business
-    - Owner/founder name (if mentioned)
-    - Key differentiators
-    - Personalization hooks
+    - Owner/founder name (for {{ firstName }})
+    - Business summary (1 line)
+    - Personalization hook (ready for icebreaker)
     """
 
     try:
         client = OpenAI()
 
-        prompt = f"""Analyze this company website and provide personalization data for cold email outreach.
+        prompt = f"""Analyze this company website and extract key personalization data for cold email outreach.
 
 Company: {company_name}
 Website: {website}
@@ -168,15 +167,28 @@ Content: {content[:8000]}
 
 Extract and return ONLY valid JSON (no markdown, no code blocks):
 {{
-    "business_type": "brief description of what they do (max 20 words)",
-    "services": ["service 1", "service 2", "service 3"],
-    "owner_name": "owner/founder name if found, otherwise null",
-    "key_differentiators": ["unique aspect 1", "unique aspect 2"],
-    "personalization_hooks": ["hook for outreach 1", "hook 2"],
-    "company_size_estimate": "solo/small/medium",
-    "target_market": "who they serve",
-    "pain_points": ["possible pain point 1", "pain point 2"]
+    "owner_name": "first and last name of owner/founder if found, otherwise null",
+    "business_summary": "1-line casual description of what they do, include key details (max 25 words)",
+    "personalization_hook": "1 casual phrase for icebreaker - their specialty, achievement, or unique vibe (max 15 words)"
 }}
+
+Examples:
+{{
+    "owner_name": "Mike Johnson",
+    "business_summary": "HVAC services in Dallas - 24/7 emergency, 15+ years, focus on commercial buildings",
+    "personalization_hook": "keeping commercial spaces cool with 24/7 emergency service"
+}}
+
+{{
+    "owner_name": null,
+    "business_summary": "Veteran-owned landscaping in Austin - affordable pricing, eco-friendly practices",
+    "personalization_hook": "blending veteran discipline with eco-friendly lawn care"
+}}
+
+Rules:
+- owner_name: extract ONLY if clearly stated (CEO, Founder, Owner). Return null if unsure.
+- business_summary: casual tone, mention location/specialty/experience/values
+- personalization_hook: natural phrase that fits "love how you [HOOK]" or "saw you're [HOOK]"
 
 IMPORTANT: Return ONLY the JSON object, no other text."""
 
@@ -234,12 +246,9 @@ def process_single_company(row: Dict, index: int, total: int) -> Dict:
     enriched = {**row}
     enriched["scraped_content_length"] = 0
     enriched["ai_summary_status"] = "pending"
-    enriched["business_type"] = ""
-    enriched["services"] = ""
     enriched["owner_name"] = ""
-    enriched["personalization_hooks"] = ""
-    enriched["target_market"] = ""
-    enriched["pain_points"] = ""
+    enriched["business_summary"] = ""
+    enriched["personalization_hook"] = ""
 
     # Only process accessible sites
     if accessible != "Yes" or not website:
@@ -273,14 +282,9 @@ def process_single_company(row: Dict, index: int, total: int) -> Dict:
         analysis = ai_result["analysis"]
 
         enriched["ai_summary_status"] = "success"
-        enriched["business_type"] = analysis.get("business_type", "")
-        enriched["services"] = "; ".join(analysis.get("services", []))
         enriched["owner_name"] = analysis.get("owner_name") or ""
-        enriched["personalization_hooks"] = "; ".join(analysis.get("personalization_hooks", []))
-        enriched["target_market"] = analysis.get("target_market", "")
-        enriched["pain_points"] = "; ".join(analysis.get("pain_points", []))
-        enriched["company_size_estimate"] = analysis.get("company_size_estimate", "")
-        enriched["key_differentiators"] = "; ".join(analysis.get("key_differentiators", []))
+        enriched["business_summary"] = analysis.get("business_summary", "")
+        enriched["personalization_hook"] = analysis.get("personalization_hook", "")
 
         STATS["analyzed"] += 1
         logger.info(f"  ✓ AI summary generated successfully")
@@ -401,15 +405,14 @@ def main():
     successful = [r for r in results if r.get('ai_summary_status') == 'success']
     if successful:
         print(f"\n{'='*70}")
-        print(f"SAMPLE PERSONALIZATION DATA (first 3)")
+        print(f"SAMPLE PERSONALIZATION DATA (first 5)")
         print(f"{'='*70}")
-        for i, result in enumerate(successful[:3], 1):
+        for i, result in enumerate(successful[:5], 1):
             title_field = [k for k in result.keys() if 'title' in k.lower()][0]
             print(f"\n{i}. {result[title_field]}")
-            print(f"   Business: {result.get('business_type', 'N/A')}")
-            print(f"   Services: {result.get('services', 'N/A')[:70]}")
             print(f"   Owner: {result.get('owner_name', 'N/A')}")
-            print(f"   Hooks: {result.get('personalization_hooks', 'N/A')[:80]}")
+            print(f"   Summary: {result.get('business_summary', 'N/A')}")
+            print(f"   Hook: {result.get('personalization_hook', 'N/A')}")
         print(f"{'='*70}\n")
 
 if __name__ == "__main__":
