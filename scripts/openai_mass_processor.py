@@ -28,6 +28,7 @@ v1.0.0 - Initial version with mass parallel processing
 import asyncio
 import aiohttp
 import json
+import re
 import time
 import os
 import argparse
@@ -36,6 +37,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 import sys
+
+# Load environment variables
+from dotenv import load_dotenv
+load_dotenv()
 
 # Add parent directories to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -353,12 +358,22 @@ class OpenAIMassProcessor:
     def _parse_openai_response(self, content: str) -> Dict[str, Any]:
         """
         Universal parser for OpenAI responses.
-        Tries to parse as JSON dict → creates multiple columns.
-        Falls back to single 'ai_result' column if not JSON.
+        Tries to extract JSON from markdown blocks or plain text.
+        Creates multiple columns from dict, or single 'ai_result' column.
         """
+        # Try to extract JSON from markdown code blocks first
+        json_block_pattern = r'```json\s*\n(.*?)\n```'
+        match = re.search(json_block_pattern, content, re.DOTALL)
+
+        if match:
+            json_str = match.group(1).strip()
+        else:
+            # No markdown block, try the whole content
+            json_str = content.strip()
+
         try:
             # Try to parse as JSON
-            parsed = json.loads(content.strip())
+            parsed = json.loads(json_str)
 
             # If it's a dict, return it (each key becomes a column)
             if isinstance(parsed, dict):

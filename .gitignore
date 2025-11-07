@@ -49,6 +49,12 @@ results/*.json
 results/*.csv
 results/*.txt
 
+# Script results (contains API responses with keys)
+scripts/results/
+data/raw/*_processed.csv
+data/raw/*_scraped.csv
+data/raw/*_ai_*.csv
+
 # Frontend build files
 frontend/.next/
 frontend/node_modules/
