@@ -45,13 +45,12 @@ node_modules/
 *.tmp
 *.temp
 
-# Large result files
-modules/results/*.json
-modules/results/*.csv
-modules/results/*.txt
-data/processed/*.csv
-data/raw/*.csv
-data/temp/
+# Results (centralized)
+results/**/*.json
+results/**/*.csv
+results/**/*.txt
+results/raw/*
+results/processed/*
 
 # Backend
 backend/venv/

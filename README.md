@@ -1,191 +1,200 @@
-# Cold Outreach AI Automation Platform
+# Outreach - Ultra-Clean Cold Outreach Automation
 
-AI-powered cold outreach automation with 10K-30K leads/month capacity. Modular system for CSV lead processing, AI normalization, icebreaker generation, and Instantly campaign management.
+**Simple, focused, powerful.** Process CSVs through OpenAI API and scrape websites for lead enrichment.
 
-**🌐 Live Demo:** [cold-outreach-khaki.vercel.app](https://cold-outreach-khaki.vercel.app/)
+## Quick Start
 
----
+```bash
+# Process CSV through OpenAI
+python scripts/openai_mass_processor.py
 
-## Overview
+# Generate icebreakers
+python scripts/openai_icebreaker_generator.py
 
-This platform automates the complete cold outreach pipeline:
+# Scrape website for emails
+python scripts/scraping_parallel_website_email_extractor.py
 
+# Website personalization
+python scripts/scraping_website_personalization_enricher.py
 ```
-CSV Upload → AI Normalization → Icebreaker Generation → Batch Processing → Instantly Campaign Launch
-```
-
-**Current Focus:** First campaign launch with 1500 leads using offer-based A/B testing.
-
----
-
-## Tech Stack
-
-- **Backend:** Python (FastAPI), OpenAI GPT-4o-mini, Supabase (PostgreSQL + Storage)
-- **Frontend:** Next.js 15 (App Router, RSC), TypeScript, shadcn/ui, Tailwind CSS
-- **Integrations:** Instantly API, Apollo API, Google Sheets API
-
----
-
-## Features
-
-### ✅ Implemented
-- **Leads Database** - Supabase-powered lead management with CSV upload
-- **Column Selection** - Airtable-style multi-select for AI transformations
-- **Instantly Sync** - Automated campaign and analytics synchronization
-- **Analytics Dashboard** - Real-time campaign performance visualizations
-- **Script Runner** - Execute Python modules with file uploads
-- **Universal Logging** - Centralized logging across Python, FastAPI, Next.js
-- **AI Processing** - Mass parallel OpenAI transformations
-
-### 🔄 In Progress
-- AI column transformation modal (test mode + custom prompts)
-- Website scraping for enhanced icebreakers
-- Advanced lead segmentation
-
-### 📋 Planned
-- Email sequence builder with A/B testing
-- Multi-user authentication
-- Apollo API integration page
-
----
-
-## Current Status
-
-**Version:** 14.0.0 (2025-10-06)
-
-**Latest Updates:**
-- Airtable-style column selection for AI transformations
-- Leads database UI with Supabase integration
-- Universal logging system across platform
-- Instantly campaign sync and analytics dashboard
-
-See [CHANGELOG.md](CHANGELOG.md) for complete version history.
-
----
-
-## For AI: Quick Module Reference
-
-**Production Scripts by Module:**
-- **Instantly** → [modules/instantly/README.md](modules/instantly/README.md) - Campaign management, data collection, lead upload
-- **CSV Transformer** → [modules/csv_transformer/README.md](modules/csv_transformer/README.md) - AI-powered CSV column transformation
-- **OpenAI** → [modules/openai/README.md](modules/openai/README.md) - Mass parallel AI processing
-- **Apollo** → [modules/apollo/README.md](modules/apollo/README.md) - Lead collection from Apollo API
-- **Scraping** → [modules/scraping/README.md](modules/scraping/README.md) - Website content extraction
-- **Sheets** → [modules/sheets/README.md](modules/sheets/README.md) - Google Sheets operations
-- **Logging** → [modules/logging/README.md](modules/logging/README.md) - Centralized logging system (Python, FastAPI, Next.js)
-- **Shared** → [modules/shared/README.md](modules/shared/README.md) - Common utilities (Google Sheets client)
-
-**By Feature:**
-- CSV Processing → modules/csv_transformer/
-- Lead Collection → modules/apollo/, modules/scraping/
-- Campaign Management → modules/instantly/
-- AI Processing → modules/openai/
-
-**Architecture:** See [docs/ADR.md](docs/ADR.md) for architectural decisions
-
----
-
-## Documentation
-
-### Core Documents
-- **[docs/PRD.md](docs/PRD.md)** - Product requirements and vision
-- **[CHANGELOG.md](CHANGELOG.md)** - Version history (Keep a Changelog format)
-- **[CLAUDE.md](CLAUDE.md)** - Coding guidelines (Python + Next.js)
-- **[docs/ADR.md](docs/ADR.md)** - Architecture decision records
-
-### Sprint Documents
-- **[docs/sprints/](docs/sprints/)** - Sprint-specific implementation plans
-- **Current:** [2025-10-02_first-campaign-launch.md](docs/sprints/2025-10-02_first-campaign-launch.md)
-
----
 
 ## Project Structure
 
 ```
-├── backend/             # Python FastAPI API
-├── frontend/            # Next.js application
-│   ├── src/app/         # Next.js App Router pages
-│   │   ├── page.tsx           # Home page
-│   │   ├── leads/             # Leads database page
-│   │   ├── dashboard/         # Instantly analytics
-│   │   ├── instantly-sync/    # Campaign sync
-│   │   └── script-runner/     # Python script executor
-│   ├── src/components/  # React components
-│   └── ROUTES.md        # Frontend route documentation
-├── modules/             # Processing scripts
-│   ├── apollo/          # Apollo API integration
-│   ├── instantly/       # Instantly API integration
-│   ├── openai/          # AI processing
-│   ├── logging/         # Universal logging system
-│   ├── scraping/        # Web scraping
-│   └── sheets/          # Google Sheets
-├── data/                # CSV files and processing results
-├── docs/                # Documentation
-│   ├── PRD.md           # Product requirements
-│   ├── ADR.md           # Architecture decisions
-│   └── sprints/         # Sprint plans
-└── archive/             # Legacy code
+Outreach/
+├── scripts/                # All Python scripts (flat structure)
+│   ├── openai_*.py        # OpenAI API processing
+│   ├── scraping_*.py      # Website scraping
+│   └── shared_*.py        # Common utilities
+├── results/               # All outputs (centralized)
+│   ├── openai/           # AI processing results
+│   ├── scraping/         # Scraping results
+│   ├── raw/              # Input CSVs (put your files here)
+│   └── processed/        # Final output CSVs
+├── logger/                # Universal logging system
+│   └── universal_logger.py
+├── frontend/              # Next.js UI (optional, preserved for refactoring)
+├── .env                   # API keys (OpenAI, Google, etc.)
+└── CLAUDE.md              # Coding conventions
 ```
 
-### Frontend Pages
+## Core Features
 
-See **[frontend/ROUTES.md](frontend/ROUTES.md)** for complete route documentation.
+### 1. **OpenAI Mass Processing**
+- Batch process CSVs through OpenAI API
+- Generate personalized icebreakers
+- AI-powered content analysis
+- Smart icebreaker generation with personality
 
-**Active Pages (5):**
-- `/` - Home page with navigation
-- `/leads` - Leads database with AI column selection
-- `/dashboard` - Instantly campaign analytics
-- `/instantly-sync` - Campaign synchronization
-- `/script-runner` - Python script execution
+**Main scripts:**
+- `openai_mass_processor.py` - Batch processing
+- `openai_icebreaker_generator.py` - Icebreaker generation
+- `openai_smart_icebreaker_generator.py` - Advanced icebreakers
 
-**API Routes (7):**
-- `POST /api/csv-upload` - Upload CSV to Supabase
-- `GET /api/leads` - Fetch leads from database
-- `GET /api/upload-history` - Upload batch history
-- `POST /api/run-script` - Execute Python scripts
-- And more (see [frontend/ROUTES.md](frontend/ROUTES.md))
+### 2. **Website Scraping**
+- Extract emails from websites
+- Parallel website processing
+- Website content personalization
+- HTTP-only (no external dependencies)
+
+**Main scripts:**
+- `scraping_parallel_website_email_extractor.py` - Email extraction
+- `scraping_website_personalization_enricher.py` - Content enrichment
+- `scraping_extract_emails_from_websites.py` - Email finder
+
+## Usage Workflow
+
+### Step 1: Prepare Input
+```bash
+# Put your CSV in results/raw/
+cp my_leads.csv results/raw/
+```
+
+### Step 2: Process with OpenAI
+```bash
+# Run mass processor
+python scripts/openai_mass_processor.py
+
+# Results saved to results/openai/
+```
+
+### Step 3: Enrich with Website Data
+```bash
+# Extract emails from websites
+python scripts/scraping_parallel_website_email_extractor.py
+
+# Results saved to results/scraping/
+```
+
+### Step 4: Get Final Output
+```bash
+# Check results/processed/ for final CSVs
+ls results/processed/
+```
+
+## Configuration
+
+All configuration via `.env` file:
+
+```env
+# OpenAI
+OPENAI_API_KEY=sk-...
+
+# Google (if using Google Sheets)
+GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json
+
+# Other API keys as needed
+```
+
+## Logging
+
+Universal logger automatically tracks all script execution:
+
+```python
+from logger.universal_logger import get_logger
+
+logger = get_logger(__name__)
+logger.info("Processing started")
+```
+
+Logs saved to `logger/logs/YYYY-MM-DD.log`
+
+## Frontend (Optional)
+
+Next.js UI preserved for future refactoring:
+
+```bash
+cd frontend
+npm install
+npm run dev
+# Visit http://localhost:3000
+```
+
+## Documentation
+
+- **CLAUDE.md** - Coding conventions and rules
+- **docs/ADR.md** - Architecture Decision Records (ADR-0013: Structure Simplification)
+- **results/** - All processing outputs
+
+## Key Principles
+
+1. **Simplicity First** - Flat structure, no nested modules
+2. **Centralized Results** - All outputs in one place
+3. **Clear Naming** - Prefix pattern (openai_*, scraping_*, shared_*)
+4. **Real Data Only** - No mocks, only production-ready scripts
+5. **Preserved History** - Git history and infrastructure intact
+
+## Migration from Old Structure
+
+**Old:**
+```
+modules/apollo/
+modules/instantly/
+modules/openai/
+modules/scraping/
+modules/sheets/
+backend/
+```
+
+**New (ULTRA-CLEAN):**
+```
+scripts/          # All scripts
+results/          # All results
+logger/           # Universal logger
+frontend/         # Preserved
+```
+
+See **ADR-0013** in docs/ADR.md for full decision rationale.
+
+## Common Tasks
+
+```bash
+# List all available scripts
+ls scripts/
+
+# Find OpenAI scripts
+ls scripts/openai_*.py
+
+# Find scraping scripts
+ls scripts/scraping_*.py
+
+# View logs
+tail -f logger/logs/$(date +%Y-%m-%d).log
+
+# Clean old results
+rm results/openai/*.json
+rm results/scraping/*.json
+```
+
+## Support
+
+For questions or issues, check:
+1. **CLAUDE.md** - Coding standards
+2. **docs/ADR.md** - Architecture decisions
+3. Script headers - Usage instructions
 
 ---
 
-## Success Metrics
-
-**Primary Goals:**
-- High reply rate and positive responses leading to booked calls
-- Scalable processing of 10K-30K leads/month (target: 30K/month by Q2 2025)
-
-**Current Performance:**
-- 1.5K leads/campaign with A/B testing capability
-- Full pipeline from CSV upload to Instantly campaign operational
-- Multi-offer tracking for conversion optimization
-
----
-
-## Development Approach
-
-**Agentic Coding:** This project is developed using Claude Code (AI-powered development).
-
-**Key Conventions:**
-- Python: Functional programming, `snake_case`, embedded configs, no emojis
-- Next.js: Server Components first, TypeScript, desktop-first design
-- All comments in English, icebreakers in English (or target language)
-- Real data only - no mocks in production
-
-See [CLAUDE.md](CLAUDE.md) for complete coding guidelines.
-
----
-
-## License
-
-**Private Project** - All rights reserved
-
----
-
-## Links
-
-- **Live Application:** [cold-outreach-khaki.vercel.app](https://cold-outreach-khaki.vercel.app/)
-- **GitHub:** [LeonidSvb/cold-outreach](https://github.com/LeonidSvb/cold-outreach)
-- **Author:** Leonid Svibunov
-
----
-
-**Last Updated:** 2025-10-06 (v14.0.0)
+**Version:** 1.0.0 (Ultra-Clean Architecture)
+**Last Updated:** 2025-11-07
+**ADR:** ADR-0013 Project Structure Simplification

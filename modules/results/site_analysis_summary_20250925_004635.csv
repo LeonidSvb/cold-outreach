@@ -1,0 +1,8 @@
+URL,Method,Confidence,Content_Quality,JS_Dependency,Cost_USD,Processing_Time,Status
+https://www.stryvemarketing.com,APIFY_REQUIRED,0.95,,,0.002,0.26s,success
+http://www.workparty.ca,HYBRID_APPROACH,0.55,medium,moderate,0.001,0.79s,success
+http://www.involvedmedia.ca,APIFY_REQUIRED,0.95,high,heavy,0.002,1.81s,success
+https://www.altitudestrategies.ca,APIFY_REQUIRED,0.95,high,heavy,0.002,2.17s,success
+http://www.theog.co,APIFY_REQUIRED,0.95,high,heavy,0.002,2.53s,success
+http://www.bigfishcreative.ca,APIFY_REQUIRED,0.95,high,heavy,0.002,3.75s,success
+http://www.nimiopere.com,APIFY_REQUIRED,0.20,low,moderate,0.002,4.20s,success

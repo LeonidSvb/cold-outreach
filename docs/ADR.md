@@ -4,6 +4,7 @@
 
 | ID   | Title                                                        | Date       | Status   |
 | ---- | ------------------------------------------------------------ | ---------- | -------- |
+| 0013 | [Project Structure Simplification - Ultra-Clean Architecture](#adr-0013) | 2025-11-07 | Accepted |
 | 0012 | [Universal Logging System for Platform Observability](#adr-0012) | 2025-10-04 | Accepted |
 | 0011 | [Hierarchical README Pattern for AI-First Development](#adr-0011) | 2025-10-03 | Accepted |
 | 0010 | [Backend/Frontend Separation & Monorepo Management](#adr-0010) | 2025-10-02 | Accepted |
@@ -277,3 +278,54 @@ Implement dialogue-style prompting using OpenAI Chat Completions API with system
 
 - **Pros**: Predictable outputs, easily editable prompts, follows prompting knowledge base best practices
 - **Cons**: Higher token usage, more complex prompt management, requires example maintenance
+
+---
+
+## ADR-0013 — Project Structure Simplification - Ultra-Clean Architecture
+
+<a id="adr-0013"></a>
+**Date**: 2025-11-07
+**Status**: Accepted
+**Owner**: Leo (Project Lead)
+
+### Context
+
+The "Outreach - new" project grew organically over 68 commits, accumulating multiple modules, a full-stack architecture (FastAPI backend + Next.js frontend), and scattered results across 7+ module directories. The project became bloated with 83 Python files across modules (apollo, instantly, openai, scraping, sheets, csv_transformer), 97 JSON result files scattered in different module results/ folders, and a backend that was built for Supabase UI but is not needed for current workflow. Current needs are simple: (1) Process CSV/JSON files through OpenAI API, (2) Scrape websites for content and emails, (3) Store all results in one place. The existing modular architecture was over-engineered for these requirements.
+
+### Alternatives
+
+- **Keep full modular architecture**: Rejected due to excessive complexity for 2 primary use cases
+- **Start completely new project from scratch**: Rejected because it would lose 3 weeks of work including Universal Logger, Supabase setup, CLAUDE.md conventions, and all existing working scripts
+- **Hybrid cleanup (archive frontend, keep modules)**: Rejected because it still maintains unnecessary folder nesting and doesn't solve scattered results problem
+
+### Decision
+
+Reorganize project into ULTRA-CLEAN flat structure with maximum simplicity. Create scripts/ directory containing ALL scripts with naming pattern {module}_{script}.py (e.g., openai_mass_processor.py, scraping_website_scraper.py). Centralize ALL results into results/ directory with subdirectories for each category (openai/, scraping/, raw/, processed/). Move logger from modules/logging/shared/ to logger/universal_logger.py. DELETE unused modules: apollo/ (never used), instantly/ (incomplete WIP), csv_transformer/ (not used), sheets/ (deprecated). DELETE backend/ (FastAPI not needed). PRESERVE frontend/ completely (all packages, node_modules, components) for future refactoring.
+
+### Consequences
+
+- **Pros**: 10x simpler structure, centralized results in one place, easier navigation (ls scripts/ shows all tools), naming clarity with prefixes, preserved infrastructure (Universal Logger, Git history, CLAUDE.md), frontend preserved for future refactoring, faster onboarding, no quality loss
+- **Cons**: One-time migration effort (~30-60 minutes), import path updates needed, git history fragmentation from file moves, convention change for naming pattern
+- **Supersedes**: —
+- **Superseded by**: —
+
+### Compliance / Verification
+
+Verification checks: (1) All scripts from modules/openai/ exist in scripts/ with openai_ prefix, (2) All scripts from modules/scraping/ exist in scripts/ with scraping_ prefix, (3) All results from modules/*/results/ moved to results/{category}/, (4) logger/universal_logger.py accessible and functional, (5) Frontend runs without errors, (6) No orphaned files in deleted modules/, (7) .gitignore updated to ignore results/**/*.json and results/**/*.csv.
+
+Testing commands:
+```bash
+# Verify scripts work
+python scripts/openai_mass_processor.py --help
+python scripts/scraping_website_scraper.py --help
+
+# Verify logger import
+python -c "from logger.universal_logger import get_logger; print('OK')"
+
+# Verify frontend
+cd frontend && npm run dev
+```
+
+Success criteria: Project size reduced from 3000+ files to ~50-100 essential files, all 2 primary use cases work (OpenAI processing, website scraping), results easily found in results/ with clear organization.
+
+---
