@@ -6,10 +6,84 @@ export default function AIProcessorTab() {
   const [uploadedFile, setUploadedFile] = useState<File | null>(null)
   const [isProcessing, setIsProcessing] = useState(false)
   const [isComplete, setIsComplete] = useState(false)
+  const [fileId, setFileId] = useState<string>('')
+  const [prompt, setPrompt] = useState<string>('')
+  const [model, setModel] = useState<string>('gpt-4o-mini')
+  const [concurrency, setConcurrency] = useState<number>(25)
+  const [temperature, setTemperature] = useState<number>(0.3)
+  const [stats, setStats] = useState<any>(null)
+  const [error, setError] = useState<string>('')
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setUploadedFile(e.target.files[0])
+      setError('')
+    }
+  }
+
+  const handleProcess = async () => {
+    if (!uploadedFile) {
+      setError('Please upload a CSV file first')
+      return
+    }
+
+    if (!prompt.trim()) {
+      setError('Please enter a prompt')
+      return
+    }
+
+    setIsProcessing(true)
+    setError('')
+
+    try {
+      const formData = new FormData()
+      formData.append('file', uploadedFile)
+      formData.append('mode', 'ai-processor')
+      formData.append('prompt', prompt)
+      formData.append('model', model)
+      formData.append('concurrency', concurrency.toString())
+      formData.append('temperature', temperature.toString())
+
+      const response = await fetch('/api/data-processor/process', {
+        method: 'POST',
+        body: formData
+      })
+
+      const result = await response.json()
+
+      if (!result.success) {
+        setError(result.error || 'Processing failed')
+        setIsProcessing(false)
+        return
+      }
+
+      setFileId(result.fileId)
+      setStats(result.stats)
+      setIsComplete(true)
+      setIsProcessing(false)
+
+    } catch (err) {
+      setError('Processing failed. Please try again.')
+      setIsProcessing(false)
+    }
+  }
+
+  const handleDownload = async () => {
+    if (!fileId) return
+
+    try {
+      const response = await fetch(`/api/data-processor/download/${fileId}`)
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `processed_${fileId}.csv`
+      document.body.appendChild(a)
+      a.click()
+      window.URL.revokeObjectURL(url)
+      document.body.removeChild(a)
+    } catch (err) {
+      setError('Download failed')
     }
   }
 
@@ -81,6 +155,8 @@ export default function AIProcessorTab() {
 
         <textarea
           rows={6}
+          value={prompt}
+          onChange={(e) => setPrompt(e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
           placeholder={`Example:
 
@@ -88,6 +164,7 @@ Analyze {{company_name}} from {{website}}.
 
 Return JSON: {pain_points, tech_stack, decision_makers}`}
         />
+        {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
       </div>
 
       {/* Settings + Process */}
@@ -96,7 +173,11 @@ Return JSON: {pain_points, tech_stack, decision_makers}`}
           <div className="flex-1 grid grid-cols-3 gap-3">
             <div>
               <label className="block text-xs font-medium text-gray-700 mb-1.5">Model</label>
-              <select className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md">
+              <select
+                value={model}
+                onChange={(e) => setModel(e.target.value)}
+                className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md"
+              >
                 <option value="gpt-4o-mini">GPT-4o Mini</option>
                 <option value="gpt-4o">GPT-4o</option>
                 <option value="gpt-4-turbo">GPT-4 Turbo</option>
@@ -106,7 +187,8 @@ Return JSON: {pain_points, tech_stack, decision_makers}`}
               <label className="block text-xs font-medium text-gray-700 mb-1.5">Parallel Requests</label>
               <input
                 type="number"
-                defaultValue={25}
+                value={concurrency}
+                onChange={(e) => setConcurrency(parseInt(e.target.value))}
                 min={1}
                 max={50}
                 className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md"
@@ -116,7 +198,8 @@ Return JSON: {pain_points, tech_stack, decision_makers}`}
               <label className="block text-xs font-medium text-gray-700 mb-1.5">Temperature</label>
               <input
                 type="number"
-                defaultValue={0.3}
+                value={temperature}
+                onChange={(e) => setTemperature(parseFloat(e.target.value))}
                 min={0}
                 max={1}
                 step={0.1}
@@ -125,10 +208,11 @@ Return JSON: {pain_points, tech_stack, decision_makers}`}
             </div>
           </div>
           <button
-            onClick={() => setIsProcessing(true)}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition"
+            onClick={handleProcess}
+            disabled={isProcessing || !uploadedFile}
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white rounded-md text-sm font-medium transition"
           >
-            Start Processing
+            {isProcessing ? 'Processing...' : 'Start Processing'}
           </button>
         </div>
 
@@ -184,17 +268,14 @@ Return JSON: {pain_points, tech_stack, decision_makers}`}
               <p className="text-xs text-green-700 mt-1 ml-7">Total cost: $4.27 | Saved: openai_processed_20250107_142314.json</p>
             </div>
             <div className="flex gap-2">
-              <button className="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition flex items-center justify-center gap-2 text-sm">
+              <button
+                onClick={handleDownload}
+                className="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition flex items-center justify-center gap-2 text-sm"
+              >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                 </svg>
                 Download CSV
-              </button>
-              <button className="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition flex items-center justify-center gap-2 text-sm">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                </svg>
-                Download JSON
               </button>
             </div>
           </div>

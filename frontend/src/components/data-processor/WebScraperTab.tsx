@@ -7,10 +7,74 @@ export default function WebScraperTab() {
   const [mode, setMode] = useState<'quick' | 'full'>('quick')
   const [isProcessing, setIsProcessing] = useState(false)
   const [isComplete, setIsComplete] = useState(false)
+  const [fileId, setFileId] = useState<string>('')
+  const [workers, setWorkers] = useState<number>(25)
+  const [stats, setStats] = useState<any>(null)
+  const [error, setError] = useState<string>('')
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setUploadedFile(e.target.files[0])
+      setError('')
+    }
+  }
+
+  const handleProcess = async () => {
+    if (!uploadedFile) {
+      setError('Please upload a CSV file first')
+      return
+    }
+
+    setIsProcessing(true)
+    setError('')
+
+    try {
+      const formData = new FormData()
+      formData.append('file', uploadedFile)
+      formData.append('mode', 'web-scraper')
+      formData.append('workers', workers.toString())
+      formData.append('scraperMode', mode)
+
+      const response = await fetch('/api/data-processor/process', {
+        method: 'POST',
+        body: formData
+      })
+
+      const result = await response.json()
+
+      if (!result.success) {
+        setError(result.error || 'Processing failed')
+        setIsProcessing(false)
+        return
+      }
+
+      setFileId(result.fileId)
+      setStats(result.stats)
+      setIsComplete(true)
+      setIsProcessing(false)
+
+    } catch (err) {
+      setError('Processing failed. Please try again.')
+      setIsProcessing(false)
+    }
+  }
+
+  const handleDownload = async () => {
+    if (!fileId) return
+
+    try {
+      const response = await fetch(`/api/data-processor/download/${fileId}`)
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `scraped_${fileId}.csv`
+      document.body.appendChild(a)
+      a.click()
+      window.URL.revokeObjectURL(url)
+      document.body.removeChild(a)
+    } catch (err) {
+      setError('Download failed')
     }
   }
 
@@ -30,7 +94,7 @@ export default function WebScraperTab() {
           />
           <label htmlFor="scraper-file-upload" className="cursor-pointer">
             <svg className="mx-auto h-10 w-10 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
-              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <p className="mt-2 text-sm text-gray-600">
               <span className="font-medium text-purple-600">Click to upload</span> or drag and drop
@@ -45,7 +109,7 @@ export default function WebScraperTab() {
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
                 <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>
                 <div>
                   <p className="text-sm font-medium text-gray-900">{uploadedFile.name}</p>
@@ -94,7 +158,7 @@ export default function WebScraperTab() {
             />
             <div className="flex items-center gap-2 mb-1">
               <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
               <h3 className="font-semibold text-sm text-gray-900">Quick Scrape</h3>
             </div>
@@ -123,7 +187,7 @@ export default function WebScraperTab() {
             />
             <div className="flex items-center gap-2 mb-1">
               <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
               </svg>
               <h3 className="font-semibold text-sm text-gray-900">Full Pipeline</h3>
             </div>
@@ -175,7 +239,8 @@ export default function WebScraperTab() {
               <label className="block text-xs font-medium text-gray-700 mb-1.5">Parallel Workers</label>
               <input
                 type="number"
-                defaultValue={25}
+                value={workers}
+                onChange={(e) => setWorkers(parseInt(e.target.value))}
                 min={10}
                 max={50}
                 className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md"
@@ -183,12 +248,15 @@ export default function WebScraperTab() {
             </div>
           </div>
           <button
-            onClick={() => setIsProcessing(true)}
-            className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-md text-sm font-medium transition"
+            onClick={handleProcess}
+            disabled={isProcessing || !uploadedFile}
+            className="px-6 py-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white rounded-md text-sm font-medium transition"
           >
-            Start Processing
+            {isProcessing ? 'Processing...' : 'Start Processing'}
           </button>
         </div>
+
+        {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
 
         {/* Progress (shown when processing) */}
         {isProcessing && !isComplete && (
@@ -196,7 +264,7 @@ export default function WebScraperTab() {
             <div className="flex items-center gap-2 p-2 bg-purple-50 rounded-lg border border-purple-200">
               <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center animate-pulse">
                 <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
                 </svg>
               </div>
               <div>
@@ -253,15 +321,18 @@ export default function WebScraperTab() {
             <div className="p-3 bg-green-50 border border-green-200 rounded-lg mb-3">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 <p className="text-sm font-medium text-green-900">Complete! 523 websites in 4m 23s</p>
               </div>
               <p className="text-xs text-green-700 mt-1 ml-7">Scraped: 412 (79%) | AI extraction: 412 | Cost: $1.23</p>
             </div>
-            <button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition flex items-center justify-center gap-2 text-sm">
+            <button
+              onClick={handleDownload}
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition flex items-center justify-center gap-2 text-sm"
+            >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
               </svg>
               Download Enriched CSV
             </button>
