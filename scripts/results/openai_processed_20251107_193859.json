@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "timestamp": "20251107_193859",
+    "total_items": 0,
+    "processing_time_seconds": 5.54,
+    "total_cost_usd": 0.0,
+    "total_api_calls": 15,
+    "config_used": {
+      "OPENAI_API": {
+        "API_KEY": "your_openai_api_key_here",
+        "BASE_URL": "https://api.openai.com/v1",
+        "DEFAULT_MODEL": "gpt-4o-mini",
+        "BACKUP_MODEL": "gpt-3.5-turbo",
+        "MAX_TOKENS": 4000,
+        "TEMPERATURE": 0.3
+      },
+      "PROCESSING": {
+        "CONCURRENCY": 3,
+        "BATCH_SIZE": 100,
+        "RETRY_ATTEMPTS": 3,
+        "RETRY_DELAY": 1.0,
+        "RATE_LIMIT_RPM": 3000,
+        "COST_LIMIT_USD": 50.0
+      },
+      "PROMPTS": {
+        "COMPANY_ANALYZER": "\nAnalyze this company information and extract key insights:\nCompany: {{company_name}}\nWebsite: {{website}}\nIndustry: {{industry}}\n\nProvide analysis in JSON format:\n{{\n  \"pain_points\": [\"list of potential business pain points\"],\n  \"tech_stack\": [\"likely technologies used\"],\n  \"decision_makers\": [\"typical decision maker titles\"],\n  \"personalization_hooks\": [\"specific hooks for outreach\"],\n  \"company_size_estimate\": \"small/medium/large\",\n  \"priority_score\": 1-10\n}}",
+        "EMAIL_PERSONALIZER": "\nCreate a personalized email opener for this lead:\nName: {{first_name}} {{last_name}}\nTitle: {{title}}\nCompany: {{company_name}}\nIndustry: {{industry}}\nWebsite: {{website}}\n\nCreate a highly personalized 2-3 sentence opener that:\n1. References something specific about their company/industry\n2. Shows genuine research and interest\n3. Creates curiosity about our solution\n\nReturn only the opener text, no additional formatting.",
+        "CONTENT_ENRICHER": "\nEnrich this lead data with additional insights:\n{{lead_data}}\n\nAdd the following fields in JSON format:\n{{\n  \"enriched_title\": \"cleaned and standardized job title\",\n  \"seniority_level\": \"junior/mid/senior/executive\",\n  \"department\": \"sales/marketing/engineering/etc\",\n  \"buying_power\": \"low/medium/high\",\n  \"outreach_priority\": 1-10,\n  \"best_contact_time\": \"morning/afternoon/evening\",\n  \"communication_style\": \"formal/casual/technical\"\n}}",
+        "CUSTOM": "Analyze {{title}} from {{website}}. Category: {{categoryName}}. Location: {{city}}, {{state}}. Return JSON: {\"business_type\": \"1-2 words\", \"main_service\": \"primary service\", \"estimated_size\": \"small/medium/large\"}"
+      },
+      "GOOGLE_SHEETS": {
+        "ENABLED": true,
+        "INPUT_SHEET_ID": "your_input_sheet_id_here",
+        "OUTPUT_SHEET_ID": "your_output_sheet_id_here",
+        "INPUT_WORKSHEET": "Raw Leads",
+        "OUTPUT_WORKSHEET": "Processed Leads",
+        "COLUMN_MAPPING": {
+          "company_name": "A",
+          "website": "B",
+          "first_name": "C",
+          "last_name": "D",
+          "email": "E",
+          "title": "F",
+          "analysis": "G",
+          "personalization": "H",
+          "priority_score": "I"
+        }
+      },
+      "OUTPUT": {
+        "SAVE_JSON": true,
+        "UPDATE_GOOGLE_SHEETS": true,
+        "EXPORT_CSV": true,
+        "INCLUDE_COSTS": true,
+        "RESULTS_DIR": "results"
+      }
+    },
+    "script_version": "1.0.0"
+  },
+  "results": []
+}

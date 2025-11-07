@@ -38,9 +38,30 @@ from typing import Dict, List, Any, Optional
 import sys
 
 # Add parent directories to path
-sys.path.append(str(Path(__file__).parent.parent))
-from shared.logger import auto_log
-from shared.google_sheets import GoogleSheetsManager
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# Try to import logger, fall back to print if not available
+try:
+    from logger.universal_logger import get_logger
+    logger = get_logger(__name__)
+    def auto_log(name):
+        def decorator(func):
+            return func
+        return decorator
+except ImportError:
+    logger = None
+    def auto_log(name):
+        def decorator(func):
+            return func
+        return decorator
+
+# Google Sheets is optional
+try:
+    from shared.google_sheets import GoogleSheetsManager
+    GOOGLE_SHEETS_AVAILABLE = True
+except ImportError:
+    GOOGLE_SHEETS_AVAILABLE = False
+    GoogleSheetsManager = None
 
 # ============================================================================
 # CONFIG SECTION - EDIT HERE
@@ -183,17 +204,17 @@ class OpenAIMassProcessor:
     def _validate_config(self):
         """Validate configuration settings"""
         if self.config["OPENAI_API"]["API_KEY"] == "your_openai_api_key_here":
-            print("⚠️ Please set your OpenAI API key in CONFIG section")
+            print("WARNING: Please set your OpenAI API key in CONFIG section")
 
     @auto_log("openai_mass_processor")
     async def process_data(self, data: List[Dict[str, Any]], prompt_type: str = "COMPANY_ANALYZER") -> List[Dict[str, Any]]:
         """Main function to process data through OpenAI"""
 
-        print(f"🚀 Starting OpenAI Mass Processing")
-        print(f"📊 Total items: {len(data):,}")
-        print(f"🔧 Concurrency: {self.config['PROCESSING']['CONCURRENCY']} threads")
-        print(f"🧠 Model: {self.config['OPENAI_API']['DEFAULT_MODEL']}")
-        print(f"💡 Prompt: {prompt_type}")
+        print(f"Starting OpenAI Mass Processing")
+        print(f"Total items: {len(data):,}")
+        print(f"Concurrency: {self.config['PROCESSING']['CONCURRENCY']} threads")
+        print(f"Model: {self.config['OPENAI_API']['DEFAULT_MODEL']}")
+        print(f"Prompt: {prompt_type}")
 
         start_time = time.time()
 
@@ -204,7 +225,7 @@ class OpenAIMassProcessor:
 
             # Create processing batches
             batches = self._create_processing_batches(data)
-            print(f"📦 Created {len(batches)} processing batches")
+            print(f"Created {len(batches)} processing batches")
 
             # Process all batches in parallel
             processed_results = await self._process_batches_parallel(batches, prompt_type)
@@ -212,16 +233,16 @@ class OpenAIMassProcessor:
         # Save results
         await self._save_results(processed_results, start_time)
 
-        # Update Google Sheets if enabled
-        if self.config["GOOGLE_SHEETS"]["ENABLED"] and processed_results:
+        # Update Google Sheets if enabled and available
+        if GOOGLE_SHEETS_AVAILABLE and self.config["GOOGLE_SHEETS"]["ENABLED"] and processed_results:
             await self._update_google_sheets(processed_results)
 
         self._update_script_stats(len(processed_results), time.time() - start_time)
 
-        print(f"✅ Processing completed!")
-        print(f"📈 Total processed: {len(processed_results):,}")
-        print(f"💰 Total cost: ${self.total_cost:.4f}")
-        print(f"⏱️ Processing time: {time.time() - start_time:.2f}s")
+        print(f"Processing completed!")
+        print(f"Total processed: {len(processed_results):,}")
+        print(f"Total cost: ${self.total_cost:.4f}")
+        print(f"Processing time: {time.time() - start_time:.2f}s")
 
         return processed_results
 
@@ -247,7 +268,7 @@ class OpenAIMassProcessor:
                 return await self._process_single_batch(batch, prompt_type)
 
         # Process all batches
-        print(f"🔄 Processing {len(batches)} batches in parallel...")
+        print(f"Processing {len(batches)} batches in parallel...")
         tasks = [process_with_semaphore(batch) for batch in batches]
 
         # Track progress
@@ -259,7 +280,7 @@ class OpenAIMassProcessor:
             # Progress update
             if (i + 1) % 10 == 0 or (i + 1) == len(tasks):
                 progress = (i + 1) / len(tasks) * 100
-                print(f"📊 Progress: {progress:.1f}% ({i + 1}/{len(tasks)} batches)")
+                print(f"Progress: {progress:.1f}% ({i + 1}/{len(tasks)} batches)")
 
         return all_results
 
@@ -272,7 +293,7 @@ class OpenAIMassProcessor:
             try:
                 # Check cost limit
                 if self.total_cost >= self.config["PROCESSING"]["COST_LIMIT_USD"]:
-                    print(f"⚠️ Cost limit reached: ${self.total_cost:.4f}")
+                    print(f"WARNING: Cost limit reached: ${self.total_cost:.4f}")
                     break
                     
                 # Process single item
@@ -284,7 +305,7 @@ class OpenAIMassProcessor:
                 await asyncio.sleep(0.1)
                 
             except Exception as e:
-                print(f"❌ Error processing item: {e}")
+                print(f"ERROR: Error processing item: {e}")
                 continue
                 
         return batch_results
@@ -325,7 +346,7 @@ class OpenAIMassProcessor:
                     await asyncio.sleep(self.config["PROCESSING"]["RETRY_DELAY"] * (attempt + 1))
                     continue
                 else:
-                    print(f"❌ Failed to process item after {self.config['PROCESSING']['RETRY_ATTEMPTS']} attempts: {e}")
+                    print(f"ERROR: Failed to process item after {self.config['PROCESSING']['RETRY_ATTEMPTS']} attempts: {e}")
                     
         return None
 
@@ -386,7 +407,7 @@ class OpenAIMassProcessor:
             if response.status == 200:
                 return await response.json()
             else:
-                print(f"❌ OpenAI API error {response.status}")
+                print(f"ERROR: OpenAI API error {response.status}")
                 return None
 
     def _calculate_cost(self, response_data: Dict[str, Any]) -> float:
@@ -429,15 +450,15 @@ class OpenAIMassProcessor:
             
             with open(json_filepath, 'w', encoding='utf-8') as f:
                 json.dump(results_data, f, indent=2, ensure_ascii=False)
-                
-            print(f"💾 JSON saved: {json_filename}")
+
+            print(f"JSON saved: {json_filename}")
 
     async def _update_google_sheets(self, results: List[Dict[str, Any]]):
         """Update Google Sheets with processed results"""
         
         try:
-            print(f"📊 Updating Google Sheets...")
-            
+            print(f"Updating Google Sheets...")
+
             gs_manager = GoogleSheetsManager(
                 self.config["GOOGLE_SHEETS"]["OUTPUT_SHEET_ID"],
                 self.config["GOOGLE_SHEETS"]["OUTPUT_WORKSHEET"]
@@ -449,12 +470,12 @@ class OpenAIMassProcessor:
             )
             
             if success:
-                print(f"✅ Google Sheets updated with {len(results):,} items")
+                print(f"Google Sheets updated with {len(results):,} items")
             else:
-                print(f"❌ Failed to update Google Sheets")
-                
+                print(f"ERROR: Failed to update Google Sheets")
+
         except Exception as e:
-            print(f"❌ Google Sheets update error: {e}")
+            print(f"ERROR: Google Sheets update error: {e}")
 
     def _update_script_stats(self, items_count: int, processing_time: float):
         """Update script statistics"""
@@ -497,10 +518,10 @@ def load_csv_data(file_path: str) -> List[Dict[str, Any]]:
     try:
         df = pd.read_csv(file_path)
         data = df.to_dict(orient='records')
-        print(f"📂 Loaded {len(data):,} rows from {file_path}")
+        print(f"Loaded {len(data):,} rows from {file_path}")
         return data
     except Exception as e:
-        print(f"❌ Error loading CSV: {e}")
+        print(f"ERROR: Error loading CSV: {e}")
         return []
 
 # ============================================================================
@@ -514,7 +535,7 @@ async def main():
     args = parse_cli_arguments()
 
     print("=" * 60)
-    print("🧠 OPENAI MASS PROCESSOR v1.0.0")
+    print("OPENAI MASS PROCESSOR v1.0.0")
     print("=" * 60)
 
     processor = OpenAIMassProcessor()
@@ -539,11 +560,11 @@ async def main():
         # Load from CSV file
         data = load_csv_data(args.input)
         if not data:
-            print("❌ No data loaded, exiting.")
+            print("ERROR: No data loaded, exiting.")
             return
     else:
         # Sample data for testing
-        print("⚠️ No --input provided, using sample data for testing")
+        print("WARNING: No --input provided, using sample data for testing")
         data = [
             {
                 "company_name": "Tech Startup Inc",
@@ -560,12 +581,12 @@ async def main():
         output_path = args.output or f"results/openai_processed_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
         df_results = pd.DataFrame(results)
         df_results.to_csv(output_path, index=False, encoding='utf-8')
-        print(f"💾 CSV saved: {output_path}")
+        print(f"CSV saved: {output_path}")
 
     print("=" * 60)
-    print(f"🎯 Processing completed: {len(results):,} items")
-    print(f"💰 Total cost: ${SCRIPT_STATS['total_cost_usd']:.4f}")
-    print(f"⚡ Total API calls: {SCRIPT_STATS['total_api_calls']:,}")
+    print(f"Processing completed: {len(results):,} items")
+    print(f"Total cost: ${SCRIPT_STATS['total_cost_usd']:.4f}")
+    print(f"Total API calls: {SCRIPT_STATS['total_api_calls']:,}")
     print("=" * 60)
 
 if __name__ == "__main__":

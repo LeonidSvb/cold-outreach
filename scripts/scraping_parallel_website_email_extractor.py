@@ -37,9 +37,15 @@ import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from logger.universal_logger import get_logger
 
-logger = get_logger(__name__)
+# Try to import logger, fall back to print if not available
+try:
+    from logger.universal_logger import get_logger
+    logger = get_logger(__name__)
+except ImportError:
+    import logging
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger(__name__)
 
 CONFIG = {
     "INPUT_CSV": r"C:\Users\79818\Downloads\dataset_crawler-google-places_2025-11-06_03-24-15-870.csv",
@@ -237,13 +243,13 @@ def process_csv_row(row: Dict, index: int, total: int) -> Dict:
 
     # Log result
     if result["emails"]:
-        logger.info(f"  ✓ Found {len(result['emails'])} emails: {', '.join(result['emails'][:2])}")
+        logger.info(f"  Found {len(result['emails'])} emails: {', '.join(result['emails'][:2])}")
     elif result["is_dynamic"]:
-        logger.warning(f"  ⚠ Dynamic site (skipped)")
+        logger.warning(f"  Dynamic site (skipped)")
     elif not result["accessible"]:
-        logger.warning(f"  ✗ Not accessible ({result['status']})")
+        logger.warning(f"  Not accessible ({result['status']})")
     else:
-        logger.info(f"  - No emails found")
+        logger.info(f"  No emails found")
 
     return enriched_row
 
@@ -319,7 +325,7 @@ def save_results_to_path(results: List[Dict], output_path: str) -> str:
     df.to_csv(output_path, index=False, encoding='utf-8')
 
     logger.info(f"Results saved to: {output_path}")
-    print(f"💾 CSV saved: {output_path}")
+    print(f"CSV saved: {output_path}")
 
     return str(output_path)
 
