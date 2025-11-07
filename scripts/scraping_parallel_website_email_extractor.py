@@ -25,6 +25,8 @@ import json
 import re
 import time
 import random
+import argparse
+import pandas as pd
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Set, Optional
@@ -315,24 +317,55 @@ def print_summary():
     print(f"With emails found:         {STATS['with_emails']} ({STATS['with_emails']/STATS['total']*100:.1f}%)")
     print(f"{'='*70}\n")
 
+def parse_cli_arguments():
+    """Parse command line arguments for frontend integration"""
+    parser = argparse.ArgumentParser(description="Website Scraper - Extract text and emails from websites")
+
+    parser.add_argument('--input', type=str, help='Path to input CSV file (must have "website" column)')
+    parser.add_argument('--output', type=str, help='Output file path (optional, auto-generated if not provided)')
+    parser.add_argument('--workers', type=int, default=25, help='Number of parallel workers (10-50)')
+    parser.add_argument('--mode', type=str, default='quick', choices=['quick', 'full'],
+                        help='Processing mode: quick (text only) or full (text + emails)')
+
+    return parser.parse_args()
+
 def main():
-    """Main execution"""
+    """Main execution with CLI argument support"""
     logger.info("=== PARALLEL WEBSITE EMAIL EXTRACTOR STARTED ===")
+
+    # Parse CLI arguments
+    args = parse_cli_arguments()
+
+    # Apply CLI overrides to config
+    if args.workers:
+        CONFIG["MAX_WORKERS"] = args.workers
 
     start_time = time.time()
 
+    # Determine input file
+    input_file = args.input if args.input else CONFIG["INPUT_CSV"]
+
+    if not input_file or not Path(input_file).exists():
+        logger.error(f"Input file not found: {input_file}")
+        print(f"❌ Error: Input file not found: {input_file}")
+        return
+
     # Process CSV
-    results = process_csv_parallel(CONFIG["INPUT_CSV"])
+    results = process_csv_parallel(input_file)
 
     # Save results
-    output_file = save_results(results)
+    if args.output:
+        output_file = save_results_to_path(results, args.output)
+    else:
+        output_file = save_results(results)
 
     # Print summary
     print_summary()
 
     elapsed = time.time() - start_time
     logger.info(f"Processing completed in {elapsed:.1f} seconds")
-    logger.info(f"Average: {elapsed/len(results):.2f} sec/website")
+    if results:
+        logger.info(f"Average: {elapsed/len(results):.2f} sec/website")
     logger.info(f"Results saved to: {output_file}")
 
 if __name__ == "__main__":

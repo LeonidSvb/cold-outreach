@@ -30,6 +30,8 @@ import aiohttp
 import json
 import time
 import os
+import argparse
+import pandas as pd
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
@@ -302,14 +304,19 @@ class OpenAIMassProcessor:
                     # Calculate cost
                     cost = self._calculate_cost(response_data)
                     self.total_cost += cost
-                    
+
                     # Prepare result
                     result = item.copy()
-                    result["openai_analysis"] = response_data["choices"][0]["message"]["content"]
+
+                    # Parse OpenAI response (universal: JSON dict or plain text)
+                    openai_content = response_data["choices"][0]["message"]["content"]
+                    parsed_fields = self._parse_openai_response(openai_content)
+                    result.update(parsed_fields)
+
                     result["processing_cost"] = cost
                     result["model_used"] = response_data["model"]
                     result["processed_at"] = datetime.now().isoformat()
-                    
+
                     self.items_processed += 1
                     return result
                     
@@ -321,6 +328,27 @@ class OpenAIMassProcessor:
                     print(f"❌ Failed to process item after {self.config['PROCESSING']['RETRY_ATTEMPTS']} attempts: {e}")
                     
         return None
+
+    def _parse_openai_response(self, content: str) -> Dict[str, Any]:
+        """
+        Universal parser for OpenAI responses.
+        Tries to parse as JSON dict → creates multiple columns.
+        Falls back to single 'ai_result' column if not JSON.
+        """
+        try:
+            # Try to parse as JSON
+            parsed = json.loads(content.strip())
+
+            # If it's a dict, return it (each key becomes a column)
+            if isinstance(parsed, dict):
+                return parsed
+
+            # If it's a list or other type, stringify and return as single column
+            return {"ai_result": json.dumps(parsed)}
+
+        except (json.JSONDecodeError, ValueError):
+            # Not valid JSON, return as plain text
+            return {"ai_result": content.strip()}
 
     def _prepare_prompt(self, item: Dict[str, Any], prompt_type: str) -> str:
         """Prepare prompt with item data"""
@@ -444,33 +472,96 @@ class OpenAIMassProcessor:
             SCRIPT_STATS["success_rate"] = (items_count / self.api_calls_made) * 100
 
 # ============================================================================
+# CLI ARGUMENTS PARSING
+# ============================================================================
+
+def parse_cli_arguments():
+    """Parse command line arguments for frontend integration"""
+    parser = argparse.ArgumentParser(description="OpenAI Mass Processor - Universal CSV AI processing")
+
+    parser.add_argument('--input', type=str, help='Path to input CSV file')
+    parser.add_argument('--prompt', type=str, help='Custom OpenAI prompt (use {{column_name}} placeholders)')
+    parser.add_argument('--model', type=str, default='gpt-4o-mini',
+                        choices=['gpt-4o-mini', 'gpt-4o', 'gpt-4-turbo'],
+                        help='OpenAI model to use')
+    parser.add_argument('--concurrency', type=int, default=25,
+                        help='Number of parallel requests (1-50)')
+    parser.add_argument('--temperature', type=float, default=0.3,
+                        help='Temperature for OpenAI (0.0-1.0)')
+    parser.add_argument('--output', type=str, help='Output file path (optional, auto-generated if not provided)')
+
+    return parser.parse_args()
+
+def load_csv_data(file_path: str) -> List[Dict[str, Any]]:
+    """Load CSV file and convert to list of dicts"""
+    try:
+        df = pd.read_csv(file_path)
+        data = df.to_dict(orient='records')
+        print(f"📂 Loaded {len(data):,} rows from {file_path}")
+        return data
+    except Exception as e:
+        print(f"❌ Error loading CSV: {e}")
+        return []
+
+# ============================================================================
 # EXECUTION
 # ============================================================================
 
 async def main():
-    """Main execution function"""
-    
+    """Main execution function with CLI argument support"""
+
+    # Parse CLI arguments
+    args = parse_cli_arguments()
+
     print("=" * 60)
     print("🧠 OPENAI MASS PROCESSOR v1.0.0")
     print("=" * 60)
-    
+
     processor = OpenAIMassProcessor()
-    
-    # Sample data for testing
-    sample_data = [
-        {
-            "company_name": "Tech Startup Inc",
-            "website": "https://techstartup.com",
-            "industry": "Software",
-            "first_name": "John",
-            "last_name": "Doe",
-            "title": "CEO"
-        }
-    ]
-    
+
+    # Apply CLI overrides to config
+    if args.model:
+        processor.config["OPENAI_API"]["DEFAULT_MODEL"] = args.model
+    if args.concurrency:
+        processor.config["PROCESSING"]["CONCURRENCY"] = args.concurrency
+    if args.temperature is not None:
+        processor.config["OPENAI_API"]["TEMPERATURE"] = args.temperature
+
+    # Add custom prompt to config if provided
+    if args.prompt:
+        processor.config["PROMPTS"]["CUSTOM"] = args.prompt
+        prompt_type = "CUSTOM"
+    else:
+        prompt_type = "COMPANY_ANALYZER"
+
+    # Load data
+    if args.input:
+        # Load from CSV file
+        data = load_csv_data(args.input)
+        if not data:
+            print("❌ No data loaded, exiting.")
+            return
+    else:
+        # Sample data for testing
+        print("⚠️ No --input provided, using sample data for testing")
+        data = [
+            {
+                "company_name": "Tech Startup Inc",
+                "website": "https://techstartup.com",
+                "industry": "Software"
+            }
+        ]
+
     # Process data
-    results = await processor.process_data(sample_data, "COMPANY_ANALYZER")
-    
+    results = await processor.process_data(data, prompt_type)
+
+    # Save results to CSV
+    if results and args.input:
+        output_path = args.output or f"results/openai_processed_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        df_results = pd.DataFrame(results)
+        df_results.to_csv(output_path, index=False, encoding='utf-8')
+        print(f"💾 CSV saved: {output_path}")
+
     print("=" * 60)
     print(f"🎯 Processing completed: {len(results):,} items")
     print(f"💰 Total cost: ${SCRIPT_STATS['total_cost_usd']:.4f}")
