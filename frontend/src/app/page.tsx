@@ -11,6 +11,14 @@ interface Tool {
 
 const tools: Tool[] = [
   {
+    id: 'data-processor',
+    name: 'Data Processor',
+    description: 'Process CSV data with AI mass processing or website scraping',
+    href: '/data-processor',
+    status: 'ready',
+    color: 'bg-indigo-500 hover:bg-indigo-600'
+  },
+  {
     id: 'leads',
     name: 'Leads Database',
     description: 'View and manage leads from Supabase with AI column transformation',
@@ -122,7 +130,7 @@ export default function Home() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
-            <div className="text-2xl font-bold text-blue-600 mb-2">5</div>
+            <div className="text-2xl font-bold text-blue-600 mb-2">6</div>
             <div className="text-gray-600">Active Pages</div>
           </div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
