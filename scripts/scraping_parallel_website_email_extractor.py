@@ -34,8 +34,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 from bs4 import BeautifulSoup
 
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
-from modules.logging.shared.universal_logger import get_logger
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from logger.universal_logger import get_logger
 
 logger = get_logger(__name__)
 

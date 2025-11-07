@@ -112,7 +112,7 @@ class GoogleSheetsManager:
             from google.oauth2.service_account import Credentials
 
             # Load credentials
-            creds_path = Path(__file__).parent.parent.parent / ".env_credentials" / self.config["CREDENTIALS"]["SERVICE_ACCOUNT_FILE"]
+            creds_path = Path(__file__).parent.parent / ".env_credentials" / self.config["CREDENTIALS"]["SERVICE_ACCOUNT_FILE"]
 
             if not creds_path.exists():
                 print(f"⚠️ Credentials file not found: {creds_path}")
