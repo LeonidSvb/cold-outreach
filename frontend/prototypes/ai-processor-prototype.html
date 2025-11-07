@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Mass Processor - Prototype</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Header -->
+  <div class="bg-white border-b border-gray-200">
+    <div class="max-w-4xl mx-auto px-6 py-4">
+      <h1 class="text-2xl font-semibold text-gray-900">AI Mass Processor</h1>
+      <p class="text-sm text-gray-500 mt-1">Process CSV rows through OpenAI with custom prompts</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-4xl mx-auto px-6 py-8">
+
+    <!-- Step 1: Upload CSV -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold text-sm">1</div>
+        <h2 class="text-lg font-semibold text-gray-900">Upload CSV File</h2>
+      </div>
+
+      <!-- File Upload Area -->
+      <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-400 hover:bg-blue-50 transition cursor-pointer">
+        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+          <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="mt-2 text-sm text-gray-600">
+          <span class="font-medium text-blue-600">Click to upload</span> or drag and drop
+        </p>
+        <p class="text-xs text-gray-500 mt-1">CSV or JSON files only</p>
+      </div>
+
+      <!-- File Info (shown after upload) -->
+      <div class="hidden mt-4 p-4 bg-gray-50 rounded-lg">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <div>
+              <p class="text-sm font-medium text-gray-900">leads_data.csv</p>
+              <p class="text-xs text-gray-500">1,247 rows, 8 columns, 342 KB</p>
+            </div>
+          </div>
+          <button class="text-sm text-red-600 hover:text-red-700 font-medium">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Configure Prompt -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold text-sm">2</div>
+        <h2 class="text-lg font-semibold text-gray-900">Configure Processing</h2>
+      </div>
+
+      <!-- Prompt Templates Dropdown -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700 mb-2">Template (optional)</label>
+        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          <option value="">Custom prompt (write your own)</option>
+          <option value="company_analyzer">Company Analyzer - Extract pain points, tech stack</option>
+          <option value="email_personalizer">Email Personalizer - Create opener lines</option>
+          <option value="content_enricher">Content Enricher - Enrich lead data</option>
+          <option value="icebreaker">Icebreaker Generator - Casual conversation starters</option>
+        </select>
+      </div>
+
+      <!-- Custom Prompt Textarea -->
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700 mb-2">
+          Custom Prompt
+          <span class="text-gray-500 font-normal">(use {{column_name}} for placeholders)</span>
+        </label>
+        <textarea
+          rows="6"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+          placeholder="Example:
+Analyze {{company_name}} from {{website}}.
+Extract:
+1. Main pain points
+2. Tech stack used
+3. Decision makers
+
+Keep it concise (max 100 words)."
+        ></textarea>
+      </div>
+
+      <!-- Advanced Settings (collapsible) -->
+      <details class="group">
+        <summary class="cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900 flex items-center gap-2">
+          <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          Advanced Settings
+        </summary>
+        <div class="mt-4 p-4 bg-gray-50 rounded-lg space-y-4">
+          <!-- Model Selection -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">OpenAI Model</label>
+            <select class="w-full px-3 py-2 border border-gray-300 rounded-md">
+              <option value="gpt-4o-mini" selected>GPT-4o Mini (fastest, cheapest)</option>
+              <option value="gpt-4o">GPT-4o (balanced)</option>
+              <option value="gpt-4-turbo">GPT-4 Turbo (most accurate)</option>
+            </select>
+          </div>
+          <!-- Concurrency -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">
+              Parallel Requests
+              <span class="text-gray-500 font-normal">(10-50)</span>
+            </label>
+            <input type="number" value="25" min="1" max="50" class="w-32 px-3 py-2 border border-gray-300 rounded-md">
+          </div>
+          <!-- Temperature -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">
+              Temperature
+              <span class="text-gray-500 font-normal">(0.0 = consistent, 1.0 = creative)</span>
+            </label>
+            <input type="range" min="0" max="100" value="30" class="w-full">
+            <div class="flex justify-between text-xs text-gray-500 mt-1">
+              <span>0.0</span>
+              <span class="font-medium text-gray-700">0.3</span>
+              <span>1.0</span>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Step 3: Process -->
+    <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold text-sm">3</div>
+        <h2 class="text-lg font-semibold text-gray-900">Process & Download</h2>
+      </div>
+
+      <!-- Process Button -->
+      <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed">
+        Start Processing
+      </button>
+
+      <!-- Progress Section (hidden initially) -->
+      <div class="hidden mt-6 space-y-4">
+        <!-- Progress Bar -->
+        <div>
+          <div class="flex justify-between text-sm text-gray-600 mb-2">
+            <span>Processing rows...</span>
+            <span class="font-medium">342 / 1,247 (27%)</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-blue-600 h-2 rounded-full transition-all" style="width: 27%"></div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-4 gap-4 p-4 bg-gray-50 rounded-lg">
+          <div class="text-center">
+            <p class="text-2xl font-semibold text-gray-900">342</p>
+            <p class="text-xs text-gray-500">Processed</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-semibold text-gray-900">905</p>
+            <p class="text-xs text-gray-500">Remaining</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-semibold text-green-600">$1.23</p>
+            <p class="text-xs text-gray-500">Cost (est.)</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-semibold text-gray-900">2m 14s</p>
+            <p class="text-xs text-gray-500">Elapsed</p>
+          </div>
+        </div>
+
+        <!-- Log Messages -->
+        <div class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-xs space-y-1 max-h-32 overflow-y-auto">
+          <p><span class="text-green-400">[14:23:01]</span> Processing batch 1/25...</p>
+          <p><span class="text-green-400">[14:23:03]</span> Batch 1 completed: 50 items, $0.18</p>
+          <p><span class="text-green-400">[14:23:03]</span> Processing batch 2/25...</p>
+          <p><span class="text-yellow-400">[14:23:05]</span> Rate limit reached, waiting 2s...</p>
+          <p><span class="text-green-400">[14:23:07]</span> Batch 2 completed: 50 items, $0.17</p>
+        </div>
+      </div>
+
+      <!-- Download Button (shown when complete) -->
+      <div class="hidden mt-6">
+        <div class="p-4 bg-green-50 border border-green-200 rounded-lg mb-4">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <p class="text-sm font-medium text-green-900">
+              Processing complete! 1,247 rows processed in 5m 42s
+            </p>
+          </div>
+          <p class="text-xs text-green-700 mt-1 ml-7">
+            Total cost: $4.27 | Results saved to: openai_processed_20250107_142314.json
+          </p>
+        </div>
+
+        <div class="flex gap-3">
+          <button class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            Download CSV
+          </button>
+          <button class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            Download JSON
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Info -->
+  <div class="max-w-4xl mx-auto px-6 pb-8">
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <h3 class="text-sm font-medium text-blue-900 mb-2">How it works</h3>
+      <ul class="text-xs text-blue-800 space-y-1">
+        <li>1. Upload your CSV with any columns (company_name, website, etc.)</li>
+        <li>2. Write a custom prompt using {{column_name}} placeholders</li>
+        <li>3. Script processes each row in parallel (25 concurrent requests by default)</li>
+        <li>4. Download enriched CSV with new "openai_result" column + JSON with full metadata</li>
+      </ul>
+      <p class="text-xs text-blue-700 mt-2 font-medium">
+        Backend: openai_mass_processor.py | Max concurrency: 50 | Cost tracking: real-time
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
