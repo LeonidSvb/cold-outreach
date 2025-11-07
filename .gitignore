@@ -18,10 +18,13 @@ env.bak/
 venv.bak/
 
 # Output files
-services/*/outputs/
 *.log
+
+# Temporary files
 temp/
 tmp/
+*.tmp
+*.temp
 
 # API keys and credentials
 *.key
@@ -38,24 +41,13 @@ config/secrets.json
 .DS_Store
 Thumbs.db
 
-# Node modules (if any)
+# Node modules
 node_modules/
 
-# Temporary files
-*.tmp
-*.temp
-
-# Results (centralized)
-results/**/*.json
-results/**/*.csv
-results/**/*.txt
-results/raw/*
-results/processed/*
-
-# Backend
-backend/venv/
-backend/__pycache__/
-backend/uploads/
+# Results (flat structure)
+results/*.json
+results/*.csv
+results/*.txt
 
 # Frontend build files
 frontend/.next/
