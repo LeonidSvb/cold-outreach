@@ -305,6 +305,24 @@ def save_results(results: List[Dict]) -> str:
     logger.info(f"Results saved to: {output_file}")
     return str(output_file)
 
+def save_results_to_path(results: List[Dict], output_path: str) -> str:
+    """Save enriched results to specified CSV path (for in-place updates)"""
+    if not results:
+        logger.warning("No results to save")
+        return ""
+
+    # Ensure parent directory exists
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+
+    # Save using pandas for better CSV handling
+    df = pd.DataFrame(results)
+    df.to_csv(output_path, index=False, encoding='utf-8')
+
+    logger.info(f"Results saved to: {output_path}")
+    print(f"💾 CSV saved: {output_path}")
+
+    return str(output_path)
+
 def print_summary():
     """Print processing summary"""
     print(f"\n{'='*70}")
