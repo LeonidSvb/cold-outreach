@@ -4,6 +4,7 @@
 
 | ID   | Title                                                        | Date       | Status   |
 | ---- | ------------------------------------------------------------ | ---------- | -------- |
+| 0014 | [Ultra-Flat Structure - Complete Simplification](#adr-0014) | 2025-11-07 | Accepted |
 | 0013 | [Project Structure Simplification - Ultra-Clean Architecture](#adr-0013) | 2025-11-07 | Accepted |
 | 0012 | [Universal Logging System for Platform Observability](#adr-0012) | 2025-10-04 | Accepted |
 | 0011 | [Hierarchical README Pattern for AI-First Development](#adr-0011) | 2025-10-03 | Accepted |
@@ -327,5 +328,119 @@ cd frontend && npm run dev
 ```
 
 Success criteria: Project size reduced from 3000+ files to ~50-100 essential files, all 2 primary use cases work (OpenAI processing, website scraping), results easily found in results/ with clear organization.
+
+---
+
+## ADR-0014 — Ultra-Flat Structure - Complete Simplification
+
+<a id="adr-0014"></a>
+**Date**: 2025-11-07
+**Status**: Accepted
+**Owner**: Leo (Project Lead)
+
+### Context
+
+After ADR-0013 (Project Structure Simplification), the project still had nested subdirectories in scripts/ (data_import/, setup/, discovery/), results/ (openai/, scraping/, raw/, processed/, *_old/), and docs/ (9 files + 4 folders). User feedback: "I don't see any sense in separating raw/processed - I can just use temp/ for temporary files." Core principle: **Maximum flat structure - everything in one place, clear from filename.**
+
+### Alternatives
+
+- **Keep category subdirectories in scripts/ and results/**: Rejected - adds unnecessary navigation depth
+- **Separate folders for different result types**: Rejected - timestamp in filename provides chronology, no need for folders
+- **Keep all documentation**: Rejected - only ADR.md is essential, rest is outdated
+
+### Decision
+
+Implement **ULTRA-FLAT** structure across entire project:
+
+**SCRIPTS:**
+- Flatten all subdirectories (data_import/, setup/, discovery/) into scripts/ root
+- Move rarely-used scripts to scripts/extra/ (supabase setup, experiments)
+- Rename with clear prefixes: openai_*, scraping_*, supabase_*
+- Result: 9 core scripts in scripts/ root, 6 rarely-used in scripts/extra/
+
+**RESULTS:**
+- Merge ALL subdirectories into single flat results/
+- Move old results (*_old/) to archive/
+- All new files saved directly in results/ with timestamp naming
+- Format: `{script_name}_{YYYYMMDD_HHMMSS}.{ext}`
+- Result: Empty results/ folder ready for all outputs
+
+**DOCS:**
+- Keep ONLY ADR.md (Architecture Decision Records)
+- Move all other docs to archive/docs_old_20251107/
+- Result: Single essential file
+
+**NEW:**
+- Created temp/ for temporary uploads/files (gitignored)
+- Updated .gitignore for flat structure (results/*.json, temp/)
+
+### Consequences
+
+**Pros:**
+- Maximum simplicity - no nested navigation
+- From filename you know: what script, when created, what type
+- Single results/ folder - easy to find, easy to clean
+- Scripts organized by usage frequency (core vs extra)
+- Reduced cognitive load - everything at one level
+
+**Cons:**
+- If 500+ files in results/, harder to browse (mitigated by timestamp + Ctrl+F)
+- Lost semantic grouping (openai vs scraping results in same folder)
+- Manual drag-drop needed if want to reorganize later
+
+**Supersedes:** ADR-0013 (extended with complete flattening)
+
+### Technical Implementation
+
+**File Structure:**
+```
+scripts/
+├── openai_mass_processor.py          # 9 core scripts
+├── scraping_emails.py                 # flat, no subdirs
+└── extra/                             # rarely used
+    └── supabase_*.py                  # one-time setup
+
+results/                               # single flat folder
+└── openai_icebreakers_20251107_143022.csv
+
+temp/                                  # gitignored, for uploads
+docs/
+└── ADR.md                            # only this
+```
+
+**Naming Convention:**
+- Scripts: `{category}_{purpose}.py` (openai_mass_processor.py)
+- Results: `{script}_{YYYYMMDD_HHMMSS}.{ext}` (scraping_emails_20251107_150033.json)
+
+**Migration:**
+- 15 files from scripts/subdirs/ → scripts/ or scripts/extra/
+- 50 old result files → archive/
+- 9 docs + 4 folders → archive/docs_old_20251107/
+
+### Compliance / Verification
+
+Verification checks:
+1. scripts/ contains only .py files + extra/ folder (no other subdirs)
+2. results/ is empty or contains only files (no subdirs)
+3. docs/ contains only ADR.md
+4. temp/ exists and is gitignored
+5. All old files moved to archive/
+
+Testing:
+```bash
+# Verify flat structure
+ls scripts/          # should show only .py files + extra/
+ls results/          # should show only result files (or empty)
+ls docs/             # should show only ADR.md
+
+# Verify extra scripts
+ls scripts/extra/    # should show supabase_*, rarely-used scripts
+```
+
+Success criteria:
+- 100% flat structure (1 level depth max)
+- From filename can identify: category, purpose, timestamp
+- No unnecessary navigation (no clicking through folders)
+- Project reduced from nested structure to maximum simplicity
 
 ---
