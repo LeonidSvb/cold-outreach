@@ -21,6 +21,8 @@ export default function AIProcessorTab() {
   const [temperature, setTemperature] = useState<number>(0.3)
   const [stats, setStats] = useState<any>(null)
   const [error, setError] = useState<string>('')
+  const [logs, setLogs] = useState<Array<{ message: string; type: 'info' | 'error' }>>([])
+  const logsEndRef = useState<HTMLDivElement | null>(null)
 
   const parseCSV = async (file: File, maxRows: number = 7): Promise<CsvInfo> => {
     return new Promise((resolve, reject) => {
@@ -110,6 +112,7 @@ export default function AIProcessorTab() {
 
     setIsProcessing(true)
     setError('')
+    setLogs([])
 
     try {
       const formData = new FormData()
@@ -120,25 +123,50 @@ export default function AIProcessorTab() {
       formData.append('concurrency', concurrency.toString())
       formData.append('temperature', temperature.toString())
 
-      const response = await fetch('/api/data-processor/process', {
+      const response = await fetch('/api/data-processor/stream', {
         method: 'POST',
         body: formData
       })
 
-      const result = await response.json()
-
-      if (!result.success) {
-        setError(result.error || 'Processing failed')
-        setIsProcessing(false)
-        return
+      if (!response.ok || !response.body) {
+        throw new Error('Failed to start processing')
       }
 
-      setFileId(result.fileId)
-      setStats(result.stats)
-      setIsComplete(true)
-      setIsProcessing(false)
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = ''
 
-      await loadProcessedCSV(result.fileId)
+      while (true) {
+        const { done, value } = await reader.read()
+
+        if (done) break
+
+        buffer += decoder.decode(value, { stream: true })
+        const lines = buffer.split('\n\n')
+        buffer = lines.pop() || ''
+
+        for (const line of lines) {
+          if (!line.trim()) continue
+
+          const eventMatch = line.match(/^event: (\w+)\ndata: (.+)$/s)
+          if (!eventMatch) continue
+
+          const [, event, dataStr] = eventMatch
+          const data = JSON.parse(dataStr)
+
+          if (event === 'log') {
+            setLogs(prev => [...prev, { message: data.message, type: data.type }])
+          } else if (event === 'complete') {
+            setFileId(data.fileId)
+            setIsComplete(true)
+            setIsProcessing(false)
+            await loadProcessedCSV(data.fileId)
+          } else if (event === 'error') {
+            setError(data.message || 'Processing failed')
+            setIsProcessing(false)
+          }
+        }
+      }
 
     } catch (err) {
       setError('Processing failed. Please try again.')
@@ -347,11 +375,27 @@ Return JSON: {pain_points, tech_stack, decision_makers}`}
           <div className="mt-5 space-y-3">
             <div className="flex items-center gap-3 p-4 bg-blue-50 border border-blue-200 rounded-lg">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <div>
+              <div className="flex-1">
                 <p className="text-sm font-medium text-blue-900">Processing {csvInfo.rowCount.toLocaleString()} rows with AI...</p>
-                <p className="text-xs text-blue-700 mt-1">This may take several minutes. Do not close this page.</p>
+                <p className="text-xs text-blue-700 mt-1">{logs.length} log entries | Do not close this page</p>
               </div>
             </div>
+
+            {logs.length > 0 && (
+              <div className="bg-gray-900 text-gray-100 rounded-lg p-3 font-mono text-xs max-h-64 overflow-y-auto">
+                {logs.map((log, idx) => (
+                  <div key={idx} className="mb-1">
+                    <span className={log.type === 'error' ? 'text-red-400' : 'text-green-400'}>
+                      [{new Date().toLocaleTimeString()}]
+                    </span>
+                    <span className="ml-2">{log.message}</span>
+                  </div>
+                ))}
+                <div ref={(el) => {
+                  if (el) el.scrollIntoView({ behavior: 'smooth' })
+                }} />
+              </div>
+            )}
 
             <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
               <p className="text-xs text-gray-600">
