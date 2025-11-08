@@ -2,8 +2,14 @@
 
 import { useState } from 'react'
 
+interface CsvInfo {
+  rowCount: number
+  columns: string[]
+}
+
 export default function WebScraperTab() {
   const [uploadedFile, setUploadedFile] = useState<File | null>(null)
+  const [csvInfo, setCsvInfo] = useState<CsvInfo | null>(null)
   const [mode, setMode] = useState<'quick' | 'full'>('quick')
   const [isProcessing, setIsProcessing] = useState(false)
   const [isComplete, setIsComplete] = useState(false)
@@ -12,10 +18,41 @@ export default function WebScraperTab() {
   const [stats, setStats] = useState<any>(null)
   const [error, setError] = useState<string>('')
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const parseCSV = async (file: File): Promise<CsvInfo> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader()
+      reader.onload = (e) => {
+        const text = e.target?.result as string
+        const lines = text.split('\n').filter(line => line.trim())
+
+        if (lines.length === 0) {
+          reject(new Error('Empty CSV file'))
+          return
+        }
+
+        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''))
+        const rowCount = lines.length - 1
+
+        resolve({ rowCount, columns: headers })
+      }
+      reader.onerror = () => reject(new Error('Failed to read file'))
+      reader.readAsText(file)
+    })
+  }
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setUploadedFile(e.target.files[0])
+      const file = e.target.files[0]
+      setUploadedFile(file)
       setError('')
+
+      try {
+        const info = await parseCSV(file)
+        setCsvInfo(info)
+      } catch (err) {
+        setError('Failed to parse CSV file')
+        setCsvInfo(null)
+      }
     }
   }
 
@@ -104,7 +141,7 @@ export default function WebScraperTab() {
         </div>
 
         {/* Preview (shown when file uploaded) */}
-        {uploadedFile && (
+        {uploadedFile && csvInfo && (
           <div className="mt-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
@@ -113,11 +150,14 @@ export default function WebScraperTab() {
                 </svg>
                 <div>
                   <p className="text-sm font-medium text-gray-900">{uploadedFile.name}</p>
-                  <p className="text-xs text-gray-500">523 rows</p>
+                  <p className="text-xs text-gray-500">{csvInfo.rowCount.toLocaleString()} rows</p>
                 </div>
               </div>
               <button
-                onClick={() => setUploadedFile(null)}
+                onClick={() => {
+                  setUploadedFile(null)
+                  setCsvInfo(null)
+                }}
                 className="text-xs text-red-600 hover:text-red-700 font-medium"
               >
                 Remove
@@ -126,9 +166,20 @@ export default function WebScraperTab() {
             <div className="pt-2 border-t border-gray-200">
               <p className="text-xs font-medium text-gray-700 mb-1.5">Columns:</p>
               <div className="flex flex-wrap gap-1.5">
-                <span className="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs rounded font-medium">website</span>
-                <span className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs rounded">company_name</span>
-                <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">location</span>
+                {csvInfo.columns.map((col, idx) => (
+                  <span
+                    key={idx}
+                    className={`px-2 py-0.5 text-xs rounded ${
+                      idx === 0
+                        ? 'bg-purple-100 text-purple-700 font-medium'
+                        : idx === 1
+                        ? 'bg-blue-100 text-blue-700'
+                        : 'bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    {col}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
