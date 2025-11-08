@@ -121,24 +121,23 @@ export default function WebScraperTab() {
     logs.forEach(log => {
       const msg = log.message
 
-      if (msg.match(/\[(\d+)\/(\d+)\]/)) {
-        const match = msg.match(/\[(\d+)\/(\d+)\]/)
-        if (match) totalProcessed = Math.max(totalProcessed, parseInt(match[1]))
+      const totalMatch = msg.match(/Total websites checked:\s+(\d+)/)
+      if (totalMatch) {
+        totalProcessed = parseInt(totalMatch[1])
       }
 
-      if (msg.includes('Found') && msg.includes('email')) {
-        successful++
+      const successMatch = msg.match(/With emails found:\s+(\d+)/)
+      if (successMatch) {
+        successful = parseInt(successMatch[1])
       }
 
-      if (msg.includes('No emails found') || log.type === 'error') {
-        failed++
-      }
-
-      const timeMatch = msg.match(/completed in ([\d.]+) seconds/)
+      const timeMatch = msg.match(/Processing completed in ([\d.]+) seconds/)
       if (timeMatch) {
         duration = parseFloat(timeMatch[1])
       }
     })
+
+    failed = totalProcessed - successful
 
     setProcessingStats({
       totalProcessed,
