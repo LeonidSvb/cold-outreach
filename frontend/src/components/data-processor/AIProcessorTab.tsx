@@ -268,55 +268,44 @@ Return JSON: {pain_points, tech_stack, decision_makers}`}
         </div>
 
         {/* Progress (shown when processing) */}
-        {isProcessing && !isComplete && (
+        {isProcessing && !isComplete && csvInfo && (
           <div className="mt-5 space-y-3">
-            <div>
-              <div className="flex justify-between text-sm text-gray-600 mb-1.5">
-                <span>Processing rows...</span>
-                <span className="font-medium">342 / 1,247 (27%)</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full transition-all" style={{ width: '27%' }}></div>
+            <div className="flex items-center gap-3 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <div>
+                <p className="text-sm font-medium text-blue-900">Processing {csvInfo.rowCount.toLocaleString()} rows with AI...</p>
+                <p className="text-xs text-blue-700 mt-1">This may take several minutes. Do not close this page.</p>
               </div>
             </div>
 
-            <div className="grid grid-cols-4 gap-3 p-3 bg-gray-50 rounded-lg">
-              <div className="text-center">
-                <p className="text-xl font-semibold text-gray-900">342</p>
-                <p className="text-xs text-gray-500">Processed</p>
-              </div>
-              <div className="text-center">
-                <p className="text-xl font-semibold text-gray-900">905</p>
-                <p className="text-xs text-gray-500">Remaining</p>
-              </div>
-              <div className="text-center">
-                <p className="text-xl font-semibold text-green-600">$1.23</p>
-                <p className="text-xs text-gray-500">Cost</p>
-              </div>
-              <div className="text-center">
-                <p className="text-xl font-semibold text-gray-900">2m 14s</p>
-                <p className="text-xs text-gray-500">Elapsed</p>
-              </div>
-            </div>
-
-            <div className="bg-gray-900 text-gray-100 rounded-lg p-3 font-mono text-xs space-y-1 max-h-28 overflow-y-auto">
-              <p><span className="text-green-400">[14:23:01]</span> Processing batch 1/25...</p>
-              <p><span className="text-green-400">[14:23:03]</span> Batch 1 completed: 50 items, $0.18</p>
+            <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
+              <p className="text-xs text-gray-600">
+                <span className="font-medium">Model:</span> {model} |
+                <span className="font-medium ml-2">Concurrency:</span> {concurrency} parallel requests |
+                <span className="font-medium ml-2">Temperature:</span> {temperature}
+              </p>
             </div>
           </div>
         )}
 
         {/* Download (shown when complete) */}
-        {isComplete && (
+        {isComplete && csvInfo && (
           <div className="mt-5">
             <div className="p-3 bg-green-50 border border-green-200 rounded-lg mb-3">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <p className="text-sm font-medium text-green-900">Complete! 1,247 rows processed in 5m 42s</p>
+                <p className="text-sm font-medium text-green-900">
+                  Complete! {csvInfo.rowCount.toLocaleString()} rows processed successfully
+                </p>
               </div>
-              <p className="text-xs text-green-700 mt-1 ml-7">Total cost: $4.27 | Saved: openai_processed_20250107_142314.json</p>
+              {stats && (
+                <p className="text-xs text-green-700 mt-1 ml-7">
+                  {stats.cost && `Total cost: $${stats.cost.toFixed(2)}`}
+                  {stats.processingTime && ` | Time: ${Math.floor(stats.processingTime / 60)}m ${Math.floor(stats.processingTime % 60)}s`}
+                </p>
+              )}
             </div>
             <div className="flex gap-2">
               <button

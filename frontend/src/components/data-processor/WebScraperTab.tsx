@@ -310,73 +310,48 @@ export default function WebScraperTab() {
         {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
 
         {/* Progress (shown when processing) */}
-        {isProcessing && !isComplete && (
+        {isProcessing && !isComplete && csvInfo && (
           <div className="mt-5 space-y-3">
-            <div className="flex items-center gap-2 p-2 bg-purple-50 rounded-lg border border-purple-200">
-              <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center animate-pulse">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-                </svg>
-              </div>
+            <div className="flex items-center gap-3 p-4 bg-purple-50 border border-purple-200 rounded-lg">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
               <div>
-                <p className="text-sm font-medium text-gray-900">Scraping websites...</p>
-                <p className="text-xs text-gray-500">Extracting clean text from pages</p>
+                <p className="text-sm font-medium text-purple-900">
+                  Scraping {csvInfo.rowCount.toLocaleString()} websites...
+                </p>
+                <p className="text-xs text-purple-700 mt-1">
+                  {mode === 'quick' ? 'HTTP-only scraping' : 'Full pipeline with AI extraction'} | This may take several minutes
+                </p>
               </div>
             </div>
 
-            <div>
-              <div className="flex justify-between text-sm text-gray-600 mb-1.5">
-                <span>Processing...</span>
-                <span className="font-medium">187 / 523 (36%)</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div className="bg-purple-600 h-2 rounded-full transition-all" style={{ width: '36%' }}></div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-5 gap-2 p-3 bg-gray-50 rounded-lg">
-              <div className="text-center">
-                <p className="text-lg font-semibold text-gray-900">187</p>
-                <p className="text-xs text-gray-500">Processed</p>
-              </div>
-              <div className="text-center">
-                <p className="text-lg font-semibold text-green-600">142</p>
-                <p className="text-xs text-gray-500">Success</p>
-              </div>
-              <div className="text-center">
-                <p className="text-lg font-semibold text-yellow-600">23</p>
-                <p className="text-xs text-gray-500">Dynamic</p>
-              </div>
-              <div className="text-center">
-                <p className="text-lg font-semibold text-red-600">22</p>
-                <p className="text-xs text-gray-500">Failed</p>
-              </div>
-              <div className="text-center">
-                <p className="text-lg font-semibold text-blue-600">$0.47</p>
-                <p className="text-xs text-gray-500">Cost</p>
-              </div>
-            </div>
-
-            <div className="bg-gray-900 text-gray-100 rounded-lg p-3 font-mono text-xs space-y-1 max-h-28 overflow-y-auto">
-              <p><span className="text-green-400">[15:34:12]</span> Scraping: https://example.com</p>
-              <p><span className="text-green-400">[15:34:13]</span> Success | 3,842 chars</p>
-              <p><span className="text-blue-400">[15:34:14]</span> AI extraction...</p>
-              <p><span className="text-green-400">[15:34:15]</span> AI complete | $0.004</p>
+            <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
+              <p className="text-xs text-gray-600">
+                <span className="font-medium">Mode:</span> {mode === 'quick' ? 'Quick Scrape' : 'Full Pipeline'} |
+                <span className="font-medium ml-2">Workers:</span> {workers} parallel
+              </p>
             </div>
           </div>
         )}
 
         {/* Download (shown when complete) */}
-        {isComplete && (
+        {isComplete && csvInfo && (
           <div className="mt-5">
             <div className="p-3 bg-green-50 border border-green-200 rounded-lg mb-3">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <p className="text-sm font-medium text-green-900">Complete! 523 websites in 4m 23s</p>
+                <p className="text-sm font-medium text-green-900">
+                  Complete! {csvInfo.rowCount.toLocaleString()} websites processed successfully
+                </p>
               </div>
-              <p className="text-xs text-green-700 mt-1 ml-7">Scraped: 412 (79%) | AI extraction: 412 | Cost: $1.23</p>
+              {stats && (
+                <p className="text-xs text-green-700 mt-1 ml-7">
+                  {stats.itemsProcessed && `Scraped: ${stats.itemsProcessed} sites`}
+                  {stats.cost && ` | Cost: $${stats.cost.toFixed(2)}`}
+                  {stats.processingTime && ` | Time: ${Math.floor(stats.processingTime / 60)}m ${Math.floor(stats.processingTime % 60)}s`}
+                </p>
+              )}
             </div>
             <button
               onClick={handleDownload}
