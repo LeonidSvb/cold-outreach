@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
   const formData = await request.formData()
   const file = formData.get('file') as File
   const mode = formData.get('mode') as string
-  const prompt = formData.get('prompt') as string
+  const prompt = formData.get('prompt') as string || ''
   const model = formData.get('model') as string || 'gpt-4o-mini'
   const concurrency = formData.get('concurrency') as string || '25'
   const temperature = formData.get('temperature') as string || '0.3'
@@ -74,6 +74,9 @@ export async function POST(request: NextRequest) {
               '--output', outputPath,
               '--workers', workers
             ]
+            if (prompt) {
+              args.push('--prompt', prompt)
+            }
           } else {
             scriptPath = path.join(process.cwd(), '..', 'scripts', 'scraping_parallel_website_email_extractor.py')
             args = [

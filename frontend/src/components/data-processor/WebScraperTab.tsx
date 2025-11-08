@@ -17,6 +17,7 @@ export default function WebScraperTab() {
   const [isComplete, setIsComplete] = useState(false)
   const [fileId, setFileId] = useState<string>('')
   const [workers, setWorkers] = useState<number>(25)
+  const [customPrompt, setCustomPrompt] = useState<string>('')
   const [stats, setStats] = useState<any>(null)
   const [error, setError] = useState<string>('')
   const [logs, setLogs] = useState<Array<{ message: string; type: 'info' | 'error' }>>([])
@@ -114,6 +115,9 @@ export default function WebScraperTab() {
       formData.append('mode', 'web-scraper')
       formData.append('workers', workers.toString())
       formData.append('scraperMode', mode)
+      if (mode === 'full' && customPrompt.trim()) {
+        formData.append('prompt', customPrompt.trim())
+      }
 
       const response = await fetch('/api/data-processor/stream', {
         method: 'POST',
@@ -362,14 +366,23 @@ export default function WebScraperTab() {
         {/* AI Prompt (shown only for Full mode) */}
         {mode === 'full' && (
           <div className="p-3 bg-purple-50 border border-purple-200 rounded-lg">
-            <label className="block text-sm font-semibold text-gray-900 mb-2">AI Extraction Prompt</label>
+            <label className="block text-sm font-semibold text-gray-900 mb-2">
+              AI Extraction Prompt
+              <span className="ml-2 text-xs font-normal text-purple-600">(Optional - uses default if empty)</span>
+            </label>
             <textarea
+              value={customPrompt}
+              onChange={(e) => setCustomPrompt(e.target.value)}
               rows={5}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent font-mono text-sm"
-              placeholder={`From {{scraped_text}}, extract JSON:
+              placeholder={`Use {{company_name}}, {{website}}, {{content}} placeholders.
+
+Example:
+Analyze {{company_name}} website ({{website}}). From {{content}}, extract JSON:
 {
-  "owner_name": "...",
-  "business_type": "..."
+  "owner_name": "first and last name or null",
+  "business_summary": "1-line casual description",
+  "personalization_hook": "unique specialty or achievement"
 }`}
             />
           </div>

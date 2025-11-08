@@ -28,6 +28,7 @@ import re
 import time
 import random
 import os
+import argparse
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Optional
@@ -146,20 +147,27 @@ def scrape_website_content(url: str) -> Dict:
 
     return result
 
-def generate_personalization_summary(company_name: str, website: str, content: str) -> Dict:
+def generate_personalization_summary(company_name: str, website: str, content: str, custom_prompt: Optional[str] = None) -> Dict:
     """
     Generate personalization summary using OpenAI
 
-    Extracts:
-    - Owner/founder name (for {{ firstName }})
-    - Business summary (1 line)
-    - Personalization hook (ready for icebreaker)
+    Args:
+        company_name: Company name
+        website: Website URL
+        content: Scraped website content
+        custom_prompt: Optional custom prompt. If not provided, uses default.
+                      Use {{company_name}}, {{website}}, {{content}} as placeholders.
     """
 
     try:
         client = OpenAI()
 
-        prompt = f"""Analyze this company website and extract key personalization data for cold email outreach.
+        if custom_prompt:
+            prompt = custom_prompt.replace('{{company_name}}', company_name)
+            prompt = prompt.replace('{{website}}', website)
+            prompt = prompt.replace('{{content}}', content[:8000])
+        else:
+            prompt = f"""Analyze this company website and extract key personalization data for cold email outreach.
 
 Company: {company_name}
 Website: {website}
@@ -233,7 +241,7 @@ IMPORTANT: Return ONLY the JSON object, no other text."""
             "error": str(e)
         }
 
-def process_single_company(row: Dict, index: int, total: int) -> Dict:
+def process_single_company(row: Dict, index: int, total: int, custom_prompt: Optional[str] = None) -> Dict:
     """Process a single company: scrape + analyze"""
 
     company_name = row.get('\ufeff"title"', row.get('title', 'Unknown'))
@@ -275,7 +283,8 @@ def process_single_company(row: Dict, index: int, total: int) -> Dict:
     ai_result = generate_personalization_summary(
         company_name,
         website,
-        scrape_result["content"]
+        scrape_result["content"],
+        custom_prompt
     )
 
     if ai_result["status"] == "success":
@@ -296,7 +305,7 @@ def process_single_company(row: Dict, index: int, total: int) -> Dict:
 
     return enriched
 
-def process_csv_parallel(input_file: str) -> List[Dict]:
+def process_csv_parallel(input_file: str, custom_prompt: Optional[str] = None, output_path: Optional[str] = None) -> List[Dict]:
     """Process CSV with parallel scraping and AI analysis"""
 
     logger.info(f"Reading CSV: {input_file}")
@@ -321,7 +330,7 @@ def process_csv_parallel(input_file: str) -> List[Dict]:
     # Process in parallel
     with ThreadPoolExecutor(max_workers=CONFIG["MAX_WORKERS"]) as executor:
         future_to_row = {
-            executor.submit(process_single_company, row, i+1, total): row
+            executor.submit(process_single_company, row, i+1, total, custom_prompt): row
             for i, row in enumerate(accessible_rows)
         }
 
@@ -341,14 +350,17 @@ def process_csv_parallel(input_file: str) -> List[Dict]:
 
     return results
 
-def save_results(results: List[Dict]) -> str:
+def save_results(results: List[Dict], output_path: Optional[str] = None) -> str:
     """Save enriched results to CSV"""
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    results_dir = Path("modules/scraping/results")
-    results_dir.mkdir(parents=True, exist_ok=True)
-
-    output_file = results_dir / f"personalization_enriched_{timestamp}.csv"
+    if output_path:
+        output_file = Path(output_path)
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+    else:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        results_dir = Path("modules/scraping/results")
+        results_dir.mkdir(parents=True, exist_ok=True)
+        output_file = results_dir / f"personalization_enriched_{timestamp}.csv"
 
     if not results:
         logger.warning("No results to save")
@@ -377,18 +389,42 @@ def print_summary():
     print(f"Failed:                    {STATS['failed']} ({STATS['failed']/max(1,STATS['total'])*100:.1f}%)")
     print(f"{'='*70}\n")
 
+def parse_args():
+    """Parse command line arguments"""
+    parser = argparse.ArgumentParser(description='Website Personalization Enricher')
+    parser.add_argument('--input', type=str, help='Input CSV file path')
+    parser.add_argument('--output', type=str, help='Output CSV file path')
+    parser.add_argument('--workers', type=int, help='Number of parallel workers')
+    parser.add_argument('--prompt', type=str, help='Custom OpenAI prompt (use {{company_name}}, {{website}}, {{content}} placeholders)')
+    return parser.parse_args()
+
 def main():
     """Main execution"""
 
     logger.info("=== WEBSITE PERSONALIZATION ENRICHER STARTED ===")
 
+    # Parse CLI arguments
+    args = parse_args()
+
+    # Override CONFIG if CLI args provided
+    input_csv = args.input if args.input else CONFIG["INPUT_CSV"]
+    custom_prompt = args.prompt
+
+    if args.workers:
+        CONFIG["MAX_WORKERS"] = args.workers
+
+    if custom_prompt:
+        logger.info("Using custom prompt from CLI")
+    else:
+        logger.info("Using default prompt")
+
     start_time = time.time()
 
     # Process CSV
-    results = process_csv_parallel(CONFIG["INPUT_CSV"])
+    results = process_csv_parallel(input_csv, custom_prompt, args.output)
 
     # Save results
-    output_file = save_results(results)
+    output_file = save_results(results, args.output)
 
     # Print summary
     print_summary()
