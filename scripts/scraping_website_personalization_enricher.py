@@ -14,11 +14,25 @@ FEATURES:
 - Parallel processing (25 concurrent)
 - CSV output ready for email campaigns
 
+КАК РАБОТАЕТ С ФРОНТЕНДОМ:
+1. Frontend (WebScraperTab.tsx) отправляет FormData в API
+2. API (/api/data-processor/stream/route.ts) запускает этот скрипт через spawn()
+3. Параметры передаются через CLI: --input, --output, --workers, --model, --prompt
+4. Скрипт парсит сайты, отправляет в OpenAI, сохраняет результат
+5. Логи (print) стримятся обратно в Frontend через SSE
+
 USAGE:
-1. Set OPENAI_API_KEY env variable
-2. Configure INPUT_CSV (result from email extractor)
-3. Run: python website_personalization_enricher.py
-4. Get enriched CSV with personalization data
+CLI (из терминала):
+  python scraping_website_personalization_enricher.py \
+    --input input.csv \
+    --output output.csv \
+    --workers 25 \
+    --model gpt-4o-mini \
+    --max-content-length 15000 \
+    --prompt "Custom prompt with {{company_name}}"
+
+Frontend (автоматически):
+  Все параметры передаются из WebScraperTab → API → сюда
 """
 
 import sys
@@ -151,22 +165,44 @@ def generate_personalization_summary(company_name: str, website: str, content: s
     """
     Generate personalization summary using OpenAI
 
-    Args:
-        company_name: Company name
-        website: Website URL
-        content: Scraped website content
-        custom_prompt: Optional custom prompt. If not provided, uses default.
-                      Use {{company_name}}, {{website}}, {{content}} as placeholders.
+    НАЗНАЧЕНИЕ:
+    Отправляет спарсенный текст сайта в OpenAI для извлечения структурированных данных
+
+    ПАРАМЕТРЫ:
+        company_name: Название компании из CSV
+        website: URL сайта
+        content: Спарсенный текст с сайта (HTML → clean text)
+        custom_prompt: Кастомный промпт от пользователя (опционально)
+
+    КАК РАБОТАЮТ ПРОМПТЫ:
+    1. Если custom_prompt передан:
+       - Заменяем плейсхолдеры {{company_name}}, {{website}}, {{content}}
+       - Отправляем в OpenAI
+    2. Если custom_prompt НЕ передан:
+       - Используем default промпт который извлекает:
+         * owner_name (имя владельца)
+         * business_summary (описание бизнеса)
+         * personalization_hook (фраза для персонализации)
+
+    ПРИМЕР КАСТОМНОГО ПРОМПТА:
+    "Analyze {{company_name}} ({{website}}). From {{content}}, extract JSON: {...}"
+
+    СВЯЗЬ С ФРОНТЕНДОМ:
+    Frontend → FormData('prompt') → API → args.prompt → custom_prompt
     """
 
     try:
         client = OpenAI()
 
+        # === ОБРАБОТКА КАСТОМНОГО ИЛИ DEFAULT ПРОМПТА ===
         if custom_prompt:
+            # Пользователь указал свой промпт - используем его
+            # Заменяем плейсхолдеры на реальные значения
             prompt = custom_prompt.replace('{{company_name}}', company_name)
             prompt = prompt.replace('{{website}}', website)
             prompt = prompt.replace('{{content}}', content[:8000])
         else:
+            # Используем default промпт (если пользователь не указал свой)
             prompt = f"""Analyze this company website and extract key personalization data for cold email outreach.
 
 Company: {company_name}
@@ -390,7 +426,31 @@ def print_summary():
     print(f"{'='*70}\n")
 
 def parse_args():
-    """Parse command line arguments"""
+    """
+    Парсинг аргументов командной строки
+
+    ЧТО ПРОИСХОДИТ:
+    Frontend → FormData → API → spawn('py', ['script.py', '--param', 'value']) → argparse
+
+    ПРИМЕР ВЫЗОВА ИЗ API:
+    spawn('py', [
+        'scraping_website_personalization_enricher.py',
+        '--input', '/path/to/input.csv',
+        '--output', '/path/to/output.csv',
+        '--workers', '25',
+        '--model', 'gpt-4o-mini',
+        '--max-content-length', '15000',
+        '--prompt', 'Custom prompt with {{company_name}}'
+    ])
+
+    ПАРАМЕТРЫ:
+    --input: Путь к входному CSV (от API)
+    --output: Путь к выходному CSV (от API)
+    --workers: Количество параллельных потоков (от пользователя)
+    --model: OpenAI модель (от пользователя)
+    --max-content-length: Макс длина текста для AI (от пользователя)
+    --prompt: Кастомный промпт (от пользователя, опционально)
+    """
     parser = argparse.ArgumentParser(description='Website Personalization Enricher')
     parser.add_argument('--input', type=str, help='Input CSV file path')
     parser.add_argument('--output', type=str, help='Output CSV file path')
@@ -401,32 +461,55 @@ def parse_args():
     return parser.parse_args()
 
 def main():
-    """Main execution"""
+    """
+    Main execution
+
+    ПОТОК ДАННЫХ:
+    1. Получаем параметры из argparse (от API или CLI)
+    2. Применяем параметры к CONFIG (перезаписываем defaults)
+    3. Читаем CSV
+    4. Обрабатываем параллельно (scrape → AI analysis)
+    5. Сохраняем результат
+    6. Логи выводим через print() → stdout → API стримит их в Frontend
+
+    СВЯЗЬ С ФРОНТЕНДОМ:
+    Frontend State → FormData → API → spawn() → args → CONFIG → Processing
+    """
 
     logger.info("=== WEBSITE PERSONALIZATION ENRICHER STARTED ===")
 
-    # Parse CLI arguments
+    # === 1. ПОЛУЧАЕМ ПАРАМЕТРЫ ОТ API (или CLI) ===
     args = parse_args()
 
-    # Override CONFIG if CLI args provided
-    input_csv = args.input if args.input else CONFIG["INPUT_CSV"]
-    custom_prompt = args.prompt
+    # === 2. ПРИМЕНЯЕМ ПАРАМЕТРЫ К CONFIG ===
+    # Если параметр передан через CLI/API, перезаписываем default значение
 
+    # Input/Output пути (обязательные от API)
+    input_csv = args.input if args.input else CONFIG["INPUT_CSV"]
+    custom_prompt = args.prompt  # Может быть None (тогда используем default промпт)
+
+    # Параметры обработки (от пользователя из Frontend)
     if args.workers:
         CONFIG["MAX_WORKERS"] = args.workers
+        # Параллельность: сколько сайтов обрабатывать одновременно
 
     if args.model:
         CONFIG["OPENAI_MODEL"] = args.model
         logger.info(f"Using model: {args.model}")
+        # Модель OpenAI: gpt-4o-mini (дешевая) или gpt-4o (точная)
 
     if args.max_content_length:
         CONFIG["MAX_CONTENT_LENGTH"] = args.max_content_length
         logger.info(f"Max content length: {args.max_content_length}")
+        # Макс длина текста отправляемого в AI (меньше = дешевле)
 
+    # Промпт (кастомный или default)
     if custom_prompt:
         logger.info("Using custom prompt from CLI")
+        # Пользователь указал свой промпт в Frontend
     else:
         logger.info("Using default prompt")
+        # Используем встроенный промпт
 
     start_time = time.time()
 

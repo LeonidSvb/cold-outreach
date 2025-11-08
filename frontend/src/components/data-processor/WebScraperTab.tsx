@@ -1,3 +1,24 @@
+/**
+ * WEB SCRAPER TAB - Парсинг сайтов (Quick / Full Pipeline)
+ *
+ * НАЗНАЧЕНИЕ:
+ * - Извлекает данные с сайтов из CSV файла
+ * - Два режима: Quick (только emails) и Full (AI анализ)
+ *
+ * КАК РАБОТАЕТ:
+ * 1. Пользователь загружает CSV с колонкой "website"
+ * 2. Выбирает режим (Quick или Full)
+ * 3. Настраивает параметры (workers, model, prompt для Full mode)
+ * 4. Нажимает "Start Processing"
+ * 5. Frontend отправляет данные в API → API запускает Python скрипт
+ * 6. Получает логи в реальном времени через SSE (Server-Sent Events)
+ * 7. Скачивает результат когда готово
+ *
+ * ИСПОЛЬЗУЕМЫЕ СКРИПТЫ:
+ * - Quick mode: scripts/scraping_parallel_website_email_extractor.py
+ * - Full mode: scripts/scraping_website_personalization_enricher.py
+ */
+
 'use client'
 
 import { useState } from 'react'
@@ -10,19 +31,32 @@ interface CsvInfo {
 }
 
 export default function WebScraperTab() {
-  const [uploadedFile, setUploadedFile] = useState<File | null>(null)
-  const [csvInfo, setCsvInfo] = useState<CsvInfo | null>(null)
-  const [mode, setMode] = useState<'quick' | 'full'>('quick')
-  const [isProcessing, setIsProcessing] = useState(false)
-  const [isComplete, setIsComplete] = useState(false)
-  const [fileId, setFileId] = useState<string>('')
-  const [workers, setWorkers] = useState<number>(25)
-  const [model, setModel] = useState<string>('gpt-4o-mini')
-  const [maxContentLength, setMaxContentLength] = useState<number>(15000)
-  const [customPrompt, setCustomPrompt] = useState<string>('')
+  // === STATE ===
+  // Все параметры хранятся в React state и передаются в API
+  // НЕТ хардкода - все динамическое и управляется пользователем
+
+  // Файл и данные
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null)  // Загруженный CSV файл
+  const [csvInfo, setCsvInfo] = useState<CsvInfo | null>(null)         // Информация о CSV для preview
+
+  // Режим работы
+  const [mode, setMode] = useState<'quick' | 'full'>('quick')  // Quick = только emails, Full = AI анализ
+
+  // Процесс обработки
+  const [isProcessing, setIsProcessing] = useState(false)      // Идет ли обработка сейчас
+  const [isComplete, setIsComplete] = useState(false)          // Обработка завершена
+  const [fileId, setFileId] = useState<string>('')             // ID для скачивания результата
+
+  // Параметры обработки (передаются в Python скрипт)
+  const [workers, setWorkers] = useState<number>(25)           // Количество параллельных потоков
+  const [model, setModel] = useState<string>('gpt-4o-mini')    // OpenAI модель (для Full mode)
+  const [maxContentLength, setMaxContentLength] = useState<number>(15000)  // Макс длина текста для AI
+  const [customPrompt, setCustomPrompt] = useState<string>('')  // Кастомный промпт (для Full mode, опционально)
+
+  // UI состояние
   const [stats, setStats] = useState<any>(null)
   const [error, setError] = useState<string>('')
-  const [logs, setLogs] = useState<Array<{ message: string; type: 'info' | 'error' }>>([])
+  const [logs, setLogs] = useState<Array<{ message: string; type: 'info' | 'error' }>>([])  // Логи в реальном времени
   const logsEndRef = useState<HTMLDivElement | null>(null)
 
   const parseCSV = async (file: File, maxRows: number = 7): Promise<CsvInfo> => {
@@ -101,6 +135,20 @@ export default function WebScraperTab() {
   }
 
 
+  /**
+   * ГЛАВНАЯ ФУНКЦИЯ ОБРАБОТКИ
+   *
+   * Что происходит:
+   * 1. Собираем все параметры в FormData
+   * 2. Отправляем POST запрос в /api/data-processor/stream
+   * 3. API запускает Python скрипт с нашими параметрами
+   * 4. Получаем логи в реальном времени через SSE
+   * 5. Когда готово - показываем кнопку скачивания
+   *
+   * Передача параметров:
+   * FormData → API → Python argparse
+   * Например: model='gpt-4o-mini' → args.push('--model', 'gpt-4o-mini')
+   */
   const handleProcess = async () => {
     if (!uploadedFile) {
       setError('Please upload a CSV file first')
@@ -112,17 +160,27 @@ export default function WebScraperTab() {
     setLogs([])
 
     try {
+      // === 1. СОБИРАЕМ ВСЕ ПАРАМЕТРЫ В FormData ===
+      // FormData - это способ отправить файл + параметры в одном запросе
       const formData = new FormData()
-      formData.append('file', uploadedFile)
-      formData.append('mode', 'web-scraper')
-      formData.append('workers', workers.toString())
-      formData.append('scraperMode', mode)
-      formData.append('model', model)
-      formData.append('maxContentLength', maxContentLength.toString())
+
+      // Обязательные параметры
+      formData.append('file', uploadedFile)           // CSV файл
+      formData.append('mode', 'web-scraper')          // Тип обработки (web-scraper или ai-processor)
+      formData.append('workers', workers.toString())  // Количество параллельных потоков
+      formData.append('scraperMode', mode)            // 'quick' или 'full'
+
+      // Параметры для Full mode (AI анализ)
+      formData.append('model', model)                 // OpenAI модель (gpt-4o-mini, gpt-4o)
+      formData.append('maxContentLength', maxContentLength.toString())  // Макс длина текста
+
+      // Кастомный промпт (опционально, только для Full mode)
       if (mode === 'full' && customPrompt.trim()) {
         formData.append('prompt', customPrompt.trim())
       }
+      // Если промпт не указан, Python скрипт использует default промпт
 
+      // === 2. ОТПРАВЛЯЕМ ЗАПРОС В API ===
       const response = await fetch('/api/data-processor/stream', {
         method: 'POST',
         body: formData
@@ -132,39 +190,54 @@ export default function WebScraperTab() {
         throw new Error('Failed to start processing')
       }
 
+      // === 3. ПОЛУЧАЕМ ЛОГИ В РЕАЛЬНОМ ВРЕМЕНИ ЧЕРЕЗ SSE ===
+      // SSE (Server-Sent Events) - технология для получения событий с сервера
+      // Python пишет логи → API стримит их → мы показываем в UI
+
       const reader = response.body.getReader()
       const decoder = new TextDecoder()
       let buffer = ''
 
+      // Читаем поток данных
       while (true) {
         const { done, value } = await reader.read()
 
         if (done) break
 
+        // Декодируем байты в текст
         buffer += decoder.decode(value, { stream: true })
+
+        // События разделены двумя переносами строк
         const lines = buffer.split('\n\n')
         buffer = lines.pop() || ''
 
+        // Обрабатываем каждое событие
         for (const line of lines) {
           if (!line.trim()) continue
 
+          // Парсим формат SSE: "event: log\ndata: {...}"
           const eventMatch = line.match(/^event: (\w+)\ndata: ([\s\S]+)$/)
           if (!eventMatch) continue
 
           const [, event, dataStr] = eventMatch
           const data = JSON.parse(dataStr)
 
+          // === ТИПЫ СОБЫТИЙ ОТ API ===
+
           if (event === 'log') {
+            // Обычный лог из Python (print)
             setLogs(prev => {
               const newLogs = [...prev, { message: data.message, type: data.type }]
               return newLogs
             })
           } else if (event === 'complete') {
+            // Обработка завершена успешно
             setFileId(data.fileId)
             setIsComplete(true)
             setIsProcessing(false)
-            await loadProcessedCSV(data.fileId)
+            await loadProcessedCSV(data.fileId)  // Загружаем preview результата
           } else if (event === 'error') {
+            // Произошла ошибка в Python скрипте
             setError(data.message || 'Processing failed')
             setIsProcessing(false)
           }
