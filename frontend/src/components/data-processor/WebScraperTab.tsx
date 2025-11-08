@@ -21,6 +21,14 @@ export default function WebScraperTab() {
   const [error, setError] = useState<string>('')
   const [logs, setLogs] = useState<Array<{ message: string; type: 'info' | 'error' }>>([])
   const logsEndRef = useState<HTMLDivElement | null>(null)
+  const [activeLogTab, setActiveLogTab] = useState<'logs' | 'summary'>('logs')
+  const [processingStats, setProcessingStats] = useState<{
+    totalProcessed: number
+    successful: number
+    failed: number
+    duration: number
+    errors: number
+  }>({ totalProcessed: 0, successful: 0, failed: 0, duration: 0, errors: 0 })
 
   const parseCSV = async (file: File, maxRows: number = 7): Promise<CsvInfo> => {
     return new Promise((resolve, reject) => {
@@ -97,6 +105,50 @@ export default function WebScraperTab() {
     }
   }
 
+  const copyLogsToClipboard = () => {
+    const logsText = logs.map(log => `[${log.type.toUpperCase()}] ${log.message}`).join('\n')
+    navigator.clipboard.writeText(logsText)
+      .then(() => alert('Logs copied to clipboard!'))
+      .catch(() => alert('Failed to copy logs'))
+  }
+
+  const parseStatsFromLogs = (logs: Array<{ message: string; type: string }>) => {
+    let totalProcessed = 0
+    let successful = 0
+    let failed = 0
+    let duration = 0
+
+    logs.forEach(log => {
+      const msg = log.message
+
+      if (msg.match(/\[(\d+)\/(\d+)\]/)) {
+        const match = msg.match(/\[(\d+)\/(\d+)\]/)
+        if (match) totalProcessed = Math.max(totalProcessed, parseInt(match[1]))
+      }
+
+      if (msg.includes('Found') && msg.includes('email')) {
+        successful++
+      }
+
+      if (msg.includes('No emails found') || log.type === 'error') {
+        failed++
+      }
+
+      const timeMatch = msg.match(/completed in ([\d.]+) seconds/)
+      if (timeMatch) {
+        duration = parseFloat(timeMatch[1])
+      }
+    })
+
+    setProcessingStats({
+      totalProcessed,
+      successful,
+      failed,
+      duration,
+      errors: logs.filter(l => l.type === 'error').length
+    })
+  }
+
   const handleProcess = async () => {
     if (!uploadedFile) {
       setError('Please upload a CSV file first')
@@ -139,18 +191,27 @@ export default function WebScraperTab() {
         for (const line of lines) {
           if (!line.trim()) continue
 
-          const eventMatch = line.match(/^event: (\w+)\ndata: (.+)$/s)
+          const eventMatch = line.match(/^event: (\w+)\ndata: ([\s\S]+)$/)
           if (!eventMatch) continue
 
           const [, event, dataStr] = eventMatch
           const data = JSON.parse(dataStr)
 
           if (event === 'log') {
-            setLogs(prev => [...prev, { message: data.message, type: data.type }])
+            setLogs(prev => {
+              const newLogs = [...prev, { message: data.message, type: data.type }]
+              return newLogs
+            })
           } else if (event === 'complete') {
             setFileId(data.fileId)
             setIsComplete(true)
             setIsProcessing(false)
+
+            setLogs(prevLogs => {
+              parseStatsFromLogs(prevLogs)
+              return prevLogs
+            })
+
             await loadProcessedCSV(data.fileId)
           } else if (event === 'error') {
             setError(data.message || 'Processing failed')
@@ -414,42 +475,99 @@ export default function WebScraperTab() {
 
         {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
 
-        {/* Progress (shown when processing) */}
-        {isProcessing && !isComplete && csvInfo && (
+        {/* Logs and Summary (shown during and after processing) */}
+        {logs.length > 0 && csvInfo && (
           <div className="mt-5 space-y-3">
-            <div className="flex items-center gap-3 p-4 bg-purple-50 border border-purple-200 rounded-lg">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
-              <div className="flex-1">
-                <p className="text-sm font-medium text-purple-900">
-                  Scraping {csvInfo.rowCount.toLocaleString()} websites...
-                </p>
-                <p className="text-xs text-purple-700 mt-1">
-                  {mode === 'quick' ? 'HTTP-only scraping' : 'Full pipeline with AI extraction'} | {logs.length} log entries
-                </p>
-              </div>
-            </div>
-
-            {logs.length > 0 && (
-              <div className="bg-gray-900 text-gray-100 rounded-lg p-3 font-mono text-xs max-h-64 overflow-y-auto">
-                {logs.map((log, idx) => (
-                  <div key={idx} className="mb-1">
-                    <span className={log.type === 'error' ? 'text-red-400' : 'text-green-400'}>
-                      [{new Date().toLocaleTimeString()}]
-                    </span>
-                    <span className="ml-2">{log.message}</span>
-                  </div>
-                ))}
-                <div ref={(el) => {
-                  if (el) el.scrollIntoView({ behavior: 'smooth' })
-                }} />
+            {isProcessing && !isComplete && (
+              <div className="flex items-center gap-3 p-4 bg-purple-50 border border-purple-200 rounded-lg">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-purple-900">
+                    Scraping {csvInfo.rowCount.toLocaleString()} websites...
+                  </p>
+                  <p className="text-xs text-purple-700 mt-1">
+                    {mode === 'quick' ? 'HTTP-only scraping' : 'Full pipeline with AI extraction'} | {logs.length} log entries
+                  </p>
+                </div>
               </div>
             )}
 
-            <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-              <p className="text-xs text-gray-600">
-                <span className="font-medium">Mode:</span> {mode === 'quick' ? 'Quick Scrape' : 'Full Pipeline'} |
-                <span className="font-medium ml-2">Workers:</span> {workers} parallel
-              </p>
+            {/* Tabs: Logs / Summary */}
+            <div className="border border-gray-200 rounded-lg overflow-hidden">
+              <div className="flex border-b border-gray-200">
+                <button
+                  onClick={() => setActiveLogTab('logs')}
+                  className={`flex-1 px-4 py-2 text-sm font-medium ${
+                    activeLogTab === 'logs'
+                      ? 'bg-purple-50 text-purple-700 border-b-2 border-purple-600'
+                      : 'bg-gray-50 text-gray-600 hover:bg-gray-100'
+                  }`}
+                >
+                  Logs ({logs.length})
+                </button>
+                <button
+                  onClick={() => setActiveLogTab('summary')}
+                  className={`flex-1 px-4 py-2 text-sm font-medium ${
+                    activeLogTab === 'summary'
+                      ? 'bg-purple-50 text-purple-700 border-b-2 border-purple-600'
+                      : 'bg-gray-50 text-gray-600 hover:bg-gray-100'
+                  }`}
+                >
+                  Summary
+                </button>
+                <button
+                  onClick={copyLogsToClipboard}
+                  className="px-4 py-2 text-sm font-medium bg-gray-50 text-gray-600 hover:bg-gray-100 border-l border-gray-200"
+                  title="Copy all logs to clipboard"
+                >
+                  <svg className="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  <span className="ml-1">Copy Logs</span>
+                </button>
+              </div>
+
+              {activeLogTab === 'logs' ? (
+                <div className="bg-gray-900 text-gray-100 p-3 font-mono text-xs max-h-64 overflow-y-auto">
+                  {logs.map((log, idx) => (
+                    <div key={idx} className="mb-1">
+                      <span className={log.type === 'error' ? 'text-red-400' : 'text-green-400'}>
+                        [{log.type.toUpperCase()}]
+                      </span>
+                      <span className="ml-2">{log.message}</span>
+                    </div>
+                  ))}
+                  <div ref={(el) => {
+                    if (el && isProcessing) el.scrollIntoView({ behavior: 'smooth' })
+                  }} />
+                </div>
+              ) : (
+                <div className="bg-white p-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                      <p className="text-xs text-blue-600 font-medium mb-1">Total Processed</p>
+                      <p className="text-2xl font-bold text-blue-900">{processingStats.totalProcessed}</p>
+                    </div>
+                    <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                      <p className="text-xs text-green-600 font-medium mb-1">Successful</p>
+                      <p className="text-2xl font-bold text-green-900">{processingStats.successful}</p>
+                    </div>
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                      <p className="text-xs text-red-600 font-medium mb-1">Failed / No Emails</p>
+                      <p className="text-2xl font-bold text-red-900">{processingStats.failed}</p>
+                    </div>
+                    <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
+                      <p className="text-xs text-purple-600 font-medium mb-1">Duration</p>
+                      <p className="text-2xl font-bold text-purple-900">{processingStats.duration}s</p>
+                    </div>
+                  </div>
+                  {processingStats.errors > 0 && (
+                    <div className="mt-3 bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                      <p className="text-sm font-medium text-yellow-800">⚠️ {processingStats.errors} errors encountered</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         )}
