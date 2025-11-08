@@ -5,6 +5,8 @@ import { useState } from 'react'
 interface CsvInfo {
   rowCount: number
   columns: string[]
+  previewRows: string[][]
+  originalColumns?: string[]
 }
 
 export default function WebScraperTab() {
@@ -18,7 +20,7 @@ export default function WebScraperTab() {
   const [stats, setStats] = useState<any>(null)
   const [error, setError] = useState<string>('')
 
-  const parseCSV = async (file: File): Promise<CsvInfo> => {
+  const parseCSV = async (file: File, maxRows: number = 7): Promise<CsvInfo> => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader()
       reader.onload = (e) => {
@@ -33,11 +35,48 @@ export default function WebScraperTab() {
         const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''))
         const rowCount = lines.length - 1
 
-        resolve({ rowCount, columns: headers })
+        const previewRows: string[][] = []
+        for (let i = 1; i <= Math.min(maxRows, rowCount); i++) {
+          const row = lines[i].split(',').map(cell => cell.trim().replace(/^"|"$/g, ''))
+          previewRows.push(row)
+        }
+
+        resolve({
+          rowCount,
+          columns: headers,
+          previewRows,
+          originalColumns: headers
+        })
       }
       reader.onerror = () => reject(new Error('Failed to read file'))
       reader.readAsText(file)
     })
+  }
+
+  const loadProcessedCSV = async (fileId: string): Promise<void> => {
+    try {
+      const response = await fetch(`/api/data-processor/download/${fileId}`)
+      const text = await response.text()
+      const lines = text.split('\n').filter(line => line.trim())
+
+      if (lines.length === 0) return
+
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''))
+      const previewRows: string[][] = []
+
+      for (let i = 1; i <= Math.min(7, lines.length - 1); i++) {
+        const row = lines[i].split(',').map(cell => cell.trim().replace(/^"|"$/g, ''))
+        previewRows.push(row)
+      }
+
+      setCsvInfo(prev => prev ? {
+        ...prev,
+        columns: headers,
+        previewRows
+      } : null)
+    } catch (err) {
+      console.error('Failed to load processed CSV:', err)
+    }
   }
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -90,6 +129,8 @@ export default function WebScraperTab() {
       setIsComplete(true)
       setIsProcessing(false)
 
+      await loadProcessedCSV(result.fileId)
+
     } catch (err) {
       setError('Processing failed. Please try again.')
       setIsProcessing(false)
@@ -119,68 +160,104 @@ export default function WebScraperTab() {
     <div>
       {/* Upload CSV */}
       <div className="bg-white rounded-lg border border-gray-200 p-5 mb-4">
-        <h2 className="text-sm font-semibold text-gray-900 mb-3">Upload CSV with Websites</h2>
-
-        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-purple-400 hover:bg-purple-50 transition cursor-pointer">
-          <input
-            type="file"
-            accept=".csv"
-            onChange={handleFileUpload}
-            className="hidden"
-            id="scraper-file-upload"
-          />
-          <label htmlFor="scraper-file-upload" className="cursor-pointer">
-            <svg className="mx-auto h-10 w-10 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
-              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <p className="mt-2 text-sm text-gray-600">
-              <span className="font-medium text-purple-600">Click to upload</span> or drag and drop
-            </p>
-            <p className="text-xs text-gray-500 mt-1">CSV with "website" or "url" column</p>
-          </label>
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-sm font-semibold text-gray-900">
+            {csvInfo ? 'Data Preview' : 'Upload CSV with Websites'}
+            {csvInfo && (
+              <span className="ml-2 text-xs font-normal text-gray-500">
+                ({csvInfo.rowCount.toLocaleString()} total rows)
+              </span>
+            )}
+          </h2>
+          {csvInfo && (
+            <button
+              onClick={() => {
+                setUploadedFile(null)
+                setCsvInfo(null)
+                setIsComplete(false)
+                setFileId('')
+              }}
+              className="text-xs text-red-600 hover:text-red-700 font-medium"
+            >
+              Remove & Upload New
+            </button>
+          )}
         </div>
 
-        {/* Preview (shown when file uploaded) */}
-        {uploadedFile && csvInfo && (
-          <div className="mt-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
-            <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center gap-2">
-                <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-                <div>
-                  <p className="text-sm font-medium text-gray-900">{uploadedFile.name}</p>
-                  <p className="text-xs text-gray-500">{csvInfo.rowCount.toLocaleString()} rows</p>
-                </div>
-              </div>
-              <button
-                onClick={() => {
-                  setUploadedFile(null)
-                  setCsvInfo(null)
-                }}
-                className="text-xs text-red-600 hover:text-red-700 font-medium"
-              >
-                Remove
-              </button>
+        {!csvInfo ? (
+          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-purple-400 hover:bg-purple-50 transition cursor-pointer">
+            <input
+              type="file"
+              accept=".csv"
+              onChange={handleFileUpload}
+              className="hidden"
+              id="scraper-file-upload"
+            />
+            <label htmlFor="scraper-file-upload" className="cursor-pointer">
+              <svg className="mx-auto h-10 w-10 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <p className="mt-2 text-sm text-gray-600">
+                <span className="font-medium text-purple-600">Click to upload</span> or drag and drop
+              </p>
+              <p className="text-xs text-gray-500 mt-1">CSV with "website" or "url" column</p>
+            </label>
+          </div>
+        ) : (
+          <div className="border border-gray-200 rounded-lg overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    {csvInfo.columns.map((col, idx) => {
+                      const isNewColumn = csvInfo.originalColumns && !csvInfo.originalColumns.includes(col)
+                      return (
+                        <th
+                          key={idx}
+                          className={`px-3 py-2 text-left text-xs font-medium uppercase tracking-wider ${
+                            isNewColumn
+                              ? 'bg-green-50 text-green-700'
+                              : 'text-gray-500'
+                          }`}
+                        >
+                          <div className="flex items-center gap-1">
+                            {col}
+                            {isNewColumn && (
+                              <span className="px-1.5 py-0.5 bg-green-100 text-green-700 text-xs rounded font-normal normal-case">new</span>
+                            )}
+                          </div>
+                        </th>
+                      )
+                    })}
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {csvInfo.previewRows.map((row, rowIdx) => (
+                    <tr key={rowIdx} className="hover:bg-gray-50">
+                      {row.map((cell, cellIdx) => {
+                        const isNewColumn = csvInfo.originalColumns && !csvInfo.originalColumns.includes(csvInfo.columns[cellIdx])
+                        return (
+                          <td
+                            key={cellIdx}
+                            className={`px-3 py-2 text-sm whitespace-nowrap ${
+                              isNewColumn
+                                ? 'bg-green-50/50 text-green-900 font-medium'
+                                : 'text-gray-900'
+                            }`}
+                          >
+                            {cell.length > 50 ? cell.substring(0, 50) + '...' : cell}
+                          </td>
+                        )
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            <div className="pt-2 border-t border-gray-200">
-              <p className="text-xs font-medium text-gray-700 mb-1.5">Columns:</p>
-              <div className="flex flex-wrap gap-1.5">
-                {csvInfo.columns.map((col, idx) => (
-                  <span
-                    key={idx}
-                    className={`px-2 py-0.5 text-xs rounded ${
-                      idx === 0
-                        ? 'bg-purple-100 text-purple-700 font-medium'
-                        : idx === 1
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'bg-gray-100 text-gray-700'
-                    }`}
-                  >
-                    {col}
-                  </span>
-                ))}
-              </div>
+            <div className="bg-gray-50 px-3 py-2 border-t border-gray-200">
+              <p className="text-xs text-gray-500">
+                Showing first {csvInfo.previewRows.length} rows of {csvInfo.rowCount.toLocaleString()}
+              </p>
             </div>
           </div>
         )}

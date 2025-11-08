@@ -7,10 +7,10 @@ const OUTPUT_DIR = path.join(process.cwd(), '..', 'data', 'processed')
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { fileId: string } }
+  { params }: { params: Promise<{ fileId: string }> }
 ) {
   try {
-    const fileId = params.fileId
+    const { fileId } = await params
     const outputFileName = `${fileId}_output.csv`
     const filePath = path.join(OUTPUT_DIR, outputFileName)
 
