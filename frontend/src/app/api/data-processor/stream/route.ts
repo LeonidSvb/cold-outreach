@@ -66,14 +66,23 @@ export async function POST(request: NextRequest) {
             args.push('--prompt', prompt)
           }
         } else {
-          scriptPath = path.join(process.cwd(), '..', 'scripts', 'scraping_parallel_website_email_extractor.py')
-          args = [
-            scriptPath,
-            '--input', inputPath,
-            '--output', outputPath,
-            '--workers', workers,
-            '--mode', scraperMode
-          ]
+          if (scraperMode === 'full') {
+            scriptPath = path.join(process.cwd(), '..', 'scripts', 'scraping_website_personalization_enricher.py')
+            args = [
+              scriptPath,
+              '--input', inputPath,
+              '--output', outputPath,
+              '--workers', workers
+            ]
+          } else {
+            scriptPath = path.join(process.cwd(), '..', 'scripts', 'scraping_parallel_website_email_extractor.py')
+            args = [
+              scriptPath,
+              '--input', inputPath,
+              '--output', outputPath,
+              '--workers', workers
+            ]
+          }
         }
 
         const python = spawn('py', args, {
