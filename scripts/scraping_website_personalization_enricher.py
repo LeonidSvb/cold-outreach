@@ -396,6 +396,8 @@ def parse_args():
     parser.add_argument('--output', type=str, help='Output CSV file path')
     parser.add_argument('--workers', type=int, help='Number of parallel workers')
     parser.add_argument('--prompt', type=str, help='Custom OpenAI prompt (use {{company_name}}, {{website}}, {{content}} placeholders)')
+    parser.add_argument('--model', type=str, help='OpenAI model to use (e.g., gpt-4o-mini, gpt-4o)')
+    parser.add_argument('--max-content-length', type=int, help='Maximum content length to process')
     return parser.parse_args()
 
 def main():
@@ -412,6 +414,14 @@ def main():
 
     if args.workers:
         CONFIG["MAX_WORKERS"] = args.workers
+
+    if args.model:
+        CONFIG["OPENAI_MODEL"] = args.model
+        logger.info(f"Using model: {args.model}")
+
+    if args.max_content_length:
+        CONFIG["MAX_CONTENT_LENGTH"] = args.max_content_length
+        logger.info(f"Max content length: {args.max_content_length}")
 
     if custom_prompt:
         logger.info("Using custom prompt from CLI")

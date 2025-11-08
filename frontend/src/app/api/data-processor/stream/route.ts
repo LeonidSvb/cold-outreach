@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
   const temperature = formData.get('temperature') as string || '0.3'
   const workers = formData.get('workers') as string || '25'
   const scraperMode = formData.get('scraperMode') as string || 'quick'
+  const maxContentLength = formData.get('maxContentLength') as string || '15000'
 
   if (!file) {
     return new Response('No file provided', { status: 400 })
@@ -72,7 +73,9 @@ export async function POST(request: NextRequest) {
               scriptPath,
               '--input', inputPath,
               '--output', outputPath,
-              '--workers', workers
+              '--workers', workers,
+              '--model', model,
+              '--max-content-length', maxContentLength
             ]
             if (prompt) {
               args.push('--prompt', prompt)

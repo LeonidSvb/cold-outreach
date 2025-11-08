@@ -17,6 +17,8 @@ export default function WebScraperTab() {
   const [isComplete, setIsComplete] = useState(false)
   const [fileId, setFileId] = useState<string>('')
   const [workers, setWorkers] = useState<number>(25)
+  const [model, setModel] = useState<string>('gpt-4o-mini')
+  const [maxContentLength, setMaxContentLength] = useState<number>(15000)
   const [customPrompt, setCustomPrompt] = useState<string>('')
   const [stats, setStats] = useState<any>(null)
   const [error, setError] = useState<string>('')
@@ -115,6 +117,8 @@ export default function WebScraperTab() {
       formData.append('mode', 'web-scraper')
       formData.append('workers', workers.toString())
       formData.append('scraperMode', mode)
+      formData.append('model', model)
+      formData.append('maxContentLength', maxContentLength.toString())
       if (mode === 'full' && customPrompt.trim()) {
         formData.append('prompt', customPrompt.trim())
       }
@@ -395,7 +399,11 @@ Analyze {{company_name}} website ({{website}}). From {{content}}, extract JSON:
           <div className="flex-1 grid grid-cols-3 gap-3">
             <div>
               <label className="block text-xs font-medium text-gray-700 mb-1.5">Model (Full mode)</label>
-              <select className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md">
+              <select
+                value={model}
+                onChange={(e) => setModel(e.target.value)}
+                className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md"
+              >
                 <option value="gpt-4o-mini">GPT-4o Mini</option>
                 <option value="gpt-4o">GPT-4o</option>
               </select>
@@ -404,7 +412,10 @@ Analyze {{company_name}} website ({{website}}). From {{content}}, extract JSON:
               <label className="block text-xs font-medium text-gray-700 mb-1.5">Max Content Length</label>
               <input
                 type="number"
-                defaultValue={15000}
+                value={maxContentLength}
+                onChange={(e) => setMaxContentLength(parseInt(e.target.value))}
+                min={5000}
+                max={30000}
                 className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md"
               />
             </div>
