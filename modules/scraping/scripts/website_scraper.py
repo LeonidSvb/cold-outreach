@@ -53,16 +53,28 @@ import time
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # Import shared libraries
-from modules.scraping.lib.http_utils import HTTPClient, get_smart_pages
-from modules.scraping.lib.text_utils import (
-    clean_html_to_text,
-    extract_emails_from_html,
-    extract_phones,
-    detect_site_type
-)
-from modules.scraping.lib.stats_tracker import StatsTracker, estimate_time
+try:
+    from lib.http_utils import HTTPClient, get_smart_pages
+    from lib.text_utils import (
+        clean_html_to_text,
+        extract_emails_from_html,
+        extract_phones,
+        detect_site_type
+    )
+    from lib.stats_tracker import StatsTracker, estimate_time
+except ImportError:
+    # Fallback to absolute import
+    from modules.scraping.lib.http_utils import HTTPClient, get_smart_pages
+    from modules.scraping.lib.text_utils import (
+        clean_html_to_text,
+        extract_emails_from_html,
+        extract_phones,
+        detect_site_type
+    )
+    from modules.scraping.lib.stats_tracker import StatsTracker, estimate_time
 
 try:
     from logger.universal_logger import get_logger
