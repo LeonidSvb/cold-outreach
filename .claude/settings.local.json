@@ -49,5 +49,6 @@
     "*"
   ],
   "disabledMcpjsonServers": [],
-  "hooks": {}
+  "hooks": {},
+  "outputStyle": "Explanatory"
 }
