@@ -52,6 +52,16 @@ TEXAS_CITIES = {
         ("Dallas", "TX"),
         ("Austin", "TX")
     ],
+    "expansion": [
+        ("San Antonio", "TX"),      # Major metro, not yet scraped
+        ("Fort Worth", "TX"),        # DFW west side
+        ("El Paso", "TX"),          # West Texas, different market
+        ("Plano", "TX"),            # North Dallas, affluent suburb
+        ("Corpus Christi", "TX"),   # Gulf Coast
+        ("Laredo", "TX"),           # South Texas border
+        ("Lubbock", "TX"),          # West Texas tech hub
+        ("Arlington", "TX")         # Between Dallas-Fort Worth
+    ],
     "medium": [
         ("Houston", "TX"),
         ("Dallas", "TX"),
@@ -80,6 +90,14 @@ MODES = {
         "expected_total": 300,
         "expected_emails": 200,
         "cost": 1.80
+    },
+    "expansion": {
+        "per_city": 150,
+        "batch_size": 4,
+        "expected_total": 1200,
+        "expected_emails": 589,
+        "expected_deduped": 571,
+        "cost": 7.20
     },
     "medium": {
         "per_city": 400,
@@ -117,16 +135,11 @@ def run_batch(search_queries: List[str], max_per_query: int) -> List[Dict]:
     """Run Apify actor for batch of queries"""
     logger.info(f"Starting batch: {len(search_queries)} queries")
 
-    # IMPORTANT: Include filters to reduce cost
+    # Actor input - minimal config (actor extracts emails by default)
     actor_input = {
         "searchStringsArray": search_queries,
         "maxCrawledPlacesPerSearch": max_per_query,
-        "language": "en",
-
-        # FILTERS (reduce cost and improve quality)
-        "onlyDataFromSearchPage": True,  # Faster, cheaper
-        # Note: onlyWithWebsite and minReviews might not be available
-        # in this actor - need to filter in post-processing
+        "language": "en"
     }
 
     # Start run
@@ -179,22 +192,13 @@ def run_batch(search_queries: List[str], max_per_query: int) -> List[Dict]:
 
 def filter_quality(results: List[Dict]) -> List[Dict]:
     """Filter results for quality (website, reviews)"""
-    filtered = []
+    # UPDATED: Removed strict filters - let actor handle enrichment
+    # Actor will try to get emails from websites when available
+    # Companies without websites will naturally have no emails
 
-    for r in results:
-        # Must have website
-        if not r.get('website'):
-            continue
+    logger.info(f"Processing {len(results)} results (no quality filtering)")
 
-        # Minimum 5 reviews (quality indicator)
-        if r.get('reviewsCount', 0) < 5:
-            continue
-
-        filtered.append(r)
-
-    logger.info(f"Quality filter: {len(results)} → {len(filtered)} ({len(filtered)/len(results)*100:.0f}%)")
-
-    return filtered
+    return results
 
 def process_result(r: Dict) -> Dict:
     """Normalize result"""
@@ -322,7 +326,7 @@ def print_summary(mode: str, output_file: str, config: Dict):
 def main():
     """Main execution"""
     parser = argparse.ArgumentParser(description="Texas HVAC Email Scraper")
-    parser.add_argument("--mode", type=str, choices=["test", "medium", "full"],
+    parser.add_argument("--mode", type=str, choices=["test", "expansion", "medium", "full"],
                        required=True, help="Scraping mode")
     parser.add_argument("--yes", action="store_true",
                        help="Auto-confirm without prompt")
@@ -346,7 +350,7 @@ def main():
     print(f"Per city:              {config['per_city']}")
     print(f"Expected total:        {config['expected_total']}")
     print(f"Expected emails:       {config['expected_emails']}")
-    if mode == "full":
+    if mode in ["expansion", "full"] and "expected_deduped" in config:
         print(f"After deduplication:   ~{config['expected_deduped']}")
     print(f"Estimated cost:        ${config['cost']:.2f}")
     print(f"Estimated time:        {len(cities) / config['batch_size'] * 2:.0f} min")
