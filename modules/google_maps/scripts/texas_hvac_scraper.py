@@ -66,18 +66,65 @@ CONFIG = {
     "OUTPUT_DIR": "modules/google_maps/results",
     "DELAY_BETWEEN_REQUESTS": 0.5,
 
-    # Bidirectional adaptation thresholds
-    "MIN_RESULTS_THRESHOLD": 15,   # If < 15, increase radius
-    "MAX_RESULTS_THRESHOLD": 55,   # If > 55, decrease radius
-    "OPTIMAL_RANGE": (15, 55),     # Optimal results range
-
-    # Radius limits
-    "INITIAL_RADIUS": 15000,       # Start with 15km
-    "MIN_RADIUS": 3000,            # Minimum 3km
-    "MAX_RADIUS": 100000,          # Maximum 100km (for sparse desert)
-
     # Parallel processing
     "MAX_WORKERS": 5,              # Process 5 cities simultaneously
+}
+
+# TIER-BASED GRID COVERAGE STRATEGY
+TIER_STRATEGIES = {
+    "tier_1": {  # Large cities (>500k population)
+        "population_min": 500000,
+        "grid_step_km": 8,           # 8km between grid points
+        "circle_radius_km": 6,       # 6km radius per circle
+        "overlap_percent": 40,       # ~40% overlap
+        "description": "Dense grid coverage for large metro areas"
+    },
+    "tier_2": {  # Medium cities (100k-500k)
+        "population_min": 100000,
+        "grid_step_km": 12,          # 12km between points
+        "circle_radius_km": 8,       # 8km radius
+        "overlap_percent": 30,       # ~30% overlap
+        "description": "Medium grid coverage"
+    },
+    "tier_3": {  # Small cities (<100k)
+        "population_min": 0,
+        "grid_step_km": None,        # No grid - just center point
+        "circle_radius_km": 15,      # 15km from center
+        "overlap_percent": 0,
+        "description": "Simple center coverage"
+    }
+}
+
+# City population database (approximate)
+CITY_POPULATIONS = {
+    # New York
+    "New York, NY": 8_800_000,
+    "Buffalo, NY": 278_000,
+    "Rochester, NY": 211_000,
+    "Yonkers, NY": 211_000,
+    "Syracuse, NY": 148_000,
+
+    # Illinois
+    "Chicago, IL": 2_700_000,
+    "Aurora, IL": 180_000,
+    "Naperville, IL": 149_000,
+    "Joliet, IL": 150_000,
+    "Rockford, IL": 148_000,
+
+    # Michigan
+    "Detroit, MI": 639_000,
+    "Grand Rapids, MI": 198_000,
+    "Warren, MI": 139_000,
+    "Sterling Heights, MI": 134_000,
+    "Ann Arbor, MI": 123_000,
+    "Lansing, MI": 112_000,
+
+    # Pennsylvania
+    "Philadelphia, PA": 1_600_000,
+    "Pittsburgh, PA": 303_000,
+    "Allentown, PA": 125_000,
+    "Erie, PA": 95_000,
+    "Reading, PA": 95_000
 }
 
 # Major Texas cities for statewide scraping
@@ -148,6 +195,59 @@ STATS = {
     "total_cost": 0.0,
 }
 
+def get_city_tier(city: str) -> str:
+    """Determine city tier based on population"""
+    population = CITY_POPULATIONS.get(city, 50000)
+
+    if population >= TIER_STRATEGIES["tier_1"]["population_min"]:
+        return "tier_1"
+    elif population >= TIER_STRATEGIES["tier_2"]["population_min"]:
+        return "tier_2"
+    else:
+        return "tier_3"
+
+def create_grid_points(center_lat: float, center_lng: float, tier: str, city_name: str = "") -> List[Tuple[float, float]]:
+    """
+    Create grid of search points to cover entire city
+    Returns list of (lat, lng) tuples
+    """
+    strategy = TIER_STRATEGIES[tier]
+
+    # Tier 3: just use center point
+    if strategy["grid_step_km"] is None:
+        logger.info(f"[{city_name}] {tier.upper()}: Single center point (r={strategy['circle_radius_km']}km)")
+        return [(center_lat, center_lng)]
+
+    # Tier 1 & 2: create grid
+    grid_step_km = strategy["grid_step_km"]
+    radius_km = strategy["circle_radius_km"]
+
+    # Estimate city bounding box (simplified)
+    # For tier 1 cities: ~40km x 40km, tier 2: ~25km x 25km
+    bbox_size_km = 40 if tier == "tier_1" else 25
+
+    # Convert km to degrees
+    km_per_degree_lat = 111.32
+    km_per_degree_lng = 111.32 * math.cos(math.radians(center_lat))
+
+    half_size_lat = (bbox_size_km / 2) / km_per_degree_lat
+    half_size_lng = (bbox_size_km / 2) / km_per_degree_lng
+    step_lat = grid_step_km / km_per_degree_lat
+    step_lng = grid_step_km / km_per_degree_lng
+
+    # Generate grid points
+    grid_points = []
+    lat = center_lat - half_size_lat
+    while lat <= center_lat + half_size_lat:
+        lng = center_lng - half_size_lng
+        while lng <= center_lng + half_size_lng:
+            grid_points.append((lat, lng))
+            lng += step_lng
+        lat += step_lat
+
+    logger.info(f"[{city_name}] {tier.upper()}: {len(grid_points)} grid points (step={grid_step_km}km, r={radius_km}km, overlap={strategy['overlap_percent']}%)")
+    return grid_points
+
 def geocode_city(city: str) -> Tuple[float, float]:
     """Get lat/lng for city"""
     params = {"address": city, "key": CONFIG["API_KEY"]}
@@ -160,34 +260,50 @@ def geocode_city(city: str) -> Tuple[float, float]:
     return (location["lat"], location["lng"])
 
 def nearby_search(lat: float, lng: float, keyword: str, radius: int) -> List[Dict]:
-    """Search places in radius"""
-    params = {
-        "location": f"{lat},{lng}",
-        "radius": radius,
-        "keyword": keyword,
-        "key": CONFIG["API_KEY"]
-    }
+    """Search places in radius with pagination (up to 60 results - 3 pages)"""
+    all_results = []
+    next_page_token = None
+    page = 1
 
-    response = requests.get(CONFIG["NEARBY_SEARCH_URL"], params=params)
-    STATS["total_api_calls"] += 1
+    while page <= 3:
+        params = {
+            "location": f"{lat},{lng}",
+            "radius": radius,
+            "keyword": keyword,
+            "key": CONFIG["API_KEY"]
+        }
 
-    if response.status_code != 200:
-        return []
+        if next_page_token:
+            params = {"pagetoken": next_page_token, "key": CONFIG["API_KEY"]}
 
-    data = response.json()
-    if data["status"] not in ["OK", "ZERO_RESULTS"]:
-        return []
+        response = requests.get(CONFIG["NEARBY_SEARCH_URL"], params=params)
+        STATS["total_api_calls"] += 1
 
-    results = data.get("results", [])
+        if response.status_code != 200:
+            break
 
-    return [{
-        "place_id": p.get("place_id"),
-        "name": p.get("name"),
-        "vicinity": p.get("vicinity", ""),
-        "rating": p.get("rating", 0),
-        "user_ratings_total": p.get("user_ratings_total", 0),
-        "business_status": p.get("business_status", ""),
-    } for p in results]
+        data = response.json()
+        if data["status"] not in ["OK", "ZERO_RESULTS"]:
+            break
+
+        results = data.get("results", [])
+        all_results.extend([{
+            "place_id": p.get("place_id"),
+            "name": p.get("name"),
+            "vicinity": p.get("vicinity", ""),
+            "rating": p.get("rating", 0),
+            "user_ratings_total": p.get("user_ratings_total", 0),
+            "business_status": p.get("business_status", ""),
+        } for p in results])
+
+        next_page_token = data.get("next_page_token")
+        if not next_page_token:
+            break
+
+        page += 1
+        time.sleep(2)
+
+    return all_results
 
 def adaptive_radius_search(
     lat: float,
@@ -276,7 +392,7 @@ def subdivide_area(lat: float, lng: float, radius: int) -> List[Tuple[float, flo
     ]
 
 def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, max_reviews: int = None) -> Dict:
-    """Scrape single city with adaptive radius - saves both raw and filtered data"""
+    """Scrape single city with TIER-BASED GRID coverage - saves both raw and filtered data"""
     logger.info(f"\n{'='*60}")
     logger.info(f"Processing city: {city}")
     logger.info(f"{'='*60}")
@@ -289,22 +405,42 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, ma
             "city": city,
             "raw_places": [],
             "filtered_places": [],
-            "error": "geocoding_failed"
+            "error": "geocoding_failed",
+            "stats": {
+                "total_found": 0,
+                "unique": 0,
+                "filtered": 0,
+                "with_details": 0,
+                "grid_points": 0,
+                "tier": "unknown"
+            }
         }
 
     logger.info(f"Center: {lat:.4f}, {lng:.4f}")
 
-    # Adaptive search
-    places, final_radius = adaptive_radius_search(
-        lat, lng, keyword, CONFIG["INITIAL_RADIUS"], city
-    )
+    # Determine tier and create grid
+    tier = get_city_tier(city)
+    grid_points = create_grid_points(lat, lng, tier, city)
+    strategy = TIER_STRATEGIES[tier]
+    radius_meters = strategy["circle_radius_km"] * 1000
+
+    # Search all grid points
+    all_places = []
+    for i, (grid_lat, grid_lng) in enumerate(grid_points, 1):
+        logger.info(f"  Grid point {i}/{len(grid_points)}: ({grid_lat:.4f}, {grid_lng:.4f})")
+        places = nearby_search(grid_lat, grid_lng, keyword, radius_meters)
+        all_places.extend(places)
+        logger.info(f"    Found {len(places)} results")
+
+        if i < len(grid_points):
+            time.sleep(CONFIG["DELAY_BETWEEN_REQUESTS"])
 
     logger.info(f"\n{city} Summary:")
-    logger.info(f"  Places found: {len(places)}")
-    logger.info(f"  Final radius: {final_radius/1000:.1f}km")
+    logger.info(f"  Grid points: {len(grid_points)}")
+    logger.info(f"  Total places found: {len(all_places)}")
 
     # Deduplicate - THIS IS RAW DATA (before filtering)
-    unique_places = deduplicate_places(places)
+    unique_places = deduplicate_places(all_places)
     logger.info(f"  Unique places: {len(unique_places)}")
 
     # Filter
@@ -327,11 +463,13 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, ma
         "raw_places": unique_places,          # RAW data (no phone/website)
         "filtered_places": detailed_places,   # FILTERED data (with phone/website)
         "stats": {
-            "total_found": len(places),
+            "total_found": len(all_places),
             "unique": len(unique_places),
             "filtered": len(filtered),
             "with_details": len(detailed_places),
-            "final_radius_km": final_radius / 1000
+            "grid_points": len(grid_points),
+            "tier": tier,
+            "radius_km": strategy["circle_radius_km"]
         }
     }
 
