@@ -1,0 +1,810 @@
+[
+  {
+    "place_id": "ChIJAdOJjynmQIYRGs8rTBc00Xk",
+    "name": "Air Energy Air conditioning And heating",
+    "vicinity": "13955 Murphy Rd #214, Stafford",
+    "rating": 5,
+    "user_ratings_total": 142,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 777-9000",
+    "website": "http://airenergyac.com/",
+    "address": "13955 Murphy Rd #214, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJ6UpcDSudQIYRDKuTOMebvtg",
+    "name": "Maxx AC & Heating",
+    "vicinity": "13120 Mula Ct, Stafford",
+    "rating": 4.8,
+    "user_ratings_total": 304,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 338-2653",
+    "website": "http://callmaxxandrelax.com/",
+    "address": "13120 Mula Ct, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJoyiVi9DoQIYRnB9q9UluOZA",
+    "name": "Weaver AC Repair Solutions",
+    "vicinity": "2440 Texas Pkwy #345b, Missouri City",
+    "rating": 5,
+    "user_ratings_total": 20,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 378-4929",
+    "website": "https://archeracheatinghollywood.com/",
+    "address": "2440 Texas Pkwy #345b, Missouri City, TX 77489, USA"
+  },
+  {
+    "place_id": "ChIJp2wgQb3oQIYRIgA-9vSlVHI",
+    "name": "Sun Air Conditioning & Heating",
+    "vicinity": "2719 5th St, Stafford",
+    "rating": 4.9,
+    "user_ratings_total": 181,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 410-2345",
+    "website": "http://www.sunairconditioning.com/",
+    "address": "2719 5th St, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJUVg-6SnmQIYRKpCalx5jhRU",
+    "name": "Smart A/C Services",
+    "vicinity": "13955 Murphy Rd #203, Stafford",
+    "rating": 5,
+    "user_ratings_total": 314,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 439-0758",
+    "website": "https://smartacservices.com/?utm_source=GMBlisting&utm_medium=organic",
+    "address": "13955 Murphy Rd #203, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJ4wqqtoboQIYRYr55zV8CTms",
+    "name": "Davis Air Conditioning & Heating, Inc.",
+    "vicinity": "9920 Plantation Ln, Stafford",
+    "rating": 4.9,
+    "user_ratings_total": 1948,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(888) 710-5530",
+    "website": "https://davisac.com/",
+    "address": "9920 Plantation Ln, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJa9l7_b3oQIYRHyFKZOEjX7o",
+    "name": "Weather Cool Inc.",
+    "vicinity": "1403 Staffordshire Rd, Stafford",
+    "rating": 5,
+    "user_ratings_total": 76,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 804-1833",
+    "website": "https://www.weathercoolinc.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "address": "1403 Staffordshire Rd, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJx1CVtdfnQIYR1G4bAHg0anA",
+    "name": "Texas Industrial Air Services",
+    "vicinity": "12999 Murphy Rd Suite L2, Stafford",
+    "rating": 4.9,
+    "user_ratings_total": 107,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 598-2619",
+    "website": "http://www.tiashvac.com/",
+    "address": "12999 Murphy Rd Suite L2, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJFdunlMjnQIYR6YO_C5AFc1o",
+    "name": "The Cool Dude AC & Heating",
+    "vicinity": "4411 Bluebonnet Dr Ste #111, Stafford",
+    "rating": 4.9,
+    "user_ratings_total": 75,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 773-2910",
+    "website": "http://www.cooldudeac.com/",
+    "address": "4411 Bluebonnet Dr Ste #111, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJeUEQFCDoQIYRVo-fvXw5L3M",
+    "name": "Aquarius Home Service",
+    "vicinity": "13003 Murphy Rd #N-4, Stafford",
+    "rating": 4.8,
+    "user_ratings_total": 99,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "plumber",
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 561-8400",
+    "website": "http://www.aquariushomeservice.com/",
+    "address": "13003 Murphy Rd #N-4, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJr0m88Rqw3msRUMoyJUBLvKg",
+    "name": "Allsource AC and Heat",
+    "vicinity": "12999 Murphy Rd, Stafford",
+    "rating": 5,
+    "user_ratings_total": 24,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 451-4245",
+    "website": "http://allsourceacandheating.com/",
+    "address": "12999 Murphy Rd, Stafford, TX 77477, USA"
+  },
+  {
+    "place_id": "ChIJhZEYNiy5dAcRTf4QuQ7_xvg",
+    "name": "Caleb's HVAC Cooling & Heating LLC",
+    "vicinity": "12168 Ormandy St, Houston",
+    "rating": 5,
+    "user_ratings_total": 28,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 979-8502",
+    "website": "https://calebshvac.com/",
+    "address": "12168 Ormandy St, Houston, TX 77085, USA"
+  },
+  {
+    "place_id": "ChIJey2zp1vqQIYRLfg1xN_nZ_E",
+    "name": "Geo Contractors LLC",
+    "vicinity": "13221 Player St Unit A, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 214,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "plumber",
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 729-2665",
+    "website": "http://geocontractorsllc.com/",
+    "address": "13221 Player St Unit A, Houston, TX 77045, USA"
+  },
+  {
+    "place_id": "ChIJCxGjwATrQIYRtxlkL2tIM9w",
+    "name": "Air-Ton Heating and AC",
+    "vicinity": "4102 Dawn, Houston",
+    "rating": 5,
+    "user_ratings_total": 175,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 661-2760",
+    "website": "https://airtonheatingac.com/?utm_source=organic&utm_medium=website-link&utm_id=google-business-listing",
+    "address": "4102 Dawn, Houston, TX 77025, USA"
+  },
+  {
+    "place_id": "ChIJoQX0javrQIYRN-4rzG74M5c",
+    "name": "M-Squared Climate Control",
+    "vicinity": "4205 W Orem Dr, Houston",
+    "rating": 5,
+    "user_ratings_total": 126,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 434-0640",
+    "website": "https://www.smarthvacpros.com/",
+    "address": "4205 W Orem Dr, Houston, TX 77045, USA"
+  },
+  {
+    "place_id": "ChIJDWkRUErdQIYRDHuJweNY36U",
+    "name": "TL Techs A/C & Electrical",
+    "vicinity": "4823 W Orem Dr, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 134,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "electrician",
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 430-9042",
+    "website": "https://tltechs.com/",
+    "address": "4823 W Orem Dr, Houston, TX 77045, USA"
+  },
+  {
+    "place_id": "ChIJlaECLVvqQIYRLiUwNSmUxcg",
+    "name": "Space City Mechanical",
+    "vicinity": "12585 Hiram Clarke Rd, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 62,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 433-3339",
+    "website": "http://www.spacecityhvac.com/",
+    "address": "12585 Hiram Clarke Rd, Houston, TX 77045, USA"
+  },
+  {
+    "place_id": "ChIJL5ITD1vqQIYR-cdmRFkTGiQ",
+    "name": "Pilo's A/C",
+    "vicinity": "4350 Town Plaza Dr #210, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 158,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 937-2070",
+    "website": "https://www.pilosair.com/",
+    "address": "4350 Town Plaza Dr #210, Houston, TX 77045, USA"
+  },
+  {
+    "place_id": "ChIJVVVVVenDQIYR53NzTweJmls",
+    "name": "Ultimate Comfort AC & Heating",
+    "vicinity": "2238 S Sam Houston Pkwy W, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 271,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 266-3678",
+    "website": "http://www.ultimatecomfortac.com/",
+    "address": "2238 S Sam Houston Pkwy W, Houston, TX 77047, USA"
+  },
+  {
+    "place_id": "ChIJAQBVwCzrQIYRbUURglQ2G4I",
+    "name": "PowerPro HVAC & Electric",
+    "vicinity": "909 Fannin St, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 58,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 225-6828",
+    "website": "https://www.powerprotx.com/",
+    "address": "909 Fannin St, Houston, TX 77047, USA"
+  },
+  {
+    "place_id": "ChIJlR2T4tCTQIYRTUtadtFkD4c",
+    "name": "Dalton Air Conditioning & Heating",
+    "vicinity": "5410 Brookside Rd, Pearland",
+    "rating": 4.9,
+    "user_ratings_total": 499,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 433-4380",
+    "website": "https://www.daltonairandheat.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "address": "5410 Brookside Rd, Pearland, TX 77581, USA"
+  },
+  {
+    "place_id": "ChIJZ23jiziTQIYRNMznYsi6WUE",
+    "name": "Braswell's Air Conditioning And Heating Services LLC",
+    "vicinity": "Stone Rd, Pearland",
+    "rating": 4.9,
+    "user_ratings_total": 139,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 425-8265",
+    "website": "https://braswellsacandheat.com/",
+    "address": "Stone Rd, Pearland, TX 77584, USA"
+  },
+  {
+    "place_id": "ChIJPeCA-jjrQIYRli--Vi_QLiY",
+    "name": "Tony's A/C And Heating",
+    "vicinity": "13503 Canterwell Rd, Houston",
+    "rating": 5,
+    "user_ratings_total": 67,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 413-1329",
+    "website": "http://www.tonysacheating.com/",
+    "address": "13503 Canterwell Rd, Houston, TX 77047, USA"
+  },
+  {
+    "place_id": "ChIJcYLEYjSRQIYRUiG0N3DA1hM",
+    "name": "Air Specialist Air Conditioning & Plumbing",
+    "vicinity": "1323 N Main St, Pearland",
+    "rating": 4.8,
+    "user_ratings_total": 3559,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "plumber",
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 469-3443",
+    "website": "https://www.airspecialist.com/?utm_campaign=Google+My+Business&utm_source=GMB&utm_medium=organic&utm_content=Website",
+    "address": "1323 N Main St, Pearland, TX 77581, USA"
+  },
+  {
+    "place_id": "ChIJq6qqqjqRQIYRddeyBkyw-vE",
+    "name": "Payless Cooling & Heating",
+    "vicinity": "1416 N Main St ste 200, Pearland",
+    "rating": 4.6,
+    "user_ratings_total": 86,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 317-8848",
+    "website": "https://paylesscooling.com/",
+    "address": "1416 N Main St ste 200, Pearland, TX 77581, USA"
+  },
+  {
+    "place_id": "ChIJdeRs9YyXQIYReUIUsINXGI4",
+    "name": "Ellison Heating and Air Repair",
+    "vicinity": "1714 Houston Blvd, South Houston",
+    "rating": 5,
+    "user_ratings_total": 24,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 769-0445",
+    "website": "https://ellisonacsouthhouston.com/",
+    "address": "1714 Houston Blvd, South Houston, TX 77587, USA"
+  },
+  {
+    "place_id": "ChIJM6pjpP6XQIYRuYFT4xuFWIk",
+    "name": "Valderrama A/C & Refrigeration",
+    "vicinity": "1212 Illinois St, South Houston",
+    "rating": 4.8,
+    "user_ratings_total": 293,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 942-6587",
+    "website": "https://www.valderramainc.com/",
+    "address": "1212 Illinois St, South Houston, TX 77587, USA"
+  },
+  {
+    "place_id": "ChIJ7xNP3uuXQIYRTsTmR85Q-jQ",
+    "name": "Air-Care Southeast, Inc.",
+    "vicinity": "701 Louisiana St, South Houston",
+    "rating": 4.9,
+    "user_ratings_total": 55,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "plumber",
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 946-4302",
+    "website": "https://www.aircaresoutheast.com/",
+    "address": "701 Louisiana St, South Houston, TX 77587, USA"
+  },
+  {
+    "place_id": "ChIJf1JUUnWXQIYR19sbIWinTtQ",
+    "name": "Airstream Air Conditioning and Heating",
+    "vicinity": "512 Minnesota St, South Houston",
+    "rating": 4.9,
+    "user_ratings_total": 29,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 481-6308",
+    "website": "https://www.airstream-acservice.com/",
+    "address": "512 Minnesota St, South Houston, TX 77587, USA"
+  },
+  {
+    "place_id": "ChIJ1WmGitKbQIYRc08rLNXoQec",
+    "name": "Covar Aircare LLC",
+    "vicinity": "11665 Fuqua St, Houston",
+    "rating": 4.8,
+    "user_ratings_total": 149,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 476-8945",
+    "website": "https://www.covaraircare.net/",
+    "address": "11665 Fuqua St, Houston, TX 77034, USA"
+  },
+  {
+    "place_id": "ChIJC4qTV0mYQIYR80SIWRmvgOU",
+    "name": "Champion and Nash",
+    "vicinity": "4227 Allen-Genoa Rd, Pasadena",
+    "rating": 4.9,
+    "user_ratings_total": 796,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 322-7682",
+    "website": "https://championandnash.com/cother",
+    "address": "4227 Allen-Genoa Rd, Pasadena, TX 77504, USA"
+  },
+  {
+    "place_id": "ChIJy0IuEe-bQIYREB7-650g1Gc",
+    "name": "Bazil Air Conditioning and Heating",
+    "vicinity": "15255 Gulf Fwy E109, Houston",
+    "rating": 5,
+    "user_ratings_total": 42,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 217-6579",
+    "website": "https://www.bazilac.com/",
+    "address": "15255 Gulf Fwy E109, Houston, TX 77034, USA"
+  },
+  {
+    "place_id": "ChIJccumLRbCQIYRybaD_o9f0R4",
+    "name": "McCann Services Inc.",
+    "vicinity": "7400 Ashcroft Dr, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 27,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 597-8116",
+    "website": "https://www.mccannservices.com/",
+    "address": "7400 Ashcroft Dr, Houston, TX 77081, USA"
+  },
+  {
+    "place_id": "ChIJca3HxxPCQIYRk8QQE3Rw7FM",
+    "name": "Indoor Air, INC.",
+    "vicinity": "5801 Maple St, Houston",
+    "rating": 4.8,
+    "user_ratings_total": 111,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 933-8080",
+    "website": "https://www.indoorairinc.com/",
+    "address": "5801 Maple St, Houston, TX 77074, USA"
+  },
+  {
+    "place_id": "ChIJMwJj3EPDQIYR6W8zWU0LpZU",
+    "name": "Air Current AC & Heat, LLC",
+    "vicinity": "8703 Bonhomme Rd, Houston",
+    "rating": 5,
+    "user_ratings_total": 142,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 459-2971",
+    "website": "https://www.aircurrenthouston.com/",
+    "address": "8703 Bonhomme Rd, Houston, TX 77074, USA"
+  },
+  {
+    "place_id": "ChIJSV2VEnG_QIYRJU8_SW-yDYM",
+    "name": "Baker-Jones Co. Inc",
+    "vicinity": "6314 St Augustine St, Houston",
+    "rating": 5,
+    "user_ratings_total": 164,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 529-3418",
+    "website": "http://baker-jones.com/",
+    "address": "6314 St Augustine St, Houston, TX 77021, USA"
+  },
+  {
+    "place_id": "ChIJeexgEfzz9YgRl43Qx4NXGTA",
+    "name": "Complete Air Conditioning & Heating Service",
+    "vicinity": "3636 Old Spanish Trl, Houston",
+    "rating": 4.8,
+    "user_ratings_total": 25,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(281) 779-4578",
+    "website": "https://hvac-houston-tx.com/",
+    "address": "3636 Old Spanish Trl, Houston, TX 77021, USA"
+  },
+  {
+    "place_id": "ChIJ6cg2qP-9QIYRV8wxGzI1Buw",
+    "name": "P & M Air Conditioning and Heating",
+    "vicinity": "6734 Rupley Cir, Houston",
+    "rating": 4.7,
+    "user_ratings_total": 223,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 644-9285",
+    "website": "https://pmhvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+    "address": "6734 Rupley Cir, Houston, TX 77087, USA"
+  },
+  {
+    "place_id": "ChIJEepVcD3CQIYRjooOXE69VmE",
+    "name": "Bellaire Air Conditioning",
+    "vicinity": "5414 Ashbrook Dr, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 403,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 428-2279",
+    "website": "https://www.bellaireair.com/?utm_source=google&utm_medium=organic&utm_term=gbp",
+    "address": "5414 Ashbrook Dr, Houston, TX 77081, USA"
+  },
+  {
+    "place_id": "ChIJIedoD87DQIYRPZ4wlN6-XmM",
+    "name": "House Pro Air Conditioning",
+    "vicinity": "6115 Skyline Dr Ste D, Houston",
+    "rating": 4.7,
+    "user_ratings_total": 1293,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 512-5910",
+    "website": "https://www.houseproac.com/?utm_source=GBP&utm_medium=organic",
+    "address": "6115 Skyline Dr Ste D, Houston, TX 77057, USA"
+  },
+  {
+    "place_id": "ChIJAcJXCJDBQIYRVeWzvxjF5bQ",
+    "name": "Stafford Air of Bellaire",
+    "vicinity": "6101 Royalton St Ste 103, Houston",
+    "rating": 5,
+    "user_ratings_total": 154,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 667-3281",
+    "website": "http://www.staffordac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "address": "6101 Royalton St Ste 103, Houston, TX 77081, USA"
+  },
+  {
+    "place_id": "ChIJAS6TBa3DQIYRaFx9tUwoU04",
+    "name": "Letsos Company",
+    "vicinity": "8435 Westglen Dr, Houston",
+    "rating": 4.7,
+    "user_ratings_total": 30,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 783-3200",
+    "website": "http://letsos.com/",
+    "address": "8435 Westglen Dr, Houston, TX 77063, USA"
+  },
+  {
+    "place_id": "ChIJIfMXfyPCQIYREFmE7Y6mpHM",
+    "name": "Chimney Rock Service",
+    "vicinity": "5933 Bellaire Blvd #115, Houston",
+    "rating": 5,
+    "user_ratings_total": 57,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 782-0789",
+    "website": "https://chimneyrockac.com/?utm_source=google&utm_medium=Google_website",
+    "address": "5933 Bellaire Blvd #115, Houston, TX 77081, USA"
+  },
+  {
+    "place_id": "ChIJZUhwTgLDQIYRBawbRr4qSak",
+    "name": "Tek-Aire Services Inc",
+    "vicinity": "3900 Osage St, Houston",
+    "rating": 4.9,
+    "user_ratings_total": 69,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 783-7800",
+    "website": "",
+    "address": "3900 Osage St, Houston, TX 77063, USA"
+  },
+  {
+    "place_id": "ChIJLQJ7QL3dQIYRUIpSMNBwOHM",
+    "name": "Olympic Air Conditioning & Heating LLC",
+    "vicinity": "3200 Wilcrest Dr #170, Houston",
+    "rating": 5,
+    "user_ratings_total": 27,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 542-2077",
+    "website": "https://www.olympic-ac.com/",
+    "address": "3200 Wilcrest Dr #170, Houston, TX 77042, USA"
+  },
+  {
+    "place_id": "ChIJdwLISKraQIYRZSnde9fD4Vg",
+    "name": "Uptown Heating & Air Conditioning",
+    "vicinity": "11211 Richmond Ave. Suite B102, Houston",
+    "rating": 4.8,
+    "user_ratings_total": 2219,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 709-0236",
+    "website": "https://www.uptownac.com/",
+    "address": "11211 Richmond Ave. Suite B102, Houston, TX 77082, USA"
+  },
+  {
+    "place_id": "ChIJG67nRWPBQIYR3PGXl_xbKf8",
+    "name": "Newmark Air Conditioning",
+    "vicinity": "2925 Richmond Ave., Houston",
+    "rating": 5,
+    "user_ratings_total": 31,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 804-2121",
+    "website": "http://www.newmarkac.com/",
+    "address": "2925 Richmond Ave., Houston, TX 77098, USA"
+  },
+  {
+    "place_id": "ChIJ3zU5D63DQIYRG2mlx5nOj4s",
+    "name": "Fly HVAC",
+    "vicinity": "7395 Ashcroft Dr, Houston",
+    "rating": 5,
+    "user_ratings_total": 80,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 605-6239",
+    "website": "http://www.flyhvac.com/",
+    "address": "7395 Ashcroft Dr, Houston, TX 77081, USA"
+  },
+  {
+    "place_id": "ChIJHcb8fZq_QIYRxAKIEUiSL7E",
+    "name": "H-Town AC Repair HVAC services Houston",
+    "vicinity": "4243 Purdue St A, Houston",
+    "rating": 4.8,
+    "user_ratings_total": 234,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(832) 404-2062",
+    "website": "https://htownacrepair.com/",
+    "address": "4243 Purdue St A, Houston, TX 77005, USA"
+  },
+  {
+    "place_id": "ChIJv-Dq0-iVQIYRpNMdbvRcWn0",
+    "name": "Blueleaf Air Conditioning & Heating",
+    "vicinity": "5503 Almeda Rd, Houston",
+    "rating": 4.7,
+    "user_ratings_total": 89,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "general_contractor",
+      "point_of_interest",
+      "establishment"
+    ],
+    "phone": "(713) 295-9728",
+    "website": "https://callblueleafhvac.com/",
+    "address": "5503 Almeda Rd, Houston, TX 77004, USA"
+  }
+]

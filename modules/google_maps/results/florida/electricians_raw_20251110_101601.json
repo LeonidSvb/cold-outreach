@@ -1,0 +1,5694 @@
+{
+  "metadata": {
+    "timestamp": "20251110_101601",
+    "state": "florida",
+    "niche": "electricians",
+    "cities_processed": 20,
+    "total_raw_places": 279,
+    "note": "RAW data before filtering - no phone/website to save API costs",
+    "stats": {
+      "total_api_calls": 258,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 20,
+      "cities_processed": 20,
+      "total_cost": 0.0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Tampa, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ38Im05S9wogRlTgGmRaucRA",
+          "name": "Mr. Electric of Tampa Bay",
+          "vicinity": "7901 Benjamin Rd, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 939,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJo83MyGfDwogR78PZnGu1JkE",
+          "name": "Acme Electrical Services",
+          "vicinity": "6707 N Rome Ave, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 108,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZXXGoDPNwogRY7q5NnZ9J3M",
+          "name": "Brandon Electric",
+          "vicinity": "1034 Skipper Rd, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 1346,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD6hInM3NwogRPl5VKcgM5ko",
+          "name": "Small Jobs Electric, Inc.",
+          "vicinity": "5002 W Linebaugh Ave Ste C, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 2004,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGyDMV0HdwogR4pGk4iEssYs",
+          "name": "Powerhouse Pro Services",
+          "vicinity": "4302 W Wisconsin Ave, Tampa",
+          "rating": 5,
+          "user_ratings_total": 38,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD1cHdjhoxU8RMih0XMFddrU",
+          "name": "RUIZ ELECTRICAL SERVICES LLC",
+          "vicinity": "5834 Mohr Loop, Tampa",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJB1RzC3TxwogRjfHjfL4QtV0",
+          "name": "Energy Today",
+          "vicinity": "5401 E Sligh Ave, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 345,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_ZY93THPwogRAFoab36gf8Q",
+          "name": "Mister Sparky",
+          "vicinity": "5808 N 56th St, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 2444,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQ_awt-TCwogRCerAf1PVoKc",
+          "name": "Power Surge Electricians",
+          "vicinity": "4830 W Kennedy Blvd # 760, Tampa",
+          "rating": 5,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVyLDOxnDGGAR9YrqgYvU5s0",
+          "name": "Second Opinion Electric",
+          "vicinity": "2703 Auburn Ave W, Tampa",
+          "rating": 5,
+          "user_ratings_total": 57,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXQGQ4B2Bk4gRDcoyY0WHgRs",
+          "name": "Full Service Electrician Pros",
+          "vicinity": "1110 N Florida Ave, Tampa",
+          "rating": 5,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJze2AqPTBwogRcT0a1yWoBv0",
+          "name": "CJS Electric Inc.",
+          "vicinity": "4119 Gunn Hwy STE 28, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJC0WZ2RfDwogRlWDwjKsltTI",
+          "name": "Amp Control Electrician Works",
+          "vicinity": "3671 Co Rd 587, Tampa",
+          "rating": 5,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnwwaLMzNwogRogU4Gm-ivEY",
+          "name": "Home Service Heroes",
+          "vicinity": "8416 Laurel Fair Cir Suite 112, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 2690,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD7_7237DwogROHArjTALzB0",
+          "name": "Charter Electric",
+          "vicinity": "711 S Howard Ave # 200, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJqRy61HPFwogRsXeJG7jgOfo",
+          "name": "Empire Electric",
+          "vicinity": "901 E Jackson St, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ__9vZNHpwogR8cid_f4z2fQ",
+          "name": "Electrician Elite Solutions",
+          "vicinity": "2701 N Rocky Point Dr Suite 546, Tampa",
+          "rating": 5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJDf5v0mTOwogR-fUQem1mug4",
+          "name": "One Call Electric Solution",
+          "vicinity": "1757 W Brandon Blvd, Brandon",
+          "rating": 4.6,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJw6NRgs_DwogRNdcaRzu7GIs",
+          "name": "Cortez Electrical Solutions, Inc.",
+          "vicinity": "4716 N Cortez Ave, Tampa",
+          "rating": 5,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVVsfV0ziwogRuqj5fbsAmI4",
+          "name": "Hoffman Electrical & A/C",
+          "vicinity": "1909 N 57th St, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 3942,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 6,
+        "with_details": 6,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Jacksonville, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJScGo5i-25YgRSkfgXASc95s",
+          "name": "American Electrical Contracting Inc.",
+          "vicinity": "9016 Philips Hwy, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 2537,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyRZK7Vm05YgRBw_4Y3-Q5Ic",
+          "name": "American Electric",
+          "vicinity": "8751 Atlantic Blvd, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 376,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQ3B2DFOt5YgR06lazEDfSUE",
+          "name": "Burbank Electric",
+          "vicinity": "11227 Guinn Rd, Jacksonville",
+          "rating": 4.8,
+          "user_ratings_total": 145,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJX_xaQje15YgRh9l4K3L4BNk",
+          "name": "Mister Sparky First Coast",
+          "vicinity": "11290 St Johns Industrial Pkwy N #7, Jacksonville",
+          "rating": 4.8,
+          "user_ratings_total": 1758,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcRaK8V_K5YgRn1hkyqPD7tw",
+          "name": "Bolt Electric",
+          "vicinity": "1525 Romney St #1, Jacksonville",
+          "rating": 4.8,
+          "user_ratings_total": 424,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-4Q1Fd1L5IgRJc977KI4Q-M",
+          "name": "Tenax Electrical Company",
+          "vicinity": "11762 Marco Beach Dr #6, Jacksonville",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPTJY5-LJ5YgRG5qO73L-h6w",
+          "name": "David Gray",
+          "vicinity": "6491 Powers Ave Suite 4, Jacksonville",
+          "rating": 4.8,
+          "user_ratings_total": 964,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYXh_AATL5YgRGs_FUx5Uh0k",
+          "name": "Master Electric",
+          "vicinity": "8365 Dix Ellis Trail, Jacksonville",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZav54F3A5YgR0kB-IR8o-ik",
+          "name": "Thompson Electric and Air",
+          "vicinity": "1940 Haines St, Jacksonville",
+          "rating": 4.4,
+          "user_ratings_total": 195,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBeBHKg-15YgRaOPUGA3ZebI",
+          "name": "B and G electrical",
+          "vicinity": "3230 Kline Rd, Jacksonville",
+          "rating": 3.6,
+          "user_ratings_total": 25,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJUwg-giG85YgRk9EFg-97P44",
+          "name": "Lin's Electric Inc.",
+          "vicinity": "7820 Pritchard Rd, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 401,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIwPjvq-55YgR9o_BLv8uvKs",
+          "name": "Ace Electrical Services",
+          "vicinity": "4659 Hwy Ave, Jacksonville",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJT5CWm4G95YgRrVHKJ4ykZS0",
+          "name": "Hubbard Electrical Contracting, LLC",
+          "vicinity": "8627 Die Hard Ln, Jacksonville",
+          "rating": 5,
+          "user_ratings_total": 453,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKU9jUYu35YgRKcI__zemZIo",
+          "name": "Lion Electricians St. Augustine",
+          "vicinity": "701 San Marco Blvd, Jacksonville",
+          "rating": 0,
+          "user_ratings_total": 0,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJV1y0pLHL5YgRUfn97T__Oo4",
+          "name": "Mardant Electrical Construction Co",
+          "vicinity": "8967 Philips Hwy, Jacksonville",
+          "rating": 3.9,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJafpJ05MDviYRoh8gkciK7QA",
+          "name": "Wallace Electric Company, LLC",
+          "vicinity": "8535 Baymeadows Rd Unit 63, Jacksonville",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJy9H5Mouz5YgRlnIv-LU6IT8",
+          "name": "Empire Electric Inc.",
+          "vicinity": "5810 Macy Ave, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 296,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVZB4kMu45YgRt-gTBR1v8wc",
+          "name": "Robbins Electrical Services Inc.",
+          "vicinity": "7749 Normandy Blvd, Jacksonville",
+          "rating": 5,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSxHtIDa55YgRK6TllITaV4s",
+          "name": "Dobson Electric",
+          "vicinity": "6925 W Beaver St, Jacksonville",
+          "rating": 4.5,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJU68fvFi55YgR4u98205kpKk",
+          "name": "AEC Electrical Contracting",
+          "vicinity": "7005 Lloyd Rd W, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 9,
+        "with_details": 9,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Miami, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJtxsJgze32YgRQjTb_SOjt5A",
+          "name": "First Choice Home Electrician Miami",
+          "vicinity": "45 SW 9th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJjZzg5tO32YgRYDyZVHyPe6E",
+          "name": "Electrician Service Pros",
+          "vicinity": "3000 SW 3rd Ave, Miami",
+          "rating": 5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJv_iE20a32YgRbLqEE6cVaQ8",
+          "name": "First Choice Home Electrician Miami",
+          "vicinity": "2170 NW 11th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJUxCT_ryz2YgRlzidIvhRAh0",
+          "name": "Electrical Solution us llc",
+          "vicinity": "1881 79th Street Causeway, Miami Beach",
+          "rating": 4.9,
+          "user_ratings_total": 115,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJkW1OKZDH2YgRIrWJ3v1bJi4",
+          "name": "Full Service Home Electrician",
+          "vicinity": "6259 Sunset Dr, South Miami",
+          "rating": 5,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwyrqQuq72YgRCwD15LPRt18",
+          "name": "S.E. Bates Electric",
+          "vicinity": "9820 NW 80th Ave Ste 6-C, Hialeah Gardens",
+          "rating": 4.8,
+          "user_ratings_total": 348,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJJRrHbDe12YgRCiMBMhrZ3EI",
+          "name": "Zeek Electric",
+          "vicinity": "851 Meridian Ave APT 32, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFyFeRJq42YgRZ3zQ7PiJq1M",
+          "name": "Alex All Electric",
+          "vicinity": "8710 SW 42nd Terrace, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 111,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJEXvd_JW32YgRacnfN5LGcwI",
+          "name": "E&P Electrical services Miami",
+          "vicinity": "940 NW 8th Street Rd, Miami",
+          "rating": 5,
+          "user_ratings_total": 123,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJI71UP3W32YgRA9uzUdaTkSs",
+          "name": "Full Service Home Electrics Miami",
+          "vicinity": "87044 SW 26th Rd, Miami",
+          "rating": 5,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhXg3AFi32YgRL_hAOySmZ5Q",
+          "name": "Electrician Contractor Pros",
+          "vicinity": "3900 NW 7th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxU9ALJK32YgRFvh6V-DMz4A",
+          "name": "Full Service Electrician",
+          "vicinity": "933 NW 4th St, Miami",
+          "rating": 4.6,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8UXqpJPG2YgRMpyghQ7agiY",
+          "name": "Electric Service & Repair, Inc.",
+          "vicinity": "13335 SW 88th Ave, Miami",
+          "rating": 4.7,
+          "user_ratings_total": 60,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-7SiGZDMiSMRH3bBMBHGtJY",
+          "name": "My Angel Service",
+          "vicinity": "231 NW 24th Ave, Miami",
+          "rating": 5,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIy6Tv0O62YgRvxq5DBYRSa8",
+          "name": "Alex Electric Services Inc",
+          "vicinity": "2245 W 10th Ct, Hialeah",
+          "rating": 4.3,
+          "user_ratings_total": 55,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAdX1vHKx2YgRbejBAHQX7DI",
+          "name": "Home Electricіan Miami",
+          "vicinity": "650 NW 54th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 9,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3xpi3L232YgRgtKQ59YyICk",
+          "name": "Elekron Electric Inc",
+          "vicinity": "2332 Galiano St Second Floor, Coral Gables",
+          "rating": 5,
+          "user_ratings_total": 204,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLcCHzV4FjKMRz92Q0_UNvlQ",
+          "name": "Smartlife Electric INC",
+          "vicinity": "178 NW 47th Terrace, Miami",
+          "rating": 5,
+          "user_ratings_total": 68,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx91rncq8JiMRNhnmRNNV7jM",
+          "name": "Smart Electrical Company Llc",
+          "vicinity": "11295 Biscayne Blvd unit 811, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 58,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb6Fk87-72YgRWMPHBhTVPvQ",
+          "name": "Electrical Master System Corp",
+          "vicinity": "8064 W 15th Ln, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 10,
+        "with_details": 10,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Orlando, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJA_jjbYJ754gRyC-7_3Qho3Y",
+          "name": "Mr. Electric of Orlando",
+          "vicinity": "3700 34th St Suite 100B, Orlando",
+          "rating": 5,
+          "user_ratings_total": 209,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKX8UpuFx54gR0TdYUyFLgDU",
+          "name": "UP & Down Electrical Services LLC EC#13014809",
+          "vicinity": "452 Osceola St #201, Altamonte Springs",
+          "rating": 5,
+          "user_ratings_total": 29,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_yxntrWD54gR4FD_yyHLLbA",
+          "name": "Mister Sparky®",
+          "vicinity": "4301 Vineland Rd Suite E 3-4, Orlando",
+          "rating": 4.7,
+          "user_ratings_total": 845,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvT6Pv-Vz54gRjqyTNv3pBTk",
+          "name": "Mister Sparky",
+          "vicinity": "2400 Silver Star Rd Suite A, Orlando",
+          "rating": 4.8,
+          "user_ratings_total": 3412,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ80AA9r1_54gR0HeS8YGM9LE",
+          "name": "FRED Electrical Residential Services",
+          "vicinity": "6452 Vineland Rd unit 106, Orlando",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMf_lSVul2YgRiDFcFp_K6kE",
+          "name": "1st Electricians",
+          "vicinity": "1650 N Mills Ave, Orlando",
+          "rating": 5,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ87w3eZZv54gRodnjMFEXJEs",
+          "name": "Just Do It Pros LLC",
+          "vicinity": "1060 Lundy Ct, Winter Park",
+          "rating": 5,
+          "user_ratings_total": 32,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzQLICLVx54gRtUiQneTPXdg",
+          "name": "Fluff Electrician Co.",
+          "vicinity": "631 Orlando Ave, Maitland",
+          "rating": 5,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ1wjZLOVh54gRFXmjjZ3pyBw",
+          "name": "FC ELECTRIC GROUP LLC",
+          "vicinity": "10514 Green Ivy Ln, Orlando",
+          "rating": 5,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ7-foMndw54gR5DNVAtFykiU",
+          "name": "Palmer Electric Company",
+          "vicinity": "MAIN OFFICE, 875 Jackson Ave, Winter Park",
+          "rating": 4.3,
+          "user_ratings_total": 160,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJP6NPk-h854gRS92A2ryHzyU",
+          "name": "Prestige Electric Co-Florida",
+          "vicinity": "7423 S Orange Ave, Orlando",
+          "rating": 3.7,
+          "user_ratings_total": 58,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNZpaRWp554gRLyejW2-Hk_o",
+          "name": "Better Pricing Electrician of Orlando",
+          "vicinity": "1415 Mercy Dr #536, Orlando",
+          "rating": 3,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJm-v95KR554gRR1wTg17axOg",
+          "name": "Mechanical One of Orlando - Air Conditioning, Plumbing and Electrical",
+          "vicinity": "5257 L B McLeod Rd Suite 1200, Orlando",
+          "rating": 5,
+          "user_ratings_total": 913,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXdptzSET54gRh7NYr1UJ7w0",
+          "name": "Central Florida Electrician",
+          "vicinity": "243 N Texas Ave, Orlando",
+          "rating": 4.9,
+          "user_ratings_total": 116,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb9RaI-N654gRhpXMDRLXmJ0",
+          "name": "Smartron Electric",
+          "vicinity": "2433 Lee Rd, Winter Park",
+          "rating": 5,
+          "user_ratings_total": 169,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJc837NldT54gRvtpeFB8GWMo",
+          "name": "MTK Electric Inc",
+          "vicinity": "1881 Lee Rd, Winter Park",
+          "rating": 5,
+          "user_ratings_total": 144,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZ_PNMKd754gRMzwikiHBo2Q",
+          "name": "Star Electric",
+          "vicinity": "1707 S Division Ave, Orlando",
+          "rating": 4.3,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg8-zHThx54gRQ0cwoHyoqJM",
+          "name": "Super Fast Electric",
+          "vicinity": "1070 Bunnell Rd B2, Altamonte Springs",
+          "rating": 5,
+          "user_ratings_total": 239,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzWwX5mUWew4RokpSK_rYLYw",
+          "name": "DH Electric",
+          "vicinity": "3499 Seagrape Dr, Winter Park",
+          "rating": 4.9,
+          "user_ratings_total": 72,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJN4Wf6r-R3YgR3W1hYx7hbJM",
+          "name": "In Phaze Electric Inc.",
+          "vicinity": "2200 N Forsyth Rd, Orlando",
+          "rating": 4.8,
+          "user_ratings_total": 666,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 12,
+        "with_details": 12,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "St. Petersburg, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJzWRnfj37wogRBRH0rvq3rzg",
+          "name": "Blue Collar Electric",
+          "vicinity": "1301 Seminole Blvd #113, Largo",
+          "rating": 4.9,
+          "user_ratings_total": 661,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJA3BCYs39wogR_2uvT4dk7zA",
+          "name": "M.R. Electricians",
+          "vicinity": "9225 Ulmerton Rd STE J, Largo",
+          "rating": 4.9,
+          "user_ratings_total": 250,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPbJdyorjwogRMR-EbunCWIg",
+          "name": "Luminous Electric",
+          "vicinity": "3350 Ulmerton Rd ste 20, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 530,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ7ZQQ5xzlwogRCB_z08nZLH8",
+          "name": "Live Wire Electrical Services, Inc.",
+          "vicinity": "12141 62nd St N, Largo",
+          "rating": 4.7,
+          "user_ratings_total": 138,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgc_78E0P42gRJsvMaWeMNxs",
+          "name": "Doolbar Electrical Contracting Services, LLC",
+          "vicinity": "7701 Starkey Rd APT 437, Seminole",
+          "rating": 5,
+          "user_ratings_total": 56,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGyDMV0HdwogR4pGk4iEssYs",
+          "name": "Powerhouse Pro Services",
+          "vicinity": "4302 W Wisconsin Ave, Tampa",
+          "rating": 5,
+          "user_ratings_total": 38,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFaB2RATywogR9njvw6ejqnA",
+          "name": "TR Electric",
+          "vicinity": "8300 Ulmerton Rd Suite 126, Largo",
+          "rating": 4.9,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJu59GlS39wogRMPr0sxg_qlc",
+          "name": "Electrician of Saint Petersburg",
+          "vicinity": "280 126th Ave, Treasure Island",
+          "rating": 4.8,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQAAANHxwogRoWKe8MkrgIM",
+          "name": "Mister Sparky",
+          "vicinity": "12345 Starkey Rd Suite B, Largo",
+          "rating": 4.8,
+          "user_ratings_total": 3072,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9fgvupfhwogR3_W6zqmv5VI",
+          "name": "Influx Electricians Saint Petersburg",
+          "vicinity": "445 32nd Ave N, St. Petersburg",
+          "rating": 4.8,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQynSWD3nwogRSni0fr_SSAY",
+          "name": "Fivestar Electricians",
+          "vicinity": "600 76th Ave N, St. Petersburg",
+          "rating": 4.8,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQCRSWzhwogRJPMYWSke49A",
+          "name": "Three Guys A/C & Electrical",
+          "vicinity": "4900 Creekside Dr Ste. J, Clearwater",
+          "rating": 4.9,
+          "user_ratings_total": 1128,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoTNcKQ3jwogRd7AztL53AuA",
+          "name": "Magic Electric",
+          "vicinity": "6079 Gulfport Blvd S, Gulfport",
+          "rating": 4.4,
+          "user_ratings_total": 14,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJTdPEjHzhwogRf75l7fnpOEQ",
+          "name": "JL Local Electricians",
+          "vicinity": "2800 4th St S, St. Petersburg",
+          "rating": 4.7,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ863s_y4dw4gRckcraocd9jI",
+          "name": "Zenith View Electric",
+          "vicinity": "4193 US-19, St. Petersburg",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJN-lWFWvhwogRlW1rq32C26A",
+          "name": "Edison Electricians of St Petersburg",
+          "vicinity": "735 Arlington Ave N Ste 106, St. Petersburg",
+          "rating": 5,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJC2Ic3RjMsksRIS4X_57HLG0",
+          "name": "Green Light Electric",
+          "vicinity": "13750 49th Street N Suite 4, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 108,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJsVYGhh_lwogR5Y_z9ntzFKQ",
+          "name": "Majestic Services | HVAC, Plumbing, Electrical",
+          "vicinity": "11475 49th Street N Ste 300, Clearwater",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh4tfcJPkwogR9zr9D6WPT9o",
+          "name": "Ezell Electric",
+          "vicinity": "4985 72nd Ave N, Pinellas Park",
+          "rating": 4.8,
+          "user_ratings_total": 239,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJF4rahAwew4gRuBEvqZv4-CA",
+          "name": "Everingham Electric",
+          "vicinity": "3620 18th Ave S, St. Petersburg",
+          "rating": 4.8,
+          "user_ratings_total": 152,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Hialeah, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJXW_TXLWt2YgRQVvDcMumxlw",
+          "name": "Electrical Services fl",
+          "vicinity": "1800 NE 180th St, North Miami Beach",
+          "rating": 4.9,
+          "user_ratings_total": 349,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJUcIrp4PI0IQR8VyAam7hAaY",
+          "name": "R Ruano General Services",
+          "vicinity": "6861 SW 147th Ave, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 105,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh2F9Uiat2YgRJvWdY3dYQ_4",
+          "name": "Miami Speedy Commercial Electricians",
+          "vicinity": "645 NE 167th St #8000, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJUxCT_ryz2YgRlzidIvhRAh0",
+          "name": "Electrical Solution us llc",
+          "vicinity": "1881 79th Street Causeway, Miami Beach",
+          "rating": 4.9,
+          "user_ratings_total": 115,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJkW1OKZDH2YgRIrWJ3v1bJi4",
+          "name": "Full Service Home Electrician",
+          "vicinity": "6259 Sunset Dr, South Miami",
+          "rating": 5,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFyFeRJq42YgRZ3zQ7PiJq1M",
+          "name": "Alex All Electric",
+          "vicinity": "8710 SW 42nd Terrace, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 111,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwyrqQuq72YgRCwD15LPRt18",
+          "name": "S.E. Bates Electric",
+          "vicinity": "9820 NW 80th Ave Ste 6-C, Hialeah Gardens",
+          "rating": 4.8,
+          "user_ratings_total": 348,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJjZzg5tO32YgRYDyZVHyPe6E",
+          "name": "Electrician Service Pros",
+          "vicinity": "3000 SW 3rd Ave, Miami",
+          "rating": 5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtxsJgze32YgRQjTb_SOjt5A",
+          "name": "First Choice Home Electrician Miami",
+          "vicinity": "45 SW 9th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJe9e_JVPC8EMRjfXAB0hMuZ4",
+          "name": "Dragon Electric Services",
+          "vicinity": "6175 NW 167th St STE G38, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSXgXH2mt2YgRUGLgWtcXVxs",
+          "name": "Electrician Network Hollywood",
+          "vicinity": "19443 Presidential Way, North Miami Beach",
+          "rating": 4.8,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJEXvd_JW32YgRacnfN5LGcwI",
+          "name": "E&P Electrical services Miami",
+          "vicinity": "940 NW 8th Street Rd, Miami",
+          "rating": 5,
+          "user_ratings_total": 123,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJJRrHbDe12YgRCiMBMhrZ3EI",
+          "name": "Zeek Electric",
+          "vicinity": "851 Meridian Ave APT 32, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJI71UP3W32YgRA9uzUdaTkSs",
+          "name": "Full Service Home Electrics Miami",
+          "vicinity": "87044 SW 26th Rd, Miami",
+          "rating": 5,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-7SiGZDMiSMRH3bBMBHGtJY",
+          "name": "My Angel Service",
+          "vicinity": "231 NW 24th Ave, Miami",
+          "rating": 5,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIbg4vMXB2YgRaeIbFmvtw58",
+          "name": "EU Electrical Contractor",
+          "vicinity": "10671 NW 122nd St, Medley",
+          "rating": 4.9,
+          "user_ratings_total": 28,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJv_iE20a32YgRbLqEE6cVaQ8",
+          "name": "First Choice Home Electrician Miami",
+          "vicinity": "2170 NW 11th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxU9ALJK32YgRFvh6V-DMz4A",
+          "name": "Full Service Electrician",
+          "vicinity": "933 NW 4th St, Miami",
+          "rating": 4.6,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhXg3AFi32YgRL_hAOySmZ5Q",
+          "name": "Electrician Contractor Pros",
+          "vicinity": "3900 NW 7th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb6Fk87-72YgRWMPHBhTVPvQ",
+          "name": "Electrical Master System Corp",
+          "vicinity": "8064 W 15th Ln, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 10,
+        "with_details": 10,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Tallahassee, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJj4BLMDNf7IgRBlbIxOoBOqY",
+          "name": "GT Electric",
+          "vicinity": "3154 Eliza Rd, Tallahassee",
+          "rating": 4.6,
+          "user_ratings_total": 155,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAckzlzvx7IgRwfbsUYippns",
+          "name": "Weston Trawick, Inc.",
+          "vicinity": "5392 Tower Rd, Tallahassee",
+          "rating": 4.8,
+          "user_ratings_total": 68,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJG6C5qJD17IgRdvhCYsyUez4",
+          "name": "Chad O'Hara's Quality Electrical Services Inc.",
+          "vicinity": "1130 Thomasville Rd, Tallahassee",
+          "rating": 4,
+          "user_ratings_total": 35,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNVu_DXLnk4gRf9Ruv9hKRfs",
+          "name": "D.F.S ELECTRICAL SERVICES EC13008805",
+          "vicinity": "3148 Dick Wilson Blvd Unit 2115, Tallahassee",
+          "rating": 4.8,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBzHXhFqN7IgRIToEfG5mc1Q",
+          "name": "Northeast Electrical, llc",
+          "vicinity": "7061 John Wayne Ct, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 9,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJncQlt5Fa7IgRUR7LdzBpizY",
+          "name": "Fraser Electric Inc.",
+          "vicinity": "5084 Louvinia Dr, Tallahassee",
+          "rating": 4.3,
+          "user_ratings_total": 39,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ1apft-717IgRlANQb5cPjsU",
+          "name": "Electrician Pros Tallahassee",
+          "vicinity": "401 W Park Ave #207, Tallahassee",
+          "rating": 0,
+          "user_ratings_total": 0,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJc_VK3Wnx7IgR28a_0pTZqJw",
+          "name": "Joel Foy Electrical Service",
+          "vicinity": "5650 Gum Rd, Tallahassee",
+          "rating": 4.8,
+          "user_ratings_total": 634,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJs7-ELuJf7IgRPeZYx-KiuU8",
+          "name": "Edison Electricians of Tallahassee",
+          "vicinity": "2700 S Blair Stone Rd ste f, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJTwM9_Jxf7IgR8Dn-69PzBuA",
+          "name": "Marlin Electrical Service",
+          "vicinity": "1509 Valley Rd, Tallahassee",
+          "rating": 4,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZTSnmZT17IgRupiJAWt5QsQ",
+          "name": "Rocafort Electrical Services, LLC",
+          "vicinity": "2113 Great Oak Dr, Tallahassee",
+          "rating": 4.6,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJV0SV3Z1Z7IgR0MGV-fxqIqA",
+          "name": "Truevolt Electrical Services Inc",
+          "vicinity": "4786 Woodlane Cir Apartment A, Tallahassee",
+          "rating": 4.9,
+          "user_ratings_total": 147,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJy8ftV0th7IgRHU1GWIXrM1Q",
+          "name": "Macon Electric LLC",
+          "vicinity": "10720 Sycamore Ridge Ln, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5-0V2kDx7IgRN_rwNUq173Q",
+          "name": "Lawson & Lawson Electrical Services",
+          "vicinity": "5019 Metzke Ln, Tallahassee",
+          "rating": 4.7,
+          "user_ratings_total": 138,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0eoAljeL7IgR58btWFHf6YQ",
+          "name": "Ed Bolden's Electric LLC",
+          "vicinity": "275 Crossway Rd, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJuVh0j5b07IgRcWj7aEIvjsc",
+          "name": "A+ Electrical Contractors LLC",
+          "vicinity": "956 Yulee St, Tallahassee",
+          "rating": 4.7,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcauedFjx7IgRSd_qG0y3Wu4",
+          "name": "RC Electric Heating & A/C",
+          "vicinity": "2477 Tower Rd, Tallahassee",
+          "rating": 0,
+          "user_ratings_total": 0,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJza6ndXzz7IgRz68Unfjuzn8",
+          "name": "Joyner Electric, Inc.",
+          "vicinity": "4955 Swamp Fox Rd, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJt4fJd6Jf7IgRc5ZnTGPGsmM",
+          "name": "Barksdale Electric Inc.",
+          "vicinity": "1882 Capital Cir NE #105, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJL3iJO5iK7IgRHEUcRR_vIIU",
+          "name": "Enlighten Electric Inc",
+          "vicinity": "282 Crossway Rd, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 9,
+        "with_details": 9,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Port St. Lucie, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJV5DTE062fyEROlfQSWHgK1A",
+          "name": "New Dimension Electrical Service",
+          "vicinity": "2065 SE Allamanda Dr, Port St. Lucie",
+          "rating": 4.9,
+          "user_ratings_total": 85,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJd6QmnVBiqwARx32Mgu1qnPE",
+          "name": "Wire it up with Lindor Electric",
+          "vicinity": "401 SW Meadow Terrace, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 102,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJkViFvdrD3ogR58tSA_T06zg",
+          "name": "Mast Electric Inc.",
+          "vicinity": "1108 SW 28th St, Palm City",
+          "rating": 4.9,
+          "user_ratings_total": 68,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJF1ide4Lo3ogRb-IWCVL0Zxc",
+          "name": "FL Electricians",
+          "vicinity": "2033 SE Lennard Rd, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBWjQCsTr3ogRi4umElloS2w",
+          "name": "MOV Electric Solutions Corp",
+          "vicinity": "832 SW Hamberland Ave, Port St. Lucie",
+          "rating": 4.9,
+          "user_ratings_total": 25,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZU9ugDXp3ogRN6dxQe91JGY",
+          "name": "Supreme Electric",
+          "vicinity": "313 SE Husted Terrace, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4ZsRyjvm3ogRVDnVVPn16Q0",
+          "name": "Express Electrician",
+          "vicinity": "1900 SW Aledo Ln, Port St. Lucie",
+          "rating": 4.7,
+          "user_ratings_total": 9,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJo7RRO7rp3ogRo3_rb4fiR6Y",
+          "name": "Sky Wave Electric",
+          "vicinity": "3429 SE Hart Cir, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_UEMb4rs3ogRzpqfHyedXg8",
+          "name": "All American Air & Electric",
+          "vicinity": "1959 SW South Macedo Blvd, Port St. Lucie",
+          "rating": 3.8,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq80YEr_r3ogR8HyuQ--VSJA",
+          "name": "Stott Brothers Electric",
+          "vicinity": "1298 SW Biltmore St suite f, Port St. Lucie",
+          "rating": 4.9,
+          "user_ratings_total": 567,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJA9OSYOfZ7CkRq2ovvmpL-k0",
+          "name": "Brighter Days Electrical Repair",
+          "vicinity": "464 NW Peacock Blvd Unit 118, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 293,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBTsXXWM76EARSM_i-2jWX3g",
+          "name": "E2 Electric and Home Services Inc",
+          "vicinity": "1610 SE Village Green Dr, Port St. Lucie",
+          "rating": 4.5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJDXgvC1nD3ogR7HyJUIQy_xw",
+          "name": "Ehman Electrical Contractor LLC",
+          "vicinity": "320 NW Enterprise Dr Suite 121, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 340,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGztAyN7C3ogRh7XTqdlbPL4",
+          "name": "Stryker Electric & Air",
+          "vicinity": "4241 SW High Meadow Ave, Palm City",
+          "rating": 4.9,
+          "user_ratings_total": 182,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwQ8-MODr3ogR8xpN_c9enSA",
+          "name": "Elite Electric, Plumbing & Air",
+          "vicinity": "1691 SW South Macedo Blvd, Port St. Lucie",
+          "rating": 4.8,
+          "user_ratings_total": 4917,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ75YW0pbo3ogRh-inAcKuy6k",
+          "name": "Go Local Electric, LLC",
+          "vicinity": "660 SE Monterey Rd, Stuart",
+          "rating": 4.9,
+          "user_ratings_total": 32,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIz6BRwDr3ogRhTijvBWTZic",
+          "name": "Castillo’s Electrical Service LLC",
+          "vicinity": "1773 SW Hampshire Ln, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 70,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-W5FsF3n3ogRBAYhWtmEgNc",
+          "name": "Sparks Electrical Contracting, LLC",
+          "vicinity": "627 NW Buck Hendry Way, Stuart",
+          "rating": 4.8,
+          "user_ratings_total": 104,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-dJxVCvU3ogR8rOCAVFBetI",
+          "name": "Excel Electric LLC",
+          "vicinity": "534 NW Mercantile Pl Unit E-110, Port St. Lucie",
+          "rating": 4.8,
+          "user_ratings_total": 247,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0zbrFn7t3ogRP8wzAKQRKAM",
+          "name": "Tradition Electric",
+          "vicinity": "510 NW University Blvd #106, Port St. Lucie",
+          "rating": 4.9,
+          "user_ratings_total": 60,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Cape Coral, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJDwCA8NND24gRynl6gNrkFSI",
+          "name": "Electrical Experts of FL LLC",
+          "vicinity": "4750 Bayline Dr #2, North Fort Myers",
+          "rating": 5,
+          "user_ratings_total": 374,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSfyDY2IV24gRWLEYdT_-JFU",
+          "name": "All Phase Electric Service",
+          "vicinity": "2340 Bruner Ln, Fort Myers",
+          "rating": 4.8,
+          "user_ratings_total": 306,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZR1ikMM324gRjcssUoRYaQc",
+          "name": "Gault Electric South",
+          "vicinity": "2545 Surfside Blvd, Cape Coral",
+          "rating": 4.7,
+          "user_ratings_total": 96,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGcuaXd5r24gRcfQS43SBye0",
+          "name": "Electrician Fort Myers",
+          "vicinity": "3550 Work Dr Suite A3, Fort Myers",
+          "rating": 5,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWShe9aRq24gRKPMzcI00rPI",
+          "name": "ABC Electric Service, Inc.",
+          "vicinity": "210 5th St, Fort Myers",
+          "rating": 4.3,
+          "user_ratings_total": 32,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq9lb3X0_24gRBIC0tNBUGjQ",
+          "name": "Haddad Electric LLC",
+          "vicinity": "16021 Siesta Dr, Fort Myers",
+          "rating": 5,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJRVEAJppq24gRpW_4hIue4jw",
+          "name": "D & R Electrical Services",
+          "vicinity": "2783 N Airport Rd, Fort Myers",
+          "rating": 4.4,
+          "user_ratings_total": 24,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-S2AAO5_uAARDNaB0jEN0Ug",
+          "name": "Mr. Mike Electric",
+          "vicinity": "10201 Metro Pkwy Unit 115, Fort Myers",
+          "rating": 4.8,
+          "user_ratings_total": 62,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJi3G9OqVG24gRW5mh_fgSfQs",
+          "name": "Young's Electrical Contracting, Inc.",
+          "vicinity": "413 NE Van Loon Ln #116, Cape Coral",
+          "rating": 4.3,
+          "user_ratings_total": 56,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJi3G9OqVG24gRnlLi-QVfQkw",
+          "name": "Mr. Electric of Southwest Florida",
+          "vicinity": "2673 NE 9th Ave, Cape Coral",
+          "rating": 4.4,
+          "user_ratings_total": 76,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJO7CJjNQb24gRytPcBD97m3U",
+          "name": "Best Home Services",
+          "vicinity": "16090 S Tamiami Trl, Fort Myers",
+          "rating": 4.7,
+          "user_ratings_total": 6851,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4e6XtvTVuSYRmGAyj16nv7w",
+          "name": "Southern Power Electric",
+          "vicinity": "2275 Bruner Ln #5, Fort Myers",
+          "rating": 4.7,
+          "user_ratings_total": 25,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9_eXXGpKMI8RGjVOAMSiKL0",
+          "name": "Markarian Electric",
+          "vicinity": "3592 Broadway Suite 130, Fort Myers",
+          "rating": 5,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJqRMPEWV2tqYRpm4cDor55SQ",
+          "name": "SWFL Electrical Services, LLC",
+          "vicinity": "87 Mildred Dr, Fort Myers",
+          "rating": 5,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYwkegp4V24gR2x9M-oR7c5I",
+          "name": "York Electric & Design LLC",
+          "vicinity": "2307 Bruner Ln #7, Fort Myers",
+          "rating": 4.6,
+          "user_ratings_total": 37,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJk0W0B2UV24gRuPB5p2zrB9A",
+          "name": "Mabry Brothers, Inc",
+          "vicinity": "5731 Halifax Ave, Fort Myers",
+          "rating": 4.8,
+          "user_ratings_total": 218,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnXVO8KtA24gRyTE03C5fUSA",
+          "name": "Nauti Electric Inc.",
+          "vicinity": "4313 SE 13th Pl, Cape Coral",
+          "rating": 4.9,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_ZsPV51H24gRuE1R2ihv6Ok",
+          "name": "FLIP THE SWITCH ELECTRICAL CONTRACTORS LLC",
+          "vicinity": "2313 SE 5th Pl, Cape Coral",
+          "rating": 4.9,
+          "user_ratings_total": 164,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJTd_4NPFD24gR9YntAPQAvI0",
+          "name": "Coharbor Electric LLC",
+          "vicinity": "11270 Metro Pkwy #5, Fort Myers",
+          "rating": 4.9,
+          "user_ratings_total": 479,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJl3a2-Yw_24gRfHQNl_4XbLc",
+          "name": "Plumbing, Cooling & Electrical Nerds",
+          "vicinity": "1639 Cape Coral Pkwy E UNIT 201, Cape Coral",
+          "rating": 4.8,
+          "user_ratings_total": 1225,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Fort Lauderdale, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ95pwA6gB2YgR18Ptg2ZAGu0",
+          "name": "Berger Brothers Electrical Service",
+          "vicinity": "3847 N Andrews Ave #93C, Fort Lauderdale",
+          "rating": 4.8,
+          "user_ratings_total": 127,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJL6vGjoID2YgRHUAyyjwm-6I",
+          "name": "Jesselectric, Inc",
+          "vicinity": "671 NE 42nd St, Oakland Park",
+          "rating": 4.9,
+          "user_ratings_total": 184,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxz7pVMXZsWER0km-ZqpuKNE",
+          "name": "Solomon Electric",
+          "vicinity": "4036 N 29th Ave, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 343,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5_9vf_YC2YgRUFvSmlTam3o",
+          "name": "Burley Electrical Service",
+          "vicinity": "172 SW 5th St, Pompano Beach",
+          "rating": 5,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr8ecLwAE2YgRFq-tckUk3Ng",
+          "name": "Sirius Electrical Contractors, LLC",
+          "vicinity": "4700 Prospect Rd STE 103, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 70,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ27NrBWmp2YgRUpYmWazBg4s",
+          "name": "24/7 Electrician LLC",
+          "vicinity": "1315 N 47th Ave, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 41,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhWK_cRIB2YgRthfalSp4Xhw",
+          "name": "First Property Electrician Fort Lauderdale",
+          "vicinity": "405 NE 2nd St, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0yNKXPAH2YgRcr_H6lzS_LA",
+          "name": "Wiseminds Electrical Contractors",
+          "vicinity": "2709 Willow Ave, Lauderdale Lakes",
+          "rating": 4.9,
+          "user_ratings_total": 150,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJX70pWFyp2YgRLMUuwOrTWFo",
+          "name": "1st Electricians",
+          "vicinity": "3400 Davie Rd, Davie",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrZvA8vgE2YgRqAGPeDHnrL8",
+          "name": "Next Generation Electrical Contractors LLC",
+          "vicinity": "7330 SW 1st St, Margate",
+          "rating": 4.9,
+          "user_ratings_total": 43,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJccce_GgD2YgR5BqgIcgpoRQ",
+          "name": "First Property Electrician Coconut Creek",
+          "vicinity": "4303 FL-814, Coconut Creek",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQBAxzsA2YgR02oW1Hnle24",
+          "name": "ALLSITE ELECTRIC LLC",
+          "vicinity": "10001 NW 50th St Suite 203D, Sunrise",
+          "rating": 4.9,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJeQDS61IC2YgRY3E1OHKIRzs",
+          "name": "Mister Sparky",
+          "vicinity": "1597 Banks Rd, Margate",
+          "rating": 4.8,
+          "user_ratings_total": 3432,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtxmO1psF2YgRnwTZl9AsVsA",
+          "name": "Full Service Home Electrician",
+          "vicinity": "8040 W McNab Rd, North Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyUQR2pYB2YgRjkh4DOAUoMU",
+          "name": "Full Service Home Electrician",
+          "vicinity": "2734 E Oakland Park Blvd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJDXq4X4392IgRL1FZ7qqbj5M",
+          "name": "First Choice Home Electricians",
+          "vicinity": "4109 N Ocean Dr, Lauderdale-By-The-Sea",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8eX_0E6p2YgRb6R1jtXMTok",
+          "name": "Mr. Electric Inc",
+          "vicinity": "4053 Peters Rd, Plantation",
+          "rating": 4.7,
+          "user_ratings_total": 73,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh3vjoAMCZGYRC2vbUDuTpT0",
+          "name": "Global Power & Ac Corp of Broward",
+          "vicinity": "1505 NW 91st Ave Apt. 1033, Coral Springs",
+          "rating": 5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAWE1qa6AYyARXbYygcNqiF4",
+          "name": "Superior Electric and Air",
+          "vicinity": "1975 E Sunrise Blvd #535, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 79,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0UENpW4D2YgRfVDmXbwUfgw",
+          "name": "QuickCall Electricians",
+          "vicinity": "2140 NE 56th St, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 12,
+        "with_details": 12,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Pembroke Pines, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJXW_TXLWt2YgRQVvDcMumxlw",
+          "name": "Electrical Services fl",
+          "vicinity": "1800 NE 180th St, North Miami Beach",
+          "rating": 4.9,
+          "user_ratings_total": 349,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKTm8yZWm2YgRwrWq5IX27Yk",
+          "name": "A Plus Electrical Technologies Inc.",
+          "vicinity": "500 SW 145th Ave Unit# 101, Pembroke Pines",
+          "rating": 5,
+          "user_ratings_total": 89,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxz7pVMXZsWER0km-ZqpuKNE",
+          "name": "Solomon Electric",
+          "vicinity": "4036 N 29th Ave, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 343,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh2F9Uiat2YgRJvWdY3dYQ_4",
+          "name": "Miami Speedy Commercial Electricians",
+          "vicinity": "645 NE 167th St #8000, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ27NrBWmp2YgRUpYmWazBg4s",
+          "name": "24/7 Electrician LLC",
+          "vicinity": "1315 N 47th Ave, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 41,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJX70pWFyp2YgRLMUuwOrTWFo",
+          "name": "1st Electricians",
+          "vicinity": "3400 Davie Rd, Davie",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8eX_0E6p2YgRb6R1jtXMTok",
+          "name": "Mr. Electric Inc",
+          "vicinity": "4053 Peters Rd, Plantation",
+          "rating": 4.7,
+          "user_ratings_total": 73,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJe9e_JVPC8EMRjfXAB0hMuZ4",
+          "name": "Dragon Electric Services",
+          "vicinity": "6175 NW 167th St STE G38, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSXgXH2mt2YgRUGLgWtcXVxs",
+          "name": "Electrician Network Hollywood",
+          "vicinity": "19443 Presidential Way, North Miami Beach",
+          "rating": 4.8,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6qWkscJ2YgRQyJyzGH3AWE",
+          "name": "Allbrite Electric & Services",
+          "vicinity": "13762 W State Rd 84 Suite 63, Davie",
+          "rating": 5,
+          "user_ratings_total": 39,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIbg4vMXB2YgRaeIbFmvtw58",
+          "name": "EU Electrical Contractor",
+          "vicinity": "10671 NW 122nd St, Medley",
+          "rating": 4.9,
+          "user_ratings_total": 28,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcQDgr6Sn2YgR3A043nA8Iyo",
+          "name": "Code One Electric LLC",
+          "vicinity": "4111 SW 47th Ave, Davie",
+          "rating": 4.6,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb6Fk87-72YgRWMPHBhTVPvQ",
+          "name": "Electrical Master System Corp",
+          "vicinity": "8064 W 15th Ln, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBzvPPNSr2YgRcIxhYVmKqPo",
+          "name": "CurrentTech Electrical Services",
+          "vicinity": "3866 Sheridan St, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx91rncq8JiMRNhnmRNNV7jM",
+          "name": "Smart Electrical Company Llc",
+          "vicinity": "11295 Biscayne Blvd unit 811, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 58,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg_i68eMH2YgR1kXP8ZwPSW4",
+          "name": "ELECTRICIANS ON CALL, CORP",
+          "vicinity": "1431 SW 63rd Terrace, Plantation",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh3pCDoi72YgRHAxHtXMNUiA",
+          "name": "A-1 Florida Electric Contractor",
+          "vicinity": "12101 NW 98th Ave, Hialeah Gardens",
+          "rating": 4.7,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwRkVTsYH2YgR1WQ7xEs_OhY",
+          "name": "ON Service Electricians",
+          "vicinity": "8021 Peters Rd, Plantation",
+          "rating": 5,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpbZKTBSp2YgR87mUd5dwX8w",
+          "name": "Power Point Electric, inc",
+          "vicinity": "6235 Grant Ct, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYeP_-yCv2YgRWTn9oT7-0_8",
+          "name": "Meisner Electric",
+          "vicinity": "7429 Riviera Blvd, Miramar",
+          "rating": 5,
+          "user_ratings_total": 25,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 14,
+        "with_details": 14,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Hollywood, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJXW_TXLWt2YgRQVvDcMumxlw",
+          "name": "Electrical Services fl",
+          "vicinity": "1800 NE 180th St, North Miami Beach",
+          "rating": 4.9,
+          "user_ratings_total": 349,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxz7pVMXZsWER0km-ZqpuKNE",
+          "name": "Solomon Electric",
+          "vicinity": "4036 N 29th Ave, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 343,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh2F9Uiat2YgRJvWdY3dYQ_4",
+          "name": "Miami Speedy Commercial Electricians",
+          "vicinity": "645 NE 167th St #8000, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ27NrBWmp2YgRUpYmWazBg4s",
+          "name": "24/7 Electrician LLC",
+          "vicinity": "1315 N 47th Ave, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 41,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhWK_cRIB2YgRthfalSp4Xhw",
+          "name": "First Property Electrician Fort Lauderdale",
+          "vicinity": "405 NE 2nd St, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJX70pWFyp2YgRLMUuwOrTWFo",
+          "name": "1st Electricians",
+          "vicinity": "3400 Davie Rd, Davie",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJe9e_JVPC8EMRjfXAB0hMuZ4",
+          "name": "Dragon Electric Services",
+          "vicinity": "6175 NW 167th St STE G38, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSXgXH2mt2YgRUGLgWtcXVxs",
+          "name": "Electrician Network Hollywood",
+          "vicinity": "19443 Presidential Way, North Miami Beach",
+          "rating": 4.8,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8eX_0E6p2YgRb6R1jtXMTok",
+          "name": "Mr. Electric Inc",
+          "vicinity": "4053 Peters Rd, Plantation",
+          "rating": 4.7,
+          "user_ratings_total": 73,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAWE1qa6AYyARXbYygcNqiF4",
+          "name": "Superior Electric and Air",
+          "vicinity": "1975 E Sunrise Blvd #535, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 79,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-2COyV4B2YgRiUf8o0Oavv8",
+          "name": "Fort Lauderdale Electricians",
+          "vicinity": "1001 SE 14th Pl #2B, Fort Lauderdale",
+          "rating": 4.6,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcQDgr6Sn2YgR3A043nA8Iyo",
+          "name": "Code One Electric LLC",
+          "vicinity": "4111 SW 47th Ave, Davie",
+          "rating": 4.6,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBzvPPNSr2YgRcIxhYVmKqPo",
+          "name": "CurrentTech Electrical Services",
+          "vicinity": "3866 Sheridan St, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKVpzFBet2YgRgPp3mog48AQ",
+          "name": "Gelik Electrical Inc.",
+          "vicinity": "3040 NE 190th St, Aventura",
+          "rating": 5,
+          "user_ratings_total": 14,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx91rncq8JiMRNhnmRNNV7jM",
+          "name": "Smart Electrical Company Llc",
+          "vicinity": "11295 Biscayne Blvd unit 811, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 58,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGVL3f2Kr2YgRMIqB6vqkmhI",
+          "name": "Delta Tech Electric LLC",
+          "vicinity": "1835 E Hallandale Beach Blvd, Hallandale Beach",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg_i68eMH2YgR1kXP8ZwPSW4",
+          "name": "ELECTRICIANS ON CALL, CORP",
+          "vicinity": "1431 SW 63rd Terrace, Plantation",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwRkVTsYH2YgR1WQ7xEs_OhY",
+          "name": "ON Service Electricians",
+          "vicinity": "8021 Peters Rd, Plantation",
+          "rating": 5,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpbZKTBSp2YgR87mUd5dwX8w",
+          "name": "Power Point Electric, inc",
+          "vicinity": "6235 Grant Ct, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYeP_-yCv2YgRWTn9oT7-0_8",
+          "name": "Meisner Electric",
+          "vicinity": "7429 Riviera Blvd, Miramar",
+          "rating": 5,
+          "user_ratings_total": 25,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 11,
+        "with_details": 11,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Miramar, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJXW_TXLWt2YgRQVvDcMumxlw",
+          "name": "Electrical Services fl",
+          "vicinity": "1800 NE 180th St, North Miami Beach",
+          "rating": 4.9,
+          "user_ratings_total": 349,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKTm8yZWm2YgRwrWq5IX27Yk",
+          "name": "A Plus Electrical Technologies Inc.",
+          "vicinity": "500 SW 145th Ave Unit# 101, Pembroke Pines",
+          "rating": 5,
+          "user_ratings_total": 89,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxz7pVMXZsWER0km-ZqpuKNE",
+          "name": "Solomon Electric",
+          "vicinity": "4036 N 29th Ave, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 343,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh2F9Uiat2YgRJvWdY3dYQ_4",
+          "name": "Miami Speedy Commercial Electricians",
+          "vicinity": "645 NE 167th St #8000, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ27NrBWmp2YgRUpYmWazBg4s",
+          "name": "24/7 Electrician LLC",
+          "vicinity": "1315 N 47th Ave, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 41,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJX70pWFyp2YgRLMUuwOrTWFo",
+          "name": "1st Electricians",
+          "vicinity": "3400 Davie Rd, Davie",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwyrqQuq72YgRCwD15LPRt18",
+          "name": "S.E. Bates Electric",
+          "vicinity": "9820 NW 80th Ave Ste 6-C, Hialeah Gardens",
+          "rating": 4.8,
+          "user_ratings_total": 348,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8eX_0E6p2YgRb6R1jtXMTok",
+          "name": "Mr. Electric Inc",
+          "vicinity": "4053 Peters Rd, Plantation",
+          "rating": 4.7,
+          "user_ratings_total": 73,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJe9e_JVPC8EMRjfXAB0hMuZ4",
+          "name": "Dragon Electric Services",
+          "vicinity": "6175 NW 167th St STE G38, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSXgXH2mt2YgRUGLgWtcXVxs",
+          "name": "Electrician Network Hollywood",
+          "vicinity": "19443 Presidential Way, North Miami Beach",
+          "rating": 4.8,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6qWkscJ2YgRQyJyzGH3AWE",
+          "name": "Allbrite Electric & Services",
+          "vicinity": "13762 W State Rd 84 Suite 63, Davie",
+          "rating": 5,
+          "user_ratings_total": 39,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIbg4vMXB2YgRaeIbFmvtw58",
+          "name": "EU Electrical Contractor",
+          "vicinity": "10671 NW 122nd St, Medley",
+          "rating": 4.9,
+          "user_ratings_total": 28,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcQDgr6Sn2YgR3A043nA8Iyo",
+          "name": "Code One Electric LLC",
+          "vicinity": "4111 SW 47th Ave, Davie",
+          "rating": 4.6,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb6Fk87-72YgRWMPHBhTVPvQ",
+          "name": "Electrical Master System Corp",
+          "vicinity": "8064 W 15th Ln, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBzvPPNSr2YgRcIxhYVmKqPo",
+          "name": "CurrentTech Electrical Services",
+          "vicinity": "3866 Sheridan St, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx91rncq8JiMRNhnmRNNV7jM",
+          "name": "Smart Electrical Company Llc",
+          "vicinity": "11295 Biscayne Blvd unit 811, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 58,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg_i68eMH2YgR1kXP8ZwPSW4",
+          "name": "ELECTRICIANS ON CALL, CORP",
+          "vicinity": "1431 SW 63rd Terrace, Plantation",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh3pCDoi72YgRHAxHtXMNUiA",
+          "name": "A-1 Florida Electric Contractor",
+          "vicinity": "12101 NW 98th Ave, Hialeah Gardens",
+          "rating": 4.7,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwRkVTsYH2YgR1WQ7xEs_OhY",
+          "name": "ON Service Electricians",
+          "vicinity": "8021 Peters Rd, Plantation",
+          "rating": 5,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpbZKTBSp2YgR87mUd5dwX8w",
+          "name": "Power Point Electric, inc",
+          "vicinity": "6235 Grant Ct, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 14,
+        "with_details": 14,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Coral Springs, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ95pwA6gB2YgR18Ptg2ZAGu0",
+          "name": "Berger Brothers Electrical Service",
+          "vicinity": "3847 N Andrews Ave #93C, Fort Lauderdale",
+          "rating": 4.8,
+          "user_ratings_total": 127,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJL6vGjoID2YgRHUAyyjwm-6I",
+          "name": "Jesselectric, Inc",
+          "vicinity": "671 NE 42nd St, Oakland Park",
+          "rating": 4.9,
+          "user_ratings_total": 184,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJjUiXZLsD2YgRycMku6Y6-qo",
+          "name": "Einstein Electric, Inc",
+          "vicinity": "4630 NW 30th St, Coconut Creek",
+          "rating": 5,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5_9vf_YC2YgRUFvSmlTam3o",
+          "name": "Burley Electrical Service",
+          "vicinity": "172 SW 5th St, Pompano Beach",
+          "rating": 5,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr8ecLwAE2YgRFq-tckUk3Ng",
+          "name": "Sirius Electrical Contractors, LLC",
+          "vicinity": "4700 Prospect Rd STE 103, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 70,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJaVimtq8b2YgR2aAHTEWZbd0",
+          "name": "First Property Electrician Coconut Creek",
+          "vicinity": "4855 W Hillsboro Blvd, Coconut Creek",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0yNKXPAH2YgRcr_H6lzS_LA",
+          "name": "Wiseminds Electrical Contractors",
+          "vicinity": "2709 Willow Ave, Lauderdale Lakes",
+          "rating": 4.9,
+          "user_ratings_total": 150,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrZvA8vgE2YgRqAGPeDHnrL8",
+          "name": "Next Generation Electrical Contractors LLC",
+          "vicinity": "7330 SW 1st St, Margate",
+          "rating": 4.9,
+          "user_ratings_total": 43,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJccce_GgD2YgR5BqgIcgpoRQ",
+          "name": "First Property Electrician Coconut Creek",
+          "vicinity": "4303 FL-814, Coconut Creek",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJeQDS61IC2YgRY3E1OHKIRzs",
+          "name": "Mister Sparky",
+          "vicinity": "1597 Banks Rd, Margate",
+          "rating": 4.8,
+          "user_ratings_total": 3432,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQBAxzsA2YgR02oW1Hnle24",
+          "name": "ALLSITE ELECTRIC LLC",
+          "vicinity": "10001 NW 50th St Suite 203D, Sunrise",
+          "rating": 4.9,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtxmO1psF2YgRnwTZl9AsVsA",
+          "name": "Full Service Home Electrician",
+          "vicinity": "8040 W McNab Rd, North Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2TWFhfAF2YgRhEb4CZ2o1qQ",
+          "name": "EMB Home Services - Electrical Maintenance in Broward",
+          "vicinity": "503 Lakeview Dr, Coral Springs",
+          "rating": 5,
+          "user_ratings_total": 109,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq3VuZtx9a2kR2tFKAvzCJEs",
+          "name": "Florida Electrical & Fire Alarm LLC Electrician of Deerfield Beach (Florida Alarma eléctrica y contra incendios LLC)",
+          "vicinity": "2903 Waterford Dr N North, Deerfield Beach",
+          "rating": 5,
+          "user_ratings_total": 38,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0_DWdMwkxokRkO3pbS0Bvzc",
+          "name": "NextGen Electric",
+          "vicinity": "8406 W Sample Rd, Coral Springs",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh3vjoAMCZGYRC2vbUDuTpT0",
+          "name": "Global Power & Ac Corp of Broward",
+          "vicinity": "1505 NW 91st Ave Apt. 1033, Coral Springs",
+          "rating": 5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJX89i73wG2YgR4LnGDKYnlpo",
+          "name": "Vision Electric Inc",
+          "vicinity": "3800 Inverrary Blvd Suite 407i, Lauderhill",
+          "rating": 4.9,
+          "user_ratings_total": 70,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJiUveV4gB2YgRIKNNLIwZKYk",
+          "name": "Perfect Electric Solutions",
+          "vicinity": "2150 NW 9th Ave, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAWE1qa6AYyARXbYygcNqiF4",
+          "name": "Superior Electric and Air",
+          "vicinity": "1975 E Sunrise Blvd #535, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 79,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJCWAj4i8C2YgRq_eWGWofwYs",
+          "name": "Perfect Electric",
+          "vicinity": "2150 NW 9th Ave, Fort Lauderdale",
+          "rating": 4.3,
+          "user_ratings_total": 46,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 14,
+        "with_details": 14,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Clearwater, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJW7Ddg2vzwogR1wyt-dCjSbc",
+          "name": "Blue Collar Electric",
+          "vicinity": "1215 12th St, Palm Harbor",
+          "rating": 4.9,
+          "user_ratings_total": 1536,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ08Wxc9u9wogRhM_Utnc5aVQ",
+          "name": "ONYX Electric",
+          "vicinity": "12718 Dupont Cir, Tampa",
+          "rating": 5,
+          "user_ratings_total": 204,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPbJdyorjwogRMR-EbunCWIg",
+          "name": "Luminous Electric",
+          "vicinity": "3350 Ulmerton Rd ste 20, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 530,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzWRnfj37wogRBRH0rvq3rzg",
+          "name": "Blue Collar Electric",
+          "vicinity": "1301 Seminole Blvd #113, Largo",
+          "rating": 4.9,
+          "user_ratings_total": 661,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJA3BCYs39wogR_2uvT4dk7zA",
+          "name": "M.R. Electricians",
+          "vicinity": "9225 Ulmerton Rd STE J, Largo",
+          "rating": 4.9,
+          "user_ratings_total": 250,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJN2qq3SPFwogRpG4y-cRkz-I",
+          "name": "Apex Electrical LLC",
+          "vicinity": "36081 US Hwy 19 N, Palm Harbor",
+          "rating": 3.6,
+          "user_ratings_total": 14,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ1d3dNX3xwogRKJl-R3W15QA",
+          "name": "Imperial Electric Service of Pinellas, Inc.",
+          "vicinity": "1411 S Hercules Ave, Clearwater",
+          "rating": 5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ7ZQQ5xzlwogRCB_z08nZLH8",
+          "name": "Live Wire Electrical Services, Inc.",
+          "vicinity": "12141 62nd St N, Largo",
+          "rating": 4.7,
+          "user_ratings_total": 138,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFaB2RATywogR9njvw6ejqnA",
+          "name": "TR Electric",
+          "vicinity": "8300 Ulmerton Rd Suite 126, Largo",
+          "rating": 4.9,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgc_78E0P42gRJsvMaWeMNxs",
+          "name": "Doolbar Electrical Contracting Services, LLC",
+          "vicinity": "7701 Starkey Rd APT 437, Seminole",
+          "rating": 5,
+          "user_ratings_total": 56,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQynSWD3nwogRSni0fr_SSAY",
+          "name": "Fivestar Electricians",
+          "vicinity": "600 76th Ave N, St. Petersburg",
+          "rating": 4.8,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQAAANHxwogRoWKe8MkrgIM",
+          "name": "Mister Sparky",
+          "vicinity": "12345 Starkey Rd Suite B, Largo",
+          "rating": 4.8,
+          "user_ratings_total": 3072,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpac6s52RwogR9tmpD3tYEOw",
+          "name": "Mister Sparky",
+          "vicinity": "201 Douglas Rd E Ste 1, Oldsmar",
+          "rating": 4.7,
+          "user_ratings_total": 777,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPx-YvgrrwogREG7Tgrb9_48",
+          "name": "Switch Electric LLC",
+          "vicinity": "555 Frederica Ln, Dunedin",
+          "rating": 4,
+          "user_ratings_total": 28,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQCRSWzhwogRJPMYWSke49A",
+          "name": "Three Guys A/C & Electrical",
+          "vicinity": "4900 Creekside Dr Ste. J, Clearwater",
+          "rating": 4.9,
+          "user_ratings_total": 1128,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJA-kiuvzzwogRabI7m_XuLrs",
+          "name": "Anchor Electric",
+          "vicinity": "2321 Maben Ave, Palm Harbor",
+          "rating": 5,
+          "user_ratings_total": 183,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQZgpbdbvwogR0Vt66z-JrTY",
+          "name": "Positricity",
+          "vicinity": "21959 US Hwy 19 N, Clearwater",
+          "rating": 4.7,
+          "user_ratings_total": 368,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJm-f3_ufwwogRJ59gowhzkOY",
+          "name": "Red Royal Electric",
+          "vicinity": "717 Drew St, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 1712,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJC2Ic3RjMsksRIS4X_57HLG0",
+          "name": "Green Light Electric",
+          "vicinity": "13750 49th Street N Suite 4, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 108,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh4tfcJPkwogR9zr9D6WPT9o",
+          "name": "Ezell Electric",
+          "vicinity": "4985 72nd Ave N, Pinellas Park",
+          "rating": 4.8,
+          "user_ratings_total": 239,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 14,
+        "with_details": 14,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Palm Bay, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJq6rG3PQM3ogReUjeaIA1b6U",
+          "name": "ES & D Electric LLC",
+          "vicinity": "957 Custer St NW, Palm Bay",
+          "rating": 5,
+          "user_ratings_total": 93,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXwVJaiVj1iQRQE_SQeZGL7o",
+          "name": "EJM Electric, LLC",
+          "vicinity": "3816 MacFarlane St, Melbourne Beach",
+          "rating": 5,
+          "user_ratings_total": 53,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPX1QvGPgGo8R8Y2SToC23I8",
+          "name": "Mister Sparky",
+          "vicinity": "440 Stan Dr #101, Melbourne",
+          "rating": 4.8,
+          "user_ratings_total": 560,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJkZjfeEMS3ogRTm8lMXZwy-Y",
+          "name": "CTS Electrical Division",
+          "vicinity": "2475 Palm Bay Rd NE Ste 115, Palm Bay",
+          "rating": 5,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwXXVJ4wR3ogRs6X4q1_UCAg",
+          "name": "Wavelength Electrical Contracting",
+          "vicinity": "924 E New Haven Ave, Melbourne",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJUSbO6VMP3ogRu700pdvPlyU",
+          "name": "Voltage Brothers",
+          "vicinity": "580 Cadillac Cir W, Melbourne",
+          "rating": 4.2,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJu-_uJ3gQ3ogRgW_ma9A4-s0",
+          "name": "Aloha Electric Inc",
+          "vicinity": "140 Tomahawk Dr # 51, Indian Harbour Beach",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnyoNlv0T3ogRq0mQQKhK2Ww",
+          "name": "Clear Electricals",
+          "vicinity": "2475 Palm Bay Rd NE #378, Palm Bay",
+          "rating": 5,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJy_PRL6UP3ogRQ-gzEvWWQTY",
+          "name": "Dynamic Lighting Electrical Contractors",
+          "vicinity": "2683 Aurora Rd A, Melbourne",
+          "rating": 4.1,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2aF7Ll4R3ogR7qmL5qmNwhA",
+          "name": "Edison Electricians",
+          "vicinity": "158 N Harbor City Blvd Ste 200, Melbourne",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJdaIK0KNt3ogRaEn0vfghAEY",
+          "name": "Cornelius Electrical Contractors Inc",
+          "vicinity": "1497 Norman St NE, Palm Bay",
+          "rating": 5,
+          "user_ratings_total": 553,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSZLIZscP3ogR69hFmeJIz8s",
+          "name": "EAU GALLIE ELECTRIC INC.",
+          "vicinity": "295 North Dr Ste. H, Melbourne",
+          "rating": 4.8,
+          "user_ratings_total": 224,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQSRerc8R3ogRS7l3qSxyp7s",
+          "name": "Grand Electric",
+          "vicinity": "109 Nelson Ave, Melbourne",
+          "rating": 4.8,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVVVVVYka3ogRgkc-RvNkgy8",
+          "name": "Pingston Electric",
+          "vicinity": "131 Tomahawk Dr #1, Indian Harbour Beach",
+          "rating": 4.6,
+          "user_ratings_total": 160,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMaGtcu4O3ogRYr0AUm4ZLzc",
+          "name": "Boys Electrical Contractors",
+          "vicinity": "110 East Dr, Melbourne",
+          "rating": 4.7,
+          "user_ratings_total": 76,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ82Q8PLsP3ogRnRp1MZirYfU",
+          "name": "Cherry Bomb Electric, Inc",
+          "vicinity": "Melbourne",
+          "rating": 4.5,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNTzcEsIO3ogRuxZ3sgJiY6Q",
+          "name": "J. W. Harlow Electrical, LLC.",
+          "vicinity": "4355 Dow Rd STE 6, Melbourne",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNSyG-h8P3ogRLhUpOICujjg",
+          "name": "Wavelength Electrical Contracting INC",
+          "vicinity": "3100 Harlock Rd, Melbourne",
+          "rating": 5,
+          "user_ratings_total": 122,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJl3TEUswN3ogRWojPJOEpZmQ",
+          "name": "Ultimate Electric Inc",
+          "vicinity": "3145 Fell Rd, Melbourne",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJO84mwXMT3ogRkgPaqZScogQ",
+          "name": "Kangaroo Electric LLC",
+          "vicinity": "1720 Malabar Rd #642, Malabar",
+          "rating": 5,
+          "user_ratings_total": 38,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 10,
+        "with_details": 10,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Miami Gardens, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJXW_TXLWt2YgRQVvDcMumxlw",
+          "name": "Electrical Services fl",
+          "vicinity": "1800 NE 180th St, North Miami Beach",
+          "rating": 4.9,
+          "user_ratings_total": 349,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKTm8yZWm2YgRwrWq5IX27Yk",
+          "name": "A Plus Electrical Technologies Inc.",
+          "vicinity": "500 SW 145th Ave Unit# 101, Pembroke Pines",
+          "rating": 5,
+          "user_ratings_total": 89,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxz7pVMXZsWER0km-ZqpuKNE",
+          "name": "Solomon Electric",
+          "vicinity": "4036 N 29th Ave, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 343,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh2F9Uiat2YgRJvWdY3dYQ_4",
+          "name": "Miami Speedy Commercial Electricians",
+          "vicinity": "645 NE 167th St #8000, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJUxCT_ryz2YgRlzidIvhRAh0",
+          "name": "Electrical Solution us llc",
+          "vicinity": "1881 79th Street Causeway, Miami Beach",
+          "rating": 4.9,
+          "user_ratings_total": 115,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ27NrBWmp2YgRUpYmWazBg4s",
+          "name": "24/7 Electrician LLC",
+          "vicinity": "1315 N 47th Ave, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 41,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwyrqQuq72YgRCwD15LPRt18",
+          "name": "S.E. Bates Electric",
+          "vicinity": "9820 NW 80th Ave Ste 6-C, Hialeah Gardens",
+          "rating": 4.8,
+          "user_ratings_total": 348,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJe9e_JVPC8EMRjfXAB0hMuZ4",
+          "name": "Dragon Electric Services",
+          "vicinity": "6175 NW 167th St STE G38, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSXgXH2mt2YgRUGLgWtcXVxs",
+          "name": "Electrician Network Hollywood",
+          "vicinity": "19443 Presidential Way, North Miami Beach",
+          "rating": 4.8,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIbg4vMXB2YgRaeIbFmvtw58",
+          "name": "EU Electrical Contractor",
+          "vicinity": "10671 NW 122nd St, Medley",
+          "rating": 4.9,
+          "user_ratings_total": 28,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcQDgr6Sn2YgR3A043nA8Iyo",
+          "name": "Code One Electric LLC",
+          "vicinity": "4111 SW 47th Ave, Davie",
+          "rating": 4.6,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb6Fk87-72YgRWMPHBhTVPvQ",
+          "name": "Electrical Master System Corp",
+          "vicinity": "8064 W 15th Ln, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBzvPPNSr2YgRcIxhYVmKqPo",
+          "name": "CurrentTech Electrical Services",
+          "vicinity": "3866 Sheridan St, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIy6Tv0O62YgRvxq5DBYRSa8",
+          "name": "Alex Electric Services Inc",
+          "vicinity": "2245 W 10th Ct, Hialeah",
+          "rating": 4.3,
+          "user_ratings_total": 55,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKVpzFBet2YgRgPp3mog48AQ",
+          "name": "Gelik Electrical Inc.",
+          "vicinity": "3040 NE 190th St, Aventura",
+          "rating": 5,
+          "user_ratings_total": 14,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGVL3f2Kr2YgRMIqB6vqkmhI",
+          "name": "Delta Tech Electric LLC",
+          "vicinity": "1835 E Hallandale Beach Blvd, Hallandale Beach",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx91rncq8JiMRNhnmRNNV7jM",
+          "name": "Smart Electrical Company Llc",
+          "vicinity": "11295 Biscayne Blvd unit 811, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 58,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ22mj5uGz2YgRmlYKW_eSjz4",
+          "name": "Nest Grid Electric Homes",
+          "vicinity": "340 84th St, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAdX1vHKx2YgRbejBAHQX7DI",
+          "name": "Home Electricіan Miami",
+          "vicinity": "650 NW 54th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 9,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzVq2B4u52YgRsn-1qW3xap0",
+          "name": "Virginia Gardens FL Service | Plumbers Electricians Heating Air Conditioning Duct & Vent Cleaning",
+          "vicinity": "6405 NW 36th St suite 124, Virginia Gardens",
+          "rating": 4.9,
+          "user_ratings_total": 43,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 14,
+        "with_details": 14,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Pompano Beach, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJcdrm3Eca2YgRc0-c7nejkrU",
+          "name": "Boca Electrical Service",
+          "vicinity": "158 NW 16th St #2, Boca Raton",
+          "rating": 4.8,
+          "user_ratings_total": 469,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8YmPG_rh2IgRL4rlnFuQNE8",
+          "name": "Boca Electrical Service",
+          "vicinity": "123 NW 13th St suite 214-09, Boca Raton",
+          "rating": 5,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ95pwA6gB2YgR18Ptg2ZAGu0",
+          "name": "Berger Brothers Electrical Service",
+          "vicinity": "3847 N Andrews Ave #93C, Fort Lauderdale",
+          "rating": 4.8,
+          "user_ratings_total": 127,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJL6vGjoID2YgRHUAyyjwm-6I",
+          "name": "Jesselectric, Inc",
+          "vicinity": "671 NE 42nd St, Oakland Park",
+          "rating": 4.9,
+          "user_ratings_total": 184,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJjUiXZLsD2YgRycMku6Y6-qo",
+          "name": "Einstein Electric, Inc",
+          "vicinity": "4630 NW 30th St, Coconut Creek",
+          "rating": 5,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5_9vf_YC2YgRUFvSmlTam3o",
+          "name": "Burley Electrical Service",
+          "vicinity": "172 SW 5th St, Pompano Beach",
+          "rating": 5,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr8ecLwAE2YgRFq-tckUk3Ng",
+          "name": "Sirius Electrical Contractors, LLC",
+          "vicinity": "4700 Prospect Rd STE 103, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 70,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhWK_cRIB2YgRthfalSp4Xhw",
+          "name": "First Property Electrician Fort Lauderdale",
+          "vicinity": "405 NE 2nd St, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJaVimtq8b2YgR2aAHTEWZbd0",
+          "name": "First Property Electrician Coconut Creek",
+          "vicinity": "4855 W Hillsboro Blvd, Coconut Creek",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJO2UCh-4d2YgR6Xyd5OhB7TI",
+          "name": "First Choice Home Electrician Pompano Beach",
+          "vicinity": "5253 N Dixie Hwy, Pompano Beach",
+          "rating": 5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0yNKXPAH2YgRcr_H6lzS_LA",
+          "name": "Wiseminds Electrical Contractors",
+          "vicinity": "2709 Willow Ave, Lauderdale Lakes",
+          "rating": 4.9,
+          "user_ratings_total": 150,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrZvA8vgE2YgRqAGPeDHnrL8",
+          "name": "Next Generation Electrical Contractors LLC",
+          "vicinity": "7330 SW 1st St, Margate",
+          "rating": 4.9,
+          "user_ratings_total": 43,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJeQDS61IC2YgRY3E1OHKIRzs",
+          "name": "Mister Sparky",
+          "vicinity": "1597 Banks Rd, Margate",
+          "rating": 4.8,
+          "user_ratings_total": 3432,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtxmO1psF2YgRnwTZl9AsVsA",
+          "name": "Full Service Home Electrician",
+          "vicinity": "8040 W McNab Rd, North Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq3VuZtx9a2kR2tFKAvzCJEs",
+          "name": "Florida Electrical & Fire Alarm LLC Electrician of Deerfield Beach (Florida Alarma eléctrica y contra incendios LLC)",
+          "vicinity": "2903 Waterford Dr N North, Deerfield Beach",
+          "rating": 5,
+          "user_ratings_total": 38,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJccce_GgD2YgR5BqgIcgpoRQ",
+          "name": "First Property Electrician Coconut Creek",
+          "vicinity": "4303 FL-814, Coconut Creek",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0_DWdMwkxokRkO3pbS0Bvzc",
+          "name": "NextGen Electric",
+          "vicinity": "8406 W Sample Rd, Coral Springs",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyUQR2pYB2YgRjkh4DOAUoMU",
+          "name": "Full Service Home Electrician",
+          "vicinity": "2734 E Oakland Park Blvd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8eX_0E6p2YgRb6R1jtXMTok",
+          "name": "Mr. Electric Inc",
+          "vicinity": "4053 Peters Rd, Plantation",
+          "rating": 4.7,
+          "user_ratings_total": 73,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJDXq4X4392IgRL1FZ7qqbj5M",
+          "name": "First Choice Home Electricians",
+          "vicinity": "4109 N Ocean Dr, Lauderdale-By-The-Sea",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 12,
+        "with_details": 12,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Gainesville, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJN_jGbjW76IgRHx_sjJO9iew",
+          "name": "Manny's Electric",
+          "vicinity": "11032 NW 60 Terrace, Alachua",
+          "rating": 4.9,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyVG6Vzk2XE0RHsmZ1wtSGJo",
+          "name": "Mister Sparky",
+          "vicinity": "5111 NW 13th St Suite C, Gainesville",
+          "rating": 4.8,
+          "user_ratings_total": 1078,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ7bo02hOk6IgRdz3DDTm65xk",
+          "name": "Mr. Electric of North Florida",
+          "vicinity": "680 NE 23rd Ave Suite A, Gainesville",
+          "rating": 4.7,
+          "user_ratings_total": 117,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJA5KQwSlt54gRqV0maCh5uUU",
+          "name": "Impact Electric",
+          "vicinity": "851 Little Fawn Ct, Winter Springs",
+          "rating": 4.9,
+          "user_ratings_total": 30,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJsbxHK0D72ogRSjq8rdTqHXQ",
+          "name": "Full Service Electrician Pros",
+          "vicinity": "2209 NW 16th Terrace, Gainesville",
+          "rating": 5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3Rd0sWmBk4gRgyBQj2fDYZU",
+          "name": "Shockwave Electricians",
+          "vicinity": "321 SW 13th St Floor 2, Gainesville",
+          "rating": 4.7,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ___j1Se76IgRnhT89Vh4yPc",
+          "name": "Grener Electric",
+          "vicinity": "605 NW 53rd Ave Suite A-8B, Gainesville",
+          "rating": 4.9,
+          "user_ratings_total": 406,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcXQYYRCl6IgREq90JtM_6jM",
+          "name": "Vintage Electric, Inc.",
+          "vicinity": "2421 NW 71st Pl, Gainesville",
+          "rating": 4.9,
+          "user_ratings_total": 332,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ653lYtK86IgRDdQbJ1J0RNs",
+          "name": "Archer Electric Services Co",
+          "vicinity": "4504 SW 29th Ave, Gainesville",
+          "rating": 4.9,
+          "user_ratings_total": 240,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxasjZ9ii6IgRv_9Gmn6vUDc",
+          "name": "Preston Link Electric",
+          "vicinity": "4000 SW 35th Terrace, Gainesville",
+          "rating": 4.9,
+          "user_ratings_total": 319,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_eVunBek6IgRFGq6h-Twvac",
+          "name": "352 Electric LLC",
+          "vicinity": "1102 NW 23rd Ave, Gainesville",
+          "rating": 4.7,
+          "user_ratings_total": 57,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJaWsFWV276IgRhNhnCjty1Qc",
+          "name": "Gunning Electric Inc",
+          "vicinity": "2325 NW 63rd Terrace, Gainesville",
+          "rating": 4.6,
+          "user_ratings_total": 70,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ69yOwm6k6IgRBZ2ZlgGRwtk",
+          "name": "Alford's Affordable Services",
+          "vicinity": "2410 NE 17th Ter, Gainesville",
+          "rating": 4.7,
+          "user_ratings_total": 83,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3WURV8gbPqsRtUGRf2VRllA",
+          "name": "SDS Electrical & Handyman Services LLC",
+          "vicinity": "8002 SW 51st Ln, Gainesville",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvVBfShK96IgR_7dlkQ45Bso",
+          "name": "R Leon Electric, Inc.",
+          "vicinity": "1915 SW 70th Terrace, Gainesville",
+          "rating": 4.8,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJR3io1v-96IgRVdhTI0bxLYY",
+          "name": "Keough Electric",
+          "vicinity": "4824 SW 57th Dr, Gainesville",
+          "rating": 4.8,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJT4R1bB6k6IgRvAR-44qacJA",
+          "name": "All Florida Electric Co Inc",
+          "vicinity": "2606 NE 17th Ter, Gainesville",
+          "rating": 4.7,
+          "user_ratings_total": 22,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXQYUTsAR54gRBICI-e7gASk",
+          "name": "Petras Electric",
+          "vicinity": "1213 Saxon Blvd, Orange City",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJI3uUbR6k6IgRFanyb4zROmM",
+          "name": "Gainesville Electrical Joint",
+          "vicinity": "2420 NE 17th Ter, Gainesville",
+          "rating": 5,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_____5Oj6IgRH2GHgVQShtk",
+          "name": "Felknor Electric Inc",
+          "vicinity": "Gainesville",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 11,
+        "with_details": 11,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "West Palm Beach, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJLd0WpYLX2IgRt-hAeUzSJq0",
+          "name": "Boston Electric LLC",
+          "vicinity": "1616 N Florida Mango Rd Suite C7, West Palm Beach",
+          "rating": 4.9,
+          "user_ratings_total": 186,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJuS3izg4o2YgRllKHuNRpRqg",
+          "name": "Gator Electric and Communications, Inc.",
+          "vicinity": "3670 23rd Ave S #1, Lake Worth Beach",
+          "rating": 4.9,
+          "user_ratings_total": 174,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3QvhulrW2IgRU1WabNVHYd4",
+          "name": "Extreme Electrical Inc",
+          "vicinity": "4704 Clemens St, Lake Worth Beach",
+          "rating": 5,
+          "user_ratings_total": 35,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9RJxez4p2YgRz_UPoLU1vo4",
+          "name": "Global Power & Ac Corp",
+          "vicinity": "930 Bellhurst Way #123, West Palm Beach",
+          "rating": 5,
+          "user_ratings_total": 639,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ63POon3Z2IgRFcaQelGvrwc",
+          "name": "Benitez Electric Inc",
+          "vicinity": "620 S N St, Lake Worth Beach",
+          "rating": 5,
+          "user_ratings_total": 73,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZxZ3EdrX2IgRGKJ-DtVk8cE",
+          "name": "JP Volt Electric INC",
+          "vicinity": "625 El Vedado, West Palm Beach",
+          "rating": 5,
+          "user_ratings_total": 93,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyYPzuSjY2IgR1ThzWdZERGI",
+          "name": "J.W. Electric of the Palm Beaches, Inc.",
+          "vicinity": "1522 13th Ave N, Lake Worth Beach",
+          "rating": 4.6,
+          "user_ratings_total": 34,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNx2cDAgr2YgR6g7gYwg5Awg",
+          "name": "Mister Sparky",
+          "vicinity": "Riviera Beach St, Riviera Beach",
+          "rating": 4.7,
+          "user_ratings_total": 585,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXTeea5_X2IgRo-Cfzu8K-tg",
+          "name": "Ochoa Electric Services",
+          "vicinity": "206 Foresteria Dr, Lake Park",
+          "rating": 4.8,
+          "user_ratings_total": 65,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ58tVXI_V2IgRe9wqteDzueM",
+          "name": "Eccentric Energy",
+          "vicinity": "5307 Spruce Ave, West Palm Beach",
+          "rating": 4.7,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb-M5MzzW2IgRA2zo0hPD2jc",
+          "name": "PIE Superior Service",
+          "vicinity": "1173 Old Dixie Hwy Ste B, Lake Park",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQp3MTEo2YgRsFRtvU3p5qU",
+          "name": "Lighthouse Energy Company",
+          "vicinity": "4657 Southern Blvd d, West Palm Beach",
+          "rating": 5,
+          "user_ratings_total": 27,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJT390EjNHlKkRhrq9nKo8G6g",
+          "name": "Elite Sons LLC",
+          "vicinity": "10299 Southern Blvd #211355, Royal Palm Beach",
+          "rating": 4.7,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJk0G9Ahgr34gRRiVM2isjAME",
+          "name": "Underwood Electric LLC",
+          "vicinity": "3202 Meridian Way N, Palm Beach Gardens",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJM9d_j90o2YgRwPUAAePVaDM",
+          "name": "Power Generation",
+          "vicinity": "3599 23rd Ave S #7, Lake Worth Beach",
+          "rating": 4.7,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJJUYhMv5rI6UR5f95bSAcF7c",
+          "name": "Science Electric inc",
+          "vicinity": "2461 Village Blvd, West Palm Beach",
+          "rating": 4.7,
+          "user_ratings_total": 24,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgVxVhsop2YgRSPdBDl-NDOY",
+          "name": "Swink Electric Inc.",
+          "vicinity": "917 S Military Trl C-1, West Palm Beach",
+          "rating": 5,
+          "user_ratings_total": 244,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ1_z-C0HV2IgRw7fhM5Fr618",
+          "name": "Kasper Electrical",
+          "vicinity": "1321 S Killian Dr Suite A, Lake Park",
+          "rating": 4.9,
+          "user_ratings_total": 242,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrdYVnaMq2YgRCRHJ_0aIAGQ",
+          "name": "Rack Electric",
+          "vicinity": "7830 Byron Dr # 11, West Palm Beach",
+          "rating": 4.5,
+          "user_ratings_total": 238,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQ4pZN64p2YgRQ_2IvCGZo7M",
+          "name": "Wave Electrical",
+          "vicinity": "980 Service St #24, West Palm Beach",
+          "rating": 4.9,
+          "user_ratings_total": 287,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 17,
+        "with_details": 17,
+        "final_radius_km": 15.0
+      }
+    }
+  ],
+  "all_raw_places": [
+    {
+      "place_id": "ChIJ38Im05S9wogRlTgGmRaucRA",
+      "name": "Mr. Electric of Tampa Bay",
+      "vicinity": "7901 Benjamin Rd, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 939,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJo83MyGfDwogR78PZnGu1JkE",
+      "name": "Acme Electrical Services",
+      "vicinity": "6707 N Rome Ave, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 108,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZXXGoDPNwogRY7q5NnZ9J3M",
+      "name": "Brandon Electric",
+      "vicinity": "1034 Skipper Rd, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 1346,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJD6hInM3NwogRPl5VKcgM5ko",
+      "name": "Small Jobs Electric, Inc.",
+      "vicinity": "5002 W Linebaugh Ave Ste C, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 2004,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGyDMV0HdwogR4pGk4iEssYs",
+      "name": "Powerhouse Pro Services",
+      "vicinity": "4302 W Wisconsin Ave, Tampa",
+      "rating": 5,
+      "user_ratings_total": 38,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJD1cHdjhoxU8RMih0XMFddrU",
+      "name": "RUIZ ELECTRICAL SERVICES LLC",
+      "vicinity": "5834 Mohr Loop, Tampa",
+      "rating": 5,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJB1RzC3TxwogRjfHjfL4QtV0",
+      "name": "Energy Today",
+      "vicinity": "5401 E Sligh Ave, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 345,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_ZY93THPwogRAFoab36gf8Q",
+      "name": "Mister Sparky",
+      "vicinity": "5808 N 56th St, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 2444,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJQ_awt-TCwogRCerAf1PVoKc",
+      "name": "Power Surge Electricians",
+      "vicinity": "4830 W Kennedy Blvd # 760, Tampa",
+      "rating": 5,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVyLDOxnDGGAR9YrqgYvU5s0",
+      "name": "Second Opinion Electric",
+      "vicinity": "2703 Auburn Ave W, Tampa",
+      "rating": 5,
+      "user_ratings_total": 57,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXQGQ4B2Bk4gRDcoyY0WHgRs",
+      "name": "Full Service Electrician Pros",
+      "vicinity": "1110 N Florida Ave, Tampa",
+      "rating": 5,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJze2AqPTBwogRcT0a1yWoBv0",
+      "name": "CJS Electric Inc.",
+      "vicinity": "4119 Gunn Hwy STE 28, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJC0WZ2RfDwogRlWDwjKsltTI",
+      "name": "Amp Control Electrician Works",
+      "vicinity": "3671 Co Rd 587, Tampa",
+      "rating": 5,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnwwaLMzNwogRogU4Gm-ivEY",
+      "name": "Home Service Heroes",
+      "vicinity": "8416 Laurel Fair Cir Suite 112, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 2690,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJD7_7237DwogROHArjTALzB0",
+      "name": "Charter Electric",
+      "vicinity": "711 S Howard Ave # 200, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 19,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJqRy61HPFwogRsXeJG7jgOfo",
+      "name": "Empire Electric",
+      "vicinity": "901 E Jackson St, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 4,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ__9vZNHpwogR8cid_f4z2fQ",
+      "name": "Electrician Elite Solutions",
+      "vicinity": "2701 N Rocky Point Dr Suite 546, Tampa",
+      "rating": 5,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJDf5v0mTOwogR-fUQem1mug4",
+      "name": "One Call Electric Solution",
+      "vicinity": "1757 W Brandon Blvd, Brandon",
+      "rating": 4.6,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJw6NRgs_DwogRNdcaRzu7GIs",
+      "name": "Cortez Electrical Solutions, Inc.",
+      "vicinity": "4716 N Cortez Ave, Tampa",
+      "rating": 5,
+      "user_ratings_total": 4,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVVsfV0ziwogRuqj5fbsAmI4",
+      "name": "Hoffman Electrical & A/C",
+      "vicinity": "1909 N 57th St, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 3942,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJScGo5i-25YgRSkfgXASc95s",
+      "name": "American Electrical Contracting Inc.",
+      "vicinity": "9016 Philips Hwy, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 2537,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyRZK7Vm05YgRBw_4Y3-Q5Ic",
+      "name": "American Electric",
+      "vicinity": "8751 Atlantic Blvd, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 376,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJQ3B2DFOt5YgR06lazEDfSUE",
+      "name": "Burbank Electric",
+      "vicinity": "11227 Guinn Rd, Jacksonville",
+      "rating": 4.8,
+      "user_ratings_total": 145,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJX_xaQje15YgRh9l4K3L4BNk",
+      "name": "Mister Sparky First Coast",
+      "vicinity": "11290 St Johns Industrial Pkwy N #7, Jacksonville",
+      "rating": 4.8,
+      "user_ratings_total": 1758,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcRaK8V_K5YgRn1hkyqPD7tw",
+      "name": "Bolt Electric",
+      "vicinity": "1525 Romney St #1, Jacksonville",
+      "rating": 4.8,
+      "user_ratings_total": 424,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-4Q1Fd1L5IgRJc977KI4Q-M",
+      "name": "Tenax Electrical Company",
+      "vicinity": "11762 Marco Beach Dr #6, Jacksonville",
+      "rating": 5,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPTJY5-LJ5YgRG5qO73L-h6w",
+      "name": "David Gray",
+      "vicinity": "6491 Powers Ave Suite 4, Jacksonville",
+      "rating": 4.8,
+      "user_ratings_total": 964,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJYXh_AATL5YgRGs_FUx5Uh0k",
+      "name": "Master Electric",
+      "vicinity": "8365 Dix Ellis Trail, Jacksonville",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZav54F3A5YgR0kB-IR8o-ik",
+      "name": "Thompson Electric and Air",
+      "vicinity": "1940 Haines St, Jacksonville",
+      "rating": 4.4,
+      "user_ratings_total": 195,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBeBHKg-15YgRaOPUGA3ZebI",
+      "name": "B and G electrical",
+      "vicinity": "3230 Kline Rd, Jacksonville",
+      "rating": 3.6,
+      "user_ratings_total": 25,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJUwg-giG85YgRk9EFg-97P44",
+      "name": "Lin's Electric Inc.",
+      "vicinity": "7820 Pritchard Rd, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 401,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIwPjvq-55YgR9o_BLv8uvKs",
+      "name": "Ace Electrical Services",
+      "vicinity": "4659 Hwy Ave, Jacksonville",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJT5CWm4G95YgRrVHKJ4ykZS0",
+      "name": "Hubbard Electrical Contracting, LLC",
+      "vicinity": "8627 Die Hard Ln, Jacksonville",
+      "rating": 5,
+      "user_ratings_total": 453,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKU9jUYu35YgRKcI__zemZIo",
+      "name": "Lion Electricians St. Augustine",
+      "vicinity": "701 San Marco Blvd, Jacksonville",
+      "rating": 0,
+      "user_ratings_total": 0,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJV1y0pLHL5YgRUfn97T__Oo4",
+      "name": "Mardant Electrical Construction Co",
+      "vicinity": "8967 Philips Hwy, Jacksonville",
+      "rating": 3.9,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJafpJ05MDviYRoh8gkciK7QA",
+      "name": "Wallace Electric Company, LLC",
+      "vicinity": "8535 Baymeadows Rd Unit 63, Jacksonville",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJy9H5Mouz5YgRlnIv-LU6IT8",
+      "name": "Empire Electric Inc.",
+      "vicinity": "5810 Macy Ave, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 296,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVZB4kMu45YgRt-gTBR1v8wc",
+      "name": "Robbins Electrical Services Inc.",
+      "vicinity": "7749 Normandy Blvd, Jacksonville",
+      "rating": 5,
+      "user_ratings_total": 21,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSxHtIDa55YgRK6TllITaV4s",
+      "name": "Dobson Electric",
+      "vicinity": "6925 W Beaver St, Jacksonville",
+      "rating": 4.5,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJU68fvFi55YgR4u98205kpKk",
+      "name": "AEC Electrical Contracting",
+      "vicinity": "7005 Lloyd Rd W, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJtxsJgze32YgRQjTb_SOjt5A",
+      "name": "First Choice Home Electrician Miami",
+      "vicinity": "45 SW 9th St, Miami",
+      "rating": 5,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJjZzg5tO32YgRYDyZVHyPe6E",
+      "name": "Electrician Service Pros",
+      "vicinity": "3000 SW 3rd Ave, Miami",
+      "rating": 5,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJv_iE20a32YgRbLqEE6cVaQ8",
+      "name": "First Choice Home Electrician Miami",
+      "vicinity": "2170 NW 11th St, Miami",
+      "rating": 5,
+      "user_ratings_total": 7,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJUxCT_ryz2YgRlzidIvhRAh0",
+      "name": "Electrical Solution us llc",
+      "vicinity": "1881 79th Street Causeway, Miami Beach",
+      "rating": 4.9,
+      "user_ratings_total": 115,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJkW1OKZDH2YgRIrWJ3v1bJi4",
+      "name": "Full Service Home Electrician",
+      "vicinity": "6259 Sunset Dr, South Miami",
+      "rating": 5,
+      "user_ratings_total": 18,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJwyrqQuq72YgRCwD15LPRt18",
+      "name": "S.E. Bates Electric",
+      "vicinity": "9820 NW 80th Ave Ste 6-C, Hialeah Gardens",
+      "rating": 4.8,
+      "user_ratings_total": 348,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJJRrHbDe12YgRCiMBMhrZ3EI",
+      "name": "Zeek Electric",
+      "vicinity": "851 Meridian Ave APT 32, Miami Beach",
+      "rating": 5,
+      "user_ratings_total": 19,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFyFeRJq42YgRZ3zQ7PiJq1M",
+      "name": "Alex All Electric",
+      "vicinity": "8710 SW 42nd Terrace, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 111,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJEXvd_JW32YgRacnfN5LGcwI",
+      "name": "E&P Electrical services Miami",
+      "vicinity": "940 NW 8th Street Rd, Miami",
+      "rating": 5,
+      "user_ratings_total": 123,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJI71UP3W32YgRA9uzUdaTkSs",
+      "name": "Full Service Home Electrics Miami",
+      "vicinity": "87044 SW 26th Rd, Miami",
+      "rating": 5,
+      "user_ratings_total": 19,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhXg3AFi32YgRL_hAOySmZ5Q",
+      "name": "Electrician Contractor Pros",
+      "vicinity": "3900 NW 7th St, Miami",
+      "rating": 5,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJxU9ALJK32YgRFvh6V-DMz4A",
+      "name": "Full Service Electrician",
+      "vicinity": "933 NW 4th St, Miami",
+      "rating": 4.6,
+      "user_ratings_total": 18,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8UXqpJPG2YgRMpyghQ7agiY",
+      "name": "Electric Service & Repair, Inc.",
+      "vicinity": "13335 SW 88th Ave, Miami",
+      "rating": 4.7,
+      "user_ratings_total": 60,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-7SiGZDMiSMRH3bBMBHGtJY",
+      "name": "My Angel Service",
+      "vicinity": "231 NW 24th Ave, Miami",
+      "rating": 5,
+      "user_ratings_total": 18,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIy6Tv0O62YgRvxq5DBYRSa8",
+      "name": "Alex Electric Services Inc",
+      "vicinity": "2245 W 10th Ct, Hialeah",
+      "rating": 4.3,
+      "user_ratings_total": 55,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAdX1vHKx2YgRbejBAHQX7DI",
+      "name": "Home Electricіan Miami",
+      "vicinity": "650 NW 54th St, Miami",
+      "rating": 5,
+      "user_ratings_total": 9,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3xpi3L232YgRgtKQ59YyICk",
+      "name": "Elekron Electric Inc",
+      "vicinity": "2332 Galiano St Second Floor, Coral Gables",
+      "rating": 5,
+      "user_ratings_total": 204,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLcCHzV4FjKMRz92Q0_UNvlQ",
+      "name": "Smartlife Electric INC",
+      "vicinity": "178 NW 47th Terrace, Miami",
+      "rating": 5,
+      "user_ratings_total": 68,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJx91rncq8JiMRNhnmRNNV7jM",
+      "name": "Smart Electrical Company Llc",
+      "vicinity": "11295 Biscayne Blvd unit 811, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 58,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJb6Fk87-72YgRWMPHBhTVPvQ",
+      "name": "Electrical Master System Corp",
+      "vicinity": "8064 W 15th Ln, Hialeah",
+      "rating": 5,
+      "user_ratings_total": 21,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJA_jjbYJ754gRyC-7_3Qho3Y",
+      "name": "Mr. Electric of Orlando",
+      "vicinity": "3700 34th St Suite 100B, Orlando",
+      "rating": 5,
+      "user_ratings_total": 209,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKX8UpuFx54gR0TdYUyFLgDU",
+      "name": "UP & Down Electrical Services LLC EC#13014809",
+      "vicinity": "452 Osceola St #201, Altamonte Springs",
+      "rating": 5,
+      "user_ratings_total": 29,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_yxntrWD54gR4FD_yyHLLbA",
+      "name": "Mister Sparky®",
+      "vicinity": "4301 Vineland Rd Suite E 3-4, Orlando",
+      "rating": 4.7,
+      "user_ratings_total": 845,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvT6Pv-Vz54gRjqyTNv3pBTk",
+      "name": "Mister Sparky",
+      "vicinity": "2400 Silver Star Rd Suite A, Orlando",
+      "rating": 4.8,
+      "user_ratings_total": 3412,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ80AA9r1_54gR0HeS8YGM9LE",
+      "name": "FRED Electrical Residential Services",
+      "vicinity": "6452 Vineland Rd unit 106, Orlando",
+      "rating": 5,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMf_lSVul2YgRiDFcFp_K6kE",
+      "name": "1st Electricians",
+      "vicinity": "1650 N Mills Ave, Orlando",
+      "rating": 5,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ87w3eZZv54gRodnjMFEXJEs",
+      "name": "Just Do It Pros LLC",
+      "vicinity": "1060 Lundy Ct, Winter Park",
+      "rating": 5,
+      "user_ratings_total": 32,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzQLICLVx54gRtUiQneTPXdg",
+      "name": "Fluff Electrician Co.",
+      "vicinity": "631 Orlando Ave, Maitland",
+      "rating": 5,
+      "user_ratings_total": 4,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ1wjZLOVh54gRFXmjjZ3pyBw",
+      "name": "FC ELECTRIC GROUP LLC",
+      "vicinity": "10514 Green Ivy Ln, Orlando",
+      "rating": 5,
+      "user_ratings_total": 21,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ7-foMndw54gR5DNVAtFykiU",
+      "name": "Palmer Electric Company",
+      "vicinity": "MAIN OFFICE, 875 Jackson Ave, Winter Park",
+      "rating": 4.3,
+      "user_ratings_total": 160,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJP6NPk-h854gRS92A2ryHzyU",
+      "name": "Prestige Electric Co-Florida",
+      "vicinity": "7423 S Orange Ave, Orlando",
+      "rating": 3.7,
+      "user_ratings_total": 58,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNZpaRWp554gRLyejW2-Hk_o",
+      "name": "Better Pricing Electrician of Orlando",
+      "vicinity": "1415 Mercy Dr #536, Orlando",
+      "rating": 3,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJm-v95KR554gRR1wTg17axOg",
+      "name": "Mechanical One of Orlando - Air Conditioning, Plumbing and Electrical",
+      "vicinity": "5257 L B McLeod Rd Suite 1200, Orlando",
+      "rating": 5,
+      "user_ratings_total": 913,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXdptzSET54gRh7NYr1UJ7w0",
+      "name": "Central Florida Electrician",
+      "vicinity": "243 N Texas Ave, Orlando",
+      "rating": 4.9,
+      "user_ratings_total": 116,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJb9RaI-N654gRhpXMDRLXmJ0",
+      "name": "Smartron Electric",
+      "vicinity": "2433 Lee Rd, Winter Park",
+      "rating": 5,
+      "user_ratings_total": 169,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJc837NldT54gRvtpeFB8GWMo",
+      "name": "MTK Electric Inc",
+      "vicinity": "1881 Lee Rd, Winter Park",
+      "rating": 5,
+      "user_ratings_total": 144,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZ_PNMKd754gRMzwikiHBo2Q",
+      "name": "Star Electric",
+      "vicinity": "1707 S Division Ave, Orlando",
+      "rating": 4.3,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJg8-zHThx54gRQ0cwoHyoqJM",
+      "name": "Super Fast Electric",
+      "vicinity": "1070 Bunnell Rd B2, Altamonte Springs",
+      "rating": 5,
+      "user_ratings_total": 239,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzWwX5mUWew4RokpSK_rYLYw",
+      "name": "DH Electric",
+      "vicinity": "3499 Seagrape Dr, Winter Park",
+      "rating": 4.9,
+      "user_ratings_total": 72,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN4Wf6r-R3YgR3W1hYx7hbJM",
+      "name": "In Phaze Electric Inc.",
+      "vicinity": "2200 N Forsyth Rd, Orlando",
+      "rating": 4.8,
+      "user_ratings_total": 666,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzWRnfj37wogRBRH0rvq3rzg",
+      "name": "Blue Collar Electric",
+      "vicinity": "1301 Seminole Blvd #113, Largo",
+      "rating": 4.9,
+      "user_ratings_total": 661,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJA3BCYs39wogR_2uvT4dk7zA",
+      "name": "M.R. Electricians",
+      "vicinity": "9225 Ulmerton Rd STE J, Largo",
+      "rating": 4.9,
+      "user_ratings_total": 250,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPbJdyorjwogRMR-EbunCWIg",
+      "name": "Luminous Electric",
+      "vicinity": "3350 Ulmerton Rd ste 20, Clearwater",
+      "rating": 4.8,
+      "user_ratings_total": 530,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ7ZQQ5xzlwogRCB_z08nZLH8",
+      "name": "Live Wire Electrical Services, Inc.",
+      "vicinity": "12141 62nd St N, Largo",
+      "rating": 4.7,
+      "user_ratings_total": 138,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgc_78E0P42gRJsvMaWeMNxs",
+      "name": "Doolbar Electrical Contracting Services, LLC",
+      "vicinity": "7701 Starkey Rd APT 437, Seminole",
+      "rating": 5,
+      "user_ratings_total": 56,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFaB2RATywogR9njvw6ejqnA",
+      "name": "TR Electric",
+      "vicinity": "8300 Ulmerton Rd Suite 126, Largo",
+      "rating": 4.9,
+      "user_ratings_total": 137,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJu59GlS39wogRMPr0sxg_qlc",
+      "name": "Electrician of Saint Petersburg",
+      "vicinity": "280 126th Ave, Treasure Island",
+      "rating": 4.8,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAQAAANHxwogRoWKe8MkrgIM",
+      "name": "Mister Sparky",
+      "vicinity": "12345 Starkey Rd Suite B, Largo",
+      "rating": 4.8,
+      "user_ratings_total": 3072,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9fgvupfhwogR3_W6zqmv5VI",
+      "name": "Influx Electricians Saint Petersburg",
+      "vicinity": "445 32nd Ave N, St. Petersburg",
+      "rating": 4.8,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJQynSWD3nwogRSni0fr_SSAY",
+      "name": "Fivestar Electricians",
+      "vicinity": "600 76th Ave N, St. Petersburg",
+      "rating": 4.8,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAQCRSWzhwogRJPMYWSke49A",
+      "name": "Three Guys A/C & Electrical",
+      "vicinity": "4900 Creekside Dr Ste. J, Clearwater",
+      "rating": 4.9,
+      "user_ratings_total": 1128,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJoTNcKQ3jwogRd7AztL53AuA",
+      "name": "Magic Electric",
+      "vicinity": "6079 Gulfport Blvd S, Gulfport",
+      "rating": 4.4,
+      "user_ratings_total": 14,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJTdPEjHzhwogRf75l7fnpOEQ",
+      "name": "JL Local Electricians",
+      "vicinity": "2800 4th St S, St. Petersburg",
+      "rating": 4.7,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ863s_y4dw4gRckcraocd9jI",
+      "name": "Zenith View Electric",
+      "vicinity": "4193 US-19, St. Petersburg",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN-lWFWvhwogRlW1rq32C26A",
+      "name": "Edison Electricians of St Petersburg",
+      "vicinity": "735 Arlington Ave N Ste 106, St. Petersburg",
+      "rating": 5,
+      "user_ratings_total": 4,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJC2Ic3RjMsksRIS4X_57HLG0",
+      "name": "Green Light Electric",
+      "vicinity": "13750 49th Street N Suite 4, Clearwater",
+      "rating": 4.8,
+      "user_ratings_total": 108,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJsVYGhh_lwogR5Y_z9ntzFKQ",
+      "name": "Majestic Services | HVAC, Plumbing, Electrical",
+      "vicinity": "11475 49th Street N Ste 300, Clearwater",
+      "rating": 5,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJh4tfcJPkwogR9zr9D6WPT9o",
+      "name": "Ezell Electric",
+      "vicinity": "4985 72nd Ave N, Pinellas Park",
+      "rating": 4.8,
+      "user_ratings_total": 239,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJF4rahAwew4gRuBEvqZv4-CA",
+      "name": "Everingham Electric",
+      "vicinity": "3620 18th Ave S, St. Petersburg",
+      "rating": 4.8,
+      "user_ratings_total": 152,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXW_TXLWt2YgRQVvDcMumxlw",
+      "name": "Electrical Services fl",
+      "vicinity": "1800 NE 180th St, North Miami Beach",
+      "rating": 4.9,
+      "user_ratings_total": 349,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJUcIrp4PI0IQR8VyAam7hAaY",
+      "name": "R Ruano General Services",
+      "vicinity": "6861 SW 147th Ave, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 105,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJh2F9Uiat2YgRJvWdY3dYQ_4",
+      "name": "Miami Speedy Commercial Electricians",
+      "vicinity": "645 NE 167th St #8000, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 137,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJe9e_JVPC8EMRjfXAB0hMuZ4",
+      "name": "Dragon Electric Services",
+      "vicinity": "6175 NW 167th St STE G38, Hialeah",
+      "rating": 5,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSXgXH2mt2YgRUGLgWtcXVxs",
+      "name": "Electrician Network Hollywood",
+      "vicinity": "19443 Presidential Way, North Miami Beach",
+      "rating": 4.8,
+      "user_ratings_total": 18,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIbg4vMXB2YgRaeIbFmvtw58",
+      "name": "EU Electrical Contractor",
+      "vicinity": "10671 NW 122nd St, Medley",
+      "rating": 4.9,
+      "user_ratings_total": 28,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJj4BLMDNf7IgRBlbIxOoBOqY",
+      "name": "GT Electric",
+      "vicinity": "3154 Eliza Rd, Tallahassee",
+      "rating": 4.6,
+      "user_ratings_total": 155,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAckzlzvx7IgRwfbsUYippns",
+      "name": "Weston Trawick, Inc.",
+      "vicinity": "5392 Tower Rd, Tallahassee",
+      "rating": 4.8,
+      "user_ratings_total": 68,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJG6C5qJD17IgRdvhCYsyUez4",
+      "name": "Chad O'Hara's Quality Electrical Services Inc.",
+      "vicinity": "1130 Thomasville Rd, Tallahassee",
+      "rating": 4,
+      "user_ratings_total": 35,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNVu_DXLnk4gRf9Ruv9hKRfs",
+      "name": "D.F.S ELECTRICAL SERVICES EC13008805",
+      "vicinity": "3148 Dick Wilson Blvd Unit 2115, Tallahassee",
+      "rating": 4.8,
+      "user_ratings_total": 19,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBzHXhFqN7IgRIToEfG5mc1Q",
+      "name": "Northeast Electrical, llc",
+      "vicinity": "7061 John Wayne Ct, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 9,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJncQlt5Fa7IgRUR7LdzBpizY",
+      "name": "Fraser Electric Inc.",
+      "vicinity": "5084 Louvinia Dr, Tallahassee",
+      "rating": 4.3,
+      "user_ratings_total": 39,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ1apft-717IgRlANQb5cPjsU",
+      "name": "Electrician Pros Tallahassee",
+      "vicinity": "401 W Park Ave #207, Tallahassee",
+      "rating": 0,
+      "user_ratings_total": 0,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJc_VK3Wnx7IgR28a_0pTZqJw",
+      "name": "Joel Foy Electrical Service",
+      "vicinity": "5650 Gum Rd, Tallahassee",
+      "rating": 4.8,
+      "user_ratings_total": 634,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJs7-ELuJf7IgRPeZYx-KiuU8",
+      "name": "Edison Electricians of Tallahassee",
+      "vicinity": "2700 S Blair Stone Rd ste f, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJTwM9_Jxf7IgR8Dn-69PzBuA",
+      "name": "Marlin Electrical Service",
+      "vicinity": "1509 Valley Rd, Tallahassee",
+      "rating": 4,
+      "user_ratings_total": 7,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZTSnmZT17IgRupiJAWt5QsQ",
+      "name": "Rocafort Electrical Services, LLC",
+      "vicinity": "2113 Great Oak Dr, Tallahassee",
+      "rating": 4.6,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJV0SV3Z1Z7IgR0MGV-fxqIqA",
+      "name": "Truevolt Electrical Services Inc",
+      "vicinity": "4786 Woodlane Cir Apartment A, Tallahassee",
+      "rating": 4.9,
+      "user_ratings_total": 147,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJy8ftV0th7IgRHU1GWIXrM1Q",
+      "name": "Macon Electric LLC",
+      "vicinity": "10720 Sycamore Ridge Ln, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5-0V2kDx7IgRN_rwNUq173Q",
+      "name": "Lawson & Lawson Electrical Services",
+      "vicinity": "5019 Metzke Ln, Tallahassee",
+      "rating": 4.7,
+      "user_ratings_total": 138,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0eoAljeL7IgR58btWFHf6YQ",
+      "name": "Ed Bolden's Electric LLC",
+      "vicinity": "275 Crossway Rd, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuVh0j5b07IgRcWj7aEIvjsc",
+      "name": "A+ Electrical Contractors LLC",
+      "vicinity": "956 Yulee St, Tallahassee",
+      "rating": 4.7,
+      "user_ratings_total": 33,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcauedFjx7IgRSd_qG0y3Wu4",
+      "name": "RC Electric Heating & A/C",
+      "vicinity": "2477 Tower Rd, Tallahassee",
+      "rating": 0,
+      "user_ratings_total": 0,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJza6ndXzz7IgRz68Unfjuzn8",
+      "name": "Joyner Electric, Inc.",
+      "vicinity": "4955 Swamp Fox Rd, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJt4fJd6Jf7IgRc5ZnTGPGsmM",
+      "name": "Barksdale Electric Inc.",
+      "vicinity": "1882 Capital Cir NE #105, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJL3iJO5iK7IgRHEUcRR_vIIU",
+      "name": "Enlighten Electric Inc",
+      "vicinity": "282 Crossway Rd, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJV5DTE062fyEROlfQSWHgK1A",
+      "name": "New Dimension Electrical Service",
+      "vicinity": "2065 SE Allamanda Dr, Port St. Lucie",
+      "rating": 4.9,
+      "user_ratings_total": 85,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJd6QmnVBiqwARx32Mgu1qnPE",
+      "name": "Wire it up with Lindor Electric",
+      "vicinity": "401 SW Meadow Terrace, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 102,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJkViFvdrD3ogR58tSA_T06zg",
+      "name": "Mast Electric Inc.",
+      "vicinity": "1108 SW 28th St, Palm City",
+      "rating": 4.9,
+      "user_ratings_total": 68,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJF1ide4Lo3ogRb-IWCVL0Zxc",
+      "name": "FL Electricians",
+      "vicinity": "2033 SE Lennard Rd, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBWjQCsTr3ogRi4umElloS2w",
+      "name": "MOV Electric Solutions Corp",
+      "vicinity": "832 SW Hamberland Ave, Port St. Lucie",
+      "rating": 4.9,
+      "user_ratings_total": 25,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZU9ugDXp3ogRN6dxQe91JGY",
+      "name": "Supreme Electric",
+      "vicinity": "313 SE Husted Terrace, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4ZsRyjvm3ogRVDnVVPn16Q0",
+      "name": "Express Electrician",
+      "vicinity": "1900 SW Aledo Ln, Port St. Lucie",
+      "rating": 4.7,
+      "user_ratings_total": 9,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJo7RRO7rp3ogRo3_rb4fiR6Y",
+      "name": "Sky Wave Electric",
+      "vicinity": "3429 SE Hart Cir, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_UEMb4rs3ogRzpqfHyedXg8",
+      "name": "All American Air & Electric",
+      "vicinity": "1959 SW South Macedo Blvd, Port St. Lucie",
+      "rating": 3.8,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq80YEr_r3ogR8HyuQ--VSJA",
+      "name": "Stott Brothers Electric",
+      "vicinity": "1298 SW Biltmore St suite f, Port St. Lucie",
+      "rating": 4.9,
+      "user_ratings_total": 567,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJA9OSYOfZ7CkRq2ovvmpL-k0",
+      "name": "Brighter Days Electrical Repair",
+      "vicinity": "464 NW Peacock Blvd Unit 118, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 293,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBTsXXWM76EARSM_i-2jWX3g",
+      "name": "E2 Electric and Home Services Inc",
+      "vicinity": "1610 SE Village Green Dr, Port St. Lucie",
+      "rating": 4.5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJDXgvC1nD3ogR7HyJUIQy_xw",
+      "name": "Ehman Electrical Contractor LLC",
+      "vicinity": "320 NW Enterprise Dr Suite 121, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 340,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGztAyN7C3ogRh7XTqdlbPL4",
+      "name": "Stryker Electric & Air",
+      "vicinity": "4241 SW High Meadow Ave, Palm City",
+      "rating": 4.9,
+      "user_ratings_total": 182,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJwQ8-MODr3ogR8xpN_c9enSA",
+      "name": "Elite Electric, Plumbing & Air",
+      "vicinity": "1691 SW South Macedo Blvd, Port St. Lucie",
+      "rating": 4.8,
+      "user_ratings_total": 4917,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ75YW0pbo3ogRh-inAcKuy6k",
+      "name": "Go Local Electric, LLC",
+      "vicinity": "660 SE Monterey Rd, Stuart",
+      "rating": 4.9,
+      "user_ratings_total": 32,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIz6BRwDr3ogRhTijvBWTZic",
+      "name": "Castillo’s Electrical Service LLC",
+      "vicinity": "1773 SW Hampshire Ln, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 70,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-W5FsF3n3ogRBAYhWtmEgNc",
+      "name": "Sparks Electrical Contracting, LLC",
+      "vicinity": "627 NW Buck Hendry Way, Stuart",
+      "rating": 4.8,
+      "user_ratings_total": 104,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-dJxVCvU3ogR8rOCAVFBetI",
+      "name": "Excel Electric LLC",
+      "vicinity": "534 NW Mercantile Pl Unit E-110, Port St. Lucie",
+      "rating": 4.8,
+      "user_ratings_total": 247,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0zbrFn7t3ogRP8wzAKQRKAM",
+      "name": "Tradition Electric",
+      "vicinity": "510 NW University Blvd #106, Port St. Lucie",
+      "rating": 4.9,
+      "user_ratings_total": 60,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJDwCA8NND24gRynl6gNrkFSI",
+      "name": "Electrical Experts of FL LLC",
+      "vicinity": "4750 Bayline Dr #2, North Fort Myers",
+      "rating": 5,
+      "user_ratings_total": 374,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSfyDY2IV24gRWLEYdT_-JFU",
+      "name": "All Phase Electric Service",
+      "vicinity": "2340 Bruner Ln, Fort Myers",
+      "rating": 4.8,
+      "user_ratings_total": 306,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZR1ikMM324gRjcssUoRYaQc",
+      "name": "Gault Electric South",
+      "vicinity": "2545 Surfside Blvd, Cape Coral",
+      "rating": 4.7,
+      "user_ratings_total": 96,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGcuaXd5r24gRcfQS43SBye0",
+      "name": "Electrician Fort Myers",
+      "vicinity": "3550 Work Dr Suite A3, Fort Myers",
+      "rating": 5,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWShe9aRq24gRKPMzcI00rPI",
+      "name": "ABC Electric Service, Inc.",
+      "vicinity": "210 5th St, Fort Myers",
+      "rating": 4.3,
+      "user_ratings_total": 32,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq9lb3X0_24gRBIC0tNBUGjQ",
+      "name": "Haddad Electric LLC",
+      "vicinity": "16021 Siesta Dr, Fort Myers",
+      "rating": 5,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJRVEAJppq24gRpW_4hIue4jw",
+      "name": "D & R Electrical Services",
+      "vicinity": "2783 N Airport Rd, Fort Myers",
+      "rating": 4.4,
+      "user_ratings_total": 24,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-S2AAO5_uAARDNaB0jEN0Ug",
+      "name": "Mr. Mike Electric",
+      "vicinity": "10201 Metro Pkwy Unit 115, Fort Myers",
+      "rating": 4.8,
+      "user_ratings_total": 62,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJi3G9OqVG24gRW5mh_fgSfQs",
+      "name": "Young's Electrical Contracting, Inc.",
+      "vicinity": "413 NE Van Loon Ln #116, Cape Coral",
+      "rating": 4.3,
+      "user_ratings_total": 56,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJi3G9OqVG24gRnlLi-QVfQkw",
+      "name": "Mr. Electric of Southwest Florida",
+      "vicinity": "2673 NE 9th Ave, Cape Coral",
+      "rating": 4.4,
+      "user_ratings_total": 76,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJO7CJjNQb24gRytPcBD97m3U",
+      "name": "Best Home Services",
+      "vicinity": "16090 S Tamiami Trl, Fort Myers",
+      "rating": 4.7,
+      "user_ratings_total": 6851,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4e6XtvTVuSYRmGAyj16nv7w",
+      "name": "Southern Power Electric",
+      "vicinity": "2275 Bruner Ln #5, Fort Myers",
+      "rating": 4.7,
+      "user_ratings_total": 25,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9_eXXGpKMI8RGjVOAMSiKL0",
+      "name": "Markarian Electric",
+      "vicinity": "3592 Broadway Suite 130, Fort Myers",
+      "rating": 5,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJqRMPEWV2tqYRpm4cDor55SQ",
+      "name": "SWFL Electrical Services, LLC",
+      "vicinity": "87 Mildred Dr, Fort Myers",
+      "rating": 5,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJYwkegp4V24gR2x9M-oR7c5I",
+      "name": "York Electric & Design LLC",
+      "vicinity": "2307 Bruner Ln #7, Fort Myers",
+      "rating": 4.6,
+      "user_ratings_total": 37,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJk0W0B2UV24gRuPB5p2zrB9A",
+      "name": "Mabry Brothers, Inc",
+      "vicinity": "5731 Halifax Ave, Fort Myers",
+      "rating": 4.8,
+      "user_ratings_total": 218,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnXVO8KtA24gRyTE03C5fUSA",
+      "name": "Nauti Electric Inc.",
+      "vicinity": "4313 SE 13th Pl, Cape Coral",
+      "rating": 4.9,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_ZsPV51H24gRuE1R2ihv6Ok",
+      "name": "FLIP THE SWITCH ELECTRICAL CONTRACTORS LLC",
+      "vicinity": "2313 SE 5th Pl, Cape Coral",
+      "rating": 4.9,
+      "user_ratings_total": 164,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJTd_4NPFD24gR9YntAPQAvI0",
+      "name": "Coharbor Electric LLC",
+      "vicinity": "11270 Metro Pkwy #5, Fort Myers",
+      "rating": 4.9,
+      "user_ratings_total": 479,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJl3a2-Yw_24gRfHQNl_4XbLc",
+      "name": "Plumbing, Cooling & Electrical Nerds",
+      "vicinity": "1639 Cape Coral Pkwy E UNIT 201, Cape Coral",
+      "rating": 4.8,
+      "user_ratings_total": 1225,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ95pwA6gB2YgR18Ptg2ZAGu0",
+      "name": "Berger Brothers Electrical Service",
+      "vicinity": "3847 N Andrews Ave #93C, Fort Lauderdale",
+      "rating": 4.8,
+      "user_ratings_total": 127,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJL6vGjoID2YgRHUAyyjwm-6I",
+      "name": "Jesselectric, Inc",
+      "vicinity": "671 NE 42nd St, Oakland Park",
+      "rating": 4.9,
+      "user_ratings_total": 184,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJxz7pVMXZsWER0km-ZqpuKNE",
+      "name": "Solomon Electric",
+      "vicinity": "4036 N 29th Ave, Hollywood",
+      "rating": 4.8,
+      "user_ratings_total": 343,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5_9vf_YC2YgRUFvSmlTam3o",
+      "name": "Burley Electrical Service",
+      "vicinity": "172 SW 5th St, Pompano Beach",
+      "rating": 5,
+      "user_ratings_total": 33,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJr8ecLwAE2YgRFq-tckUk3Ng",
+      "name": "Sirius Electrical Contractors, LLC",
+      "vicinity": "4700 Prospect Rd STE 103, Fort Lauderdale",
+      "rating": 4.9,
+      "user_ratings_total": 70,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ27NrBWmp2YgRUpYmWazBg4s",
+      "name": "24/7 Electrician LLC",
+      "vicinity": "1315 N 47th Ave, Hollywood",
+      "rating": 5,
+      "user_ratings_total": 41,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhWK_cRIB2YgRthfalSp4Xhw",
+      "name": "First Property Electrician Fort Lauderdale",
+      "vicinity": "405 NE 2nd St, Fort Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0yNKXPAH2YgRcr_H6lzS_LA",
+      "name": "Wiseminds Electrical Contractors",
+      "vicinity": "2709 Willow Ave, Lauderdale Lakes",
+      "rating": 4.9,
+      "user_ratings_total": 150,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJX70pWFyp2YgRLMUuwOrTWFo",
+      "name": "1st Electricians",
+      "vicinity": "3400 Davie Rd, Davie",
+      "rating": 5,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrZvA8vgE2YgRqAGPeDHnrL8",
+      "name": "Next Generation Electrical Contractors LLC",
+      "vicinity": "7330 SW 1st St, Margate",
+      "rating": 4.9,
+      "user_ratings_total": 43,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJccce_GgD2YgR5BqgIcgpoRQ",
+      "name": "First Property Electrician Coconut Creek",
+      "vicinity": "4303 FL-814, Coconut Creek",
+      "rating": 5,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAQBAxzsA2YgR02oW1Hnle24",
+      "name": "ALLSITE ELECTRIC LLC",
+      "vicinity": "10001 NW 50th St Suite 203D, Sunrise",
+      "rating": 4.9,
+      "user_ratings_total": 77,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJeQDS61IC2YgRY3E1OHKIRzs",
+      "name": "Mister Sparky",
+      "vicinity": "1597 Banks Rd, Margate",
+      "rating": 4.8,
+      "user_ratings_total": 3432,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJtxmO1psF2YgRnwTZl9AsVsA",
+      "name": "Full Service Home Electrician",
+      "vicinity": "8040 W McNab Rd, North Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyUQR2pYB2YgRjkh4DOAUoMU",
+      "name": "Full Service Home Electrician",
+      "vicinity": "2734 E Oakland Park Blvd, Fort Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJDXq4X4392IgRL1FZ7qqbj5M",
+      "name": "First Choice Home Electricians",
+      "vicinity": "4109 N Ocean Dr, Lauderdale-By-The-Sea",
+      "rating": 5,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8eX_0E6p2YgRb6R1jtXMTok",
+      "name": "Mr. Electric Inc",
+      "vicinity": "4053 Peters Rd, Plantation",
+      "rating": 4.7,
+      "user_ratings_total": 73,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJh3vjoAMCZGYRC2vbUDuTpT0",
+      "name": "Global Power & Ac Corp of Broward",
+      "vicinity": "1505 NW 91st Ave Apt. 1033, Coral Springs",
+      "rating": 5,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAWE1qa6AYyARXbYygcNqiF4",
+      "name": "Superior Electric and Air",
+      "vicinity": "1975 E Sunrise Blvd #535, Fort Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 79,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0UENpW4D2YgRfVDmXbwUfgw",
+      "name": "QuickCall Electricians",
+      "vicinity": "2140 NE 56th St, Fort Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKTm8yZWm2YgRwrWq5IX27Yk",
+      "name": "A Plus Electrical Technologies Inc.",
+      "vicinity": "500 SW 145th Ave Unit# 101, Pembroke Pines",
+      "rating": 5,
+      "user_ratings_total": 89,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq6qWkscJ2YgRQyJyzGH3AWE",
+      "name": "Allbrite Electric & Services",
+      "vicinity": "13762 W State Rd 84 Suite 63, Davie",
+      "rating": 5,
+      "user_ratings_total": 39,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcQDgr6Sn2YgR3A043nA8Iyo",
+      "name": "Code One Electric LLC",
+      "vicinity": "4111 SW 47th Ave, Davie",
+      "rating": 4.6,
+      "user_ratings_total": 21,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBzvPPNSr2YgRcIxhYVmKqPo",
+      "name": "CurrentTech Electrical Services",
+      "vicinity": "3866 Sheridan St, Hollywood",
+      "rating": 5,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJg_i68eMH2YgR1kXP8ZwPSW4",
+      "name": "ELECTRICIANS ON CALL, CORP",
+      "vicinity": "1431 SW 63rd Terrace, Plantation",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJh3pCDoi72YgRHAxHtXMNUiA",
+      "name": "A-1 Florida Electric Contractor",
+      "vicinity": "12101 NW 98th Ave, Hialeah Gardens",
+      "rating": 4.7,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJwRkVTsYH2YgR1WQ7xEs_OhY",
+      "name": "ON Service Electricians",
+      "vicinity": "8021 Peters Rd, Plantation",
+      "rating": 5,
+      "user_ratings_total": 7,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpbZKTBSp2YgR87mUd5dwX8w",
+      "name": "Power Point Electric, inc",
+      "vicinity": "6235 Grant Ct, Hollywood",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJYeP_-yCv2YgRWTn9oT7-0_8",
+      "name": "Meisner Electric",
+      "vicinity": "7429 Riviera Blvd, Miramar",
+      "rating": 5,
+      "user_ratings_total": 25,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-2COyV4B2YgRiUf8o0Oavv8",
+      "name": "Fort Lauderdale Electricians",
+      "vicinity": "1001 SE 14th Pl #2B, Fort Lauderdale",
+      "rating": 4.6,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKVpzFBet2YgRgPp3mog48AQ",
+      "name": "Gelik Electrical Inc.",
+      "vicinity": "3040 NE 190th St, Aventura",
+      "rating": 5,
+      "user_ratings_total": 14,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGVL3f2Kr2YgRMIqB6vqkmhI",
+      "name": "Delta Tech Electric LLC",
+      "vicinity": "1835 E Hallandale Beach Blvd, Hallandale Beach",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJjUiXZLsD2YgRycMku6Y6-qo",
+      "name": "Einstein Electric, Inc",
+      "vicinity": "4630 NW 30th St, Coconut Creek",
+      "rating": 5,
+      "user_ratings_total": 103,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJaVimtq8b2YgR2aAHTEWZbd0",
+      "name": "First Property Electrician Coconut Creek",
+      "vicinity": "4855 W Hillsboro Blvd, Coconut Creek",
+      "rating": 5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2TWFhfAF2YgRhEb4CZ2o1qQ",
+      "name": "EMB Home Services - Electrical Maintenance in Broward",
+      "vicinity": "503 Lakeview Dr, Coral Springs",
+      "rating": 5,
+      "user_ratings_total": 109,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq3VuZtx9a2kR2tFKAvzCJEs",
+      "name": "Florida Electrical & Fire Alarm LLC Electrician of Deerfield Beach (Florida Alarma eléctrica y contra incendios LLC)",
+      "vicinity": "2903 Waterford Dr N North, Deerfield Beach",
+      "rating": 5,
+      "user_ratings_total": 38,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0_DWdMwkxokRkO3pbS0Bvzc",
+      "name": "NextGen Electric",
+      "vicinity": "8406 W Sample Rd, Coral Springs",
+      "rating": 5,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJX89i73wG2YgR4LnGDKYnlpo",
+      "name": "Vision Electric Inc",
+      "vicinity": "3800 Inverrary Blvd Suite 407i, Lauderhill",
+      "rating": 4.9,
+      "user_ratings_total": 70,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJiUveV4gB2YgRIKNNLIwZKYk",
+      "name": "Perfect Electric Solutions",
+      "vicinity": "2150 NW 9th Ave, Fort Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 19,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJCWAj4i8C2YgRq_eWGWofwYs",
+      "name": "Perfect Electric",
+      "vicinity": "2150 NW 9th Ave, Fort Lauderdale",
+      "rating": 4.3,
+      "user_ratings_total": 46,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJW7Ddg2vzwogR1wyt-dCjSbc",
+      "name": "Blue Collar Electric",
+      "vicinity": "1215 12th St, Palm Harbor",
+      "rating": 4.9,
+      "user_ratings_total": 1536,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ08Wxc9u9wogRhM_Utnc5aVQ",
+      "name": "ONYX Electric",
+      "vicinity": "12718 Dupont Cir, Tampa",
+      "rating": 5,
+      "user_ratings_total": 204,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN2qq3SPFwogRpG4y-cRkz-I",
+      "name": "Apex Electrical LLC",
+      "vicinity": "36081 US Hwy 19 N, Palm Harbor",
+      "rating": 3.6,
+      "user_ratings_total": 14,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ1d3dNX3xwogRKJl-R3W15QA",
+      "name": "Imperial Electric Service of Pinellas, Inc.",
+      "vicinity": "1411 S Hercules Ave, Clearwater",
+      "rating": 5,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpac6s52RwogR9tmpD3tYEOw",
+      "name": "Mister Sparky",
+      "vicinity": "201 Douglas Rd E Ste 1, Oldsmar",
+      "rating": 4.7,
+      "user_ratings_total": 777,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPx-YvgrrwogREG7Tgrb9_48",
+      "name": "Switch Electric LLC",
+      "vicinity": "555 Frederica Ln, Dunedin",
+      "rating": 4,
+      "user_ratings_total": 28,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJA-kiuvzzwogRabI7m_XuLrs",
+      "name": "Anchor Electric",
+      "vicinity": "2321 Maben Ave, Palm Harbor",
+      "rating": 5,
+      "user_ratings_total": 183,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJQZgpbdbvwogR0Vt66z-JrTY",
+      "name": "Positricity",
+      "vicinity": "21959 US Hwy 19 N, Clearwater",
+      "rating": 4.7,
+      "user_ratings_total": 368,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJm-f3_ufwwogRJ59gowhzkOY",
+      "name": "Red Royal Electric",
+      "vicinity": "717 Drew St, Clearwater",
+      "rating": 4.8,
+      "user_ratings_total": 1712,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq6rG3PQM3ogReUjeaIA1b6U",
+      "name": "ES & D Electric LLC",
+      "vicinity": "957 Custer St NW, Palm Bay",
+      "rating": 5,
+      "user_ratings_total": 93,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXwVJaiVj1iQRQE_SQeZGL7o",
+      "name": "EJM Electric, LLC",
+      "vicinity": "3816 MacFarlane St, Melbourne Beach",
+      "rating": 5,
+      "user_ratings_total": 53,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPX1QvGPgGo8R8Y2SToC23I8",
+      "name": "Mister Sparky",
+      "vicinity": "440 Stan Dr #101, Melbourne",
+      "rating": 4.8,
+      "user_ratings_total": 560,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJkZjfeEMS3ogRTm8lMXZwy-Y",
+      "name": "CTS Electrical Division",
+      "vicinity": "2475 Palm Bay Rd NE Ste 115, Palm Bay",
+      "rating": 5,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJwXXVJ4wR3ogRs6X4q1_UCAg",
+      "name": "Wavelength Electrical Contracting",
+      "vicinity": "924 E New Haven Ave, Melbourne",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJUSbO6VMP3ogRu700pdvPlyU",
+      "name": "Voltage Brothers",
+      "vicinity": "580 Cadillac Cir W, Melbourne",
+      "rating": 4.2,
+      "user_ratings_total": 18,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJu-_uJ3gQ3ogRgW_ma9A4-s0",
+      "name": "Aloha Electric Inc",
+      "vicinity": "140 Tomahawk Dr # 51, Indian Harbour Beach",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnyoNlv0T3ogRq0mQQKhK2Ww",
+      "name": "Clear Electricals",
+      "vicinity": "2475 Palm Bay Rd NE #378, Palm Bay",
+      "rating": 5,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJy_PRL6UP3ogRQ-gzEvWWQTY",
+      "name": "Dynamic Lighting Electrical Contractors",
+      "vicinity": "2683 Aurora Rd A, Melbourne",
+      "rating": 4.1,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2aF7Ll4R3ogR7qmL5qmNwhA",
+      "name": "Edison Electricians",
+      "vicinity": "158 N Harbor City Blvd Ste 200, Melbourne",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJdaIK0KNt3ogRaEn0vfghAEY",
+      "name": "Cornelius Electrical Contractors Inc",
+      "vicinity": "1497 Norman St NE, Palm Bay",
+      "rating": 5,
+      "user_ratings_total": 553,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSZLIZscP3ogR69hFmeJIz8s",
+      "name": "EAU GALLIE ELECTRIC INC.",
+      "vicinity": "295 North Dr Ste. H, Melbourne",
+      "rating": 4.8,
+      "user_ratings_total": 224,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJQSRerc8R3ogRS7l3qSxyp7s",
+      "name": "Grand Electric",
+      "vicinity": "109 Nelson Ave, Melbourne",
+      "rating": 4.8,
+      "user_ratings_total": 103,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVVVVVYka3ogRgkc-RvNkgy8",
+      "name": "Pingston Electric",
+      "vicinity": "131 Tomahawk Dr #1, Indian Harbour Beach",
+      "rating": 4.6,
+      "user_ratings_total": 160,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMaGtcu4O3ogRYr0AUm4ZLzc",
+      "name": "Boys Electrical Contractors",
+      "vicinity": "110 East Dr, Melbourne",
+      "rating": 4.7,
+      "user_ratings_total": 76,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ82Q8PLsP3ogRnRp1MZirYfU",
+      "name": "Cherry Bomb Electric, Inc",
+      "vicinity": "Melbourne",
+      "rating": 4.5,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNTzcEsIO3ogRuxZ3sgJiY6Q",
+      "name": "J. W. Harlow Electrical, LLC.",
+      "vicinity": "4355 Dow Rd STE 6, Melbourne",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNSyG-h8P3ogRLhUpOICujjg",
+      "name": "Wavelength Electrical Contracting INC",
+      "vicinity": "3100 Harlock Rd, Melbourne",
+      "rating": 5,
+      "user_ratings_total": 122,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJl3TEUswN3ogRWojPJOEpZmQ",
+      "name": "Ultimate Electric Inc",
+      "vicinity": "3145 Fell Rd, Melbourne",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJO84mwXMT3ogRkgPaqZScogQ",
+      "name": "Kangaroo Electric LLC",
+      "vicinity": "1720 Malabar Rd #642, Malabar",
+      "rating": 5,
+      "user_ratings_total": 38,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ22mj5uGz2YgRmlYKW_eSjz4",
+      "name": "Nest Grid Electric Homes",
+      "vicinity": "340 84th St, Miami Beach",
+      "rating": 5,
+      "user_ratings_total": 4,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzVq2B4u52YgRsn-1qW3xap0",
+      "name": "Virginia Gardens FL Service | Plumbers Electricians Heating Air Conditioning Duct & Vent Cleaning",
+      "vicinity": "6405 NW 36th St suite 124, Virginia Gardens",
+      "rating": 4.9,
+      "user_ratings_total": 43,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcdrm3Eca2YgRc0-c7nejkrU",
+      "name": "Boca Electrical Service",
+      "vicinity": "158 NW 16th St #2, Boca Raton",
+      "rating": 4.8,
+      "user_ratings_total": 469,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8YmPG_rh2IgRL4rlnFuQNE8",
+      "name": "Boca Electrical Service",
+      "vicinity": "123 NW 13th St suite 214-09, Boca Raton",
+      "rating": 5,
+      "user_ratings_total": 137,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJO2UCh-4d2YgR6Xyd5OhB7TI",
+      "name": "First Choice Home Electrician Pompano Beach",
+      "vicinity": "5253 N Dixie Hwy, Pompano Beach",
+      "rating": 5,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN_jGbjW76IgRHx_sjJO9iew",
+      "name": "Manny's Electric",
+      "vicinity": "11032 NW 60 Terrace, Alachua",
+      "rating": 4.9,
+      "user_ratings_total": 77,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyVG6Vzk2XE0RHsmZ1wtSGJo",
+      "name": "Mister Sparky",
+      "vicinity": "5111 NW 13th St Suite C, Gainesville",
+      "rating": 4.8,
+      "user_ratings_total": 1078,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ7bo02hOk6IgRdz3DDTm65xk",
+      "name": "Mr. Electric of North Florida",
+      "vicinity": "680 NE 23rd Ave Suite A, Gainesville",
+      "rating": 4.7,
+      "user_ratings_total": 117,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJA5KQwSlt54gRqV0maCh5uUU",
+      "name": "Impact Electric",
+      "vicinity": "851 Little Fawn Ct, Winter Springs",
+      "rating": 4.9,
+      "user_ratings_total": 30,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJsbxHK0D72ogRSjq8rdTqHXQ",
+      "name": "Full Service Electrician Pros",
+      "vicinity": "2209 NW 16th Terrace, Gainesville",
+      "rating": 5,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3Rd0sWmBk4gRgyBQj2fDYZU",
+      "name": "Shockwave Electricians",
+      "vicinity": "321 SW 13th St Floor 2, Gainesville",
+      "rating": 4.7,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ___j1Se76IgRnhT89Vh4yPc",
+      "name": "Grener Electric",
+      "vicinity": "605 NW 53rd Ave Suite A-8B, Gainesville",
+      "rating": 4.9,
+      "user_ratings_total": 406,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcXQYYRCl6IgREq90JtM_6jM",
+      "name": "Vintage Electric, Inc.",
+      "vicinity": "2421 NW 71st Pl, Gainesville",
+      "rating": 4.9,
+      "user_ratings_total": 332,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ653lYtK86IgRDdQbJ1J0RNs",
+      "name": "Archer Electric Services Co",
+      "vicinity": "4504 SW 29th Ave, Gainesville",
+      "rating": 4.9,
+      "user_ratings_total": 240,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJxasjZ9ii6IgRv_9Gmn6vUDc",
+      "name": "Preston Link Electric",
+      "vicinity": "4000 SW 35th Terrace, Gainesville",
+      "rating": 4.9,
+      "user_ratings_total": 319,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_eVunBek6IgRFGq6h-Twvac",
+      "name": "352 Electric LLC",
+      "vicinity": "1102 NW 23rd Ave, Gainesville",
+      "rating": 4.7,
+      "user_ratings_total": 57,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJaWsFWV276IgRhNhnCjty1Qc",
+      "name": "Gunning Electric Inc",
+      "vicinity": "2325 NW 63rd Terrace, Gainesville",
+      "rating": 4.6,
+      "user_ratings_total": 70,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ69yOwm6k6IgRBZ2ZlgGRwtk",
+      "name": "Alford's Affordable Services",
+      "vicinity": "2410 NE 17th Ter, Gainesville",
+      "rating": 4.7,
+      "user_ratings_total": 83,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3WURV8gbPqsRtUGRf2VRllA",
+      "name": "SDS Electrical & Handyman Services LLC",
+      "vicinity": "8002 SW 51st Ln, Gainesville",
+      "rating": 5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvVBfShK96IgR_7dlkQ45Bso",
+      "name": "R Leon Electric, Inc.",
+      "vicinity": "1915 SW 70th Terrace, Gainesville",
+      "rating": 4.8,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJR3io1v-96IgRVdhTI0bxLYY",
+      "name": "Keough Electric",
+      "vicinity": "4824 SW 57th Dr, Gainesville",
+      "rating": 4.8,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJT4R1bB6k6IgRvAR-44qacJA",
+      "name": "All Florida Electric Co Inc",
+      "vicinity": "2606 NE 17th Ter, Gainesville",
+      "rating": 4.7,
+      "user_ratings_total": 22,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXQYUTsAR54gRBICI-e7gASk",
+      "name": "Petras Electric",
+      "vicinity": "1213 Saxon Blvd, Orange City",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJI3uUbR6k6IgRFanyb4zROmM",
+      "name": "Gainesville Electrical Joint",
+      "vicinity": "2420 NE 17th Ter, Gainesville",
+      "rating": 5,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_____5Oj6IgRH2GHgVQShtk",
+      "name": "Felknor Electric Inc",
+      "vicinity": "Gainesville",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLd0WpYLX2IgRt-hAeUzSJq0",
+      "name": "Boston Electric LLC",
+      "vicinity": "1616 N Florida Mango Rd Suite C7, West Palm Beach",
+      "rating": 4.9,
+      "user_ratings_total": 186,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuS3izg4o2YgRllKHuNRpRqg",
+      "name": "Gator Electric and Communications, Inc.",
+      "vicinity": "3670 23rd Ave S #1, Lake Worth Beach",
+      "rating": 4.9,
+      "user_ratings_total": 174,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3QvhulrW2IgRU1WabNVHYd4",
+      "name": "Extreme Electrical Inc",
+      "vicinity": "4704 Clemens St, Lake Worth Beach",
+      "rating": 5,
+      "user_ratings_total": 35,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9RJxez4p2YgRz_UPoLU1vo4",
+      "name": "Global Power & Ac Corp",
+      "vicinity": "930 Bellhurst Way #123, West Palm Beach",
+      "rating": 5,
+      "user_ratings_total": 639,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ63POon3Z2IgRFcaQelGvrwc",
+      "name": "Benitez Electric Inc",
+      "vicinity": "620 S N St, Lake Worth Beach",
+      "rating": 5,
+      "user_ratings_total": 73,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZxZ3EdrX2IgRGKJ-DtVk8cE",
+      "name": "JP Volt Electric INC",
+      "vicinity": "625 El Vedado, West Palm Beach",
+      "rating": 5,
+      "user_ratings_total": 93,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyYPzuSjY2IgR1ThzWdZERGI",
+      "name": "J.W. Electric of the Palm Beaches, Inc.",
+      "vicinity": "1522 13th Ave N, Lake Worth Beach",
+      "rating": 4.6,
+      "user_ratings_total": 34,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNx2cDAgr2YgR6g7gYwg5Awg",
+      "name": "Mister Sparky",
+      "vicinity": "Riviera Beach St, Riviera Beach",
+      "rating": 4.7,
+      "user_ratings_total": 585,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXTeea5_X2IgRo-Cfzu8K-tg",
+      "name": "Ochoa Electric Services",
+      "vicinity": "206 Foresteria Dr, Lake Park",
+      "rating": 4.8,
+      "user_ratings_total": 65,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ58tVXI_V2IgRe9wqteDzueM",
+      "name": "Eccentric Energy",
+      "vicinity": "5307 Spruce Ave, West Palm Beach",
+      "rating": 4.7,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJb-M5MzzW2IgRA2zo0hPD2jc",
+      "name": "PIE Superior Service",
+      "vicinity": "1173 Old Dixie Hwy Ste B, Lake Park",
+      "rating": 5,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAQp3MTEo2YgRsFRtvU3p5qU",
+      "name": "Lighthouse Energy Company",
+      "vicinity": "4657 Southern Blvd d, West Palm Beach",
+      "rating": 5,
+      "user_ratings_total": 27,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJT390EjNHlKkRhrq9nKo8G6g",
+      "name": "Elite Sons LLC",
+      "vicinity": "10299 Southern Blvd #211355, Royal Palm Beach",
+      "rating": 4.7,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJk0G9Ahgr34gRRiVM2isjAME",
+      "name": "Underwood Electric LLC",
+      "vicinity": "3202 Meridian Way N, Palm Beach Gardens",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJM9d_j90o2YgRwPUAAePVaDM",
+      "name": "Power Generation",
+      "vicinity": "3599 23rd Ave S #7, Lake Worth Beach",
+      "rating": 4.7,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJJUYhMv5rI6UR5f95bSAcF7c",
+      "name": "Science Electric inc",
+      "vicinity": "2461 Village Blvd, West Palm Beach",
+      "rating": 4.7,
+      "user_ratings_total": 24,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgVxVhsop2YgRSPdBDl-NDOY",
+      "name": "Swink Electric Inc.",
+      "vicinity": "917 S Military Trl C-1, West Palm Beach",
+      "rating": 5,
+      "user_ratings_total": 244,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ1_z-C0HV2IgRw7fhM5Fr618",
+      "name": "Kasper Electrical",
+      "vicinity": "1321 S Killian Dr Suite A, Lake Park",
+      "rating": 4.9,
+      "user_ratings_total": 242,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrdYVnaMq2YgRCRHJ_0aIAGQ",
+      "name": "Rack Electric",
+      "vicinity": "7830 Byron Dr # 11, West Palm Beach",
+      "rating": 4.5,
+      "user_ratings_total": 238,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJQ4pZN64p2YgRQ_2IvCGZo7M",
+      "name": "Wave Electrical",
+      "vicinity": "980 Service St #24, West Palm Beach",
+      "rating": 4.9,
+      "user_ratings_total": 287,
+      "business_status": "OPERATIONAL"
+    }
+  ]
+}

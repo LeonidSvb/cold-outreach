@@ -1,0 +1,5094 @@
+{
+  "metadata": {
+    "timestamp": "20251110_101609",
+    "state": "florida",
+    "niche": "locksmiths",
+    "cities_processed": 20,
+    "total_raw_places": 235,
+    "note": "RAW data before filtering - no phone/website to save API costs",
+    "stats": {
+      "total_api_calls": 313,
+      "radius_increases": 9,
+      "radius_decreases": 0,
+      "optimal_searches": 20,
+      "cities_processed": 20,
+      "total_cost": 0.0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Tampa, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ04HFnefrwogRLWPq1Y_7puo",
+          "name": "Super Locksmith",
+          "vicinity": "1902 W Main St #202, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 844,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJR1ZbaCcXfmkRufFCAz7QWPI",
+          "name": "Zoom Locksmith",
+          "vicinity": "4705 Wild Senna Blvd, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 320,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb-GxFP7HwogR-yAowx8JV1o",
+          "name": "A PLUS QUICK LOCKSMITH",
+          "vicinity": "15401 Plantation Oaks Dr Unit 07, Tampa",
+          "rating": 5,
+          "user_ratings_total": 627,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrZRxriLDwogRMo41Hq2yVp8",
+          "name": "America's Lock and Key",
+          "vicinity": "3825 Henderson Blvd Suite 503, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 335,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9fsmzeDBwogRUnozlH66lkg",
+          "name": "24/7 Mobile Locksmith - Tampa",
+          "vicinity": "6721 N Armenia Ave, Tampa",
+          "rating": 4.7,
+          "user_ratings_total": 784,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_ZdRUjPHwogReKJXcN7y93s",
+          "name": "Locksmith and Doors",
+          "vicinity": "11007 N 56th St Suite 207, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 94,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZQfTawrSwogR-ysT8yPnzOw",
+          "name": "The Flying Locksmiths, Tampa South",
+          "vicinity": "6619 S 78th St Suite 120, Riverview",
+          "rating": 4.7,
+          "user_ratings_total": 82,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPbSEwuhYr2IRmlhvmel3poc",
+          "name": "A1 Locksmith Services LLC",
+          "vicinity": "10806 Lakeside Vista Dr, Riverview",
+          "rating": 4.9,
+          "user_ratings_total": 348,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGfFEOw3DwogR83ctgRVtCkg",
+          "name": "We Do Locksmith",
+          "vicinity": "408 N Howard Ave, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 3323,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVVVVoV3OwogRUmnrVC1LQeg",
+          "name": "Locksmith Brandon Specialist",
+          "vicinity": "187 Brandon Town Center Dr, Brandon",
+          "rating": 5,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoYsYNM3GwogRb5OFxrhoqvQ",
+          "name": "Florida Lock Doctor - Commercial Locksmith Services",
+          "vicinity": "1430 W E Busch Blvd Suite D, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 126,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYwWuSWBylAoR8PFl0NgdDRE",
+          "name": "Century Locksmith Services",
+          "vicinity": "7204 Harney Rd, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 135,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGZAt7NvFwogRtnwGOjzy14c",
+          "name": "24 Locksmith",
+          "vicinity": "1725 N 50th St, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 81,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrby5QDLHwogR5lPWCrvM31Y",
+          "name": "A1 Locksmith Services",
+          "vicinity": "1005 W Busch Blvd #202, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpZXjfe7BwogRYFu6fGQvu7Y",
+          "name": "Security Lock Systems",
+          "vicinity": "7704 Ann Ballard Rd, Tampa",
+          "rating": 4.7,
+          "user_ratings_total": 93,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfb1hmUTBwogRBvMiIyGZLOU",
+          "name": "UPick Locksmith",
+          "vicinity": "4610 N Lois Ave, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 222,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ38q_penHwogRN56_LPU_9eM",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "8837 N 56th St, Temple Terrace",
+          "rating": 4.5,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 17,
+        "unique": 17,
+        "filtered": 12,
+        "with_details": 12,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Orlando, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJE04yPJJ754gR7F6VW25sYJg",
+          "name": "We Do Locksmith",
+          "vicinity": "2911 39th St #200, Orlando",
+          "rating": 4.9,
+          "user_ratings_total": 816,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr7KaIjqA3YgREAL1NfpaWRk",
+          "name": "A Discount Locksmith",
+          "vicinity": "6210 Orange Cove Dr, Orlando",
+          "rating": 5,
+          "user_ratings_total": 662,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLYNN7xR_54gRSfZW1kiSO-c",
+          "name": "IBS Locksmith",
+          "vicinity": "6234 Orange Cove Dr, Orlando",
+          "rating": 4.9,
+          "user_ratings_total": 1590,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ7duop_5654gRTDGJSMuBjlU",
+          "name": "A & H Locksmith Services",
+          "vicinity": "111 N Orange Ave, Orlando",
+          "rating": 4.7,
+          "user_ratings_total": 214,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJad6rMf5v54gRpSBTMawU5d8",
+          "name": "Veteran Lock and Safe Inc",
+          "vicinity": "2762 Mystic Lake Dr, Oviedo",
+          "rating": 4.8,
+          "user_ratings_total": 66,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVzYzu5J654gRBlbwuOW80eM",
+          "name": "Advance Auto Locksmith",
+          "vicinity": "1218 Alden Rd, Orlando",
+          "rating": 4.6,
+          "user_ratings_total": 158,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJiZw7LMlv54gRaFR7c3nlHpo",
+          "name": "In N Out Locksmith",
+          "vicinity": "2513 Dubcek Point, Winter Park",
+          "rating": 4.3,
+          "user_ratings_total": 51,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJdz7B_d9x54gRmEprgoE0Kjo",
+          "name": "Locksmith Service Altamonte Springs",
+          "vicinity": "131 Water Front Way, Altamonte Springs",
+          "rating": 4.4,
+          "user_ratings_total": 114,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ27cua8p_54gRDpRd_o18mCU",
+          "name": "Dr Phillips Locksmith",
+          "vicinity": "7343 W Sand Lake Rd #234, Orlando",
+          "rating": 4.7,
+          "user_ratings_total": 53,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhfvK-cV454gR4OBd3vV2sYQ",
+          "name": "Limu Express Locksmith Orlando",
+          "vicinity": "2901 Blakely Dr, Orlando",
+          "rating": 5,
+          "user_ratings_total": 864,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJn34Y2Ot354gR4nCYmjdn2nQ",
+          "name": "Affordable Locksmith Orlando",
+          "vicinity": "7721 Newlan Dr, Orlando",
+          "rating": 4.8,
+          "user_ratings_total": 57,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJjQyoDiZ754gReFakejTNOiM",
+          "name": "Orlando Locksmith Experts",
+          "vicinity": "2111 E Michigan St, Orlando",
+          "rating": 4.7,
+          "user_ratings_total": 39,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWQF6uOR-54gRRKvJN-ufgGY",
+          "name": "Universal Locksmith LLC",
+          "vicinity": "6807 Visitors Cir suite A, Orlando",
+          "rating": 5,
+          "user_ratings_total": 483,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJEXKNCq9x54gRSpMvugCF8Cg",
+          "name": "Locksmith ON Spot Orlando",
+          "vicinity": "1790 Lee Rd Ste 3, Orlando",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYQkr4wph54gR3DyGepuP1v0",
+          "name": "Lake Nona Locksmith",
+          "vicinity": "10245 Lake District Ln, Orlando",
+          "rating": 4.8,
+          "user_ratings_total": 53,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD4SyuQ9754gRr5Ybcfu0pt0",
+          "name": "Elite Locksmith",
+          "vicinity": "155 S Court Ave, Orlando",
+          "rating": 4.9,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzwRqkGZj54gRJgl2pXm8yvY",
+          "name": "Pop-A-Lock Orlando",
+          "vicinity": "37 N Orange Ave Suite 222, Orlando",
+          "rating": 4.8,
+          "user_ratings_total": 2378,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx9oJ_RN554gRh62eBd3g8I8",
+          "name": "Magic Locksmiths",
+          "vicinity": "4726 Old Winter Garden Rd, Orlando",
+          "rating": 4.8,
+          "user_ratings_total": 148,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZYGBakR954gRFT-DmM1VEuw",
+          "name": "Y-S Locks & Keys",
+          "vicinity": "4899 Fiorazante Ave, Orlando",
+          "rating": 4.9,
+          "user_ratings_total": 312,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx43Vqt9754gRP_dO_2uyZOE",
+          "name": "Pro Auto Locksmith",
+          "vicinity": "355 Branson Dr, Orlando",
+          "rating": 4.8,
+          "user_ratings_total": 173,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 15,
+        "with_details": 15,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Miami, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJrfWqJoW22YgRtvu-Lu3SGPo",
+          "name": "My Locksmith Miami",
+          "vicinity": "1060 Brickell Ave # M-1, Miami",
+          "rating": 5,
+          "user_ratings_total": 1270,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJdWLElqXH2YgRsjLPMAmFEPo",
+          "name": "786Locksmith",
+          "vicinity": "9300 S Dixie Hwy #106, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 221,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJB9E1i4y02YgR2v7RTXYhEfo",
+          "name": "Public Locksmith Inc.",
+          "vicinity": "345 Michigan Ave #35, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 788,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvVuIjJu22YgRFz9ScICTEvM",
+          "name": "Quickly Locksmith Miami",
+          "vicinity": "2680 NE 2nd Ave, Miami",
+          "rating": 4.8,
+          "user_ratings_total": 1115,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJL01elYO32YgR0NZCM5KZbYQ",
+          "name": "305 Lockout",
+          "vicinity": "276 NE 1st St, Miami",
+          "rating": 5,
+          "user_ratings_total": 910,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4z9o65iy2YgRIk2ewIIdaIE",
+          "name": "Best Locksmith",
+          "vicinity": "7455 Collins Ave Unit 216, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 217,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8ZEYYo602YgRG1ItyxCNCt4",
+          "name": "south beach locksmith",
+          "vicinity": "1228 Pennsylvania Ave, Miami Beach",
+          "rating": 4.7,
+          "user_ratings_total": 170,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJmf4iW0Kp2YgRmYYXw3u1mYY",
+          "name": "Locksmith Near Me Florida",
+          "vicinity": "5700 FL-968, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 176,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5dBZQGu32YgRqWFZRQ6kOn8",
+          "name": "Caraballo Liberty Locksmith Inc.",
+          "vicinity": "831 NW 37th Ave, Miami",
+          "rating": 4.5,
+          "user_ratings_total": 168,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYzxkBPS12YgRH6UCgUpF3IE",
+          "name": "South Beach Locksmith & Keys",
+          "vicinity": "235 Lincoln Rd, Miami Beach",
+          "rating": 4.8,
+          "user_ratings_total": 124,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx8HpRPG22YgRC2LaKD0_q-g",
+          "name": "Caraballo Locksmith",
+          "vicinity": "1270 SW 8th St, Miami",
+          "rating": 4.7,
+          "user_ratings_total": 929,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpxpC6j9vk6gRDaZjJjHkUOE",
+          "name": "Magic City Locksmith",
+          "vicinity": "6560 NW 7th St, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 106,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJW4Fo3Aq12YgRUDBRuvX5z8I",
+          "name": "South Beach Locksmith & Security Systems",
+          "vicinity": "910 West Ave Suite 814, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 80,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgR-dIk-x2YgRO0yzmQ_YcPA",
+          "name": "A-1 Lock & Key",
+          "vicinity": "3431 NW 48th St, Miami",
+          "rating": 4.6,
+          "user_ratings_total": 210,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ770F90i32YgRJekTS0F_X8Y",
+          "name": "Locksmith Near Me Miami",
+          "vicinity": "698 NE 1st Ave, Miami",
+          "rating": 4.8,
+          "user_ratings_total": 45,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2z7sqyS72YgRFRnAeECYhRU",
+          "name": "Precise Locksmith",
+          "vicinity": "3195 W 2nd Ave, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 178,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ29Kz0ZGx2YgRhGJi6rMgMV0",
+          "name": "US LOCKSMITH",
+          "vicinity": "150 NW 37th St, Miami",
+          "rating": 4.6,
+          "user_ratings_total": 300,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhYBSNfW32YgRRJO5sBkBKk8",
+          "name": "Quickly Locksmith Miami",
+          "vicinity": "26 SE 1st St, Miami",
+          "rating": 5,
+          "user_ratings_total": 217,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrySFWQax2YgRUyUwWP_-H5E",
+          "name": "Enzo's security services",
+          "vicinity": "5900 NW 6th Ave, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 120,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJE9_7P7y72YgRvB2OboMgjM8",
+          "name": "El Genio Locksmith Service Inc",
+          "vicinity": "5380 W 24th Ct, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 15,
+        "with_details": 15,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Jacksonville, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJg7SGT_fL5YgRKfEL9o89m58",
+          "name": "We Do Locksmith",
+          "vicinity": "8727 Old Kings Rd S, Jacksonville",
+          "rating": 4.7,
+          "user_ratings_total": 538,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNVooMQRL5IgR5zht5n4MeAc",
+          "name": "Eli's Lock and Key",
+          "vicinity": "11990 Beach Blvd Unit 208, Jacksonville",
+          "rating": 4.7,
+          "user_ratings_total": 649,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ671JXd7L5YgRlkY6UvcIs4c",
+          "name": "Good Guy Locksmith Jacksonville",
+          "vicinity": "8074 Gate Pkwy W Apt 5315, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 709,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhVpEOEfK5YgRTeiNBWsbGa0",
+          "name": "The Flying Locksmiths",
+          "vicinity": "7933 Baymeadows Way Ste 9, Jacksonville",
+          "rating": 4.8,
+          "user_ratings_total": 139,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ88gf3gC15YgROacsUbMiYFU",
+          "name": "Jax Locksmith Pro",
+          "vicinity": "5290 Big Island Drive #4201, Jacksonville",
+          "rating": 4.8,
+          "user_ratings_total": 762,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSZwSRGOH2wMRnWNxPXz-fFM",
+          "name": "Lockbuster Locksmith",
+          "vicinity": "3134 Cornelia Dr, Jacksonville",
+          "rating": 5,
+          "user_ratings_total": 75,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJi-OAWQfL5YgRpkI8zmcU6hk",
+          "name": "AAA Locksmith Pros",
+          "vicinity": "5011 Gate Pkwy 100 Suite 452, Jacksonville",
+          "rating": 5,
+          "user_ratings_total": 129,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJa1CS-ja35YgRX3jb_1xMqKQ",
+          "name": "Mobile Locksmith Jacksonville 365",
+          "vicinity": "25 N Market St suite 236, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 537,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVdogblG15YgRAihXHkR1bQw",
+          "name": "Abi Locksmith",
+          "vicinity": "4585 Capital Dome Dr, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 1137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ17-J6IFJ5IgRBniuYZ1BQlw",
+          "name": "Locksmith Jacksonville",
+          "vicinity": "603 3rd St S, Jacksonville Beach",
+          "rating": 5,
+          "user_ratings_total": 52,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWweKw9PH5YgRfGyUZifJC04",
+          "name": "Car Key Replacement Jacksonville",
+          "vicinity": "6010 Duclay Rd Suite 5, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 124,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-9sliGHL5YgR6D5VkWXVYO0",
+          "name": "North Florida Emergency Locksmith Services",
+          "vicinity": "11015 Starwood Dr, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 798,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ010QHGOx5YgRchYEh23u1n8",
+          "name": "Economy Lock and Key",
+          "vicinity": "3314 N Main St, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJmxegG91J5IgRJysRUVk0Ues",
+          "name": "Jax Beach Lockout & Key LLC",
+          "vicinity": "1655 The Greens Way Unit 2922, Jacksonville Beach",
+          "rating": 4.7,
+          "user_ratings_total": 28,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJd-kC0_G35YgRJ4nUJGaN6-0",
+          "name": "Jax lock key & safe service",
+          "vicinity": "2048 Arthur St, Jacksonville",
+          "rating": 4.4,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_QBYcFvP5YgRRmhPRGWnSgg",
+          "name": "LOCAL LOCKSMITH",
+          "vicinity": "12265 Governors Dr E, Jacksonville",
+          "rating": 4.9,
+          "user_ratings_total": 166,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 16,
+        "unique": 16,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 33.75
+      }
+    },
+    {
+      "city": "St. Petersburg, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ04HFnefrwogRLWPq1Y_7puo",
+          "name": "Super Locksmith",
+          "vicinity": "1902 W Main St #202, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 844,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJR1ZbaCcXfmkRufFCAz7QWPI",
+          "name": "Zoom Locksmith",
+          "vicinity": "4705 Wild Senna Blvd, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 320,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4bfDhPXjwogRyKbgPQTUP4I",
+          "name": "BlueBox Locksmith LLC",
+          "vicinity": "6822 22nd Ave N Unit 281, St. Petersburg",
+          "rating": 5,
+          "user_ratings_total": 163,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJUfP6dKXtwogR6_etbKNVH-0",
+          "name": "VIP Locksmith Services",
+          "vicinity": "3710 Simpson Ct, Palm Harbor",
+          "rating": 4.9,
+          "user_ratings_total": 298,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJE80JT4bjwogRiGxt2WRaQ58",
+          "name": "A-1 Key & Safe Inc, 24hr Service",
+          "vicinity": "3601 54th Ave N, St. Petersburg",
+          "rating": 4.5,
+          "user_ratings_total": 212,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJU7lnoii3rWoRwTMH-tmiRBY",
+          "name": "Super Locksmith Saint Petersburg",
+          "vicinity": "1624 4th St S STE B, St. Petersburg",
+          "rating": 4.8,
+          "user_ratings_total": 59,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9Vo0SN_twogRIucOEADCC4U",
+          "name": "Pop-A-Lock Clearwater",
+          "vicinity": "2454 McMullen Booth Rd Suite 700, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 725,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrZRxriLDwogRMo41Hq2yVp8",
+          "name": "America's Lock and Key",
+          "vicinity": "3825 Henderson Blvd Suite 503, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 335,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ49PA918Xw4gR52olmwut4XI",
+          "name": "Super Locksmith Guys",
+          "vicinity": "4301 32nd St W Suite A-16, Bradenton",
+          "rating": 4.9,
+          "user_ratings_total": 199,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9fsmzeDBwogRUnozlH66lkg",
+          "name": "24/7 Mobile Locksmith - Tampa",
+          "vicinity": "6721 N Armenia Ave, Tampa",
+          "rating": 4.7,
+          "user_ratings_total": 784,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_ZdRUjPHwogReKJXcN7y93s",
+          "name": "Locksmith and Doors",
+          "vicinity": "11007 N 56th St Suite 207, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 94,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZQfTawrSwogR-ysT8yPnzOw",
+          "name": "The Flying Locksmiths, Tampa South",
+          "vicinity": "6619 S 78th St Suite 120, Riverview",
+          "rating": 4.7,
+          "user_ratings_total": 82,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPd44b5gXw4gRVam1yJBT4hA",
+          "name": "City Locks & Keys Bradenton",
+          "vicinity": "1103 14th Ave W B, Bradenton",
+          "rating": 4.9,
+          "user_ratings_total": 52,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGfFEOw3DwogR83ctgRVtCkg",
+          "name": "We Do Locksmith",
+          "vicinity": "408 N Howard Ave, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 3323,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJN66yuTzwwogRZ57fy0KP38A",
+          "name": "Affordable Lock & Security Solutions",
+          "vicinity": "1300 S Belcher Rd, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPbSEwuhYr2IRmlhvmel3poc",
+          "name": "A1 Locksmith Services LLC",
+          "vicinity": "10806 Lakeside Vista Dr, Riverview",
+          "rating": 4.9,
+          "user_ratings_total": 348,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVVVVoV3OwogRUmnrVC1LQeg",
+          "name": "Locksmith Brandon Specialist",
+          "vicinity": "187 Brandon Town Center Dr, Brandon",
+          "rating": 5,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJuWC6QtLZwogR6U2craV9TMU",
+          "name": "Courtesy Lock and Key",
+          "vicinity": "304 Flamingo Dr, Apollo Beach",
+          "rating": 4.6,
+          "user_ratings_total": 139,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoYsYNM3GwogRb5OFxrhoqvQ",
+          "name": "Florida Lock Doctor - Commercial Locksmith Services",
+          "vicinity": "1430 W E Busch Blvd Suite D, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 126,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzRPruIzOqYcR8j19QNJHkI8",
+          "name": "Lets Go Locksmith",
+          "vicinity": "11858 Brenford Crest Dr, Riverview",
+          "rating": 5,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 16,
+        "with_details": 16,
+        "final_radius_km": 33.75
+      }
+    },
+    {
+      "city": "Cape Coral, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJKeNV4Wxr24gRKXYhxb5pqfI",
+          "name": "Discount Locksmith of Fort Myers",
+          "vicinity": "4066 Evans Ave #9, Fort Myers",
+          "rating": 4.7,
+          "user_ratings_total": 585,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJW1Rlaa9B24gRPkgoIXRZGAE",
+          "name": "Discount Locksmith of Cape Coral",
+          "vicinity": "944 Country Club Blvd #205, Cape Coral",
+          "rating": 3.7,
+          "user_ratings_total": 73,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ83Zhxf5B24gRYq_3ZpokdE0",
+          "name": "Fort Myers Locksmith Service",
+          "vicinity": "3049 cleavland road Suite 278, Fort Myers",
+          "rating": 3.4,
+          "user_ratings_total": 30,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_ywnPGZB24gRMpakpztwOZk",
+          "name": "Fort Myers Lock and Key",
+          "vicinity": "1960 Grove Ave, Fort Myers",
+          "rating": 4.7,
+          "user_ratings_total": 191,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJs4BbWn9B24gRP4BzgUqHA5I",
+          "name": "DOCTOR LOCKSMITH",
+          "vicinity": "4542 Vinsetta Ave, North Fort Myers",
+          "rating": 4.7,
+          "user_ratings_total": 78,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVZEenNNr24gRZ9RgzE5tdYg",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "4770 Colonial Blvd, Fort Myers",
+          "rating": 3.9,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJASkNOhlH24gRfUgFJqQvwBs",
+          "name": "Minute Key",
+          "vicinity": "505 SW Pine Island Rd, Cape Coral",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhciDNhQ_24gR00H5FZqC6cg",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "9131 College Pkwy STE 101, Fort Myers",
+          "rating": 3.1,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ25gZ8UU_24gRJcUnzCPoalE",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "14821 6 Mile Cypress Pkwy, Fort Myers",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyYMruntH24gRLZZqOtshwo0",
+          "name": "Complete Locksmith",
+          "vicinity": "3924 Cleveland Ave, Fort Myers",
+          "rating": 4.8,
+          "user_ratings_total": 363,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9QOtnVM_24gRRK-77in0M34",
+          "name": "Avi G Locksmith",
+          "vicinity": "4720 SE 15th Ave #113, Cape Coral",
+          "rating": 4.9,
+          "user_ratings_total": 245,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJswbTGi9D24gR8Y8wYWKQDnI",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "545 Pine Island Rd, North Fort Myers",
+          "rating": 4.4,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWZw4QuQ_24gRaJ6qP5bAgrk",
+          "name": "Anytime Lock Key & Door",
+          "vicinity": "13300 - 56 S Cleveland Ave, Fort Myers",
+          "rating": 4.5,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfa7wQYJq24gRBX-swxonnNk",
+          "name": "Avi G Locksmith of Fort Myers",
+          "vicinity": "2256 First St Ste 101, Fort Myers",
+          "rating": 5,
+          "user_ratings_total": 157,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJqQVg3Lpq24gReZVkGZHjKRk",
+          "name": "Lee Lock & Key",
+          "vicinity": "11350 Metro Pkwy #109, Fort Myers",
+          "rating": 4.8,
+          "user_ratings_total": 93,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZ1iP2TlC24gR1GCvZKXJ5ls",
+          "name": "Minute Key",
+          "vicinity": "545 Pine Island Rd, North Fort Myers",
+          "rating": 4,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 16,
+        "unique": 16,
+        "filtered": 7,
+        "with_details": 7,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Hialeah, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJrfWqJoW22YgRtvu-Lu3SGPo",
+          "name": "My Locksmith Miami",
+          "vicinity": "1060 Brickell Ave # M-1, Miami",
+          "rating": 5,
+          "user_ratings_total": 1270,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvVuIjJu22YgRFz9ScICTEvM",
+          "name": "Quickly Locksmith Miami",
+          "vicinity": "2680 NE 2nd Ave, Miami",
+          "rating": 4.8,
+          "user_ratings_total": 1115,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJB9E1i4y02YgR2v7RTXYhEfo",
+          "name": "Public Locksmith Inc.",
+          "vicinity": "345 Michigan Ave #35, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 788,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8ZEYYo602YgRG1ItyxCNCt4",
+          "name": "south beach locksmith",
+          "vicinity": "1228 Pennsylvania Ave, Miami Beach",
+          "rating": 4.7,
+          "user_ratings_total": 170,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJmf4iW0Kp2YgRmYYXw3u1mYY",
+          "name": "Locksmith Near Me Florida",
+          "vicinity": "5700 FL-968, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 176,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5dBZQGu32YgRqWFZRQ6kOn8",
+          "name": "Caraballo Liberty Locksmith Inc.",
+          "vicinity": "831 NW 37th Ave, Miami",
+          "rating": 4.5,
+          "user_ratings_total": 168,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx8HpRPG22YgRC2LaKD0_q-g",
+          "name": "Caraballo Locksmith",
+          "vicinity": "1270 SW 8th St, Miami",
+          "rating": 4.7,
+          "user_ratings_total": 929,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYzxkBPS12YgRH6UCgUpF3IE",
+          "name": "South Beach Locksmith & Keys",
+          "vicinity": "235 Lincoln Rd, Miami Beach",
+          "rating": 4.8,
+          "user_ratings_total": 124,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpxpC6j9vk6gRDaZjJjHkUOE",
+          "name": "Magic City Locksmith",
+          "vicinity": "6560 NW 7th St, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 106,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJW4Fo3Aq12YgRUDBRuvX5z8I",
+          "name": "South Beach Locksmith & Security Systems",
+          "vicinity": "910 West Ave Suite 814, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 80,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJa-ZIR7mt2YgRqWo7Kjy9mlc",
+          "name": "US LOCKSMITH",
+          "vicinity": "1946 NE 163rd St, North Miami Beach",
+          "rating": 4.6,
+          "user_ratings_total": 646,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ770F90i32YgRJekTS0F_X8Y",
+          "name": "Locksmith Near Me Miami",
+          "vicinity": "698 NE 1st Ave, Miami",
+          "rating": 4.8,
+          "user_ratings_total": 45,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2z7sqyS72YgRFRnAeECYhRU",
+          "name": "Precise Locksmith",
+          "vicinity": "3195 W 2nd Ave, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 178,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ29Kz0ZGx2YgRhGJi6rMgMV0",
+          "name": "US LOCKSMITH",
+          "vicinity": "150 NW 37th St, Miami",
+          "rating": 4.6,
+          "user_ratings_total": 300,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhYBSNfW32YgRRJO5sBkBKk8",
+          "name": "Quickly Locksmith Miami",
+          "vicinity": "26 SE 1st St, Miami",
+          "rating": 5,
+          "user_ratings_total": 217,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHRS_Q3-t2YgR9liO8N3XDpM",
+          "name": "247locksmith",
+          "vicinity": "18100 NE 10th Ave, North Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 443,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbYLdo8e_2YgRuxu4EirCJwg",
+          "name": "CENTRAL LOCKSMITH LLC",
+          "vicinity": "4179 NW 107th Ave UNIT B, Doral",
+          "rating": 5,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJL01elYO32YgR0NZCM5KZbYQ",
+          "name": "305 Lockout",
+          "vicinity": "276 NE 1st St, Miami",
+          "rating": 5,
+          "user_ratings_total": 910,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJE9_7P7y72YgRvB2OboMgjM8",
+          "name": "El Genio Locksmith Service Inc",
+          "vicinity": "5380 W 24th Ct, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGQtOfc2t2YgRrATbZ-Wl21A",
+          "name": "KeyZoo Locksmiths",
+          "vicinity": "18900 Dixie Hwy Suite B, Miami",
+          "rating": 5,
+          "user_ratings_total": 86,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 15,
+        "with_details": 15,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Port St. Lucie, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ-Ztdzxzr3ogRTGZG5BM9znY",
+          "name": "Everest Locksmith Services",
+          "vicinity": "1290 SW Biltmore St unit e, Port St. Lucie",
+          "rating": 4.9,
+          "user_ratings_total": 373,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJY0Tr6sbx3ogRXTGa_g0KZgs",
+          "name": "Safe & Lock by Mike Inc",
+          "vicinity": "1127 Rosedale Ave, Fort Pierce",
+          "rating": 4.7,
+          "user_ratings_total": 47,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6fuUhQjp3ogRayv7Y90-Bs0",
+          "name": "St Lucie Locksmith Services",
+          "vicinity": "462 SW Port St Lucie Blvd Suite 123, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 29,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNWPs6aF20o0R61FHIxRClAA",
+          "name": "Lotus Locksmith Service",
+          "vicinity": "10570 S U.S. Hwy 1 Suite 300, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 74,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg7ogq5jz3ogRIjbk8tLLVWI",
+          "name": "Galaxy Locksmiths",
+          "vicinity": "4175 Ave I, Fort Pierce",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWXYU9cXp3ogROUet4GcuwgU",
+          "name": "Pro-B Locksmith Service",
+          "vicinity": "522 SE Nome Dr, Port St. Lucie",
+          "rating": 4.9,
+          "user_ratings_total": 311,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMa2Zr4nr3ogRZzTFHbm7WH8",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "1850 SW Gatlin Blvd, Port St. Lucie",
+          "rating": 4.5,
+          "user_ratings_total": 130,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh_JmG3Ld3ogRUxS1gZQMO4w",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "4001 SE Federal Hwy, Stuart",
+          "rating": 4.5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgbELGRTd3ogRP8NG_akYxOo",
+          "name": "Minute Key",
+          "vicinity": "4001 SE Federal Hwy, Stuart",
+          "rating": 4.8,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJOZNKjafz3ogRFmKiDO4oziA",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "5100 Okeechobee Rd, Fort Pierce",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJz6d30Ybp3ogRNZf-1D0O6rQ",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "10855 S U.S. Hwy 1, Port St. Lucie",
+          "rating": 4.3,
+          "user_ratings_total": 9,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJlzoV2y3v3ogRCjT2-ElGpiw",
+          "name": "All County Lock & Key, Inc",
+          "vicinity": "7660 S Federal Hwy, Port St. Lucie",
+          "rating": 4.7,
+          "user_ratings_total": 125,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnZQedc4E2YgR3rpJdnWlSTg",
+          "name": "Adams Locksmiths",
+          "vicinity": "14737 SW Surf Springs Way, Port St. Lucie",
+          "rating": 4.8,
+          "user_ratings_total": 152,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJmeO_p_nt3ogROfVeplpvARE",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "902 SW St Lucie W Blvd, Port St. Lucie",
+          "rating": 1,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGftVkrox4K0ROe3NL-6l2wA",
+          "name": "Rite Choice Auto Towing",
+          "vicinity": "1729 St Lucie W Blvd, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 144,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJa2QCzRnx3ogRmfffMXhLlC0",
+          "name": "Gardner Bros Auto Lock and Key Service",
+          "vicinity": "2925 S US Hwy 1, Fort Pierce",
+          "rating": 5,
+          "user_ratings_total": 26,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJt9VY96OV3ogRzeyL5xUGcHw",
+          "name": "Gregory Express Locks & Keys",
+          "vicinity": "361O Ņ 46th Ąve H0LLYW00D, FL 33021 7GM5+7W Range Line Rd, Port St. Lucie H0LLYW00D, FL 33021, Port St. Lucie",
+          "rating": 0,
+          "user_ratings_total": 0,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2R9DT9nr3ogRqNLpHlwK83U",
+          "name": "Leo T's Towing and Recovery Inc.",
+          "vicinity": "2139 SW Hayworth Ave, Port St. Lucie",
+          "rating": 5,
+          "user_ratings_total": 636,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 18,
+        "unique": 18,
+        "filtered": 11,
+        "with_details": 11,
+        "final_radius_km": 22.5
+      }
+    },
+    {
+      "city": "Tallahassee, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJuXkPmmCP7IgR017P9oSAjNU",
+          "name": "Rapid Unlocks & Roadside Services",
+          "vicinity": "285 Whiddon Lake Rd, Crawfordville",
+          "rating": 4.5,
+          "user_ratings_total": 54,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD7xnQgEOTkURxnegx11Wfv8",
+          "name": "A Quicker Than Quick Locksmith",
+          "vicinity": "1816 Keith St, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJe2nNV8zz7IgR4XoFNSQsduo",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "4400 W Tennessee St, Tallahassee",
+          "rating": 4.5,
+          "user_ratings_total": 57,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJS26f0xBf7IgR44YHUoCSHoM",
+          "name": "Capital City Locksmith",
+          "vicinity": "3507 N Monroe St, Tallahassee",
+          "rating": 4.9,
+          "user_ratings_total": 336,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4cZBggvz7IgR9Q8OBHm2xtU",
+          "name": "Minute Key",
+          "vicinity": "5500 Commonwealth Blvd, Tallahassee",
+          "rating": 4.9,
+          "user_ratings_total": 9,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgVUj4ljp7IgROGHZsgQ9pOA",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "1940 Pat Thomas Pkwy, Quincy",
+          "rating": 4.6,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJkaQNvtz17IgR3AXlgJp5GW4",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "3221 N Monroe St, Tallahassee",
+          "rating": 4.7,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJewXbBEde7IgRq_BZEkzjzD0",
+          "name": "Minute Key",
+          "vicinity": "3535 Apalachee Pkwy, Tallahassee",
+          "rating": 3.6,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJaz77fu9e7IgRDUM0IMNwcPw",
+          "name": "Minute Key",
+          "vicinity": "4021 Lagniappe Way, Tallahassee",
+          "rating": 3.4,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJmWrD5UMz3EwRrwkgRJe2zqc",
+          "name": "Capital Lock & Key",
+          "vicinity": "132 Valencia Dr, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 32,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQ5jnrrBZ7IgRjCslvUCHArg",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "5500 Thomasville Rd, Tallahassee",
+          "rating": 0,
+          "user_ratings_total": 0,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpQoFV7Lv7IgReUqninPFWWE",
+          "name": "RONNIE'S ROAD SIDE TRUCK & TIRE REPAIR LLC",
+          "vicinity": "148 James Hinson Dr, Midway",
+          "rating": 5,
+          "user_ratings_total": 50,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJkd6ofZH17IgRT9J8hXVFjFc",
+          "name": "Elsassers Lock & Key",
+          "vicinity": "1909 N Monroe St, Tallahassee",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJybKNYTLn7IgRsDDoVzYT1Uw",
+          "name": "G&A Towing And Mobile Roadside Assistance",
+          "vicinity": "417 Goldwire Rd, Quincy",
+          "rating": 5,
+          "user_ratings_total": 51,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJk8Un4Xj07IgRGge3xe-w7VA",
+          "name": "Davis Safe & Lock, Inc.",
+          "vicinity": "1889 N Martin Luther King Jr Blvd. #1, Tallahassee",
+          "rating": 4.3,
+          "user_ratings_total": 89,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJRx8uWjdf7IgRdA0SlMsu7bY",
+          "name": "Precision Sharpening & Key Shop",
+          "vicinity": "1510 Capital Cir SE Suite 6E, Tallahassee",
+          "rating": 4.2,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 16,
+        "unique": 16,
+        "filtered": 7,
+        "with_details": 7,
+        "final_radius_km": 33.75
+      }
+    },
+    {
+      "city": "Fort Lauderdale, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJH53XJ-ip2YgRidT8qSx1eUE",
+          "name": "Lock N More Locksmith",
+          "vicinity": "4000 SW 47th Ave, Davie",
+          "rating": 4.8,
+          "user_ratings_total": 942,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyz6RvIqr2YgRrfc3bI4qFZ0",
+          "name": "Local Locksmiths",
+          "vicinity": "1000 NE 12th Ave, Hallandale Beach",
+          "rating": 4.9,
+          "user_ratings_total": 306,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJU2KR54rWc4oR9LBWRkggWOo",
+          "name": "NEXT DOOR LOCKSMITH SERVICE",
+          "vicinity": "3521 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 206,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfR4IEoyp2YgRRsFZDSmj2bk",
+          "name": "A Ben's Locksmith Fort Lauderdale",
+          "vicinity": "5311 SW 34th Way, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 163,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxbvWZW6n2YgRTPLa3jxNL7I",
+          "name": "KW Locksmith Shop & Mobile Locksmith Services",
+          "vicinity": "2301 Palm Ave, Miramar",
+          "rating": 4.9,
+          "user_ratings_total": 247,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVSKCYXYJ2YgRTv7CitKfLS4",
+          "name": "Lenny Locksmith Sunrise",
+          "vicinity": "10242 NW 47th St Store 1, Sunrise",
+          "rating": 4.5,
+          "user_ratings_total": 87,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJlX66RYvJXG0RmtEdc0tPSYg",
+          "name": "RG Local Locksmith Services",
+          "vicinity": "8232 W State Rd 84, Davie",
+          "rating": 4.5,
+          "user_ratings_total": 362,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPzZZQv-s2YgRTU_61iyjQDo",
+          "name": "Half Price Locksmith",
+          "vicinity": "3620 N Park Rd, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 198,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVcWvmYyr2YgRf-DW_ZGH72g",
+          "name": "5 Star Locksmith",
+          "vicinity": "1000 W Pembroke Rd, Hallandale Beach",
+          "rating": 4.9,
+          "user_ratings_total": 102,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2TzdY-kH2YgROvUYf4hN1Mo",
+          "name": "Plantation Locksmith LLC.",
+          "vicinity": "950 S Pine Island Rd #150-10, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJf_CvaJ0D2YgR51mpXeiVfHo",
+          "name": "Advanced locksmith & car keys",
+          "vicinity": "230 S Cypress Rd, Pompano Beach",
+          "rating": 5,
+          "user_ratings_total": 88,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAV44NJKr2YgRb285FWlocP4",
+          "name": "A&B Locksmith Auto",
+          "vicinity": "2648 Washington St, Hollywood",
+          "rating": 4.7,
+          "user_ratings_total": 101,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ83riiQAH2YgRYIiYYJ5Bf_g",
+          "name": "777 Locksmith Services",
+          "vicinity": "150 S Pine Island Rd Suite 358, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 116,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJF8OFagYB2YgRHWImamf6Cu0",
+          "name": "KeyZoo Locksmiths",
+          "vicinity": "721 NE 3rd Ave, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 177,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbWscQA2p2YgRMCNdxNZch10",
+          "name": "Rush Locksmith",
+          "vicinity": "3102 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 200,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2YFe56KyomERnhcQR1CCx1Y",
+          "name": "Quick Quick Locksmith",
+          "vicinity": "3800 S Ocean Dr, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 167,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-cVQMkSp2YgRP_B21i2_Nc8",
+          "name": "The Lockout Locksmith",
+          "vicinity": "1800 N Lauderdale Ave, North Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 206,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxweNLuQF2YgRPkw24bP7uPM",
+          "name": "KeyZoo Locksmiths",
+          "vicinity": "1750 FL-7 b, North Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 61,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIZ8hNZWp2YgRynBMNVAws2w",
+          "name": "Lock N Roll Locksmith",
+          "vicinity": "4931 S State Rd 7, Davie",
+          "rating": 4.5,
+          "user_ratings_total": 107,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIeXQK3AC2YgRQXC65fYESj4",
+          "name": "High Security Locksmith",
+          "vicinity": "6245 N Federal Hwy, Fort Lauderdale",
+          "rating": 4.8,
+          "user_ratings_total": 47,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 19,
+        "with_details": 19,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Pembroke Pines, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJH53XJ-ip2YgRidT8qSx1eUE",
+          "name": "Lock N More Locksmith",
+          "vicinity": "4000 SW 47th Ave, Davie",
+          "rating": 4.8,
+          "user_ratings_total": 942,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ97F-16QL2YgRrTXsRtt57NE",
+          "name": "Levy's Locksmith - Weston's Genuine Resident",
+          "vicinity": "1293 Majesty Terrace, Weston",
+          "rating": 4.9,
+          "user_ratings_total": 232,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr0syz36n2YgRVGY9TXy8FSk",
+          "name": "Florida Premier Locksmith",
+          "vicinity": "11894 NW 11th St, Pembroke Pines",
+          "rating": 4.9,
+          "user_ratings_total": 185,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD-TkwGqk2YgR0XGyRTOcoS8",
+          "name": "Miramar Locksmith & Key",
+          "vicinity": "3350 SW 148th Ave #220, Miramar",
+          "rating": 4.9,
+          "user_ratings_total": 218,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJU2KR54rWc4oR9LBWRkggWOo",
+          "name": "NEXT DOOR LOCKSMITH SERVICE",
+          "vicinity": "3521 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 206,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfR4IEoyp2YgRRsFZDSmj2bk",
+          "name": "A Ben's Locksmith Fort Lauderdale",
+          "vicinity": "5311 SW 34th Way, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 163,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxbvWZW6n2YgRTPLa3jxNL7I",
+          "name": "KW Locksmith Shop & Mobile Locksmith Services",
+          "vicinity": "2301 Palm Ave, Miramar",
+          "rating": 4.9,
+          "user_ratings_total": 247,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJlX66RYvJXG0RmtEdc0tPSYg",
+          "name": "RG Local Locksmith Services",
+          "vicinity": "8232 W State Rd 84, Davie",
+          "rating": 4.5,
+          "user_ratings_total": 362,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJa-ZIR7mt2YgRqWo7Kjy9mlc",
+          "name": "US LOCKSMITH",
+          "vicinity": "1946 NE 163rd St, North Miami Beach",
+          "rating": 4.6,
+          "user_ratings_total": 646,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2TzdY-kH2YgROvUYf4hN1Mo",
+          "name": "Plantation Locksmith LLC.",
+          "vicinity": "950 S Pine Island Rd #150-10, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPzZZQv-s2YgRTU_61iyjQDo",
+          "name": "Half Price Locksmith",
+          "vicinity": "3620 N Park Rd, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 198,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVcWvmYyr2YgRf-DW_ZGH72g",
+          "name": "5 Star Locksmith",
+          "vicinity": "1000 W Pembroke Rd, Hallandale Beach",
+          "rating": 4.9,
+          "user_ratings_total": 102,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAV44NJKr2YgRb285FWlocP4",
+          "name": "A&B Locksmith Auto",
+          "vicinity": "2648 Washington St, Hollywood",
+          "rating": 4.7,
+          "user_ratings_total": 101,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHRS_Q3-t2YgR9liO8N3XDpM",
+          "name": "247locksmith",
+          "vicinity": "18100 NE 10th Ave, North Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 443,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6qqquYH2YgRCJ_Zyp4zPhk",
+          "name": "Angel Locksmith",
+          "vicinity": "11150 Cameron Ct, Davie",
+          "rating": 4.6,
+          "user_ratings_total": 69,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvcEQe1Gv2YgRs6EPTwonjIs",
+          "name": "West Park Locksmith",
+          "vicinity": "3056 S State Rd 7, West Park",
+          "rating": 5,
+          "user_ratings_total": 69,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ83riiQAH2YgRYIiYYJ5Bf_g",
+          "name": "777 Locksmith Services",
+          "vicinity": "150 S Pine Island Rd Suite 358, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 116,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbWscQA2p2YgRMCNdxNZch10",
+          "name": "Rush Locksmith",
+          "vicinity": "3102 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 200,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJR95KtuEJ2YgRfk6hWByPqRo",
+          "name": "Sunrise Locksmith LLC",
+          "vicinity": "1560 Sawgrass Corporate Pkwy #400-52, Sunrise",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIZ8hNZWp2YgRynBMNVAws2w",
+          "name": "Lock N Roll Locksmith",
+          "vicinity": "4931 S State Rd 7, Davie",
+          "rating": 4.5,
+          "user_ratings_total": 107,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 19,
+        "with_details": 19,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Coral Springs, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJIWMC23YQ2YgRlT-STsLkykI",
+          "name": "Coral Springs Locksmith Co.",
+          "vicinity": "11555 Heron Bay Blvd #200-80, Coral Springs",
+          "rating": 4.9,
+          "user_ratings_total": 131,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJRzepTSId2YgRZqDOZ4CGtMU",
+          "name": "Unique Locksmith",
+          "vicinity": "420 S Military Trail, Deerfield Beach",
+          "rating": 4.9,
+          "user_ratings_total": 210,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVSKCYXYJ2YgRTv7CitKfLS4",
+          "name": "Lenny Locksmith Sunrise",
+          "vicinity": "10242 NW 47th St Store 1, Sunrise",
+          "rating": 4.5,
+          "user_ratings_total": 87,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJf_CvaJ0D2YgR51mpXeiVfHo",
+          "name": "Advanced locksmith & car keys",
+          "vicinity": "230 S Cypress Rd, Pompano Beach",
+          "rating": 5,
+          "user_ratings_total": 88,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJTeSSpYcF2YgRBkhPGInA19E",
+          "name": "AAA Mega Locksmiths",
+          "vicinity": "2851 Riverside Dr Unit# 304, Coral Springs",
+          "rating": 4.9,
+          "user_ratings_total": 367,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVVdJ4u8d2YgRixk9ZENMsfE",
+          "name": "Blue Line Locksmith Boca Raton LLC",
+          "vicinity": "23122 Island View, Boca Raton",
+          "rating": 4.6,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJI1wZodkH2YgRkmpaBZ16Yrc",
+          "name": "KEY DECIPHER, LLC.",
+          "vicinity": "2649 NW 48th Terrace, Lauderdale Lakes",
+          "rating": 5,
+          "user_ratings_total": 273,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJR6UXxlod2YgR6JqeHiytYMU",
+          "name": "Reliable locksmith 247",
+          "vicinity": "8393 Trent Ct APT A, Boca Raton",
+          "rating": 5,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-cVQMkSp2YgRP_B21i2_Nc8",
+          "name": "The Lockout Locksmith",
+          "vicinity": "1800 N Lauderdale Ave, North Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 206,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxweNLuQF2YgRPkw24bP7uPM",
+          "name": "KeyZoo Locksmiths",
+          "vicinity": "1750 FL-7 b, North Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 61,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJR95KtuEJ2YgRfk6hWByPqRo",
+          "name": "Sunrise Locksmith LLC",
+          "vicinity": "1560 Sawgrass Corporate Pkwy #400-52, Sunrise",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJd2P9psoB2YgR1CyE9l8NuK4",
+          "name": "Sunrise Locksmith & Security Systems",
+          "vicinity": "2863 W Sunrise Blvd, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 74,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJW2WaNioC2YgRjXF2cq0_eEk",
+          "name": "Unique Locksmith",
+          "vicinity": "521 NE 34th Ct, Oakland Park",
+          "rating": 4.9,
+          "user_ratings_total": 177,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfyORfTYb2YgRcXQAorzSZSs",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "5600 W Sample Rd, Margate",
+          "rating": 4.7,
+          "user_ratings_total": 87,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJw1B1KvQD2YgRNv_i5ZSWrDE",
+          "name": "One Minute Locksmith Services",
+          "vicinity": "6750 N Andrews Ave Suite 200, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvWsFEQwF2YgRlY3EPSPUA_w",
+          "name": "OHANA Locksmith & Security",
+          "vicinity": "6047 Kimberly Blvd ste U, North Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx1ogv40H2YgRTaCCrm5ALgs",
+          "name": "Locksmith USA",
+          "vicinity": "7470 NW 34th St, Lauderhill",
+          "rating": 5,
+          "user_ratings_total": 62,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJJQ-PupMR2YgRQSmcI95By6A",
+          "name": "IBS Locksmith",
+          "vicinity": "8286 NW 128th Ln, Parkland",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJm8DYf6wI2YgRXqMzBv89VW0",
+          "name": "Locksmith Sunrise Co.",
+          "vicinity": "9900 NW 46th St, Sunrise",
+          "rating": 3.8,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 19,
+        "unique": 19,
+        "filtered": 16,
+        "with_details": 16,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Hollywood, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJH53XJ-ip2YgRidT8qSx1eUE",
+          "name": "Lock N More Locksmith",
+          "vicinity": "4000 SW 47th Ave, Davie",
+          "rating": 4.8,
+          "user_ratings_total": 942,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr0syz36n2YgRVGY9TXy8FSk",
+          "name": "Florida Premier Locksmith",
+          "vicinity": "11894 NW 11th St, Pembroke Pines",
+          "rating": 4.9,
+          "user_ratings_total": 185,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyz6RvIqr2YgRrfc3bI4qFZ0",
+          "name": "Local Locksmiths",
+          "vicinity": "1000 NE 12th Ave, Hallandale Beach",
+          "rating": 4.9,
+          "user_ratings_total": 306,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJU2KR54rWc4oR9LBWRkggWOo",
+          "name": "NEXT DOOR LOCKSMITH SERVICE",
+          "vicinity": "3521 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 206,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfR4IEoyp2YgRRsFZDSmj2bk",
+          "name": "A Ben's Locksmith Fort Lauderdale",
+          "vicinity": "5311 SW 34th Way, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 163,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxbvWZW6n2YgRTPLa3jxNL7I",
+          "name": "KW Locksmith Shop & Mobile Locksmith Services",
+          "vicinity": "2301 Palm Ave, Miramar",
+          "rating": 4.9,
+          "user_ratings_total": 247,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJlX66RYvJXG0RmtEdc0tPSYg",
+          "name": "RG Local Locksmith Services",
+          "vicinity": "8232 W State Rd 84, Davie",
+          "rating": 4.5,
+          "user_ratings_total": 362,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVcWvmYyr2YgRf-DW_ZGH72g",
+          "name": "5 Star Locksmith",
+          "vicinity": "1000 W Pembroke Rd, Hallandale Beach",
+          "rating": 4.9,
+          "user_ratings_total": 102,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJa-ZIR7mt2YgRqWo7Kjy9mlc",
+          "name": "US LOCKSMITH",
+          "vicinity": "1946 NE 163rd St, North Miami Beach",
+          "rating": 4.6,
+          "user_ratings_total": 646,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPzZZQv-s2YgRTU_61iyjQDo",
+          "name": "Half Price Locksmith",
+          "vicinity": "3620 N Park Rd, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 198,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2TzdY-kH2YgROvUYf4hN1Mo",
+          "name": "Plantation Locksmith LLC.",
+          "vicinity": "950 S Pine Island Rd #150-10, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAV44NJKr2YgRb285FWlocP4",
+          "name": "A&B Locksmith Auto",
+          "vicinity": "2648 Washington St, Hollywood",
+          "rating": 4.7,
+          "user_ratings_total": 101,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHRS_Q3-t2YgR9liO8N3XDpM",
+          "name": "247locksmith",
+          "vicinity": "18100 NE 10th Ave, North Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 443,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvcEQe1Gv2YgRs6EPTwonjIs",
+          "name": "West Park Locksmith",
+          "vicinity": "3056 S State Rd 7, West Park",
+          "rating": 5,
+          "user_ratings_total": 69,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ83riiQAH2YgRYIiYYJ5Bf_g",
+          "name": "777 Locksmith Services",
+          "vicinity": "150 S Pine Island Rd Suite 358, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 116,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6qqquYH2YgRCJ_Zyp4zPhk",
+          "name": "Angel Locksmith",
+          "vicinity": "11150 Cameron Ct, Davie",
+          "rating": 4.6,
+          "user_ratings_total": 69,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJF8OFagYB2YgRHWImamf6Cu0",
+          "name": "KeyZoo Locksmiths",
+          "vicinity": "721 NE 3rd Ave, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 177,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbWscQA2p2YgRMCNdxNZch10",
+          "name": "Rush Locksmith",
+          "vicinity": "3102 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 200,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2YFe56KyomERnhcQR1CCx1Y",
+          "name": "Quick Quick Locksmith",
+          "vicinity": "3800 S Ocean Dr, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 167,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIZ8hNZWp2YgRynBMNVAws2w",
+          "name": "Lock N Roll Locksmith",
+          "vicinity": "4931 S State Rd 7, Davie",
+          "rating": 4.5,
+          "user_ratings_total": 107,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 19,
+        "with_details": 19,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Miramar, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJH53XJ-ip2YgRidT8qSx1eUE",
+          "name": "Lock N More Locksmith",
+          "vicinity": "4000 SW 47th Ave, Davie",
+          "rating": 4.8,
+          "user_ratings_total": 942,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ97F-16QL2YgRrTXsRtt57NE",
+          "name": "Levy's Locksmith - Weston's Genuine Resident",
+          "vicinity": "1293 Majesty Terrace, Weston",
+          "rating": 4.9,
+          "user_ratings_total": 232,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr0syz36n2YgRVGY9TXy8FSk",
+          "name": "Florida Premier Locksmith",
+          "vicinity": "11894 NW 11th St, Pembroke Pines",
+          "rating": 4.9,
+          "user_ratings_total": 185,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD-TkwGqk2YgR0XGyRTOcoS8",
+          "name": "Miramar Locksmith & Key",
+          "vicinity": "3350 SW 148th Ave #220, Miramar",
+          "rating": 4.9,
+          "user_ratings_total": 218,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJU2KR54rWc4oR9LBWRkggWOo",
+          "name": "NEXT DOOR LOCKSMITH SERVICE",
+          "vicinity": "3521 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 206,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfR4IEoyp2YgRRsFZDSmj2bk",
+          "name": "A Ben's Locksmith Fort Lauderdale",
+          "vicinity": "5311 SW 34th Way, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 163,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxbvWZW6n2YgRTPLa3jxNL7I",
+          "name": "KW Locksmith Shop & Mobile Locksmith Services",
+          "vicinity": "2301 Palm Ave, Miramar",
+          "rating": 4.9,
+          "user_ratings_total": 247,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJlX66RYvJXG0RmtEdc0tPSYg",
+          "name": "RG Local Locksmith Services",
+          "vicinity": "8232 W State Rd 84, Davie",
+          "rating": 4.5,
+          "user_ratings_total": 362,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJa-ZIR7mt2YgRqWo7Kjy9mlc",
+          "name": "US LOCKSMITH",
+          "vicinity": "1946 NE 163rd St, North Miami Beach",
+          "rating": 4.6,
+          "user_ratings_total": 646,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2TzdY-kH2YgROvUYf4hN1Mo",
+          "name": "Plantation Locksmith LLC.",
+          "vicinity": "950 S Pine Island Rd #150-10, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPzZZQv-s2YgRTU_61iyjQDo",
+          "name": "Half Price Locksmith",
+          "vicinity": "3620 N Park Rd, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 198,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVcWvmYyr2YgRf-DW_ZGH72g",
+          "name": "5 Star Locksmith",
+          "vicinity": "1000 W Pembroke Rd, Hallandale Beach",
+          "rating": 4.9,
+          "user_ratings_total": 102,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAV44NJKr2YgRb285FWlocP4",
+          "name": "A&B Locksmith Auto",
+          "vicinity": "2648 Washington St, Hollywood",
+          "rating": 4.7,
+          "user_ratings_total": 101,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHRS_Q3-t2YgR9liO8N3XDpM",
+          "name": "247locksmith",
+          "vicinity": "18100 NE 10th Ave, North Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 443,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2z7sqyS72YgRFRnAeECYhRU",
+          "name": "Precise Locksmith",
+          "vicinity": "3195 W 2nd Ave, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 178,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6qqquYH2YgRCJ_Zyp4zPhk",
+          "name": "Angel Locksmith",
+          "vicinity": "11150 Cameron Ct, Davie",
+          "rating": 4.6,
+          "user_ratings_total": 69,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvcEQe1Gv2YgRs6EPTwonjIs",
+          "name": "West Park Locksmith",
+          "vicinity": "3056 S State Rd 7, West Park",
+          "rating": 5,
+          "user_ratings_total": 69,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ83riiQAH2YgRYIiYYJ5Bf_g",
+          "name": "777 Locksmith Services",
+          "vicinity": "150 S Pine Island Rd Suite 358, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 116,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbWscQA2p2YgRMCNdxNZch10",
+          "name": "Rush Locksmith",
+          "vicinity": "3102 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 200,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJE9_7P7y72YgRvB2OboMgjM8",
+          "name": "El Genio Locksmith Service Inc",
+          "vicinity": "5380 W 24th Ct, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 18,
+        "with_details": 18,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Clearwater, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ04HFnefrwogRLWPq1Y_7puo",
+          "name": "Super Locksmith",
+          "vicinity": "1902 W Main St #202, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 844,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrZRxriLDwogRMo41Hq2yVp8",
+          "name": "America's Lock and Key",
+          "vicinity": "3825 Henderson Blvd Suite 503, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 335,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4bfDhPXjwogRyKbgPQTUP4I",
+          "name": "BlueBox Locksmith LLC",
+          "vicinity": "6822 22nd Ave N Unit 281, St. Petersburg",
+          "rating": 5,
+          "user_ratings_total": 163,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9fsmzeDBwogRUnozlH66lkg",
+          "name": "24/7 Mobile Locksmith - Tampa",
+          "vicinity": "6721 N Armenia Ave, Tampa",
+          "rating": 4.7,
+          "user_ratings_total": 784,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJUfP6dKXtwogR6_etbKNVH-0",
+          "name": "VIP Locksmith Services",
+          "vicinity": "3710 Simpson Ct, Palm Harbor",
+          "rating": 4.9,
+          "user_ratings_total": 298,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJE80JT4bjwogRiGxt2WRaQ58",
+          "name": "A-1 Key & Safe Inc, 24hr Service",
+          "vicinity": "3601 54th Ave N, St. Petersburg",
+          "rating": 4.5,
+          "user_ratings_total": 212,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9Vo0SN_twogRIucOEADCC4U",
+          "name": "Pop-A-Lock Clearwater",
+          "vicinity": "2454 McMullen Booth Rd Suite 700, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 725,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJU7lnoii3rWoRwTMH-tmiRBY",
+          "name": "Super Locksmith Saint Petersburg",
+          "vicinity": "1624 4th St S STE B, St. Petersburg",
+          "rating": 4.8,
+          "user_ratings_total": 59,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJp-DJU3eNwogRUYrzXO6p40M",
+          "name": "Value Signature Locksmith",
+          "vicinity": "2435 US-19 Suite #96, Holiday",
+          "rating": 4.9,
+          "user_ratings_total": 454,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGfFEOw3DwogR83ctgRVtCkg",
+          "name": "We Do Locksmith",
+          "vicinity": "408 N Howard Ave, Tampa",
+          "rating": 4.9,
+          "user_ratings_total": 3323,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzW15-TaNwogR82v_UZtQ_vU",
+          "name": "AA Locksmith Pasco LLC",
+          "vicinity": "2435 US-19 unit 212, Holiday",
+          "rating": 4.9,
+          "user_ratings_total": 36,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJN66yuTzwwogRZ57fy0KP38A",
+          "name": "Affordable Lock & Security Solutions",
+          "vicinity": "1300 S Belcher Rd, Clearwater",
+          "rating": 4.8,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoYsYNM3GwogRb5OFxrhoqvQ",
+          "name": "Florida Lock Doctor - Commercial Locksmith Services",
+          "vicinity": "1430 W E Busch Blvd Suite D, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 126,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJqReiRkxZwokRbEpDhy35bXI",
+          "name": "Tarpon Locksmiths",
+          "vicinity": "901 Bayou Ave, Tarpon Springs",
+          "rating": 4.8,
+          "user_ratings_total": 37,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrby5QDLHwogR5lPWCrvM31Y",
+          "name": "A1 Locksmith Services",
+          "vicinity": "1005 W Busch Blvd #202, Tampa",
+          "rating": 4.8,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJm4z3vyXxwogRrQgS9ueKjGw",
+          "name": "Value Signature Locksmith Dunedin",
+          "vicinity": "1043 Main St, Dunedin",
+          "rating": 5,
+          "user_ratings_total": 50,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpZXjfe7BwogRYFu6fGQvu7Y",
+          "name": "Security Lock Systems",
+          "vicinity": "7704 Ann Ballard Rd, Tampa",
+          "rating": 4.7,
+          "user_ratings_total": 93,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 17,
+        "unique": 17,
+        "filtered": 14,
+        "with_details": 14,
+        "final_radius_km": 33.75
+      }
+    },
+    {
+      "city": "Palm Bay, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJacJ2zyoR3ogRfx3oqqPnohY",
+          "name": "Locksmith of Brevard",
+          "vicinity": "1520 S Babcock St STE B, Melbourne",
+          "rating": 4.9,
+          "user_ratings_total": 99,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJV38cg84P3ogR0MpCFyq6toI",
+          "name": "GG Locksmith",
+          "vicinity": "394 Brantley St SE, Palm Bay",
+          "rating": 4.7,
+          "user_ratings_total": 61,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJuYA1Sl_r_kgR5tCg_ezVbQw",
+          "name": "Locksmith Wizard LLC",
+          "vicinity": "235 Watson Dr, Indialantic",
+          "rating": 4.9,
+          "user_ratings_total": 44,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJkTdeXsYP3ogR0Jhtlg49Neg",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "1000 N Wickham Rd, Melbourne",
+          "rating": 4.7,
+          "user_ratings_total": 54,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJaz8YgX8N3ogRxHA9LR0foos",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "1040 Malabar Rd SE, Palm Bay",
+          "rating": 4.3,
+          "user_ratings_total": 63,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAaBpPmwN3ogRGXGrSkk-eGk",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "845 Palm Bay Rd NE, West Melbourne",
+          "rating": 4.6,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJB8FTw9oO3ogRQ1cYPbG9QHk",
+          "name": "Able Lock & Safe",
+          "vicinity": "4835 Eau Gallie Blvd, Melbourne",
+          "rating": 4.2,
+          "user_ratings_total": 856,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJA-iVxU4S3ogRSasuXRo1fTE",
+          "name": "Kwik Key Locksmith of Brevard",
+          "vicinity": "4650 Lipscomb St # 16, Palm Bay",
+          "rating": 4.8,
+          "user_ratings_total": 136,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrQdiEaQR3ogRyIpOQMapBaI",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "1001 E Eau Gallie Blvd, Melbourne",
+          "rating": 4.2,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6dvfGSAP3ogR38nG0q8uU54",
+          "name": "Key-En-Lock",
+          "vicinity": "720 St Clair St, Melbourne",
+          "rating": 4.9,
+          "user_ratings_total": 92,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyUnqo7sP3ogRl0fewDojayY",
+          "name": "A-1 Action Safe & Lock",
+          "vicinity": "2460 Aurora Rd, Melbourne",
+          "rating": 4.7,
+          "user_ratings_total": 69,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJR836ZygTW4YROartx4Tnfxk",
+          "name": "1-92 Roadside LLC",
+          "vicinity": "2903 W New Haven Ave, West Melbourne",
+          "rating": 4.9,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ43OVE-4N3ogRAkp5ObvhvvE",
+          "name": "Ben & Adams Locksmith",
+          "vicinity": "613 Belvedere Rd NW, Palm Bay",
+          "rating": 4.9,
+          "user_ratings_total": 89,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8xE0RC0P3ogR8xtTUkTBcAs",
+          "name": "P.D.Q. Locksmith LLC",
+          "vicinity": "4155 Dow Rd Suite R, Melbourne",
+          "rating": 4.9,
+          "user_ratings_total": 42,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJe1aw5WEF3ogR8miqPVe-AAE",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "3950 N Wickham Rd, Melbourne",
+          "rating": 0,
+          "user_ratings_total": 0,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq1wRtpQT3ogRLUODOTZkc5o",
+          "name": "Minute Key",
+          "vicinity": "1166 Malabar Rd, Palm Bay",
+          "rating": 4.3,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFTBRtkcN3ogROavYPL6cePQ",
+          "name": "Minute Key",
+          "vicinity": "1140 Malabar Rd SE, Palm Bay",
+          "rating": 0,
+          "user_ratings_total": 0,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJQTn_kXkR3ogREa9UKgegt-M",
+          "name": "Minute Key",
+          "vicinity": "1934 Jimmy Buffett Mem Hwy, Indian Harbour Beach",
+          "rating": 3.6,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJi2p6prsP3ogRlLy4B5_XBGk",
+          "name": "Southeast Safes, Inc.",
+          "vicinity": "2460 Aurora Rd, Melbourne",
+          "rating": 4.8,
+          "user_ratings_total": 41,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_ab0JPgP3ogR9VoIiAkOUJ8",
+          "name": "Minute Key",
+          "vicinity": "2150 Minton Rd, Melbourne",
+          "rating": 3.8,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 12,
+        "with_details": 12,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "West Palm Beach, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ8X5gg90q2YgRupqrwxdWBoQ",
+          "name": "Door N Key Locksmith West Palm Beach",
+          "vicinity": "1705 Donna Rd Unit 17, West Palm Beach",
+          "rating": 4.9,
+          "user_ratings_total": 552,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6q6QAnW2IgRNMiBrWZdi-8",
+          "name": "Kwikey Locksmith Services Inc",
+          "vicinity": "1649 Forum Pl STE 1, West Palm Beach",
+          "rating": 4.9,
+          "user_ratings_total": 365,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVY6XP-7Z2IgR6F_cAoUmjO0",
+          "name": "Royal Locksmith",
+          "vicinity": "901 Barnett Dr suite 941-O, Lake Worth Beach",
+          "rating": 5,
+          "user_ratings_total": 373,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-3kUwkrU2IgRsUNK2dle27M",
+          "name": "Levi Universal Locksmith",
+          "vicinity": "515 N Flagler Dr Suite P-300, West Palm Beach",
+          "rating": 4.9,
+          "user_ratings_total": 210,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3Y_ctkTW2IgR5nkpMIyYJVo",
+          "name": "YDG Locksmith WPB",
+          "vicinity": "1204 Old Okeechobee Rd, West Palm Beach",
+          "rating": 4.7,
+          "user_ratings_total": 181,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXf0KcFvW2IgRppW4Paps-i0",
+          "name": "Get Locksmith",
+          "vicinity": "1130 Clare Ave, West Palm Beach",
+          "rating": 4.7,
+          "user_ratings_total": 74,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKU11wWLV2IgRav-Qg37iId8",
+          "name": "Royal Locksmith",
+          "vicinity": "3600 Broadway #7, West Palm Beach",
+          "rating": 5,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWRQp8tzX2IgRdZ-4R1k2tjU",
+          "name": "locksmith top team",
+          "vicinity": "1130 Clare Ave, West Palm Beach",
+          "rating": 4.8,
+          "user_ratings_total": 50,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJJ9D-D98p2YgR0y9QwFnVJEA",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "4375 Belvedere Rd, West Palm Beach",
+          "rating": 4.5,
+          "user_ratings_total": 117,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJw7gkJmYv2YgRjH72306L-0Y",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "9990 Belvedere Rd, West Palm Beach",
+          "rating": 4.9,
+          "user_ratings_total": 68,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJaTBhxXMr2YgR9Wdjl8PTB-A",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "4225 45th St, West Palm Beach",
+          "rating": 4.7,
+          "user_ratings_total": 87,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJCYrZpa8h2YgRjK13fVKezDw",
+          "name": "All Star Lock N' Door",
+          "vicinity": "815 Barnett Dr, Lake Worth Beach",
+          "rating": 2.3,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJd2Y2A4bX2IgRLpEmn9zhDzw",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "7915 S Dixie Hwy, West Palm Beach",
+          "rating": 4.1,
+          "user_ratings_total": 11,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoby8KMvZ2IgR4HqEuWp337g",
+          "name": "Acorn Safe & Lock",
+          "vicinity": "409 Lake Ave, Lake Worth Beach",
+          "rating": 4.5,
+          "user_ratings_total": 59,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ258ghWIn2YgRFhtt2pI8pJo",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "3911 S Jog Rd, Greenacres",
+          "rating": 4.8,
+          "user_ratings_total": 39,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 15,
+        "unique": 15,
+        "filtered": 12,
+        "with_details": 12,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Miami Gardens, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJH53XJ-ip2YgRidT8qSx1eUE",
+          "name": "Lock N More Locksmith",
+          "vicinity": "4000 SW 47th Ave, Davie",
+          "rating": 4.8,
+          "user_ratings_total": 942,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr0syz36n2YgRVGY9TXy8FSk",
+          "name": "Florida Premier Locksmith",
+          "vicinity": "11894 NW 11th St, Pembroke Pines",
+          "rating": 4.9,
+          "user_ratings_total": 185,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyz6RvIqr2YgRrfc3bI4qFZ0",
+          "name": "Local Locksmiths",
+          "vicinity": "1000 NE 12th Ave, Hallandale Beach",
+          "rating": 4.9,
+          "user_ratings_total": 306,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD-TkwGqk2YgR0XGyRTOcoS8",
+          "name": "Miramar Locksmith & Key",
+          "vicinity": "3350 SW 148th Ave #220, Miramar",
+          "rating": 4.9,
+          "user_ratings_total": 218,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4z9o65iy2YgRIk2ewIIdaIE",
+          "name": "Best Locksmith",
+          "vicinity": "7455 Collins Ave Unit 216, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 217,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJU2KR54rWc4oR9LBWRkggWOo",
+          "name": "NEXT DOOR LOCKSMITH SERVICE",
+          "vicinity": "3521 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 206,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfR4IEoyp2YgRRsFZDSmj2bk",
+          "name": "A Ben's Locksmith Fort Lauderdale",
+          "vicinity": "5311 SW 34th Way, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 163,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxbvWZW6n2YgRTPLa3jxNL7I",
+          "name": "KW Locksmith Shop & Mobile Locksmith Services",
+          "vicinity": "2301 Palm Ave, Miramar",
+          "rating": 4.9,
+          "user_ratings_total": 247,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPzZZQv-s2YgRTU_61iyjQDo",
+          "name": "Half Price Locksmith",
+          "vicinity": "3620 N Park Rd, Hollywood",
+          "rating": 4.8,
+          "user_ratings_total": 198,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJa-ZIR7mt2YgRqWo7Kjy9mlc",
+          "name": "US LOCKSMITH",
+          "vicinity": "1946 NE 163rd St, North Miami Beach",
+          "rating": 4.6,
+          "user_ratings_total": 646,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVcWvmYyr2YgRf-DW_ZGH72g",
+          "name": "5 Star Locksmith",
+          "vicinity": "1000 W Pembroke Rd, Hallandale Beach",
+          "rating": 4.9,
+          "user_ratings_total": 102,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2z7sqyS72YgRFRnAeECYhRU",
+          "name": "Precise Locksmith",
+          "vicinity": "3195 W 2nd Ave, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 178,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAV44NJKr2YgRb285FWlocP4",
+          "name": "A&B Locksmith Auto",
+          "vicinity": "2648 Washington St, Hollywood",
+          "rating": 4.7,
+          "user_ratings_total": 101,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ29Kz0ZGx2YgRhGJi6rMgMV0",
+          "name": "US LOCKSMITH",
+          "vicinity": "150 NW 37th St, Miami",
+          "rating": 4.6,
+          "user_ratings_total": 300,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHRS_Q3-t2YgR9liO8N3XDpM",
+          "name": "247locksmith",
+          "vicinity": "18100 NE 10th Ave, North Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 443,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvcEQe1Gv2YgRs6EPTwonjIs",
+          "name": "West Park Locksmith",
+          "vicinity": "3056 S State Rd 7, West Park",
+          "rating": 5,
+          "user_ratings_total": 69,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbYLdo8e_2YgRuxu4EirCJwg",
+          "name": "CENTRAL LOCKSMITH LLC",
+          "vicinity": "4179 NW 107th Ave UNIT B, Doral",
+          "rating": 5,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbWscQA2p2YgRMCNdxNZch10",
+          "name": "Rush Locksmith",
+          "vicinity": "3102 Griffin Rd, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 200,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2YFe56KyomERnhcQR1CCx1Y",
+          "name": "Quick Quick Locksmith",
+          "vicinity": "3800 S Ocean Dr, Hollywood",
+          "rating": 5,
+          "user_ratings_total": 167,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJE9_7P7y72YgRvB2OboMgjM8",
+          "name": "El Genio Locksmith Service Inc",
+          "vicinity": "5380 W 24th Ct, Hialeah",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 18,
+        "with_details": 18,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Gainesville, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJnw_i3dq76IgRVSH6oA_aIUQ",
+          "name": "24/7 Lockout King - A Mobile Locksmith",
+          "vicinity": "2632 NW 43rd St Suite 4114, Gainesville",
+          "rating": 4.8,
+          "user_ratings_total": 86,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJiS0zzPaj6IgRc3WheAJ8M1I",
+          "name": "The Key Experts",
+          "vicinity": "3601 SW 2nd Ave Suite T, Gainesville",
+          "rating": 5,
+          "user_ratings_total": 28,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJuW8peA2j6IgRS2rwoiBqV-A",
+          "name": "Mobile Locksmith | Blackburn and Son",
+          "vicinity": "2216 SW Archer Rd, Gainesville",
+          "rating": 4.8,
+          "user_ratings_total": 727,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5zv3sX6l6IgR8T1v2pWlNaE",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "5700 NW 23rd St, Gainesville",
+          "rating": 4.7,
+          "user_ratings_total": 39,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIdFYaK2n6IgRY2VziVXEt5Y",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "1800 NW 12th St, Gainesville",
+          "rating": 4,
+          "user_ratings_total": 61,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcf5pTa2j6IgRAg_IqHKWBoc",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "2900 SW 42nd St, Gainesville",
+          "rating": 3.4,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJDwMfgs666IgRGye3rEbUKhU",
+          "name": "Be Secure Locksmith",
+          "vicinity": "901 NW 8th Ave c17, Gainesville",
+          "rating": 4.9,
+          "user_ratings_total": 1178,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnauWlOql6IgRoB4GSeApR2Y",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "1459 NW 23rd Ave, Gainesville",
+          "rating": 4.5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGbqVxJ2l6IgRDkoDgam7XkI",
+          "name": "Super Locksmith Gainesville",
+          "vicinity": "102 NE 10th Ave Suite 4, Gainesville",
+          "rating": 4.8,
+          "user_ratings_total": 62,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJiWFxSy2j6IgR_bkdW10je70",
+          "name": "Minute Key",
+          "vicinity": "2900 SW 42nd St, Gainesville",
+          "rating": 4.5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJafqC96K76IgRN-5OqRdLY2E",
+          "name": "Mail Boxes & More",
+          "vicinity": "9200 Northwest 39th Avenue #130 Located in the Springhill Publix Shopping Center, Gainesville",
+          "rating": 4.3,
+          "user_ratings_total": 57,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6UEgJuWl6IgR6VC7gUDN1b4",
+          "name": "Minute Key",
+          "vicinity": "2564 NW 13th St, Gainesville",
+          "rating": 4.3,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJj5S8UC6j6IgRmI1QuHW6wz0",
+          "name": "Minute Key",
+          "vicinity": "3101 Clark Butler Blvd, Gainesville",
+          "rating": 3.3,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhzCe4Uml6IgRU0vm4L3YhzM",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "2801 NW 13th St, Gainesville",
+          "rating": 4.7,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHzHrraq96IgRmgbAt4W1tWc",
+          "name": "Minute Key",
+          "vicinity": "7107 NW 4th Blvd, Gainesville",
+          "rating": 0,
+          "user_ratings_total": 0,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 15,
+        "unique": 15,
+        "filtered": 7,
+        "with_details": 7,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Pompano Beach, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJW5Uau3vj2IgR847kkqCLbU4",
+          "name": "Sunny Locksmith",
+          "vicinity": "370 Camino Gardens Blvd Unit 331, Boca Raton",
+          "rating": 4.9,
+          "user_ratings_total": 101,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJRzepTSId2YgRZqDOZ4CGtMU",
+          "name": "Unique Locksmith",
+          "vicinity": "420 S Military Trail, Deerfield Beach",
+          "rating": 4.9,
+          "user_ratings_total": 210,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJlX66RYvJXG0RmtEdc0tPSYg",
+          "name": "RG Local Locksmith Services",
+          "vicinity": "8232 W State Rd 84, Davie",
+          "rating": 4.5,
+          "user_ratings_total": 362,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJd3Bsr1Dj2IgRiphT1P-vUiA",
+          "name": "5 Star Locksmith FL",
+          "vicinity": "1202 E Hillsboro Blvd ste 1, Deerfield Beach",
+          "rating": 5,
+          "user_ratings_total": 252,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2TzdY-kH2YgROvUYf4hN1Mo",
+          "name": "Plantation Locksmith LLC.",
+          "vicinity": "950 S Pine Island Rd #150-10, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJf_CvaJ0D2YgR51mpXeiVfHo",
+          "name": "Advanced locksmith & car keys",
+          "vicinity": "230 S Cypress Rd, Pompano Beach",
+          "rating": 5,
+          "user_ratings_total": 88,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVVdJ4u8d2YgRixk9ZENMsfE",
+          "name": "Blue Line Locksmith Boca Raton LLC",
+          "vicinity": "23122 Island View, Boca Raton",
+          "rating": 4.6,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJTeSSpYcF2YgRBkhPGInA19E",
+          "name": "AAA Mega Locksmiths",
+          "vicinity": "2851 Riverside Dr Unit# 304, Coral Springs",
+          "rating": 4.9,
+          "user_ratings_total": 367,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ83riiQAH2YgRYIiYYJ5Bf_g",
+          "name": "777 Locksmith Services",
+          "vicinity": "150 S Pine Island Rd Suite 358, Plantation",
+          "rating": 4.9,
+          "user_ratings_total": 116,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJF8OFagYB2YgRHWImamf6Cu0",
+          "name": "KeyZoo Locksmiths",
+          "vicinity": "721 NE 3rd Ave, Fort Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 177,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJw_Zu-CTj2IgRcgT9jZBDG2E",
+          "name": "Boca Village Locksmith",
+          "vicinity": "160 W Camino Real Suite B, Boca Raton",
+          "rating": 5,
+          "user_ratings_total": 81,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJR6UXxlod2YgR6JqeHiytYMU",
+          "name": "Reliable locksmith 247",
+          "vicinity": "8393 Trent Ct APT A, Boca Raton",
+          "rating": 5,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-cVQMkSp2YgRP_B21i2_Nc8",
+          "name": "The Lockout Locksmith",
+          "vicinity": "1800 N Lauderdale Ave, North Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 206,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIeXQK3AC2YgRQXC65fYESj4",
+          "name": "High Security Locksmith",
+          "vicinity": "6245 N Federal Hwy, Fort Lauderdale",
+          "rating": 4.8,
+          "user_ratings_total": 47,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxweNLuQF2YgRPkw24bP7uPM",
+          "name": "KeyZoo Locksmiths",
+          "vicinity": "1750 FL-7 b, North Lauderdale",
+          "rating": 5,
+          "user_ratings_total": 61,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFzIdGHvj2IgR7YBWegIbPCQ",
+          "name": "Fine Locksmith USA",
+          "vicinity": "4461 N Federal Hwy, Pompano Beach",
+          "rating": 5,
+          "user_ratings_total": 27,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJd2P9psoB2YgR1CyE9l8NuK4",
+          "name": "Sunrise Locksmith & Security Systems",
+          "vicinity": "2863 W Sunrise Blvd, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 74,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfyORfTYb2YgRcXQAorzSZSs",
+          "name": "KeyMe Locksmiths",
+          "vicinity": "5600 W Sample Rd, Margate",
+          "rating": 4.7,
+          "user_ratings_total": 87,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJW2WaNioC2YgRjXF2cq0_eEk",
+          "name": "Unique Locksmith",
+          "vicinity": "521 NE 34th Ct, Oakland Park",
+          "rating": 4.9,
+          "user_ratings_total": 177,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJw1B1KvQD2YgRNv_i5ZSWrDE",
+          "name": "One Minute Locksmith Services",
+          "vicinity": "6750 N Andrews Ave Suite 200, Fort Lauderdale",
+          "rating": 4.9,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 19,
+        "with_details": 19,
+        "final_radius_km": 15.0
+      }
+    }
+  ],
+  "all_raw_places": [
+    {
+      "place_id": "ChIJ04HFnefrwogRLWPq1Y_7puo",
+      "name": "Super Locksmith",
+      "vicinity": "1902 W Main St #202, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 844,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJR1ZbaCcXfmkRufFCAz7QWPI",
+      "name": "Zoom Locksmith",
+      "vicinity": "4705 Wild Senna Blvd, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 320,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJb-GxFP7HwogR-yAowx8JV1o",
+      "name": "A PLUS QUICK LOCKSMITH",
+      "vicinity": "15401 Plantation Oaks Dr Unit 07, Tampa",
+      "rating": 5,
+      "user_ratings_total": 627,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrZRxriLDwogRMo41Hq2yVp8",
+      "name": "America's Lock and Key",
+      "vicinity": "3825 Henderson Blvd Suite 503, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 335,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9fsmzeDBwogRUnozlH66lkg",
+      "name": "24/7 Mobile Locksmith - Tampa",
+      "vicinity": "6721 N Armenia Ave, Tampa",
+      "rating": 4.7,
+      "user_ratings_total": 784,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_ZdRUjPHwogReKJXcN7y93s",
+      "name": "Locksmith and Doors",
+      "vicinity": "11007 N 56th St Suite 207, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 94,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZQfTawrSwogR-ysT8yPnzOw",
+      "name": "The Flying Locksmiths, Tampa South",
+      "vicinity": "6619 S 78th St Suite 120, Riverview",
+      "rating": 4.7,
+      "user_ratings_total": 82,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPbSEwuhYr2IRmlhvmel3poc",
+      "name": "A1 Locksmith Services LLC",
+      "vicinity": "10806 Lakeside Vista Dr, Riverview",
+      "rating": 4.9,
+      "user_ratings_total": 348,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGfFEOw3DwogR83ctgRVtCkg",
+      "name": "We Do Locksmith",
+      "vicinity": "408 N Howard Ave, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 3323,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVVVVoV3OwogRUmnrVC1LQeg",
+      "name": "Locksmith Brandon Specialist",
+      "vicinity": "187 Brandon Town Center Dr, Brandon",
+      "rating": 5,
+      "user_ratings_total": 4,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJoYsYNM3GwogRb5OFxrhoqvQ",
+      "name": "Florida Lock Doctor - Commercial Locksmith Services",
+      "vicinity": "1430 W E Busch Blvd Suite D, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 126,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJYwWuSWBylAoR8PFl0NgdDRE",
+      "name": "Century Locksmith Services",
+      "vicinity": "7204 Harney Rd, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 135,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGZAt7NvFwogRtnwGOjzy14c",
+      "name": "24 Locksmith",
+      "vicinity": "1725 N 50th St, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 81,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrby5QDLHwogR5lPWCrvM31Y",
+      "name": "A1 Locksmith Services",
+      "vicinity": "1005 W Busch Blvd #202, Tampa",
+      "rating": 4.8,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpZXjfe7BwogRYFu6fGQvu7Y",
+      "name": "Security Lock Systems",
+      "vicinity": "7704 Ann Ballard Rd, Tampa",
+      "rating": 4.7,
+      "user_ratings_total": 93,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJfb1hmUTBwogRBvMiIyGZLOU",
+      "name": "UPick Locksmith",
+      "vicinity": "4610 N Lois Ave, Tampa",
+      "rating": 4.9,
+      "user_ratings_total": 222,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ38q_penHwogRN56_LPU_9eM",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "8837 N 56th St, Temple Terrace",
+      "rating": 4.5,
+      "user_ratings_total": 18,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJE04yPJJ754gR7F6VW25sYJg",
+      "name": "We Do Locksmith",
+      "vicinity": "2911 39th St #200, Orlando",
+      "rating": 4.9,
+      "user_ratings_total": 816,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJr7KaIjqA3YgREAL1NfpaWRk",
+      "name": "A Discount Locksmith",
+      "vicinity": "6210 Orange Cove Dr, Orlando",
+      "rating": 5,
+      "user_ratings_total": 662,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLYNN7xR_54gRSfZW1kiSO-c",
+      "name": "IBS Locksmith",
+      "vicinity": "6234 Orange Cove Dr, Orlando",
+      "rating": 4.9,
+      "user_ratings_total": 1590,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ7duop_5654gRTDGJSMuBjlU",
+      "name": "A & H Locksmith Services",
+      "vicinity": "111 N Orange Ave, Orlando",
+      "rating": 4.7,
+      "user_ratings_total": 214,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJad6rMf5v54gRpSBTMawU5d8",
+      "name": "Veteran Lock and Safe Inc",
+      "vicinity": "2762 Mystic Lake Dr, Oviedo",
+      "rating": 4.8,
+      "user_ratings_total": 66,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVzYzu5J654gRBlbwuOW80eM",
+      "name": "Advance Auto Locksmith",
+      "vicinity": "1218 Alden Rd, Orlando",
+      "rating": 4.6,
+      "user_ratings_total": 158,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJiZw7LMlv54gRaFR7c3nlHpo",
+      "name": "In N Out Locksmith",
+      "vicinity": "2513 Dubcek Point, Winter Park",
+      "rating": 4.3,
+      "user_ratings_total": 51,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJdz7B_d9x54gRmEprgoE0Kjo",
+      "name": "Locksmith Service Altamonte Springs",
+      "vicinity": "131 Water Front Way, Altamonte Springs",
+      "rating": 4.4,
+      "user_ratings_total": 114,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ27cua8p_54gRDpRd_o18mCU",
+      "name": "Dr Phillips Locksmith",
+      "vicinity": "7343 W Sand Lake Rd #234, Orlando",
+      "rating": 4.7,
+      "user_ratings_total": 53,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhfvK-cV454gR4OBd3vV2sYQ",
+      "name": "Limu Express Locksmith Orlando",
+      "vicinity": "2901 Blakely Dr, Orlando",
+      "rating": 5,
+      "user_ratings_total": 864,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJn34Y2Ot354gR4nCYmjdn2nQ",
+      "name": "Affordable Locksmith Orlando",
+      "vicinity": "7721 Newlan Dr, Orlando",
+      "rating": 4.8,
+      "user_ratings_total": 57,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJjQyoDiZ754gReFakejTNOiM",
+      "name": "Orlando Locksmith Experts",
+      "vicinity": "2111 E Michigan St, Orlando",
+      "rating": 4.7,
+      "user_ratings_total": 39,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWQF6uOR-54gRRKvJN-ufgGY",
+      "name": "Universal Locksmith LLC",
+      "vicinity": "6807 Visitors Cir suite A, Orlando",
+      "rating": 5,
+      "user_ratings_total": 483,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJEXKNCq9x54gRSpMvugCF8Cg",
+      "name": "Locksmith ON Spot Orlando",
+      "vicinity": "1790 Lee Rd Ste 3, Orlando",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJYQkr4wph54gR3DyGepuP1v0",
+      "name": "Lake Nona Locksmith",
+      "vicinity": "10245 Lake District Ln, Orlando",
+      "rating": 4.8,
+      "user_ratings_total": 53,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJD4SyuQ9754gRr5Ybcfu0pt0",
+      "name": "Elite Locksmith",
+      "vicinity": "155 S Court Ave, Orlando",
+      "rating": 4.9,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzwRqkGZj54gRJgl2pXm8yvY",
+      "name": "Pop-A-Lock Orlando",
+      "vicinity": "37 N Orange Ave Suite 222, Orlando",
+      "rating": 4.8,
+      "user_ratings_total": 2378,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJx9oJ_RN554gRh62eBd3g8I8",
+      "name": "Magic Locksmiths",
+      "vicinity": "4726 Old Winter Garden Rd, Orlando",
+      "rating": 4.8,
+      "user_ratings_total": 148,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZYGBakR954gRFT-DmM1VEuw",
+      "name": "Y-S Locks & Keys",
+      "vicinity": "4899 Fiorazante Ave, Orlando",
+      "rating": 4.9,
+      "user_ratings_total": 312,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJx43Vqt9754gRP_dO_2uyZOE",
+      "name": "Pro Auto Locksmith",
+      "vicinity": "355 Branson Dr, Orlando",
+      "rating": 4.8,
+      "user_ratings_total": 173,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrfWqJoW22YgRtvu-Lu3SGPo",
+      "name": "My Locksmith Miami",
+      "vicinity": "1060 Brickell Ave # M-1, Miami",
+      "rating": 5,
+      "user_ratings_total": 1270,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJdWLElqXH2YgRsjLPMAmFEPo",
+      "name": "786Locksmith",
+      "vicinity": "9300 S Dixie Hwy #106, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 221,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJB9E1i4y02YgR2v7RTXYhEfo",
+      "name": "Public Locksmith Inc.",
+      "vicinity": "345 Michigan Ave #35, Miami Beach",
+      "rating": 5,
+      "user_ratings_total": 788,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvVuIjJu22YgRFz9ScICTEvM",
+      "name": "Quickly Locksmith Miami",
+      "vicinity": "2680 NE 2nd Ave, Miami",
+      "rating": 4.8,
+      "user_ratings_total": 1115,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJL01elYO32YgR0NZCM5KZbYQ",
+      "name": "305 Lockout",
+      "vicinity": "276 NE 1st St, Miami",
+      "rating": 5,
+      "user_ratings_total": 910,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4z9o65iy2YgRIk2ewIIdaIE",
+      "name": "Best Locksmith",
+      "vicinity": "7455 Collins Ave Unit 216, Miami Beach",
+      "rating": 5,
+      "user_ratings_total": 217,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8ZEYYo602YgRG1ItyxCNCt4",
+      "name": "south beach locksmith",
+      "vicinity": "1228 Pennsylvania Ave, Miami Beach",
+      "rating": 4.7,
+      "user_ratings_total": 170,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJmf4iW0Kp2YgRmYYXw3u1mYY",
+      "name": "Locksmith Near Me Florida",
+      "vicinity": "5700 FL-968, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 176,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5dBZQGu32YgRqWFZRQ6kOn8",
+      "name": "Caraballo Liberty Locksmith Inc.",
+      "vicinity": "831 NW 37th Ave, Miami",
+      "rating": 4.5,
+      "user_ratings_total": 168,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJYzxkBPS12YgRH6UCgUpF3IE",
+      "name": "South Beach Locksmith & Keys",
+      "vicinity": "235 Lincoln Rd, Miami Beach",
+      "rating": 4.8,
+      "user_ratings_total": 124,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJx8HpRPG22YgRC2LaKD0_q-g",
+      "name": "Caraballo Locksmith",
+      "vicinity": "1270 SW 8th St, Miami",
+      "rating": 4.7,
+      "user_ratings_total": 929,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpxpC6j9vk6gRDaZjJjHkUOE",
+      "name": "Magic City Locksmith",
+      "vicinity": "6560 NW 7th St, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 106,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJW4Fo3Aq12YgRUDBRuvX5z8I",
+      "name": "South Beach Locksmith & Security Systems",
+      "vicinity": "910 West Ave Suite 814, Miami Beach",
+      "rating": 5,
+      "user_ratings_total": 80,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgR-dIk-x2YgRO0yzmQ_YcPA",
+      "name": "A-1 Lock & Key",
+      "vicinity": "3431 NW 48th St, Miami",
+      "rating": 4.6,
+      "user_ratings_total": 210,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ770F90i32YgRJekTS0F_X8Y",
+      "name": "Locksmith Near Me Miami",
+      "vicinity": "698 NE 1st Ave, Miami",
+      "rating": 4.8,
+      "user_ratings_total": 45,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2z7sqyS72YgRFRnAeECYhRU",
+      "name": "Precise Locksmith",
+      "vicinity": "3195 W 2nd Ave, Hialeah",
+      "rating": 5,
+      "user_ratings_total": 178,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ29Kz0ZGx2YgRhGJi6rMgMV0",
+      "name": "US LOCKSMITH",
+      "vicinity": "150 NW 37th St, Miami",
+      "rating": 4.6,
+      "user_ratings_total": 300,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhYBSNfW32YgRRJO5sBkBKk8",
+      "name": "Quickly Locksmith Miami",
+      "vicinity": "26 SE 1st St, Miami",
+      "rating": 5,
+      "user_ratings_total": 217,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrySFWQax2YgRUyUwWP_-H5E",
+      "name": "Enzo's security services",
+      "vicinity": "5900 NW 6th Ave, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 120,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJE9_7P7y72YgRvB2OboMgjM8",
+      "name": "El Genio Locksmith Service Inc",
+      "vicinity": "5380 W 24th Ct, Hialeah",
+      "rating": 5,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJg7SGT_fL5YgRKfEL9o89m58",
+      "name": "We Do Locksmith",
+      "vicinity": "8727 Old Kings Rd S, Jacksonville",
+      "rating": 4.7,
+      "user_ratings_total": 538,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNVooMQRL5IgR5zht5n4MeAc",
+      "name": "Eli's Lock and Key",
+      "vicinity": "11990 Beach Blvd Unit 208, Jacksonville",
+      "rating": 4.7,
+      "user_ratings_total": 649,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ671JXd7L5YgRlkY6UvcIs4c",
+      "name": "Good Guy Locksmith Jacksonville",
+      "vicinity": "8074 Gate Pkwy W Apt 5315, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 709,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhVpEOEfK5YgRTeiNBWsbGa0",
+      "name": "The Flying Locksmiths",
+      "vicinity": "7933 Baymeadows Way Ste 9, Jacksonville",
+      "rating": 4.8,
+      "user_ratings_total": 139,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ88gf3gC15YgROacsUbMiYFU",
+      "name": "Jax Locksmith Pro",
+      "vicinity": "5290 Big Island Drive #4201, Jacksonville",
+      "rating": 4.8,
+      "user_ratings_total": 762,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSZwSRGOH2wMRnWNxPXz-fFM",
+      "name": "Lockbuster Locksmith",
+      "vicinity": "3134 Cornelia Dr, Jacksonville",
+      "rating": 5,
+      "user_ratings_total": 75,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJi-OAWQfL5YgRpkI8zmcU6hk",
+      "name": "AAA Locksmith Pros",
+      "vicinity": "5011 Gate Pkwy 100 Suite 452, Jacksonville",
+      "rating": 5,
+      "user_ratings_total": 129,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJa1CS-ja35YgRX3jb_1xMqKQ",
+      "name": "Mobile Locksmith Jacksonville 365",
+      "vicinity": "25 N Market St suite 236, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 537,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVdogblG15YgRAihXHkR1bQw",
+      "name": "Abi Locksmith",
+      "vicinity": "4585 Capital Dome Dr, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 1137,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ17-J6IFJ5IgRBniuYZ1BQlw",
+      "name": "Locksmith Jacksonville",
+      "vicinity": "603 3rd St S, Jacksonville Beach",
+      "rating": 5,
+      "user_ratings_total": 52,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWweKw9PH5YgRfGyUZifJC04",
+      "name": "Car Key Replacement Jacksonville",
+      "vicinity": "6010 Duclay Rd Suite 5, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 124,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-9sliGHL5YgR6D5VkWXVYO0",
+      "name": "North Florida Emergency Locksmith Services",
+      "vicinity": "11015 Starwood Dr, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 798,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ010QHGOx5YgRchYEh23u1n8",
+      "name": "Economy Lock and Key",
+      "vicinity": "3314 N Main St, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJmxegG91J5IgRJysRUVk0Ues",
+      "name": "Jax Beach Lockout & Key LLC",
+      "vicinity": "1655 The Greens Way Unit 2922, Jacksonville Beach",
+      "rating": 4.7,
+      "user_ratings_total": 28,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJd-kC0_G35YgRJ4nUJGaN6-0",
+      "name": "Jax lock key & safe service",
+      "vicinity": "2048 Arthur St, Jacksonville",
+      "rating": 4.4,
+      "user_ratings_total": 7,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_QBYcFvP5YgRRmhPRGWnSgg",
+      "name": "LOCAL LOCKSMITH",
+      "vicinity": "12265 Governors Dr E, Jacksonville",
+      "rating": 4.9,
+      "user_ratings_total": 166,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4bfDhPXjwogRyKbgPQTUP4I",
+      "name": "BlueBox Locksmith LLC",
+      "vicinity": "6822 22nd Ave N Unit 281, St. Petersburg",
+      "rating": 5,
+      "user_ratings_total": 163,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJUfP6dKXtwogR6_etbKNVH-0",
+      "name": "VIP Locksmith Services",
+      "vicinity": "3710 Simpson Ct, Palm Harbor",
+      "rating": 4.9,
+      "user_ratings_total": 298,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJE80JT4bjwogRiGxt2WRaQ58",
+      "name": "A-1 Key & Safe Inc, 24hr Service",
+      "vicinity": "3601 54th Ave N, St. Petersburg",
+      "rating": 4.5,
+      "user_ratings_total": 212,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJU7lnoii3rWoRwTMH-tmiRBY",
+      "name": "Super Locksmith Saint Petersburg",
+      "vicinity": "1624 4th St S STE B, St. Petersburg",
+      "rating": 4.8,
+      "user_ratings_total": 59,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9Vo0SN_twogRIucOEADCC4U",
+      "name": "Pop-A-Lock Clearwater",
+      "vicinity": "2454 McMullen Booth Rd Suite 700, Clearwater",
+      "rating": 4.8,
+      "user_ratings_total": 725,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ49PA918Xw4gR52olmwut4XI",
+      "name": "Super Locksmith Guys",
+      "vicinity": "4301 32nd St W Suite A-16, Bradenton",
+      "rating": 4.9,
+      "user_ratings_total": 199,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPd44b5gXw4gRVam1yJBT4hA",
+      "name": "City Locks & Keys Bradenton",
+      "vicinity": "1103 14th Ave W B, Bradenton",
+      "rating": 4.9,
+      "user_ratings_total": 52,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN66yuTzwwogRZ57fy0KP38A",
+      "name": "Affordable Lock & Security Solutions",
+      "vicinity": "1300 S Belcher Rd, Clearwater",
+      "rating": 4.8,
+      "user_ratings_total": 137,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuWC6QtLZwogR6U2craV9TMU",
+      "name": "Courtesy Lock and Key",
+      "vicinity": "304 Flamingo Dr, Apollo Beach",
+      "rating": 4.6,
+      "user_ratings_total": 139,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzRPruIzOqYcR8j19QNJHkI8",
+      "name": "Lets Go Locksmith",
+      "vicinity": "11858 Brenford Crest Dr, Riverview",
+      "rating": 5,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKeNV4Wxr24gRKXYhxb5pqfI",
+      "name": "Discount Locksmith of Fort Myers",
+      "vicinity": "4066 Evans Ave #9, Fort Myers",
+      "rating": 4.7,
+      "user_ratings_total": 585,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJW1Rlaa9B24gRPkgoIXRZGAE",
+      "name": "Discount Locksmith of Cape Coral",
+      "vicinity": "944 Country Club Blvd #205, Cape Coral",
+      "rating": 3.7,
+      "user_ratings_total": 73,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ83Zhxf5B24gRYq_3ZpokdE0",
+      "name": "Fort Myers Locksmith Service",
+      "vicinity": "3049 cleavland road Suite 278, Fort Myers",
+      "rating": 3.4,
+      "user_ratings_total": 30,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_ywnPGZB24gRMpakpztwOZk",
+      "name": "Fort Myers Lock and Key",
+      "vicinity": "1960 Grove Ave, Fort Myers",
+      "rating": 4.7,
+      "user_ratings_total": 191,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJs4BbWn9B24gRP4BzgUqHA5I",
+      "name": "DOCTOR LOCKSMITH",
+      "vicinity": "4542 Vinsetta Ave, North Fort Myers",
+      "rating": 4.7,
+      "user_ratings_total": 78,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVZEenNNr24gRZ9RgzE5tdYg",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "4770 Colonial Blvd, Fort Myers",
+      "rating": 3.9,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJASkNOhlH24gRfUgFJqQvwBs",
+      "name": "Minute Key",
+      "vicinity": "505 SW Pine Island Rd, Cape Coral",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhciDNhQ_24gR00H5FZqC6cg",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "9131 College Pkwy STE 101, Fort Myers",
+      "rating": 3.1,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ25gZ8UU_24gRJcUnzCPoalE",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "14821 6 Mile Cypress Pkwy, Fort Myers",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyYMruntH24gRLZZqOtshwo0",
+      "name": "Complete Locksmith",
+      "vicinity": "3924 Cleveland Ave, Fort Myers",
+      "rating": 4.8,
+      "user_ratings_total": 363,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9QOtnVM_24gRRK-77in0M34",
+      "name": "Avi G Locksmith",
+      "vicinity": "4720 SE 15th Ave #113, Cape Coral",
+      "rating": 4.9,
+      "user_ratings_total": 245,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJswbTGi9D24gR8Y8wYWKQDnI",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "545 Pine Island Rd, North Fort Myers",
+      "rating": 4.4,
+      "user_ratings_total": 7,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWZw4QuQ_24gRaJ6qP5bAgrk",
+      "name": "Anytime Lock Key & Door",
+      "vicinity": "13300 - 56 S Cleveland Ave, Fort Myers",
+      "rating": 4.5,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJfa7wQYJq24gRBX-swxonnNk",
+      "name": "Avi G Locksmith of Fort Myers",
+      "vicinity": "2256 First St Ste 101, Fort Myers",
+      "rating": 5,
+      "user_ratings_total": 157,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJqQVg3Lpq24gReZVkGZHjKRk",
+      "name": "Lee Lock & Key",
+      "vicinity": "11350 Metro Pkwy #109, Fort Myers",
+      "rating": 4.8,
+      "user_ratings_total": 93,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZ1iP2TlC24gR1GCvZKXJ5ls",
+      "name": "Minute Key",
+      "vicinity": "545 Pine Island Rd, North Fort Myers",
+      "rating": 4,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJa-ZIR7mt2YgRqWo7Kjy9mlc",
+      "name": "US LOCKSMITH",
+      "vicinity": "1946 NE 163rd St, North Miami Beach",
+      "rating": 4.6,
+      "user_ratings_total": 646,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJHRS_Q3-t2YgR9liO8N3XDpM",
+      "name": "247locksmith",
+      "vicinity": "18100 NE 10th Ave, North Miami Beach",
+      "rating": 5,
+      "user_ratings_total": 443,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJbYLdo8e_2YgRuxu4EirCJwg",
+      "name": "CENTRAL LOCKSMITH LLC",
+      "vicinity": "4179 NW 107th Ave UNIT B, Doral",
+      "rating": 5,
+      "user_ratings_total": 77,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGQtOfc2t2YgRrATbZ-Wl21A",
+      "name": "KeyZoo Locksmiths",
+      "vicinity": "18900 Dixie Hwy Suite B, Miami",
+      "rating": 5,
+      "user_ratings_total": 86,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-Ztdzxzr3ogRTGZG5BM9znY",
+      "name": "Everest Locksmith Services",
+      "vicinity": "1290 SW Biltmore St unit e, Port St. Lucie",
+      "rating": 4.9,
+      "user_ratings_total": 373,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJY0Tr6sbx3ogRXTGa_g0KZgs",
+      "name": "Safe & Lock by Mike Inc",
+      "vicinity": "1127 Rosedale Ave, Fort Pierce",
+      "rating": 4.7,
+      "user_ratings_total": 47,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6fuUhQjp3ogRayv7Y90-Bs0",
+      "name": "St Lucie Locksmith Services",
+      "vicinity": "462 SW Port St Lucie Blvd Suite 123, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 29,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNWPs6aF20o0R61FHIxRClAA",
+      "name": "Lotus Locksmith Service",
+      "vicinity": "10570 S U.S. Hwy 1 Suite 300, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 74,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJg7ogq5jz3ogRIjbk8tLLVWI",
+      "name": "Galaxy Locksmiths",
+      "vicinity": "4175 Ave I, Fort Pierce",
+      "rating": 5,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWXYU9cXp3ogROUet4GcuwgU",
+      "name": "Pro-B Locksmith Service",
+      "vicinity": "522 SE Nome Dr, Port St. Lucie",
+      "rating": 4.9,
+      "user_ratings_total": 311,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMa2Zr4nr3ogRZzTFHbm7WH8",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "1850 SW Gatlin Blvd, Port St. Lucie",
+      "rating": 4.5,
+      "user_ratings_total": 130,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJh_JmG3Ld3ogRUxS1gZQMO4w",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "4001 SE Federal Hwy, Stuart",
+      "rating": 4.5,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgbELGRTd3ogRP8NG_akYxOo",
+      "name": "Minute Key",
+      "vicinity": "4001 SE Federal Hwy, Stuart",
+      "rating": 4.8,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJOZNKjafz3ogRFmKiDO4oziA",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "5100 Okeechobee Rd, Fort Pierce",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJz6d30Ybp3ogRNZf-1D0O6rQ",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "10855 S U.S. Hwy 1, Port St. Lucie",
+      "rating": 4.3,
+      "user_ratings_total": 9,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJlzoV2y3v3ogRCjT2-ElGpiw",
+      "name": "All County Lock & Key, Inc",
+      "vicinity": "7660 S Federal Hwy, Port St. Lucie",
+      "rating": 4.7,
+      "user_ratings_total": 125,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnZQedc4E2YgR3rpJdnWlSTg",
+      "name": "Adams Locksmiths",
+      "vicinity": "14737 SW Surf Springs Way, Port St. Lucie",
+      "rating": 4.8,
+      "user_ratings_total": 152,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJmeO_p_nt3ogROfVeplpvARE",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "902 SW St Lucie W Blvd, Port St. Lucie",
+      "rating": 1,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGftVkrox4K0ROe3NL-6l2wA",
+      "name": "Rite Choice Auto Towing",
+      "vicinity": "1729 St Lucie W Blvd, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 144,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJa2QCzRnx3ogRmfffMXhLlC0",
+      "name": "Gardner Bros Auto Lock and Key Service",
+      "vicinity": "2925 S US Hwy 1, Fort Pierce",
+      "rating": 5,
+      "user_ratings_total": 26,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJt9VY96OV3ogRzeyL5xUGcHw",
+      "name": "Gregory Express Locks & Keys",
+      "vicinity": "361O Ņ 46th Ąve H0LLYW00D, FL 33021 7GM5+7W Range Line Rd, Port St. Lucie H0LLYW00D, FL 33021, Port St. Lucie",
+      "rating": 0,
+      "user_ratings_total": 0,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2R9DT9nr3ogRqNLpHlwK83U",
+      "name": "Leo T's Towing and Recovery Inc.",
+      "vicinity": "2139 SW Hayworth Ave, Port St. Lucie",
+      "rating": 5,
+      "user_ratings_total": 636,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuXkPmmCP7IgR017P9oSAjNU",
+      "name": "Rapid Unlocks & Roadside Services",
+      "vicinity": "285 Whiddon Lake Rd, Crawfordville",
+      "rating": 4.5,
+      "user_ratings_total": 54,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJD7xnQgEOTkURxnegx11Wfv8",
+      "name": "A Quicker Than Quick Locksmith",
+      "vicinity": "1816 Keith St, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJe2nNV8zz7IgR4XoFNSQsduo",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "4400 W Tennessee St, Tallahassee",
+      "rating": 4.5,
+      "user_ratings_total": 57,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJS26f0xBf7IgR44YHUoCSHoM",
+      "name": "Capital City Locksmith",
+      "vicinity": "3507 N Monroe St, Tallahassee",
+      "rating": 4.9,
+      "user_ratings_total": 336,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4cZBggvz7IgR9Q8OBHm2xtU",
+      "name": "Minute Key",
+      "vicinity": "5500 Commonwealth Blvd, Tallahassee",
+      "rating": 4.9,
+      "user_ratings_total": 9,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgVUj4ljp7IgROGHZsgQ9pOA",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "1940 Pat Thomas Pkwy, Quincy",
+      "rating": 4.6,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJkaQNvtz17IgR3AXlgJp5GW4",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "3221 N Monroe St, Tallahassee",
+      "rating": 4.7,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJewXbBEde7IgRq_BZEkzjzD0",
+      "name": "Minute Key",
+      "vicinity": "3535 Apalachee Pkwy, Tallahassee",
+      "rating": 3.6,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJaz77fu9e7IgRDUM0IMNwcPw",
+      "name": "Minute Key",
+      "vicinity": "4021 Lagniappe Way, Tallahassee",
+      "rating": 3.4,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJmWrD5UMz3EwRrwkgRJe2zqc",
+      "name": "Capital Lock & Key",
+      "vicinity": "132 Valencia Dr, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 32,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJQ5jnrrBZ7IgRjCslvUCHArg",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "5500 Thomasville Rd, Tallahassee",
+      "rating": 0,
+      "user_ratings_total": 0,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpQoFV7Lv7IgReUqninPFWWE",
+      "name": "RONNIE'S ROAD SIDE TRUCK & TIRE REPAIR LLC",
+      "vicinity": "148 James Hinson Dr, Midway",
+      "rating": 5,
+      "user_ratings_total": 50,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJkd6ofZH17IgRT9J8hXVFjFc",
+      "name": "Elsassers Lock & Key",
+      "vicinity": "1909 N Monroe St, Tallahassee",
+      "rating": 5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJybKNYTLn7IgRsDDoVzYT1Uw",
+      "name": "G&A Towing And Mobile Roadside Assistance",
+      "vicinity": "417 Goldwire Rd, Quincy",
+      "rating": 5,
+      "user_ratings_total": 51,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJk8Un4Xj07IgRGge3xe-w7VA",
+      "name": "Davis Safe & Lock, Inc.",
+      "vicinity": "1889 N Martin Luther King Jr Blvd. #1, Tallahassee",
+      "rating": 4.3,
+      "user_ratings_total": 89,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJRx8uWjdf7IgRdA0SlMsu7bY",
+      "name": "Precision Sharpening & Key Shop",
+      "vicinity": "1510 Capital Cir SE Suite 6E, Tallahassee",
+      "rating": 4.2,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJH53XJ-ip2YgRidT8qSx1eUE",
+      "name": "Lock N More Locksmith",
+      "vicinity": "4000 SW 47th Ave, Davie",
+      "rating": 4.8,
+      "user_ratings_total": 942,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyz6RvIqr2YgRrfc3bI4qFZ0",
+      "name": "Local Locksmiths",
+      "vicinity": "1000 NE 12th Ave, Hallandale Beach",
+      "rating": 4.9,
+      "user_ratings_total": 306,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJU2KR54rWc4oR9LBWRkggWOo",
+      "name": "NEXT DOOR LOCKSMITH SERVICE",
+      "vicinity": "3521 Griffin Rd, Fort Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 206,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJfR4IEoyp2YgRRsFZDSmj2bk",
+      "name": "A Ben's Locksmith Fort Lauderdale",
+      "vicinity": "5311 SW 34th Way, Fort Lauderdale",
+      "rating": 4.9,
+      "user_ratings_total": 163,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJxbvWZW6n2YgRTPLa3jxNL7I",
+      "name": "KW Locksmith Shop & Mobile Locksmith Services",
+      "vicinity": "2301 Palm Ave, Miramar",
+      "rating": 4.9,
+      "user_ratings_total": 247,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVSKCYXYJ2YgRTv7CitKfLS4",
+      "name": "Lenny Locksmith Sunrise",
+      "vicinity": "10242 NW 47th St Store 1, Sunrise",
+      "rating": 4.5,
+      "user_ratings_total": 87,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJlX66RYvJXG0RmtEdc0tPSYg",
+      "name": "RG Local Locksmith Services",
+      "vicinity": "8232 W State Rd 84, Davie",
+      "rating": 4.5,
+      "user_ratings_total": 362,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPzZZQv-s2YgRTU_61iyjQDo",
+      "name": "Half Price Locksmith",
+      "vicinity": "3620 N Park Rd, Hollywood",
+      "rating": 4.8,
+      "user_ratings_total": 198,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVcWvmYyr2YgRf-DW_ZGH72g",
+      "name": "5 Star Locksmith",
+      "vicinity": "1000 W Pembroke Rd, Hallandale Beach",
+      "rating": 4.9,
+      "user_ratings_total": 102,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2TzdY-kH2YgROvUYf4hN1Mo",
+      "name": "Plantation Locksmith LLC.",
+      "vicinity": "950 S Pine Island Rd #150-10, Plantation",
+      "rating": 4.9,
+      "user_ratings_total": 103,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJf_CvaJ0D2YgR51mpXeiVfHo",
+      "name": "Advanced locksmith & car keys",
+      "vicinity": "230 S Cypress Rd, Pompano Beach",
+      "rating": 5,
+      "user_ratings_total": 88,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAV44NJKr2YgRb285FWlocP4",
+      "name": "A&B Locksmith Auto",
+      "vicinity": "2648 Washington St, Hollywood",
+      "rating": 4.7,
+      "user_ratings_total": 101,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ83riiQAH2YgRYIiYYJ5Bf_g",
+      "name": "777 Locksmith Services",
+      "vicinity": "150 S Pine Island Rd Suite 358, Plantation",
+      "rating": 4.9,
+      "user_ratings_total": 116,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJF8OFagYB2YgRHWImamf6Cu0",
+      "name": "KeyZoo Locksmiths",
+      "vicinity": "721 NE 3rd Ave, Fort Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 177,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJbWscQA2p2YgRMCNdxNZch10",
+      "name": "Rush Locksmith",
+      "vicinity": "3102 Griffin Rd, Fort Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 200,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2YFe56KyomERnhcQR1CCx1Y",
+      "name": "Quick Quick Locksmith",
+      "vicinity": "3800 S Ocean Dr, Hollywood",
+      "rating": 5,
+      "user_ratings_total": 167,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-cVQMkSp2YgRP_B21i2_Nc8",
+      "name": "The Lockout Locksmith",
+      "vicinity": "1800 N Lauderdale Ave, North Lauderdale",
+      "rating": 4.9,
+      "user_ratings_total": 206,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJxweNLuQF2YgRPkw24bP7uPM",
+      "name": "KeyZoo Locksmiths",
+      "vicinity": "1750 FL-7 b, North Lauderdale",
+      "rating": 5,
+      "user_ratings_total": 61,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIZ8hNZWp2YgRynBMNVAws2w",
+      "name": "Lock N Roll Locksmith",
+      "vicinity": "4931 S State Rd 7, Davie",
+      "rating": 4.5,
+      "user_ratings_total": 107,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIeXQK3AC2YgRQXC65fYESj4",
+      "name": "High Security Locksmith",
+      "vicinity": "6245 N Federal Hwy, Fort Lauderdale",
+      "rating": 4.8,
+      "user_ratings_total": 47,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ97F-16QL2YgRrTXsRtt57NE",
+      "name": "Levy's Locksmith - Weston's Genuine Resident",
+      "vicinity": "1293 Majesty Terrace, Weston",
+      "rating": 4.9,
+      "user_ratings_total": 232,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJr0syz36n2YgRVGY9TXy8FSk",
+      "name": "Florida Premier Locksmith",
+      "vicinity": "11894 NW 11th St, Pembroke Pines",
+      "rating": 4.9,
+      "user_ratings_total": 185,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJD-TkwGqk2YgR0XGyRTOcoS8",
+      "name": "Miramar Locksmith & Key",
+      "vicinity": "3350 SW 148th Ave #220, Miramar",
+      "rating": 4.9,
+      "user_ratings_total": 218,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq6qqquYH2YgRCJ_Zyp4zPhk",
+      "name": "Angel Locksmith",
+      "vicinity": "11150 Cameron Ct, Davie",
+      "rating": 4.6,
+      "user_ratings_total": 69,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvcEQe1Gv2YgRs6EPTwonjIs",
+      "name": "West Park Locksmith",
+      "vicinity": "3056 S State Rd 7, West Park",
+      "rating": 5,
+      "user_ratings_total": 69,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJR95KtuEJ2YgRfk6hWByPqRo",
+      "name": "Sunrise Locksmith LLC",
+      "vicinity": "1560 Sawgrass Corporate Pkwy #400-52, Sunrise",
+      "rating": 5,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIWMC23YQ2YgRlT-STsLkykI",
+      "name": "Coral Springs Locksmith Co.",
+      "vicinity": "11555 Heron Bay Blvd #200-80, Coral Springs",
+      "rating": 4.9,
+      "user_ratings_total": 131,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJRzepTSId2YgRZqDOZ4CGtMU",
+      "name": "Unique Locksmith",
+      "vicinity": "420 S Military Trail, Deerfield Beach",
+      "rating": 4.9,
+      "user_ratings_total": 210,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJTeSSpYcF2YgRBkhPGInA19E",
+      "name": "AAA Mega Locksmiths",
+      "vicinity": "2851 Riverside Dr Unit# 304, Coral Springs",
+      "rating": 4.9,
+      "user_ratings_total": 367,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVVdJ4u8d2YgRixk9ZENMsfE",
+      "name": "Blue Line Locksmith Boca Raton LLC",
+      "vicinity": "23122 Island View, Boca Raton",
+      "rating": 4.6,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJI1wZodkH2YgRkmpaBZ16Yrc",
+      "name": "KEY DECIPHER, LLC.",
+      "vicinity": "2649 NW 48th Terrace, Lauderdale Lakes",
+      "rating": 5,
+      "user_ratings_total": 273,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJR6UXxlod2YgR6JqeHiytYMU",
+      "name": "Reliable locksmith 247",
+      "vicinity": "8393 Trent Ct APT A, Boca Raton",
+      "rating": 5,
+      "user_ratings_total": 77,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJd2P9psoB2YgR1CyE9l8NuK4",
+      "name": "Sunrise Locksmith & Security Systems",
+      "vicinity": "2863 W Sunrise Blvd, Fort Lauderdale",
+      "rating": 4.9,
+      "user_ratings_total": 74,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJW2WaNioC2YgRjXF2cq0_eEk",
+      "name": "Unique Locksmith",
+      "vicinity": "521 NE 34th Ct, Oakland Park",
+      "rating": 4.9,
+      "user_ratings_total": 177,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJfyORfTYb2YgRcXQAorzSZSs",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "5600 W Sample Rd, Margate",
+      "rating": 4.7,
+      "user_ratings_total": 87,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJw1B1KvQD2YgRNv_i5ZSWrDE",
+      "name": "One Minute Locksmith Services",
+      "vicinity": "6750 N Andrews Ave Suite 200, Fort Lauderdale",
+      "rating": 4.9,
+      "user_ratings_total": 33,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvWsFEQwF2YgRlY3EPSPUA_w",
+      "name": "OHANA Locksmith & Security",
+      "vicinity": "6047 Kimberly Blvd ste U, North Lauderdale",
+      "rating": 4.9,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJx1ogv40H2YgRTaCCrm5ALgs",
+      "name": "Locksmith USA",
+      "vicinity": "7470 NW 34th St, Lauderhill",
+      "rating": 5,
+      "user_ratings_total": 62,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJJQ-PupMR2YgRQSmcI95By6A",
+      "name": "IBS Locksmith",
+      "vicinity": "8286 NW 128th Ln, Parkland",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJm8DYf6wI2YgRXqMzBv89VW0",
+      "name": "Locksmith Sunrise Co.",
+      "vicinity": "9900 NW 46th St, Sunrise",
+      "rating": 3.8,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJp-DJU3eNwogRUYrzXO6p40M",
+      "name": "Value Signature Locksmith",
+      "vicinity": "2435 US-19 Suite #96, Holiday",
+      "rating": 4.9,
+      "user_ratings_total": 454,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzW15-TaNwogR82v_UZtQ_vU",
+      "name": "AA Locksmith Pasco LLC",
+      "vicinity": "2435 US-19 unit 212, Holiday",
+      "rating": 4.9,
+      "user_ratings_total": 36,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJqReiRkxZwokRbEpDhy35bXI",
+      "name": "Tarpon Locksmiths",
+      "vicinity": "901 Bayou Ave, Tarpon Springs",
+      "rating": 4.8,
+      "user_ratings_total": 37,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJm4z3vyXxwogRrQgS9ueKjGw",
+      "name": "Value Signature Locksmith Dunedin",
+      "vicinity": "1043 Main St, Dunedin",
+      "rating": 5,
+      "user_ratings_total": 50,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJacJ2zyoR3ogRfx3oqqPnohY",
+      "name": "Locksmith of Brevard",
+      "vicinity": "1520 S Babcock St STE B, Melbourne",
+      "rating": 4.9,
+      "user_ratings_total": 99,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJV38cg84P3ogR0MpCFyq6toI",
+      "name": "GG Locksmith",
+      "vicinity": "394 Brantley St SE, Palm Bay",
+      "rating": 4.7,
+      "user_ratings_total": 61,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuYA1Sl_r_kgR5tCg_ezVbQw",
+      "name": "Locksmith Wizard LLC",
+      "vicinity": "235 Watson Dr, Indialantic",
+      "rating": 4.9,
+      "user_ratings_total": 44,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJkTdeXsYP3ogR0Jhtlg49Neg",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "1000 N Wickham Rd, Melbourne",
+      "rating": 4.7,
+      "user_ratings_total": 54,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJaz8YgX8N3ogRxHA9LR0foos",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "1040 Malabar Rd SE, Palm Bay",
+      "rating": 4.3,
+      "user_ratings_total": 63,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAaBpPmwN3ogRGXGrSkk-eGk",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "845 Palm Bay Rd NE, West Melbourne",
+      "rating": 4.6,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJB8FTw9oO3ogRQ1cYPbG9QHk",
+      "name": "Able Lock & Safe",
+      "vicinity": "4835 Eau Gallie Blvd, Melbourne",
+      "rating": 4.2,
+      "user_ratings_total": 856,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJA-iVxU4S3ogRSasuXRo1fTE",
+      "name": "Kwik Key Locksmith of Brevard",
+      "vicinity": "4650 Lipscomb St # 16, Palm Bay",
+      "rating": 4.8,
+      "user_ratings_total": 136,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrQdiEaQR3ogRyIpOQMapBaI",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "1001 E Eau Gallie Blvd, Melbourne",
+      "rating": 4.2,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6dvfGSAP3ogR38nG0q8uU54",
+      "name": "Key-En-Lock",
+      "vicinity": "720 St Clair St, Melbourne",
+      "rating": 4.9,
+      "user_ratings_total": 92,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyUnqo7sP3ogRl0fewDojayY",
+      "name": "A-1 Action Safe & Lock",
+      "vicinity": "2460 Aurora Rd, Melbourne",
+      "rating": 4.7,
+      "user_ratings_total": 69,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJR836ZygTW4YROartx4Tnfxk",
+      "name": "1-92 Roadside LLC",
+      "vicinity": "2903 W New Haven Ave, West Melbourne",
+      "rating": 4.9,
+      "user_ratings_total": 33,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ43OVE-4N3ogRAkp5ObvhvvE",
+      "name": "Ben & Adams Locksmith",
+      "vicinity": "613 Belvedere Rd NW, Palm Bay",
+      "rating": 4.9,
+      "user_ratings_total": 89,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8xE0RC0P3ogR8xtTUkTBcAs",
+      "name": "P.D.Q. Locksmith LLC",
+      "vicinity": "4155 Dow Rd Suite R, Melbourne",
+      "rating": 4.9,
+      "user_ratings_total": 42,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJe1aw5WEF3ogR8miqPVe-AAE",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "3950 N Wickham Rd, Melbourne",
+      "rating": 0,
+      "user_ratings_total": 0,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq1wRtpQT3ogRLUODOTZkc5o",
+      "name": "Minute Key",
+      "vicinity": "1166 Malabar Rd, Palm Bay",
+      "rating": 4.3,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFTBRtkcN3ogROavYPL6cePQ",
+      "name": "Minute Key",
+      "vicinity": "1140 Malabar Rd SE, Palm Bay",
+      "rating": 0,
+      "user_ratings_total": 0,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJQTn_kXkR3ogREa9UKgegt-M",
+      "name": "Minute Key",
+      "vicinity": "1934 Jimmy Buffett Mem Hwy, Indian Harbour Beach",
+      "rating": 3.6,
+      "user_ratings_total": 18,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJi2p6prsP3ogRlLy4B5_XBGk",
+      "name": "Southeast Safes, Inc.",
+      "vicinity": "2460 Aurora Rd, Melbourne",
+      "rating": 4.8,
+      "user_ratings_total": 41,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_ab0JPgP3ogR9VoIiAkOUJ8",
+      "name": "Minute Key",
+      "vicinity": "2150 Minton Rd, Melbourne",
+      "rating": 3.8,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8X5gg90q2YgRupqrwxdWBoQ",
+      "name": "Door N Key Locksmith West Palm Beach",
+      "vicinity": "1705 Donna Rd Unit 17, West Palm Beach",
+      "rating": 4.9,
+      "user_ratings_total": 552,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq6q6QAnW2IgRNMiBrWZdi-8",
+      "name": "Kwikey Locksmith Services Inc",
+      "vicinity": "1649 Forum Pl STE 1, West Palm Beach",
+      "rating": 4.9,
+      "user_ratings_total": 365,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVY6XP-7Z2IgR6F_cAoUmjO0",
+      "name": "Royal Locksmith",
+      "vicinity": "901 Barnett Dr suite 941-O, Lake Worth Beach",
+      "rating": 5,
+      "user_ratings_total": 373,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-3kUwkrU2IgRsUNK2dle27M",
+      "name": "Levi Universal Locksmith",
+      "vicinity": "515 N Flagler Dr Suite P-300, West Palm Beach",
+      "rating": 4.9,
+      "user_ratings_total": 210,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3Y_ctkTW2IgR5nkpMIyYJVo",
+      "name": "YDG Locksmith WPB",
+      "vicinity": "1204 Old Okeechobee Rd, West Palm Beach",
+      "rating": 4.7,
+      "user_ratings_total": 181,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXf0KcFvW2IgRppW4Paps-i0",
+      "name": "Get Locksmith",
+      "vicinity": "1130 Clare Ave, West Palm Beach",
+      "rating": 4.7,
+      "user_ratings_total": 74,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKU11wWLV2IgRav-Qg37iId8",
+      "name": "Royal Locksmith",
+      "vicinity": "3600 Broadway #7, West Palm Beach",
+      "rating": 5,
+      "user_ratings_total": 19,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWRQp8tzX2IgRdZ-4R1k2tjU",
+      "name": "locksmith top team",
+      "vicinity": "1130 Clare Ave, West Palm Beach",
+      "rating": 4.8,
+      "user_ratings_total": 50,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJJ9D-D98p2YgR0y9QwFnVJEA",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "4375 Belvedere Rd, West Palm Beach",
+      "rating": 4.5,
+      "user_ratings_total": 117,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJw7gkJmYv2YgRjH72306L-0Y",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "9990 Belvedere Rd, West Palm Beach",
+      "rating": 4.9,
+      "user_ratings_total": 68,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJaTBhxXMr2YgR9Wdjl8PTB-A",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "4225 45th St, West Palm Beach",
+      "rating": 4.7,
+      "user_ratings_total": 87,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJCYrZpa8h2YgRjK13fVKezDw",
+      "name": "All Star Lock N' Door",
+      "vicinity": "815 Barnett Dr, Lake Worth Beach",
+      "rating": 2.3,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJd2Y2A4bX2IgRLpEmn9zhDzw",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "7915 S Dixie Hwy, West Palm Beach",
+      "rating": 4.1,
+      "user_ratings_total": 11,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJoby8KMvZ2IgR4HqEuWp337g",
+      "name": "Acorn Safe & Lock",
+      "vicinity": "409 Lake Ave, Lake Worth Beach",
+      "rating": 4.5,
+      "user_ratings_total": 59,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ258ghWIn2YgRFhtt2pI8pJo",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "3911 S Jog Rd, Greenacres",
+      "rating": 4.8,
+      "user_ratings_total": 39,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnw_i3dq76IgRVSH6oA_aIUQ",
+      "name": "24/7 Lockout King - A Mobile Locksmith",
+      "vicinity": "2632 NW 43rd St Suite 4114, Gainesville",
+      "rating": 4.8,
+      "user_ratings_total": 86,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJiS0zzPaj6IgRc3WheAJ8M1I",
+      "name": "The Key Experts",
+      "vicinity": "3601 SW 2nd Ave Suite T, Gainesville",
+      "rating": 5,
+      "user_ratings_total": 28,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuW8peA2j6IgRS2rwoiBqV-A",
+      "name": "Mobile Locksmith | Blackburn and Son",
+      "vicinity": "2216 SW Archer Rd, Gainesville",
+      "rating": 4.8,
+      "user_ratings_total": 727,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5zv3sX6l6IgR8T1v2pWlNaE",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "5700 NW 23rd St, Gainesville",
+      "rating": 4.7,
+      "user_ratings_total": 39,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIdFYaK2n6IgRY2VziVXEt5Y",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "1800 NW 12th St, Gainesville",
+      "rating": 4,
+      "user_ratings_total": 61,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcf5pTa2j6IgRAg_IqHKWBoc",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "2900 SW 42nd St, Gainesville",
+      "rating": 3.4,
+      "user_ratings_total": 19,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJDwMfgs666IgRGye3rEbUKhU",
+      "name": "Be Secure Locksmith",
+      "vicinity": "901 NW 8th Ave c17, Gainesville",
+      "rating": 4.9,
+      "user_ratings_total": 1178,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnauWlOql6IgRoB4GSeApR2Y",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "1459 NW 23rd Ave, Gainesville",
+      "rating": 4.5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGbqVxJ2l6IgRDkoDgam7XkI",
+      "name": "Super Locksmith Gainesville",
+      "vicinity": "102 NE 10th Ave Suite 4, Gainesville",
+      "rating": 4.8,
+      "user_ratings_total": 62,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJiWFxSy2j6IgR_bkdW10je70",
+      "name": "Minute Key",
+      "vicinity": "2900 SW 42nd St, Gainesville",
+      "rating": 4.5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJafqC96K76IgRN-5OqRdLY2E",
+      "name": "Mail Boxes & More",
+      "vicinity": "9200 Northwest 39th Avenue #130 Located in the Springhill Publix Shopping Center, Gainesville",
+      "rating": 4.3,
+      "user_ratings_total": 57,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6UEgJuWl6IgR6VC7gUDN1b4",
+      "name": "Minute Key",
+      "vicinity": "2564 NW 13th St, Gainesville",
+      "rating": 4.3,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJj5S8UC6j6IgRmI1QuHW6wz0",
+      "name": "Minute Key",
+      "vicinity": "3101 Clark Butler Blvd, Gainesville",
+      "rating": 3.3,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhzCe4Uml6IgRU0vm4L3YhzM",
+      "name": "KeyMe Locksmiths",
+      "vicinity": "2801 NW 13th St, Gainesville",
+      "rating": 4.7,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJHzHrraq96IgRmgbAt4W1tWc",
+      "name": "Minute Key",
+      "vicinity": "7107 NW 4th Blvd, Gainesville",
+      "rating": 0,
+      "user_ratings_total": 0,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJW5Uau3vj2IgR847kkqCLbU4",
+      "name": "Sunny Locksmith",
+      "vicinity": "370 Camino Gardens Blvd Unit 331, Boca Raton",
+      "rating": 4.9,
+      "user_ratings_total": 101,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJd3Bsr1Dj2IgRiphT1P-vUiA",
+      "name": "5 Star Locksmith FL",
+      "vicinity": "1202 E Hillsboro Blvd ste 1, Deerfield Beach",
+      "rating": 5,
+      "user_ratings_total": 252,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJw_Zu-CTj2IgRcgT9jZBDG2E",
+      "name": "Boca Village Locksmith",
+      "vicinity": "160 W Camino Real Suite B, Boca Raton",
+      "rating": 5,
+      "user_ratings_total": 81,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFzIdGHvj2IgR7YBWegIbPCQ",
+      "name": "Fine Locksmith USA",
+      "vicinity": "4461 N Federal Hwy, Pompano Beach",
+      "rating": 5,
+      "user_ratings_total": 27,
+      "business_status": "OPERATIONAL"
+    }
+  ]
+}

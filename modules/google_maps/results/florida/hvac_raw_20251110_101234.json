@@ -1,0 +1,354 @@
+{
+  "metadata": {
+    "timestamp": "20251110_101234",
+    "state": "florida",
+    "niche": "hvac",
+    "cities_processed": 1,
+    "total_raw_places": 20,
+    "note": "RAW data before filtering - no phone/website to save API costs",
+    "stats": {
+      "total_api_calls": 12,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 1,
+      "cities_processed": 1,
+      "total_cost": 0.0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Miami, FL",
+      "raw_places": [
+        {
+          "place_id": "ChIJg_gCKlu52YgR98vYwad1qR0",
+          "name": "Ivannova HVAC, Electrical, Plumbing",
+          "vicinity": "2300 W 84th St STE 215, Hialeah",
+          "rating": 4.7,
+          "user_ratings_total": 311,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ___rJjFxaYgRmURDgb0w2PA",
+          "name": "Elite AC Heating Repair Miami",
+          "vicinity": "2955 SW 8th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 40,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJz3m9E0642YgRxAHtCydOEFY",
+          "name": "Flow -Tech Air Conditioning Corp.",
+          "vicinity": "7023 SW 13th Terrace, Miami",
+          "rating": 4.8,
+          "user_ratings_total": 208,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtfcykOLH2YgRmCEkBGXj1fY",
+          "name": "Zenith AC Repairs Coral Gables",
+          "vicinity": "1501 Venera Ave Unit 402, Coral Gables",
+          "rating": 5,
+          "user_ratings_total": 43,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWVRhiimx2YgR2XJHOnyYU-4",
+          "name": "AC Repair by BreezeBliss",
+          "vicinity": "7900 NW 27th Ave #87, Miami",
+          "rating": 5,
+          "user_ratings_total": 53,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJncpA4cOx2YgRR5bHR5RijOI",
+          "name": "AC Repair Miami Pros",
+          "vicinity": "3580 NW 54th St #305, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 36,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQAAE6bH2YgRPubmCJaMNMQ",
+          "name": "Dadeland HVAC Solutions",
+          "vicinity": "9155 S Dadeland Blvd, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 26,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJTfO0XKm72YgRnmFLq7GjkgA",
+          "name": "Mr All Pro",
+          "vicinity": "9811 NW 80th Ave suite 7A-B, Hialeah Gardens",
+          "rating": 5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJW0KOsMNwGC4RfQpajdL93WU",
+          "name": "CoolHvac Air Conditioning Services",
+          "vicinity": "7255 Corporate Center Dr #262, Miami",
+          "rating": 5,
+          "user_ratings_total": 28,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3WeBAhW52YgRe7A-hc_1mp8",
+          "name": "Service Experts Heating & Air Conditioning",
+          "vicinity": "1523 NW 89th Ct, Miami",
+          "rating": 4.6,
+          "user_ratings_total": 525,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGyz0Pbi32YgRrbCboll1j70",
+          "name": "Doctor Air Hvac Corp",
+          "vicinity": "4850 nw 4 terrace 7440 n kendall drive miami fl 33156 1003 sw 142nd pl miami fl 33184, 4850 NW 4th Terrace, Miami",
+          "rating": 5,
+          "user_ratings_total": 143,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg-IbRwC32YgRKRm9AySEGUM",
+          "name": "Paramount HVAC Master",
+          "vicinity": "350 NW 2nd Ave, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5wWl6SkseawRsXKDszhFv80",
+          "name": "FrostFixers AC Repair",
+          "vicinity": "7300 Biscayne Blvd Suite 111, Miami",
+          "rating": 5,
+          "user_ratings_total": 37,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJV_442Oi32YgRYO5C8VuGtTM",
+          "name": "Air Conditioning Repair Downtown Miami LLC",
+          "vicinity": "1326 NE 1st Ct 2d 2d, Miami",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJt3vS3hu52YgRmqs8jc1zoaY",
+          "name": "Miami HVAC Experts",
+          "vicinity": "2211 SW 89th Ct, Miami",
+          "rating": 5,
+          "user_ratings_total": 24,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKRsi6em32YgRq-E9jRst1D0",
+          "name": "ColdHvac Air Conditioner Repair Miami",
+          "vicinity": "2299 SW 8th St Suite 73, Miami",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJN2HzTpi12YgRbNngUf8PzU4",
+          "name": "AC Repair Miami Beach Pros",
+          "vicinity": "1683 West Ave Suite 87, Miami Beach",
+          "rating": 5,
+          "user_ratings_total": 23,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8VosgIG52YgRf68quEvHUAs",
+          "name": "Island Breeze Air Conditioning, LLC",
+          "vicinity": "6831 SW 44th St APT 109, Miami",
+          "rating": 5,
+          "user_ratings_total": 137,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHb4RB19xKiIRfOvKOUVnh6g",
+          "name": "American Thermal Services",
+          "vicinity": "218 NW 24th St, Miami",
+          "rating": 5,
+          "user_ratings_total": 34,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJiasYDlC9bGARJIF9rcZInjY",
+          "name": "CoolFreeze Air Conditioning Services",
+          "vicinity": "2916 N Miami Ave Suite 461, Miami",
+          "rating": 4.9,
+          "user_ratings_total": 30,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 11,
+        "with_details": 11,
+        "final_radius_km": 15.0
+      }
+    }
+  ],
+  "all_raw_places": [
+    {
+      "place_id": "ChIJg_gCKlu52YgR98vYwad1qR0",
+      "name": "Ivannova HVAC, Electrical, Plumbing",
+      "vicinity": "2300 W 84th St STE 215, Hialeah",
+      "rating": 4.7,
+      "user_ratings_total": 311,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ___rJjFxaYgRmURDgb0w2PA",
+      "name": "Elite AC Heating Repair Miami",
+      "vicinity": "2955 SW 8th St, Miami",
+      "rating": 5,
+      "user_ratings_total": 40,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJz3m9E0642YgRxAHtCydOEFY",
+      "name": "Flow -Tech Air Conditioning Corp.",
+      "vicinity": "7023 SW 13th Terrace, Miami",
+      "rating": 4.8,
+      "user_ratings_total": 208,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJtfcykOLH2YgRmCEkBGXj1fY",
+      "name": "Zenith AC Repairs Coral Gables",
+      "vicinity": "1501 Venera Ave Unit 402, Coral Gables",
+      "rating": 5,
+      "user_ratings_total": 43,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWVRhiimx2YgR2XJHOnyYU-4",
+      "name": "AC Repair by BreezeBliss",
+      "vicinity": "7900 NW 27th Ave #87, Miami",
+      "rating": 5,
+      "user_ratings_total": 53,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJncpA4cOx2YgRR5bHR5RijOI",
+      "name": "AC Repair Miami Pros",
+      "vicinity": "3580 NW 54th St #305, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 36,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAQAAE6bH2YgRPubmCJaMNMQ",
+      "name": "Dadeland HVAC Solutions",
+      "vicinity": "9155 S Dadeland Blvd, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 26,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJTfO0XKm72YgRnmFLq7GjkgA",
+      "name": "Mr All Pro",
+      "vicinity": "9811 NW 80th Ave suite 7A-B, Hialeah Gardens",
+      "rating": 5,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJW0KOsMNwGC4RfQpajdL93WU",
+      "name": "CoolHvac Air Conditioning Services",
+      "vicinity": "7255 Corporate Center Dr #262, Miami",
+      "rating": 5,
+      "user_ratings_total": 28,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3WeBAhW52YgRe7A-hc_1mp8",
+      "name": "Service Experts Heating & Air Conditioning",
+      "vicinity": "1523 NW 89th Ct, Miami",
+      "rating": 4.6,
+      "user_ratings_total": 525,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGyz0Pbi32YgRrbCboll1j70",
+      "name": "Doctor Air Hvac Corp",
+      "vicinity": "4850 nw 4 terrace 7440 n kendall drive miami fl 33156 1003 sw 142nd pl miami fl 33184, 4850 NW 4th Terrace, Miami",
+      "rating": 5,
+      "user_ratings_total": 143,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJg-IbRwC32YgRKRm9AySEGUM",
+      "name": "Paramount HVAC Master",
+      "vicinity": "350 NW 2nd Ave, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5wWl6SkseawRsXKDszhFv80",
+      "name": "FrostFixers AC Repair",
+      "vicinity": "7300 Biscayne Blvd Suite 111, Miami",
+      "rating": 5,
+      "user_ratings_total": 37,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJV_442Oi32YgRYO5C8VuGtTM",
+      "name": "Air Conditioning Repair Downtown Miami LLC",
+      "vicinity": "1326 NE 1st Ct 2d 2d, Miami",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJt3vS3hu52YgRmqs8jc1zoaY",
+      "name": "Miami HVAC Experts",
+      "vicinity": "2211 SW 89th Ct, Miami",
+      "rating": 5,
+      "user_ratings_total": 24,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKRsi6em32YgRq-E9jRst1D0",
+      "name": "ColdHvac Air Conditioner Repair Miami",
+      "vicinity": "2299 SW 8th St Suite 73, Miami",
+      "rating": 5,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN2HzTpi12YgRbNngUf8PzU4",
+      "name": "AC Repair Miami Beach Pros",
+      "vicinity": "1683 West Ave Suite 87, Miami Beach",
+      "rating": 5,
+      "user_ratings_total": 23,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8VosgIG52YgRf68quEvHUAs",
+      "name": "Island Breeze Air Conditioning, LLC",
+      "vicinity": "6831 SW 44th St APT 109, Miami",
+      "rating": 5,
+      "user_ratings_total": 137,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJHb4RB19xKiIRfOvKOUVnh6g",
+      "name": "American Thermal Services",
+      "vicinity": "218 NW 24th St, Miami",
+      "rating": 5,
+      "user_ratings_total": 34,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJiasYDlC9bGARJIF9rcZInjY",
+      "name": "CoolFreeze Air Conditioning Services",
+      "vicinity": "2916 N Miami Ave Suite 461, Miami",
+      "rating": 4.9,
+      "user_ratings_total": 30,
+      "business_status": "OPERATIONAL"
+    }
+  ]
+}

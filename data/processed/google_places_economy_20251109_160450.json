@@ -1,0 +1,358 @@
+[
+  {
+    "place_id": "ChIJ_QXQkh-_QIYRBDsEwjPW1kU",
+    "name": "Spicy Girl",
+    "vicinity": "917 Winbern St Unit B, Houston",
+    "rating": 4.7,
+    "user_ratings_total": 2305,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "meal_takeaway",
+      "meal_delivery",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(832) 623-7990",
+    "website": "https://spicygirlhtx.com/",
+    "address": "917 Winbern St Unit B, Houston, TX 77002, USA"
+  },
+  {
+    "place_id": "ChIJpW1YLorBQIYRTfMG4mgYKUQ",
+    "name": "Gourmandize",
+    "vicinity": "5600 Richmond Ave., Houston",
+    "rating": 4.5,
+    "user_ratings_total": 454,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(281) 844-9108",
+    "website": "http://www.gourmandizetexas.com/",
+    "address": "5600 Richmond Ave., Houston, TX 77057, USA"
+  },
+  {
+    "place_id": "ChIJdYC8GEu_QIYRktiqE51zUgM",
+    "name": "Gotti's Restaurant",
+    "vicinity": "811 St Emanuel St, Houston",
+    "rating": 4.3,
+    "user_ratings_total": 3430,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 405-3500",
+    "website": "https://www.gottis.com/",
+    "address": "811 St Emanuel St, Houston, TX 77003, USA"
+  },
+  {
+    "place_id": "ChIJ_UDMqGG_QIYRl8DAIeQ17TU",
+    "name": "BB's Tex-Orleans",
+    "vicinity": "515 Westheimer Rd, Houston",
+    "rating": 4.2,
+    "user_ratings_total": 2476,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "meal_takeaway",
+      "bar",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 524-4499",
+    "website": "https://bbstexorleans.com/locations/montrose/",
+    "address": "515 Westheimer Rd, Houston, TX 77006, USA"
+  },
+  {
+    "place_id": "ChIJe04ITAq4QIYRe5AoxvU7zEM",
+    "name": "Chacho's",
+    "vicinity": "5350 North Fwy, Houston",
+    "rating": 4,
+    "user_ratings_total": 5039,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 590-5500",
+    "website": "http://www.chachos.com/",
+    "address": "5350 North Fwy, Houston, TX 77022, USA"
+  },
+  {
+    "place_id": "ChIJ2di5iqLBQIYRFW_MBKRe_vQ",
+    "name": "The Rustic",
+    "vicinity": "1121 Uptown Park Blvd STE 4, Houston",
+    "rating": 4.2,
+    "user_ratings_total": 2759,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(832) 321-7775",
+    "website": "https://therustic.com/",
+    "address": "1121 Uptown Park Blvd STE 4, Houston, TX 77056, USA"
+  },
+  {
+    "place_id": "ChIJJ1N3mHa_QIYRSs3NsdCngyA",
+    "name": "Hungry Like The Wolf",
+    "vicinity": "920 Studemont St #900, Houston",
+    "rating": 4.2,
+    "user_ratings_total": 828,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "bar",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 222-9977",
+    "website": "https://hungrylikethewolfhouston.com/?utm_source=google",
+    "address": "920 Studemont St #900, Houston, TX 77007, USA"
+  },
+  {
+    "place_id": "ChIJcU080mvBQIYR7kdDqXJEGRQ",
+    "name": "Moxies Houston Restaurant",
+    "vicinity": "5000 Westheimer Rd, Houston",
+    "rating": 4.2,
+    "user_ratings_total": 3213,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "night_club",
+      "bar",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(346) 571-6164",
+    "website": "https://moxies.com/restaurants/houston?utm_source=GMB&utm_medium=google-location-listing&utm_campaign=organic",
+    "address": "5000 Westheimer Rd, Houston, TX 77056, USA"
+  },
+  {
+    "place_id": "ChIJJ0aTHObAQIYRPKlKBtryX9Y",
+    "name": "State of Grace",
+    "vicinity": "3258 Westheimer Rd, Houston",
+    "rating": 4.6,
+    "user_ratings_total": 1876,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(832) 942-5080",
+    "website": "http://www.stateofgracetx.com/",
+    "address": "3258 Westheimer Rd, Houston, TX 77098, USA"
+  },
+  {
+    "place_id": "ChIJ28ljLY3AQIYRIbfNV2mVpys",
+    "name": "Hobbit Cafe",
+    "vicinity": "2243 Richmond Ave., Houston",
+    "rating": 4.5,
+    "user_ratings_total": 4233,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "bar",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 526-5460",
+    "website": "http://www.hobbitcafehtx.com/",
+    "address": "2243 Richmond Ave., Houston, TX 77098, USA"
+  },
+  {
+    "place_id": "ChIJb8_kYifAQIYR9YI_0ptEoYk",
+    "name": "Chacho's",
+    "vicinity": "2700 S Loop W, Houston",
+    "rating": 3.9,
+    "user_ratings_total": 5506,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(832) 778-0500",
+    "website": "https://chachos.com/",
+    "address": "2700 S Loop W, Houston, TX 77054, USA"
+  },
+  {
+    "place_id": "ChIJqU3aeVvHQIYR9z345LkBnr4",
+    "name": "d'Alba",
+    "vicinity": "3715 Alba Rd, Houston",
+    "rating": 4.5,
+    "user_ratings_total": 816,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "bar",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(346) 319-5790",
+    "website": "http://www.dalbahtx.com/",
+    "address": "3715 Alba Rd, Houston, TX 77018, USA"
+  },
+  {
+    "place_id": "ChIJSao_gl3AQIYRY1yXyNZ-BkY",
+    "name": "Black Walnut Kitchen & Bar",
+    "vicinity": "5510 Morningside Dr Suite #150, Houston",
+    "rating": 4.4,
+    "user_ratings_total": 3203,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "cafe",
+      "restaurant",
+      "point_of_interest",
+      "store",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 526-5551",
+    "website": "https://www.blackwalnutcafe.com/locations/houston-locations/rice-village/?utm_source=local&utm_medium=organic&utm_campaign=gmb&utm_content=rice",
+    "address": "5510 Morningside Dr Suite #150, Houston, TX 77005, USA"
+  },
+  {
+    "place_id": "ChIJj8aTrR_HQIYRTyYiAty-FgE",
+    "name": "Warehouse 72",
+    "vicinity": "7620 Katy Fwy #305, Houston",
+    "rating": 4.4,
+    "user_ratings_total": 982,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(833) 365-7272",
+    "website": "https://www.warehouse72.com/",
+    "address": "7620 Katy Fwy #305, Houston, TX 77024, USA"
+  },
+  {
+    "place_id": "ChIJ48I5hnvBQIYRNdjz219pjUI",
+    "name": "JOEY Uptown",
+    "vicinity": "5045 Westheimer Rd Suite X01, Houston",
+    "rating": 4.8,
+    "user_ratings_total": 9304,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "bar",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(346) 646-5639",
+    "website": "https://joeyrestaurants.com/location/joey-uptown",
+    "address": "5045 Westheimer Rd Suite X01, Houston, TX 77056, USA"
+  },
+  {
+    "place_id": "ChIJAbtx4uG-QIYRe2Bb6bnaZv4",
+    "name": "Nancy's Hustle",
+    "vicinity": "2704 Polk St A, Houston",
+    "rating": 4.7,
+    "user_ratings_total": 2083,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(346) 571-7931",
+    "website": "http://nancyshustle.com/",
+    "address": "2704 Polk St A, Houston, TX 77003, USA"
+  },
+  {
+    "place_id": "ChIJ1_fBKTG_QIYRWdRY0QE5LH0",
+    "name": "Aquarium Restaurant",
+    "vicinity": "410 Bagby St, Houston",
+    "rating": 4.6,
+    "user_ratings_total": 9042,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "aquarium",
+      "amusement_park",
+      "bar",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 315-5126",
+    "website": "https://www.downtownaquariumhouston.com/aquarium-restaurant",
+    "address": "410 Bagby St, Houston, TX 77002, USA"
+  },
+  {
+    "place_id": "ChIJ4cBH6A6_QIYRYt_fEW4NTjg",
+    "name": "The Nash",
+    "vicinity": "1111 Rusk St Suite 172, Houston",
+    "rating": 4.3,
+    "user_ratings_total": 228,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 222-6274",
+    "website": "https://www.thenashhouston.com/",
+    "address": "1111 Rusk St Suite 172, Houston, TX 77002, USA"
+  },
+  {
+    "place_id": "ChIJA8HmtGvAQIYRs7N2oSTL-l0",
+    "name": "Whataburger",
+    "vicinity": "2265 W Holcombe Blvd, Houston",
+    "rating": 4,
+    "user_ratings_total": 2907,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "meal_takeaway",
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(713) 838-8106",
+    "website": "https://locations.whataburger.com/tx/houston/2265-w-holcombe-blvd.html/?utm_source=yextpages&utm_medium=locallistings&utm_campaign=yextpages",
+    "address": "2265 W Holcombe Blvd, Houston, TX 77030, USA"
+  },
+  {
+    "place_id": "ChIJ98VFkPPAQIYR75ugr82kemY",
+    "name": "Ruggles Black",
+    "vicinity": "2245 W Alabama St, Houston",
+    "rating": 4.7,
+    "user_ratings_total": 3064,
+    "business_status": "OPERATIONAL",
+    "types": [
+      "restaurant",
+      "point_of_interest",
+      "food",
+      "establishment"
+    ],
+    "phone": "(832) 582-5690",
+    "website": "https://rugglesblack.com/",
+    "address": "2245 W Alabama St, Houston, TX 77098, USA"
+  }
+]

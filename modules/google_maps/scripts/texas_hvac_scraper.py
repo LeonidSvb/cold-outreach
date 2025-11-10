@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 === GOOGLE PLACES STATEWIDE SCRAPER ===
-Version: 4.0.0 | Created: 2025-11-09
+Version: 5.0.0 | Created: 2025-11-09 | Updated: 2025-11-10
 
 BIDIRECTIONAL ADAPTIVE RADIUS:
 - Too few results (< 15) → INCREASE radius (sparse desert area)
@@ -13,15 +13,24 @@ STATEWIDE STRATEGY:
 - Each city uses adaptive radius
 - Auto-discovers optimal coverage
 
-USAGE:
-# Single city:
-python google_places_statewide_scraper.py --city "Houston, TX" --keyword "HVAC" --max-results 500
+NEW IN v5.0.0:
+- Saves BOTH raw and filtered data (can re-filter later without API calls)
+- Organized folder structure: results/{state}/{niche}_{timestamp}.json
+- Support for Texas and Florida states
+- Raw data saved without phone/website to save API costs
 
-# Multiple cities (parallel):
-python google_places_statewide_scraper.py --state "Texas" --keyword "HVAC" --max-results 5000
+USAGE:
+# Single state (all major cities):
+python texas_hvac_scraper.py --state "Texas" --keyword "HVAC contractors" --min-reviews 30 --max-reviews 500 --parallel
+
+python texas_hvac_scraper.py --state "Florida" --keyword "plumbers" --min-reviews 20 --max-reviews 800 --parallel
 
 # Custom city list:
-python google_places_statewide_scraper.py --cities "Houston,Dallas,Austin" --keyword "HVAC"
+python texas_hvac_scraper.py --cities "Houston, TX,Dallas, TX" --keyword "HVAC" --min-reviews 30 --max-reviews 500
+
+OUTPUT:
+- RAW file: modules/google_maps/results/{state}/{niche}_raw_{timestamp}.json
+- FILTERED file: modules/google_maps/results/{state}/{niche}_{timestamp}.json
 """
 
 import os
@@ -54,7 +63,7 @@ CONFIG = {
     "GEOCODE_URL": "https://maps.googleapis.com/maps/api/geocode/json",
     "NEARBY_SEARCH_URL": "https://maps.googleapis.com/maps/api/place/nearbysearch/json",
     "PLACE_DETAILS_URL": "https://maps.googleapis.com/maps/api/place/details/json",
-    "OUTPUT_DIR": "data/processed",
+    "OUTPUT_DIR": "modules/google_maps/results",
     "DELAY_BETWEEN_REQUESTS": 0.5,
 
     # Bidirectional adaptation thresholds
@@ -79,6 +88,35 @@ TEXAS_CITIES = [
     "Garland, TX", "Frisco, TX", "McKinney, TX", "Amarillo, TX",
     "Grand Prairie, TX", "Brownsville, TX", "Pasadena, TX", "Mesquite, TX"
 ]
+
+# Major Florida cities for statewide scraping (56 cities total)
+FLORIDA_CITIES = [
+    # Original 20 major cities
+    "Miami, FL", "Tampa, FL", "Orlando, FL", "Jacksonville, FL",
+    "St. Petersburg, FL", "Hialeah, FL", "Port St. Lucie, FL", "Cape Coral, FL",
+    "Tallahassee, FL", "Fort Lauderdale, FL", "Pembroke Pines, FL", "Hollywood, FL",
+    "Miramar, FL", "Coral Springs, FL", "Clearwater, FL", "Miami Gardens, FL",
+    "Palm Bay, FL", "West Palm Beach, FL", "Pompano Beach, FL", "Gainesville, FL",
+
+    # Phase 1 expansion: Medium cities (50k-150k)
+    "Lakeland, FL", "Kissimmee, FL", "Deltona, FL", "Palm Coast, FL",
+    "Melbourne, FL", "Daytona Beach, FL", "Boca Raton, FL", "Boynton Beach, FL",
+    "Port Charlotte, FL", "Sarasota, FL", "Ocala, FL", "Deerfield Beach, FL",
+    "Sunrise, FL", "Plantation, FL", "Bonita Springs, FL",
+
+    # Phase 2 expansion: Smaller cities (30k-80k) for maximum coverage
+    "Fort Myers, FL", "Spring Hill, FL", "Homestead, FL", "North Port, FL",
+    "Lehigh Acres, FL", "Davie, FL", "Wellington, FL", "Aventura, FL",
+    "Apopka, FL", "Largo, FL", "Pinellas Park, FL", "Brandon, FL",
+    "Altamonte Springs, FL", "Winter Haven, FL", "Coconut Creek, FL", "Lauderhill, FL",
+    "Palm Beach Gardens, FL", "St. Cloud, FL", "Panama City, FL", "Jupiter, FL",
+    "Naples, FL"
+]
+
+STATE_CITIES = {
+    "Texas": TEXAS_CITIES,
+    "Florida": FLORIDA_CITIES
+}
 
 STATS = {
     "total_api_calls": 0,
@@ -216,8 +254,8 @@ def subdivide_area(lat: float, lng: float, radius: int) -> List[Tuple[float, flo
         (lat - offset_lat, lng - offset_lng, new_radius),  # SW
     ]
 
-def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float) -> Dict:
-    """Scrape single city with adaptive radius"""
+def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, max_reviews: int = None) -> Dict:
+    """Scrape single city with adaptive radius - saves both raw and filtered data"""
     logger.info(f"\n{'='*60}")
     logger.info(f"Processing city: {city}")
     logger.info(f"{'='*60}")
@@ -226,7 +264,12 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float) ->
     lat, lng = geocode_city(city)
     if lat == 0:
         logger.error(f"Failed to geocode {city}")
-        return {"city": city, "places": [], "error": "geocoding_failed"}
+        return {
+            "city": city,
+            "raw_places": [],
+            "filtered_places": [],
+            "error": "geocoding_failed"
+        }
 
     logger.info(f"Center: {lat:.4f}, {lng:.4f}")
 
@@ -239,15 +282,15 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float) ->
     logger.info(f"  Places found: {len(places)}")
     logger.info(f"  Final radius: {final_radius/1000:.1f}km")
 
-    # Deduplicate
+    # Deduplicate - THIS IS RAW DATA (before filtering)
     unique_places = deduplicate_places(places)
+    logger.info(f"  Unique places: {len(unique_places)}")
 
     # Filter
-    filtered = filter_places(unique_places, min_reviews, min_rating)
-
+    filtered = filter_places(unique_places, min_reviews, min_rating, max_reviews)
     logger.info(f"  After filter: {len(filtered)}")
 
-    # Get details
+    # Get details ONLY for filtered places (to save API calls)
     detailed_places = []
     for place in filtered:
         details = get_place_details(place["place_id"])
@@ -257,9 +300,11 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float) ->
 
     STATS["cities_processed"] += 1
 
+    # Return BOTH raw (unique_places) and filtered (detailed_places)
     return {
         "city": city,
-        "places": detailed_places,
+        "raw_places": unique_places,          # RAW data (no phone/website)
+        "filtered_places": detailed_places,   # FILTERED data (with phone/website)
         "stats": {
             "total_found": len(places),
             "unique": len(unique_places),
@@ -280,12 +325,20 @@ def deduplicate_places(places: List[Dict]) -> List[Dict]:
             unique.append(place)
     return unique
 
-def filter_places(places: List[Dict], min_reviews: int, min_rating: float) -> List[Dict]:
+def filter_places(places: List[Dict], min_reviews: int, min_rating: float, max_reviews: int = None) -> List[Dict]:
     """Filter by reviews and rating"""
-    return [p for p in places
-            if p["business_status"] == "OPERATIONAL"
-            and p["user_ratings_total"] >= min_reviews
-            and p["rating"] >= min_rating]
+    filtered = []
+    for p in places:
+        if p["business_status"] != "OPERATIONAL":
+            continue
+        if p["user_ratings_total"] < min_reviews:
+            continue
+        if p["rating"] < min_rating:
+            continue
+        if max_reviews and p["user_ratings_total"] > max_reviews:
+            continue
+        filtered.append(p)
+    return filtered
 
 def get_place_details(place_id: str) -> Dict:
     """Get phone and website"""
@@ -308,13 +361,51 @@ def get_place_details(place_id: str) -> Dict:
         "address": result.get("formatted_address", "")
     }
 
+def extract_state_from_cities(cities: List[str]) -> str:
+    """Detect state from city list"""
+    if not cities:
+        return "Unknown"
+
+    first_city = cities[0]
+    if ", TX" in first_city:
+        return "texas"
+    elif ", FL" in first_city:
+        return "florida"
+    elif ", CA" in first_city:
+        return "california"
+    elif ", AZ" in first_city:
+        return "arizona"
+
+    return "unknown"
+
+def extract_niche_from_keyword(keyword: str) -> str:
+    """Extract niche name from keyword"""
+    keyword_lower = keyword.lower()
+
+    if "hvac" in keyword_lower:
+        return "hvac"
+    elif "plumb" in keyword_lower:
+        return "plumbers"
+    elif "electric" in keyword_lower:
+        return "electricians"
+    elif "locksmith" in keyword_lower:
+        return "locksmiths"
+    elif "towing" in keyword_lower or "tow service" in keyword_lower:
+        return "towing"
+    elif "garage" in keyword_lower or "door" in keyword_lower:
+        return "garage_door"
+
+    # Fallback: sanitize keyword
+    return keyword_lower.replace(" ", "_")
+
 def main():
     parser = argparse.ArgumentParser(description="Google Places Statewide Scraper")
     parser.add_argument("--city", type=str, help="Single city to scrape")
     parser.add_argument("--cities", type=str, help="Comma-separated cities")
-    parser.add_argument("--state", type=str, choices=["Texas"], help="Scrape entire state")
+    parser.add_argument("--state", type=str, choices=["Texas", "Florida"], help="Scrape entire state")
     parser.add_argument("--keyword", type=str, required=True, help="Search keyword")
     parser.add_argument("--min-reviews", type=int, default=10, help="Min reviews")
+    parser.add_argument("--max-reviews", type=int, default=None, help="Max reviews (optional)")
     parser.add_argument("--min-rating", type=float, default=4.0, help="Min rating")
     parser.add_argument("--max-results", type=int, default=5000, help="Max total results")
     parser.add_argument("--parallel", action="store_true", help="Enable parallel processing")
@@ -329,8 +420,11 @@ def main():
         cities = [args.city]
     elif args.cities:
         cities = [c.strip() for c in args.cities.split(",")]
-    elif args.state == "Texas":
-        cities = TEXAS_CITIES
+    elif args.state:
+        cities = STATE_CITIES.get(args.state, [])
+        if not cities:
+            logger.error(f"No cities defined for state: {args.state}")
+            return
     else:
         logger.error("Must specify --city, --cities, or --state")
         return
@@ -343,6 +437,7 @@ def main():
     print(f"Parallel mode:     {'ON' if args.parallel else 'OFF'}")
     print(f"Filters:")
     print(f"  Min reviews:     {args.min_reviews}")
+    print(f"  Max reviews:     {args.max_reviews if args.max_reviews else 'No limit'}")
     print(f"  Min rating:      {args.min_rating}")
     print(f"\nAdaptive radius:")
     print(f"  Initial:         {CONFIG['INITIAL_RADIUS']/1000}km")
@@ -362,7 +457,7 @@ def main():
 
         with ThreadPoolExecutor(max_workers=CONFIG['MAX_WORKERS']) as executor:
             futures = {
-                executor.submit(scrape_city, city, args.keyword, args.min_reviews, args.min_rating): city
+                executor.submit(scrape_city, city, args.keyword, args.min_reviews, args.min_rating, args.max_reviews): city
                 for city in cities
             }
 
@@ -377,32 +472,81 @@ def main():
         print(f"Processing {len(cities)} cities SEQUENTIALLY...\n")
 
         for city in cities:
-            result = scrape_city(city, args.keyword, args.min_reviews, args.min_rating)
+            result = scrape_city(city, args.keyword, args.min_reviews, args.min_rating, args.max_reviews)
             results_by_city.append(result)
 
-    # Aggregate all places
-    all_places = []
+    # Detect state and niche for organized folders
+    state = extract_state_from_cities(cities)
+    niche = extract_niche_from_keyword(args.keyword)
+
+    # Aggregate RAW and FILTERED data separately
+    all_raw_places = []
+    all_filtered_places = []
+
     for city_result in results_by_city:
-        all_places.extend(city_result["places"])
+        all_raw_places.extend(city_result.get("raw_places", []))
+        all_filtered_places.extend(city_result.get("filtered_places", []))
 
-    # Global dedup
-    all_places = deduplicate_places(all_places)
+    # Global deduplication for both datasets
+    all_raw_places = deduplicate_places(all_raw_places)
+    all_filtered_places = deduplicate_places(all_filtered_places)
 
-    # Save
+    # Create organized folder structure
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = Path(CONFIG["OUTPUT_DIR"]) / f"google_statewide_{timestamp}.json"
-    output_file.parent.mkdir(exist_ok=True)
+    output_dir = Path(CONFIG["OUTPUT_DIR"]) / state
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    with open(output_file, 'w', encoding='utf-8') as f:
+    # Save RAW data (no phone/website, can re-filter later)
+    raw_file = output_dir / f"{niche}_raw_{timestamp}.json"
+    with open(raw_file, 'w', encoding='utf-8') as f:
         json.dump({
             "metadata": {
                 "timestamp": timestamp,
+                "state": state,
+                "niche": niche,
                 "cities_processed": len(cities),
-                "total_places": len(all_places),
+                "total_raw_places": len(all_raw_places),
+                "note": "RAW data before filtering - no phone/website to save API costs",
                 "stats": STATS
             },
-            "results_by_city": results_by_city,
-            "all_places": all_places
+            "results_by_city": [
+                {
+                    "city": r["city"],
+                    "raw_places": r.get("raw_places", []),
+                    "stats": r["stats"]
+                }
+                for r in results_by_city
+            ],
+            "all_raw_places": all_raw_places
+        }, f, indent=2, ensure_ascii=False)
+
+    # Save FILTERED data (with phone/website)
+    filtered_file = output_dir / f"{niche}_{timestamp}.json"
+    with open(filtered_file, 'w', encoding='utf-8') as f:
+        json.dump({
+            "metadata": {
+                "timestamp": timestamp,
+                "state": state,
+                "niche": niche,
+                "cities_processed": len(cities),
+                "total_filtered_places": len(all_filtered_places),
+                "filters": {
+                    "min_reviews": args.min_reviews,
+                    "max_reviews": args.max_reviews,
+                    "min_rating": args.min_rating
+                },
+                "note": "FILTERED data with phone/website - ready for outreach",
+                "stats": STATS
+            },
+            "results_by_city": [
+                {
+                    "city": r["city"],
+                    "filtered_places": r.get("filtered_places", []),
+                    "stats": r["stats"]
+                }
+                for r in results_by_city
+            ],
+            "all_filtered_places": all_filtered_places
         }, f, indent=2, ensure_ascii=False)
 
     # Summary
@@ -412,8 +556,12 @@ def main():
     print(f"\n{'='*70}")
     print(f"STATEWIDE SCRAPING COMPLETED")
     print(f"{'='*70}")
+    print(f"State:               {state.upper()}")
+    print(f"Niche:               {niche.upper()}")
     print(f"Cities processed:    {len(cities)}")
-    print(f"Total places:        {len(all_places)}")
+    print(f"\nData collected:")
+    print(f"  RAW places:        {len(all_raw_places)} (can re-filter later)")
+    print(f"  FILTERED places:   {len(all_filtered_places)} (ready for outreach)")
     print(f"\nAdaptive strategy:")
     print(f"  Radius increases:  {STATS['radius_increases']}")
     print(f"  Radius decreases:  {STATS['radius_decreases']}")
@@ -422,13 +570,18 @@ def main():
     print(f"Estimated cost:      ${STATS['total_cost']:.2f}")
     print(f"Free tier left:      ${200 - STATS['total_cost']:.2f}")
     print(f"Time elapsed:        {elapsed:.1f} min")
-    print(f"Output file:         {output_file}")
+    print(f"\nOutput files:")
+    print(f"  RAW data:          {raw_file}")
+    print(f"  FILTERED data:     {filtered_file}")
     print(f"{'='*70}\n")
 
     # City breakdown
-    print("=== CITY BREAKDOWN ===\n")
-    for city_result in results_by_city[:10]:
-        print(f"{city_result['city']:<25} {city_result['stats']['with_details']:>4} places (radius: {city_result['stats']['final_radius_km']:.1f}km)")
+    print("=== CITY BREAKDOWN (Top 10) ===\n")
+    sorted_cities = sorted(results_by_city, key=lambda x: x['stats']['with_details'], reverse=True)
+    for city_result in sorted_cities[:10]:
+        raw_count = len(city_result.get('raw_places', []))
+        filtered_count = city_result['stats']['with_details']
+        print(f"{city_result['city']:<25} RAW: {raw_count:>4}  |  FILTERED: {filtered_count:>4}  (radius: {city_result['stats']['final_radius_km']:.1f}km)")
 
 if __name__ == "__main__":
     main()
