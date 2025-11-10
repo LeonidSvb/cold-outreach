@@ -224,20 +224,30 @@ with st.sidebar:
     else:  # Custom cities
         st.markdown("""
         **📝 Enter your cities below. Supported formats:**
-        - One per line: `Miami, FL`
-        - Comma-separated: `Miami, FL, Houston, TX, Dallas, TX`
-        - Paste from Excel (one city per row)
+
+        **USA:** `Miami, FL` or `New York City, NY`
+
+        **International:**
+        - `Denpasar, Bali, Indonesia`
+        - `London, UK`
+        - `Paris, France`
+
+        **Multiple ways:**
+        - One per line (easiest)
+        - Comma-separated bulk paste
+        - Copy from Excel/Google Sheets
         """)
 
         cities_input = st.text_area(
             "Cities List",
             placeholder="""Miami, FL
 Houston, TX
-Dallas, TX
-Los Angeles, CA
-Phoenix, AZ
-Chicago, IL""",
-            help="Enter city names with state. Any format works!",
+Denpasar, Bali, Indonesia
+London, UK
+Paris, France
+Tokyo, Japan
+Dubai, UAE""",
+            help="Enter city + location. Works worldwide!",
             height=200
         )
 
@@ -262,23 +272,31 @@ Chicago, IL""",
                 # Newline separated
                 raw_cities = [c.strip() for c in cities_input.split('\n') if c.strip()]
 
-            # Validate format
+            # Validate format (flexible for international cities)
             valid_cities = []
             invalid_cities = []
 
             for city in raw_cities:
-                # Check format: "City Name, ST"
+                # Check format: must have at least city + location
                 if ',' in city:
-                    parts = city.split(',')
-                    if len(parts) >= 2:
-                        city_name = parts[0].strip()
-                        state_abbr = parts[-1].strip()
+                    parts = [p.strip() for p in city.split(',') if p.strip()]
 
-                        # Check if state is 2 letters
-                        if len(state_abbr) == 2 and state_abbr.isalpha():
-                            valid_cities.append(f"{city_name}, {state_abbr.upper()}")
-                        else:
-                            invalid_cities.append(city)
+                    if len(parts) >= 2:
+                        # Valid formats:
+                        # - "Miami, FL" (US state)
+                        # - "London, UK" (country code)
+                        # - "Denpasar, Bali, Indonesia" (city, region, country)
+                        # - "Paris, France" (city, country)
+
+                        # Just capitalize properly and accept
+                        formatted_parts = [p.strip().title() for p in parts]
+
+                        # Special handling for US states (keep uppercase)
+                        if len(parts) == 2 and len(formatted_parts[-1]) == 2 and formatted_parts[-1].replace('.', '').isalpha():
+                            # Likely US state abbreviation - keep uppercase
+                            formatted_parts[-1] = formatted_parts[-1].upper()
+
+                        valid_cities.append(', '.join(formatted_parts))
                     else:
                         invalid_cities.append(city)
                 else:
@@ -292,27 +310,39 @@ Chicago, IL""",
 
                 # Show preview
                 with st.expander(f"👁️ Preview cities ({len(valid_cities)})"):
-                    # Group by state
+                    # Group by last part (state/country)
                     from collections import defaultdict
-                    by_state = defaultdict(list)
+                    by_location = defaultdict(list)
                     for city in valid_cities:
-                        city_name, state = city.rsplit(', ', 1)
-                        by_state[state].append(city_name)
+                        parts = city.split(', ')
+                        location_key = parts[-1]  # Last part (FL, UK, Indonesia, etc)
+                        city_full = ', '.join(parts[:-1])  # Everything before last
+                        by_location[location_key].append(city_full)
 
-                    for state_abbr in sorted(by_state.keys()):
-                        st.markdown(f"**{state_abbr}:** {', '.join(by_state[state_abbr])}")
+                    for location in sorted(by_location.keys()):
+                        st.markdown(f"**{location}:** {', '.join(by_location[location])}")
 
             if invalid_cities:
                 st.warning(f"⚠️ {len(invalid_cities)} cities have invalid format")
                 with st.expander("❌ Invalid entries (fix these)"):
                     st.markdown("""
-                    **Correct format:** `City Name, ST`
+                    **Correct formats:**
 
-                    Examples:
+                    **USA:**
                     - ✅ Miami, FL
                     - ✅ New York City, NY
+
+                    **International:**
+                    - ✅ Denpasar, Bali, Indonesia
+                    - ✅ London, UK
+                    - ✅ Paris, France
+                    - ✅ Tokyo, Japan
+
+                    **Invalid:**
+                    - ❌ Miami (missing location)
                     - ❌ Miami Florida (missing comma)
-                    - ❌ Miami, Florida (state must be 2 letters)
+
+                    **Minimum:** City name + comma + location
                     """)
                     for invalid in invalid_cities:
                         st.text(f"❌ {invalid}")
