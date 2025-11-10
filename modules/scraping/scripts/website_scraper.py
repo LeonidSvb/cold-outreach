@@ -388,7 +388,7 @@ Examples:
     # Вывод статистики
     tracker.print_summary()
 
-    print(f"✓ Results saved to: {args.output}\n")
+    print(f"[+] Results saved to: {args.output}\n")
 
     logger.info("Scraping completed successfully")
 
