@@ -25,10 +25,14 @@ from datetime import datetime
 import uuid
 import os
 from dotenv import load_dotenv
+import time
 
 # Add project root to path
 project_root = Path(__file__).parent.parent.parent.parent
 sys.path.insert(0, str(project_root))
+
+# Import Google Places API integration
+from modules.google_maps.ui.google_places_integration import search_multiple_locations
 
 # Load environment variables from project root
 env_path = project_root / '.env'
@@ -510,62 +514,105 @@ with tab1:
         progress_bar = st.progress(0, text="Initializing...")
         status_text = st.empty()
 
-        # Simulate collection (replace with actual scraper call)
-        import time
-
+        # Real Google Places API collection
         try:
-            # Phase 1: Geocoding
-            progress_bar.progress(10, text="Geocoding cities...")
-            time.sleep(1)
+            start_time = time.time()
 
-            # Phase 2: Searching
-            progress_bar.progress(30, text="Searching Google Places...")
-            time.sleep(1)
+            # Phase 1: Initialize
+            progress_bar.progress(10, text=f"Preparing to search {len(cities_list)} locations...")
 
-            # Phase 3: Filtering
-            progress_bar.progress(60, text="Applying quality filters...")
-            time.sleep(1)
+            # Phase 2: API Calls
+            progress_bar.progress(30, text=f"Searching Google Places for '{niche}'...")
 
-            # Phase 4: Getting details
-            progress_bar.progress(80, text="Fetching contact details...")
-            time.sleep(1)
+            # Call real API
+            api_result = search_multiple_locations(
+                api_key=api_key,
+                query=niche,
+                locations=cities_list,
+                max_results=max_results,
+                min_rating=min_rating,
+                min_reviews=min_reviews,
+                max_reviews=max_reviews
+            )
 
-            # Phase 5: Saving
-            progress_bar.progress(100, text="Saving results...")
-            time.sleep(0.5)
+            # Phase 3: Processing results
+            progress_bar.progress(70, text="Processing API results...")
 
-            # Success
-            progress_bar.empty()
+            results_data = api_result['results']
+            stats = api_result['stats']
 
-            # Generate sample results
-            sample_data = pd.DataFrame({
-                'Name': ['ABC HVAC Services', 'Cool Air Solutions', 'Pro Climate Control'],
-                'Phone': ['(305) 123-4567', '(305) 234-5678', '(305) 345-6789'],
-                'Rating': [4.8, 4.6, 4.9],
-                'Reviews': [156, 89, 234],
-                'Address': ['123 Main St, Miami, FL', '456 Oak Ave, Tampa, FL', '789 Pine Rd, Orlando, FL'],
-                'Website': ['www.abchvac.com', 'www.coolair.com', 'www.proclimate.com']
-            })
+            # Convert to DataFrame
+            if results_data:
+                results_df = pd.DataFrame(results_data)
+            else:
+                results_df = pd.DataFrame(columns=['Name', 'Phone', 'Rating', 'Reviews', 'Address', 'Website', 'Google Maps'])
 
-            # Save to session-specific directory
+            # Phase 4: Saving
+            progress_bar.progress(90, text="Saving results...")
+
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
             result_file = output_dir / f"{niche.replace(' ', '_')}_{timestamp}.csv"
-            sample_data.to_csv(result_file, index=False)
+            results_df.to_csv(result_file, index=False)
 
+            # Also save JSON with stats
+            json_file = output_dir / f"{niche.replace(' ', '_')}_{timestamp}.json"
+            with open(json_file, 'w', encoding='utf-8') as f:
+                json.dump({
+                    'metadata': {
+                        'niche': niche,
+                        'cities': cities_list,
+                        'timestamp': timestamp,
+                        'filters': {
+                            'min_rating': min_rating,
+                            'min_reviews': min_reviews,
+                            'max_reviews': max_reviews,
+                            'max_results': max_results
+                        }
+                    },
+                    'stats': stats,
+                    'results': results_data
+                }, f, indent=2, ensure_ascii=False)
+
+            # Complete
+            progress_bar.progress(100, text="Done!")
+            time.sleep(0.5)
+            progress_bar.empty()
+
+            # Calculate actual statistics
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            minutes = int(elapsed_time // 60)
+            seconds = int(elapsed_time % 60)
+
+            # Estimate cost (Google Places API pricing: $0.017 per Text Search request)
+            # Each location = 1 request
+            total_requests = len(cities_list)
+            estimated_cost = total_requests * 0.017
+
+            # Success message
             st.markdown(f"""
             <div class="success-box">
                 <h3>✅ Collection Complete!</h3>
-                <p><strong>Results:</strong> {len(sample_data)} qualified leads collected</p>
-                <p><strong>Time:</strong> 8 minutes 32 seconds</p>
-                <p><strong>Actual Cost:</strong> $18.45</p>
-                <p><strong>Pass Rate:</strong> 68% ({len(sample_data)}/360 raw)</p>
-                <p><strong>Saved to:</strong> {result_file}</p>
+                <p><strong>Results:</strong> {len(results_df)} qualified leads collected</p>
+                <p><strong>Time:</strong> {minutes} minutes {seconds} seconds</p>
+                <p><strong>Estimated Cost:</strong> ${estimated_cost:.2f} (${total_requests} requests)</p>
+                <p><strong>Locations Searched:</strong> {len(cities_list)}</p>
+                <p><strong>Saved to:</strong> {result_file.name}</p>
             </div>
             """, unsafe_allow_html=True)
 
+            # Show per-location stats
+            if stats:
+                st.subheader("Results by Location")
+                stats_df = pd.DataFrame([
+                    {'Location': loc, 'Results': count}
+                    for loc, count in stats.items()
+                ])
+                st.dataframe(stats_df, use_container_width=True)
+
             # Display results
-            st.subheader("Preview of Results")
-            st.dataframe(sample_data, use_container_width=True)
+            st.subheader(f"Preview of {len(results_df)} Results")
+            st.dataframe(results_df, use_container_width=True)
 
             # Download buttons
             col1, col2 = st.columns(2)
@@ -573,22 +620,25 @@ with tab1:
             with col1:
                 st.download_button(
                     "📥 Download CSV",
-                    sample_data.to_csv(index=False),
+                    results_df.to_csv(index=False, encoding='utf-8'),
                     f"{niche.replace(' ', '_')}_{timestamp}.csv",
                     "text/csv",
                     use_container_width=True
                 )
 
             with col2:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    json_content = f.read()
                 st.download_button(
                     "📄 Download JSON",
-                    json.dumps(sample_data.to_dict('records'), indent=2),
+                    json_content,
                     f"{niche.replace(' ', '_')}_{timestamp}.json",
                     "application/json",
                     use_container_width=True
                 )
 
         except Exception as e:
+            progress_bar.empty()
             st.error(f"❌ Collection failed: {str(e)}")
             st.exception(e)
 
