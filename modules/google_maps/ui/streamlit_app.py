@@ -27,10 +27,12 @@ import os
 from dotenv import load_dotenv
 
 # Add project root to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+project_root = Path(__file__).parent.parent.parent.parent
+sys.path.insert(0, str(project_root))
 
-# Load environment variables
-load_dotenv()
+# Load environment variables from project root
+env_path = project_root / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # Page configuration
 st.set_page_config(

@@ -59,11 +59,7 @@ except ImportError:
 load_dotenv()
 
 CONFIG = {
-    "API_KEYS": [
-        os.getenv("GOOGLE_PLACES_API_KEY"),
-        os.getenv("GOOGLE_PLACES_API_KEY_2")
-    ],
-    "API_KEY_INDEX": 0,
+    "API_KEY": os.getenv("GOOGLE_PLACES_API_KEY"),
     "GEOCODE_URL": "https://maps.googleapis.com/maps/api/geocode/json",
     "NEARBY_SEARCH_URL": "https://maps.googleapis.com/maps/api/place/nearbysearch/json",
     "PLACE_DETAILS_URL": "https://maps.googleapis.com/maps/api/place/details/json",
@@ -117,59 +113,9 @@ FLORIDA_CITIES = [
     "Naples, FL"
 ]
 
-# COLD STATES - HVAC HEATING SEASON (November-March)
-# New York - Tier 1 & 2 (cold climate, high heating demand)
-NEW_YORK_CITIES = [
-    # Tier 1: Major metros (200k+)
-    "New York, NY",    # NYC: 8.3M population (Metro 20M)
-    "Buffalo, NY",     # 278K - extreme winter, high HVAC demand
-    "Rochester, NY",   # 211K - cold climate
-    # Tier 2: Medium cities (50k-200k)
-    "Yonkers, NY",     # 211K - NYC metro area
-    "Syracuse, NY",    # 148K - snow belt, heavy heating needs
-]
-
-# Illinois - Tier 1 & 2 (harsh winters, Chicago metro)
-ILLINOIS_CITIES = [
-    # Tier 1: Major metros
-    "Chicago, IL",     # 2.7M - brutal winters, massive HVAC market
-    # Tier 2: Medium cities
-    "Aurora, IL",      # 180K - Chicago suburbs
-    "Naperville, IL",  # 149K - affluent suburb
-    "Joliet, IL",      # 150K - southwest Chicago
-    "Rockford, IL",    # 148K - northern Illinois
-]
-
-# Michigan - Tier 1 & 2 (extreme cold, Great Lakes effect)
-MICHIGAN_CITIES = [
-    # Tier 1: Major metros
-    "Detroit, MI",     # 639K - extreme winters
-    "Grand Rapids, MI",# 198K - heavy snowfall
-    # Tier 2: Medium cities
-    "Warren, MI",      # 139K - Detroit metro
-    "Sterling Heights, MI", # 134K - Detroit suburbs
-    "Ann Arbor, MI",   # 123K - university town
-    "Lansing, MI",     # 112K - state capital
-]
-
-# Pennsylvania - Tier 1 & 2 (cold winters, major metros)
-PENNSYLVANIA_CITIES = [
-    # Tier 1: Major metros
-    "Philadelphia, PA",# 1.6M - cold winters
-    "Pittsburgh, PA",  # 302K - harsh winter climate
-    # Tier 2: Medium cities
-    "Allentown, PA",   # 125K - Lehigh Valley
-    "Erie, PA",        # 94K - lake effect snow, extreme cold
-    "Reading, PA",     # 95K - eastern PA
-]
-
 STATE_CITIES = {
     "Texas": TEXAS_CITIES,
-    "Florida": FLORIDA_CITIES,
-    "New York": NEW_YORK_CITIES,
-    "Illinois": ILLINOIS_CITIES,
-    "Michigan": MICHIGAN_CITIES,
-    "Pennsylvania": PENNSYLVANIA_CITIES,
+    "Florida": FLORIDA_CITIES
 }
 
 STATS = {
@@ -179,52 +125,18 @@ STATS = {
     "optimal_searches": 0,
     "cities_processed": 0,
     "total_cost": 0.0,
-    "api_key_switches": 0,
 }
-
-def get_current_api_key() -> str:
-    """Get current API key with rotation support"""
-    api_keys = [k for k in CONFIG["API_KEYS"] if k]
-    if not api_keys:
-        raise ValueError("No API keys configured")
-
-    current_index = CONFIG["API_KEY_INDEX"] % len(api_keys)
-    return api_keys[current_index]
-
-def rotate_api_key():
-    """Rotate to next API key"""
-    api_keys = [k for k in CONFIG["API_KEYS"] if k]
-    if len(api_keys) > 1:
-        CONFIG["API_KEY_INDEX"] = (CONFIG["API_KEY_INDEX"] + 1) % len(api_keys)
-        STATS["api_key_switches"] += 1
-        logger.info(f"Rotated to API key #{CONFIG['API_KEY_INDEX'] + 1}")
 
 def geocode_city(city: str) -> Tuple[float, float]:
     """Get lat/lng for city"""
-    params = {"address": city, "key": get_current_api_key()}
+    params = {"address": city, "key": CONFIG["API_KEY"]}
+    response = requests.get(CONFIG["GEOCODE_URL"], params=params)
 
-    try:
-        response = requests.get(CONFIG["GEOCODE_URL"], params=params, timeout=10)
-
-        if response.status_code != 200:
-            logger.error(f"Geocode HTTP error {response.status_code} for {city}")
-            return (0, 0)
-
-        data = response.json()
-        status = data.get("status")
-
-        if status != "OK":
-            logger.error(f"Geocode API error: {status} for {city}")
-            if status == "REQUEST_DENIED":
-                logger.error(f"Error message: {data.get('error_message', 'No details')}")
-            return (0, 0)
-
-        location = data["results"][0]["geometry"]["location"]
-        return (location["lat"], location["lng"])
-
-    except Exception as e:
-        logger.error(f"Geocode exception for {city}: {e}")
+    if response.status_code != 200 or response.json()["status"] != "OK":
         return (0, 0)
+
+    location = response.json()["results"][0]["geometry"]["location"]
+    return (location["lat"], location["lng"])
 
 def nearby_search(lat: float, lng: float, keyword: str, radius: int) -> List[Dict]:
     """Search places in radius"""
@@ -232,14 +144,11 @@ def nearby_search(lat: float, lng: float, keyword: str, radius: int) -> List[Dic
         "location": f"{lat},{lng}",
         "radius": radius,
         "keyword": keyword,
-        "key": get_current_api_key()
+        "key": CONFIG["API_KEY"]
     }
 
     response = requests.get(CONFIG["NEARBY_SEARCH_URL"], params=params)
     STATS["total_api_calls"] += 1
-
-    if STATS["total_api_calls"] % 100 == 0:
-        rotate_api_key()
 
     if response.status_code != 200:
         return []
@@ -345,77 +254,33 @@ def subdivide_area(lat: float, lng: float, radius: int) -> List[Tuple[float, flo
         (lat - offset_lat, lng - offset_lng, new_radius),  # SW
     ]
 
-def text_search_city(city: str, keyword: str) -> List[Dict]:
-    """Search using Text Search API (no geocoding needed)"""
-    query = f"{keyword} in {city}"
-    all_places = []
-    next_page_token = None
-    page = 1
-
-    while page <= 3:
-        params = {
-            "query": query,
-            "key": get_current_api_key()
-        }
-
-        if next_page_token:
-            params["pagetoken"] = next_page_token
-
-        try:
-            response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json", params=params, timeout=30)
-            STATS["total_api_calls"] += 1
-
-            if STATS["total_api_calls"] % 100 == 0:
-                rotate_api_key()
-
-            if response.status_code != 200:
-                logger.error(f"Text search HTTP error {response.status_code}")
-                break
-
-            data = response.json()
-            status = data.get("status")
-
-            if status not in ["OK", "ZERO_RESULTS"]:
-                logger.error(f"Text search API error: {status}")
-                break
-
-            results = data.get("results", [])
-            for p in results:
-                all_places.append({
-                    "place_id": p.get("place_id"),
-                    "name": p.get("name"),
-                    "vicinity": p.get("formatted_address", p.get("vicinity", "")),
-                    "rating": p.get("rating", 0),
-                    "user_ratings_total": p.get("user_ratings_total", 0),
-                    "business_status": p.get("business_status", "OPERATIONAL"),
-                })
-
-            logger.info(f"Page {page}: Found {len(results)} results (total: {len(all_places)})")
-
-            next_page_token = data.get("next_page_token")
-            if not next_page_token:
-                break
-
-            page += 1
-            time.sleep(2)
-
-        except Exception as e:
-            logger.error(f"Text search exception: {e}")
-            break
-
-    return all_places
-
 def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, max_reviews: int = None) -> Dict:
-    """Scrape single city with Text Search - saves both raw and filtered data"""
+    """Scrape single city with adaptive radius - saves both raw and filtered data"""
     logger.info(f"\n{'='*60}")
     logger.info(f"Processing city: {city}")
     logger.info(f"{'='*60}")
 
-    # Text Search (no geocoding needed)
-    places = text_search_city(city, keyword)
+    # Geocode
+    lat, lng = geocode_city(city)
+    if lat == 0:
+        logger.error(f"Failed to geocode {city}")
+        return {
+            "city": city,
+            "raw_places": [],
+            "filtered_places": [],
+            "error": "geocoding_failed"
+        }
+
+    logger.info(f"Center: {lat:.4f}, {lng:.4f}")
+
+    # Adaptive search
+    places, final_radius = adaptive_radius_search(
+        lat, lng, keyword, CONFIG["INITIAL_RADIUS"], city
+    )
 
     logger.info(f"\n{city} Summary:")
     logger.info(f"  Places found: {len(places)}")
+    logger.info(f"  Final radius: {final_radius/1000:.1f}km")
 
     # Deduplicate - THIS IS RAW DATA (before filtering)
     unique_places = deduplicate_places(places)
@@ -427,14 +292,11 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, ma
 
     # Get details ONLY for filtered places (to save API calls)
     detailed_places = []
-    for i, place in enumerate(filtered, 1):
+    for place in filtered:
         details = get_place_details(place["place_id"])
         if details:
             detailed_places.append({**place, **details})
         time.sleep(CONFIG["DELAY_BETWEEN_REQUESTS"])
-
-        if i % 10 == 0:
-            logger.info(f"  Enriched {i}/{len(filtered)} places")
 
     STATS["cities_processed"] += 1
 
@@ -448,7 +310,7 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, ma
             "unique": len(unique_places),
             "filtered": len(filtered),
             "with_details": len(detailed_places),
-            "method": "text_search"
+            "final_radius_km": final_radius / 1000
         }
     }
 
@@ -483,14 +345,11 @@ def get_place_details(place_id: str) -> Dict:
     params = {
         "place_id": place_id,
         "fields": "formatted_phone_number,website,formatted_address",
-        "key": get_current_api_key()
+        "key": CONFIG["API_KEY"]
     }
 
     response = requests.get(CONFIG["PLACE_DETAILS_URL"], params=params)
     STATS["total_api_calls"] += 1
-
-    if STATS["total_api_calls"] % 100 == 0:
-        rotate_api_key()
 
     if response.status_code != 200 or response.json()["status"] != "OK":
         return {}
@@ -543,21 +402,18 @@ def main():
     parser = argparse.ArgumentParser(description="Google Places Statewide Scraper")
     parser.add_argument("--city", type=str, help="Single city to scrape")
     parser.add_argument("--cities", type=str, help="Comma-separated cities")
-    parser.add_argument("--state", type=str, choices=["Texas", "Florida", "New York", "Illinois", "Michigan", "Pennsylvania"], help="Scrape entire state")
+    parser.add_argument("--state", type=str, choices=["Texas", "Florida"], help="Scrape entire state")
     parser.add_argument("--keyword", type=str, required=True, help="Search keyword")
-    parser.add_argument("--min-reviews", type=int, default=30, help="Min reviews")
-    parser.add_argument("--max-reviews", type=int, default=800, help="Max reviews (optional)")
+    parser.add_argument("--min-reviews", type=int, default=10, help="Min reviews")
+    parser.add_argument("--max-reviews", type=int, default=None, help="Max reviews (optional)")
     parser.add_argument("--min-rating", type=float, default=4.0, help="Min rating")
     parser.add_argument("--max-results", type=int, default=5000, help="Max total results")
     parser.add_argument("--parallel", action="store_true", help="Enable parallel processing")
     args = parser.parse_args()
 
-    api_keys = [k for k in CONFIG["API_KEYS"] if k]
-    if not api_keys:
-        logger.error("No GOOGLE_PLACES_API_KEY configured")
+    if not CONFIG["API_KEY"]:
+        logger.error("GOOGLE_PLACES_API_KEY not found")
         return
-
-    logger.info(f"API keys configured: {len(api_keys)}")
 
     # Determine cities to scrape
     if args.city:
@@ -574,17 +430,21 @@ def main():
         return
 
     print(f"\n{'='*70}")
-    print(f"GOOGLE PLACES STATEWIDE SCRAPER (Text Search)")
+    print(f"GOOGLE PLACES STATEWIDE SCRAPER")
     print(f"{'='*70}")
     print(f"Cities to process: {len(cities)}")
     print(f"Keyword:           {args.keyword}")
     print(f"Parallel mode:     {'ON' if args.parallel else 'OFF'}")
-    print(f"API keys:          {len(api_keys)}")
     print(f"Filters:")
     print(f"  Min reviews:     {args.min_reviews}")
     print(f"  Max reviews:     {args.max_reviews if args.max_reviews else 'No limit'}")
     print(f"  Min rating:      {args.min_rating}")
-    print(f"\nSearch method:     Text Search API (no geocoding)")
+    print(f"\nAdaptive radius:")
+    print(f"  Initial:         {CONFIG['INITIAL_RADIUS']/1000}km")
+    print(f"  Range:           {CONFIG['MIN_RADIUS']/1000}km - {CONFIG['MAX_RADIUS']/1000}km")
+    print(f"  Sparse (<15):    INCREASE radius")
+    print(f"  Optimal (15-55): USE results")
+    print(f"  Dense (>55):     DECREASE radius")
     print(f"{'='*70}\n")
 
     start_time = time.time()
@@ -702,14 +562,13 @@ def main():
     print(f"\nData collected:")
     print(f"  RAW places:        {len(all_raw_places)} (can re-filter later)")
     print(f"  FILTERED places:   {len(all_filtered_places)} (ready for outreach)")
-    print(f"\nSearch method:     Text Search API (no geocoding needed)")
-    print(f"\nAPI usage:")
-    print(f"  Total API calls:   {STATS['total_api_calls']}")
-    print(f"  API key switches:  {STATS['api_key_switches']}")
-    print(f"  Keys configured:   {len([k for k in CONFIG['API_KEYS'] if k])}")
-    print(f"\nCost:")
-    print(f"  Estimated cost:    ${STATS['total_cost']:.2f}")
-    print(f"  Free tier left:    ${200 - STATS['total_cost']:.2f} (per key)")
+    print(f"\nAdaptive strategy:")
+    print(f"  Radius increases:  {STATS['radius_increases']}")
+    print(f"  Radius decreases:  {STATS['radius_decreases']}")
+    print(f"  Optimal searches:  {STATS['optimal_searches']}")
+    print(f"\nAPI calls:           {STATS['total_api_calls']}")
+    print(f"Estimated cost:      ${STATS['total_cost']:.2f}")
+    print(f"Free tier left:      ${200 - STATS['total_cost']:.2f}")
     print(f"Time elapsed:        {elapsed:.1f} min")
     print(f"\nOutput files:")
     print(f"  RAW data:          {raw_file}")
@@ -722,7 +581,7 @@ def main():
     for city_result in sorted_cities[:10]:
         raw_count = len(city_result.get('raw_places', []))
         filtered_count = city_result['stats']['with_details']
-        print(f"{city_result['city']:<30} RAW: {raw_count:>4}  |  FILTERED: {filtered_count:>4}")
+        print(f"{city_result['city']:<25} RAW: {raw_count:>4}  |  FILTERED: {filtered_count:>4}  (radius: {city_result['stats']['final_radius_km']:.1f}km)")
 
 if __name__ == "__main__":
     main()
