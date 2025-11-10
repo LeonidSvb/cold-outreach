@@ -1,0 +1,1878 @@
+{
+  "metadata": {
+    "timestamp": "20251110_141441",
+    "state": "michigan",
+    "niche": "hvac",
+    "cities_processed": 6,
+    "total_raw_places": 103,
+    "note": "RAW data before filtering - no phone/website to save API costs",
+    "stats": {
+      "total_api_calls": 93,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 6,
+      "cities_processed": 6,
+      "total_cost": 0.0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Warren, MI",
+      "raw_places": [
+        {
+          "place_id": "ChIJK_ICSgPgJIgRHRSaFs5XAds",
+          "name": "Askar Heating and Cooling, LLC",
+          "vicinity": "46266 Erb Dr, Macomb",
+          "rating": 4.9,
+          "user_ratings_total": 387,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ7aEmh4ghJYgR-i4cuokV4PI",
+          "name": "Finzel's Heating and Cooling",
+          "vicinity": "44335 N Groesbeck Hwy, Clinton Township",
+          "rating": 4.9,
+          "user_ratings_total": 478,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXyXHO45RMIwRxEHICC5Nk5g",
+          "name": "Temp - 1 Heating & Cooling",
+          "vicinity": "2071 E 9 Mile Rd, Warren",
+          "rating": 5,
+          "user_ratings_total": 187,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJm5_4tavEJIgRFBFaeatMiBM",
+          "name": "Arkan's Heating & Air Conditioning Inc.",
+          "vicinity": "13854 Lakeside Cir Suite 303, Sterling Heights",
+          "rating": 4.9,
+          "user_ratings_total": 150,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr67GWLjCJIgRRFXezvJMZAc",
+          "name": "Briarwood Heating & Cooling",
+          "vicinity": "46851 Dequindre Rd, Rochester Hills",
+          "rating": 4.9,
+          "user_ratings_total": 577,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJL_UzgoPHJIgRZ0dsqsLn7Ic",
+          "name": "Comfort Zone Heating and Cooling",
+          "vicinity": "4238 Edgeland Ave, Royal Oak",
+          "rating": 4.8,
+          "user_ratings_total": 312,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6WULHE7dJIgRadR-N1jjvwc",
+          "name": "Koz Heating & Cooling",
+          "vicinity": "7501 Triangle Dr, Sterling Heights",
+          "rating": 4.8,
+          "user_ratings_total": 227,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtU8cPv3PJIgRYpIxetPnEDk",
+          "name": "FLAME Heating, Cooling, Plumbing, Electrical",
+          "vicinity": "2200 E 11 Mile Rd, Warren",
+          "rating": 4.7,
+          "user_ratings_total": 2875,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvQvK6Y3PJIgRD1_p7AXfSIo",
+          "name": "Done",
+          "vicinity": "2113 E 9 Mile Rd, Warren",
+          "rating": 4.8,
+          "user_ratings_total": 88,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyXJucM4mJYgRE0w2SnmxvC4",
+          "name": "Charter Home Comfort",
+          "vicinity": "33551 Giftos Dr, Clinton Township",
+          "rating": 4.9,
+          "user_ratings_total": 260,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJP1OAMbzRJIgRsbSXpsHueVw",
+          "name": "Mr. Furnace",
+          "vicinity": "20220 Stephens Rd, St Clair Shores",
+          "rating": 4.6,
+          "user_ratings_total": 242,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMSOf9RHRJIgRjytyEhzRdzM",
+          "name": "Friendly Pro Services",
+          "vicinity": "11240 E 9 Mile Rd, Warren",
+          "rating": 4.6,
+          "user_ratings_total": 90,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ__8_1wDWJIgRuz70FrPPsoQ",
+          "name": "Eastside Heating & Cooling",
+          "vicinity": "656 St Clair Ave, Grosse Pointe",
+          "rating": 4.8,
+          "user_ratings_total": 72,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnSJz_gDPJIgR3kSGJMCC4G4",
+          "name": "Cregger Plumbing, Heating & Cooling",
+          "vicinity": "2335 Goodrich St, Ferndale",
+          "rating": 4.9,
+          "user_ratings_total": 6122,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJC_X9BP7FJIgRhrajGJNQlaQ",
+          "name": "Aire Serv of Bloomfield Hills - West Troy",
+          "vicinity": "101 W Big Beaver Rd 14th floor, Troy",
+          "rating": 5,
+          "user_ratings_total": 14,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJixIqSFjGJIgR8diEo8vKMwo",
+          "name": "Birmingham Plumbing Heating & Cooling Company",
+          "vicinity": "655 S Eton St, Birmingham",
+          "rating": 4.9,
+          "user_ratings_total": 826,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg2o227IgJYgR0hW5415MqBg",
+          "name": "Great Dane Heating, Cooling, Electrical, & Plumbing",
+          "vicinity": "36611 Gratiot Ave, Clinton Township",
+          "rating": 4.8,
+          "user_ratings_total": 3083,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD1d5G6cgJYgRWFm3jlrfnlk",
+          "name": "Tech IV",
+          "vicinity": "46796 Hayes Rd, Macomb",
+          "rating": 4.8,
+          "user_ratings_total": 212,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_0JqvzYfJYgRjeHaUT0w7Zo",
+          "name": "Always Quality Heating and Cooling",
+          "vicinity": "47416 Hennings St, Chesterfield",
+          "rating": 5,
+          "user_ratings_total": 162,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJEY6YZ1jPJIgRLdtkWT5kL4c",
+          "name": "Warm or Breezy Heating & Cooling",
+          "vicinity": "220 S Main St #430, Royal Oak",
+          "rating": 5,
+          "user_ratings_total": 233,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 15,
+        "with_details": 15,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Grand Rapids, MI",
+      "raw_places": [
+        {
+          "place_id": "ChIJDxSBuvWlGYgR7uVdRLy8304",
+          "name": "Pro-Tech Heating & Cooling",
+          "vicinity": "4073 Remembrance Rd NW, Grand Rapids",
+          "rating": 4.9,
+          "user_ratings_total": 1082,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2dEjwDuopSAR1TTg9QYPhxw",
+          "name": "Klima Comfort Solutions",
+          "vicinity": "5027 Division Ave S, Grand Rapids",
+          "rating": 5,
+          "user_ratings_total": 160,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVVVVVWWyGYgRv6_ToJCLrX8",
+          "name": "R&R Heating and Cooling",
+          "vicinity": "433 Crofton St SE, Grand Rapids",
+          "rating": 4.9,
+          "user_ratings_total": 228,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0aWNDb-qGYgRCsU1-q5kQh0",
+          "name": "Simple Heating and Air",
+          "vicinity": "6075 Maksimowski Ave NE, Belmont",
+          "rating": 5,
+          "user_ratings_total": 648,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNV2AZ-iwGYgR5tcUDyy_yvQ",
+          "name": "Rx Comfort Heating & Air Conditioning",
+          "vicinity": "2514 Port Sheldon St # 1, Jenison",
+          "rating": 4.9,
+          "user_ratings_total": 326,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAT7rZB9NGIgRRPXkVHyy92E",
+          "name": "Sullivan Heating Cooling Plumbing",
+          "vicinity": "4101 40th St SE STE 1, Kentwood",
+          "rating": 4.9,
+          "user_ratings_total": 115,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtwzNBYapGYgR6LP4OkA_6qw",
+          "name": "Haisma Heating and Cooling",
+          "vicinity": "5514 Alpine Ave NW, Comstock Park",
+          "rating": 5,
+          "user_ratings_total": 575,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpyFbXS6sGYgRTOEzrHlJix8",
+          "name": "Vander Hyde Service",
+          "vicinity": "14200 Ironwood Dr NW, Grand Rapids",
+          "rating": 4.7,
+          "user_ratings_total": 2382,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxWJnomqtGYgRgvViwxnV7C4",
+          "name": "Westshore Mechanical of Grand Rapids",
+          "vicinity": "250 Monroe Ave NW Ste 400, Grand Rapids",
+          "rating": 4.9,
+          "user_ratings_total": 37,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzxfjPAW8GYgRmlXT_gpVtLA",
+          "name": "Kroll Furnace Co Inc",
+          "vicinity": "5820 Balsam Dr, Hudsonville",
+          "rating": 4.9,
+          "user_ratings_total": 139,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx_i1dpW7GYgRAojHPchV8BM",
+          "name": "Platinum Heating & Cooling",
+          "vicinity": "6659 Roger Dr Suite B, Jenison",
+          "rating": 5,
+          "user_ratings_total": 127,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLXfdh1ywGYgRhu0FDRlQGAU",
+          "name": "Vredevoogd Heating & Cooling",
+          "vicinity": "3047 Sangra Ave SW, Grandville",
+          "rating": 4.9,
+          "user_ratings_total": 11178,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJn8FJuACyGYgRZB4ZA2we1uA",
+          "name": "Bel-Aire",
+          "vicinity": "1435 Century Ave SW, Grand Rapids",
+          "rating": 4.8,
+          "user_ratings_total": 414,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJOc-Q3qKtGYgRHYf5TDQzjFM",
+          "name": "Chris Climate Heating and Cooling",
+          "vicinity": "226 James Ave SE, Grand Rapids",
+          "rating": 5,
+          "user_ratings_total": 44,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJN6vbpmlMGIgRMQTaRqFimvU",
+          "name": "Service Professor",
+          "vicinity": "4770 50th St SE, Grand Rapids",
+          "rating": 4.8,
+          "user_ratings_total": 8485,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLxEYlfmuGYgRUcWKSj8XqOQ",
+          "name": "Lake Michigan Heating, Cooling, Plumbing",
+          "vicinity": "269 Lake Michigan Dr NW, Walker",
+          "rating": 4.8,
+          "user_ratings_total": 683,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAbTG9QuzGYgRsX5rO_7Yx0s",
+          "name": "Diverse Contracting LLC",
+          "vicinity": "4486 Burgis Ave SE, Grand Rapids",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSyQr-1KyGYgR871pOVqvd-I",
+          "name": "A-1 Mechanical",
+          "vicinity": "3530 Roger B Chaffee Memorial Blvd SE, Grand Rapids",
+          "rating": 4.7,
+          "user_ratings_total": 49,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHQ2wTC1NGIgRuB7A3FLace4",
+          "name": "Peak Heating and Cooling",
+          "vicinity": "4665 Broadmoor Ave SE #120, Grand Rapids",
+          "rating": 4.9,
+          "user_ratings_total": 83,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzdFe6K6yGYgRMUZQq1IIU0E",
+          "name": "Design",
+          "vicinity": "110 A 54th St SE, Grand Rapids",
+          "rating": 4.5,
+          "user_ratings_total": 57,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 15,
+        "with_details": 15,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Sterling Heights, MI",
+      "raw_places": [
+        {
+          "place_id": "ChIJSY5p2y_oJIgRD2Z1xmLTHjY",
+          "name": "Pilot Mechanical",
+          "vicinity": "1025 John R Rd, Rochester Hills",
+          "rating": 4.9,
+          "user_ratings_total": 246,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBzJ6FMKZ5GgRxTit3QKvExM",
+          "name": "Halo Heating & Cooling",
+          "vicinity": "124 Highland Ave, Rochester",
+          "rating": 5,
+          "user_ratings_total": 107,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJy2KMPuPoJIgRSPf9oU8ofBw",
+          "name": "Ferrara Heating & Air Conditioning Inc",
+          "vicinity": "1576 Serene Ct, Rochester Hills",
+          "rating": 4.9,
+          "user_ratings_total": 394,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJK_ICSgPgJIgRHRSaFs5XAds",
+          "name": "Askar Heating and Cooling, LLC",
+          "vicinity": "46266 Erb Dr, Macomb",
+          "rating": 4.9,
+          "user_ratings_total": 387,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ7aEmh4ghJYgR-i4cuokV4PI",
+          "name": "Finzel's Heating and Cooling",
+          "vicinity": "44335 N Groesbeck Hwy, Clinton Township",
+          "rating": 4.9,
+          "user_ratings_total": 478,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXyXHO45RMIwRxEHICC5Nk5g",
+          "name": "Temp - 1 Heating & Cooling",
+          "vicinity": "2071 E 9 Mile Rd, Warren",
+          "rating": 5,
+          "user_ratings_total": 187,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJm5_4tavEJIgRFBFaeatMiBM",
+          "name": "Arkan's Heating & Air Conditioning Inc.",
+          "vicinity": "13854 Lakeside Cir Suite 303, Sterling Heights",
+          "rating": 4.9,
+          "user_ratings_total": 150,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr67GWLjCJIgRRFXezvJMZAc",
+          "name": "Briarwood Heating & Cooling",
+          "vicinity": "46851 Dequindre Rd, Rochester Hills",
+          "rating": 4.9,
+          "user_ratings_total": 577,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJL_UzgoPHJIgRZ0dsqsLn7Ic",
+          "name": "Comfort Zone Heating and Cooling",
+          "vicinity": "4238 Edgeland Ave, Royal Oak",
+          "rating": 4.8,
+          "user_ratings_total": 312,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6WULHE7dJIgRadR-N1jjvwc",
+          "name": "Koz Heating & Cooling",
+          "vicinity": "7501 Triangle Dr, Sterling Heights",
+          "rating": 4.8,
+          "user_ratings_total": 227,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtU8cPv3PJIgRYpIxetPnEDk",
+          "name": "FLAME Heating, Cooling, Plumbing, Electrical",
+          "vicinity": "2200 E 11 Mile Rd, Warren",
+          "rating": 4.7,
+          "user_ratings_total": 2875,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvQvK6Y3PJIgRD1_p7AXfSIo",
+          "name": "Done",
+          "vicinity": "2113 E 9 Mile Rd, Warren",
+          "rating": 4.8,
+          "user_ratings_total": 88,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtTInpB3HJIgRg3ivvJExlvs",
+          "name": "Cardinal Heating and Cooling",
+          "vicinity": "261 E Maple Rd Suite 100, Birmingham",
+          "rating": 5,
+          "user_ratings_total": 25,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFcyOYcTDJIgRmCQrFhZ4GeA",
+          "name": "Cardinal Heating & Cooling",
+          "vicinity": "1950 S Rochester Rd Suite 1057, Rochester Hills",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFVxxGynRJIgRbkJtVeRU830",
+          "name": "Elite Degrees Heating & Cooling",
+          "vicinity": "52188 Van Dyke Ave STE 116, Shelby Township",
+          "rating": 5,
+          "user_ratings_total": 131,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyXJucM4mJYgRE0w2SnmxvC4",
+          "name": "Charter Home Comfort",
+          "vicinity": "33551 Giftos Dr, Clinton Township",
+          "rating": 4.9,
+          "user_ratings_total": 260,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJP1OAMbzRJIgRsbSXpsHueVw",
+          "name": "Mr. Furnace",
+          "vicinity": "20220 Stephens Rd, St Clair Shores",
+          "rating": 4.6,
+          "user_ratings_total": 242,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJj4_85f3IJIgRmUUPrcGBPN0",
+          "name": "David's Heating & Cooling",
+          "vicinity": "24361 Greenfield Rd Suite 207, Southfield",
+          "rating": 4.9,
+          "user_ratings_total": 88,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMSOf9RHRJIgRjytyEhzRdzM",
+          "name": "Friendly Pro Services",
+          "vicinity": "11240 E 9 Mile Rd, Warren",
+          "rating": 4.6,
+          "user_ratings_total": 90,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9Y5MNcnHJIgRyL7Ib-pvLs8",
+          "name": "Typhoon HVAC of Southfield MI",
+          "vicinity": "40000 Balewood St, Southfield",
+          "rating": 5,
+          "user_ratings_total": 5,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 16,
+        "with_details": 16,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Detroit, MI",
+      "raw_places": [
+        {
+          "place_id": "ChIJXyXHO45RMIwRxEHICC5Nk5g",
+          "name": "Temp - 1 Heating & Cooling",
+          "vicinity": "2071 E 9 Mile Rd, Warren",
+          "rating": 5,
+          "user_ratings_total": 187,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcw4JHXs3O4gRh2cnKpshXRk",
+          "name": "Gomez Mechanical Heating and Cooling",
+          "vicinity": "3725 Fort St, Lincoln Park",
+          "rating": 4.9,
+          "user_ratings_total": 222,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3T4epbwsO4gRtbrHX3Ir_Cs",
+          "name": "Absolute Comfort Control Services",
+          "vicinity": "SUITE #27, 4080 North Service Rd E #2, Windsor",
+          "rating": 4.9,
+          "user_ratings_total": 1405,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvQvK6Y3PJIgRD1_p7AXfSIo",
+          "name": "Done",
+          "vicinity": "2113 E 9 Mile Rd, Warren",
+          "rating": 4.8,
+          "user_ratings_total": 88,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJjV11vWTCjEAR2t6EwR6f5M4",
+          "name": "Seasons Mechanical Services",
+          "vicinity": "1239 Huntwick Pl, LaSalle",
+          "rating": 5,
+          "user_ratings_total": 119,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJeeX5vnYyO4gR4ll3QeZLvk8",
+          "name": "Fahrhall Home Comfort Specialists",
+          "vicinity": "3822 Sandwich St., Windsor",
+          "rating": 4.7,
+          "user_ratings_total": 364,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcTs7TP8sO4gR62kSzY05n0g",
+          "name": "Guaranteed Comfort Heating & Cooling",
+          "vicinity": "2722 Meldrum Rd, Windsor",
+          "rating": 4.9,
+          "user_ratings_total": 165,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ37Hu54UrO4gRZi4VlDSaDFg",
+          "name": "CK Mechanical Heating and Cooling Inc.",
+          "vicinity": "3846 Peter St, Windsor",
+          "rating": 4.8,
+          "user_ratings_total": 799,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJz9w80pfVOogR8UHadg9BmaI",
+          "name": "Syles Mechanical Services",
+          "vicinity": "3255 Odessa Dr, Tecumseh",
+          "rating": 4.8,
+          "user_ratings_total": 677,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ__8_1wDWJIgRuz70FrPPsoQ",
+          "name": "Eastside Heating & Cooling",
+          "vicinity": "656 St Clair Ave, Grosse Pointe",
+          "rating": 4.8,
+          "user_ratings_total": 72,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMSOf9RHRJIgRjytyEhzRdzM",
+          "name": "Friendly Pro Services",
+          "vicinity": "11240 E 9 Mile Rd, Warren",
+          "rating": 4.6,
+          "user_ratings_total": 90,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ28qaxj0tO4gR144jN1f6ypQ",
+          "name": "AD Trades Mechanical Inc( heating & Cooling)",
+          "vicinity": "716 Vanier St, Windsor",
+          "rating": 5,
+          "user_ratings_total": 130,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnSJz_gDPJIgR3kSGJMCC4G4",
+          "name": "Cregger Plumbing, Heating & Cooling",
+          "vicinity": "2335 Goodrich St, Ferndale",
+          "rating": 4.9,
+          "user_ratings_total": 6122,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbSaqPxo1O4gRAlJKgJUo3mo",
+          "name": "A Power Heating & Cooling , Refrigeration",
+          "vicinity": "3101 Byrd St, Dearborn",
+          "rating": 4.9,
+          "user_ratings_total": 83,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSQEBHd7VJIgRftyxnhWcHF4",
+          "name": "Warm or Breezy Heating & Cooling",
+          "vicinity": "15324 Mack Ave Suite 704, Grosse Pointe Park",
+          "rating": 4.9,
+          "user_ratings_total": 271,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJTX6QGQosO4gRrV0Dcjg1zLY",
+          "name": "Bryant Heating & Cooling Service Experts",
+          "vicinity": "3194 Devon Dr, Windsor",
+          "rating": 4.8,
+          "user_ratings_total": 1331,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJCcyxZmLXJIgR5NDD-pw5y2c",
+          "name": "Warm or Breezy Heating & Cooling",
+          "vicinity": "20417 Hunt Club Dr, Harper Woods",
+          "rating": 4.9,
+          "user_ratings_total": 287,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFfwvpNgwO4gR2_AkoT2w8D4",
+          "name": "Expert Mechanical Service",
+          "vicinity": "542 Biddle Ave, Wyandotte",
+          "rating": 4.7,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLcd3Mdpp4U4Rce2Y08iwEIo",
+          "name": "All Things Heating & Cooling",
+          "vicinity": "1841 18th St, Wyandotte",
+          "rating": 5,
+          "user_ratings_total": 55,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8fcPJoQ3O4gR48pa52zB-aE",
+          "name": "Flo-Aire Heating, Cooling & Electrical, Inc.",
+          "vicinity": "15761 Eureka Rd, Southgate",
+          "rating": 4.8,
+          "user_ratings_total": 331,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 16,
+        "with_details": 16,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Ann Arbor, MI",
+      "raw_places": [
+        {
+          "place_id": "ChIJP3eZPrAiSU4Roe-r9pxhk4M",
+          "name": "Lashbrook Mechanical",
+          "vicinity": "3374 Landings Dr, Ann Arbor",
+          "rating": 4.9,
+          "user_ratings_total": 62,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoQ_ewIK2PIgR1UYcvdahFWQ",
+          "name": "Haley Mechanical - Dexter",
+          "vicinity": "8415 Dexter-Chelsea Rd, Dexter",
+          "rating": 4.9,
+          "user_ratings_total": 4245,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJiQY6xiq3PIgRNh_GTdlKX0w",
+          "name": "Haley Mechanical - Ann Arbor",
+          "vicinity": "62 Enterprise Dr Suite C, Ann Arbor",
+          "rating": 4.8,
+          "user_ratings_total": 97,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_6-NjC6oPIgRkF7XzC8UHw0",
+          "name": "A-Team Heating and Cooling",
+          "vicinity": "1882 E Michigan Ave, Ypsilanti",
+          "rating": 4.9,
+          "user_ratings_total": 196,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJofyLLGyvPIgR8NK000DN1x0",
+          "name": "Comfort Mechanical Heating and Cooling",
+          "vicinity": "455 E Eisenhower Pkwy Suite 300, Ann Arbor",
+          "rating": 4.9,
+          "user_ratings_total": 102,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgehpvsexPIgRF192yTECAsc",
+          "name": "Indoor Comfort Heating & Cooling",
+          "vicinity": "5204 Jackson Rd Suite 150, Ann Arbor",
+          "rating": 4.9,
+          "user_ratings_total": 489,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpQDDqwGvPIgRM4V7gUqxw9w",
+          "name": "Fry Heating, Cooling & Plumbing",
+          "vicinity": "2311 E Stadium Blvd #214, Ann Arbor",
+          "rating": 4.9,
+          "user_ratings_total": 213,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJd-F9hAeyPIgR67HTZ5icwCo",
+          "name": "Maintain It! LLC",
+          "vicinity": "602 Riversedge Dr, Saline",
+          "rating": 5,
+          "user_ratings_total": 23,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJj1Ue9qhcI4gR1qsblptEkSM",
+          "name": "Mrs. Michael Plumbers, Electricians, and HVAC Technicians",
+          "vicinity": "3930 Varsity Dr, Ann Arbor",
+          "rating": 4.8,
+          "user_ratings_total": 924,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6VBMQFC0PIgR6IZjJF1k-CI",
+          "name": "CMR Mechanical, LLC",
+          "vicinity": "3611 Central St, Dexter",
+          "rating": 4.9,
+          "user_ratings_total": 135,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJlyf-WTyuPIgR2dDC10rtGCg",
+          "name": "4-Seasons Furnace Company",
+          "vicinity": "116 W Liberty St, Ann Arbor",
+          "rating": 4.9,
+          "user_ratings_total": 65,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5wDac4u2PIgRbL2bdP5QCBk",
+          "name": "Altech Mechanical Service",
+          "vicinity": "7885 Jackson Rd STE 4, Ann Arbor",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJX_ewvpuvPIgR12iBxclJmnQ",
+          "name": "Jetstream Mechanical",
+          "vicinity": "808 Phoenix Dr, Ann Arbor",
+          "rating": 4.8,
+          "user_ratings_total": 72,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJp4rbSlF7a4YRDIa-Gwl8kks",
+          "name": "Elfords Heating and Cooling",
+          "vicinity": "3728 Carpenter Rd, Ypsilanti",
+          "rating": 5,
+          "user_ratings_total": 142,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSRxq9r6vPIgR1FNHKeq_kqw",
+          "name": "Sharon's Heating & Air Conditioning",
+          "vicinity": "2500 Packard St Suite 201B, Ann Arbor",
+          "rating": 4.8,
+          "user_ratings_total": 47,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxwT5jnylPIgReoq8xFYUYSI",
+          "name": "Robertson Morrison Inc",
+          "vicinity": "4721 Runway Blvd, Ann Arbor",
+          "rating": 4.7,
+          "user_ratings_total": 50,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMUBU_YeoPIgRXR0MJmqEB9U",
+          "name": "Pat Walters & Sons",
+          "vicinity": "636 S Mansfield St, Ypsilanti",
+          "rating": 4.5,
+          "user_ratings_total": 86,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLStjiZmnPIgRy6HNgkbvIu4",
+          "name": "Barry's HVAC Service",
+          "vicinity": "10124 Willis Rd, Willis",
+          "rating": 4.9,
+          "user_ratings_total": 75,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJJ2WgvsixPIgRSnyTaUfyrjc",
+          "name": "Koch & White Inc",
+          "vicinity": "2608 W Liberty Rd, Ann Arbor",
+          "rating": 4.5,
+          "user_ratings_total": 153,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZQsjnXJLI4gRJRKXMlDRfl0",
+          "name": "365 Mechanical, LLC",
+          "vicinity": "7985 Chamberlin Rd, Dexter",
+          "rating": 5,
+          "user_ratings_total": 75,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 16,
+        "with_details": 16,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Lansing, MI",
+      "raw_places": [
+        {
+          "place_id": "ChIJ6wBBAfTHIogRbJ1ChHKpwBY",
+          "name": "Butler",
+          "vicinity": "5186 Windsor Hwy, Potterville",
+          "rating": 5,
+          "user_ratings_total": 227,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJywZZ3gzAIogRPklGrTGb4PM",
+          "name": "A-1 Mechanical",
+          "vicinity": "3610 Old Lansing Rd, Lansing",
+          "rating": 4.8,
+          "user_ratings_total": 1676,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWbzqZQHAIogRKk8ybK54iOs",
+          "name": "Vredevoogd Heating & Cooling",
+          "vicinity": "624 Truck Ct, Lansing",
+          "rating": 4.9,
+          "user_ratings_total": 2310,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5RsSICPDIogRWqC729Rjq24",
+          "name": "North Winds Heating & Cooling Inc",
+          "vicinity": "2861 Jolly Rd, Okemos",
+          "rating": 4.9,
+          "user_ratings_total": 1833,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ66yYmFTHIogR6huK58iGp2Y",
+          "name": "Pro-Tech",
+          "vicinity": "2556 Alamo Dr #50b, Lansing",
+          "rating": 5,
+          "user_ratings_total": 7,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJryYgD8XBIogRaykDgTeKp2Y",
+          "name": "G.L. Wilson Heating & Cooling",
+          "vicinity": "5135 N Aurelius Rd Suite A, Lansing",
+          "rating": 4.6,
+          "user_ratings_total": 173,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJK-SArFrdIogRqofKoJpkzMM",
+          "name": "Applegate Home Comfort",
+          "vicinity": "2805 Jolly Rd STE 200, Okemos",
+          "rating": 4.9,
+          "user_ratings_total": 2031,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9TmfNBrqIogRkftomD6EaEk",
+          "name": "WHITNEY SERVICES",
+          "vicinity": "1419 Sheldon St, Lansing",
+          "rating": 4.4,
+          "user_ratings_total": 309,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJObMSmDGfNCERnShypjN9520",
+          "name": "Rise Up Heating & Cooling",
+          "vicinity": "3000 W Michigan Ave, Lansing",
+          "rating": 4.8,
+          "user_ratings_total": 131,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcRXDlbbBIogRRgJGsZbbuXE",
+          "name": "E. H. Ward Company",
+          "vicinity": "415 W Mt Hope Ave, Lansing",
+          "rating": 4.9,
+          "user_ratings_total": 277,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIVBsKAbAIogRgzHj-fFJxCw",
+          "name": "Doty Mechanical",
+          "vicinity": "615 S Waverly Rd, Lansing",
+          "rating": 4.9,
+          "user_ratings_total": 534,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXVoowzTmIogRo243Zne09CQ",
+          "name": "The Meridian Company",
+          "vicinity": "1999 Saginaw Hwy, East Lansing",
+          "rating": 4.8,
+          "user_ratings_total": 1336,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJu4SwTX69IogRog160WpKpWs",
+          "name": "Superior Home Comfort",
+          "vicinity": "130 Promec Dr, Grand Ledge",
+          "rating": 5,
+          "user_ratings_total": 65,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyy_u1MDBIogR_cFz6PlgxwI",
+          "name": "Hager Fox Heating & Air Conditioning",
+          "vicinity": "2960 Ena Dr, Lansing",
+          "rating": 4.8,
+          "user_ratings_total": 1382,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJM32KIq-VIogRifpPvca33L4",
+          "name": "Service Professor",
+          "vicinity": "7974 W Grand River Hwy, Grand Ledge",
+          "rating": 4.9,
+          "user_ratings_total": 1383,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJD2zloWrrIogR0Da2upeuNh8",
+          "name": "H&S MECHANICAL LLC",
+          "vicinity": "339 N Deerfield Ave, Lansing",
+          "rating": 5,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr5g-cpdyWqIRt8wy3kZhmLQ",
+          "name": "Controlled Comfort",
+          "vicinity": "1500 W State Rd, Lansing",
+          "rating": 5,
+          "user_ratings_total": 51,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ7ZCAcBz3d0MRhSUQm2wjgn4",
+          "name": "Lansing Mechanical",
+          "vicinity": "3523 S Cedar St, Lansing",
+          "rating": 5,
+          "user_ratings_total": 29,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJqxdhjoLqIogRHAl_mn53ZJQ",
+          "name": "All Star Mechanical",
+          "vicinity": "3186 Pine Tree Rd, Lansing",
+          "rating": 4.7,
+          "user_ratings_total": 373,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJY3QRvOLrIogR8C43QufXuO0",
+          "name": "Clay Brewer Refrigeration",
+          "vicinity": "14800 Wood Rd, Lansing",
+          "rating": 4.5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 9,
+        "with_details": 9,
+        "final_radius_km": 15.0
+      }
+    }
+  ],
+  "all_raw_places": [
+    {
+      "place_id": "ChIJK_ICSgPgJIgRHRSaFs5XAds",
+      "name": "Askar Heating and Cooling, LLC",
+      "vicinity": "46266 Erb Dr, Macomb",
+      "rating": 4.9,
+      "user_ratings_total": 387,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ7aEmh4ghJYgR-i4cuokV4PI",
+      "name": "Finzel's Heating and Cooling",
+      "vicinity": "44335 N Groesbeck Hwy, Clinton Township",
+      "rating": 4.9,
+      "user_ratings_total": 478,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXyXHO45RMIwRxEHICC5Nk5g",
+      "name": "Temp - 1 Heating & Cooling",
+      "vicinity": "2071 E 9 Mile Rd, Warren",
+      "rating": 5,
+      "user_ratings_total": 187,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJm5_4tavEJIgRFBFaeatMiBM",
+      "name": "Arkan's Heating & Air Conditioning Inc.",
+      "vicinity": "13854 Lakeside Cir Suite 303, Sterling Heights",
+      "rating": 4.9,
+      "user_ratings_total": 150,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJr67GWLjCJIgRRFXezvJMZAc",
+      "name": "Briarwood Heating & Cooling",
+      "vicinity": "46851 Dequindre Rd, Rochester Hills",
+      "rating": 4.9,
+      "user_ratings_total": 577,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJL_UzgoPHJIgRZ0dsqsLn7Ic",
+      "name": "Comfort Zone Heating and Cooling",
+      "vicinity": "4238 Edgeland Ave, Royal Oak",
+      "rating": 4.8,
+      "user_ratings_total": 312,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6WULHE7dJIgRadR-N1jjvwc",
+      "name": "Koz Heating & Cooling",
+      "vicinity": "7501 Triangle Dr, Sterling Heights",
+      "rating": 4.8,
+      "user_ratings_total": 227,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJtU8cPv3PJIgRYpIxetPnEDk",
+      "name": "FLAME Heating, Cooling, Plumbing, Electrical",
+      "vicinity": "2200 E 11 Mile Rd, Warren",
+      "rating": 4.7,
+      "user_ratings_total": 2875,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvQvK6Y3PJIgRD1_p7AXfSIo",
+      "name": "Done",
+      "vicinity": "2113 E 9 Mile Rd, Warren",
+      "rating": 4.8,
+      "user_ratings_total": 88,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyXJucM4mJYgRE0w2SnmxvC4",
+      "name": "Charter Home Comfort",
+      "vicinity": "33551 Giftos Dr, Clinton Township",
+      "rating": 4.9,
+      "user_ratings_total": 260,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJP1OAMbzRJIgRsbSXpsHueVw",
+      "name": "Mr. Furnace",
+      "vicinity": "20220 Stephens Rd, St Clair Shores",
+      "rating": 4.6,
+      "user_ratings_total": 242,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMSOf9RHRJIgRjytyEhzRdzM",
+      "name": "Friendly Pro Services",
+      "vicinity": "11240 E 9 Mile Rd, Warren",
+      "rating": 4.6,
+      "user_ratings_total": 90,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ__8_1wDWJIgRuz70FrPPsoQ",
+      "name": "Eastside Heating & Cooling",
+      "vicinity": "656 St Clair Ave, Grosse Pointe",
+      "rating": 4.8,
+      "user_ratings_total": 72,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnSJz_gDPJIgR3kSGJMCC4G4",
+      "name": "Cregger Plumbing, Heating & Cooling",
+      "vicinity": "2335 Goodrich St, Ferndale",
+      "rating": 4.9,
+      "user_ratings_total": 6122,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJC_X9BP7FJIgRhrajGJNQlaQ",
+      "name": "Aire Serv of Bloomfield Hills - West Troy",
+      "vicinity": "101 W Big Beaver Rd 14th floor, Troy",
+      "rating": 5,
+      "user_ratings_total": 14,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJixIqSFjGJIgR8diEo8vKMwo",
+      "name": "Birmingham Plumbing Heating & Cooling Company",
+      "vicinity": "655 S Eton St, Birmingham",
+      "rating": 4.9,
+      "user_ratings_total": 826,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJg2o227IgJYgR0hW5415MqBg",
+      "name": "Great Dane Heating, Cooling, Electrical, & Plumbing",
+      "vicinity": "36611 Gratiot Ave, Clinton Township",
+      "rating": 4.8,
+      "user_ratings_total": 3083,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJD1d5G6cgJYgRWFm3jlrfnlk",
+      "name": "Tech IV",
+      "vicinity": "46796 Hayes Rd, Macomb",
+      "rating": 4.8,
+      "user_ratings_total": 212,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_0JqvzYfJYgRjeHaUT0w7Zo",
+      "name": "Always Quality Heating and Cooling",
+      "vicinity": "47416 Hennings St, Chesterfield",
+      "rating": 5,
+      "user_ratings_total": 162,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJEY6YZ1jPJIgRLdtkWT5kL4c",
+      "name": "Warm or Breezy Heating & Cooling",
+      "vicinity": "220 S Main St #430, Royal Oak",
+      "rating": 5,
+      "user_ratings_total": 233,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJDxSBuvWlGYgR7uVdRLy8304",
+      "name": "Pro-Tech Heating & Cooling",
+      "vicinity": "4073 Remembrance Rd NW, Grand Rapids",
+      "rating": 4.9,
+      "user_ratings_total": 1082,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2dEjwDuopSAR1TTg9QYPhxw",
+      "name": "Klima Comfort Solutions",
+      "vicinity": "5027 Division Ave S, Grand Rapids",
+      "rating": 5,
+      "user_ratings_total": 160,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVVVVVWWyGYgRv6_ToJCLrX8",
+      "name": "R&R Heating and Cooling",
+      "vicinity": "433 Crofton St SE, Grand Rapids",
+      "rating": 4.9,
+      "user_ratings_total": 228,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0aWNDb-qGYgRCsU1-q5kQh0",
+      "name": "Simple Heating and Air",
+      "vicinity": "6075 Maksimowski Ave NE, Belmont",
+      "rating": 5,
+      "user_ratings_total": 648,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNV2AZ-iwGYgR5tcUDyy_yvQ",
+      "name": "Rx Comfort Heating & Air Conditioning",
+      "vicinity": "2514 Port Sheldon St # 1, Jenison",
+      "rating": 4.9,
+      "user_ratings_total": 326,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAT7rZB9NGIgRRPXkVHyy92E",
+      "name": "Sullivan Heating Cooling Plumbing",
+      "vicinity": "4101 40th St SE STE 1, Kentwood",
+      "rating": 4.9,
+      "user_ratings_total": 115,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJtwzNBYapGYgR6LP4OkA_6qw",
+      "name": "Haisma Heating and Cooling",
+      "vicinity": "5514 Alpine Ave NW, Comstock Park",
+      "rating": 5,
+      "user_ratings_total": 575,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpyFbXS6sGYgRTOEzrHlJix8",
+      "name": "Vander Hyde Service",
+      "vicinity": "14200 Ironwood Dr NW, Grand Rapids",
+      "rating": 4.7,
+      "user_ratings_total": 2382,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJxWJnomqtGYgRgvViwxnV7C4",
+      "name": "Westshore Mechanical of Grand Rapids",
+      "vicinity": "250 Monroe Ave NW Ste 400, Grand Rapids",
+      "rating": 4.9,
+      "user_ratings_total": 37,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzxfjPAW8GYgRmlXT_gpVtLA",
+      "name": "Kroll Furnace Co Inc",
+      "vicinity": "5820 Balsam Dr, Hudsonville",
+      "rating": 4.9,
+      "user_ratings_total": 139,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJx_i1dpW7GYgRAojHPchV8BM",
+      "name": "Platinum Heating & Cooling",
+      "vicinity": "6659 Roger Dr Suite B, Jenison",
+      "rating": 5,
+      "user_ratings_total": 127,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLXfdh1ywGYgRhu0FDRlQGAU",
+      "name": "Vredevoogd Heating & Cooling",
+      "vicinity": "3047 Sangra Ave SW, Grandville",
+      "rating": 4.9,
+      "user_ratings_total": 11178,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJn8FJuACyGYgRZB4ZA2we1uA",
+      "name": "Bel-Aire",
+      "vicinity": "1435 Century Ave SW, Grand Rapids",
+      "rating": 4.8,
+      "user_ratings_total": 414,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJOc-Q3qKtGYgRHYf5TDQzjFM",
+      "name": "Chris Climate Heating and Cooling",
+      "vicinity": "226 James Ave SE, Grand Rapids",
+      "rating": 5,
+      "user_ratings_total": 44,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN6vbpmlMGIgRMQTaRqFimvU",
+      "name": "Service Professor",
+      "vicinity": "4770 50th St SE, Grand Rapids",
+      "rating": 4.8,
+      "user_ratings_total": 8485,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLxEYlfmuGYgRUcWKSj8XqOQ",
+      "name": "Lake Michigan Heating, Cooling, Plumbing",
+      "vicinity": "269 Lake Michigan Dr NW, Walker",
+      "rating": 4.8,
+      "user_ratings_total": 683,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAbTG9QuzGYgRsX5rO_7Yx0s",
+      "name": "Diverse Contracting LLC",
+      "vicinity": "4486 Burgis Ave SE, Grand Rapids",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSyQr-1KyGYgR871pOVqvd-I",
+      "name": "A-1 Mechanical",
+      "vicinity": "3530 Roger B Chaffee Memorial Blvd SE, Grand Rapids",
+      "rating": 4.7,
+      "user_ratings_total": 49,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJHQ2wTC1NGIgRuB7A3FLace4",
+      "name": "Peak Heating and Cooling",
+      "vicinity": "4665 Broadmoor Ave SE #120, Grand Rapids",
+      "rating": 4.9,
+      "user_ratings_total": 83,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzdFe6K6yGYgRMUZQq1IIU0E",
+      "name": "Design",
+      "vicinity": "110 A 54th St SE, Grand Rapids",
+      "rating": 4.5,
+      "user_ratings_total": 57,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSY5p2y_oJIgRD2Z1xmLTHjY",
+      "name": "Pilot Mechanical",
+      "vicinity": "1025 John R Rd, Rochester Hills",
+      "rating": 4.9,
+      "user_ratings_total": 246,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBzJ6FMKZ5GgRxTit3QKvExM",
+      "name": "Halo Heating & Cooling",
+      "vicinity": "124 Highland Ave, Rochester",
+      "rating": 5,
+      "user_ratings_total": 107,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJy2KMPuPoJIgRSPf9oU8ofBw",
+      "name": "Ferrara Heating & Air Conditioning Inc",
+      "vicinity": "1576 Serene Ct, Rochester Hills",
+      "rating": 4.9,
+      "user_ratings_total": 394,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJtTInpB3HJIgRg3ivvJExlvs",
+      "name": "Cardinal Heating and Cooling",
+      "vicinity": "261 E Maple Rd Suite 100, Birmingham",
+      "rating": 5,
+      "user_ratings_total": 25,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFcyOYcTDJIgRmCQrFhZ4GeA",
+      "name": "Cardinal Heating & Cooling",
+      "vicinity": "1950 S Rochester Rd Suite 1057, Rochester Hills",
+      "rating": 5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFVxxGynRJIgRbkJtVeRU830",
+      "name": "Elite Degrees Heating & Cooling",
+      "vicinity": "52188 Van Dyke Ave STE 116, Shelby Township",
+      "rating": 5,
+      "user_ratings_total": 131,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJj4_85f3IJIgRmUUPrcGBPN0",
+      "name": "David's Heating & Cooling",
+      "vicinity": "24361 Greenfield Rd Suite 207, Southfield",
+      "rating": 4.9,
+      "user_ratings_total": 88,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9Y5MNcnHJIgRyL7Ib-pvLs8",
+      "name": "Typhoon HVAC of Southfield MI",
+      "vicinity": "40000 Balewood St, Southfield",
+      "rating": 5,
+      "user_ratings_total": 5,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcw4JHXs3O4gRh2cnKpshXRk",
+      "name": "Gomez Mechanical Heating and Cooling",
+      "vicinity": "3725 Fort St, Lincoln Park",
+      "rating": 4.9,
+      "user_ratings_total": 222,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3T4epbwsO4gRtbrHX3Ir_Cs",
+      "name": "Absolute Comfort Control Services",
+      "vicinity": "SUITE #27, 4080 North Service Rd E #2, Windsor",
+      "rating": 4.9,
+      "user_ratings_total": 1405,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJjV11vWTCjEAR2t6EwR6f5M4",
+      "name": "Seasons Mechanical Services",
+      "vicinity": "1239 Huntwick Pl, LaSalle",
+      "rating": 5,
+      "user_ratings_total": 119,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJeeX5vnYyO4gR4ll3QeZLvk8",
+      "name": "Fahrhall Home Comfort Specialists",
+      "vicinity": "3822 Sandwich St., Windsor",
+      "rating": 4.7,
+      "user_ratings_total": 364,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcTs7TP8sO4gR62kSzY05n0g",
+      "name": "Guaranteed Comfort Heating & Cooling",
+      "vicinity": "2722 Meldrum Rd, Windsor",
+      "rating": 4.9,
+      "user_ratings_total": 165,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ37Hu54UrO4gRZi4VlDSaDFg",
+      "name": "CK Mechanical Heating and Cooling Inc.",
+      "vicinity": "3846 Peter St, Windsor",
+      "rating": 4.8,
+      "user_ratings_total": 799,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJz9w80pfVOogR8UHadg9BmaI",
+      "name": "Syles Mechanical Services",
+      "vicinity": "3255 Odessa Dr, Tecumseh",
+      "rating": 4.8,
+      "user_ratings_total": 677,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ28qaxj0tO4gR144jN1f6ypQ",
+      "name": "AD Trades Mechanical Inc( heating & Cooling)",
+      "vicinity": "716 Vanier St, Windsor",
+      "rating": 5,
+      "user_ratings_total": 130,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJbSaqPxo1O4gRAlJKgJUo3mo",
+      "name": "A Power Heating & Cooling , Refrigeration",
+      "vicinity": "3101 Byrd St, Dearborn",
+      "rating": 4.9,
+      "user_ratings_total": 83,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSQEBHd7VJIgRftyxnhWcHF4",
+      "name": "Warm or Breezy Heating & Cooling",
+      "vicinity": "15324 Mack Ave Suite 704, Grosse Pointe Park",
+      "rating": 4.9,
+      "user_ratings_total": 271,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJTX6QGQosO4gRrV0Dcjg1zLY",
+      "name": "Bryant Heating & Cooling Service Experts",
+      "vicinity": "3194 Devon Dr, Windsor",
+      "rating": 4.8,
+      "user_ratings_total": 1331,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJCcyxZmLXJIgR5NDD-pw5y2c",
+      "name": "Warm or Breezy Heating & Cooling",
+      "vicinity": "20417 Hunt Club Dr, Harper Woods",
+      "rating": 4.9,
+      "user_ratings_total": 287,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFfwvpNgwO4gR2_AkoT2w8D4",
+      "name": "Expert Mechanical Service",
+      "vicinity": "542 Biddle Ave, Wyandotte",
+      "rating": 4.7,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLcd3Mdpp4U4Rce2Y08iwEIo",
+      "name": "All Things Heating & Cooling",
+      "vicinity": "1841 18th St, Wyandotte",
+      "rating": 5,
+      "user_ratings_total": 55,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8fcPJoQ3O4gR48pa52zB-aE",
+      "name": "Flo-Aire Heating, Cooling & Electrical, Inc.",
+      "vicinity": "15761 Eureka Rd, Southgate",
+      "rating": 4.8,
+      "user_ratings_total": 331,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJP3eZPrAiSU4Roe-r9pxhk4M",
+      "name": "Lashbrook Mechanical",
+      "vicinity": "3374 Landings Dr, Ann Arbor",
+      "rating": 4.9,
+      "user_ratings_total": 62,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJoQ_ewIK2PIgR1UYcvdahFWQ",
+      "name": "Haley Mechanical - Dexter",
+      "vicinity": "8415 Dexter-Chelsea Rd, Dexter",
+      "rating": 4.9,
+      "user_ratings_total": 4245,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJiQY6xiq3PIgRNh_GTdlKX0w",
+      "name": "Haley Mechanical - Ann Arbor",
+      "vicinity": "62 Enterprise Dr Suite C, Ann Arbor",
+      "rating": 4.8,
+      "user_ratings_total": 97,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_6-NjC6oPIgRkF7XzC8UHw0",
+      "name": "A-Team Heating and Cooling",
+      "vicinity": "1882 E Michigan Ave, Ypsilanti",
+      "rating": 4.9,
+      "user_ratings_total": 196,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJofyLLGyvPIgR8NK000DN1x0",
+      "name": "Comfort Mechanical Heating and Cooling",
+      "vicinity": "455 E Eisenhower Pkwy Suite 300, Ann Arbor",
+      "rating": 4.9,
+      "user_ratings_total": 102,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgehpvsexPIgRF192yTECAsc",
+      "name": "Indoor Comfort Heating & Cooling",
+      "vicinity": "5204 Jackson Rd Suite 150, Ann Arbor",
+      "rating": 4.9,
+      "user_ratings_total": 489,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpQDDqwGvPIgRM4V7gUqxw9w",
+      "name": "Fry Heating, Cooling & Plumbing",
+      "vicinity": "2311 E Stadium Blvd #214, Ann Arbor",
+      "rating": 4.9,
+      "user_ratings_total": 213,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJd-F9hAeyPIgR67HTZ5icwCo",
+      "name": "Maintain It! LLC",
+      "vicinity": "602 Riversedge Dr, Saline",
+      "rating": 5,
+      "user_ratings_total": 23,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJj1Ue9qhcI4gR1qsblptEkSM",
+      "name": "Mrs. Michael Plumbers, Electricians, and HVAC Technicians",
+      "vicinity": "3930 Varsity Dr, Ann Arbor",
+      "rating": 4.8,
+      "user_ratings_total": 924,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6VBMQFC0PIgR6IZjJF1k-CI",
+      "name": "CMR Mechanical, LLC",
+      "vicinity": "3611 Central St, Dexter",
+      "rating": 4.9,
+      "user_ratings_total": 135,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJlyf-WTyuPIgR2dDC10rtGCg",
+      "name": "4-Seasons Furnace Company",
+      "vicinity": "116 W Liberty St, Ann Arbor",
+      "rating": 4.9,
+      "user_ratings_total": 65,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5wDac4u2PIgRbL2bdP5QCBk",
+      "name": "Altech Mechanical Service",
+      "vicinity": "7885 Jackson Rd STE 4, Ann Arbor",
+      "rating": 5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJX_ewvpuvPIgR12iBxclJmnQ",
+      "name": "Jetstream Mechanical",
+      "vicinity": "808 Phoenix Dr, Ann Arbor",
+      "rating": 4.8,
+      "user_ratings_total": 72,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJp4rbSlF7a4YRDIa-Gwl8kks",
+      "name": "Elfords Heating and Cooling",
+      "vicinity": "3728 Carpenter Rd, Ypsilanti",
+      "rating": 5,
+      "user_ratings_total": 142,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSRxq9r6vPIgR1FNHKeq_kqw",
+      "name": "Sharon's Heating & Air Conditioning",
+      "vicinity": "2500 Packard St Suite 201B, Ann Arbor",
+      "rating": 4.8,
+      "user_ratings_total": 47,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJxwT5jnylPIgReoq8xFYUYSI",
+      "name": "Robertson Morrison Inc",
+      "vicinity": "4721 Runway Blvd, Ann Arbor",
+      "rating": 4.7,
+      "user_ratings_total": 50,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMUBU_YeoPIgRXR0MJmqEB9U",
+      "name": "Pat Walters & Sons",
+      "vicinity": "636 S Mansfield St, Ypsilanti",
+      "rating": 4.5,
+      "user_ratings_total": 86,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLStjiZmnPIgRy6HNgkbvIu4",
+      "name": "Barry's HVAC Service",
+      "vicinity": "10124 Willis Rd, Willis",
+      "rating": 4.9,
+      "user_ratings_total": 75,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJJ2WgvsixPIgRSnyTaUfyrjc",
+      "name": "Koch & White Inc",
+      "vicinity": "2608 W Liberty Rd, Ann Arbor",
+      "rating": 4.5,
+      "user_ratings_total": 153,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZQsjnXJLI4gRJRKXMlDRfl0",
+      "name": "365 Mechanical, LLC",
+      "vicinity": "7985 Chamberlin Rd, Dexter",
+      "rating": 5,
+      "user_ratings_total": 75,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6wBBAfTHIogRbJ1ChHKpwBY",
+      "name": "Butler",
+      "vicinity": "5186 Windsor Hwy, Potterville",
+      "rating": 5,
+      "user_ratings_total": 227,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJywZZ3gzAIogRPklGrTGb4PM",
+      "name": "A-1 Mechanical",
+      "vicinity": "3610 Old Lansing Rd, Lansing",
+      "rating": 4.8,
+      "user_ratings_total": 1676,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWbzqZQHAIogRKk8ybK54iOs",
+      "name": "Vredevoogd Heating & Cooling",
+      "vicinity": "624 Truck Ct, Lansing",
+      "rating": 4.9,
+      "user_ratings_total": 2310,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5RsSICPDIogRWqC729Rjq24",
+      "name": "North Winds Heating & Cooling Inc",
+      "vicinity": "2861 Jolly Rd, Okemos",
+      "rating": 4.9,
+      "user_ratings_total": 1833,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ66yYmFTHIogR6huK58iGp2Y",
+      "name": "Pro-Tech",
+      "vicinity": "2556 Alamo Dr #50b, Lansing",
+      "rating": 5,
+      "user_ratings_total": 7,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJryYgD8XBIogRaykDgTeKp2Y",
+      "name": "G.L. Wilson Heating & Cooling",
+      "vicinity": "5135 N Aurelius Rd Suite A, Lansing",
+      "rating": 4.6,
+      "user_ratings_total": 173,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJK-SArFrdIogRqofKoJpkzMM",
+      "name": "Applegate Home Comfort",
+      "vicinity": "2805 Jolly Rd STE 200, Okemos",
+      "rating": 4.9,
+      "user_ratings_total": 2031,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9TmfNBrqIogRkftomD6EaEk",
+      "name": "WHITNEY SERVICES",
+      "vicinity": "1419 Sheldon St, Lansing",
+      "rating": 4.4,
+      "user_ratings_total": 309,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJObMSmDGfNCERnShypjN9520",
+      "name": "Rise Up Heating & Cooling",
+      "vicinity": "3000 W Michigan Ave, Lansing",
+      "rating": 4.8,
+      "user_ratings_total": 131,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcRXDlbbBIogRRgJGsZbbuXE",
+      "name": "E. H. Ward Company",
+      "vicinity": "415 W Mt Hope Ave, Lansing",
+      "rating": 4.9,
+      "user_ratings_total": 277,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIVBsKAbAIogRgzHj-fFJxCw",
+      "name": "Doty Mechanical",
+      "vicinity": "615 S Waverly Rd, Lansing",
+      "rating": 4.9,
+      "user_ratings_total": 534,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXVoowzTmIogRo243Zne09CQ",
+      "name": "The Meridian Company",
+      "vicinity": "1999 Saginaw Hwy, East Lansing",
+      "rating": 4.8,
+      "user_ratings_total": 1336,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJu4SwTX69IogRog160WpKpWs",
+      "name": "Superior Home Comfort",
+      "vicinity": "130 Promec Dr, Grand Ledge",
+      "rating": 5,
+      "user_ratings_total": 65,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyy_u1MDBIogR_cFz6PlgxwI",
+      "name": "Hager Fox Heating & Air Conditioning",
+      "vicinity": "2960 Ena Dr, Lansing",
+      "rating": 4.8,
+      "user_ratings_total": 1382,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJM32KIq-VIogRifpPvca33L4",
+      "name": "Service Professor",
+      "vicinity": "7974 W Grand River Hwy, Grand Ledge",
+      "rating": 4.9,
+      "user_ratings_total": 1383,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJD2zloWrrIogR0Da2upeuNh8",
+      "name": "H&S MECHANICAL LLC",
+      "vicinity": "339 N Deerfield Ave, Lansing",
+      "rating": 5,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJr5g-cpdyWqIRt8wy3kZhmLQ",
+      "name": "Controlled Comfort",
+      "vicinity": "1500 W State Rd, Lansing",
+      "rating": 5,
+      "user_ratings_total": 51,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ7ZCAcBz3d0MRhSUQm2wjgn4",
+      "name": "Lansing Mechanical",
+      "vicinity": "3523 S Cedar St, Lansing",
+      "rating": 5,
+      "user_ratings_total": 29,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJqxdhjoLqIogRHAl_mn53ZJQ",
+      "name": "All Star Mechanical",
+      "vicinity": "3186 Pine Tree Rd, Lansing",
+      "rating": 4.7,
+      "user_ratings_total": 373,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJY3QRvOLrIogR8C43QufXuO0",
+      "name": "Clay Brewer Refrigeration",
+      "vicinity": "14800 Wood Rd, Lansing",
+      "rating": 4.5,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    }
+  ]
+}

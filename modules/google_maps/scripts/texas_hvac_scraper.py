@@ -113,9 +113,30 @@ FLORIDA_CITIES = [
     "Naples, FL"
 ]
 
+# COLD STATES - HVAC HEATING SEASON (November-March)
+NEW_YORK_CITIES = [
+    "New York, NY", "Buffalo, NY", "Rochester, NY", "Yonkers, NY", "Syracuse, NY"
+]
+
+ILLINOIS_CITIES = [
+    "Chicago, IL", "Aurora, IL", "Naperville, IL", "Joliet, IL", "Rockford, IL"
+]
+
+MICHIGAN_CITIES = [
+    "Detroit, MI", "Grand Rapids, MI", "Warren, MI", "Sterling Heights, MI", "Ann Arbor, MI", "Lansing, MI"
+]
+
+PENNSYLVANIA_CITIES = [
+    "Philadelphia, PA", "Pittsburgh, PA", "Allentown, PA", "Erie, PA", "Reading, PA"
+]
+
 STATE_CITIES = {
     "Texas": TEXAS_CITIES,
-    "Florida": FLORIDA_CITIES
+    "Florida": FLORIDA_CITIES,
+    "New York": NEW_YORK_CITIES,
+    "Illinois": ILLINOIS_CITIES,
+    "Michigan": MICHIGAN_CITIES,
+    "Pennsylvania": PENNSYLVANIA_CITIES,
 }
 
 STATS = {
@@ -364,17 +385,21 @@ def get_place_details(place_id: str) -> Dict:
 def extract_state_from_cities(cities: List[str]) -> str:
     """Detect state from city list"""
     if not cities:
-        return "Unknown"
+        return "unknown"
 
     first_city = cities[0]
     if ", TX" in first_city:
         return "texas"
     elif ", FL" in first_city:
         return "florida"
-    elif ", CA" in first_city:
-        return "california"
-    elif ", AZ" in first_city:
-        return "arizona"
+    elif ", NY" in first_city:
+        return "new_york"
+    elif ", IL" in first_city:
+        return "illinois"
+    elif ", MI" in first_city:
+        return "michigan"
+    elif ", PA" in first_city:
+        return "pennsylvania"
 
     return "unknown"
 
@@ -402,7 +427,7 @@ def main():
     parser = argparse.ArgumentParser(description="Google Places Statewide Scraper")
     parser.add_argument("--city", type=str, help="Single city to scrape")
     parser.add_argument("--cities", type=str, help="Comma-separated cities")
-    parser.add_argument("--state", type=str, choices=["Texas", "Florida"], help="Scrape entire state")
+    parser.add_argument("--state", type=str, choices=["Texas", "Florida", "New York", "Illinois", "Michigan", "Pennsylvania"], help="Scrape entire state")
     parser.add_argument("--keyword", type=str, required=True, help="Search keyword")
     parser.add_argument("--min-reviews", type=int, default=10, help="Min reviews")
     parser.add_argument("--max-reviews", type=int, default=None, help="Max reviews (optional)")

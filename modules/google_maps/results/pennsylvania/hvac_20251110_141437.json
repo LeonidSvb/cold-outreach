@@ -1,0 +1,1495 @@
+{
+  "metadata": {
+    "timestamp": "20251110_141437",
+    "state": "pennsylvania",
+    "niche": "hvac",
+    "cities_processed": 5,
+    "total_filtered_places": 64,
+    "filters": {
+      "min_reviews": 30,
+      "max_reviews": 800,
+      "min_rating": 4.0
+    },
+    "note": "FILTERED data with phone/website - ready for outreach",
+    "stats": {
+      "total_api_calls": 69,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 5,
+      "cities_processed": 5,
+      "total_cost": 0.0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Pittsburgh, PA",
+      "filtered_places": [
+        {
+          "place_id": "ChIJww-vSmHxNIgRN49ViHuwEC8",
+          "name": "JDC Heating & Cooling",
+          "vicinity": "606 Liberty Ave # 300, Pittsburgh",
+          "rating": 4.9,
+          "user_ratings_total": 212,
+          "business_status": "OPERATIONAL",
+          "phone": "(412) 478-8865",
+          "website": "https://jdchvac.com/",
+          "address": "606 Liberty Ave # 300, Pittsburgh, PA 15222, USA"
+        },
+        {
+          "place_id": "ChIJM6ugcePvNIgRVFuBK0sUy-c",
+          "name": "Saunders Heating & AC, LLC.",
+          "vicinity": "542 Duquesne Ave, West Mifflin",
+          "rating": 4.9,
+          "user_ratings_total": 56,
+          "business_status": "OPERATIONAL",
+          "phone": "(412) 368-8791",
+          "website": "https://www.saundershvac.com/",
+          "address": "542 Duquesne Ave, West Mifflin, PA 15122, USA"
+        },
+        {
+          "place_id": "ChIJpyhxoZLwNIgRQVMxj9ND9XY",
+          "name": "Denillo Heating & Cooling, Inc.",
+          "vicinity": "2994 Industrial Blvd, Bethel Park",
+          "rating": 4.9,
+          "user_ratings_total": 654,
+          "business_status": "OPERATIONAL",
+          "phone": "(412) 775-3970",
+          "website": "https://www.denillo.com/",
+          "address": "2994 Industrial Blvd, Bethel Park, PA 15102, USA"
+        },
+        {
+          "place_id": "ChIJm3olpAT7NIgRjRE7ej2fYUc",
+          "name": "Duda HVAC LLC",
+          "vicinity": "544 Camp Hollow Rd, West Mifflin",
+          "rating": 5,
+          "user_ratings_total": 79,
+          "business_status": "OPERATIONAL",
+          "phone": "(724) 825-4925",
+          "website": "https://www.dudahvac.com/",
+          "address": "544 Camp Hollow Rd, West Mifflin, PA 15122, USA"
+        },
+        {
+          "place_id": "ChIJfbKIqP73NIgRLVT6cn0gqfw",
+          "name": "Triangle Air Conditioning Co., Inc.",
+          "vicinity": "1810 Main St, Bridgeville",
+          "rating": 4.9,
+          "user_ratings_total": 89,
+          "business_status": "OPERATIONAL",
+          "phone": "(412) 257-2677",
+          "website": "http://www.triangleairconditioning.com/",
+          "address": "1810 Main St, Bridgeville, PA 15017, USA"
+        },
+        {
+          "place_id": "ChIJN_9X0Fj_NIgR9M9uGXFK4Ew",
+          "name": "Kowalski Heating, Cooling, and Plumbing",
+          "vicinity": "531 Georgetown Rd, Lawrence",
+          "rating": 5,
+          "user_ratings_total": 306,
+          "business_status": "OPERATIONAL",
+          "phone": "(412) 952-5923",
+          "website": "https://www.kowalskihcp.com/",
+          "address": "531 Georgetown Rd, Lawrence, PA 15055, USA"
+        },
+        {
+          "place_id": "ChIJ33FhyCleNIgRJAPKkTkP4YU",
+          "name": "STA SO COOL HVAC",
+          "vicinity": "304 Timber Ln, Sewickley",
+          "rating": 4.9,
+          "user_ratings_total": 185,
+          "business_status": "OPERATIONAL",
+          "phone": "(412) 290-4980",
+          "website": "http://www.stasocoolhvac.com/",
+          "address": "304 Timber Ln, Sewickley, PA 15143, USA"
+        },
+        {
+          "place_id": "ChIJWSbyakD1NIgRWZZ1vs5aBdo",
+          "name": "Ronnie Maier Heating & Air Conditioning, LLC",
+          "vicinity": "14 Hawley Ave, Bellevue",
+          "rating": 5,
+          "user_ratings_total": 109,
+          "business_status": "OPERATIONAL",
+          "phone": "(724) 243-8588",
+          "website": "https://www.ronniemaierhvac.com/",
+          "address": "14 Hawley Ave, Bellevue, PA 15202, USA"
+        },
+        {
+          "place_id": "ChIJWQBO6wf5NIgRvNODrtxf15w",
+          "name": "Beverly Services",
+          "vicinity": "3044 Industrial Blvd, Bethel Park",
+          "rating": 4.7,
+          "user_ratings_total": 600,
+          "business_status": "OPERATIONAL",
+          "phone": "(412) 851-1000",
+          "website": "http://beverlyservices.com/",
+          "address": "3044 Industrial Blvd, Bethel Park, PA 15102, USA"
+        },
+        {
+          "place_id": "ChIJC4-rVMXwNIgRPbQ7Ey5xKs8",
+          "name": "Staab & Sons, Inc.",
+          "vicinity": "1921 Saw Mill Run Blvd, Pittsburgh",
+          "rating": 4.5,
+          "user_ratings_total": 75,
+          "business_status": "OPERATIONAL",
+          "phone": "(412) 881-6100",
+          "website": "https://staabheating.com/",
+          "address": "1921 Saw Mill Run Blvd, Pittsburgh, PA 15210, USA"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 10,
+        "with_details": 10,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Allentown, PA",
+      "filtered_places": [
+        {
+          "place_id": "ChIJPTeBfggWxIkRYtd6yXA9tTc",
+          "name": "Carl Volkman And Sons HVAC LLC",
+          "vicinity": "468 Maple Rd, Hellertown",
+          "rating": 4.9,
+          "user_ratings_total": 495,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 704-2275",
+          "website": "https://www.carlvolkmansons.com/",
+          "address": "468 Maple Rd, Hellertown, PA 18055, USA"
+        },
+        {
+          "place_id": "ChIJkfw2_YUxxIkR69S23xLtn0M",
+          "name": "HL Bowman Inc Plumbing Heating & AC",
+          "vicinity": "1535 Hausman Rd, Allentown",
+          "rating": 4.8,
+          "user_ratings_total": 432,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 860-6885",
+          "website": "https://hlbowman.com/locations/allentown-pa/?utm_source=google&utm_medium=gmb&utm_campaign=allentown%20listing&se_campaign=Google%20My%20Business%20-%20Clicked%20to%20Website",
+          "address": "1535 Hausman Rd, Allentown, PA 18104, USA"
+        },
+        {
+          "place_id": "ChIJiZL-vIsFjokRTIn1-F9dquw",
+          "name": "Scott Shannon HVAC",
+          "vicinity": "519 Greenview Dr, Northampton",
+          "rating": 5,
+          "user_ratings_total": 78,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 359-0829",
+          "website": "https://www.scottshannonhvac.com/",
+          "address": "519 Greenview Dr, Northampton, PA 18067, USA"
+        },
+        {
+          "place_id": "ChIJaYUl7bM7xIkRNv0HKT1Y6fs",
+          "name": "Dual Temp Co., Inc.",
+          "vicinity": "2050 S 12th St, Allentown",
+          "rating": 4.9,
+          "user_ratings_total": 152,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 734-9623",
+          "website": "https://www.dualtemp.com/",
+          "address": "2050 S 12th St, Allentown, PA 18103, USA"
+        },
+        {
+          "place_id": "ChIJ_Tf3ghsjxIkRNPIMMR31LrQ",
+          "name": "Precision Temperature HVAC",
+          "vicinity": "Locust St, Coopersburg",
+          "rating": 5,
+          "user_ratings_total": 128,
+          "business_status": "OPERATIONAL",
+          "phone": "(267) 347-3739",
+          "website": "http://www.precisiontemperaturehvac.com/",
+          "address": "Locust St, Coopersburg, PA 18036, USA"
+        },
+        {
+          "place_id": "ChIJvTwzSDM-xIkRSwPriG5bdv0",
+          "name": "Air Professionals Inc",
+          "vicinity": "705 Jennings St, Bethlehem",
+          "rating": 4.9,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 865-0749",
+          "website": "https://www.airprofessionalsinc.com/",
+          "address": "705 Jennings St, Bethlehem, PA 18017, USA"
+        },
+        {
+          "place_id": "ChIJ6e1mvSa98KkRc05z6IwdaLA",
+          "name": "Family Heating & Cooling",
+          "vicinity": "28 Penn St, Hellertown",
+          "rating": 4.7,
+          "user_ratings_total": 238,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 421-9885",
+          "website": "https://www.familyheating-cooling.com/",
+          "address": "28 Penn St, Hellertown, PA 18055, USA"
+        },
+        {
+          "place_id": "ChIJrTBvDjg_xIkRQQEIT7ESUC0",
+          "name": "UGI Heating, Cooling & Plumbing",
+          "vicinity": "715 Front St, Whitehall Township",
+          "rating": 4.7,
+          "user_ratings_total": 382,
+          "business_status": "OPERATIONAL",
+          "phone": "(833) 980-3496",
+          "website": "https://www.ugihvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-profile",
+          "address": "715 Front St, Whitehall Township, PA 18052, USA"
+        },
+        {
+          "place_id": "ChIJRSCBaA0_xIkRVItt3xVGZ8U",
+          "name": "Deluxe Plumbing & Heating",
+          "vicinity": "4240 Fritch Dr, Bethlehem",
+          "rating": 4.7,
+          "user_ratings_total": 504,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 628-1724",
+          "website": "https://www.deluxeplumbing.com/?utm_source=Google%20Business%20Profile&utm_medium=Profile&utm_campaign=Local%20Organic",
+          "address": "4240 Fritch Dr, Bethlehem, PA 18020, USA"
+        },
+        {
+          "place_id": "ChIJO8IAXWouxIkR5aaKsGvJSO4",
+          "name": "D & D Heating & Cooling Inc",
+          "vicinity": "200 E Penn Ave, Alburtis",
+          "rating": 4.6,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 965-0990",
+          "website": "https://www.ddheat-cool.com/?utm_campaign=gmb",
+          "address": "200 E Penn Ave, Alburtis, PA 18011, USA"
+        },
+        {
+          "place_id": "ChIJuyHrM7VOxIkRcFDitxVHtyY",
+          "name": "Unger Heating & Cooling",
+          "vicinity": "483 Washington Dr, Walnutport",
+          "rating": 4.7,
+          "user_ratings_total": 74,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 769-5600",
+          "website": "https://www.ungerheatingandcooling.com/",
+          "address": "483 Washington Dr, Walnutport, PA 18088, USA"
+        },
+        {
+          "place_id": "ChIJlQn8cuw_xIkR76MSiQL7Q0c",
+          "name": "Edwin Stipe, Inc",
+          "vicinity": "1642 Union Blvd Suite Z, Allentown",
+          "rating": 4.9,
+          "user_ratings_total": 546,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 725-6358",
+          "website": "https://edwinstipe.com/?utm_source=google&utm_medium=organic&utm_campaign=GMBListing-Allentown-PA",
+          "address": "1642 Union Blvd Suite Z, Allentown, PA 18109, USA"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 12,
+        "with_details": 12,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Philadelphia, PA",
+      "filtered_places": [
+        {
+          "place_id": "ChIJ2y0gRarDxokRVzUs-qdxhvQ",
+          "name": "Creative Comfort Solutions Heating & Air Conditioning",
+          "vicinity": "34 E Glenolden Ave, Glenolden",
+          "rating": 4.9,
+          "user_ratings_total": 648,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 638-2940",
+          "website": "https://creativecomfortsolutions.com/?utm_source=google&utm_medium=organic&utm_campaign=glenolden_gbp",
+          "address": "34 E Glenolden Ave, Glenolden, PA 19036, USA"
+        },
+        {
+          "place_id": "ChIJT8JHg37cxokRckFi7-H4qO8",
+          "name": "J&J Mechanical Inc.",
+          "vicinity": "200 Grove Rd, Paulsboro",
+          "rating": 5,
+          "user_ratings_total": 749,
+          "business_status": "OPERATIONAL",
+          "phone": "(856) 832-4576",
+          "website": "https://jjmechanicalinc.com/",
+          "address": "200 Grove Rd, Paulsboro, NJ 08066, USA"
+        },
+        {
+          "place_id": "ChIJT7JJxVzzxokRIgvZMAdt1-Q",
+          "name": "Perfect Degree HVAC",
+          "vicinity": "4610 State Rd, Drexel Hill",
+          "rating": 5,
+          "user_ratings_total": 230,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 529-7372",
+          "website": "https://www.perfectdegreehvac.net/",
+          "address": "4610 State Rd, Drexel Hill, PA 19026, USA"
+        },
+        {
+          "place_id": "ChIJt_EXDWK7xokRh00b3dGHaic",
+          "name": "That HVAC Guy and Plumbing",
+          "vicinity": "1013 E Pleasant Ave, Wyndmoor",
+          "rating": 4.9,
+          "user_ratings_total": 147,
+          "business_status": "OPERATIONAL",
+          "phone": "(215) 292-8861",
+          "website": "https://www.thathvacguy.com/",
+          "address": "1013 E Pleasant Ave, Wyndmoor, PA 19038, USA"
+        },
+        {
+          "place_id": "ChIJN7m6xgs49I0RGarn8G3BGYw",
+          "name": "Downtown Mechanical LLC",
+          "vicinity": "2501 E Venango St, Philadelphia",
+          "rating": 5,
+          "user_ratings_total": 146,
+          "business_status": "OPERATIONAL",
+          "phone": "(215) 617-3768",
+          "website": "https://downtownmechanicalllc.com/",
+          "address": "2501 E Venango St, Philadelphia, PA 19134, USA"
+        },
+        {
+          "place_id": "ChIJ-RuXbgnQxokRvcKpsuqqNr0",
+          "name": "W. B. Steward & Son",
+          "vicinity": "513 Glassboro Rd, Woodbury Heights",
+          "rating": 4.9,
+          "user_ratings_total": 196,
+          "business_status": "OPERATIONAL",
+          "phone": "(856) 845-9117",
+          "website": "https://wbstewardandson.com/",
+          "address": "513 Glassboro Rd, Woodbury Heights, NJ 08097, USA"
+        },
+        {
+          "place_id": "ChIJca-lnbHBxokR6tAtuidInFc",
+          "name": "DiBiase Heating and Cooling Company",
+          "vicinity": "565 Abbott Dr, Broomall",
+          "rating": 5,
+          "user_ratings_total": 280,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 420-7284",
+          "website": "https://www.dibiasehvac.com/service-areas/heating-cooling-plumbing-broomall-pa/?utm_source=gmb&utm_medium=organic",
+          "address": "565 Abbott Dr, Broomall, PA 19008, USA"
+        },
+        {
+          "place_id": "ChIJ-zNmSNqvxokRg51ovrOrg1k",
+          "name": "PJ MAC HVAC Service & Repair",
+          "vicinity": "642 Harper Ave, Drexel Hill",
+          "rating": 5,
+          "user_ratings_total": 184,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 672-3046",
+          "website": "https://pjmachvac.com/drexel-hill-ac-heating-repair-install/",
+          "address": "642 Harper Ave, Drexel Hill, PA 19026, USA"
+        },
+        {
+          "place_id": "ChIJI1yKL-S2xokRZqr81j7-Hfk",
+          "name": "Summers Quality Services",
+          "vicinity": "8200 Ridge Ave, Philadelphia",
+          "rating": 4.8,
+          "user_ratings_total": 267,
+          "business_status": "OPERATIONAL",
+          "phone": "(215) 482-8800",
+          "website": "https://www.summersquality.com/?utm_source=gmb&utm_medium=organic",
+          "address": "8200 Ridge Ave, Philadelphia, PA 19128, USA"
+        },
+        {
+          "place_id": "ChIJVahsuhuzxokRpg7R7mQ6gDI",
+          "name": "PETER MECHANICAL LLC",
+          "vicinity": "1811 Tolbut St, Philadelphia",
+          "rating": 5,
+          "user_ratings_total": 166,
+          "business_status": "OPERATIONAL",
+          "phone": "(267) 988-6065",
+          "website": "https://www.petermechanical.com/?utm_source=google-gmb-maps&utm_medium=gmb-website-button&utm_campaign=locl.io&utm_content=29e2bf59-940d-430c-a29f-8abc951d6d7e",
+          "address": "1811 Tolbut St, Philadelphia, PA 19152, USA"
+        },
+        {
+          "place_id": "ChIJCwDwW7O5xokRLV6WZRKrXjI",
+          "name": "Air Done Right",
+          "vicinity": "7715 Crittenden St Suite 179, Philadelphia",
+          "rating": 4.8,
+          "user_ratings_total": 273,
+          "business_status": "OPERATIONAL",
+          "phone": "(267) 214-1709",
+          "website": "https://www.airdonerighthvac.com/",
+          "address": "7715 Crittenden St Suite 179, Philadelphia, PA 19118, USA"
+        },
+        {
+          "place_id": "ChIJATEA6SfHxokR9Hox3PvaDKU",
+          "name": "Superior Comfort Heating & Cooling LLC",
+          "vicinity": "545 N 58th St, Philadelphia",
+          "rating": 4.9,
+          "user_ratings_total": 62,
+          "business_status": "OPERATIONAL",
+          "phone": "(215) 416-6557",
+          "website": "http://www.phillyhvacpro.com/",
+          "address": "545 N 58th St, Philadelphia, PA 19131, USA"
+        },
+        {
+          "place_id": "ChIJy9Dap3C7xokRpaFtGVqr-14",
+          "name": "Tri-County HVAC & Contracting",
+          "vicinity": "360 W Hortter St, Philadelphia",
+          "rating": 4.9,
+          "user_ratings_total": 65,
+          "business_status": "OPERATIONAL",
+          "phone": "(267) 656-7414",
+          "website": "https://tricountyhvacandcontracting.com/",
+          "address": "360 W Hortter St, Philadelphia, PA 19119, USA"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Erie, PA",
+      "filtered_places": [
+        {
+          "place_id": "ChIJtexaLZeBMogR5-Szn2Q_I34",
+          "name": "T D'Albora Heating and Cooling",
+          "vicinity": "8770 Perry Hwy, Erie",
+          "rating": 5,
+          "user_ratings_total": 93,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 790-1172",
+          "website": "http://tdalboraheatingandcooling.com/?utm_source=gmb&utm_medium=referral",
+          "address": "8770 Perry Hwy, Erie, PA 16509, USA"
+        },
+        {
+          "place_id": "ChIJybzeKb5_MogRlhV0oZvnI8k",
+          "name": "Card Heating & Air Conditioning",
+          "vicinity": "1402 Irwin Dr, Erie",
+          "rating": 4.8,
+          "user_ratings_total": 49,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 454-3200",
+          "website": "http://www.cardheat.com/",
+          "address": "1402 Irwin Dr, Erie, PA 16505, USA"
+        },
+        {
+          "place_id": "ChIJ-ViieSOAMogRZowF9-jMJiA",
+          "name": "Keep Heating & Cooling",
+          "vicinity": "141 E 26th St #7, Erie",
+          "rating": 4.9,
+          "user_ratings_total": 754,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 459-8255",
+          "website": "http://keepheating.com/",
+          "address": "141 E 26th St #7, Erie, PA 16504, USA"
+        },
+        {
+          "place_id": "ChIJnz1zrsN_MogRPfIjxZIq7E0",
+          "name": "Gallagher Plumbing & HVAC, Inc.",
+          "vicinity": "824 E 9th St, Erie",
+          "rating": 4.7,
+          "user_ratings_total": 82,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 340-0178",
+          "website": "https://gallagherplumbingerie.com/",
+          "address": "824 E 9th St, Erie, PA 16503, USA"
+        },
+        {
+          "place_id": "ChIJQdQd7YKBMogRYd_-La3Cwr4",
+          "name": "J.J. Agnello Heating & Air Conditioning, Inc.",
+          "vicinity": "1602 Liberty St, Erie",
+          "rating": 4.8,
+          "user_ratings_total": 147,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 453-5096",
+          "website": "https://jjagnello.com/?utm_source=google&utm_medium=organic&utm_campaign=GMBListing-Erie-PA",
+          "address": "1602 Liberty St, Erie, PA 16502, USA"
+        },
+        {
+          "place_id": "ChIJra2jrjB-LYgRS6xHdBjgFow",
+          "name": "Wm. T. Spaeder Company",
+          "vicinity": "1602 E 18th St, Erie",
+          "rating": 4.6,
+          "user_ratings_total": 47,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 456-7014",
+          "website": "https://spaeder.com/",
+          "address": "1602 E 18th St, Erie, PA 16510, USA"
+        },
+        {
+          "place_id": "ChIJKUyUy-J_MogR7Z6pYrxKM44",
+          "name": "H. Jack Langer Plumbing and Heating",
+          "vicinity": "1523 Cascade St, Erie",
+          "rating": 4.7,
+          "user_ratings_total": 283,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 838-2239",
+          "website": "https://www.hjacks.com/",
+          "address": "1523 Cascade St, Erie, PA 16502, USA"
+        },
+        {
+          "place_id": "ChIJ5wx7aA9_MogRuUmL_c6GLNg",
+          "name": "Schneider Heating & Air-Conditioning",
+          "vicinity": "3036 W 12th St, Erie",
+          "rating": 4.8,
+          "user_ratings_total": 50,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 838-3925",
+          "website": "https://www.schneiderheatingeriepa.com/",
+          "address": "3036 W 12th St, Erie, PA 16505, USA"
+        },
+        {
+          "place_id": "ChIJl2VlUXWAMogRoJ-GmRvuk9E",
+          "name": "Preece Heating and Cooling",
+          "vicinity": "1139 W 26th St, Erie",
+          "rating": 4.5,
+          "user_ratings_total": 92,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 833-2396",
+          "website": "http://www.preeceheatingandcooling.com/",
+          "address": "1139 W 26th St, Erie, PA 16508, USA"
+        },
+        {
+          "place_id": "ChIJF9PBClx5MogRO19YwWFExQk",
+          "name": "Admiral Heating and Air Conditioning, LLC",
+          "vicinity": "2222 Pittsburgh Ave, Erie",
+          "rating": 4.7,
+          "user_ratings_total": 47,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 882-0995",
+          "website": "https://www.admiralheatingandac.com/",
+          "address": "2222 Pittsburgh Ave, Erie, PA 16502, USA"
+        },
+        {
+          "place_id": "ChIJq6qqauN_LYgRQz7xntiagAY",
+          "name": "TJ's Plumbing & Heating of Erie",
+          "vicinity": "1406 E 28th St, Erie",
+          "rating": 4.3,
+          "user_ratings_total": 209,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 836-0001",
+          "website": "http://www.tjsplumbing.com/",
+          "address": "1406 E 28th St, Erie, PA 16504, USA"
+        },
+        {
+          "place_id": "ChIJ8a4BnYh_MogRdS3MOIU_mAw",
+          "name": "Ahold of Mold Environmental",
+          "vicinity": "2520 Hampton Ave #16, Erie",
+          "rating": 5,
+          "user_ratings_total": 80,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 217-0695",
+          "website": "https://aholdofmold.com/",
+          "address": "2520 Hampton Ave #16, Erie, PA 16508, USA"
+        },
+        {
+          "place_id": "ChIJjz-HJ8F_MogRN2V_6erHSmc",
+          "name": "Reeves Plumbing & Heating Co",
+          "vicinity": "1850 W 21st St, Erie",
+          "rating": 4.5,
+          "user_ratings_total": 735,
+          "business_status": "OPERATIONAL",
+          "phone": "(814) 459-0004",
+          "website": "http://www.reevesplumbing.com/",
+          "address": "1850 W 21st St, Erie, PA 16502, USA"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Reading, PA",
+      "filtered_places": [
+        {
+          "place_id": "ChIJESScreNzxokRE7JnQwmsvm0",
+          "name": "Advanced Comfort Specialists",
+          "vicinity": "217 Montrose Blvd, Reading",
+          "rating": 5,
+          "user_ratings_total": 317,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 224-9756",
+          "website": "https://www.advancedcomfortspecialists.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+          "address": "217 Montrose Blvd, Reading, PA 19607, USA"
+        },
+        {
+          "place_id": "ChIJ0Q0dyMgpeSURFelRfWY_oDk",
+          "name": "In-Check Mechanical",
+          "vicinity": "219 Sunrise Rd, Reading",
+          "rating": 5,
+          "user_ratings_total": 40,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 269-9053",
+          "website": "https://www.incheckmechanical.com/",
+          "address": "219 Sunrise Rd, Reading, PA 19606, USA"
+        },
+        {
+          "place_id": "ChIJRfkyJP15xokRl-6omyaZHzs",
+          "name": "JB Plumbing HVAC & Construction Division",
+          "vicinity": "1201 Roosevelt Ave, Reading",
+          "rating": 5,
+          "user_ratings_total": 123,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 621-3452",
+          "website": "https://jbplumbinghvac.com/?utm_source=gmb&utm_medium=organic",
+          "address": "1201 Roosevelt Ave, Reading, PA 19606, USA"
+        },
+        {
+          "place_id": "ChIJA7RIY5B1xokRU5Ik178EzPw",
+          "name": "Berks Energy Heating and Cooling",
+          "vicinity": "58 Tobias Ln, Bernville",
+          "rating": 4.9,
+          "user_ratings_total": 76,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 797-3456",
+          "website": "https://www.berksenergyhvac.com/",
+          "address": "58 Tobias Ln, Bernville, PA 19506, USA"
+        },
+        {
+          "place_id": "ChIJVVVVVSF3xokRdCnT6uaakH4",
+          "name": "B&L Ott Heating & Air Conditioning, LLC.",
+          "vicinity": "1215 Luzerne St, Reading",
+          "rating": 4.7,
+          "user_ratings_total": 225,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 484-4125",
+          "website": "https://otthvac.com/?utm_source=google&utm_medium=organic&utm_campaign=GMBListing-Reading-PA",
+          "address": "1215 Luzerne St, Reading, PA 19601, USA"
+        },
+        {
+          "place_id": "ChIJn_Neyk7fxYkRnuTM6tAKr5A",
+          "name": "Tyler Korrey Mechanical",
+          "vicinity": "617 Center Rd, Leesport",
+          "rating": 4.9,
+          "user_ratings_total": 35,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 916-0505",
+          "website": "http://www.tylerkorrey.com/",
+          "address": "617 Center Rd, Leesport, PA 19533, USA"
+        },
+        {
+          "place_id": "ChIJNypmUMFwxokRacwkHOZy9V4",
+          "name": "UGI Heating, Cooling & Plumbing",
+          "vicinity": "4338 Pottsville Pike #1, Reading",
+          "rating": 4.7,
+          "user_ratings_total": 522,
+          "business_status": "OPERATIONAL",
+          "phone": "(833) 980-3496",
+          "website": "https://www.ugihvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-profile",
+          "address": "4338 Pottsville Pike #1, Reading, PA 19605, USA"
+        },
+        {
+          "place_id": "ChIJX5Y1y_JxxokRIHiV8PfzaLc",
+          "name": "Alltemp Enterprise, Inc.",
+          "vicinity": "2 Front St, Mohnton",
+          "rating": 4.6,
+          "user_ratings_total": 52,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 796-1233",
+          "website": "https://alltempenterprise.com/",
+          "address": "2 Front St, Mohnton, PA 19540, USA"
+        },
+        {
+          "place_id": "ChIJTdqD0qB5xokRuBW2xvgR-Js",
+          "name": "Service 360 Group",
+          "vicinity": "1665 State Hill Rd Unit 700, Wyomissing",
+          "rating": 4.9,
+          "user_ratings_total": 238,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 364-5157",
+          "website": "https://www.service360group.com/?utm_source=gbp&utm_medium=organic&utm_campaign=hcms_gbp",
+          "address": "1665 State Hill Rd Unit 700, Wyomissing, PA 19610, USA"
+        },
+        {
+          "place_id": "ChIJQTPu6vTWxYkRzQrGVDh3ezU",
+          "name": "M & M Mechanical LLC",
+          "vicinity": "418 Park Rd, Fleetwood",
+          "rating": 4.4,
+          "user_ratings_total": 54,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 944-7587",
+          "website": "http://mmmech.net/",
+          "address": "418 Park Rd, Fleetwood, PA 19522, USA"
+        },
+        {
+          "place_id": "ChIJpxHEmDISPEwRTh7mrYiE8Cw",
+          "name": "Real Airflow Heating & Cooling",
+          "vicinity": "11 Richmaiden Rd, Fleetwood",
+          "rating": 5,
+          "user_ratings_total": 53,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 248-2155",
+          "website": "https://www.realairflow.com/",
+          "address": "11 Richmaiden Rd, Fleetwood, PA 19522, USA"
+        },
+        {
+          "place_id": "ChIJ-UaPCIZxxokRQ_dEzqY2pEg",
+          "name": "HL Bowman Inc Plumbing Heating & AC",
+          "vicinity": "430 Franklin St, West Reading",
+          "rating": 4.8,
+          "user_ratings_total": 415,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 273-8638",
+          "website": "https://hlbowman.com/locations/reading-pa/?utm_source=google&utm_medium=gmb&utm_campaign=reading%20listing&se_campaign=Google%20My%20Business%20-%20Clicked%20to%20Website",
+          "address": "430 Franklin St, West Reading, PA 19611, USA"
+        },
+        {
+          "place_id": "ChIJl0OomyVzxokRhqZNP9jRTnM",
+          "name": "Ultimate Comfort Heating & Cooling",
+          "vicinity": "280 Holland St, Wernersville",
+          "rating": 4.9,
+          "user_ratings_total": 146,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 750-8314",
+          "website": "http://www.ultimatecomforthc.com/",
+          "address": "280 Holland St, Wernersville, PA 19565, USA"
+        },
+        {
+          "place_id": "ChIJEc7Yq4TWxYkRJwIqmKrwY3c",
+          "name": "Art Smith and Son Heating and Air Conditioning Inc",
+          "vicinity": "135 Spook Ln, Fleetwood",
+          "rating": 4.9,
+          "user_ratings_total": 107,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 780-9350",
+          "website": "http://www.artsmithandson.com/",
+          "address": "135 Spook Ln, Fleetwood, PA 19522, USA"
+        },
+        {
+          "place_id": "ChIJ9d37d5DWxYkRXXbNtqRSoIc",
+          "name": "CPT Mechanical Services LLC",
+          "vicinity": "102 E Vine St, Fleetwood",
+          "rating": 5,
+          "user_ratings_total": 120,
+          "business_status": "OPERATIONAL",
+          "phone": "(484) 575-2077",
+          "website": "http://cptmechanicalservices.com/",
+          "address": "102 E Vine St, Fleetwood, PA 19522, USA"
+        },
+        {
+          "place_id": "ChIJW8eDZCiHxqER7awwQ7DgZWo",
+          "name": "Kodiak Comfort Heating and Air Conditioning",
+          "vicinity": "107 Greenwood Dr, Temple",
+          "rating": 5,
+          "user_ratings_total": 102,
+          "business_status": "OPERATIONAL",
+          "phone": "(610) 823-8018",
+          "website": "http://kodiakcomfort.info/",
+          "address": "107 Greenwood Dr, Temple, PA 19560, USA"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 16,
+        "with_details": 16,
+        "final_radius_km": 15.0
+      }
+    }
+  ],
+  "all_filtered_places": [
+    {
+      "place_id": "ChIJww-vSmHxNIgRN49ViHuwEC8",
+      "name": "JDC Heating & Cooling",
+      "vicinity": "606 Liberty Ave # 300, Pittsburgh",
+      "rating": 4.9,
+      "user_ratings_total": 212,
+      "business_status": "OPERATIONAL",
+      "phone": "(412) 478-8865",
+      "website": "https://jdchvac.com/",
+      "address": "606 Liberty Ave # 300, Pittsburgh, PA 15222, USA"
+    },
+    {
+      "place_id": "ChIJM6ugcePvNIgRVFuBK0sUy-c",
+      "name": "Saunders Heating & AC, LLC.",
+      "vicinity": "542 Duquesne Ave, West Mifflin",
+      "rating": 4.9,
+      "user_ratings_total": 56,
+      "business_status": "OPERATIONAL",
+      "phone": "(412) 368-8791",
+      "website": "https://www.saundershvac.com/",
+      "address": "542 Duquesne Ave, West Mifflin, PA 15122, USA"
+    },
+    {
+      "place_id": "ChIJpyhxoZLwNIgRQVMxj9ND9XY",
+      "name": "Denillo Heating & Cooling, Inc.",
+      "vicinity": "2994 Industrial Blvd, Bethel Park",
+      "rating": 4.9,
+      "user_ratings_total": 654,
+      "business_status": "OPERATIONAL",
+      "phone": "(412) 775-3970",
+      "website": "https://www.denillo.com/",
+      "address": "2994 Industrial Blvd, Bethel Park, PA 15102, USA"
+    },
+    {
+      "place_id": "ChIJm3olpAT7NIgRjRE7ej2fYUc",
+      "name": "Duda HVAC LLC",
+      "vicinity": "544 Camp Hollow Rd, West Mifflin",
+      "rating": 5,
+      "user_ratings_total": 79,
+      "business_status": "OPERATIONAL",
+      "phone": "(724) 825-4925",
+      "website": "https://www.dudahvac.com/",
+      "address": "544 Camp Hollow Rd, West Mifflin, PA 15122, USA"
+    },
+    {
+      "place_id": "ChIJfbKIqP73NIgRLVT6cn0gqfw",
+      "name": "Triangle Air Conditioning Co., Inc.",
+      "vicinity": "1810 Main St, Bridgeville",
+      "rating": 4.9,
+      "user_ratings_total": 89,
+      "business_status": "OPERATIONAL",
+      "phone": "(412) 257-2677",
+      "website": "http://www.triangleairconditioning.com/",
+      "address": "1810 Main St, Bridgeville, PA 15017, USA"
+    },
+    {
+      "place_id": "ChIJN_9X0Fj_NIgR9M9uGXFK4Ew",
+      "name": "Kowalski Heating, Cooling, and Plumbing",
+      "vicinity": "531 Georgetown Rd, Lawrence",
+      "rating": 5,
+      "user_ratings_total": 306,
+      "business_status": "OPERATIONAL",
+      "phone": "(412) 952-5923",
+      "website": "https://www.kowalskihcp.com/",
+      "address": "531 Georgetown Rd, Lawrence, PA 15055, USA"
+    },
+    {
+      "place_id": "ChIJ33FhyCleNIgRJAPKkTkP4YU",
+      "name": "STA SO COOL HVAC",
+      "vicinity": "304 Timber Ln, Sewickley",
+      "rating": 4.9,
+      "user_ratings_total": 185,
+      "business_status": "OPERATIONAL",
+      "phone": "(412) 290-4980",
+      "website": "http://www.stasocoolhvac.com/",
+      "address": "304 Timber Ln, Sewickley, PA 15143, USA"
+    },
+    {
+      "place_id": "ChIJWSbyakD1NIgRWZZ1vs5aBdo",
+      "name": "Ronnie Maier Heating & Air Conditioning, LLC",
+      "vicinity": "14 Hawley Ave, Bellevue",
+      "rating": 5,
+      "user_ratings_total": 109,
+      "business_status": "OPERATIONAL",
+      "phone": "(724) 243-8588",
+      "website": "https://www.ronniemaierhvac.com/",
+      "address": "14 Hawley Ave, Bellevue, PA 15202, USA"
+    },
+    {
+      "place_id": "ChIJWQBO6wf5NIgRvNODrtxf15w",
+      "name": "Beverly Services",
+      "vicinity": "3044 Industrial Blvd, Bethel Park",
+      "rating": 4.7,
+      "user_ratings_total": 600,
+      "business_status": "OPERATIONAL",
+      "phone": "(412) 851-1000",
+      "website": "http://beverlyservices.com/",
+      "address": "3044 Industrial Blvd, Bethel Park, PA 15102, USA"
+    },
+    {
+      "place_id": "ChIJC4-rVMXwNIgRPbQ7Ey5xKs8",
+      "name": "Staab & Sons, Inc.",
+      "vicinity": "1921 Saw Mill Run Blvd, Pittsburgh",
+      "rating": 4.5,
+      "user_ratings_total": 75,
+      "business_status": "OPERATIONAL",
+      "phone": "(412) 881-6100",
+      "website": "https://staabheating.com/",
+      "address": "1921 Saw Mill Run Blvd, Pittsburgh, PA 15210, USA"
+    },
+    {
+      "place_id": "ChIJPTeBfggWxIkRYtd6yXA9tTc",
+      "name": "Carl Volkman And Sons HVAC LLC",
+      "vicinity": "468 Maple Rd, Hellertown",
+      "rating": 4.9,
+      "user_ratings_total": 495,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 704-2275",
+      "website": "https://www.carlvolkmansons.com/",
+      "address": "468 Maple Rd, Hellertown, PA 18055, USA"
+    },
+    {
+      "place_id": "ChIJkfw2_YUxxIkR69S23xLtn0M",
+      "name": "HL Bowman Inc Plumbing Heating & AC",
+      "vicinity": "1535 Hausman Rd, Allentown",
+      "rating": 4.8,
+      "user_ratings_total": 432,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 860-6885",
+      "website": "https://hlbowman.com/locations/allentown-pa/?utm_source=google&utm_medium=gmb&utm_campaign=allentown%20listing&se_campaign=Google%20My%20Business%20-%20Clicked%20to%20Website",
+      "address": "1535 Hausman Rd, Allentown, PA 18104, USA"
+    },
+    {
+      "place_id": "ChIJiZL-vIsFjokRTIn1-F9dquw",
+      "name": "Scott Shannon HVAC",
+      "vicinity": "519 Greenview Dr, Northampton",
+      "rating": 5,
+      "user_ratings_total": 78,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 359-0829",
+      "website": "https://www.scottshannonhvac.com/",
+      "address": "519 Greenview Dr, Northampton, PA 18067, USA"
+    },
+    {
+      "place_id": "ChIJaYUl7bM7xIkRNv0HKT1Y6fs",
+      "name": "Dual Temp Co., Inc.",
+      "vicinity": "2050 S 12th St, Allentown",
+      "rating": 4.9,
+      "user_ratings_total": 152,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 734-9623",
+      "website": "https://www.dualtemp.com/",
+      "address": "2050 S 12th St, Allentown, PA 18103, USA"
+    },
+    {
+      "place_id": "ChIJ_Tf3ghsjxIkRNPIMMR31LrQ",
+      "name": "Precision Temperature HVAC",
+      "vicinity": "Locust St, Coopersburg",
+      "rating": 5,
+      "user_ratings_total": 128,
+      "business_status": "OPERATIONAL",
+      "phone": "(267) 347-3739",
+      "website": "http://www.precisiontemperaturehvac.com/",
+      "address": "Locust St, Coopersburg, PA 18036, USA"
+    },
+    {
+      "place_id": "ChIJvTwzSDM-xIkRSwPriG5bdv0",
+      "name": "Air Professionals Inc",
+      "vicinity": "705 Jennings St, Bethlehem",
+      "rating": 4.9,
+      "user_ratings_total": 33,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 865-0749",
+      "website": "https://www.airprofessionalsinc.com/",
+      "address": "705 Jennings St, Bethlehem, PA 18017, USA"
+    },
+    {
+      "place_id": "ChIJ6e1mvSa98KkRc05z6IwdaLA",
+      "name": "Family Heating & Cooling",
+      "vicinity": "28 Penn St, Hellertown",
+      "rating": 4.7,
+      "user_ratings_total": 238,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 421-9885",
+      "website": "https://www.familyheating-cooling.com/",
+      "address": "28 Penn St, Hellertown, PA 18055, USA"
+    },
+    {
+      "place_id": "ChIJrTBvDjg_xIkRQQEIT7ESUC0",
+      "name": "UGI Heating, Cooling & Plumbing",
+      "vicinity": "715 Front St, Whitehall Township",
+      "rating": 4.7,
+      "user_ratings_total": 382,
+      "business_status": "OPERATIONAL",
+      "phone": "(833) 980-3496",
+      "website": "https://www.ugihvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-profile",
+      "address": "715 Front St, Whitehall Township, PA 18052, USA"
+    },
+    {
+      "place_id": "ChIJRSCBaA0_xIkRVItt3xVGZ8U",
+      "name": "Deluxe Plumbing & Heating",
+      "vicinity": "4240 Fritch Dr, Bethlehem",
+      "rating": 4.7,
+      "user_ratings_total": 504,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 628-1724",
+      "website": "https://www.deluxeplumbing.com/?utm_source=Google%20Business%20Profile&utm_medium=Profile&utm_campaign=Local%20Organic",
+      "address": "4240 Fritch Dr, Bethlehem, PA 18020, USA"
+    },
+    {
+      "place_id": "ChIJO8IAXWouxIkR5aaKsGvJSO4",
+      "name": "D & D Heating & Cooling Inc",
+      "vicinity": "200 E Penn Ave, Alburtis",
+      "rating": 4.6,
+      "user_ratings_total": 103,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 965-0990",
+      "website": "https://www.ddheat-cool.com/?utm_campaign=gmb",
+      "address": "200 E Penn Ave, Alburtis, PA 18011, USA"
+    },
+    {
+      "place_id": "ChIJuyHrM7VOxIkRcFDitxVHtyY",
+      "name": "Unger Heating & Cooling",
+      "vicinity": "483 Washington Dr, Walnutport",
+      "rating": 4.7,
+      "user_ratings_total": 74,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 769-5600",
+      "website": "https://www.ungerheatingandcooling.com/",
+      "address": "483 Washington Dr, Walnutport, PA 18088, USA"
+    },
+    {
+      "place_id": "ChIJlQn8cuw_xIkR76MSiQL7Q0c",
+      "name": "Edwin Stipe, Inc",
+      "vicinity": "1642 Union Blvd Suite Z, Allentown",
+      "rating": 4.9,
+      "user_ratings_total": 546,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 725-6358",
+      "website": "https://edwinstipe.com/?utm_source=google&utm_medium=organic&utm_campaign=GMBListing-Allentown-PA",
+      "address": "1642 Union Blvd Suite Z, Allentown, PA 18109, USA"
+    },
+    {
+      "place_id": "ChIJ2y0gRarDxokRVzUs-qdxhvQ",
+      "name": "Creative Comfort Solutions Heating & Air Conditioning",
+      "vicinity": "34 E Glenolden Ave, Glenolden",
+      "rating": 4.9,
+      "user_ratings_total": 648,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 638-2940",
+      "website": "https://creativecomfortsolutions.com/?utm_source=google&utm_medium=organic&utm_campaign=glenolden_gbp",
+      "address": "34 E Glenolden Ave, Glenolden, PA 19036, USA"
+    },
+    {
+      "place_id": "ChIJT8JHg37cxokRckFi7-H4qO8",
+      "name": "J&J Mechanical Inc.",
+      "vicinity": "200 Grove Rd, Paulsboro",
+      "rating": 5,
+      "user_ratings_total": 749,
+      "business_status": "OPERATIONAL",
+      "phone": "(856) 832-4576",
+      "website": "https://jjmechanicalinc.com/",
+      "address": "200 Grove Rd, Paulsboro, NJ 08066, USA"
+    },
+    {
+      "place_id": "ChIJT7JJxVzzxokRIgvZMAdt1-Q",
+      "name": "Perfect Degree HVAC",
+      "vicinity": "4610 State Rd, Drexel Hill",
+      "rating": 5,
+      "user_ratings_total": 230,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 529-7372",
+      "website": "https://www.perfectdegreehvac.net/",
+      "address": "4610 State Rd, Drexel Hill, PA 19026, USA"
+    },
+    {
+      "place_id": "ChIJt_EXDWK7xokRh00b3dGHaic",
+      "name": "That HVAC Guy and Plumbing",
+      "vicinity": "1013 E Pleasant Ave, Wyndmoor",
+      "rating": 4.9,
+      "user_ratings_total": 147,
+      "business_status": "OPERATIONAL",
+      "phone": "(215) 292-8861",
+      "website": "https://www.thathvacguy.com/",
+      "address": "1013 E Pleasant Ave, Wyndmoor, PA 19038, USA"
+    },
+    {
+      "place_id": "ChIJN7m6xgs49I0RGarn8G3BGYw",
+      "name": "Downtown Mechanical LLC",
+      "vicinity": "2501 E Venango St, Philadelphia",
+      "rating": 5,
+      "user_ratings_total": 146,
+      "business_status": "OPERATIONAL",
+      "phone": "(215) 617-3768",
+      "website": "https://downtownmechanicalllc.com/",
+      "address": "2501 E Venango St, Philadelphia, PA 19134, USA"
+    },
+    {
+      "place_id": "ChIJ-RuXbgnQxokRvcKpsuqqNr0",
+      "name": "W. B. Steward & Son",
+      "vicinity": "513 Glassboro Rd, Woodbury Heights",
+      "rating": 4.9,
+      "user_ratings_total": 196,
+      "business_status": "OPERATIONAL",
+      "phone": "(856) 845-9117",
+      "website": "https://wbstewardandson.com/",
+      "address": "513 Glassboro Rd, Woodbury Heights, NJ 08097, USA"
+    },
+    {
+      "place_id": "ChIJca-lnbHBxokR6tAtuidInFc",
+      "name": "DiBiase Heating and Cooling Company",
+      "vicinity": "565 Abbott Dr, Broomall",
+      "rating": 5,
+      "user_ratings_total": 280,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 420-7284",
+      "website": "https://www.dibiasehvac.com/service-areas/heating-cooling-plumbing-broomall-pa/?utm_source=gmb&utm_medium=organic",
+      "address": "565 Abbott Dr, Broomall, PA 19008, USA"
+    },
+    {
+      "place_id": "ChIJ-zNmSNqvxokRg51ovrOrg1k",
+      "name": "PJ MAC HVAC Service & Repair",
+      "vicinity": "642 Harper Ave, Drexel Hill",
+      "rating": 5,
+      "user_ratings_total": 184,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 672-3046",
+      "website": "https://pjmachvac.com/drexel-hill-ac-heating-repair-install/",
+      "address": "642 Harper Ave, Drexel Hill, PA 19026, USA"
+    },
+    {
+      "place_id": "ChIJI1yKL-S2xokRZqr81j7-Hfk",
+      "name": "Summers Quality Services",
+      "vicinity": "8200 Ridge Ave, Philadelphia",
+      "rating": 4.8,
+      "user_ratings_total": 267,
+      "business_status": "OPERATIONAL",
+      "phone": "(215) 482-8800",
+      "website": "https://www.summersquality.com/?utm_source=gmb&utm_medium=organic",
+      "address": "8200 Ridge Ave, Philadelphia, PA 19128, USA"
+    },
+    {
+      "place_id": "ChIJVahsuhuzxokRpg7R7mQ6gDI",
+      "name": "PETER MECHANICAL LLC",
+      "vicinity": "1811 Tolbut St, Philadelphia",
+      "rating": 5,
+      "user_ratings_total": 166,
+      "business_status": "OPERATIONAL",
+      "phone": "(267) 988-6065",
+      "website": "https://www.petermechanical.com/?utm_source=google-gmb-maps&utm_medium=gmb-website-button&utm_campaign=locl.io&utm_content=29e2bf59-940d-430c-a29f-8abc951d6d7e",
+      "address": "1811 Tolbut St, Philadelphia, PA 19152, USA"
+    },
+    {
+      "place_id": "ChIJCwDwW7O5xokRLV6WZRKrXjI",
+      "name": "Air Done Right",
+      "vicinity": "7715 Crittenden St Suite 179, Philadelphia",
+      "rating": 4.8,
+      "user_ratings_total": 273,
+      "business_status": "OPERATIONAL",
+      "phone": "(267) 214-1709",
+      "website": "https://www.airdonerighthvac.com/",
+      "address": "7715 Crittenden St Suite 179, Philadelphia, PA 19118, USA"
+    },
+    {
+      "place_id": "ChIJATEA6SfHxokR9Hox3PvaDKU",
+      "name": "Superior Comfort Heating & Cooling LLC",
+      "vicinity": "545 N 58th St, Philadelphia",
+      "rating": 4.9,
+      "user_ratings_total": 62,
+      "business_status": "OPERATIONAL",
+      "phone": "(215) 416-6557",
+      "website": "http://www.phillyhvacpro.com/",
+      "address": "545 N 58th St, Philadelphia, PA 19131, USA"
+    },
+    {
+      "place_id": "ChIJy9Dap3C7xokRpaFtGVqr-14",
+      "name": "Tri-County HVAC & Contracting",
+      "vicinity": "360 W Hortter St, Philadelphia",
+      "rating": 4.9,
+      "user_ratings_total": 65,
+      "business_status": "OPERATIONAL",
+      "phone": "(267) 656-7414",
+      "website": "https://tricountyhvacandcontracting.com/",
+      "address": "360 W Hortter St, Philadelphia, PA 19119, USA"
+    },
+    {
+      "place_id": "ChIJtexaLZeBMogR5-Szn2Q_I34",
+      "name": "T D'Albora Heating and Cooling",
+      "vicinity": "8770 Perry Hwy, Erie",
+      "rating": 5,
+      "user_ratings_total": 93,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 790-1172",
+      "website": "http://tdalboraheatingandcooling.com/?utm_source=gmb&utm_medium=referral",
+      "address": "8770 Perry Hwy, Erie, PA 16509, USA"
+    },
+    {
+      "place_id": "ChIJybzeKb5_MogRlhV0oZvnI8k",
+      "name": "Card Heating & Air Conditioning",
+      "vicinity": "1402 Irwin Dr, Erie",
+      "rating": 4.8,
+      "user_ratings_total": 49,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 454-3200",
+      "website": "http://www.cardheat.com/",
+      "address": "1402 Irwin Dr, Erie, PA 16505, USA"
+    },
+    {
+      "place_id": "ChIJ-ViieSOAMogRZowF9-jMJiA",
+      "name": "Keep Heating & Cooling",
+      "vicinity": "141 E 26th St #7, Erie",
+      "rating": 4.9,
+      "user_ratings_total": 754,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 459-8255",
+      "website": "http://keepheating.com/",
+      "address": "141 E 26th St #7, Erie, PA 16504, USA"
+    },
+    {
+      "place_id": "ChIJnz1zrsN_MogRPfIjxZIq7E0",
+      "name": "Gallagher Plumbing & HVAC, Inc.",
+      "vicinity": "824 E 9th St, Erie",
+      "rating": 4.7,
+      "user_ratings_total": 82,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 340-0178",
+      "website": "https://gallagherplumbingerie.com/",
+      "address": "824 E 9th St, Erie, PA 16503, USA"
+    },
+    {
+      "place_id": "ChIJQdQd7YKBMogRYd_-La3Cwr4",
+      "name": "J.J. Agnello Heating & Air Conditioning, Inc.",
+      "vicinity": "1602 Liberty St, Erie",
+      "rating": 4.8,
+      "user_ratings_total": 147,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 453-5096",
+      "website": "https://jjagnello.com/?utm_source=google&utm_medium=organic&utm_campaign=GMBListing-Erie-PA",
+      "address": "1602 Liberty St, Erie, PA 16502, USA"
+    },
+    {
+      "place_id": "ChIJra2jrjB-LYgRS6xHdBjgFow",
+      "name": "Wm. T. Spaeder Company",
+      "vicinity": "1602 E 18th St, Erie",
+      "rating": 4.6,
+      "user_ratings_total": 47,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 456-7014",
+      "website": "https://spaeder.com/",
+      "address": "1602 E 18th St, Erie, PA 16510, USA"
+    },
+    {
+      "place_id": "ChIJKUyUy-J_MogR7Z6pYrxKM44",
+      "name": "H. Jack Langer Plumbing and Heating",
+      "vicinity": "1523 Cascade St, Erie",
+      "rating": 4.7,
+      "user_ratings_total": 283,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 838-2239",
+      "website": "https://www.hjacks.com/",
+      "address": "1523 Cascade St, Erie, PA 16502, USA"
+    },
+    {
+      "place_id": "ChIJ5wx7aA9_MogRuUmL_c6GLNg",
+      "name": "Schneider Heating & Air-Conditioning",
+      "vicinity": "3036 W 12th St, Erie",
+      "rating": 4.8,
+      "user_ratings_total": 50,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 838-3925",
+      "website": "https://www.schneiderheatingeriepa.com/",
+      "address": "3036 W 12th St, Erie, PA 16505, USA"
+    },
+    {
+      "place_id": "ChIJl2VlUXWAMogRoJ-GmRvuk9E",
+      "name": "Preece Heating and Cooling",
+      "vicinity": "1139 W 26th St, Erie",
+      "rating": 4.5,
+      "user_ratings_total": 92,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 833-2396",
+      "website": "http://www.preeceheatingandcooling.com/",
+      "address": "1139 W 26th St, Erie, PA 16508, USA"
+    },
+    {
+      "place_id": "ChIJF9PBClx5MogRO19YwWFExQk",
+      "name": "Admiral Heating and Air Conditioning, LLC",
+      "vicinity": "2222 Pittsburgh Ave, Erie",
+      "rating": 4.7,
+      "user_ratings_total": 47,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 882-0995",
+      "website": "https://www.admiralheatingandac.com/",
+      "address": "2222 Pittsburgh Ave, Erie, PA 16502, USA"
+    },
+    {
+      "place_id": "ChIJq6qqauN_LYgRQz7xntiagAY",
+      "name": "TJ's Plumbing & Heating of Erie",
+      "vicinity": "1406 E 28th St, Erie",
+      "rating": 4.3,
+      "user_ratings_total": 209,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 836-0001",
+      "website": "http://www.tjsplumbing.com/",
+      "address": "1406 E 28th St, Erie, PA 16504, USA"
+    },
+    {
+      "place_id": "ChIJ8a4BnYh_MogRdS3MOIU_mAw",
+      "name": "Ahold of Mold Environmental",
+      "vicinity": "2520 Hampton Ave #16, Erie",
+      "rating": 5,
+      "user_ratings_total": 80,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 217-0695",
+      "website": "https://aholdofmold.com/",
+      "address": "2520 Hampton Ave #16, Erie, PA 16508, USA"
+    },
+    {
+      "place_id": "ChIJjz-HJ8F_MogRN2V_6erHSmc",
+      "name": "Reeves Plumbing & Heating Co",
+      "vicinity": "1850 W 21st St, Erie",
+      "rating": 4.5,
+      "user_ratings_total": 735,
+      "business_status": "OPERATIONAL",
+      "phone": "(814) 459-0004",
+      "website": "http://www.reevesplumbing.com/",
+      "address": "1850 W 21st St, Erie, PA 16502, USA"
+    },
+    {
+      "place_id": "ChIJESScreNzxokRE7JnQwmsvm0",
+      "name": "Advanced Comfort Specialists",
+      "vicinity": "217 Montrose Blvd, Reading",
+      "rating": 5,
+      "user_ratings_total": 317,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 224-9756",
+      "website": "https://www.advancedcomfortspecialists.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+      "address": "217 Montrose Blvd, Reading, PA 19607, USA"
+    },
+    {
+      "place_id": "ChIJ0Q0dyMgpeSURFelRfWY_oDk",
+      "name": "In-Check Mechanical",
+      "vicinity": "219 Sunrise Rd, Reading",
+      "rating": 5,
+      "user_ratings_total": 40,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 269-9053",
+      "website": "https://www.incheckmechanical.com/",
+      "address": "219 Sunrise Rd, Reading, PA 19606, USA"
+    },
+    {
+      "place_id": "ChIJRfkyJP15xokRl-6omyaZHzs",
+      "name": "JB Plumbing HVAC & Construction Division",
+      "vicinity": "1201 Roosevelt Ave, Reading",
+      "rating": 5,
+      "user_ratings_total": 123,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 621-3452",
+      "website": "https://jbplumbinghvac.com/?utm_source=gmb&utm_medium=organic",
+      "address": "1201 Roosevelt Ave, Reading, PA 19606, USA"
+    },
+    {
+      "place_id": "ChIJA7RIY5B1xokRU5Ik178EzPw",
+      "name": "Berks Energy Heating and Cooling",
+      "vicinity": "58 Tobias Ln, Bernville",
+      "rating": 4.9,
+      "user_ratings_total": 76,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 797-3456",
+      "website": "https://www.berksenergyhvac.com/",
+      "address": "58 Tobias Ln, Bernville, PA 19506, USA"
+    },
+    {
+      "place_id": "ChIJVVVVVSF3xokRdCnT6uaakH4",
+      "name": "B&L Ott Heating & Air Conditioning, LLC.",
+      "vicinity": "1215 Luzerne St, Reading",
+      "rating": 4.7,
+      "user_ratings_total": 225,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 484-4125",
+      "website": "https://otthvac.com/?utm_source=google&utm_medium=organic&utm_campaign=GMBListing-Reading-PA",
+      "address": "1215 Luzerne St, Reading, PA 19601, USA"
+    },
+    {
+      "place_id": "ChIJn_Neyk7fxYkRnuTM6tAKr5A",
+      "name": "Tyler Korrey Mechanical",
+      "vicinity": "617 Center Rd, Leesport",
+      "rating": 4.9,
+      "user_ratings_total": 35,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 916-0505",
+      "website": "http://www.tylerkorrey.com/",
+      "address": "617 Center Rd, Leesport, PA 19533, USA"
+    },
+    {
+      "place_id": "ChIJNypmUMFwxokRacwkHOZy9V4",
+      "name": "UGI Heating, Cooling & Plumbing",
+      "vicinity": "4338 Pottsville Pike #1, Reading",
+      "rating": 4.7,
+      "user_ratings_total": 522,
+      "business_status": "OPERATIONAL",
+      "phone": "(833) 980-3496",
+      "website": "https://www.ugihvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-profile",
+      "address": "4338 Pottsville Pike #1, Reading, PA 19605, USA"
+    },
+    {
+      "place_id": "ChIJX5Y1y_JxxokRIHiV8PfzaLc",
+      "name": "Alltemp Enterprise, Inc.",
+      "vicinity": "2 Front St, Mohnton",
+      "rating": 4.6,
+      "user_ratings_total": 52,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 796-1233",
+      "website": "https://alltempenterprise.com/",
+      "address": "2 Front St, Mohnton, PA 19540, USA"
+    },
+    {
+      "place_id": "ChIJTdqD0qB5xokRuBW2xvgR-Js",
+      "name": "Service 360 Group",
+      "vicinity": "1665 State Hill Rd Unit 700, Wyomissing",
+      "rating": 4.9,
+      "user_ratings_total": 238,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 364-5157",
+      "website": "https://www.service360group.com/?utm_source=gbp&utm_medium=organic&utm_campaign=hcms_gbp",
+      "address": "1665 State Hill Rd Unit 700, Wyomissing, PA 19610, USA"
+    },
+    {
+      "place_id": "ChIJQTPu6vTWxYkRzQrGVDh3ezU",
+      "name": "M & M Mechanical LLC",
+      "vicinity": "418 Park Rd, Fleetwood",
+      "rating": 4.4,
+      "user_ratings_total": 54,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 944-7587",
+      "website": "http://mmmech.net/",
+      "address": "418 Park Rd, Fleetwood, PA 19522, USA"
+    },
+    {
+      "place_id": "ChIJpxHEmDISPEwRTh7mrYiE8Cw",
+      "name": "Real Airflow Heating & Cooling",
+      "vicinity": "11 Richmaiden Rd, Fleetwood",
+      "rating": 5,
+      "user_ratings_total": 53,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 248-2155",
+      "website": "https://www.realairflow.com/",
+      "address": "11 Richmaiden Rd, Fleetwood, PA 19522, USA"
+    },
+    {
+      "place_id": "ChIJ-UaPCIZxxokRQ_dEzqY2pEg",
+      "name": "HL Bowman Inc Plumbing Heating & AC",
+      "vicinity": "430 Franklin St, West Reading",
+      "rating": 4.8,
+      "user_ratings_total": 415,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 273-8638",
+      "website": "https://hlbowman.com/locations/reading-pa/?utm_source=google&utm_medium=gmb&utm_campaign=reading%20listing&se_campaign=Google%20My%20Business%20-%20Clicked%20to%20Website",
+      "address": "430 Franklin St, West Reading, PA 19611, USA"
+    },
+    {
+      "place_id": "ChIJl0OomyVzxokRhqZNP9jRTnM",
+      "name": "Ultimate Comfort Heating & Cooling",
+      "vicinity": "280 Holland St, Wernersville",
+      "rating": 4.9,
+      "user_ratings_total": 146,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 750-8314",
+      "website": "http://www.ultimatecomforthc.com/",
+      "address": "280 Holland St, Wernersville, PA 19565, USA"
+    },
+    {
+      "place_id": "ChIJEc7Yq4TWxYkRJwIqmKrwY3c",
+      "name": "Art Smith and Son Heating and Air Conditioning Inc",
+      "vicinity": "135 Spook Ln, Fleetwood",
+      "rating": 4.9,
+      "user_ratings_total": 107,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 780-9350",
+      "website": "http://www.artsmithandson.com/",
+      "address": "135 Spook Ln, Fleetwood, PA 19522, USA"
+    },
+    {
+      "place_id": "ChIJ9d37d5DWxYkRXXbNtqRSoIc",
+      "name": "CPT Mechanical Services LLC",
+      "vicinity": "102 E Vine St, Fleetwood",
+      "rating": 5,
+      "user_ratings_total": 120,
+      "business_status": "OPERATIONAL",
+      "phone": "(484) 575-2077",
+      "website": "http://cptmechanicalservices.com/",
+      "address": "102 E Vine St, Fleetwood, PA 19522, USA"
+    },
+    {
+      "place_id": "ChIJW8eDZCiHxqER7awwQ7DgZWo",
+      "name": "Kodiak Comfort Heating and Air Conditioning",
+      "vicinity": "107 Greenwood Dr, Temple",
+      "rating": 5,
+      "user_ratings_total": 102,
+      "business_status": "OPERATIONAL",
+      "phone": "(610) 823-8018",
+      "website": "http://kodiakcomfort.info/",
+      "address": "107 Greenwood Dr, Temple, PA 19560, USA"
+    }
+  ]
+}

@@ -1,0 +1,1666 @@
+{
+  "metadata": {
+    "timestamp": "20251110_141433",
+    "state": "new_york",
+    "niche": "hvac",
+    "cities_processed": 5,
+    "total_raw_places": 98,
+    "note": "RAW data before filtering - no phone/website to save API costs",
+    "stats": {
+      "total_api_calls": 67,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 5,
+      "cities_processed": 5,
+      "total_cost": 0.0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Syracuse, NY",
+      "raw_places": [
+        {
+          "place_id": "ChIJ8QYOs0by2YkROAKvhSPHKJA",
+          "name": "Hummingbird Heating, Cooling, Plumbing & Electric",
+          "vicinity": "120 Arterial Rd, Syracuse",
+          "rating": 4.9,
+          "user_ratings_total": 716,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ21iyi2zs2YkRXMCD7f6IpBg",
+          "name": "Syracuse Energy Systems, Inc.",
+          "vicinity": "5965 Butternut Dr, East Syracuse",
+          "rating": 5,
+          "user_ratings_total": 326,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJi_f5gRru2YkRNO_2EM0XIx0",
+          "name": "Heat Wiser - Heating & Air Conditioning",
+          "vicinity": "1803 Cold Springs Rd, Liverpool",
+          "rating": 4.9,
+          "user_ratings_total": 328,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKwyyfJgg2okR6PD6QdiXyig",
+          "name": "Holbrook Heating & Air Conditioning",
+          "vicinity": "3140 Sweet Rd, Jamesville",
+          "rating": 4.8,
+          "user_ratings_total": 3181,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJmZwNGSjz2YkRX0CO-4iLzaQ",
+          "name": "Isaac Heating & Air Conditioning",
+          "vicinity": "2780 Erie Blvd E, Syracuse",
+          "rating": 4.8,
+          "user_ratings_total": 1146,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4UcKVCLt2YkRBUA-OfNOjak",
+          "name": "Hometown Heating & Air Conditioning",
+          "vicinity": "5985 E Taft Rd, Syracuse",
+          "rating": 4.8,
+          "user_ratings_total": 138,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJn6uMoFLt2YkRvmIn40osejs",
+          "name": "Falso Service Experts",
+          "vicinity": "6019 Corporate Dr E, East Syracuse",
+          "rating": 4.6,
+          "user_ratings_total": 2034,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvwX9LNjx2YkRATOaoOezZJc",
+          "name": "Halco of Syracuse",
+          "vicinity": "204 Bass St, Liverpool",
+          "rating": 4.9,
+          "user_ratings_total": 874,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMyt4fjny2YkRZiRjI6LAWnw",
+          "name": "Angelo Chiodo Heating & Air Conditioning",
+          "vicinity": "618 Wolf St, Syracuse",
+          "rating": 4.5,
+          "user_ratings_total": 180,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzZUiIOfz2YkRfgRHVoXZmRA",
+          "name": "Gomez Comfort Systems",
+          "vicinity": "503 S Geddes St, Syracuse",
+          "rating": 4.6,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMe4NpSjl2YkRJRduXWeejYk",
+          "name": "Fritcher's Heating Air Conditioning & Plumbing",
+          "vicinity": "173 Fairway Cir, Baldwinsville",
+          "rating": 4.7,
+          "user_ratings_total": 27,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_SOf6n_l2YkRcac_SQOMiWE",
+          "name": "Hill's Heating and Air Conditioning, Inc.",
+          "vicinity": "7852 River Rd, Baldwinsville",
+          "rating": 4.5,
+          "user_ratings_total": 70,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJV89ZS4zs2YkR2zgWP9PQDYA",
+          "name": "Ross Heating & Air Conditioning",
+          "vicinity": "5713 Caughdenoy Rd, Cicero",
+          "rating": 4.7,
+          "user_ratings_total": 80,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJCZRWjUb32YkRhOBPWR218tc",
+          "name": "Murray's Heating & Air Conditioning",
+          "vicinity": "5054 Smoral Rd, Camillus",
+          "rating": 4.5,
+          "user_ratings_total": 136,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5WFF6ebx2YkRnEQ7-sXelbo",
+          "name": "Charles Heating, Air Conditioning, Plumbing & Electrical",
+          "vicinity": "914 Old Liverpool Rd, Liverpool",
+          "rating": 4.9,
+          "user_ratings_total": 2548,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMaovpBDy2YkROVYp2byjl5Y",
+          "name": "Onondaga Heating & Air Conditioning",
+          "vicinity": "104 Luther Ave, Liverpool",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJDektDC_62YkRFNlbRat_uxE",
+          "name": "Ernie Kreis & Sons Heating Inc",
+          "vicinity": "5739 Scenic Dr, Camillus",
+          "rating": 3.8,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6rGI7Dv2YkR_Bsfqv9Cinw",
+          "name": "McCool Mechanical",
+          "vicinity": "213 Riverdale Rd, Liverpool",
+          "rating": 4.8,
+          "user_ratings_total": 25,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6_DfwJXy2YkRjiZOSdCED8g",
+          "name": "Potter Heating & Air Conditioning-Perrone Plumbing",
+          "vicinity": "4004 New Ct Ave, Syracuse",
+          "rating": 3.9,
+          "user_ratings_total": 75,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgSv6V2732YkRkF0NFCYneCQ",
+          "name": "Fred F. Collis & Sons",
+          "vicinity": "4604 Nixon Park Dr, Syracuse",
+          "rating": 4.9,
+          "user_ratings_total": 86,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 9,
+        "with_details": 9,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Buffalo, NY",
+      "raw_places": [
+        {
+          "place_id": "ChIJORNd-Z5y04kRdHeRYineDNk",
+          "name": "Adema Heating & Air Conditioning Inc",
+          "vicinity": "378 Englewood Ave, Buffalo",
+          "rating": 4.8,
+          "user_ratings_total": 358,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJA20Wo2Wu04kRyxUyVpzdjrQ",
+          "name": "TPS Services, LLC",
+          "vicinity": "36 Flohr Ave, West Seneca",
+          "rating": 4.9,
+          "user_ratings_total": 195,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJs8y8CspkKYERSunMcZyyWug",
+          "name": "The Cool Factory Heating & Cooling",
+          "vicinity": "506 Ivyhurst Rd N, Buffalo",
+          "rating": 5,
+          "user_ratings_total": 89,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbQLQ7D8L04kRWTgkYw42jdE",
+          "name": "Capital Heating, Cooling, Plumbing, & Electric",
+          "vicinity": "2975 Walden Ave, Depew",
+          "rating": 4.8,
+          "user_ratings_total": 804,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJs46p4kdt04kRDpTmYZUoJ1M",
+          "name": "T-Mark Plumbing, Heating & Cooling- Buffalo",
+          "vicinity": "577 Englewood Ave, Buffalo",
+          "rating": 4.9,
+          "user_ratings_total": 3680,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJeTBo1Ndt04kRqjOUlnDZhjQ",
+          "name": "Reimer Heating, Cooling & Plumbing",
+          "vicinity": "2575 Broadway, Cheektowaga",
+          "rating": 4.9,
+          "user_ratings_total": 7837,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfYSUNyJt04kRP-P3ZlNNwvE",
+          "name": "Sunbeam Service Experts",
+          "vicinity": "2914 Walden Ave Suite 300, Depew",
+          "rating": 4.9,
+          "user_ratings_total": 1058,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJDeN4qdXtuoAR2aD8UN3yFRk",
+          "name": "Evolution Heating & Air Conditioning",
+          "vicinity": "10 Bouck St, Tonawanda",
+          "rating": 5,
+          "user_ratings_total": 86,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJY88KHK9t04kRU9wrQQ1owno",
+          "name": "Roy's Plumbing, Heating, Cooling & Electrical",
+          "vicinity": "140 Cooper Ave, Tonawanda",
+          "rating": 4.8,
+          "user_ratings_total": 2823,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJf81iDMdy04kRzH7cY4OYoKQ",
+          "name": "Zenner & Ritter Home Services",
+          "vicinity": "3404 Bailey Ave, Buffalo",
+          "rating": 4.9,
+          "user_ratings_total": 5360,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJbWBmV1UL04kRC2KhZfXmWpQ",
+          "name": "Horbett Heating & Cooling",
+          "vicinity": "3725 Genesee St, Cheektowaga",
+          "rating": 4.6,
+          "user_ratings_total": 99,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJlf1GMV0L04kRb-PpzuQ5tzw",
+          "name": "Isaac Heating and Air Conditioning",
+          "vicinity": "70 Benbro Dr, Buffalo",
+          "rating": 4.9,
+          "user_ratings_total": 751,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVVXFjggO04kRkRiOVf3aXgs",
+          "name": "TRS Heating and Air Conditioning, Inc",
+          "vicinity": "14 Ransier Dr, West Seneca",
+          "rating": 3.9,
+          "user_ratings_total": 119,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-7pe3GBy04kRwVqnYAlWtWU",
+          "name": "O'Donnell Heating & Air Conditioning Inc - Buffalo",
+          "vicinity": "2032 Eggert Rd, Buffalo",
+          "rating": 4.7,
+          "user_ratings_total": 422,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJl3kBTR4J04kRoV7cB_uzNAM",
+          "name": "Climate King Heating Cooling & Duct Cleaning",
+          "vicinity": "55 Angle Rd Apt 23, West Seneca",
+          "rating": 5,
+          "user_ratings_total": 53,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJI39UO7YM04kRz06yNbYr4mI",
+          "name": "John Lock Air Conditioning & Heating Service Inc.",
+          "vicinity": "3120 Genesee St, Cheektowaga",
+          "rating": 4.5,
+          "user_ratings_total": 70,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJk6Y6PH1y04kRAjSSTlTymGc",
+          "name": "JP Heating & Cooling, LLC.",
+          "vicinity": "2060 Niagara St, Buffalo",
+          "rating": 5,
+          "user_ratings_total": 174,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJk9zlVtQT04kRzH9axOu2S-8",
+          "name": "Cellino Plumbing, Heating, Cooling & Electric",
+          "vicinity": "142 Van Rensselaer St, Buffalo",
+          "rating": 4.9,
+          "user_ratings_total": 932,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWbuwwlQJ04kRgBYWsZwdcL4",
+          "name": "Tri - R Mechanical Services Inc - Buffalo",
+          "vicinity": "150 Empire Dr, West Seneca",
+          "rating": 5,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQBMN54P04kRkb1T_fvktH8",
+          "name": "Modern Mechanical Inc.",
+          "vicinity": "3285 Abbott Rd, Orchard Park",
+          "rating": 5,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 10,
+        "with_details": 10,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Rochester, NY",
+      "raw_places": [
+        {
+          "place_id": "ChIJ2zTjcH-01okRJUBFiDaSmlE",
+          "name": "High Performance Heating & Air Conditioning",
+          "vicinity": "2350 Brighton Henrietta Town Line Rd, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 711,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwXIiKngV9qQRbCMG-mKDwqY",
+          "name": "Reimer Heating, Cooling & Plumbing, LLC",
+          "vicinity": "52 Marway Cir, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 1610,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpb-fdhq11okRunBpwfnCbIc",
+          "name": "John Betlem Heating & Cooling",
+          "vicinity": "806 Linden Ave, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 2387,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJc3wQOjzL1okRRu7-S242tTw",
+          "name": "Airquip Heating & Air Conditioning",
+          "vicinity": "830 Linden Ave, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 619,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLW49KNev1okRr7Ci3nsvhI4",
+          "name": "Williams & Son Heating Contractors Inc.",
+          "vicinity": "3763 Latta Rd, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 55,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcSFt4XzK1okROZq_sclMX1c",
+          "name": "Hawn Heating & Air Conditioning Inc",
+          "vicinity": "277 Winton Rd N, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 602,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJY3bhSJLM1okRFfmRT4neZv0",
+          "name": "MGM Heating And Cooling",
+          "vicinity": "8 Jacaranda Ct, Penfield",
+          "rating": 5,
+          "user_ratings_total": 106,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJo32DXgbP1okRHGoNnxgnFwE",
+          "name": "Crossfield Heating & Air Conditioning",
+          "vicinity": "44 Donovan St, Webster",
+          "rating": 4.9,
+          "user_ratings_total": 985,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMSN2hXmz1okR_XFwPg5syOk",
+          "name": "Taylor Heating Inc.",
+          "vicinity": "1775 Buffalo Rd, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 1965,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg30EDhhL0YkRNtmzPVxYSbo",
+          "name": "Halco of Rochester",
+          "vicinity": "365 N Washington St, Rochester",
+          "rating": 5,
+          "user_ratings_total": 837,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZbC3a6a11okRILQoMDJFkuM",
+          "name": "Isaac Heating & Air Conditioning",
+          "vicinity": "50 Holleder Pkwy, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 5641,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJuZMCs-DI1okRA1iEj7hptn4",
+          "name": "Napora Heating Cooling Plumbing",
+          "vicinity": "762 Maple Dr, Webster",
+          "rating": 4.8,
+          "user_ratings_total": 76,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJC34eKo3N1okR3wOqO5qTSto",
+          "name": "United Heating and Air LLC",
+          "vicinity": "11 Stablegate Dr, Webster",
+          "rating": 4.9,
+          "user_ratings_total": 86,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJW1iKqnBT0YkR2YoIHS96BBI",
+          "name": "Upstate Air Heating & Cooling",
+          "vicinity": "3240 Chili Ave STE C8, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 32,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJk-NcNxu11okRrVKlOstdaGQ",
+          "name": "BETLEM RESIDENTIAL Heating & Air Conditioning",
+          "vicinity": "704 S Clinton Ave, Rochester",
+          "rating": 4.7,
+          "user_ratings_total": 521,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvyGVNao10YkRZVgB7T6Id3Y",
+          "name": "Platinum HVAC Solutions",
+          "vicinity": "42 Lake Lacoma Dr, Pittsford",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4Zs_da810YkR3dYB4DVHO0g",
+          "name": "Mendon Heating & Cooling, Inc.",
+          "vicinity": "35 High Hill Dr, Pittsford",
+          "rating": 5,
+          "user_ratings_total": 34,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ1Y24k1-t1okRsvKsasZYaus",
+          "name": "Zoom Heating & Cooling",
+          "vicinity": "1000 Turk Hill Rd Suite 2 CC, Fairport",
+          "rating": 4.8,
+          "user_ratings_total": 46,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZR0BcI601okRh37oJZzgxN8",
+          "name": "Universal Heating and Cooling Company",
+          "vicinity": "926 W Main St, Rochester",
+          "rating": 4.5,
+          "user_ratings_total": 125,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx8LPbuuz1okR8I9XYeUPWKc",
+          "name": "Kane Heating & Cooling LLC",
+          "vicinity": "15 Pen Web Park, Webster",
+          "rating": 4.9,
+          "user_ratings_total": 133,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Yonkers, NY",
+      "raw_places": [
+        {
+          "place_id": "ChIJN2vFAbiSwokRhmrhDEBOasc",
+          "name": "Innovative Air Solutions Inc.",
+          "vicinity": "11 Kimball Pl, Mt Vernon",
+          "rating": 4.9,
+          "user_ratings_total": 913,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0f1JPoDotSURp1I6Xphz-ag",
+          "name": "First Choice Plumbing, Heating, Air Conditioning & Electrical (Hackensack)",
+          "vicinity": "165 State St, Hackensack",
+          "rating": 5,
+          "user_ratings_total": 64,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJT-XZk4DiwokROHogRO95zLQ",
+          "name": "Total Comfort Services LLC",
+          "vicinity": "20 Booker St, Westwood",
+          "rating": 4.9,
+          "user_ratings_total": 613,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJP9lmeOmSwokRZeKg1FZaja4",
+          "name": "AMHAC",
+          "vicinity": "365 White Plains Rd, Eastchester",
+          "rating": 4.9,
+          "user_ratings_total": 1372,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIRRLBjeNwokR4ufcVnKZKCo",
+          "name": "Yost & Campbell",
+          "vicinity": "20 Brookdale Pl, Mt Vernon",
+          "rating": 4.8,
+          "user_ratings_total": 2232,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHUSvl-HzwokRQlcqHfgB8-o",
+          "name": "Tribeca Airconditioning corp",
+          "vicinity": "3350 Paulding Ave, Bronx",
+          "rating": 4.8,
+          "user_ratings_total": 124,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpWgBfA33wokRrarcdZBOYEo",
+          "name": "Finch Heating & Cooling",
+          "vicinity": "111 Grand Ave suite 557, Palisades Park",
+          "rating": 5,
+          "user_ratings_total": 23,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAwVZ8Sk7WAsRbV0s8rXAtO4",
+          "name": "G2G Heating and Air conditioning",
+          "vicinity": "2005 Palmer Ave #731, Larchmont",
+          "rating": 5,
+          "user_ratings_total": 51,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq1L4A5Szw4kRveaG7JQbW2c",
+          "name": "Price Beat HVAC",
+          "vicinity": "64 E Ridgewood Ave, Paramus",
+          "rating": 4.9,
+          "user_ratings_total": 154,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoWQO3dKVwokRY6sFZffY5so",
+          "name": "Sila Heating, Air Conditioning, Plumbing & Electrical",
+          "vicinity": "55 Lafayette Ave, White Plains",
+          "rating": 4.8,
+          "user_ratings_total": 1745,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJizwrcnaNwokR6u4ongMeYxY",
+          "name": "HI TECH HVAC NYC",
+          "vicinity": "585 North Ave 3rd floor, New Rochelle",
+          "rating": 5,
+          "user_ratings_total": 3,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJsxr7hEHzwokRiZDJzD74pUA",
+          "name": "Xpress hvac",
+          "vicinity": "2844 Decatur Ave, Bronx",
+          "rating": 5,
+          "user_ratings_total": 34,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJG7OiaZ-NwokRuOxjRDfCKf0",
+          "name": "G.C. Reliable Service",
+          "vicinity": "80 Grove Ave, New Rochelle",
+          "rating": 4.8,
+          "user_ratings_total": 395,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAy1yUl5ZwokRAZoxQIDl9kI",
+          "name": "Fred's Climate Control",
+          "vicinity": "6714 Meadowview Ave, North Bergen",
+          "rating": 4.9,
+          "user_ratings_total": 111,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvT6yzjzzwokR6z9gJKn64wQ",
+          "name": "You And Us Mechanical Services",
+          "vicinity": "3870 White Plains Rd, Bronx",
+          "rating": 5,
+          "user_ratings_total": 105,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoQhjqqL1wokR7YHi_X3V4BM",
+          "name": "DARIO Contracting Inc.",
+          "vicinity": "1614 Haight Ave, Bronx",
+          "rating": 4.8,
+          "user_ratings_total": 25,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVze89XuMwokRzDc6xYHdAtM",
+          "name": "Cottam Heating & Air Conditioning Inc",
+          "vicinity": "217 Fordham St, Bronx",
+          "rating": 4.7,
+          "user_ratings_total": 286,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJGXfC6zD5wokRFvHeyc94Yok",
+          "name": "Liberty Heating & Cooling",
+          "vicinity": "66 Lincoln Pl, Garfield",
+          "rating": 4.9,
+          "user_ratings_total": 339,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJk3RDwvfzwokRIuZpSlCxkc8",
+          "name": "American HVAC Corp - Bronx - Heating, Commercial, Air Conditioning, Ductless Mini Split AC, Furnace Repair Installation NYC",
+          "vicinity": "1500 Astor Ave, Bronx",
+          "rating": 4.9,
+          "user_ratings_total": 100,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ__-IVzP4wokRahnlD7oWypk",
+          "name": "Tanous Heating & Air Conditioning",
+          "vicinity": "4 14th St #501, Hoboken",
+          "rating": 4.8,
+          "user_ratings_total": 139,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "New York, NY",
+      "raw_places": [
+        {
+          "place_id": "ChIJkUNPJRtfwokRdJ767vd2oJU",
+          "name": "KOKA-TECH HVAC INC",
+          "vicinity": "60-21 Menahan St, Ridgewood",
+          "rating": 5,
+          "user_ratings_total": 293,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ65I-sltFwokR5kpvCVPFI6I",
+          "name": "NY CENTRAL COMFORT ( AIR CONDITIONING AND HEATING)",
+          "vicinity": "1870 W 3rd St, Brooklyn",
+          "rating": 5,
+          "user_ratings_total": 64,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJO_UyGDlFwokR0QyULuwQUNU",
+          "name": "The Heating Cooling Doctor",
+          "vicinity": "1454 42nd St, Brooklyn",
+          "rating": 5,
+          "user_ratings_total": 159,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0ZaXcDZFwokRRQFINHx5hL0",
+          "name": "HVAC Installation Pro",
+          "vicinity": "2060 E 19th St, Brooklyn",
+          "rating": 5,
+          "user_ratings_total": 103,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJeZeas21VwokRJdFNgvscWl0",
+          "name": "Air Comfort and Refrigeration Services - Bloomfield New Jersey",
+          "vicinity": "354 Sylvan Rd, Bloomfield",
+          "rating": 4.9,
+          "user_ratings_total": 117,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAy1yUl5ZwokRAZoxQIDl9kI",
+          "name": "Fred's Climate Control",
+          "vicinity": "6714 Meadowview Ave, North Bergen",
+          "rating": 4.9,
+          "user_ratings_total": 111,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJdfM4E6FZwokRpYnueTSsNYA",
+          "name": "American HVAC Corp – Top HVAC Contractor NYC",
+          "vicinity": "368 9th Ave 6th floor, New York",
+          "rating": 4.8,
+          "user_ratings_total": 139,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnw2rLzBfwokRadCKkUuHYzc",
+          "name": "Day Night HVAC & Plumbing Inc.",
+          "vicinity": "88-07 69th Ave, Forest Hills",
+          "rating": 4.9,
+          "user_ratings_total": 80,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ60MHxbxZwokRWigzqZF-1rQ",
+          "name": "Chelsea Cooling and Heating Services",
+          "vicinity": "115 W 18th St 2nd fl, New York",
+          "rating": 4.9,
+          "user_ratings_total": 32,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPb-YPe9awokRoKu0xYmcDXE",
+          "name": "Bright Star Service",
+          "vicinity": "1 Dock 72 Wy, Brooklyn",
+          "rating": 4.8,
+          "user_ratings_total": 60,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcwfCTf1bwokRqGfReazHkiM",
+          "name": "Classic Home Services, AC & Furnace Repair",
+          "vicinity": "275 Park Ave, Brooklyn",
+          "rating": 4.8,
+          "user_ratings_total": 157,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ__9D1FBZwokRlaW0Rh6tXmk",
+          "name": "Brooklyn HVAC Services",
+          "vicinity": "1115 Lafayette Ave, Brooklyn",
+          "rating": 5,
+          "user_ratings_total": 47,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3ylhlMVdwokREXrk9kGXtdw",
+          "name": "DAIYAN HVAC & PLUMBING INC.",
+          "vicinity": "1097 Liberty Ave, Brooklyn",
+          "rating": 5,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ8eJH1QVRam8RcgreidBueww",
+          "name": "Brownstone Heating & Air Conditioning",
+          "vicinity": "210 Parkville Ave, Brooklyn",
+          "rating": 4.8,
+          "user_ratings_total": 45,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJuzsNKpJZwokRjc1EQ0et3HM",
+          "name": "Fresh Air Company",
+          "vicinity": "115 MacDougal St, New York",
+          "rating": 4.7,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ__-IVzP4wokRahnlD7oWypk",
+          "name": "Tanous Heating & Air Conditioning",
+          "vicinity": "4 14th St #501, Hoboken",
+          "rating": 4.8,
+          "user_ratings_total": 139,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJdyNHKHRbwokRkD69fdZ0SpA",
+          "name": "American HVAC Corp - Brooklyn, Heating, Air Conditioning, Refrigeration, Ductless Mini Split, Rooftop, Commercial HVAC NYC",
+          "vicinity": "77 Sands St 6th Floor, Brooklyn",
+          "rating": 5,
+          "user_ratings_total": 92,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ9YNTkM5ZwokRbHL_I7x1DCE",
+          "name": "QUICK HVAC COOLING AND HEATING REPAIRS LLC",
+          "vicinity": "65 W 36th St. suite 1200, New York",
+          "rating": 5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJe5btEopZwokRpygcP25r2VA",
+          "name": "Champion HVAC Services",
+          "vicinity": "3 Wooster St, New York",
+          "rating": 5,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLbJg5yBhwokRCFtlyXvpURM",
+          "name": "Air Tactical HVAC Services",
+          "vicinity": "83-27B 124th Pl, Kew Gardens",
+          "rating": 4.7,
+          "user_ratings_total": 88,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 17,
+        "with_details": 17,
+        "final_radius_km": 15.0
+      }
+    }
+  ],
+  "all_raw_places": [
+    {
+      "place_id": "ChIJ8QYOs0by2YkROAKvhSPHKJA",
+      "name": "Hummingbird Heating, Cooling, Plumbing & Electric",
+      "vicinity": "120 Arterial Rd, Syracuse",
+      "rating": 4.9,
+      "user_ratings_total": 716,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ21iyi2zs2YkRXMCD7f6IpBg",
+      "name": "Syracuse Energy Systems, Inc.",
+      "vicinity": "5965 Butternut Dr, East Syracuse",
+      "rating": 5,
+      "user_ratings_total": 326,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJi_f5gRru2YkRNO_2EM0XIx0",
+      "name": "Heat Wiser - Heating & Air Conditioning",
+      "vicinity": "1803 Cold Springs Rd, Liverpool",
+      "rating": 4.9,
+      "user_ratings_total": 328,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKwyyfJgg2okR6PD6QdiXyig",
+      "name": "Holbrook Heating & Air Conditioning",
+      "vicinity": "3140 Sweet Rd, Jamesville",
+      "rating": 4.8,
+      "user_ratings_total": 3181,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJmZwNGSjz2YkRX0CO-4iLzaQ",
+      "name": "Isaac Heating & Air Conditioning",
+      "vicinity": "2780 Erie Blvd E, Syracuse",
+      "rating": 4.8,
+      "user_ratings_total": 1146,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4UcKVCLt2YkRBUA-OfNOjak",
+      "name": "Hometown Heating & Air Conditioning",
+      "vicinity": "5985 E Taft Rd, Syracuse",
+      "rating": 4.8,
+      "user_ratings_total": 138,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJn6uMoFLt2YkRvmIn40osejs",
+      "name": "Falso Service Experts",
+      "vicinity": "6019 Corporate Dr E, East Syracuse",
+      "rating": 4.6,
+      "user_ratings_total": 2034,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvwX9LNjx2YkRATOaoOezZJc",
+      "name": "Halco of Syracuse",
+      "vicinity": "204 Bass St, Liverpool",
+      "rating": 4.9,
+      "user_ratings_total": 874,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMyt4fjny2YkRZiRjI6LAWnw",
+      "name": "Angelo Chiodo Heating & Air Conditioning",
+      "vicinity": "618 Wolf St, Syracuse",
+      "rating": 4.5,
+      "user_ratings_total": 180,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzZUiIOfz2YkRfgRHVoXZmRA",
+      "name": "Gomez Comfort Systems",
+      "vicinity": "503 S Geddes St, Syracuse",
+      "rating": 4.6,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMe4NpSjl2YkRJRduXWeejYk",
+      "name": "Fritcher's Heating Air Conditioning & Plumbing",
+      "vicinity": "173 Fairway Cir, Baldwinsville",
+      "rating": 4.7,
+      "user_ratings_total": 27,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_SOf6n_l2YkRcac_SQOMiWE",
+      "name": "Hill's Heating and Air Conditioning, Inc.",
+      "vicinity": "7852 River Rd, Baldwinsville",
+      "rating": 4.5,
+      "user_ratings_total": 70,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJV89ZS4zs2YkR2zgWP9PQDYA",
+      "name": "Ross Heating & Air Conditioning",
+      "vicinity": "5713 Caughdenoy Rd, Cicero",
+      "rating": 4.7,
+      "user_ratings_total": 80,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJCZRWjUb32YkRhOBPWR218tc",
+      "name": "Murray's Heating & Air Conditioning",
+      "vicinity": "5054 Smoral Rd, Camillus",
+      "rating": 4.5,
+      "user_ratings_total": 136,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5WFF6ebx2YkRnEQ7-sXelbo",
+      "name": "Charles Heating, Air Conditioning, Plumbing & Electrical",
+      "vicinity": "914 Old Liverpool Rd, Liverpool",
+      "rating": 4.9,
+      "user_ratings_total": 2548,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMaovpBDy2YkROVYp2byjl5Y",
+      "name": "Onondaga Heating & Air Conditioning",
+      "vicinity": "104 Luther Ave, Liverpool",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJDektDC_62YkRFNlbRat_uxE",
+      "name": "Ernie Kreis & Sons Heating Inc",
+      "vicinity": "5739 Scenic Dr, Camillus",
+      "rating": 3.8,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq6rGI7Dv2YkR_Bsfqv9Cinw",
+      "name": "McCool Mechanical",
+      "vicinity": "213 Riverdale Rd, Liverpool",
+      "rating": 4.8,
+      "user_ratings_total": 25,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6_DfwJXy2YkRjiZOSdCED8g",
+      "name": "Potter Heating & Air Conditioning-Perrone Plumbing",
+      "vicinity": "4004 New Ct Ave, Syracuse",
+      "rating": 3.9,
+      "user_ratings_total": 75,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgSv6V2732YkRkF0NFCYneCQ",
+      "name": "Fred F. Collis & Sons",
+      "vicinity": "4604 Nixon Park Dr, Syracuse",
+      "rating": 4.9,
+      "user_ratings_total": 86,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJORNd-Z5y04kRdHeRYineDNk",
+      "name": "Adema Heating & Air Conditioning Inc",
+      "vicinity": "378 Englewood Ave, Buffalo",
+      "rating": 4.8,
+      "user_ratings_total": 358,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJA20Wo2Wu04kRyxUyVpzdjrQ",
+      "name": "TPS Services, LLC",
+      "vicinity": "36 Flohr Ave, West Seneca",
+      "rating": 4.9,
+      "user_ratings_total": 195,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJs8y8CspkKYERSunMcZyyWug",
+      "name": "The Cool Factory Heating & Cooling",
+      "vicinity": "506 Ivyhurst Rd N, Buffalo",
+      "rating": 5,
+      "user_ratings_total": 89,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJbQLQ7D8L04kRWTgkYw42jdE",
+      "name": "Capital Heating, Cooling, Plumbing, & Electric",
+      "vicinity": "2975 Walden Ave, Depew",
+      "rating": 4.8,
+      "user_ratings_total": 804,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJs46p4kdt04kRDpTmYZUoJ1M",
+      "name": "T-Mark Plumbing, Heating & Cooling- Buffalo",
+      "vicinity": "577 Englewood Ave, Buffalo",
+      "rating": 4.9,
+      "user_ratings_total": 3680,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJeTBo1Ndt04kRqjOUlnDZhjQ",
+      "name": "Reimer Heating, Cooling & Plumbing",
+      "vicinity": "2575 Broadway, Cheektowaga",
+      "rating": 4.9,
+      "user_ratings_total": 7837,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJfYSUNyJt04kRP-P3ZlNNwvE",
+      "name": "Sunbeam Service Experts",
+      "vicinity": "2914 Walden Ave Suite 300, Depew",
+      "rating": 4.9,
+      "user_ratings_total": 1058,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJDeN4qdXtuoAR2aD8UN3yFRk",
+      "name": "Evolution Heating & Air Conditioning",
+      "vicinity": "10 Bouck St, Tonawanda",
+      "rating": 5,
+      "user_ratings_total": 86,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJY88KHK9t04kRU9wrQQ1owno",
+      "name": "Roy's Plumbing, Heating, Cooling & Electrical",
+      "vicinity": "140 Cooper Ave, Tonawanda",
+      "rating": 4.8,
+      "user_ratings_total": 2823,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJf81iDMdy04kRzH7cY4OYoKQ",
+      "name": "Zenner & Ritter Home Services",
+      "vicinity": "3404 Bailey Ave, Buffalo",
+      "rating": 4.9,
+      "user_ratings_total": 5360,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJbWBmV1UL04kRC2KhZfXmWpQ",
+      "name": "Horbett Heating & Cooling",
+      "vicinity": "3725 Genesee St, Cheektowaga",
+      "rating": 4.6,
+      "user_ratings_total": 99,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJlf1GMV0L04kRb-PpzuQ5tzw",
+      "name": "Isaac Heating and Air Conditioning",
+      "vicinity": "70 Benbro Dr, Buffalo",
+      "rating": 4.9,
+      "user_ratings_total": 751,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVVXFjggO04kRkRiOVf3aXgs",
+      "name": "TRS Heating and Air Conditioning, Inc",
+      "vicinity": "14 Ransier Dr, West Seneca",
+      "rating": 3.9,
+      "user_ratings_total": 119,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-7pe3GBy04kRwVqnYAlWtWU",
+      "name": "O'Donnell Heating & Air Conditioning Inc - Buffalo",
+      "vicinity": "2032 Eggert Rd, Buffalo",
+      "rating": 4.7,
+      "user_ratings_total": 422,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJl3kBTR4J04kRoV7cB_uzNAM",
+      "name": "Climate King Heating Cooling & Duct Cleaning",
+      "vicinity": "55 Angle Rd Apt 23, West Seneca",
+      "rating": 5,
+      "user_ratings_total": 53,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJI39UO7YM04kRz06yNbYr4mI",
+      "name": "John Lock Air Conditioning & Heating Service Inc.",
+      "vicinity": "3120 Genesee St, Cheektowaga",
+      "rating": 4.5,
+      "user_ratings_total": 70,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJk6Y6PH1y04kRAjSSTlTymGc",
+      "name": "JP Heating & Cooling, LLC.",
+      "vicinity": "2060 Niagara St, Buffalo",
+      "rating": 5,
+      "user_ratings_total": 174,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJk9zlVtQT04kRzH9axOu2S-8",
+      "name": "Cellino Plumbing, Heating, Cooling & Electric",
+      "vicinity": "142 Van Rensselaer St, Buffalo",
+      "rating": 4.9,
+      "user_ratings_total": 932,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWbuwwlQJ04kRgBYWsZwdcL4",
+      "name": "Tri - R Mechanical Services Inc - Buffalo",
+      "vicinity": "150 Empire Dr, West Seneca",
+      "rating": 5,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAQBMN54P04kRkb1T_fvktH8",
+      "name": "Modern Mechanical Inc.",
+      "vicinity": "3285 Abbott Rd, Orchard Park",
+      "rating": 5,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2zTjcH-01okRJUBFiDaSmlE",
+      "name": "High Performance Heating & Air Conditioning",
+      "vicinity": "2350 Brighton Henrietta Town Line Rd, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 711,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJwXIiKngV9qQRbCMG-mKDwqY",
+      "name": "Reimer Heating, Cooling & Plumbing, LLC",
+      "vicinity": "52 Marway Cir, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 1610,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpb-fdhq11okRunBpwfnCbIc",
+      "name": "John Betlem Heating & Cooling",
+      "vicinity": "806 Linden Ave, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 2387,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJc3wQOjzL1okRRu7-S242tTw",
+      "name": "Airquip Heating & Air Conditioning",
+      "vicinity": "830 Linden Ave, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 619,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLW49KNev1okRr7Ci3nsvhI4",
+      "name": "Williams & Son Heating Contractors Inc.",
+      "vicinity": "3763 Latta Rd, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 55,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcSFt4XzK1okROZq_sclMX1c",
+      "name": "Hawn Heating & Air Conditioning Inc",
+      "vicinity": "277 Winton Rd N, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 602,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJY3bhSJLM1okRFfmRT4neZv0",
+      "name": "MGM Heating And Cooling",
+      "vicinity": "8 Jacaranda Ct, Penfield",
+      "rating": 5,
+      "user_ratings_total": 106,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJo32DXgbP1okRHGoNnxgnFwE",
+      "name": "Crossfield Heating & Air Conditioning",
+      "vicinity": "44 Donovan St, Webster",
+      "rating": 4.9,
+      "user_ratings_total": 985,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMSN2hXmz1okR_XFwPg5syOk",
+      "name": "Taylor Heating Inc.",
+      "vicinity": "1775 Buffalo Rd, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 1965,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJg30EDhhL0YkRNtmzPVxYSbo",
+      "name": "Halco of Rochester",
+      "vicinity": "365 N Washington St, Rochester",
+      "rating": 5,
+      "user_ratings_total": 837,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZbC3a6a11okRILQoMDJFkuM",
+      "name": "Isaac Heating & Air Conditioning",
+      "vicinity": "50 Holleder Pkwy, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 5641,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuZMCs-DI1okRA1iEj7hptn4",
+      "name": "Napora Heating Cooling Plumbing",
+      "vicinity": "762 Maple Dr, Webster",
+      "rating": 4.8,
+      "user_ratings_total": 76,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJC34eKo3N1okR3wOqO5qTSto",
+      "name": "United Heating and Air LLC",
+      "vicinity": "11 Stablegate Dr, Webster",
+      "rating": 4.9,
+      "user_ratings_total": 86,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJW1iKqnBT0YkR2YoIHS96BBI",
+      "name": "Upstate Air Heating & Cooling",
+      "vicinity": "3240 Chili Ave STE C8, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 32,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJk-NcNxu11okRrVKlOstdaGQ",
+      "name": "BETLEM RESIDENTIAL Heating & Air Conditioning",
+      "vicinity": "704 S Clinton Ave, Rochester",
+      "rating": 4.7,
+      "user_ratings_total": 521,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvyGVNao10YkRZVgB7T6Id3Y",
+      "name": "Platinum HVAC Solutions",
+      "vicinity": "42 Lake Lacoma Dr, Pittsford",
+      "rating": 5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4Zs_da810YkR3dYB4DVHO0g",
+      "name": "Mendon Heating & Cooling, Inc.",
+      "vicinity": "35 High Hill Dr, Pittsford",
+      "rating": 5,
+      "user_ratings_total": 34,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ1Y24k1-t1okRsvKsasZYaus",
+      "name": "Zoom Heating & Cooling",
+      "vicinity": "1000 Turk Hill Rd Suite 2 CC, Fairport",
+      "rating": 4.8,
+      "user_ratings_total": 46,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZR0BcI601okRh37oJZzgxN8",
+      "name": "Universal Heating and Cooling Company",
+      "vicinity": "926 W Main St, Rochester",
+      "rating": 4.5,
+      "user_ratings_total": 125,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJx8LPbuuz1okR8I9XYeUPWKc",
+      "name": "Kane Heating & Cooling LLC",
+      "vicinity": "15 Pen Web Park, Webster",
+      "rating": 4.9,
+      "user_ratings_total": 133,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN2vFAbiSwokRhmrhDEBOasc",
+      "name": "Innovative Air Solutions Inc.",
+      "vicinity": "11 Kimball Pl, Mt Vernon",
+      "rating": 4.9,
+      "user_ratings_total": 913,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0f1JPoDotSURp1I6Xphz-ag",
+      "name": "First Choice Plumbing, Heating, Air Conditioning & Electrical (Hackensack)",
+      "vicinity": "165 State St, Hackensack",
+      "rating": 5,
+      "user_ratings_total": 64,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJT-XZk4DiwokROHogRO95zLQ",
+      "name": "Total Comfort Services LLC",
+      "vicinity": "20 Booker St, Westwood",
+      "rating": 4.9,
+      "user_ratings_total": 613,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJP9lmeOmSwokRZeKg1FZaja4",
+      "name": "AMHAC",
+      "vicinity": "365 White Plains Rd, Eastchester",
+      "rating": 4.9,
+      "user_ratings_total": 1372,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIRRLBjeNwokR4ufcVnKZKCo",
+      "name": "Yost & Campbell",
+      "vicinity": "20 Brookdale Pl, Mt Vernon",
+      "rating": 4.8,
+      "user_ratings_total": 2232,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJHUSvl-HzwokRQlcqHfgB8-o",
+      "name": "Tribeca Airconditioning corp",
+      "vicinity": "3350 Paulding Ave, Bronx",
+      "rating": 4.8,
+      "user_ratings_total": 124,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpWgBfA33wokRrarcdZBOYEo",
+      "name": "Finch Heating & Cooling",
+      "vicinity": "111 Grand Ave suite 557, Palisades Park",
+      "rating": 5,
+      "user_ratings_total": 23,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAwVZ8Sk7WAsRbV0s8rXAtO4",
+      "name": "G2G Heating and Air conditioning",
+      "vicinity": "2005 Palmer Ave #731, Larchmont",
+      "rating": 5,
+      "user_ratings_total": 51,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq1L4A5Szw4kRveaG7JQbW2c",
+      "name": "Price Beat HVAC",
+      "vicinity": "64 E Ridgewood Ave, Paramus",
+      "rating": 4.9,
+      "user_ratings_total": 154,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJoWQO3dKVwokRY6sFZffY5so",
+      "name": "Sila Heating, Air Conditioning, Plumbing & Electrical",
+      "vicinity": "55 Lafayette Ave, White Plains",
+      "rating": 4.8,
+      "user_ratings_total": 1745,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJizwrcnaNwokR6u4ongMeYxY",
+      "name": "HI TECH HVAC NYC",
+      "vicinity": "585 North Ave 3rd floor, New Rochelle",
+      "rating": 5,
+      "user_ratings_total": 3,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJsxr7hEHzwokRiZDJzD74pUA",
+      "name": "Xpress hvac",
+      "vicinity": "2844 Decatur Ave, Bronx",
+      "rating": 5,
+      "user_ratings_total": 34,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJG7OiaZ-NwokRuOxjRDfCKf0",
+      "name": "G.C. Reliable Service",
+      "vicinity": "80 Grove Ave, New Rochelle",
+      "rating": 4.8,
+      "user_ratings_total": 395,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAy1yUl5ZwokRAZoxQIDl9kI",
+      "name": "Fred's Climate Control",
+      "vicinity": "6714 Meadowview Ave, North Bergen",
+      "rating": 4.9,
+      "user_ratings_total": 111,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvT6yzjzzwokR6z9gJKn64wQ",
+      "name": "You And Us Mechanical Services",
+      "vicinity": "3870 White Plains Rd, Bronx",
+      "rating": 5,
+      "user_ratings_total": 105,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJoQhjqqL1wokR7YHi_X3V4BM",
+      "name": "DARIO Contracting Inc.",
+      "vicinity": "1614 Haight Ave, Bronx",
+      "rating": 4.8,
+      "user_ratings_total": 25,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVze89XuMwokRzDc6xYHdAtM",
+      "name": "Cottam Heating & Air Conditioning Inc",
+      "vicinity": "217 Fordham St, Bronx",
+      "rating": 4.7,
+      "user_ratings_total": 286,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJGXfC6zD5wokRFvHeyc94Yok",
+      "name": "Liberty Heating & Cooling",
+      "vicinity": "66 Lincoln Pl, Garfield",
+      "rating": 4.9,
+      "user_ratings_total": 339,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJk3RDwvfzwokRIuZpSlCxkc8",
+      "name": "American HVAC Corp - Bronx - Heating, Commercial, Air Conditioning, Ductless Mini Split AC, Furnace Repair Installation NYC",
+      "vicinity": "1500 Astor Ave, Bronx",
+      "rating": 4.9,
+      "user_ratings_total": 100,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ__-IVzP4wokRahnlD7oWypk",
+      "name": "Tanous Heating & Air Conditioning",
+      "vicinity": "4 14th St #501, Hoboken",
+      "rating": 4.8,
+      "user_ratings_total": 139,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJkUNPJRtfwokRdJ767vd2oJU",
+      "name": "KOKA-TECH HVAC INC",
+      "vicinity": "60-21 Menahan St, Ridgewood",
+      "rating": 5,
+      "user_ratings_total": 293,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ65I-sltFwokR5kpvCVPFI6I",
+      "name": "NY CENTRAL COMFORT ( AIR CONDITIONING AND HEATING)",
+      "vicinity": "1870 W 3rd St, Brooklyn",
+      "rating": 5,
+      "user_ratings_total": 64,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJO_UyGDlFwokR0QyULuwQUNU",
+      "name": "The Heating Cooling Doctor",
+      "vicinity": "1454 42nd St, Brooklyn",
+      "rating": 5,
+      "user_ratings_total": 159,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0ZaXcDZFwokRRQFINHx5hL0",
+      "name": "HVAC Installation Pro",
+      "vicinity": "2060 E 19th St, Brooklyn",
+      "rating": 5,
+      "user_ratings_total": 103,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJeZeas21VwokRJdFNgvscWl0",
+      "name": "Air Comfort and Refrigeration Services - Bloomfield New Jersey",
+      "vicinity": "354 Sylvan Rd, Bloomfield",
+      "rating": 4.9,
+      "user_ratings_total": 117,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJdfM4E6FZwokRpYnueTSsNYA",
+      "name": "American HVAC Corp – Top HVAC Contractor NYC",
+      "vicinity": "368 9th Ave 6th floor, New York",
+      "rating": 4.8,
+      "user_ratings_total": 139,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnw2rLzBfwokRadCKkUuHYzc",
+      "name": "Day Night HVAC & Plumbing Inc.",
+      "vicinity": "88-07 69th Ave, Forest Hills",
+      "rating": 4.9,
+      "user_ratings_total": 80,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ60MHxbxZwokRWigzqZF-1rQ",
+      "name": "Chelsea Cooling and Heating Services",
+      "vicinity": "115 W 18th St 2nd fl, New York",
+      "rating": 4.9,
+      "user_ratings_total": 32,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPb-YPe9awokRoKu0xYmcDXE",
+      "name": "Bright Star Service",
+      "vicinity": "1 Dock 72 Wy, Brooklyn",
+      "rating": 4.8,
+      "user_ratings_total": 60,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcwfCTf1bwokRqGfReazHkiM",
+      "name": "Classic Home Services, AC & Furnace Repair",
+      "vicinity": "275 Park Ave, Brooklyn",
+      "rating": 4.8,
+      "user_ratings_total": 157,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ__9D1FBZwokRlaW0Rh6tXmk",
+      "name": "Brooklyn HVAC Services",
+      "vicinity": "1115 Lafayette Ave, Brooklyn",
+      "rating": 5,
+      "user_ratings_total": 47,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3ylhlMVdwokREXrk9kGXtdw",
+      "name": "DAIYAN HVAC & PLUMBING INC.",
+      "vicinity": "1097 Liberty Ave, Brooklyn",
+      "rating": 5,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ8eJH1QVRam8RcgreidBueww",
+      "name": "Brownstone Heating & Air Conditioning",
+      "vicinity": "210 Parkville Ave, Brooklyn",
+      "rating": 4.8,
+      "user_ratings_total": 45,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuzsNKpJZwokRjc1EQ0et3HM",
+      "name": "Fresh Air Company",
+      "vicinity": "115 MacDougal St, New York",
+      "rating": 4.7,
+      "user_ratings_total": 77,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJdyNHKHRbwokRkD69fdZ0SpA",
+      "name": "American HVAC Corp - Brooklyn, Heating, Air Conditioning, Refrigeration, Ductless Mini Split, Rooftop, Commercial HVAC NYC",
+      "vicinity": "77 Sands St 6th Floor, Brooklyn",
+      "rating": 5,
+      "user_ratings_total": 92,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ9YNTkM5ZwokRbHL_I7x1DCE",
+      "name": "QUICK HVAC COOLING AND HEATING REPAIRS LLC",
+      "vicinity": "65 W 36th St. suite 1200, New York",
+      "rating": 5,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJe5btEopZwokRpygcP25r2VA",
+      "name": "Champion HVAC Services",
+      "vicinity": "3 Wooster St, New York",
+      "rating": 5,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLbJg5yBhwokRCFtlyXvpURM",
+      "name": "Air Tactical HVAC Services",
+      "vicinity": "83-27B 124th Pl, Kew Gardens",
+      "rating": 4.7,
+      "user_ratings_total": 88,
+      "business_status": "OPERATIONAL"
+    }
+  ]
+}

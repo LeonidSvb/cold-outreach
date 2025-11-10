@@ -1,0 +1,1594 @@
+{
+  "metadata": {
+    "timestamp": "20251110_141433",
+    "state": "illinois",
+    "niche": "hvac",
+    "cities_processed": 5,
+    "total_raw_places": 89,
+    "note": "RAW data before filtering - no phone/website to save API costs",
+    "stats": {
+      "total_api_calls": 75,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 5,
+      "cities_processed": 5,
+      "total_cost": 0.0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Rockford, IL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ-ZR4HQy8CIgRuDc84rFEbNQ",
+          "name": "Perfect Temp Heating & Cooling",
+          "vicinity": "6813 Elm Ave, Loves Park",
+          "rating": 4.8,
+          "user_ratings_total": 680,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2yYJhlK_CIgRCBW7dxXtkxM",
+          "name": "Dream Starter HVAC Solutions Inc.",
+          "vicinity": "1203 22nd St, Rockford",
+          "rating": 4.9,
+          "user_ratings_total": 57,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJE4Yam3jrCIgRRw5jY6_2bgA",
+          "name": "Kinovate Heating, Cooling & Indoor Air Quality",
+          "vicinity": "6525 Fitzgerald Rd, Rockford",
+          "rating": 5,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJO2Sv2emVCIgRVGg7Y7wMooc",
+          "name": "Rockford HVAC Services",
+          "vicinity": "318 Vincent Ave, Rockford",
+          "rating": 4.7,
+          "user_ratings_total": 34,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAQP27JYNK4cRsBIcEvXKshA",
+          "name": "Absolute Value Heating & Cooling - Rockford",
+          "vicinity": "1643 N Alpine Rd #104, Rockford",
+          "rating": 4.9,
+          "user_ratings_total": 83,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3Tx3qV-VCIgRfv_8t6-f4Zo",
+          "name": "Rockford Heating & Air Conditioning",
+          "vicinity": "1618 Magnolia St, Rockford",
+          "rating": 4.6,
+          "user_ratings_total": 121,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5a53Z3u_CIgR-4q8HiwyZGw",
+          "name": "Improved Comfort Rockford HVAC & Furnace Repair Pros, Inc.",
+          "vicinity": "103 Hall St, Rockford",
+          "rating": 4.7,
+          "user_ratings_total": 73,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ-6Mnlj2TCIgRCTafAVziNUI",
+          "name": "Comfort Right Heating & Cooling",
+          "vicinity": "809 Gregory Way, Winnebago",
+          "rating": 4.9,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJP-qUY2WVCIgRDsUOjp4YS-A",
+          "name": "Coolburn Comfort Solutions",
+          "vicinity": "224 S Gardiner Ave #1, Rockford",
+          "rating": 5,
+          "user_ratings_total": 21,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJu9-en1KRCIgR3FfoXp2GGUk",
+          "name": "O'Connor Heating, Cooling & Electrical",
+          "vicinity": "10340 Product Dr, Machesney Park",
+          "rating": 4.6,
+          "user_ratings_total": 55,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSxtRc_i8CIgRecE2UNx4CtQ",
+          "name": "MP Heating & Air Conditioning",
+          "vicinity": "8289 Burden Rd Unit N, Machesney Park",
+          "rating": 4.6,
+          "user_ratings_total": 51,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ715Kim6-CIgRtUyN1ncSfM8",
+          "name": "Temperature Doctors Heating & Cooling Inc",
+          "vicinity": "322 7th St, Rockford",
+          "rating": 4.6,
+          "user_ratings_total": 77,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ011bQKvACIgR56__bl__79U",
+          "name": "Black Diamond Plumbing & Mechanical Inc.",
+          "vicinity": "3548 35th St, Rockford",
+          "rating": 4,
+          "user_ratings_total": 92,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJjbaDNdK_CIgRSBBg7RqGLL4",
+          "name": "Allen Heating & Cooling",
+          "vicinity": "122 N 2nd St, Rockford",
+          "rating": 4.3,
+          "user_ratings_total": 258,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpdbgZiHrCIgRHlCpmgvXDKM",
+          "name": "Gilley's Heating & Air Conditioning",
+          "vicinity": "2707 Huffman Blvd, Rockford",
+          "rating": 4.6,
+          "user_ratings_total": 37,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJO0QDZpDHCIgR5tZK4FYf2LA",
+          "name": "Rockford Heating & Air Conditioning",
+          "vicinity": "5460 Silver Dawn Ln, Rockford",
+          "rating": 4.7,
+          "user_ratings_total": 29,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4wm1nH7ACIgReGmdD5DHBG8",
+          "name": "Bob's Refrigeration Heating and Air conditioning",
+          "vicinity": "6191 Countryside Ln, Rockford",
+          "rating": 4.8,
+          "user_ratings_total": 17,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_ZXimK7ACIgRjyok8D3fx7A",
+          "name": "Geostar Mechanical",
+          "vicinity": "27 Airport Dr, Rockford",
+          "rating": 4.3,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJJVl8Ma2LCIgRPHlbA_3_xOM",
+          "name": "Kennedy Heating & Cooling",
+          "vicinity": "812 E Renrose Ave, Loves Park",
+          "rating": 5,
+          "user_ratings_total": 8,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJiaEmUX3HCIgRkQjRCgzrEqc",
+          "name": "American Heating and Air",
+          "vicinity": "Rockford",
+          "rating": 5,
+          "user_ratings_total": 6,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Aurora, IL",
+      "raw_places": [
+        {
+          "place_id": "ChIJCbZqBL78DogRjn5s-hgUpbg",
+          "name": "Comfort Care Heating & Air Conditioning",
+          "vicinity": "530 S River St, Batavia",
+          "rating": 5,
+          "user_ratings_total": 160,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJOTXcVHT5DogRKi648IkpeAk",
+          "name": "Air-Rite Heating & Cooling, Inc.",
+          "vicinity": "1150 Frontenac Rd, Naperville",
+          "rating": 5,
+          "user_ratings_total": 1791,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNRSeycvkDogROe02oXKH2_g",
+          "name": "Charles McDuffee Co. Heating & Air Conditioning",
+          "vicinity": "7 S Adams St, North Aurora",
+          "rating": 4.9,
+          "user_ratings_total": 422,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgUFNBNH1DogRtLbLEWBG-yk",
+          "name": "Comfort Services Heating & Air Conditioning, Inc.",
+          "vicinity": "12461 S Industrial Dr E, Plainfield",
+          "rating": 4.9,
+          "user_ratings_total": 1330,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr3w78GNVDogRXUTOYnfyk4w",
+          "name": "Brian's Heating & Air Conditioning",
+          "vicinity": "847 Weyrauch St, West Chicago",
+          "rating": 4.8,
+          "user_ratings_total": 337,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJmWal8_E0oAsRIYDAARxO5EA",
+          "name": "Improved Comfort Heating & Air Conditioning",
+          "vicinity": "3238 Knollwood Cir, Geneva",
+          "rating": 5,
+          "user_ratings_total": 53,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJIzSUcaPiDogR3Uz6y1UlvKw",
+          "name": "Doc's HVAC",
+          "vicinity": "648 North St Suite 101, Geneva",
+          "rating": 4.9,
+          "user_ratings_total": 236,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfbY5tk7lDogR5dmkm9_k4yc",
+          "name": "Franzen Heating & Cooling",
+          "vicinity": "219 Woodlawn Ave, Aurora",
+          "rating": 4.9,
+          "user_ratings_total": 387,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ81iw3TnlDogR-sbfoS9EjwM",
+          "name": "Youngren's, Inc. Heating & Cooling",
+          "vicinity": "736 New Haven Ave, Aurora",
+          "rating": 4.9,
+          "user_ratings_total": 379,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6oVy_pZDogRHfK3h5DZkSk",
+          "name": "Nortek Environmental",
+          "vicinity": "600 Industrial Dr #102, Naperville",
+          "rating": 4.9,
+          "user_ratings_total": 369,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNd7aqtKpp6wRbCaCWiFfZ-c",
+          "name": "Black Widow Heating & Cooling LLC",
+          "vicinity": "2099 Kathleen Cir, Montgomery",
+          "rating": 5,
+          "user_ratings_total": 81,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWV9Q7cRZDogR3pa1IgJzaoo",
+          "name": "Kreem Heating & Cooling",
+          "vicinity": "353 Hogan St, Bolingbrook",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFXH6CTj6DogR5dUq5-qctjU",
+          "name": "American Heating and Cooling Specialists",
+          "vicinity": "2039 Stephen St, Aurora",
+          "rating": 4.9,
+          "user_ratings_total": 136,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5exqrPlXDogRwuXA-m7iPdk",
+          "name": "Best Comfort Heating Cooling",
+          "vicinity": "50 S Main St Suit 200, Naperville",
+          "rating": 5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyaGylnThDogREVc0WwmpBYc",
+          "name": "Patriot Heating and Cooling Services Inc.",
+          "vicinity": "821 W State St STE E, Geneva",
+          "rating": 4.7,
+          "user_ratings_total": 461,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJycYHhNb1DogR4tE19d5-XCg",
+          "name": "Joel's Heating and Cooling",
+          "vicinity": "12011 S Aero Dr, Plainfield",
+          "rating": 5,
+          "user_ratings_total": 67,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJEQKxdNb1DogRITFbP_UtO7c",
+          "name": "TR Miller Heating, Cooling, Plumbing and Electrical",
+          "vicinity": "11917 S Aero Dr, Plainfield",
+          "rating": 4.9,
+          "user_ratings_total": 10032,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAWf9lrX_DogRb6wiOVSirls",
+          "name": "Chris Heating & Cooling",
+          "vicinity": "375 Wegner Dr, West Chicago",
+          "rating": 5,
+          "user_ratings_total": 856,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJdx0j5FHwDogRMGOpSsuMEdI",
+          "name": "Beery Heating, Cooling, Plumbing & Electrical",
+          "vicinity": "114 Kirkland Cir, Oswego",
+          "rating": 4.7,
+          "user_ratings_total": 129,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBYC5KMxXDogRRft2tk60Nrc",
+          "name": "Energy Services Air Conditioning & Heating Co. & Electrical",
+          "vicinity": "512 W 5th Ave, Naperville",
+          "rating": 4.9,
+          "user_ratings_total": 1873,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 13,
+        "with_details": 13,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Naperville, IL",
+      "raw_places": [
+        {
+          "place_id": "ChIJ1cLkUg9NDogRBLcd4-8BxJ4",
+          "name": "Affordable American Air Heating, Cooling & Energy services",
+          "vicinity": "330 E Roosevelt Rd #11, Lombard",
+          "rating": 5,
+          "user_ratings_total": 244,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJCbZqBL78DogRjn5s-hgUpbg",
+          "name": "Comfort Care Heating & Air Conditioning",
+          "vicinity": "530 S River St, Batavia",
+          "rating": 5,
+          "user_ratings_total": 160,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJNRSeycvkDogROe02oXKH2_g",
+          "name": "Charles McDuffee Co. Heating & Air Conditioning",
+          "vicinity": "7 S Adams St, North Aurora",
+          "rating": 4.9,
+          "user_ratings_total": 422,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJOTXcVHT5DogRKi648IkpeAk",
+          "name": "Air-Rite Heating & Cooling, Inc.",
+          "vicinity": "1150 Frontenac Rd, Naperville",
+          "rating": 5,
+          "user_ratings_total": 1791,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgUFNBNH1DogRtLbLEWBG-yk",
+          "name": "Comfort Services Heating & Air Conditioning, Inc.",
+          "vicinity": "12461 S Industrial Dr E, Plainfield",
+          "rating": 4.9,
+          "user_ratings_total": 1330,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ81iw3TnlDogR-sbfoS9EjwM",
+          "name": "Youngren's, Inc. Heating & Cooling",
+          "vicinity": "736 New Haven Ave, Aurora",
+          "rating": 4.9,
+          "user_ratings_total": 379,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfbY5tk7lDogR5dmkm9_k4yc",
+          "name": "Franzen Heating & Cooling",
+          "vicinity": "219 Woodlawn Ave, Aurora",
+          "rating": 4.9,
+          "user_ratings_total": 387,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHSRmy0BdDogRVrBfO0H19KU",
+          "name": "Pro Air Heating Cooling and Electrical, HVAC Downers Grove, Naperville, Hinsdale, and Electrician",
+          "vicinity": "5117B Main St #16, Downers Grove",
+          "rating": 5,
+          "user_ratings_total": 127,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr3w78GNVDogRXUTOYnfyk4w",
+          "name": "Brian's Heating & Air Conditioning",
+          "vicinity": "847 Weyrauch St, West Chicago",
+          "rating": 4.8,
+          "user_ratings_total": 337,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWfqYz2JNDogR4Wlxx8nJZqw",
+          "name": "Eco Temp HVAC",
+          "vicinity": "1001 31st St Unit 100, Downers Grove",
+          "rating": 4.9,
+          "user_ratings_total": 29,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJq6oVy_pZDogRHfK3h5DZkSk",
+          "name": "Nortek Environmental",
+          "vicinity": "600 Industrial Dr #102, Naperville",
+          "rating": 4.9,
+          "user_ratings_total": 369,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6-1wEJVQDogRcddzL7zw2cA",
+          "name": "Leslie Heating, Cooling, Plumbing, & Electric",
+          "vicinity": "704 Oak Creek Dr, Lombard",
+          "rating": 4.9,
+          "user_ratings_total": 3054,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJr7-qnK5RDogR_lbxzppZbpU",
+          "name": "Fire 'n' Ice Heating & Cooling, Inc.",
+          "vicinity": "5240 Thatcher Rd, Downers Grove",
+          "rating": 4.9,
+          "user_ratings_total": 435,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb8qYC_VaDogRk28mdPCHq6s",
+          "name": "Home Comfort Systems",
+          "vicinity": "632 N Pinecrest Rd, Bolingbrook",
+          "rating": 4.8,
+          "user_ratings_total": 105,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKyfu-EpaDogRnpyH9Rx23IA",
+          "name": "All Temp Heating and Air Conditioning- Bolingbrook",
+          "vicinity": "370 S Bolingbrook Dr, Bolingbrook",
+          "rating": 5,
+          "user_ratings_total": 328,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJOeaubPxTDogRusl4M9CxPes",
+          "name": "ProAir HVAC Furnace & AC Repair",
+          "vicinity": "478 N Main St, Glen Ellyn",
+          "rating": 5,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFXH6CTj6DogR5dUq5-qctjU",
+          "name": "American Heating and Cooling Specialists",
+          "vicinity": "2039 Stephen St, Aurora",
+          "rating": 4.9,
+          "user_ratings_total": 136,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJWV9Q7cRZDogR3pa1IgJzaoo",
+          "name": "Kreem Heating & Cooling",
+          "vicinity": "353 Hogan St, Bolingbrook",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJRS8FTNpYDogRNdqFnNvCXtI",
+          "name": "Airco Heating & Cooling",
+          "vicinity": "1112 W Boughton Rd, Bolingbrook",
+          "rating": 4.9,
+          "user_ratings_total": 162,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfxcFFydRDogRxFcEjuqWaek",
+          "name": "Comfort Services Heating & Air Conditioning, Inc.",
+          "vicinity": "2017 Ogden Ave, Downers Grove",
+          "rating": 4.9,
+          "user_ratings_total": 279,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 14,
+        "with_details": 14,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Chicago, IL",
+      "raw_places": [
+        {
+          "place_id": "ChIJXYDE4kxWqkURLZwEDI7DACw",
+          "name": "Pro Comfort Solutions",
+          "vicinity": "2052 N Latrobe Ave, Chicago",
+          "rating": 5,
+          "user_ratings_total": 152,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBzmeOBjRD4gR-G-2hyR4A0k",
+          "name": "Oasis Plumbing, Heating & Cooling",
+          "vicinity": "5736 N Western Ave, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 922,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJmfN_kekXDogRmoox1XEHZ84",
+          "name": "Browns Heating & Cooling",
+          "vicinity": "1 E Erie St, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 195,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ0xGavzTMD4gRE4b0UwUoxhc",
+          "name": "All Temp Heating and Air Conditioning",
+          "vicinity": "4363 W Montrose Ave, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 2088,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJjepyM4TSD4gRdne4K_oNv4U",
+          "name": "Deljo Heating, Cooling & Plumbing",
+          "vicinity": "4300 W Bryn Mawr Ave, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 3126,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJFYcYsBujD4gRWrpTGE5x2bo",
+          "name": "Eco Temp HVAC",
+          "vicinity": "1210 S Indiana Ave APT 4611, Chicago",
+          "rating": 5,
+          "user_ratings_total": 142,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJxfCLvNCxD4gRIocBfF_YJ7Y",
+          "name": "TRG Heating & Cooling",
+          "vicinity": "7441 Channel Rd, Skokie",
+          "rating": 5,
+          "user_ratings_total": 272,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJi4yPKtXTD4gRZJjJD8jY8yA",
+          "name": "Global Heating and Cooling LLC",
+          "vicinity": "919 N Ashland Ave, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 283,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJadXyYffMD4gRXp9_vTJdg0g",
+          "name": "Brothers Heating & Cooling Inc. & Brothers Perfect Construction LLC",
+          "vicinity": "2914 N Cicero Ave, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 240,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ_RqHj_vRD4gR8kit8c9FYTQ",
+          "name": "MODERN HVAC TECHNOLOGY LLC",
+          "vicinity": "5555 N Sheridan Rd Suite 3, Chicago",
+          "rating": 5,
+          "user_ratings_total": 98,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJc2Qg7McwDogR1-GnnjwcNao",
+          "name": "Four Seasons Heating, Air Conditioning, Plumbing, & Electric",
+          "vicinity": "5701 W 73rd St, Chicago",
+          "rating": 4.7,
+          "user_ratings_total": 27009,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb0K1C3QtDogRdO9E2LD4fcw",
+          "name": "Direct Improvements",
+          "vicinity": "111 W Jackson Blvd UNIT 1700, Chicago",
+          "rating": 4.8,
+          "user_ratings_total": 314,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJN1TAT7I1DogRgFpJvXjTC7U",
+          "name": "House of Heat",
+          "vicinity": "334 Harrison St, Oak Park",
+          "rating": 4.9,
+          "user_ratings_total": 355,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJac1f5i0xDogRBt4QLWJTkPM",
+          "name": "Wantuck Comfort Solutions",
+          "vicinity": "4801 S Knox Ave, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 188,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPwiBUQXMD4gRuinUP8a5evc",
+          "name": "Heatmasters",
+          "vicinity": "5540 W Lawrence Ave, Chicago",
+          "rating": 4.8,
+          "user_ratings_total": 698,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhdxYVzzLD4gRVRumA6dEzYU",
+          "name": "Hero Air",
+          "vicinity": "4823 W Patterson Ave, Chicago",
+          "rating": 5,
+          "user_ratings_total": 229,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoUkZXc8tDogR8nMElu0-Oks",
+          "name": "Service Pro Titans",
+          "vicinity": "924 W 38th Pl Ste101, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 171,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhXHMHaDOD4gRiFPB3JtTDBY",
+          "name": "Besco Air Inc.",
+          "vicinity": "5850 N Northwest Hwy, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 1267,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJw8NGZR4pDogR7NNtHR3k-6U",
+          "name": "Frontline Heating & Cooling Chicago",
+          "vicinity": "1655 S Blue Island Ave #4074, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 94,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKUqInBXND4gRzY4mozwaPwU",
+          "name": "85 Heating and Cooling Inc",
+          "vicinity": "3747 W Eastwood Ave, Chicago",
+          "rating": 4.9,
+          "user_ratings_total": 78,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 15,
+        "with_details": 15,
+        "final_radius_km": 15.0
+      }
+    },
+    {
+      "city": "Joliet, IL",
+      "raw_places": [
+        {
+          "place_id": "ChIJz9MCQwRsDogRZ5qnkSNSGaY",
+          "name": "Magtek Mechanical Heating & Cooling",
+          "vicinity": "21607 S Schoolhouse Rd, New Lenox",
+          "rating": 4.9,
+          "user_ratings_total": 527,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5ygHfb2KDogRsO-ZVUvDOrU",
+          "name": "Rousculp's Heating and Cooling",
+          "vicinity": "2551 Theodore St Suite B, Crest Hill",
+          "rating": 5,
+          "user_ratings_total": 319,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgUFNBNH1DogRtLbLEWBG-yk",
+          "name": "Comfort Services Heating & Air Conditioning, Inc.",
+          "vicinity": "12461 S Industrial Dr E, Plainfield",
+          "rating": 4.9,
+          "user_ratings_total": 1330,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJzZGnIOL1DogRrJm3elgYKFg",
+          "name": "Precision Air",
+          "vicinity": "12515 Rhea Dr, Plainfield",
+          "rating": 5,
+          "user_ratings_total": 555,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh1RbNN-SYWcREKc34ACHkjk",
+          "name": "Climaxx Heating & Cooling",
+          "vicinity": "13708 W 159th St, Homer Glen",
+          "rating": 4.9,
+          "user_ratings_total": 40,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJXRRMKjtvDogROWAQ8CN9Eu8",
+          "name": "Update Heating and Cooling Services",
+          "vicinity": "897 Country Creek Dr, New Lenox",
+          "rating": 4.9,
+          "user_ratings_total": 422,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJYbsREIVhDogRns17dpwFkjI",
+          "name": "Lockwood Furnace Company",
+          "vicinity": "2300 McDonough St, Joliet",
+          "rating": 4.8,
+          "user_ratings_total": 274,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ6atebyFhDogRq4-Xi5MvLy0",
+          "name": "Johansen & Anderson Inc",
+          "vicinity": "925 Plainfield Rd, Joliet",
+          "rating": 4.8,
+          "user_ratings_total": 295,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwWKSPwFrDogRBSeSoT7dq_s",
+          "name": "S&S Mechanical Services Inc.",
+          "vicinity": "22014 Howell Dr Unit 1, New Lenox",
+          "rating": 4.9,
+          "user_ratings_total": 126,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJVc4799KLDogRmuSpJHWNb8g",
+          "name": "Pozitive Heating & Cooling",
+          "vicinity": "209 Brook Forest Ave, Shorewood",
+          "rating": 4.7,
+          "user_ratings_total": 134,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJh7Ee4M9pDogRPltJ8YbEQdQ",
+          "name": "TR Miller Heating, Cooling, Plumbing and Electrical",
+          "vicinity": "8442 183rd St Unit A, Tinley Park",
+          "rating": 4.9,
+          "user_ratings_total": 2299,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJoy13NQaRjyER6EiIpyQYDR4",
+          "name": "4 Corners Heating & Cooling",
+          "vicinity": "532 Anna Ln, Romeoville",
+          "rating": 5,
+          "user_ratings_total": 66,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ1yUmWYeMDogRu8oTIESValQ",
+          "name": "Best Comfort Heating and Cooling",
+          "vicinity": "1504 Essington Rd UNIT 3, Joliet",
+          "rating": 4.8,
+          "user_ratings_total": 285,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2Sjj0EeuxW4RQDLQhComku0",
+          "name": "Happy Hippo Heating and Cooling",
+          "vicinity": "12563 Old Plank Dr, New Lenox",
+          "rating": 5,
+          "user_ratings_total": 380,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJHxWylDZeDogRSsnp_2BFqCI",
+          "name": "Jacobazzi Heating & Cooling",
+          "vicinity": "15523 S Weber Rd, Romeoville",
+          "rating": 4.6,
+          "user_ratings_total": 33,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJyVn6NLqKDogRkRImVyz-YZQ",
+          "name": "AirMaxx Heating and Air Conditioning, Inc.",
+          "vicinity": "23952 S Northern Illinois Dr, Channahon",
+          "rating": 4.9,
+          "user_ratings_total": 106,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJC5dnrR9CDogRFevgPve2i74",
+          "name": "B & B Heating & Cooling, LLC",
+          "vicinity": "13010 W 159th St, Homer Glen",
+          "rating": 4.7,
+          "user_ratings_total": 12,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJRc5rqhj1DogRlu1KbAJMPYs",
+          "name": "Leto Plumbing & Heating, Inc.",
+          "vicinity": "12407 Rhea Dr, Plainfield",
+          "rating": 4.7,
+          "user_ratings_total": 42,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJKcoQ_IlhDogRVQbM3RehHGI",
+          "name": "Torres HVAC LLC",
+          "vicinity": "504 S Margaret St, Joliet",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJaUvNKztvDogR_WLV6HPOWy0",
+          "name": "Best Heating and Cooling Inc.",
+          "vicinity": "895 Country Creek Dr, New Lenox",
+          "rating": 4.8,
+          "user_ratings_total": 16,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 20,
+        "unique": 20,
+        "filtered": 15,
+        "with_details": 15,
+        "final_radius_km": 15.0
+      }
+    }
+  ],
+  "all_raw_places": [
+    {
+      "place_id": "ChIJ-ZR4HQy8CIgRuDc84rFEbNQ",
+      "name": "Perfect Temp Heating & Cooling",
+      "vicinity": "6813 Elm Ave, Loves Park",
+      "rating": 4.8,
+      "user_ratings_total": 680,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2yYJhlK_CIgRCBW7dxXtkxM",
+      "name": "Dream Starter HVAC Solutions Inc.",
+      "vicinity": "1203 22nd St, Rockford",
+      "rating": 4.9,
+      "user_ratings_total": 57,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJE4Yam3jrCIgRRw5jY6_2bgA",
+      "name": "Kinovate Heating, Cooling & Indoor Air Quality",
+      "vicinity": "6525 Fitzgerald Rd, Rockford",
+      "rating": 5,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJO2Sv2emVCIgRVGg7Y7wMooc",
+      "name": "Rockford HVAC Services",
+      "vicinity": "318 Vincent Ave, Rockford",
+      "rating": 4.7,
+      "user_ratings_total": 34,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAQP27JYNK4cRsBIcEvXKshA",
+      "name": "Absolute Value Heating & Cooling - Rockford",
+      "vicinity": "1643 N Alpine Rd #104, Rockford",
+      "rating": 4.9,
+      "user_ratings_total": 83,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3Tx3qV-VCIgRfv_8t6-f4Zo",
+      "name": "Rockford Heating & Air Conditioning",
+      "vicinity": "1618 Magnolia St, Rockford",
+      "rating": 4.6,
+      "user_ratings_total": 121,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5a53Z3u_CIgR-4q8HiwyZGw",
+      "name": "Improved Comfort Rockford HVAC & Furnace Repair Pros, Inc.",
+      "vicinity": "103 Hall St, Rockford",
+      "rating": 4.7,
+      "user_ratings_total": 73,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ-6Mnlj2TCIgRCTafAVziNUI",
+      "name": "Comfort Right Heating & Cooling",
+      "vicinity": "809 Gregory Way, Winnebago",
+      "rating": 4.9,
+      "user_ratings_total": 77,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJP-qUY2WVCIgRDsUOjp4YS-A",
+      "name": "Coolburn Comfort Solutions",
+      "vicinity": "224 S Gardiner Ave #1, Rockford",
+      "rating": 5,
+      "user_ratings_total": 21,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJu9-en1KRCIgR3FfoXp2GGUk",
+      "name": "O'Connor Heating, Cooling & Electrical",
+      "vicinity": "10340 Product Dr, Machesney Park",
+      "rating": 4.6,
+      "user_ratings_total": 55,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSxtRc_i8CIgRecE2UNx4CtQ",
+      "name": "MP Heating & Air Conditioning",
+      "vicinity": "8289 Burden Rd Unit N, Machesney Park",
+      "rating": 4.6,
+      "user_ratings_total": 51,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ715Kim6-CIgRtUyN1ncSfM8",
+      "name": "Temperature Doctors Heating & Cooling Inc",
+      "vicinity": "322 7th St, Rockford",
+      "rating": 4.6,
+      "user_ratings_total": 77,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ011bQKvACIgR56__bl__79U",
+      "name": "Black Diamond Plumbing & Mechanical Inc.",
+      "vicinity": "3548 35th St, Rockford",
+      "rating": 4,
+      "user_ratings_total": 92,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJjbaDNdK_CIgRSBBg7RqGLL4",
+      "name": "Allen Heating & Cooling",
+      "vicinity": "122 N 2nd St, Rockford",
+      "rating": 4.3,
+      "user_ratings_total": 258,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpdbgZiHrCIgRHlCpmgvXDKM",
+      "name": "Gilley's Heating & Air Conditioning",
+      "vicinity": "2707 Huffman Blvd, Rockford",
+      "rating": 4.6,
+      "user_ratings_total": 37,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJO0QDZpDHCIgR5tZK4FYf2LA",
+      "name": "Rockford Heating & Air Conditioning",
+      "vicinity": "5460 Silver Dawn Ln, Rockford",
+      "rating": 4.7,
+      "user_ratings_total": 29,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4wm1nH7ACIgReGmdD5DHBG8",
+      "name": "Bob's Refrigeration Heating and Air conditioning",
+      "vicinity": "6191 Countryside Ln, Rockford",
+      "rating": 4.8,
+      "user_ratings_total": 17,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_ZXimK7ACIgRjyok8D3fx7A",
+      "name": "Geostar Mechanical",
+      "vicinity": "27 Airport Dr, Rockford",
+      "rating": 4.3,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJJVl8Ma2LCIgRPHlbA_3_xOM",
+      "name": "Kennedy Heating & Cooling",
+      "vicinity": "812 E Renrose Ave, Loves Park",
+      "rating": 5,
+      "user_ratings_total": 8,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJiaEmUX3HCIgRkQjRCgzrEqc",
+      "name": "American Heating and Air",
+      "vicinity": "Rockford",
+      "rating": 5,
+      "user_ratings_total": 6,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJCbZqBL78DogRjn5s-hgUpbg",
+      "name": "Comfort Care Heating & Air Conditioning",
+      "vicinity": "530 S River St, Batavia",
+      "rating": 5,
+      "user_ratings_total": 160,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJOTXcVHT5DogRKi648IkpeAk",
+      "name": "Air-Rite Heating & Cooling, Inc.",
+      "vicinity": "1150 Frontenac Rd, Naperville",
+      "rating": 5,
+      "user_ratings_total": 1791,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNRSeycvkDogROe02oXKH2_g",
+      "name": "Charles McDuffee Co. Heating & Air Conditioning",
+      "vicinity": "7 S Adams St, North Aurora",
+      "rating": 4.9,
+      "user_ratings_total": 422,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgUFNBNH1DogRtLbLEWBG-yk",
+      "name": "Comfort Services Heating & Air Conditioning, Inc.",
+      "vicinity": "12461 S Industrial Dr E, Plainfield",
+      "rating": 4.9,
+      "user_ratings_total": 1330,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJr3w78GNVDogRXUTOYnfyk4w",
+      "name": "Brian's Heating & Air Conditioning",
+      "vicinity": "847 Weyrauch St, West Chicago",
+      "rating": 4.8,
+      "user_ratings_total": 337,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJmWal8_E0oAsRIYDAARxO5EA",
+      "name": "Improved Comfort Heating & Air Conditioning",
+      "vicinity": "3238 Knollwood Cir, Geneva",
+      "rating": 5,
+      "user_ratings_total": 53,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJIzSUcaPiDogR3Uz6y1UlvKw",
+      "name": "Doc's HVAC",
+      "vicinity": "648 North St Suite 101, Geneva",
+      "rating": 4.9,
+      "user_ratings_total": 236,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJfbY5tk7lDogR5dmkm9_k4yc",
+      "name": "Franzen Heating & Cooling",
+      "vicinity": "219 Woodlawn Ave, Aurora",
+      "rating": 4.9,
+      "user_ratings_total": 387,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ81iw3TnlDogR-sbfoS9EjwM",
+      "name": "Youngren's, Inc. Heating & Cooling",
+      "vicinity": "736 New Haven Ave, Aurora",
+      "rating": 4.9,
+      "user_ratings_total": 379,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJq6oVy_pZDogRHfK3h5DZkSk",
+      "name": "Nortek Environmental",
+      "vicinity": "600 Industrial Dr #102, Naperville",
+      "rating": 4.9,
+      "user_ratings_total": 369,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJNd7aqtKpp6wRbCaCWiFfZ-c",
+      "name": "Black Widow Heating & Cooling LLC",
+      "vicinity": "2099 Kathleen Cir, Montgomery",
+      "rating": 5,
+      "user_ratings_total": 81,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWV9Q7cRZDogR3pa1IgJzaoo",
+      "name": "Kreem Heating & Cooling",
+      "vicinity": "353 Hogan St, Bolingbrook",
+      "rating": 5,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFXH6CTj6DogR5dUq5-qctjU",
+      "name": "American Heating and Cooling Specialists",
+      "vicinity": "2039 Stephen St, Aurora",
+      "rating": 4.9,
+      "user_ratings_total": 136,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5exqrPlXDogRwuXA-m7iPdk",
+      "name": "Best Comfort Heating Cooling",
+      "vicinity": "50 S Main St Suit 200, Naperville",
+      "rating": 5,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyaGylnThDogREVc0WwmpBYc",
+      "name": "Patriot Heating and Cooling Services Inc.",
+      "vicinity": "821 W State St STE E, Geneva",
+      "rating": 4.7,
+      "user_ratings_total": 461,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJycYHhNb1DogR4tE19d5-XCg",
+      "name": "Joel's Heating and Cooling",
+      "vicinity": "12011 S Aero Dr, Plainfield",
+      "rating": 5,
+      "user_ratings_total": 67,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJEQKxdNb1DogRITFbP_UtO7c",
+      "name": "TR Miller Heating, Cooling, Plumbing and Electrical",
+      "vicinity": "11917 S Aero Dr, Plainfield",
+      "rating": 4.9,
+      "user_ratings_total": 10032,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAWf9lrX_DogRb6wiOVSirls",
+      "name": "Chris Heating & Cooling",
+      "vicinity": "375 Wegner Dr, West Chicago",
+      "rating": 5,
+      "user_ratings_total": 856,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJdx0j5FHwDogRMGOpSsuMEdI",
+      "name": "Beery Heating, Cooling, Plumbing & Electrical",
+      "vicinity": "114 Kirkland Cir, Oswego",
+      "rating": 4.7,
+      "user_ratings_total": 129,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBYC5KMxXDogRRft2tk60Nrc",
+      "name": "Energy Services Air Conditioning & Heating Co. & Electrical",
+      "vicinity": "512 W 5th Ave, Naperville",
+      "rating": 4.9,
+      "user_ratings_total": 1873,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ1cLkUg9NDogRBLcd4-8BxJ4",
+      "name": "Affordable American Air Heating, Cooling & Energy services",
+      "vicinity": "330 E Roosevelt Rd #11, Lombard",
+      "rating": 5,
+      "user_ratings_total": 244,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJHSRmy0BdDogRVrBfO0H19KU",
+      "name": "Pro Air Heating Cooling and Electrical, HVAC Downers Grove, Naperville, Hinsdale, and Electrician",
+      "vicinity": "5117B Main St #16, Downers Grove",
+      "rating": 5,
+      "user_ratings_total": 127,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJWfqYz2JNDogR4Wlxx8nJZqw",
+      "name": "Eco Temp HVAC",
+      "vicinity": "1001 31st St Unit 100, Downers Grove",
+      "rating": 4.9,
+      "user_ratings_total": 29,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6-1wEJVQDogRcddzL7zw2cA",
+      "name": "Leslie Heating, Cooling, Plumbing, & Electric",
+      "vicinity": "704 Oak Creek Dr, Lombard",
+      "rating": 4.9,
+      "user_ratings_total": 3054,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJr7-qnK5RDogR_lbxzppZbpU",
+      "name": "Fire 'n' Ice Heating & Cooling, Inc.",
+      "vicinity": "5240 Thatcher Rd, Downers Grove",
+      "rating": 4.9,
+      "user_ratings_total": 435,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJb8qYC_VaDogRk28mdPCHq6s",
+      "name": "Home Comfort Systems",
+      "vicinity": "632 N Pinecrest Rd, Bolingbrook",
+      "rating": 4.8,
+      "user_ratings_total": 105,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKyfu-EpaDogRnpyH9Rx23IA",
+      "name": "All Temp Heating and Air Conditioning- Bolingbrook",
+      "vicinity": "370 S Bolingbrook Dr, Bolingbrook",
+      "rating": 5,
+      "user_ratings_total": 328,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJOeaubPxTDogRusl4M9CxPes",
+      "name": "ProAir HVAC Furnace & AC Repair",
+      "vicinity": "478 N Main St, Glen Ellyn",
+      "rating": 5,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJRS8FTNpYDogRNdqFnNvCXtI",
+      "name": "Airco Heating & Cooling",
+      "vicinity": "1112 W Boughton Rd, Bolingbrook",
+      "rating": 4.9,
+      "user_ratings_total": 162,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJfxcFFydRDogRxFcEjuqWaek",
+      "name": "Comfort Services Heating & Air Conditioning, Inc.",
+      "vicinity": "2017 Ogden Ave, Downers Grove",
+      "rating": 4.9,
+      "user_ratings_total": 279,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXYDE4kxWqkURLZwEDI7DACw",
+      "name": "Pro Comfort Solutions",
+      "vicinity": "2052 N Latrobe Ave, Chicago",
+      "rating": 5,
+      "user_ratings_total": 152,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBzmeOBjRD4gR-G-2hyR4A0k",
+      "name": "Oasis Plumbing, Heating & Cooling",
+      "vicinity": "5736 N Western Ave, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 922,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJmfN_kekXDogRmoox1XEHZ84",
+      "name": "Browns Heating & Cooling",
+      "vicinity": "1 E Erie St, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 195,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ0xGavzTMD4gRE4b0UwUoxhc",
+      "name": "All Temp Heating and Air Conditioning",
+      "vicinity": "4363 W Montrose Ave, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 2088,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJjepyM4TSD4gRdne4K_oNv4U",
+      "name": "Deljo Heating, Cooling & Plumbing",
+      "vicinity": "4300 W Bryn Mawr Ave, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 3126,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJFYcYsBujD4gRWrpTGE5x2bo",
+      "name": "Eco Temp HVAC",
+      "vicinity": "1210 S Indiana Ave APT 4611, Chicago",
+      "rating": 5,
+      "user_ratings_total": 142,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJxfCLvNCxD4gRIocBfF_YJ7Y",
+      "name": "TRG Heating & Cooling",
+      "vicinity": "7441 Channel Rd, Skokie",
+      "rating": 5,
+      "user_ratings_total": 272,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJi4yPKtXTD4gRZJjJD8jY8yA",
+      "name": "Global Heating and Cooling LLC",
+      "vicinity": "919 N Ashland Ave, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 283,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJadXyYffMD4gRXp9_vTJdg0g",
+      "name": "Brothers Heating & Cooling Inc. & Brothers Perfect Construction LLC",
+      "vicinity": "2914 N Cicero Ave, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 240,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ_RqHj_vRD4gR8kit8c9FYTQ",
+      "name": "MODERN HVAC TECHNOLOGY LLC",
+      "vicinity": "5555 N Sheridan Rd Suite 3, Chicago",
+      "rating": 5,
+      "user_ratings_total": 98,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJc2Qg7McwDogR1-GnnjwcNao",
+      "name": "Four Seasons Heating, Air Conditioning, Plumbing, & Electric",
+      "vicinity": "5701 W 73rd St, Chicago",
+      "rating": 4.7,
+      "user_ratings_total": 27009,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJb0K1C3QtDogRdO9E2LD4fcw",
+      "name": "Direct Improvements",
+      "vicinity": "111 W Jackson Blvd UNIT 1700, Chicago",
+      "rating": 4.8,
+      "user_ratings_total": 314,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJN1TAT7I1DogRgFpJvXjTC7U",
+      "name": "House of Heat",
+      "vicinity": "334 Harrison St, Oak Park",
+      "rating": 4.9,
+      "user_ratings_total": 355,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJac1f5i0xDogRBt4QLWJTkPM",
+      "name": "Wantuck Comfort Solutions",
+      "vicinity": "4801 S Knox Ave, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 188,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPwiBUQXMD4gRuinUP8a5evc",
+      "name": "Heatmasters",
+      "vicinity": "5540 W Lawrence Ave, Chicago",
+      "rating": 4.8,
+      "user_ratings_total": 698,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhdxYVzzLD4gRVRumA6dEzYU",
+      "name": "Hero Air",
+      "vicinity": "4823 W Patterson Ave, Chicago",
+      "rating": 5,
+      "user_ratings_total": 229,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJoUkZXc8tDogR8nMElu0-Oks",
+      "name": "Service Pro Titans",
+      "vicinity": "924 W 38th Pl Ste101, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 171,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhXHMHaDOD4gRiFPB3JtTDBY",
+      "name": "Besco Air Inc.",
+      "vicinity": "5850 N Northwest Hwy, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 1267,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJw8NGZR4pDogR7NNtHR3k-6U",
+      "name": "Frontline Heating & Cooling Chicago",
+      "vicinity": "1655 S Blue Island Ave #4074, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 94,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKUqInBXND4gRzY4mozwaPwU",
+      "name": "85 Heating and Cooling Inc",
+      "vicinity": "3747 W Eastwood Ave, Chicago",
+      "rating": 4.9,
+      "user_ratings_total": 78,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJz9MCQwRsDogRZ5qnkSNSGaY",
+      "name": "Magtek Mechanical Heating & Cooling",
+      "vicinity": "21607 S Schoolhouse Rd, New Lenox",
+      "rating": 4.9,
+      "user_ratings_total": 527,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5ygHfb2KDogRsO-ZVUvDOrU",
+      "name": "Rousculp's Heating and Cooling",
+      "vicinity": "2551 Theodore St Suite B, Crest Hill",
+      "rating": 5,
+      "user_ratings_total": 319,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJzZGnIOL1DogRrJm3elgYKFg",
+      "name": "Precision Air",
+      "vicinity": "12515 Rhea Dr, Plainfield",
+      "rating": 5,
+      "user_ratings_total": 555,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJh1RbNN-SYWcREKc34ACHkjk",
+      "name": "Climaxx Heating & Cooling",
+      "vicinity": "13708 W 159th St, Homer Glen",
+      "rating": 4.9,
+      "user_ratings_total": 40,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJXRRMKjtvDogROWAQ8CN9Eu8",
+      "name": "Update Heating and Cooling Services",
+      "vicinity": "897 Country Creek Dr, New Lenox",
+      "rating": 4.9,
+      "user_ratings_total": 422,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJYbsREIVhDogRns17dpwFkjI",
+      "name": "Lockwood Furnace Company",
+      "vicinity": "2300 McDonough St, Joliet",
+      "rating": 4.8,
+      "user_ratings_total": 274,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ6atebyFhDogRq4-Xi5MvLy0",
+      "name": "Johansen & Anderson Inc",
+      "vicinity": "925 Plainfield Rd, Joliet",
+      "rating": 4.8,
+      "user_ratings_total": 295,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJwWKSPwFrDogRBSeSoT7dq_s",
+      "name": "S&S Mechanical Services Inc.",
+      "vicinity": "22014 Howell Dr Unit 1, New Lenox",
+      "rating": 4.9,
+      "user_ratings_total": 126,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJVc4799KLDogRmuSpJHWNb8g",
+      "name": "Pozitive Heating & Cooling",
+      "vicinity": "209 Brook Forest Ave, Shorewood",
+      "rating": 4.7,
+      "user_ratings_total": 134,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJh7Ee4M9pDogRPltJ8YbEQdQ",
+      "name": "TR Miller Heating, Cooling, Plumbing and Electrical",
+      "vicinity": "8442 183rd St Unit A, Tinley Park",
+      "rating": 4.9,
+      "user_ratings_total": 2299,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJoy13NQaRjyER6EiIpyQYDR4",
+      "name": "4 Corners Heating & Cooling",
+      "vicinity": "532 Anna Ln, Romeoville",
+      "rating": 5,
+      "user_ratings_total": 66,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ1yUmWYeMDogRu8oTIESValQ",
+      "name": "Best Comfort Heating and Cooling",
+      "vicinity": "1504 Essington Rd UNIT 3, Joliet",
+      "rating": 4.8,
+      "user_ratings_total": 285,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2Sjj0EeuxW4RQDLQhComku0",
+      "name": "Happy Hippo Heating and Cooling",
+      "vicinity": "12563 Old Plank Dr, New Lenox",
+      "rating": 5,
+      "user_ratings_total": 380,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJHxWylDZeDogRSsnp_2BFqCI",
+      "name": "Jacobazzi Heating & Cooling",
+      "vicinity": "15523 S Weber Rd, Romeoville",
+      "rating": 4.6,
+      "user_ratings_total": 33,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJyVn6NLqKDogRkRImVyz-YZQ",
+      "name": "AirMaxx Heating and Air Conditioning, Inc.",
+      "vicinity": "23952 S Northern Illinois Dr, Channahon",
+      "rating": 4.9,
+      "user_ratings_total": 106,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJC5dnrR9CDogRFevgPve2i74",
+      "name": "B & B Heating & Cooling, LLC",
+      "vicinity": "13010 W 159th St, Homer Glen",
+      "rating": 4.7,
+      "user_ratings_total": 12,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJRc5rqhj1DogRlu1KbAJMPYs",
+      "name": "Leto Plumbing & Heating, Inc.",
+      "vicinity": "12407 Rhea Dr, Plainfield",
+      "rating": 4.7,
+      "user_ratings_total": 42,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJKcoQ_IlhDogRVQbM3RehHGI",
+      "name": "Torres HVAC LLC",
+      "vicinity": "504 S Margaret St, Joliet",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJaUvNKztvDogR_WLV6HPOWy0",
+      "name": "Best Heating and Cooling Inc.",
+      "vicinity": "895 Country Creek Dr, New Lenox",
+      "rating": 4.8,
+      "user_ratings_total": 16,
+      "business_status": "OPERATIONAL"
+    }
+  ]
+}
