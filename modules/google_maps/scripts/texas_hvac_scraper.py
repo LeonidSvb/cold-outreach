@@ -602,12 +602,10 @@ def main():
     print(f"  Min reviews:     {args.min_reviews}")
     print(f"  Max reviews:     {args.max_reviews if args.max_reviews else 'No limit'}")
     print(f"  Min rating:      {args.min_rating}")
-    print(f"\nAdaptive radius:")
-    print(f"  Initial:         {CONFIG['INITIAL_RADIUS']/1000}km")
-    print(f"  Range:           {CONFIG['MIN_RADIUS']/1000}km - {CONFIG['MAX_RADIUS']/1000}km")
-    print(f"  Sparse (<15):    INCREASE radius")
-    print(f"  Optimal (15-55): USE results")
-    print(f"  Dense (>55):     DECREASE radius")
+    print(f"\nTier-based Grid Strategy:")
+    print(f"  Tier 1 (>500k):  Grid {TIER_STRATEGIES['tier_1']['grid_step_km']}km, radius {TIER_STRATEGIES['tier_1']['circle_radius_km']}km")
+    print(f"  Tier 2 (100-500k): Grid {TIER_STRATEGIES['tier_2']['grid_step_km']}km, radius {TIER_STRATEGIES['tier_2']['circle_radius_km']}km")
+    print(f"  Tier 3 (<100k):  Single point, radius {TIER_STRATEGIES['tier_3']['circle_radius_km']}km")
     print(f"{'='*70}\n")
 
     start_time = time.time()
@@ -744,7 +742,8 @@ def main():
     for city_result in sorted_cities[:10]:
         raw_count = len(city_result.get('raw_places', []))
         filtered_count = city_result['stats']['with_details']
-        print(f"{city_result['city']:<25} RAW: {raw_count:>4}  |  FILTERED: {filtered_count:>4}  (radius: {city_result['stats']['final_radius_km']:.1f}km)")
+        tier_info = f"{city_result['stats']['tier'].upper()}, {city_result['stats']['grid_points']} points" if city_result['stats']['grid_points'] > 1 else f"{city_result['stats']['tier'].upper()}, r={city_result['stats']['radius_km']}km"
+        print(f"{city_result['city']:<25} RAW: {raw_count:>4}  |  FILTERED: {filtered_count:>4}  ({tier_info})")
 
 if __name__ == "__main__":
     main()
