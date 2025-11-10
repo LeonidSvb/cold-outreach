@@ -222,19 +222,100 @@ with st.sidebar:
         st.info(f"📍 {len(cities_list)} cities selected")
 
     else:  # Custom cities
+        st.markdown("""
+        **📝 Enter your cities below. Supported formats:**
+        - One per line: `Miami, FL`
+        - Comma-separated: `Miami, FL, Houston, TX, Dallas, TX`
+        - Paste from Excel (one city per row)
+        """)
+
         cities_input = st.text_area(
-            "Enter Cities (one per line)",
+            "Cities List",
             placeholder="""Miami, FL
 Houston, TX
+Dallas, TX
 Los Angeles, CA
-New York, NY""",
-            help="Format: City, State (e.g., Miami, FL)",
-            height=150
+Phoenix, AZ
+Chicago, IL""",
+            help="Enter city names with state. Any format works!",
+            height=200
         )
 
+        # Parse and validate cities
         if cities_input:
-            cities_list = [c.strip() for c in cities_input.split('\n') if c.strip()]
-            st.success(f"✅ {len(cities_list)} cities entered")
+            # Handle different formats
+            raw_cities = []
+
+            # Check if comma-separated (single line with multiple commas)
+            if '\n' not in cities_input and ',' in cities_input:
+                # Split by state abbreviations pattern
+                import re
+                # Pattern: city name + comma + 2-letter state
+                parts = re.split(r',\s*([A-Z]{2})', cities_input)
+                for i in range(1, len(parts), 2):
+                    if i < len(parts):
+                        city_name = parts[i-1].strip().strip(',')
+                        state_abbr = parts[i].strip()
+                        if city_name and state_abbr:
+                            raw_cities.append(f"{city_name}, {state_abbr}")
+            else:
+                # Newline separated
+                raw_cities = [c.strip() for c in cities_input.split('\n') if c.strip()]
+
+            # Validate format
+            valid_cities = []
+            invalid_cities = []
+
+            for city in raw_cities:
+                # Check format: "City Name, ST"
+                if ',' in city:
+                    parts = city.split(',')
+                    if len(parts) >= 2:
+                        city_name = parts[0].strip()
+                        state_abbr = parts[-1].strip()
+
+                        # Check if state is 2 letters
+                        if len(state_abbr) == 2 and state_abbr.isalpha():
+                            valid_cities.append(f"{city_name}, {state_abbr.upper()}")
+                        else:
+                            invalid_cities.append(city)
+                    else:
+                        invalid_cities.append(city)
+                else:
+                    invalid_cities.append(city)
+
+            cities_list = valid_cities
+
+            # Show validation results
+            if valid_cities:
+                st.success(f"✅ {len(valid_cities)} valid cities parsed")
+
+                # Show preview
+                with st.expander(f"👁️ Preview cities ({len(valid_cities)})"):
+                    # Group by state
+                    from collections import defaultdict
+                    by_state = defaultdict(list)
+                    for city in valid_cities:
+                        city_name, state = city.rsplit(', ', 1)
+                        by_state[state].append(city_name)
+
+                    for state_abbr in sorted(by_state.keys()):
+                        st.markdown(f"**{state_abbr}:** {', '.join(by_state[state_abbr])}")
+
+            if invalid_cities:
+                st.warning(f"⚠️ {len(invalid_cities)} cities have invalid format")
+                with st.expander("❌ Invalid entries (fix these)"):
+                    st.markdown("""
+                    **Correct format:** `City Name, ST`
+
+                    Examples:
+                    - ✅ Miami, FL
+                    - ✅ New York City, NY
+                    - ❌ Miami Florida (missing comma)
+                    - ❌ Miami, Florida (state must be 2 letters)
+                    """)
+                    for invalid in invalid_cities:
+                        st.text(f"❌ {invalid}")
         else:
             st.warning("⚠️ Enter at least one city")
 
@@ -267,13 +348,46 @@ New York, NY""",
             help="Common service businesses for voice AI"
         )
     else:
+        st.markdown("""
+        **💡 Enter your target business type**
+
+        Examples:
+        - Service businesses: `dog grooming`, `auto repair`, `pool cleaning`
+        - Retail: `coffee shops`, `flower shops`, `pet stores`
+        - Healthcare: `dental clinics`, `veterinary clinics`
+        - Food: `restaurants`, `bakeries`, `food trucks`
+        """)
+
         niche = st.text_input(
-            "Custom Business Type",
-            placeholder="e.g., dog grooming, auto repair, pool cleaning",
-            help="Enter any business type you want to target"
+            "Business Type",
+            placeholder="e.g., dog grooming services",
+            help="Be specific! Google will search for this exact term.",
+            max_chars=100
         )
 
-        if not niche:
+        if niche:
+            # Clean and validate
+            niche = niche.strip().lower()
+
+            # Show what will be searched
+            st.info(f"🔍 Will search for: **\"{niche}\"** in Google Places")
+
+            # Tips
+            with st.expander("💡 Tips for better results"):
+                st.markdown("""
+                **Good examples:**
+                - ✅ `hvac contractors` (specific service)
+                - ✅ `emergency plumbers` (includes keyword)
+                - ✅ `24/7 towing services` (specific niche)
+
+                **Avoid:**
+                - ❌ `hvac` (too broad)
+                - ❌ `home services` (too general)
+                - ❌ `Best HVAC near me` (Google handles this)
+
+                **Pro tip:** Use the exact term your target customers would search for!
+                """)
+        else:
             st.warning("⚠️ Enter a business type")
 
     st.divider()
