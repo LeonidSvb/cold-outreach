@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
 === UNIVERSAL WEBSITE SCRAPER - STREAMLIT UI ===
-Version: 1.0.0 | Created: 2025-11-10
+Version: 2.0.0 | Created: 2025-11-10 | Updated: 2025-11-10
 
 USAGE:
 streamlit run modules/scraping/ui/streamlit_app.py
 
 FEATURES:
+- Two modes: Personal (all results) & Shared (session-only)
 - CSV upload with URL validation
 - Flexible scraping configuration
 - Real-time progress tracking
 - Results preview and download
 - Time and cost estimation
-- Batch processing
+- File isolation per session (Shared mode)
 """
 
 import sys
@@ -24,6 +25,7 @@ from datetime import datetime
 import subprocess
 import tempfile
 import time
+import uuid
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
@@ -90,10 +92,44 @@ if 'results' not in st.session_state:
     st.session_state.results = None
 if 'scraping_complete' not in st.session_state:
     st.session_state.scraping_complete = False
+if 'session_id' not in st.session_state:
+    st.session_state.session_id = str(uuid.uuid4())
 
 # Sidebar configuration
 with st.sidebar:
-    st.header("⚙️ Scraping Settings")
+    st.header("⚙️ Settings")
+
+    # MODE SWITCHER
+    st.subheader("🔐 Operation Mode")
+    operation_mode = st.radio(
+        "Select Mode",
+        ["Personal", "Shared"],
+        help="""
+        Personal: See all results (for your personal use)
+        Shared: See only your session results (for public deployment)
+        """
+    )
+
+    if operation_mode == "Personal":
+        st.markdown("""
+        <div style="background: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
+            <strong>Personal Mode</strong><br>
+            All results visible<br>
+            Full access
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
+            <strong>Shared Mode</strong><br>
+            Only your results visible<br>
+            Session-isolated
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.divider()
+
+    st.subheader("⚙️ Scraping Settings")
 
     # Processing mode
     mode = st.selectbox(
@@ -283,9 +319,12 @@ with tab1:
                 df.to_csv(tmp_input.name, index=False)
                 input_path = tmp_input.name
 
-            # Create output path
+            # Create output path based on mode
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            output_path = Path(f"modules/scraping/results/scraped_{timestamp}.csv")
+            if operation_mode == "Personal":
+                output_path = Path(f"modules/scraping/results/personal/scraped_{timestamp}.csv")
+            else:
+                output_path = Path(f"modules/scraping/results/sessions/{st.session_state.session_id}/scraped_{timestamp}.csv")
             output_path.parent.mkdir(parents=True, exist_ok=True)
 
             # Build command
@@ -460,8 +499,13 @@ with tab1:
 with tab2:
     st.header("View Past Results")
 
-    # List available results files
-    results_dir = Path("modules/scraping/results")
+    # Determine which results to show based on mode
+    if operation_mode == "Personal":
+        results_dir = Path("modules/scraping/results/personal")
+        st.info("📁 Showing all your personal results")
+    else:
+        results_dir = Path(f"modules/scraping/results/sessions/{st.session_state.session_id}")
+        st.info("📁 Showing only your session results")
 
     if results_dir.exists():
         result_files = sorted(list(results_dir.glob("*.csv")), reverse=True)
@@ -604,9 +648,10 @@ with tab3:
 
 # Footer
 st.divider()
-st.markdown("""
+st.markdown(f"""
 <div style="text-align: center; color: #666; padding: 2rem 0;">
-    <p><strong>Universal Website Scraper</strong> v1.0.0</p>
+    <p><strong>Universal Website Scraper</strong> v2.0.0</p>
+    <p>Mode: {operation_mode} | Session: {st.session_state.session_id[:8]}...</p>
     <p>Built with Streamlit | HTTP-only scraping</p>
 </div>
 """, unsafe_allow_html=True)

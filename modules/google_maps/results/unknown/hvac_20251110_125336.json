@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "timestamp": "20251110_125336",
+    "state": "unknown",
+    "niche": "hvac",
+    "cities_processed": 1,
+    "total_filtered_places": 0,
+    "filters": {
+      "min_reviews": 30,
+      "max_reviews": 800,
+      "min_rating": 4.0
+    },
+    "note": "FILTERED data with phone/website - ready for outreach",
+    "stats": {
+      "total_api_calls": 1,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 0,
+      "cities_processed": 1,
+      "total_cost": 0.0,
+      "api_key_switches": 0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Chicago, IL",
+      "filtered_places": [],
+      "stats": {
+        "total_found": 0,
+        "unique": 0,
+        "filtered": 0,
+        "with_details": 0,
+        "method": "text_search"
+      }
+    }
+  ],
+  "all_filtered_places": []
+}

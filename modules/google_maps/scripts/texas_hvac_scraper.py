@@ -345,40 +345,77 @@ def subdivide_area(lat: float, lng: float, radius: int) -> List[Tuple[float, flo
         (lat - offset_lat, lng - offset_lng, new_radius),  # SW
     ]
 
+def text_search_city(city: str, keyword: str) -> List[Dict]:
+    """Search using Text Search API (no geocoding needed)"""
+    query = f"{keyword} in {city}"
+    all_places = []
+    next_page_token = None
+    page = 1
+
+    while page <= 3:
+        params = {
+            "query": query,
+            "key": get_current_api_key()
+        }
+
+        if next_page_token:
+            params["pagetoken"] = next_page_token
+
+        try:
+            response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/json", params=params, timeout=30)
+            STATS["total_api_calls"] += 1
+
+            if STATS["total_api_calls"] % 100 == 0:
+                rotate_api_key()
+
+            if response.status_code != 200:
+                logger.error(f"Text search HTTP error {response.status_code}")
+                break
+
+            data = response.json()
+            status = data.get("status")
+
+            if status not in ["OK", "ZERO_RESULTS"]:
+                logger.error(f"Text search API error: {status}")
+                break
+
+            results = data.get("results", [])
+            for p in results:
+                all_places.append({
+                    "place_id": p.get("place_id"),
+                    "name": p.get("name"),
+                    "vicinity": p.get("formatted_address", p.get("vicinity", "")),
+                    "rating": p.get("rating", 0),
+                    "user_ratings_total": p.get("user_ratings_total", 0),
+                    "business_status": p.get("business_status", "OPERATIONAL"),
+                })
+
+            logger.info(f"Page {page}: Found {len(results)} results (total: {len(all_places)})")
+
+            next_page_token = data.get("next_page_token")
+            if not next_page_token:
+                break
+
+            page += 1
+            time.sleep(2)
+
+        except Exception as e:
+            logger.error(f"Text search exception: {e}")
+            break
+
+    return all_places
+
 def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, max_reviews: int = None) -> Dict:
-    """Scrape single city with adaptive radius - saves both raw and filtered data"""
+    """Scrape single city with Text Search - saves both raw and filtered data"""
     logger.info(f"\n{'='*60}")
     logger.info(f"Processing city: {city}")
     logger.info(f"{'='*60}")
 
-    # Geocode
-    lat, lng = geocode_city(city)
-    if lat == 0:
-        logger.error(f"Failed to geocode {city}")
-        return {
-            "city": city,
-            "raw_places": [],
-            "filtered_places": [],
-            "error": "geocoding_failed",
-            "stats": {
-                "total_found": 0,
-                "unique": 0,
-                "filtered": 0,
-                "with_details": 0,
-                "final_radius_km": 0
-            }
-        }
-
-    logger.info(f"Center: {lat:.4f}, {lng:.4f}")
-
-    # Adaptive search
-    places, final_radius = adaptive_radius_search(
-        lat, lng, keyword, CONFIG["INITIAL_RADIUS"], city
-    )
+    # Text Search (no geocoding needed)
+    places = text_search_city(city, keyword)
 
     logger.info(f"\n{city} Summary:")
     logger.info(f"  Places found: {len(places)}")
-    logger.info(f"  Final radius: {final_radius/1000:.1f}km")
 
     # Deduplicate - THIS IS RAW DATA (before filtering)
     unique_places = deduplicate_places(places)
@@ -390,11 +427,14 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, ma
 
     # Get details ONLY for filtered places (to save API calls)
     detailed_places = []
-    for place in filtered:
+    for i, place in enumerate(filtered, 1):
         details = get_place_details(place["place_id"])
         if details:
             detailed_places.append({**place, **details})
         time.sleep(CONFIG["DELAY_BETWEEN_REQUESTS"])
+
+        if i % 10 == 0:
+            logger.info(f"  Enriched {i}/{len(filtered)} places")
 
     STATS["cities_processed"] += 1
 
@@ -408,7 +448,7 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, ma
             "unique": len(unique_places),
             "filtered": len(filtered),
             "with_details": len(detailed_places),
-            "final_radius_km": final_radius / 1000
+            "method": "text_search"
         }
     }
 
@@ -534,21 +574,17 @@ def main():
         return
 
     print(f"\n{'='*70}")
-    print(f"GOOGLE PLACES STATEWIDE SCRAPER")
+    print(f"GOOGLE PLACES STATEWIDE SCRAPER (Text Search)")
     print(f"{'='*70}")
     print(f"Cities to process: {len(cities)}")
     print(f"Keyword:           {args.keyword}")
     print(f"Parallel mode:     {'ON' if args.parallel else 'OFF'}")
+    print(f"API keys:          {len(api_keys)}")
     print(f"Filters:")
     print(f"  Min reviews:     {args.min_reviews}")
     print(f"  Max reviews:     {args.max_reviews if args.max_reviews else 'No limit'}")
     print(f"  Min rating:      {args.min_rating}")
-    print(f"\nAdaptive radius:")
-    print(f"  Initial:         {CONFIG['INITIAL_RADIUS']/1000}km")
-    print(f"  Range:           {CONFIG['MIN_RADIUS']/1000}km - {CONFIG['MAX_RADIUS']/1000}km")
-    print(f"  Sparse (<15):    INCREASE radius")
-    print(f"  Optimal (15-55): USE results")
-    print(f"  Dense (>55):     DECREASE radius")
+    print(f"\nSearch method:     Text Search API (no geocoding)")
     print(f"{'='*70}\n")
 
     start_time = time.time()
@@ -666,10 +702,7 @@ def main():
     print(f"\nData collected:")
     print(f"  RAW places:        {len(all_raw_places)} (can re-filter later)")
     print(f"  FILTERED places:   {len(all_filtered_places)} (ready for outreach)")
-    print(f"\nAdaptive strategy:")
-    print(f"  Radius increases:  {STATS['radius_increases']}")
-    print(f"  Radius decreases:  {STATS['radius_decreases']}")
-    print(f"  Optimal searches:  {STATS['optimal_searches']}")
+    print(f"\nSearch method:     Text Search API (no geocoding needed)")
     print(f"\nAPI usage:")
     print(f"  Total API calls:   {STATS['total_api_calls']}")
     print(f"  API key switches:  {STATS['api_key_switches']}")
@@ -689,7 +722,7 @@ def main():
     for city_result in sorted_cities[:10]:
         raw_count = len(city_result.get('raw_places', []))
         filtered_count = city_result['stats']['with_details']
-        print(f"{city_result['city']:<25} RAW: {raw_count:>4}  |  FILTERED: {filtered_count:>4}  (radius: {city_result['stats']['final_radius_km']:.1f}km)")
+        print(f"{city_result['city']:<30} RAW: {raw_count:>4}  |  FILTERED: {filtered_count:>4}")
 
 if __name__ == "__main__":
     main()
