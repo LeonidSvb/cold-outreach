@@ -1,0 +1,948 @@
+{
+  "metadata": {
+    "timestamp": "20251110_145901",
+    "state": "new_york",
+    "niche": "hvac",
+    "cities_processed": 1,
+    "total_raw_places": 57,
+    "note": "RAW data before filtering - no phone/website to save API costs",
+    "stats": {
+      "total_api_calls": 43,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 0,
+      "cities_processed": 1,
+      "total_cost": 0.0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Rochester, NY",
+      "raw_places": [
+        {
+          "place_id": "ChIJW1iKqnBT0YkR2YoIHS96BBI",
+          "name": "Upstate Air Heating & Cooling",
+          "vicinity": "3240 Chili Ave STE C8, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 32,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvUvlhNRR0YkRdvPBWs9wJ-Q",
+          "name": "Excellent Air Heating & Cooling",
+          "vicinity": "376 Scottsville Mumford Rd, Scottsville",
+          "rating": 4.9,
+          "user_ratings_total": 646,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJb0nJNQRL0YkRu7Y2UJXmDo4",
+          "name": "Hallmark Heating & Air Conditioning Rochester",
+          "vicinity": "238 Fishell Rd, Rush",
+          "rating": 4.8,
+          "user_ratings_total": 32,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJS4BJwdZP0YkRmFaF67e822k",
+          "name": "BP Residential Heating and Cooling",
+          "vicinity": "79 Goldfinch Dr, West Henrietta",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJI_mcrqNR0YkRNimgWeQWg_Y",
+          "name": "GeoDoctor",
+          "vicinity": "2226 N Rd, Scottsville",
+          "rating": 5,
+          "user_ratings_total": 50,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ2zTjcH-01okRJUBFiDaSmlE",
+          "name": "High Performance Heating & Air Conditioning",
+          "vicinity": "2350 Brighton Henrietta Town Line Rd, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 711,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ4Zs_da810YkR3dYB4DVHO0g",
+          "name": "Mendon Heating & Cooling, Inc.",
+          "vicinity": "35 High Hill Dr, Pittsford",
+          "rating": 5,
+          "user_ratings_total": 34,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ__-vLxlL0YkRipIPiq-lnZI",
+          "name": "FreshAir Energy Of NY",
+          "vicinity": "2452 NY-15, Rochester",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJCyHScYd4KSoRBRVSOhUL2HQ",
+          "name": "Exact HVAC Heating and Cooling",
+          "vicinity": "97 Ivory Way, Henrietta",
+          "rating": 5,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJnyDyI4nK1okRvI2dA5kWK64",
+          "name": "Hughesco of Rochester",
+          "vicinity": "1240 Jefferson Rd, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 153,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgahWNYmx1okRRu2aFpUt9Ik",
+          "name": "Heating & Cooling",
+          "vicinity": "2717 NY-31, Rochester",
+          "rating": 5,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJAwMtHM8x0YkRHAkQEvghPHA",
+          "name": "Holbrook Heating Inc.",
+          "vicinity": "7401 Willowbrook Rd, Victor",
+          "rating": 4.9,
+          "user_ratings_total": 570,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJvyGVNao10YkRZVgB7T6Id3Y",
+          "name": "Platinum HVAC Solutions",
+          "vicinity": "42 Lake Lacoma Dr, Pittsford",
+          "rating": 5,
+          "user_ratings_total": 15,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ1Y24k1-t1okRsvKsasZYaus",
+          "name": "Zoom Heating & Cooling",
+          "vicinity": "1000 Turk Hill Rd Suite 2 CC, Fairport",
+          "rating": 4.8,
+          "user_ratings_total": 46,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLf-TEzvL1okRyfT2IzH36mQ",
+          "name": "Van-Ernst Refrigeration Inc",
+          "vicinity": "A1 Country Club Rd, East Rochester",
+          "rating": 4.4,
+          "user_ratings_total": 14,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJwXIiKngV9qQRbCMG-mKDwqY",
+          "name": "Reimer Heating, Cooling & Plumbing, LLC",
+          "vicinity": "52 Marway Cir, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 1610,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5UFG9jYD1IkRHnf1n1toc3E",
+          "name": "Aire Serv of Rochester",
+          "vicinity": "14 Amity St, Spencerport",
+          "rating": 4.9,
+          "user_ratings_total": 534,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJMSN2hXmz1okR_XFwPg5syOk",
+          "name": "Taylor Heating Inc.",
+          "vicinity": "1775 Buffalo Rd, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 1965,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJdendklau1okR8nFzTWVZ1qQ",
+          "name": "W.O.L.F. Mechanical Service, LLC",
+          "vicinity": "5353 W Ridge Rd, Spencerport",
+          "rating": 4.5,
+          "user_ratings_total": 71,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJBRJQpVCx1okRtjJ15CKIkns",
+          "name": "Paris Heating and Cooling",
+          "vicinity": "1383 W Ridge Rd, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 445,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJfz197Lqz1okRMLJNPL5eSRE",
+          "name": "BETLEM RESIDENTIAL Heating & Air Conditioning",
+          "vicinity": "21 Trolley Cir, Gates",
+          "rating": 4.6,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhdur7haz1okRHoddRLBHk6g",
+          "name": "MicroClimate Mechanical Services",
+          "vicinity": "65 Industrial Park Cir, Rochester",
+          "rating": 5,
+          "user_ratings_total": 2,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZQrpF4Wx1okRz_1yM1928no",
+          "name": "Arndt Heating and Cooling",
+          "vicinity": "48 Colby St, Spencerport",
+          "rating": 4.9,
+          "user_ratings_total": 232,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJqUXoM5a11okRcx9B3hEedH4",
+          "name": "Turnbull Heating & Air",
+          "vicinity": "35 Bermar Park, Rochester",
+          "rating": 4.6,
+          "user_ratings_total": 62,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJA3i8brhjByERSSHQIOQB3xk",
+          "name": "Five Star Energy Solutions",
+          "vicinity": "4150 Buffalo Rd, Rochester",
+          "rating": 5,
+          "user_ratings_total": 112,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrdAG6ICu1okRBeLeG0BA1D8",
+          "name": "D'Angelo's Plumbing & Heating",
+          "vicinity": "1835 N Union St, Spencerport",
+          "rating": 4.9,
+          "user_ratings_total": 1821,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJOQ0MQT5qhywRrwVOi_P0Mqo",
+          "name": "ROYAL SERVE - HVAC services",
+          "vicinity": "4090 Canal Rd, Spencerport",
+          "rating": 5,
+          "user_ratings_total": 132,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLxKKWEqs1okRNYn9HmGbAR4",
+          "name": "Heat & Kool, Inc.",
+          "vicinity": "6 Turner Dr, Spencerport",
+          "rating": 4.8,
+          "user_ratings_total": 18,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJo5UUZ0is1okROIpbTPEPnKg",
+          "name": "Pro-Temp Mechanical",
+          "vicinity": "131 Martha St, Spencerport",
+          "rating": 4.8,
+          "user_ratings_total": 19,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJcSFt4XzK1okROZq_sclMX1c",
+          "name": "Hawn Heating & Air Conditioning Inc",
+          "vicinity": "277 Winton Rd N, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 602,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZbC3a6a11okRILQoMDJFkuM",
+          "name": "Isaac Heating & Air Conditioning",
+          "vicinity": "50 Holleder Pkwy, Rochester",
+          "rating": 4.8,
+          "user_ratings_total": 5641,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJk-NcNxu11okRrVKlOstdaGQ",
+          "name": "BETLEM RESIDENTIAL Heating & Air Conditioning",
+          "vicinity": "704 S Clinton Ave, Rochester",
+          "rating": 4.7,
+          "user_ratings_total": 521,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJZR0BcI601okRh37oJZzgxN8",
+          "name": "Universal Heating and Cooling Company",
+          "vicinity": "926 W Main St, Rochester",
+          "rating": 4.5,
+          "user_ratings_total": 125,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJOR4CAvy11okRZFI_xW_43lQ",
+          "name": "JJB Mechanical, LLC",
+          "vicinity": "235 Elmdorf Ave, Rochester",
+          "rating": 5,
+          "user_ratings_total": 149,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJrVBaIvKJvwMRS76aoZOd8Xg",
+          "name": "Northeast Mechanical",
+          "vicinity": "660 Westchester Ave, Rochester",
+          "rating": 5,
+          "user_ratings_total": 10,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJpb-fdhq11okRunBpwfnCbIc",
+          "name": "John Betlem Heating & Cooling",
+          "vicinity": "806 Linden Ave, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 2387,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJc3wQOjzL1okRRu7-S242tTw",
+          "name": "Airquip Heating & Air Conditioning",
+          "vicinity": "830 Linden Ave, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 619,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJY3bhSJLM1okRFfmRT4neZv0",
+          "name": "MGM Heating And Cooling",
+          "vicinity": "8 Jacaranda Ct, Penfield",
+          "rating": 5,
+          "user_ratings_total": 106,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJo32DXgbP1okRHGoNnxgnFwE",
+          "name": "Crossfield Heating & Air Conditioning",
+          "vicinity": "44 Donovan St, Webster",
+          "rating": 4.9,
+          "user_ratings_total": 985,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJg30EDhhL0YkRNtmzPVxYSbo",
+          "name": "Halco of Rochester",
+          "vicinity": "365 N Washington St, Rochester",
+          "rating": 5,
+          "user_ratings_total": 837,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJC34eKo3N1okR3wOqO5qTSto",
+          "name": "United Heating and Air LLC",
+          "vicinity": "11 Stablegate Dr, Webster",
+          "rating": 4.9,
+          "user_ratings_total": 86,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJuZMCs-DI1okRA1iEj7hptn4",
+          "name": "Napora Heating Cooling Plumbing",
+          "vicinity": "762 Maple Dr, Webster",
+          "rating": 4.8,
+          "user_ratings_total": 76,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJx8LPbuuz1okR8I9XYeUPWKc",
+          "name": "Kane Heating & Cooling LLC",
+          "vicinity": "15 Pen Web Park, Webster",
+          "rating": 4.9,
+          "user_ratings_total": 133,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ5b66mzbL1okRzIuQFwGNFcw",
+          "name": "Winter's Heating & Cooling, Inc",
+          "vicinity": "1671 Penfield Rd, Rochester",
+          "rating": 5,
+          "user_ratings_total": 4,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJu2HjrnzL1okRgSjjL9FqFY4",
+          "name": "Advanced Heating & Cooling",
+          "vicinity": "2104 Five Mile Line Rd, Penfield",
+          "rating": 4.4,
+          "user_ratings_total": 43,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ3aPijBLO1okRs3bHiFQ26xs",
+          "name": "AV Enterprise Heating and Cooling LLC",
+          "vicinity": "1350 Salt Rd, Webster",
+          "rating": 4.9,
+          "user_ratings_total": 31,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJPTFiXQbP1okRIvu1ge7nBmo",
+          "name": "Crossfield Home Energy Solutions",
+          "vicinity": "44 Donovan St, Webster",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJM5CIcYi11okRf_1Y0RCjRzE",
+          "name": "Titan Heating & Cooling",
+          "vicinity": "1776 E Main St, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 1036,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJLW49KNev1okRr7Ci3nsvhI4",
+          "name": "Williams & Son Heating Contractors Inc.",
+          "vicinity": "3763 Latta Rd, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 55,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJhylyOAln0YkRxbsPxo6f5K4",
+          "name": "Coppeta Heating Contractor, LLC",
+          "vicinity": "16 Thorn Apple Ln, Rochester",
+          "rating": 5,
+          "user_ratings_total": 20,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJ46sQu2i01okRuqwZjC9QQsU",
+          "name": "Fischer Plumbing & HVAC",
+          "vicinity": "471 Peck Rd, Spencerport",
+          "rating": 4.8,
+          "user_ratings_total": 82,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJgRvgLii31okR2zX-5AlOENo",
+          "name": "Total Comfort Heating & Air Conditioning, Inc.",
+          "vicinity": "2892 Dewey Ave, Rochester",
+          "rating": 4.9,
+          "user_ratings_total": 374,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJSUhmrd631okR22zzk94EjTM",
+          "name": "Carroll Heating & Cooling",
+          "vicinity": "4390 St Paul Blvd, Rochester",
+          "rating": 5,
+          "user_ratings_total": 75,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJO3CMTn621okRjxOEAvFn-cs",
+          "name": "Empire Heating & Air Conditioning",
+          "vicinity": "469 East Ridge Road, Rochester",
+          "rating": 4.7,
+          "user_ratings_total": 184,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJJ5jbFNLJ1okRc5-nbMEb2CY",
+          "name": "Comfort Medic 911",
+          "vicinity": "3974 Culver Rd, Irondequoit",
+          "rating": 5,
+          "user_ratings_total": 13,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJtQSl32TP1okRf--GT7hmQPk",
+          "name": "TRISON Heating and Air Conditioning, LLC",
+          "vicinity": "505 Licia Ln, Webster",
+          "rating": 4.8,
+          "user_ratings_total": 44,
+          "business_status": "OPERATIONAL"
+        },
+        {
+          "place_id": "ChIJdYmBteDP1okRcu-Bw62NCbI",
+          "name": "Mech Tech HVAC Inc",
+          "vicinity": "1805 Tebor Rd Suite 8, Webster",
+          "rating": 5,
+          "user_ratings_total": 1,
+          "business_status": "OPERATIONAL"
+        }
+      ],
+      "stats": {
+        "total_found": 88,
+        "unique": 57,
+        "filtered": 34,
+        "with_details": 34,
+        "grid_points": 9,
+        "tier": "tier_2",
+        "radius_km": 8
+      }
+    }
+  ],
+  "all_raw_places": [
+    {
+      "place_id": "ChIJW1iKqnBT0YkR2YoIHS96BBI",
+      "name": "Upstate Air Heating & Cooling",
+      "vicinity": "3240 Chili Ave STE C8, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 32,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvUvlhNRR0YkRdvPBWs9wJ-Q",
+      "name": "Excellent Air Heating & Cooling",
+      "vicinity": "376 Scottsville Mumford Rd, Scottsville",
+      "rating": 4.9,
+      "user_ratings_total": 646,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJb0nJNQRL0YkRu7Y2UJXmDo4",
+      "name": "Hallmark Heating & Air Conditioning Rochester",
+      "vicinity": "238 Fishell Rd, Rush",
+      "rating": 4.8,
+      "user_ratings_total": 32,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJS4BJwdZP0YkRmFaF67e822k",
+      "name": "BP Residential Heating and Cooling",
+      "vicinity": "79 Goldfinch Dr, West Henrietta",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJI_mcrqNR0YkRNimgWeQWg_Y",
+      "name": "GeoDoctor",
+      "vicinity": "2226 N Rd, Scottsville",
+      "rating": 5,
+      "user_ratings_total": 50,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ2zTjcH-01okRJUBFiDaSmlE",
+      "name": "High Performance Heating & Air Conditioning",
+      "vicinity": "2350 Brighton Henrietta Town Line Rd, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 711,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ4Zs_da810YkR3dYB4DVHO0g",
+      "name": "Mendon Heating & Cooling, Inc.",
+      "vicinity": "35 High Hill Dr, Pittsford",
+      "rating": 5,
+      "user_ratings_total": 34,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ__-vLxlL0YkRipIPiq-lnZI",
+      "name": "FreshAir Energy Of NY",
+      "vicinity": "2452 NY-15, Rochester",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJCyHScYd4KSoRBRVSOhUL2HQ",
+      "name": "Exact HVAC Heating and Cooling",
+      "vicinity": "97 Ivory Way, Henrietta",
+      "rating": 5,
+      "user_ratings_total": 4,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJnyDyI4nK1okRvI2dA5kWK64",
+      "name": "Hughesco of Rochester",
+      "vicinity": "1240 Jefferson Rd, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 153,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgahWNYmx1okRRu2aFpUt9Ik",
+      "name": "Heating & Cooling",
+      "vicinity": "2717 NY-31, Rochester",
+      "rating": 5,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJAwMtHM8x0YkRHAkQEvghPHA",
+      "name": "Holbrook Heating Inc.",
+      "vicinity": "7401 Willowbrook Rd, Victor",
+      "rating": 4.9,
+      "user_ratings_total": 570,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJvyGVNao10YkRZVgB7T6Id3Y",
+      "name": "Platinum HVAC Solutions",
+      "vicinity": "42 Lake Lacoma Dr, Pittsford",
+      "rating": 5,
+      "user_ratings_total": 15,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ1Y24k1-t1okRsvKsasZYaus",
+      "name": "Zoom Heating & Cooling",
+      "vicinity": "1000 Turk Hill Rd Suite 2 CC, Fairport",
+      "rating": 4.8,
+      "user_ratings_total": 46,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLf-TEzvL1okRyfT2IzH36mQ",
+      "name": "Van-Ernst Refrigeration Inc",
+      "vicinity": "A1 Country Club Rd, East Rochester",
+      "rating": 4.4,
+      "user_ratings_total": 14,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJwXIiKngV9qQRbCMG-mKDwqY",
+      "name": "Reimer Heating, Cooling & Plumbing, LLC",
+      "vicinity": "52 Marway Cir, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 1610,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5UFG9jYD1IkRHnf1n1toc3E",
+      "name": "Aire Serv of Rochester",
+      "vicinity": "14 Amity St, Spencerport",
+      "rating": 4.9,
+      "user_ratings_total": 534,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJMSN2hXmz1okR_XFwPg5syOk",
+      "name": "Taylor Heating Inc.",
+      "vicinity": "1775 Buffalo Rd, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 1965,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJdendklau1okR8nFzTWVZ1qQ",
+      "name": "W.O.L.F. Mechanical Service, LLC",
+      "vicinity": "5353 W Ridge Rd, Spencerport",
+      "rating": 4.5,
+      "user_ratings_total": 71,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJBRJQpVCx1okRtjJ15CKIkns",
+      "name": "Paris Heating and Cooling",
+      "vicinity": "1383 W Ridge Rd, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 445,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJfz197Lqz1okRMLJNPL5eSRE",
+      "name": "BETLEM RESIDENTIAL Heating & Air Conditioning",
+      "vicinity": "21 Trolley Cir, Gates",
+      "rating": 4.6,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhdur7haz1okRHoddRLBHk6g",
+      "name": "MicroClimate Mechanical Services",
+      "vicinity": "65 Industrial Park Cir, Rochester",
+      "rating": 5,
+      "user_ratings_total": 2,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZQrpF4Wx1okRz_1yM1928no",
+      "name": "Arndt Heating and Cooling",
+      "vicinity": "48 Colby St, Spencerport",
+      "rating": 4.9,
+      "user_ratings_total": 232,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJqUXoM5a11okRcx9B3hEedH4",
+      "name": "Turnbull Heating & Air",
+      "vicinity": "35 Bermar Park, Rochester",
+      "rating": 4.6,
+      "user_ratings_total": 62,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJA3i8brhjByERSSHQIOQB3xk",
+      "name": "Five Star Energy Solutions",
+      "vicinity": "4150 Buffalo Rd, Rochester",
+      "rating": 5,
+      "user_ratings_total": 112,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrdAG6ICu1okRBeLeG0BA1D8",
+      "name": "D'Angelo's Plumbing & Heating",
+      "vicinity": "1835 N Union St, Spencerport",
+      "rating": 4.9,
+      "user_ratings_total": 1821,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJOQ0MQT5qhywRrwVOi_P0Mqo",
+      "name": "ROYAL SERVE - HVAC services",
+      "vicinity": "4090 Canal Rd, Spencerport",
+      "rating": 5,
+      "user_ratings_total": 132,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLxKKWEqs1okRNYn9HmGbAR4",
+      "name": "Heat & Kool, Inc.",
+      "vicinity": "6 Turner Dr, Spencerport",
+      "rating": 4.8,
+      "user_ratings_total": 18,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJo5UUZ0is1okROIpbTPEPnKg",
+      "name": "Pro-Temp Mechanical",
+      "vicinity": "131 Martha St, Spencerport",
+      "rating": 4.8,
+      "user_ratings_total": 19,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJcSFt4XzK1okROZq_sclMX1c",
+      "name": "Hawn Heating & Air Conditioning Inc",
+      "vicinity": "277 Winton Rd N, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 602,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZbC3a6a11okRILQoMDJFkuM",
+      "name": "Isaac Heating & Air Conditioning",
+      "vicinity": "50 Holleder Pkwy, Rochester",
+      "rating": 4.8,
+      "user_ratings_total": 5641,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJk-NcNxu11okRrVKlOstdaGQ",
+      "name": "BETLEM RESIDENTIAL Heating & Air Conditioning",
+      "vicinity": "704 S Clinton Ave, Rochester",
+      "rating": 4.7,
+      "user_ratings_total": 521,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJZR0BcI601okRh37oJZzgxN8",
+      "name": "Universal Heating and Cooling Company",
+      "vicinity": "926 W Main St, Rochester",
+      "rating": 4.5,
+      "user_ratings_total": 125,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJOR4CAvy11okRZFI_xW_43lQ",
+      "name": "JJB Mechanical, LLC",
+      "vicinity": "235 Elmdorf Ave, Rochester",
+      "rating": 5,
+      "user_ratings_total": 149,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJrVBaIvKJvwMRS76aoZOd8Xg",
+      "name": "Northeast Mechanical",
+      "vicinity": "660 Westchester Ave, Rochester",
+      "rating": 5,
+      "user_ratings_total": 10,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJpb-fdhq11okRunBpwfnCbIc",
+      "name": "John Betlem Heating & Cooling",
+      "vicinity": "806 Linden Ave, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 2387,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJc3wQOjzL1okRRu7-S242tTw",
+      "name": "Airquip Heating & Air Conditioning",
+      "vicinity": "830 Linden Ave, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 619,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJY3bhSJLM1okRFfmRT4neZv0",
+      "name": "MGM Heating And Cooling",
+      "vicinity": "8 Jacaranda Ct, Penfield",
+      "rating": 5,
+      "user_ratings_total": 106,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJo32DXgbP1okRHGoNnxgnFwE",
+      "name": "Crossfield Heating & Air Conditioning",
+      "vicinity": "44 Donovan St, Webster",
+      "rating": 4.9,
+      "user_ratings_total": 985,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJg30EDhhL0YkRNtmzPVxYSbo",
+      "name": "Halco of Rochester",
+      "vicinity": "365 N Washington St, Rochester",
+      "rating": 5,
+      "user_ratings_total": 837,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJC34eKo3N1okR3wOqO5qTSto",
+      "name": "United Heating and Air LLC",
+      "vicinity": "11 Stablegate Dr, Webster",
+      "rating": 4.9,
+      "user_ratings_total": 86,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJuZMCs-DI1okRA1iEj7hptn4",
+      "name": "Napora Heating Cooling Plumbing",
+      "vicinity": "762 Maple Dr, Webster",
+      "rating": 4.8,
+      "user_ratings_total": 76,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJx8LPbuuz1okR8I9XYeUPWKc",
+      "name": "Kane Heating & Cooling LLC",
+      "vicinity": "15 Pen Web Park, Webster",
+      "rating": 4.9,
+      "user_ratings_total": 133,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ5b66mzbL1okRzIuQFwGNFcw",
+      "name": "Winter's Heating & Cooling, Inc",
+      "vicinity": "1671 Penfield Rd, Rochester",
+      "rating": 5,
+      "user_ratings_total": 4,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJu2HjrnzL1okRgSjjL9FqFY4",
+      "name": "Advanced Heating & Cooling",
+      "vicinity": "2104 Five Mile Line Rd, Penfield",
+      "rating": 4.4,
+      "user_ratings_total": 43,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ3aPijBLO1okRs3bHiFQ26xs",
+      "name": "AV Enterprise Heating and Cooling LLC",
+      "vicinity": "1350 Salt Rd, Webster",
+      "rating": 4.9,
+      "user_ratings_total": 31,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJPTFiXQbP1okRIvu1ge7nBmo",
+      "name": "Crossfield Home Energy Solutions",
+      "vicinity": "44 Donovan St, Webster",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJM5CIcYi11okRf_1Y0RCjRzE",
+      "name": "Titan Heating & Cooling",
+      "vicinity": "1776 E Main St, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 1036,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJLW49KNev1okRr7Ci3nsvhI4",
+      "name": "Williams & Son Heating Contractors Inc.",
+      "vicinity": "3763 Latta Rd, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 55,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJhylyOAln0YkRxbsPxo6f5K4",
+      "name": "Coppeta Heating Contractor, LLC",
+      "vicinity": "16 Thorn Apple Ln, Rochester",
+      "rating": 5,
+      "user_ratings_total": 20,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJ46sQu2i01okRuqwZjC9QQsU",
+      "name": "Fischer Plumbing & HVAC",
+      "vicinity": "471 Peck Rd, Spencerport",
+      "rating": 4.8,
+      "user_ratings_total": 82,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJgRvgLii31okR2zX-5AlOENo",
+      "name": "Total Comfort Heating & Air Conditioning, Inc.",
+      "vicinity": "2892 Dewey Ave, Rochester",
+      "rating": 4.9,
+      "user_ratings_total": 374,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJSUhmrd631okR22zzk94EjTM",
+      "name": "Carroll Heating & Cooling",
+      "vicinity": "4390 St Paul Blvd, Rochester",
+      "rating": 5,
+      "user_ratings_total": 75,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJO3CMTn621okRjxOEAvFn-cs",
+      "name": "Empire Heating & Air Conditioning",
+      "vicinity": "469 East Ridge Road, Rochester",
+      "rating": 4.7,
+      "user_ratings_total": 184,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJJ5jbFNLJ1okRc5-nbMEb2CY",
+      "name": "Comfort Medic 911",
+      "vicinity": "3974 Culver Rd, Irondequoit",
+      "rating": 5,
+      "user_ratings_total": 13,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJtQSl32TP1okRf--GT7hmQPk",
+      "name": "TRISON Heating and Air Conditioning, LLC",
+      "vicinity": "505 Licia Ln, Webster",
+      "rating": 4.8,
+      "user_ratings_total": 44,
+      "business_status": "OPERATIONAL"
+    },
+    {
+      "place_id": "ChIJdYmBteDP1okRcu-Bw62NCbI",
+      "name": "Mech Tech HVAC Inc",
+      "vicinity": "1805 Tebor Rd Suite 8, Webster",
+      "rating": 5,
+      "user_ratings_total": 1,
+      "business_status": "OPERATIONAL"
+    }
+  ]
+}
