@@ -1,6 +1,6 @@
 # Google Maps API Module
 
-**Version:** 2.0.0
+**Version:** 3.0.0
 **Purpose:** Collect HVAC leads from Google Maps using Official API
 **Status:** Production Ready
 
@@ -8,15 +8,17 @@
 
 ## Overview
 
-This module collects HVAC contractor leads across Texas using Google Places API with bidirectional adaptive radius strategy.
+This module collects HVAC contractor leads across USA using Google Places API with tier-based grid coverage strategy.
 
 ### Key Features
 
-- Bidirectional adaptive radius (auto-adjusts for city density)
-- Parallel city processing (5 workers)
-- Built-in deduplication by place_id
-- Cost-optimized for free tier ($200/month)
-- Supports 30-500 reviews filter
+- **Tier-based grid coverage** (auto-scales for city size)
+- **Full area coverage** with 30-40% overlap (no missing zones)
+- **Parallel city processing** (5 workers per state)
+- **Smart deduplication** (removes overlapping results)
+- **Dual output format** (RAW + FILTERED data)
+- **Cost-optimized** for free tier ($200/month)
+- **Universal** - works for any country/city size
 
 ---
 
@@ -27,21 +29,26 @@ This module collects HVAC contractor leads across Texas using Google Places API 
 ```
 Google Places API Free Tier: $200/month (renews monthly)
 
-Cost per lead:
+Cost per lead (tier-based grid):
 - Nearby Search: $0.032 per 60 results = $0.0005 per business
-- Place Details: $0.023 per business
-- TOTAL: ~$0.024 per qualified lead
+- Place Details: $0.023 per business (FILTERED only)
+- Deduplication: ~50% overlap (optimal efficiency)
+- TOTAL: ~$0.04 per qualified lead
 ```
 
-### Texas HVAC Market
+### Real Results (4 Cold States)
 
 ```
-Total HVAC companies in Texas: ~17,000
-With 30-500 reviews, 4.0+ rating: ~3,800 companies
+States: New York, Illinois, Michigan, Pennsylvania
+Cities: 21 total (5-6 per state)
+Filter: 30-800 reviews, 4.0+ rating
 
-Target: 3,500 leads
-Cost: $84.66 (COMPLETELY FREE within tier)
-Budget remaining: $115.34
+Results:
+- Filtered leads: 1,016 (ready for outreach)
+- Raw leads: 1,707 (can re-filter later)
+- Cost: $40.23 (20% of free tier)
+- Time: ~7.6 minutes
+- Cost per lead: $0.0396
 ```
 
 ---
@@ -57,62 +64,84 @@ Budget remaining: $115.34
    - Create API key
    - Add to `.env`: `GOOGLE_PLACES_API_KEY=your_key`
 
-### Run Texas HVAC Collection
+### Run State-wide Collection
 
-**Full collection (37 cities, ~3,000 leads):**
+**Full state (all cities, recommended):**
 
 ```bash
 python modules/google_maps/scripts/texas_hvac_scraper.py \
-  --cities "Houston, TX,Dallas, TX,San Antonio, TX,Austin, TX,Fort Worth, TX,El Paso, TX,Arlington, TX,Corpus Christi, TX,Plano, TX,Laredo, TX,Lubbock, TX,Irving, TX,Garland, TX,Frisco, TX,McKinney, TX,Amarillo, TX,Grand Prairie, TX,Brownsville, TX,Pasadena, TX,Mesquite, TX,Killeen, TX,McAllen, TX,Waco, TX,Carrollton, TX,Beaumont, TX,Abilene, TX,Round Rock, TX,Richardson, TX,Midland, TX,Odessa, TX,Lewisville, TX,College Station, TX,Pearland, TX,Sugar Land, TX,Tyler, TX,Denton, TX,Wichita Falls, TX" \
+  --state "New York" \
   --keyword "HVAC contractors" \
   --min-reviews 30 \
-  --max-reviews 500 \
+  --max-reviews 800 \
   --min-rating 4.0 \
-  --max-results 3500 \
   --parallel
 ```
 
-**Test run (3 cities only):**
+**Single city test:**
 
 ```bash
 python modules/google_maps/scripts/texas_hvac_scraper.py \
-  --cities "Houston, TX,Dallas, TX,Austin, TX" \
+  --city "Chicago, IL" \
   --keyword "HVAC contractors" \
   --min-reviews 30 \
-  --max-reviews 500 \
-  --min-rating 4.0 \
-  --max-results 500 \
-  --parallel
+  --max-reviews 800 \
+  --min-rating 4.0
+```
+
+**Multiple states (batch processing):**
+
+```bash
+# New York
+python modules/google_maps/scripts/texas_hvac_scraper.py --state "New York" --keyword "HVAC contractors" --min-reviews 30 --max-reviews 800 --min-rating 4.0 --parallel
+
+# Illinois
+python modules/google_maps/scripts/texas_hvac_scraper.py --state "Illinois" --keyword "HVAC contractors" --min-reviews 30 --max-reviews 800 --min-rating 4.0 --parallel
+
+# Michigan
+python modules/google_maps/scripts/texas_hvac_scraper.py --state "Michigan" --keyword "HVAC contractors" --min-reviews 30 --max-reviews 800 --min-rating 4.0 --parallel
+
+# Pennsylvania
+python modules/google_maps/scripts/texas_hvac_scraper.py --state "Pennsylvania" --keyword "HVAC contractors" --min-reviews 30 --max-reviews 800 --min-rating 4.0 --parallel
 ```
 
 ### Output
 
-Results saved to: `modules/google_maps/results/google_statewide_YYYYMMDD_HHMMSS.json`
+Two files are generated per run:
+
+1. **FILTERED data** (ready for outreach): `modules/google_maps/results/{state}/hvac_YYYYMMDD_HHMMSS.json`
+2. **RAW data** (for re-filtering): `modules/google_maps/results/{state}/hvac_raw_YYYYMMDD_HHMMSS.json`
 
 Output format:
 ```json
 {
   "metadata": {
-    "timestamp": "20251109_170000",
-    "cities_processed": 37,
-    "total_places": 3245,
-    "stats": {
-      "total_api_calls": 145,
-      "radius_increases": 12,
-      "radius_decreases": 23,
-      "optimal_searches": 110,
-      "total_cost": 84.66
-    }
+    "timestamp": "20251110_151426",
+    "state": "new_york",
+    "niche": "hvac",
+    "cities_processed": 5,
+    "total_filtered_places": 291,
+    "filters": {
+      "min_reviews": 30,
+      "max_reviews": 800,
+      "min_rating": 4.0
+    },
+    "note": "FILTERED data with phone/website - ready for outreach"
   },
-  "all_places": [
+  "results_by_city": [
     {
-      "place_id": "ChIJ...",
-      "name": "ABC Air Conditioning",
-      "phone": "(555) 123-4567",
-      "website": "https://abc-ac.com",
-      "address": "123 Main St, Houston, TX 77001",
-      "rating": 4.8,
-      "user_ratings_total": 342
+      "city": "New York, NY",
+      "filtered_places": [
+        {
+          "place_id": "ChIJ...",
+          "name": "ABC Air Conditioning",
+          "phone": "(555) 123-4567",
+          "website": "https://abc-ac.com",
+          "address": "123 Main St, New York, NY 10001",
+          "rating": 4.8,
+          "user_ratings_total": 342
+        }
+      ]
     }
   ]
 }
@@ -122,44 +151,58 @@ Output format:
 
 ## How It Works
 
-### Bidirectional Adaptive Radius
+### Tier-Based Grid Coverage Strategy
 
-The scraper automatically adjusts search radius based on business density:
+The scraper automatically selects grid density based on city population:
 
-**Dense City (Houston, Dallas):**
+**Tier 1: Large Cities (>500k population)**
 ```
-Start: 15km radius
-Finds: 60+ businesses
-Action: DECREASE to 7.5km, subdivide into 4 quadrants
-Result: Complete coverage with small circles
-```
-
-**Medium City (Lubbock, Amarillo):**
-```
-Start: 15km radius
-Finds: 15-55 businesses
-Action: OPTIMAL, use this radius
-Result: One circle covers entire city
+Examples: NYC, Chicago, Philadelphia, Detroit
+Grid: 5x5 or 6x5 = 25-30 search points
+Spacing: 8km between grid points
+Circle radius: 6km per point
+Overlap: ~40% (ensures full coverage)
+Results: 100-150 leads per city
 ```
 
-**Sparse Area (West Texas):**
+**Tier 2: Medium Cities (100k-500k)**
 ```
-Start: 15km radius
-Finds: <15 businesses
-Action: INCREASE to 22km, then 33km, up to 100km
-Result: Large circle covers rural area
+Examples: Buffalo, Rochester, Pittsburgh, Grand Rapids
+Grid: 3x3 = 9 search points
+Spacing: 12km between grid points
+Circle radius: 8km per point
+Overlap: ~30%
+Results: 30-70 leads per city
 ```
+
+**Tier 3: Small Cities (<100k)**
+```
+Examples: Erie, Reading
+Grid: Single center point
+Circle radius: 15km
+Overlap: 0% (one circle covers entire area)
+Results: 15-25 leads per city
+```
+
+### Why Grid Strategy Works
+
+1. **Full Coverage:** Overlapping circles guarantee no missing zones
+2. **Auto-Scaling:** Tier automatically selected by city population
+3. **Efficient Deduplication:** ~50% overlap = optimal cost/coverage ratio
+4. **Universal:** Works for any country/city without manual tuning
+5. **Cost-Effective:** API calls scale with city size, not trial-and-error
 
 ### Parallel Processing
 
-- Processes 5 cities simultaneously
+- Processes 5 cities simultaneously per state
 - ThreadPoolExecutor for concurrency
-- Global deduplication after all cities processed
+- Deduplication removes overlapping results from grid circles
+- Saves both RAW and FILTERED data
 
 ### Filters
 
 - **Min reviews:** 30 (established business)
-- **Max reviews:** 500 (not too large, likely needs voice agents)
+- **Max reviews:** 800 (not too large, likely needs services)
 - **Min rating:** 4.0 (quality service)
 - **Business status:** OPERATIONAL only
 
@@ -167,21 +210,42 @@ Result: Large circle covers rural area
 
 ## Coverage Strategy
 
-### Texas Cities (37 total)
+### Supported States
 
-**Tier 1 (4 metros) - 40% population:**
-- Houston, Dallas, San Antonio, Austin
-- Estimated: ~1,400 HVAC companies
+The scraper includes built-in city lists for cold weather states (high HVAC demand):
 
-**Tier 2 (13 cities) - 30% population:**
-- Fort Worth, El Paso, Arlington, Corpus Christi, Plano, Laredo, Lubbock, Irving, Garland, Frisco, McKinney, Amarillo, Grand Prairie
-- Estimated: ~1,050 HVAC companies
+**Currently Configured:**
+- **New York** (5 cities): NYC, Buffalo, Rochester, Yonkers, Syracuse
+- **Illinois** (5 cities): Chicago, Aurora, Naperville, Joliet, Rockford
+- **Michigan** (6 cities): Detroit, Grand Rapids, Warren, Sterling Heights, Ann Arbor, Lansing
+- **Pennsylvania** (5 cities): Philadelphia, Pittsburgh, Allentown, Erie, Reading
 
-**Tier 3 (20 cities) - 15% population:**
-- Brownsville, Pasadena, Mesquite, Killeen, McAllen, Waco, Carrollton, Beaumont, Abilene, Round Rock, Richardson, Midland, Odessa, Lewisville, College Station, Pearland, Sugar Land, Tyler, Denton, Wichita Falls
-- Estimated: ~525 HVAC companies
+**Add More States:**
+Edit `STATES` dict in `texas_hvac_scraper.py`:
+```python
+STATES = {
+    "Ohio": ["Columbus, OH", "Cleveland, OH", "Cincinnati, OH", ...],
+    "Wisconsin": ["Milwaukee, WI", "Madison, WI", ...],
+    # Add any state/country
+}
+```
 
-**Total Coverage:** 85% of Texas market (2,975 companies)
+### Real Results by City (Top 10)
+
+Based on actual scraping from 4 cold states:
+
+| City | Tier | Grid Points | Filtered Leads | Cost |
+|------|------|-------------|----------------|------|
+| Philadelphia, PA | 1 | 30 | 134 | $3.69 |
+| New York, NY | 1 | 25 | 153 | $4.21 |
+| Chicago, IL | 1 | 25 | 100 | $2.75 |
+| Naperville, IL | 2 | 9 | 96 | $2.64 |
+| Detroit, MI | 1 | 25 | 84 | $2.31 |
+| Yonkers, NY | 2 | 9 | 73 | $2.01 |
+| Sterling Heights, MI | 2 | 9 | 67 | $1.84 |
+| Warren, MI | 2 | 9 | 63 | $1.73 |
+| Aurora, IL | 2 | 9 | 59 | $1.62 |
+| Pittsburgh, PA | 2 | 9 | 58 | $1.60 |
 
 ---
 
@@ -201,6 +265,31 @@ modules/google_maps/
 ---
 
 ## Changelog
+
+### v3.0.0 (2025-11-10) - BREAKING CHANGE
+
+**Tier-Based Grid Coverage (replaces adaptive radius)**
+
+Major improvements:
+- 3.9x more leads per city (vs adaptive radius)
+- Full city area coverage (no missing zones)
+- Auto-scaling grid density by city population
+- Dual output format (RAW + FILTERED)
+- Multi-state support (NY, IL, MI, PA)
+- Universal strategy (works for any country)
+
+Technical changes:
+- Added `TIER_STRATEGIES` config (3-tier system)
+- Added `CITY_POPULATIONS` database
+- New `create_grid_points()` function
+- New `get_city_tier()` function
+- Replaced `--cities` with `--state` flag
+- Deduplication optimized for grid overlap
+
+Results from 4 states:
+- 1,016 filtered leads (30-800 reviews, 4.0+ rating)
+- Cost: $40.23 ($0.04/lead)
+- Time: 7.6 minutes
 
 ### v2.0.0 (2025-11-09)
 - Added --max-reviews filter (30-500 range)
