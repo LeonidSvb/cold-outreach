@@ -32,7 +32,22 @@ sys.path.insert(0, str(project_root))
 
 # Load environment variables from project root
 env_path = project_root / '.env'
-load_dotenv(dotenv_path=env_path)
+# Force override existing environment variables
+load_dotenv(dotenv_path=env_path, override=True)
+
+# Debug: Check if .env was loaded
+if not env_path.exists():
+    st.error(f"⚠️ .env file not found at: {env_path}")
+    st.info(f"Project root: {project_root}")
+else:
+    # Verify we can read the file
+    try:
+        with open(env_path, 'r') as f:
+            env_content = f.read()
+            if 'GOOGLE_MAPS_API_KEY' not in env_content:
+                st.error("GOOGLE_MAPS_API_KEY not found in .env file content!")
+    except Exception as e:
+        st.error(f"Error reading .env: {e}")
 
 # Page configuration
 st.set_page_config(
@@ -119,6 +134,16 @@ with st.sidebar:
 
         # Get API key from environment
         api_key = os.getenv('GOOGLE_MAPS_API_KEY')
+
+        # Debug info
+        with st.expander("🔍 Debug Info"):
+            st.write(f"Project root: {project_root}")
+            st.write(f".env path: {env_path}")
+            st.write(f".env exists: {env_path.exists()}")
+            st.write(f"API key loaded: {'Yes' if api_key else 'No'}")
+            if api_key:
+                st.write(f"API key (masked): {api_key[:10]}...{api_key[-4:]}")
+
         if not api_key:
             st.error("⚠️ API key not found in .env file!")
             st.info("Add GOOGLE_MAPS_API_KEY to your .env file")
