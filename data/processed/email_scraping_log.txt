@@ -1,0 +1,386 @@
+INFO:__main__:Loading input file: data/processed/texas_hvac_for_email_scraping.csv
+INFO:__main__:Starting parallel processing with 30 workers...
+
+================================================================================
+UNIVERSAL WEBSITE SCRAPER
+================================================================================
+Input file:        data/processed/texas_hvac_for_email_scraping.csv
+Output file:       data/processed/texas_hvac_with_emails.csv
+Total URLs:        321
+Mode:              custom
+Workers:           30
+
+Configuration:
+  Check static:    False
+  Extract emails:  True
+  Extract phones:  False
+  Scrape mode:     smart
+  AI analysis:     False
+
+Estimated time:    2.2 min (133.8 sec)
+================================================================================
+
+[1/321] 0.3% | ETA: 8.2min | Speed: 0.7 items/sec | http://www.freedomairrepair.com/?utm_source=google - http_error_202
+[2/321] 0.6% | ETA: 4.9min | Speed: 1.1 items/sec | https://parsonsheatingandair.com/                  - http_error_202
+[3/321] 0.9% | ETA: 12.6min | Speed: 0.4 items/sec | https://alphahvac.site/                            - success
+[4/321] 1.2% | ETA: 11.0min | Speed: 0.5 items/sec | https://texastechsheatingandair.com/               - success
+[5/321] 1.6% | ETA: 8.8min | Speed: 0.6 items/sec | http://sherlockhomesac.tech/                       - success
+[6/321] 1.9% | ETA: 7.7min | Speed: 0.7 items/sec | http://absolutecomfortmechanical.com/              - success
+[7/321] 2.2% | ETA: 7.5min | Speed: 0.7 items/sec | https://bluelineac.net/                            - success
+[8/321] 2.5% | ETA: 6.6min | Speed: 0.8 items/sec | https://www.tri-cityac.com/                        - success
+[9/321] 2.8% | ETA: 6.3min | Speed: 0.8 items/sec | http://gabespriorityac.com/                        - success
+[10/321] 3.1% | ETA: 5.7min | Speed: 0.9 items/sec | https://aireserv.com/central-west-houston/?cid=LST - http_error_403
+[11/321] 3.4% | ETA: 5.5min | Speed: 0.9 items/sec | https://allaboutacandheating.com/                  - success
+[12/321] 3.7% | ETA: 5.6min | Speed: 0.9 items/sec | http://www.comforttechsac.com/                     - success
+[13/321] 4.0% | ETA: 5.5min | Speed: 0.9 items/sec | https://www.du-west.com/ac-and-heating?utm_source= - success
+[14/321] 4.4% | ETA: 5.2min | Speed: 1.0 items/sec | https://www.servewayhvac.com/?utm_source=google&ut - success
+[15/321] 4.7% | ETA: 4.8min | Speed: 1.1 items/sec | http://www.acdoctorstx.com/                        - success
+[16/321] 5.0% | ETA: 4.7min | Speed: 1.1 items/sec | http://www.aceairconditioningabilene.com/          - success
+[17/321] 5.3% | ETA: 4.8min | Speed: 1.1 items/sec | https://premierpros.us/?utm_campaign=gmb           - success
+[18/321] 5.6% | ETA: 4.5min | Speed: 1.1 items/sec | https://anytimeairtexas.com/                       - success
+[19/321] 5.9% | ETA: 4.3min | Speed: 1.2 items/sec | https://www.bellaireair.com/?utm_source=google&utm - success
+[20/321] 6.2% | ETA: 4.2min | Speed: 1.2 items/sec | https://www.q1es.com/                              - success
+[21/321] 6.5% | ETA: 4.0min | Speed: 1.3 items/sec | https://www.normanaire.com/                        - success
+[22/321] 6.9% | ETA: 3.9min | Speed: 1.3 items/sec | http://olympuselectricandair.com/                  - success
+[23/321] 7.2% | ETA: 3.8min | Speed: 1.3 items/sec | https://www.hagenrg.com/                           - success
+[24/321] 7.5% | ETA: 3.7min | Speed: 1.3 items/sec | http://www.gilbertsac.com/?utm_campaign=gmb        - success
+[25/321] 7.8% | ETA: 3.5min | Speed: 1.4 items/sec | https://www.metroacs.com/                          - success
+[26/321] 8.1% | ETA: 3.5min | Speed: 1.4 items/sec | https://www.ikesair.com/                           - success
+[27/321] 8.4% | ETA: 3.7min | Speed: 1.3 items/sec | https://aadheatingairconditioning.xyz/             - success
+[28/321] 8.7% | ETA: 3.5min | Speed: 1.4 items/sec | https://airmotionshvac.com/                        - http_error_202
+[29/321] 9.0% | ETA: 3.5min | Speed: 1.4 items/sec | https://www.airstarnow.com/                        - success
+[30/321] 9.3% | ETA: 3.4min | Speed: 1.4 items/sec | https://www.mrwilsonair.com/?utm_source=google&utm - success
+[31/321] 9.7% | ETA: 3.5min | Speed: 1.4 items/sec | http://www.coolchamps.com/                         - connection_error
+[32/321] 10.0% | ETA: 3.5min | Speed: 1.4 items/sec | https://www.aval-air.com/?utm_source=google&utm_me - success
+[33/321] 10.3% | ETA: 3.4min | Speed: 1.4 items/sec | https://conoverair.com/?utm_source=GBP&utm_medium= - success
+[34/321] 10.6% | ETA: 3.5min | Speed: 1.4 items/sec | https://callblueleafhvac.com/                      - success
+[35/321] 10.9% | ETA: 3.4min | Speed: 1.4 items/sec | https://airworthac.com/                            - http_error_202
+[36/321] 11.2% | ETA: 3.3min | Speed: 1.4 items/sec | http://www.revairtx.com/                           - success
+[37/321] 11.5% | ETA: 3.4min | Speed: 1.4 items/sec | http://geocontractorsllc.com/                      - success
+[38/321] 11.8% | ETA: 3.4min | Speed: 1.4 items/sec | https://www.altabra-cooling.com/                   - success
+[39/321] 12.1% | ETA: 3.3min | Speed: 1.4 items/sec | https://www.westtxcoolguys.com/                    - success
+[40/321] 12.5% | ETA: 3.2min | Speed: 1.5 items/sec | https://centralcityair.com/                        - success
+[41/321] 12.8% | ETA: 3.2min | Speed: 1.4 items/sec | https://calllukes.com/?utm_source=google&utm_mediu - success
+[42/321] 13.1% | ETA: 3.2min | Speed: 1.4 items/sec | https://www.onehourheatandair.com/san-antonio-nort - success
+[43/321] 13.4% | ETA: 3.4min | Speed: 1.3 items/sec | http://masteracandheat.com/                        - success
+[44/321] 13.7% | ETA: 3.4min | Speed: 1.4 items/sec | https://vibrantmechanical.com/                     - success
+[45/321] 14.0% | ETA: 3.3min | Speed: 1.4 items/sec | https://a1aarons.com/                              - success
+[46/321] 14.3% | ETA: 3.2min | Speed: 1.4 items/sec | https://www.myhvacguytx.com/                       - success
+[47/321] 14.6% | ETA: 3.2min | Speed: 1.4 items/sec | https://redhome.io/                                - success
+[48/321] 15.0% | ETA: 3.2min | Speed: 1.4 items/sec | https://turbohomeservices.com/                     - success
+[49/321] 15.3% | ETA: 3.4min | Speed: 1.4 items/sec | http://www.dubsheatingandair.com/                  - success
+[50/321] 15.6% | ETA: 3.4min | Speed: 1.3 items/sec | https://www.malcolmsheatingandair.com/             - success
+[51/321] 15.9% | ETA: 3.3min | Speed: 1.4 items/sec | https://citywideaustin.com/                        - success
+[52/321] 16.2% | ETA: 3.3min | Speed: 1.4 items/sec | https://fortworth-air.com/                         - success
+[53/321] 16.5% | ETA: 3.2min | Speed: 1.4 items/sec | http://www.frostymist.com/                         - success
+[54/321] 16.8% | ETA: 3.1min | Speed: 1.4 items/sec | https://www.west-o-plex-ac.com/?utm_campaign=gmb   - success
+[55/321] 17.1% | ETA: 3.2min | Speed: 1.4 items/sec | https://www.cuttingedgeair.com/?utm_source=gmb&utm - connection_error
+[56/321] 17.4% | ETA: 3.2min | Speed: 1.4 items/sec | https://hawkphac.com/                              - success
+[57/321] 17.8% | ETA: 3.5min | Speed: 1.3 items/sec | http://www.acgenius.com/                           - success
+[58/321] 18.1% | ETA: 3.5min | Speed: 1.2 items/sec | https://strausshvac.com/                           - success
+[59/321] 18.4% | ETA: 3.4min | Speed: 1.3 items/sec | https://ravenheatingandcooling.com/                - success
+[60/321] 18.7% | ETA: 3.4min | Speed: 1.3 items/sec | https://www.totalairep.com/                        - success
+[61/321] 19.0% | ETA: 3.4min | Speed: 1.3 items/sec | https://dynamicheatingcooling.net/                 - success
+[62/321] 19.3% | ETA: 3.4min | Speed: 1.3 items/sec | https://www.deltatheatingandcooling.com/           - success
+[63/321] 19.6% | ETA: 3.3min | Speed: 1.3 items/sec | https://honestabeservices.com/                     - success
+[64/321] 19.9% | ETA: 3.3min | Speed: 1.3 items/sec | https://www.anchorairelp.com/                      - success
+[65/321] 20.2% | ETA: 3.4min | Speed: 1.3 items/sec | https://www.precisionaircc.com/                    - success
+[66/321] 20.6% | ETA: 3.4min | Speed: 1.3 items/sec | https://swmechanicalep.com/                        - success
+[67/321] 20.9% | ETA: 3.3min | Speed: 1.3 items/sec | https://www.ashfordmechanical.com/?utm_source=goog - success
+[68/321] 21.2% | ETA: 3.3min | Speed: 1.3 items/sec | https://blueskyheatingandair.net/                  - success
+[69/321] 21.5% | ETA: 3.2min | Speed: 1.3 items/sec | https://www.powerprotx.com/                        - success
+[70/321] 21.8% | ETA: 3.2min | Speed: 1.3 items/sec | https://newrisehvac.com/                           - success
+[71/321] 22.1% | ETA: 3.1min | Speed: 1.3 items/sec | http://arheating915.com/                           - success
+[72/321] 22.4% | ETA: 3.2min | Speed: 1.3 items/sec | https://onehouraircentraltexas.com/                - success
+[73/321] 22.7% | ETA: 3.1min | Speed: 1.3 items/sec | https://www.nsgair.com/?utm_source=google&utm_medi - success
+[74/321] 23.1% | ETA: 3.1min | Speed: 1.3 items/sec | https://texaschoicehvac.com/                       - success
+[75/321] 23.4% | ETA: 3.1min | Speed: 1.3 items/sec | https://www.diazservicesep.com/                    - success
+[76/321] 23.7% | ETA: 3.1min | Speed: 1.3 items/sec | https://indoorairspecialties.com/                  - success
+[77/321] 24.0% | ETA: 3.1min | Speed: 1.3 items/sec | https://www.texasac361.com/                        - success
+[78/321] 24.3% | ETA: 3.1min | Speed: 1.3 items/sec | https://chillprosolutions.com/                     - success
+[79/321] 24.6% | ETA: 3.0min | Speed: 1.3 items/sec | https://www.tx1st.com/                             - http_error_404
+[80/321] 24.9% | ETA: 3.1min | Speed: 1.3 items/sec | http://airsolutionscc.com/                         - success
+[81/321] 25.2% | ETA: 3.0min | Speed: 1.3 items/sec | http://www.epwesternelectric.com/                  - success
+[82/321] 25.5% | ETA: 3.0min | Speed: 1.3 items/sec | https://birdwellacandheating.com/?utm_source=googl - success
+[83/321] 25.9% | ETA: 3.0min | Speed: 1.3 items/sec | https://www.coolelpaso.com/                        - success
+[84/321] 26.2% | ETA: 2.9min | Speed: 1.4 items/sec | https://ramcomechanical.com/                       - success
+[85/321] 26.5% | ETA: 2.9min | Speed: 1.4 items/sec | https://www.alpha-aircompany.com/                  - success
+[86/321] 26.8% | ETA: 2.9min | Speed: 1.4 items/sec | http://www.laraac.net/                             - success
+[87/321] 27.1% | ETA: 2.9min | Speed: 1.4 items/sec | https://www.ignitifyep.com/                        - success
+[88/321] 27.4% | ETA: 2.8min | Speed: 1.4 items/sec | https://comfortmasters.net/                        - http_error_202
+[89/321] 27.7% | ETA: 2.8min | Speed: 1.4 items/sec | https://www.superioracnheat.com/                   - success
+[90/321] 28.0% | ETA: 2.8min | Speed: 1.4 items/sec | https://www.dt-ac.com/?utm_campaign=gmb            - success
+[91/321] 28.3% | ETA: 2.8min | Speed: 1.4 items/sec | https://actionairlubbock.com/                      - http_error_403
+[92/321] 28.7% | ETA: 2.8min | Speed: 1.4 items/sec | https://amairservices.com/                         - success
+[93/321] 29.0% | ETA: 2.8min | Speed: 1.4 items/sec | http://gcrefrigeration.com/                        - success
+[94/321] 29.3% | ETA: 2.7min | Speed: 1.4 items/sec | https://www.norwayairconditioning.com/             - success
+[95/321] 29.6% | ETA: 2.7min | Speed: 1.4 items/sec | https://www.aireserv.com/lubbock/?cid=LSTL_ASV-US0 - http_error_403
+[96/321] 29.9% | ETA: 2.7min | Speed: 1.4 items/sec | https://expressaircooling.com/                     - success
+[97/321] 30.2% | ETA: 2.6min | Speed: 1.4 items/sec | https://absoluterefrigerationhvac.com/             - http_error_202
+[98/321] 30.5% | ETA: 2.6min | Speed: 1.4 items/sec | https://www.acclaimac.com/                         - success
+[99/321] 30.8% | ETA: 2.6min | Speed: 1.4 items/sec | https://www.totalassuranceac.com/?utm_source=googl - success
+[100/321] 31.2% | ETA: 2.6min | Speed: 1.4 items/sec | https://synergyhomeandcommercial.com/air-condition - success
+[101/321] 31.5% | ETA: 2.6min | Speed: 1.4 items/sec | http://longsheatingandairconditioning.com/         - success
+[102/321] 31.8% | ETA: 2.6min | Speed: 1.4 items/sec | https://dreamairandheat.com/                       - success
+[103/321] 32.1% | ETA: 2.5min | Speed: 1.4 items/sec | http://www.airbosshvacr.com/                       - success
+[104/321] 32.4% | ETA: 2.5min | Speed: 1.4 items/sec | https://toocoolair.com/hvac-contractor-grapevine-t - success
+[105/321] 32.7% | ETA: 2.5min | Speed: 1.4 items/sec | https://stccaire.com/                              - success
+[106/321] 33.0% | ETA: 2.5min | Speed: 1.4 items/sec | https://www.dallasheatingac.com/?utm_source=GMB&ut - success
+[107/321] 33.3% | ETA: 2.4min | Speed: 1.5 items/sec | http://www.tigerairtx.com/?utm_source=google&utm_m - success
+[108/321] 33.6% | ETA: 2.5min | Speed: 1.4 items/sec | https://lovejoyhvac.com/?utm_source=GBP&utm_medium - success
+[109/321] 34.0% | ETA: 2.5min | Speed: 1.4 items/sec | https://www.swiftaircc.com/                        - success
+[110/321] 34.3% | ETA: 2.5min | Speed: 1.4 items/sec | https://www.callarthurair.com/?utm_source=google&u - success
+[111/321] 34.6% | ETA: 2.4min | Speed: 1.4 items/sec | https://sherrellair.com/                           - success
+[112/321] 34.9% | ETA: 2.4min | Speed: 1.4 items/sec | https://dallasairpros.com/                         - connection_error
+[113/321] 35.2% | ETA: 2.4min | Speed: 1.4 items/sec | https://duncanhtg-ac.com/                          - connection_error
+[114/321] 35.5% | ETA: 2.4min | Speed: 1.4 items/sec | http://callthebear.com/                            - success
+[115/321] 35.8% | ETA: 2.4min | Speed: 1.4 items/sec | https://american-heritage-air.com/?utm_source=GBP& - success
+[116/321] 36.1% | ETA: 2.4min | Speed: 1.4 items/sec | https://nicksair.com/?utm_source=GBP&utm_medium=or - success
+[117/321] 36.4% | ETA: 2.4min | Speed: 1.4 items/sec | https://www.polarbearac.com/                       - success
+[118/321] 36.8% | ETA: 2.4min | Speed: 1.4 items/sec | http://becoolairconditioning.com/                  - success
+[119/321] 37.1% | ETA: 2.4min | Speed: 1.4 items/sec | https://airservicenowdfw.com/                      - success
+[120/321] 37.4% | ETA: 2.4min | Speed: 1.4 items/sec | https://btacinc.com/?utm_campaign=gmb              - success
+[121/321] 37.7% | ETA: 2.4min | Speed: 1.4 items/sec | http://devards.com/                                - success
+[122/321] 38.0% | ETA: 2.4min | Speed: 1.4 items/sec | https://1stclassairservice.com/?utm_campaign=gmb&u - success
+[123/321] 38.3% | ETA: 2.4min | Speed: 1.4 items/sec | https://www.avalosac.com/                          - http_error_202
+[124/321] 38.6% | ETA: 2.3min | Speed: 1.4 items/sec | https://ehshvac.com/                               - success
+[125/321] 38.9% | ETA: 2.3min | Speed: 1.4 items/sec | http://www.egsair.com/                             - success
+[126/321] 39.3% | ETA: 2.3min | Speed: 1.4 items/sec | https://snowbearair.com/locations/tx/snow-bear-hea - success
+[127/321] 39.6% | ETA: 2.3min | Speed: 1.4 items/sec | https://www.choiceaircare.com/?utm_source=local&ut - success
+[128/321] 39.9% | ETA: 2.3min | Speed: 1.4 items/sec | http://philkerrsplumbing.com/                      - success
+[129/321] 40.2% | ETA: 2.3min | Speed: 1.4 items/sec | http://crowsheatandair.com/                        - success
+[130/321] 40.5% | ETA: 2.2min | Speed: 1.4 items/sec | https://www.dt-ac.com/service/hvac-contractor-alle - success
+[131/321] 40.8% | ETA: 2.2min | Speed: 1.4 items/sec | https://www.onehourheatandair.com/aubrey-celina/   - success
+[132/321] 41.1% | ETA: 2.2min | Speed: 1.4 items/sec | https://www.fersahvac.com/                         - success
+[133/321] 41.4% | ETA: 2.2min | Speed: 1.4 items/sec | https://www.airviewac.com/ac-repair-princeton-tx/  - success
+[134/321] 41.7% | ETA: 2.2min | Speed: 1.4 items/sec | https://leakys.com/?utm_source=gmb&utm_medium=orga - success
+[135/321] 42.1% | ETA: 2.1min | Speed: 1.4 items/sec | http://callairgenie.com/                           - success
+[136/321] 42.4% | ETA: 2.1min | Speed: 1.4 items/sec | http://exodusmechanical.com/                       - success
+[137/321] 42.7% | ETA: 2.1min | Speed: 1.5 items/sec | https://www.burkettbros.com/                       - success
+[138/321] 43.0% | ETA: 2.1min | Speed: 1.5 items/sec | https://www.aireserv.com/pasadena/?cid=LSTL_ASV-US - http_error_403
+[139/321] 43.3% | ETA: 2.1min | Speed: 1.5 items/sec | http://www.aircontx.com/                           - success
+[140/321] 43.6% | ETA: 2.1min | Speed: 1.5 items/sec | https://www.legendairtx.com/?utm_source=google&utm - success
+[141/321] 43.9% | ETA: 2.1min | Speed: 1.5 items/sec | https://dial1plumbing.com/grand-prairie-air-condit - success
+[142/321] 44.2% | ETA: 2.0min | Speed: 1.5 items/sec | https://hallheatingandair.net/                     - success
+[143/321] 44.5% | ETA: 2.0min | Speed: 1.5 items/sec | https://dmsairtx.com/                              - success
+[144/321] 44.9% | ETA: 2.0min | Speed: 1.5 items/sec | https://matthewshvac.net/?utm_source=organic&utm_m - success
+[145/321] 45.2% | ETA: 2.0min | Speed: 1.5 items/sec | https://www.lavenderac.com/?utm_source=google&utm_ - http_error_404
+[146/321] 45.5% | ETA: 2.0min | Speed: 1.5 items/sec | https://myspartanservice.com/                      - success
+[147/321] 45.8% | ETA: 2.0min | Speed: 1.5 items/sec | https://therightchoicetexas.com/service-areas/ac-r - success
+[148/321] 46.1% | ETA: 2.0min | Speed: 1.5 items/sec | https://sites.google.com/view/jctelectric/home?aut - success
+[149/321] 46.4% | ETA: 2.0min | Speed: 1.5 items/sec | https://metrocrestac.com/                          - success
+[150/321] 46.7% | ETA: 1.9min | Speed: 1.5 items/sec | https://www.txlonestaracandheating.com/            - success
+[151/321] 47.0% | ETA: 1.9min | Speed: 1.5 items/sec | http://www.all-starheatair.com/                    - success
+[152/321] 47.4% | ETA: 1.9min | Speed: 1.5 items/sec | https://www.caprockservices.net/                   - success
+[153/321] 47.7% | ETA: 1.9min | Speed: 1.5 items/sec | http://www.southwesthvac.biz/                      - success
+[154/321] 48.0% | ETA: 1.9min | Speed: 1.5 items/sec | http://www.temperatureprodallas.com/?utm_source=go - success
+[155/321] 48.3% | ETA: 1.9min | Speed: 1.5 items/sec | http://panhandleproair.com/                        - success
+[156/321] 48.6% | ETA: 1.9min | Speed: 1.5 items/sec | https://hightech-hvac.com/                         - success
+[157/321] 48.9% | ETA: 1.8min | Speed: 1.5 items/sec | http://hardwickheatingair.com/                     - success
+[158/321] 49.2% | ETA: 1.8min | Speed: 1.5 items/sec | https://valhvac.com/                               - success
+[159/321] 49.5% | ETA: 1.8min | Speed: 1.5 items/sec | http://bralleyworks.com/                           - success
+[160/321] 49.8% | ETA: 1.8min | Speed: 1.5 items/sec | https://www.suttonheatingandair.com/               - success
+[161/321] 50.2% | ETA: 1.8min | Speed: 1.5 items/sec | https://www.aireserv.com/killeen/?cid=LSTL_ASV-US0 - http_error_403
+[162/321] 50.5% | ETA: 1.8min | Speed: 1.5 items/sec | https://www.preciseairsystems.com/?utm_source=goog - success
+[163/321] 50.8% | ETA: 1.7min | Speed: 1.5 items/sec | http://chilloutheatair.com/                        - success
+[164/321] 51.1% | ETA: 1.7min | Speed: 1.5 items/sec | https://armechanical.com/                          - success
+[165/321] 51.4% | ETA: 1.7min | Speed: 1.5 items/sec | https://theworksrgv.com/                           - not_html
+[166/321] 51.7% | ETA: 1.7min | Speed: 1.5 items/sec | http://www.acheatservices.com/                     - success
+[167/321] 52.0% | ETA: 1.7min | Speed: 1.5 items/sec | http://www.texasaircompany.com/                    - success
+[168/321] 52.3% | ETA: 1.7min | Speed: 1.5 items/sec | https://www.alphaac.net/                           - success
+[169/321] 52.6% | ETA: 1.7min | Speed: 1.5 items/sec | https://nexgenairandplumbing.com/locations/arcadia - success
+[170/321] 53.0% | ETA: 1.7min | Speed: 1.5 items/sec | https://temperatureprodallas.com/                  - success
+[171/321] 53.3% | ETA: 1.7min | Speed: 1.5 items/sec | http://mr-heatandcooling.com/                      - success
+[172/321] 53.6% | ETA: 1.6min | Speed: 1.5 items/sec | https://www.aireserv.com/central-texas/?cid=LSTL_A - http_error_403
+[173/321] 53.9% | ETA: 1.6min | Speed: 1.5 items/sec | https://www.lsairllc.com/                          - success
+[174/321] 54.2% | ETA: 1.6min | Speed: 1.5 items/sec | https://airconsolutions.pro/                       - success
+[175/321] 54.5% | ETA: 1.6min | Speed: 1.5 items/sec | http://www.acamigo.com/                            - success
+[176/321] 54.8% | ETA: 1.6min | Speed: 1.5 items/sec | https://mybobjays.com/                             - success
+[177/321] 55.1% | ETA: 1.6min | Speed: 1.5 items/sec | http://rabroker.com/                               - http_error_202
+[178/321] 55.5% | ETA: 1.5min | Speed: 1.5 items/sec | https://3cmechanicaltechnologies.com/              - http_error_202
+[179/321] 55.8% | ETA: 1.6min | Speed: 1.5 items/sec | https://deaneelectric.com/                         - success
+[180/321] 56.1% | ETA: 1.5min | Speed: 1.5 items/sec | https://www.trutemphvac.com/                       - success
+[181/321] 56.4% | ETA: 1.5min | Speed: 1.5 items/sec | https://www.jcair-rgv.com/                         - success
+[182/321] 56.7% | ETA: 1.5min | Speed: 1.5 items/sec | https://www.yourcomforttech.com/                   - success
+[183/321] 57.0% | ETA: 1.5min | Speed: 1.5 items/sec | http://fscmechanical.com/                          - success
+[184/321] 57.3% | ETA: 1.5min | Speed: 1.5 items/sec | http://www.hessair.com/                            - success
+[185/321] 57.6% | ETA: 1.5min | Speed: 1.5 items/sec | https://www.oakpointhvac.com/                      - timeout
+[186/321] 57.9% | ETA: 1.5min | Speed: 1.5 items/sec | https://www.globalacandheatingllc.com/?utm_source= - success
+[187/321] 58.3% | ETA: 1.5min | Speed: 1.5 items/sec | https://infinityactx.com/                          - success
+[188/321] 58.6% | ETA: 1.5min | Speed: 1.5 items/sec | https://thermaconservice.com/?utm_source=GBP&utm_m - http_error_202
+[189/321] 58.9% | ETA: 1.4min | Speed: 1.5 items/sec | https://americancoolandheat.com/                   - success
+[190/321] 59.2% | ETA: 1.4min | Speed: 1.5 items/sec | http://www.killeenheatingandair.com/               - success
+[191/321] 59.5% | ETA: 1.4min | Speed: 1.5 items/sec | http://freedom-ac.com/                             - success
+[192/321] 59.8% | ETA: 1.4min | Speed: 1.5 items/sec | http://www.artiesheatingandair.com/                - success
+[193/321] 60.1% | ETA: 1.4min | Speed: 1.6 items/sec | http://www.airtothemax.com/                        - success
+[194/321] 60.4% | ETA: 1.4min | Speed: 1.5 items/sec | https://www.zipairwaco.com/                        - success
+[195/321] 60.7% | ETA: 1.4min | Speed: 1.5 items/sec | https://www.409-group.com/                         - http_error_202
+[196/321] 61.1% | ETA: 1.4min | Speed: 1.5 items/sec | https://airbenderheatingandcooling.com/            - success
+[197/321] 61.4% | ETA: 1.3min | Speed: 1.5 items/sec | http://www.mikestaas.com/                          - success
+[198/321] 61.7% | ETA: 1.3min | Speed: 1.5 items/sec | https://cws-services.com/                          - success
+[199/321] 62.0% | ETA: 1.3min | Speed: 1.5 items/sec | https://www.facebook.com/rdart123?mibextid=LQQJ4d  - http_error_400
+[200/321] 62.3% | ETA: 1.3min | Speed: 1.5 items/sec | https://ctrairandheat.com/?utm_source=GMB&utm_medi - success
+[201/321] 62.6% | ETA: 1.3min | Speed: 1.5 items/sec | http://ellisairsystems.com/                        - success
+[202/321] 62.9% | ETA: 1.3min | Speed: 1.6 items/sec | http://chill-air.org/                              - success
+[203/321] 63.2% | ETA: 1.3min | Speed: 1.5 items/sec | https://qualityaircare.net/                        - success
+[204/321] 63.6% | ETA: 1.3min | Speed: 1.5 items/sec | https://www.tradesmanservice.com/?utm_source=googl - success
+[205/321] 63.9% | ETA: 1.2min | Speed: 1.6 items/sec | https://www.polanskyheatingandair.com/             - success
+[206/321] 64.2% | ETA: 1.2min | Speed: 1.6 items/sec | https://www.dailyserviceco.com/?utm_source=google& - success
+[207/321] 64.5% | ETA: 1.2min | Speed: 1.6 items/sec | https://www.hallairconditioning.com/               - http_error_202
+[208/321] 64.8% | ETA: 1.2min | Speed: 1.6 items/sec | https://www.get-nwha.com/                          - success
+[209/321] 65.1% | ETA: 1.2min | Speed: 1.6 items/sec | http://www.brazosac.com/                           - success
+[210/321] 65.4% | ETA: 1.2min | Speed: 1.6 items/sec | https://thecoolestair.com/?utm_source=google&utm_m - success
+[211/321] 65.7% | ETA: 1.2min | Speed: 1.6 items/sec | https://reedservice.com/                           - connection_error
+[212/321] 66.0% | ETA: 1.2min | Speed: 1.6 items/sec | https://www.aireservdallas.com/ac-repair-flower-mo - success
+[213/321] 66.4% | ETA: 1.2min | Speed: 1.6 items/sec | http://pandemechanical.com/                        - success
+[214/321] 66.7% | ETA: 1.1min | Speed: 1.6 items/sec | http://www.sumrallac.com/                          - success
+[215/321] 67.0% | ETA: 1.1min | Speed: 1.6 items/sec | http://mybobjays.com/                              - success
+[216/321] 67.3% | ETA: 1.1min | Speed: 1.6 items/sec | http://www.legitheatingandair.com/                 - success
+[217/321] 67.6% | ETA: 1.1min | Speed: 1.6 items/sec | https://www.lifetimezair.com/?utm_source=google&ut - success
+[218/321] 67.9% | ETA: 1.1min | Speed: 1.6 items/sec | http://herreraheatingandcooling.com/               - success
+[219/321] 68.2% | ETA: 1.1min | Speed: 1.6 items/sec | https://airtexasdfw.com/                           - success
+[220/321] 68.5% | ETA: 1.1min | Speed: 1.5 items/sec | https://arcticaircompany.com/                      - success
+[221/321] 68.8% | ETA: 1.1min | Speed: 1.6 items/sec | https://texascomfortair.com/                       - http_error_202
+[222/321] 69.2% | ETA: 1.1min | Speed: 1.6 items/sec | https://tytanheatingandcooling.com/                - success
+[223/321] 69.5% | ETA: 1.0min | Speed: 1.6 items/sec | http://www.temperatureprodallas.com/?utm_source=go - success
+[224/321] 69.8% | ETA: 1.0min | Speed: 1.6 items/sec | https://www.bevillstexas.com/?utm_source=GMB&utm_m - success
+[225/321] 70.1% | ETA: 1.0min | Speed: 1.6 items/sec | http://craigairconditioning.com/                   - success
+[226/321] 70.4% | ETA: 1.0min | Speed: 1.6 items/sec | https://www.deltaairpro.com/                       - success
+[227/321] 70.7% | ETA: 1.0min | Speed: 1.6 items/sec | https://www.txcentralservices.com/                 - success
+[228/321] 71.0% | ETA: 60s | Speed: 1.6 items/sec | http://www.atomic-ac.com/                          - success
+[229/321] 71.3% | ETA: 59s | Speed: 1.6 items/sec | https://www.getyourairfix.com/                     - success
+[230/321] 71.7% | ETA: 58s | Speed: 1.6 items/sec | https://accurateairsolutionsllc.com/               - success
+[231/321] 72.0% | ETA: 57s | Speed: 1.6 items/sec | http://www.pmech.org/                              - success
+[232/321] 72.3% | ETA: 57s | Speed: 1.6 items/sec | https://universalclimatecontrol.com/               - success
+[233/321] 72.6% | ETA: 56s | Speed: 1.6 items/sec | https://www.morganairbcs.net/                      - http_error_202
+[234/321] 72.9% | ETA: 55s | Speed: 1.6 items/sec | https://www.aireserv.com/aggieland/?cid=LSTL_ASV-U - http_error_403
+[235/321] 73.2% | ETA: 54s | Speed: 1.6 items/sec | http://www.batjer.com/                             - success
+[236/321] 73.5% | ETA: 54s | Speed: 1.6 items/sec | http://www.myprofessionalacandheating.com/         - success
+[237/321] 73.8% | ETA: 53s | Speed: 1.6 items/sec | https://www.abileneairtech.com/                    - success
+[238/321] 74.1% | ETA: 52s | Speed: 1.6 items/sec | https://truetemphvac.com/                          - success
+[239/321] 74.5% | ETA: 52s | Speed: 1.6 items/sec | http://moodyac.com/                                - success
+[240/321] 74.8% | ETA: 51s | Speed: 1.6 items/sec | https://www.ruttyandmorris.com/                    - success
+[241/321] 75.1% | ETA: 50s | Speed: 1.6 items/sec | https://mullinixac.com/?utm_campaign=gmb           - http_error_403
+[242/321] 75.4% | ETA: 49s | Speed: 1.6 items/sec | https://www.doddair.com/?utm_source=google&utm_med - success
+[243/321] 75.7% | ETA: 49s | Speed: 1.6 items/sec | https://www.efficient-systems.com/?utm_source=goog - success
+[244/321] 76.0% | ETA: 48s | Speed: 1.6 items/sec | http://www.ptmandm.com/                            - success
+[245/321] 76.3% | ETA: 47s | Speed: 1.6 items/sec | https://colleyrefrigeration.com/hvac-contractor-pe - http_error_202
+[246/321] 76.6% | ETA: 46s | Speed: 1.6 items/sec | http://www.billyblackhvac.com/                     - success
+[247/321] 76.9% | ETA: 46s | Speed: 1.6 items/sec | https://drhvacservicesllc.com/?utm_source=gmb&utm_ - success
+[248/321] 77.3% | ETA: 45s | Speed: 1.6 items/sec | https://myaproair.com/                             - http_error_503
+[249/321] 77.6% | ETA: 44s | Speed: 1.6 items/sec | https://www.coolingtexas.com/                      - http_error_202
+[250/321] 77.9% | ETA: 44s | Speed: 1.6 items/sec | https://www.villasplumbing.com/?utm_source=GBPlist - success
+[251/321] 78.2% | ETA: 43s | Speed: 1.6 items/sec | https://www.millerclimatecontrol.com/?utm_source=g - success
+[252/321] 78.5% | ETA: 43s | Speed: 1.6 items/sec | https://www.airsolutionsbcs.com/                   - success
+[253/321] 78.8% | ETA: 42s | Speed: 1.6 items/sec | http://www.firstservice.org/                       - success
+[254/321] 79.1% | ETA: 42s | Speed: 1.6 items/sec | http://www.drkooltx.com/                           - success
+[255/321] 79.4% | ETA: 41s | Speed: 1.6 items/sec | https://www.legacyehvac.com/                       - success
+[256/321] 79.8% | ETA: 40s | Speed: 1.6 items/sec | http://virtuousair.biz/                            - success
+[257/321] 80.1% | ETA: 40s | Speed: 1.6 items/sec | http://www.bvprecisionair.com/                     - success
+[258/321] 80.4% | ETA: 39s | Speed: 1.6 items/sec | https://kassa-kool.com/                            - success
+[259/321] 80.7% | ETA: 39s | Speed: 1.6 items/sec | https://www.greentechdfw.com/?utm_source=google&ut - success
+[260/321] 81.0% | ETA: 38s | Speed: 1.6 items/sec | https://www.airconceptservicesbcs.com/             - success
+[261/321] 81.3% | ETA: 37s | Speed: 1.6 items/sec | http://www.coppellac.com/                          - success
+[262/321] 81.6% | ETA: 37s | Speed: 1.6 items/sec | https://lionkinghvac.com/                          - success
+[263/321] 81.9% | ETA: 36s | Speed: 1.6 items/sec | https://www.mosquedacooling.com/                   - success
+[264/321] 82.2% | ETA: 35s | Speed: 1.6 items/sec | http://www.mabryac.com/                            - success
+[265/321] 82.6% | ETA: 35s | Speed: 1.6 items/sec | https://uglydogair.com/?utm_source=gmb&utm_medium= - success
+[266/321] 82.9% | ETA: 34s | Speed: 1.6 items/sec | https://www.covaraircare.net/                      - success
+[267/321] 83.2% | ETA: 34s | Speed: 1.6 items/sec | https://www.daltonairandheat.com/?utm_source=googl - success
+[268/321] 83.5% | ETA: 33s | Speed: 1.6 items/sec | https://www.hvaccontractorfresnotexas.com/         - success
+[269/321] 83.8% | ETA: 32s | Speed: 1.6 items/sec | http://callmaxxandrelax.com/                       - success
+[270/321] 84.1% | ETA: 32s | Speed: 1.6 items/sec | https://snowbearair.com/                           - success
+[271/321] 84.4% | ETA: 31s | Speed: 1.6 items/sec | http://martinhvacservicesllc.com/                  - success
+[272/321] 84.7% | ETA: 30s | Speed: 1.6 items/sec | https://myplatinumair.com/                         - success
+[273/321] 85.0% | ETA: 30s | Speed: 1.6 items/sec | http://ateamsac.com/                               - success
+[274/321] 85.4% | ETA: 29s | Speed: 1.6 items/sec | https://walkercooling.com/                         - http_error_202
+[275/321] 85.7% | ETA: 28s | Speed: 1.6 items/sec | https://www.aireserv.com/smith-county/?cid=LSTL_AS - http_error_403
+[276/321] 86.0% | ETA: 28s | Speed: 1.6 items/sec | http://coastalairandheat.com/                      - successINFO:__main__:Saving results to: data/processed/texas_hvac_with_emails.csv
+
+[277/321] 86.3% | ETA: 27s | Speed: 1.6 items/sec | https://tamtotalair.com/                           - success
+[278/321] 86.6% | ETA: 26s | Speed: 1.6 items/sec | https://www.edwardsairconditioning.com/            - success
+[279/321] 86.9% | ETA: 26s | Speed: 1.6 items/sec | https://www.superiorairrepair.com/?utm_source=goog - success
+[280/321] 87.2% | ETA: 25s | Speed: 1.6 items/sec | https://dalorem.com/                               - http_error_403
+[281/321] 87.5% | ETA: 24s | Speed: 1.6 items/sec | http://brothersplumbingco.com/                     - success
+[282/321] 87.9% | ETA: 24s | Speed: 1.6 items/sec | https://www.lazarineac.com/?utm_source=google&utm_ - success
+[283/321] 88.2% | ETA: 23s | Speed: 1.6 items/sec | http://www.centralairandrefrigeration.com/         - success
+[284/321] 88.5% | ETA: 23s | Speed: 1.6 items/sec | https://sugarlandacandheating.com/                 - success
+[285/321] 88.8% | ETA: 22s | Speed: 1.6 items/sec | http://maddoxac.com/                               - success
+[286/321] 89.1% | ETA: 21s | Speed: 1.6 items/sec | https://www.aliefheatingandairconditioning.com/?ut - success
+[287/321] 89.4% | ETA: 21s | Speed: 1.6 items/sec | http://jemalac.com/                                - success
+[288/321] 89.7% | ETA: 20s | Speed: 1.6 items/sec | http://www.airtownhouston.com/                     - success
+[289/321] 90.0% | ETA: 20s | Speed: 1.6 items/sec | http://www.sunairconditioning.com/                 - success
+[290/321] 90.3% | ETA: 19s | Speed: 1.6 items/sec | http://www.tdiair.com/?utm_source=google&utm_mediu - success
+[291/321] 90.7% | ETA: 19s | Speed: 1.6 items/sec | https://www.kellyac.com/                           - success
+[292/321] 91.0% | ETA: 18s | Speed: 1.6 items/sec | http://www.adbspartanelectric.com/                 - success
+[293/321] 91.3% | ETA: 17s | Speed: 1.6 items/sec | http://www.airproelite.com/                        - success
+[294/321] 91.6% | ETA: 17s | Speed: 1.6 items/sec | http://www.staffordac.com/?utm_source=google&utm_m - success
+[295/321] 91.9% | ETA: 16s | Speed: 1.6 items/sec | http://impactacservices.com/                       - success
+[296/321] 92.2% | ETA: 15s | Speed: 1.6 items/sec | http://airenergyac.com/                            - success
+[297/321] 92.5% | ETA: 15s | Speed: 1.6 items/sec | https://www.lexetx.com/                            - success
+[298/321] 92.8% | ETA: 14s | Speed: 1.6 items/sec | http://www.qualityairtyler.com/                    - success
+[299/321] 93.1% | ETA: 13s | Speed: 1.6 items/sec | http://www.fergusonveresh.com/                     - success
+[300/321] 93.5% | ETA: 13s | Speed: 1.7 items/sec | https://www.accontractors.com/                     - success
+[301/321] 93.8% | ETA: 12s | Speed: 1.7 items/sec | https://www.airtechservicestx.com/                 - success
+[302/321] 94.1% | ETA: 11s | Speed: 1.7 items/sec | https://www.bannisterplumbingandair.com/?utm_campa - success
+[303/321] 94.4% | ETA: 11s | Speed: 1.7 items/sec | http://patriotetx.com/                             - success
+[304/321] 94.7% | ETA: 10s | Speed: 1.7 items/sec | https://www.prestigeheatingandac.com/              - success
+[305/321] 95.0% | ETA: 10s | Speed: 1.7 items/sec | https://www.amcservicesinc.com/?utm_source=google& - success
+[306/321] 95.3% | ETA: 9s | Speed: 1.7 items/sec | https://www.r2mechanicalhvac.com/                  - success
+[307/321] 95.6% | ETA: 8s | Speed: 1.6 items/sec | https://phiheatingandairconditioning.com/?utm_sour - success
+[308/321] 96.0% | ETA: 8s | Speed: 1.7 items/sec | https://yourtexashomeservices.com/                 - success
+[309/321] 96.3% | ETA: 7s | Speed: 1.6 items/sec | http://martinmechanicaltx.com/                     - success
+[310/321] 96.6% | ETA: 7s | Speed: 1.6 items/sec | http://www.mastenair.com/                          - success
+[311/321] 96.9% | ETA: 6s | Speed: 1.6 items/sec | https://fixitfelixhvac.com/                        - success
+[312/321] 97.2% | ETA: 5s | Speed: 1.6 items/sec | http://www.prontoairdenton.com/                    - success
+[313/321] 97.5% | ETA: 5s | Speed: 1.6 items/sec | https://prodigy-hvac.com/                          - success
+[314/321] 97.8% | ETA: 4s | Speed: 1.6 items/sec | https://goatairtx.com/heating-services/furnace-rep - success
+[315/321] 98.1% | ETA: 4s | Speed: 1.6 items/sec | https://burrismechanicalgroup.com/                 - success
+[316/321] 98.4% | ETA: 3s | Speed: 1.6 items/sec | https://cogburnsservicegeneral.com/                - success
+[317/321] 98.8% | ETA: 2s | Speed: 1.6 items/sec | https://precisioncomforthomeservices.com/?utm_sour - success
+[318/321] 99.1% | ETA: 2s | Speed: 1.6 items/sec | https://superteamservices.com/texas-hvac-heating-a - success
+[319/321] 99.4% | ETA: 1s | Speed: 1.5 items/sec | http://www.jameslane.com/                          - success
+[320/321] 99.7% | ETA: 1s | Speed: 1.5 items/sec | http://www.thatacguy.com/                          - timeout
+[321/321] 100.0% | ETA: 0s | Speed: 1.2 items/sec | https://stonebridgeac.com/                         - timeout
+
+================================================================================
+EXECUTION SUMMARY
+================================================================================
+Total items:           321
+Completed:             321
+Success:               281 (87.54%)
+Failed:                40 (12.46%)
+
+Duration:              4.4 min (261.6 sec)
+Speed:                 1.23 items/sec
+Parallel workers:      30
+
+Processing times:
+  Average:             17.790 sec
+  Min:                 0.975 sec
+  Max:                 94.084 sec
+
+Results by status:
+  success                 281 ( 87.5%)
+  http_error_202           17 (  5.3%)
+  http_error_403           10 (  3.1%)
+  connection_error          5 (  1.6%)
+  timeout                   3 (  0.9%)
+  http_error_404            2 (  0.6%)
+  not_html                  1 (  0.3%)
+  http_error_400            1 (  0.3%)
+  http_error_503            1 (  0.3%)
+================================================================================
+
+OPTIMIZATION RECOMMENDATIONS:
+  1. LOW SPEED (1.2 items/sec): Consider increasing --workers (current: 30)
+
+Traceback (most recent call last):
+  File "C:\Users\79818\Desktop\Outreach - new\modules\scraping\scripts\website_scraper.py", line 397, in <module>
+    main()
+  File "C:\Users\79818\Desktop\Outreach - new\modules\scraping\scripts\website_scraper.py", line 391, in main
+    print(f"\u2713 Results saved to: {args.output}\n")
+  File "C:\Users\79818\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>

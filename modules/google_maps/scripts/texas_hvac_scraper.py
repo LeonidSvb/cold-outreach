@@ -59,7 +59,11 @@ except ImportError:
 load_dotenv()
 
 CONFIG = {
-    "API_KEY": os.getenv("GOOGLE_PLACES_API_KEY"),
+    "API_KEYS": [
+        os.getenv("GOOGLE_PLACES_API_KEY"),
+        os.getenv("GOOGLE_PLACES_API_KEY_2")
+    ],
+    "API_KEY_INDEX": 0,
     "GEOCODE_URL": "https://maps.googleapis.com/maps/api/geocode/json",
     "NEARBY_SEARCH_URL": "https://maps.googleapis.com/maps/api/place/nearbysearch/json",
     "PLACE_DETAILS_URL": "https://maps.googleapis.com/maps/api/place/details/json",
@@ -113,9 +117,59 @@ FLORIDA_CITIES = [
     "Naples, FL"
 ]
 
+# COLD STATES - HVAC HEATING SEASON (November-March)
+# New York - Tier 1 & 2 (cold climate, high heating demand)
+NEW_YORK_CITIES = [
+    # Tier 1: Major metros (200k+)
+    "New York, NY",    # NYC: 8.3M population (Metro 20M)
+    "Buffalo, NY",     # 278K - extreme winter, high HVAC demand
+    "Rochester, NY",   # 211K - cold climate
+    # Tier 2: Medium cities (50k-200k)
+    "Yonkers, NY",     # 211K - NYC metro area
+    "Syracuse, NY",    # 148K - snow belt, heavy heating needs
+]
+
+# Illinois - Tier 1 & 2 (harsh winters, Chicago metro)
+ILLINOIS_CITIES = [
+    # Tier 1: Major metros
+    "Chicago, IL",     # 2.7M - brutal winters, massive HVAC market
+    # Tier 2: Medium cities
+    "Aurora, IL",      # 180K - Chicago suburbs
+    "Naperville, IL",  # 149K - affluent suburb
+    "Joliet, IL",      # 150K - southwest Chicago
+    "Rockford, IL",    # 148K - northern Illinois
+]
+
+# Michigan - Tier 1 & 2 (extreme cold, Great Lakes effect)
+MICHIGAN_CITIES = [
+    # Tier 1: Major metros
+    "Detroit, MI",     # 639K - extreme winters
+    "Grand Rapids, MI",# 198K - heavy snowfall
+    # Tier 2: Medium cities
+    "Warren, MI",      # 139K - Detroit metro
+    "Sterling Heights, MI", # 134K - Detroit suburbs
+    "Ann Arbor, MI",   # 123K - university town
+    "Lansing, MI",     # 112K - state capital
+]
+
+# Pennsylvania - Tier 1 & 2 (cold winters, major metros)
+PENNSYLVANIA_CITIES = [
+    # Tier 1: Major metros
+    "Philadelphia, PA",# 1.6M - cold winters
+    "Pittsburgh, PA",  # 302K - harsh winter climate
+    # Tier 2: Medium cities
+    "Allentown, PA",   # 125K - Lehigh Valley
+    "Erie, PA",        # 94K - lake effect snow, extreme cold
+    "Reading, PA",     # 95K - eastern PA
+]
+
 STATE_CITIES = {
     "Texas": TEXAS_CITIES,
-    "Florida": FLORIDA_CITIES
+    "Florida": FLORIDA_CITIES,
+    "New York": NEW_YORK_CITIES,
+    "Illinois": ILLINOIS_CITIES,
+    "Michigan": MICHIGAN_CITIES,
+    "Pennsylvania": PENNSYLVANIA_CITIES,
 }
 
 STATS = {
@@ -125,18 +179,52 @@ STATS = {
     "optimal_searches": 0,
     "cities_processed": 0,
     "total_cost": 0.0,
+    "api_key_switches": 0,
 }
+
+def get_current_api_key() -> str:
+    """Get current API key with rotation support"""
+    api_keys = [k for k in CONFIG["API_KEYS"] if k]
+    if not api_keys:
+        raise ValueError("No API keys configured")
+
+    current_index = CONFIG["API_KEY_INDEX"] % len(api_keys)
+    return api_keys[current_index]
+
+def rotate_api_key():
+    """Rotate to next API key"""
+    api_keys = [k for k in CONFIG["API_KEYS"] if k]
+    if len(api_keys) > 1:
+        CONFIG["API_KEY_INDEX"] = (CONFIG["API_KEY_INDEX"] + 1) % len(api_keys)
+        STATS["api_key_switches"] += 1
+        logger.info(f"Rotated to API key #{CONFIG['API_KEY_INDEX'] + 1}")
 
 def geocode_city(city: str) -> Tuple[float, float]:
     """Get lat/lng for city"""
-    params = {"address": city, "key": CONFIG["API_KEY"]}
-    response = requests.get(CONFIG["GEOCODE_URL"], params=params)
+    params = {"address": city, "key": get_current_api_key()}
 
-    if response.status_code != 200 or response.json()["status"] != "OK":
+    try:
+        response = requests.get(CONFIG["GEOCODE_URL"], params=params, timeout=10)
+
+        if response.status_code != 200:
+            logger.error(f"Geocode HTTP error {response.status_code} for {city}")
+            return (0, 0)
+
+        data = response.json()
+        status = data.get("status")
+
+        if status != "OK":
+            logger.error(f"Geocode API error: {status} for {city}")
+            if status == "REQUEST_DENIED":
+                logger.error(f"Error message: {data.get('error_message', 'No details')}")
+            return (0, 0)
+
+        location = data["results"][0]["geometry"]["location"]
+        return (location["lat"], location["lng"])
+
+    except Exception as e:
+        logger.error(f"Geocode exception for {city}: {e}")
         return (0, 0)
-
-    location = response.json()["results"][0]["geometry"]["location"]
-    return (location["lat"], location["lng"])
 
 def nearby_search(lat: float, lng: float, keyword: str, radius: int) -> List[Dict]:
     """Search places in radius"""
@@ -144,11 +232,14 @@ def nearby_search(lat: float, lng: float, keyword: str, radius: int) -> List[Dic
         "location": f"{lat},{lng}",
         "radius": radius,
         "keyword": keyword,
-        "key": CONFIG["API_KEY"]
+        "key": get_current_api_key()
     }
 
     response = requests.get(CONFIG["NEARBY_SEARCH_URL"], params=params)
     STATS["total_api_calls"] += 1
+
+    if STATS["total_api_calls"] % 100 == 0:
+        rotate_api_key()
 
     if response.status_code != 200:
         return []
@@ -268,7 +359,14 @@ def scrape_city(city: str, keyword: str, min_reviews: int, min_rating: float, ma
             "city": city,
             "raw_places": [],
             "filtered_places": [],
-            "error": "geocoding_failed"
+            "error": "geocoding_failed",
+            "stats": {
+                "total_found": 0,
+                "unique": 0,
+                "filtered": 0,
+                "with_details": 0,
+                "final_radius_km": 0
+            }
         }
 
     logger.info(f"Center: {lat:.4f}, {lng:.4f}")
@@ -345,11 +443,14 @@ def get_place_details(place_id: str) -> Dict:
     params = {
         "place_id": place_id,
         "fields": "formatted_phone_number,website,formatted_address",
-        "key": CONFIG["API_KEY"]
+        "key": get_current_api_key()
     }
 
     response = requests.get(CONFIG["PLACE_DETAILS_URL"], params=params)
     STATS["total_api_calls"] += 1
+
+    if STATS["total_api_calls"] % 100 == 0:
+        rotate_api_key()
 
     if response.status_code != 200 or response.json()["status"] != "OK":
         return {}
@@ -402,18 +503,21 @@ def main():
     parser = argparse.ArgumentParser(description="Google Places Statewide Scraper")
     parser.add_argument("--city", type=str, help="Single city to scrape")
     parser.add_argument("--cities", type=str, help="Comma-separated cities")
-    parser.add_argument("--state", type=str, choices=["Texas", "Florida"], help="Scrape entire state")
+    parser.add_argument("--state", type=str, choices=["Texas", "Florida", "New York", "Illinois", "Michigan", "Pennsylvania"], help="Scrape entire state")
     parser.add_argument("--keyword", type=str, required=True, help="Search keyword")
-    parser.add_argument("--min-reviews", type=int, default=10, help="Min reviews")
-    parser.add_argument("--max-reviews", type=int, default=None, help="Max reviews (optional)")
+    parser.add_argument("--min-reviews", type=int, default=30, help="Min reviews")
+    parser.add_argument("--max-reviews", type=int, default=800, help="Max reviews (optional)")
     parser.add_argument("--min-rating", type=float, default=4.0, help="Min rating")
     parser.add_argument("--max-results", type=int, default=5000, help="Max total results")
     parser.add_argument("--parallel", action="store_true", help="Enable parallel processing")
     args = parser.parse_args()
 
-    if not CONFIG["API_KEY"]:
-        logger.error("GOOGLE_PLACES_API_KEY not found")
+    api_keys = [k for k in CONFIG["API_KEYS"] if k]
+    if not api_keys:
+        logger.error("No GOOGLE_PLACES_API_KEY configured")
         return
+
+    logger.info(f"API keys configured: {len(api_keys)}")
 
     # Determine cities to scrape
     if args.city:
@@ -566,9 +670,13 @@ def main():
     print(f"  Radius increases:  {STATS['radius_increases']}")
     print(f"  Radius decreases:  {STATS['radius_decreases']}")
     print(f"  Optimal searches:  {STATS['optimal_searches']}")
-    print(f"\nAPI calls:           {STATS['total_api_calls']}")
-    print(f"Estimated cost:      ${STATS['total_cost']:.2f}")
-    print(f"Free tier left:      ${200 - STATS['total_cost']:.2f}")
+    print(f"\nAPI usage:")
+    print(f"  Total API calls:   {STATS['total_api_calls']}")
+    print(f"  API key switches:  {STATS['api_key_switches']}")
+    print(f"  Keys configured:   {len([k for k in CONFIG['API_KEYS'] if k])}")
+    print(f"\nCost:")
+    print(f"  Estimated cost:    ${STATS['total_cost']:.2f}")
+    print(f"  Free tier left:    ${200 - STATS['total_cost']:.2f} (per key)")
     print(f"Time elapsed:        {elapsed:.1f} min")
     print(f"\nOutput files:")
     print(f"  RAW data:          {raw_file}")

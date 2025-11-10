@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "timestamp": "20251110_122455",
+    "state": "unknown",
+    "niche": "hvac",
+    "cities_processed": 1,
+    "total_raw_places": 0,
+    "note": "RAW data before filtering - no phone/website to save API costs",
+    "stats": {
+      "total_api_calls": 0,
+      "radius_increases": 0,
+      "radius_decreases": 0,
+      "optimal_searches": 0,
+      "cities_processed": 0,
+      "total_cost": 0.0,
+      "api_key_switches": 0
+    }
+  },
+  "results_by_city": [
+    {
+      "city": "Chicago, IL",
+      "raw_places": [],
+      "stats": {
+        "total_found": 0,
+        "unique": 0,
+        "filtered": 0,
+        "with_details": 0,
+        "final_radius_km": 0
+      }
+    }
+  ],
+  "all_raw_places": []
+}
