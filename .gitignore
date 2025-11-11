@@ -65,3 +65,13 @@ frontend/dist/
 node_modules/
 package-lock.json
 nul
+
+# New architecture (2025-11-11 refactoring)
+archive/
+data/projects/*.parquet
+data/projects/*_metadata.json
+data/exports/*.csv
+data/processed/
+data/raw/
+data/temp/
+data/uploads/
