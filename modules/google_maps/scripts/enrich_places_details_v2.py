@@ -229,12 +229,7 @@ def enrich_all_places(client: PlacesEnrichmentClient, places: List[Dict], fields
                 # Progress stats every 50 places
                 if i % 50 == 0:
                     stats = client.get_stats()
-                    logger.info(f"Progress: {i}/{total} | Success: {stats['success_rate']}% | Websites: {stats['website_coverage']}% | Cost: ${stats['total_cost_usd']}")
-
-                    # Budget check
-                    if stats['total_cost_usd'] > config["api_settings"].get("max_cost_usd", 999):
-                        logger.warning(f"Budget limit reached: ${stats['total_cost_usd']}")
-                        break
+                    logger.info(f"Progress: {i}/{total} | Success: {stats['success_rate']}% | Websites: {stats['website_coverage']}% | Phone: {stats['phone_coverage']}%")
 
                 # Rate limiting
                 time.sleep(config["api_settings"]["delay_between_requests"])
@@ -331,14 +326,23 @@ def main():
         logger.error("No places loaded")
         return
 
+    # PRODUCTION MODE: Process all remaining leads (skip already enriched)
+    original_count = len(places)
+
+    # Skip first 360 (300 from first test + 60 from two mini tests)
+    places = places[360:]
+    logger.info(f"PRODUCTION MODE: Processing {len(places)} remaining leads (skipping first 360 already enriched)")
+
     # Show stats
     logger.info("")
     logger.info("=" * 80)
     logger.info("ENRICHMENT PLAN")
     logger.info("=" * 80)
     logger.info(f"Total places to enrich: {len(places)}")
+    logger.info(f"Original total: {original_count}")
+    logger.info(f"Already enriched: 360 (previous tests)")
     logger.info(f"Fields to fetch: {len(CONFIG['fields_to_fetch'])}")
-    logger.info(f"Estimated cost: ${len(places) * 0.023:.2f}")
+    logger.info(f"Real cost will be checked in Google Cloud Console after completion")
     logger.info("")
 
     # Initialize client
@@ -378,8 +382,10 @@ def main():
     logger.info(f"Success rate: {stats['success_rate']}%")
     logger.info(f"Website coverage: {stats['website_coverage']}%")
     logger.info(f"Phone coverage: {stats['phone_coverage']}%")
-    logger.info(f"Total cost: ${stats['total_cost_usd']:.2f}")
     logger.info(f"Execution time: {elapsed_time/60:.1f} minutes")
+    logger.info("")
+    logger.info("REAL COST: Check Google Cloud Console Billing")
+    logger.info("https://console.cloud.google.com/billing")
     logger.info("")
     logger.info(f"Output file: {output_path}")
     logger.info("=" * 80)
