@@ -30,4 +30,4 @@ manager.export_csv('exports/my_campaign.csv')
 
 ## Learn More
 
-See **DATA_ARCHITECTURE.md** in project root for full documentation.
+See [DATA_ARCHITECTURE.md](../docs/DATA_ARCHITECTURE.md) for full documentation.

@@ -48,9 +48,10 @@ Outreach/
 
 ## 📚 Documentation
 
-- 🏗️ [**DATA_ARCHITECTURE.md**](DATA_ARCHITECTURE.md) - **READ THIS FIRST!**
-- 🔄 [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) - Update old scripts
-- 📋 [REFACTORING_PLAN.md](REFACTORING_PLAN.md) - Architecture details
+- 🏗️ [**DATA_ARCHITECTURE.md**](docs/DATA_ARCHITECTURE.md) - **READ THIS FIRST!**
+- 🔄 [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) - Update old scripts
+- 📋 [REFACTORING_PLAN.md](docs/REFACTORING_PLAN.md) - Architecture details
+- 🚀 [QUICK_START.md](docs/QUICK_START.md) - Quick start guide
 
 ## Core Features
 

@@ -51,4 +51,4 @@ manager.add_columns(df[['place_id', 'new_column']], key='place_id')
 
 ## Learn More
 
-See **DATA_ARCHITECTURE.md** in project root for full documentation.
+See [DATA_ARCHITECTURE.md](../docs/DATA_ARCHITECTURE.md) for full documentation.
