@@ -1,0 +1,2102 @@
+{
+  "klub rekonstrukcji historycznej": [],
+  "rekonstrukcja armii radzieckiej": [],
+  "klub historii wojskowej ZSRR": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "23, Tavolníková 1850, Krč, 142 00 Praha 4, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.01907749999999,
+          "lng": 14.4608661
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.02042782989271,
+            "lng": 14.46216277989272
+          },
+          "southwest": {
+            "lat": 50.01772817010727,
+            "lng": 14.45946312010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub vojenské historie Wurm, o.s.",
+      "place_id": "ChIJi2ya42ORC0cR1ef19PR_l0k",
+      "plus_code": {
+        "compound_code": "2F96+J9 Prague 4, Czechia",
+        "global_code": "9F2P2F96+J9"
+      },
+      "rating": 5,
+      "reference": "ChIJi2ya42ORC0cR1ef19PR_l0k",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Sokolovská 812, 323 00 Plzeň 1, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 49.7709503,
+          "lng": 13.3675185
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.77228367989272,
+            "lng": 13.36895867989272
+          },
+          "southwest": {
+            "lat": 49.76958402010727,
+            "lng": 13.36625902010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub vojenské historie PIONIER",
+      "opening_hours": {},
+      "place_id": "ChIJpx0DryjyCkcREkyfb7A374E",
+      "plus_code": {
+        "compound_code": "Q9C9+92 Pilsen 1, Czechia",
+        "global_code": "8FXMQ9C9+92"
+      },
+      "reference": "ChIJpx0DryjyCkcREkyfb7A374E",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Libkovická 180, 435 11 Lom u Mostu 1-Loučná, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.6158149,
+          "lng": 13.6585094
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.61720607989272,
+            "lng": 13.65982187989272
+          },
+          "southwest": {
+            "lat": 50.61450642010728,
+            "lng": 13.65712222010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub vojenské historie SOS družstvo Kallich",
+      "photos": [
+        {
+          "height": 2340,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113701756437598722886\">Vlastimil Jurczak</a>"
+          ],
+          "photo_reference": "AWn5SU6Rr64Ezq4_VWJ2xhSNmxSwCPpY-7pETFbxtlj-KYtRwMALy6nEjZ6it6-FQnVz_8OyOUl7_fljT8mjgCoAUi7ZvWgsLbcPZHGG6sS84vY3BRLX165j8WZsvU03hmIZ8GXcKmKCh7NvsGcdDyxySVN882_UKXoFS8QZNVb9Ne6IyRIn62K79aPupCQjt_ngvbzyFxgR_g5KT5P1ea33OY6uY1qZR9jNhqhWdyH90TdWlNfISc43NP3ocuvHrluwVHaG0a3aWBE3LKLzKE3dmKBJ2cKPhAOTy03HqXnKvbQCJZW2OSuQCXKjkgKVcemSDSPYhHLax8jMc1FwVW2aovlKGODCLoYy3EO7toOeq_CwsN7WKA2iSmcvJpe0dA6ouZQMf-6e4rm3umukp2aVWPkehuISri-9MgHSxs__yGgcgjBam0fZKaVM-lU9JRUwLVPT2mYI360AUX-TkEU86eYPVlXHQi6GuByyXRtfXU-6jHVTuOu7pIKl3jiA9HQ-fnULcFCOP1YWiEGMVgtblK8WLaPlksSGyHKNZfWadyRFdKdbFeQtCzw2HcT2WW6nMQIEMtpnVwxnag",
+          "width": 4160
+        }
+      ],
+      "place_id": "ChIJ6c_IPbD0CUcRP_6VK7Vw5Xk",
+      "plus_code": {
+        "compound_code": "JM85+8C Lom, Czechia",
+        "global_code": "9F2MJM85+8C"
+      },
+      "rating": 4.3,
+      "reference": "ChIJ6c_IPbD0CUcRP_6VK7Vw5Xk",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "59, Vladimíra Clementisa 6453, 917 01 Trnava, Slovakia",
+      "geometry": {
+        "location": {
+          "lat": 48.3782997,
+          "lng": 17.5989253
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.37961732989272,
+            "lng": 17.60010277989272
+          },
+          "southwest": {
+            "lat": 48.37691767010728,
+            "lng": 17.59740312010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub vojenskej histórie Tyrnau",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1200,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117596462988739280010\">KVH Tyrnau, o.z. (Klub vojenskej histórie)</a>"
+          ],
+          "photo_reference": "AWn5SU4dXMxMKClYajPbk3cVOrOt-LwdZMahBBQIE0f76bi3NdZwDj7ycXWeHv0hKPC6xPMkeExkmnn599drzQfypNqle_yqJHzm11Rd0AXswiJqjn3rYjP0EOlSSazRxq2K0bit40wTQvjtepP7TyLIxlBarv_DPZ9yYuUJNnuGssb6Df_GxsrfphYsBX6ahArOs80T-hkN84VCnHVmrN37DtRdCiFCzpC9qK9diu3YD_OSTSabeOgEdoBQvpkGvObjH62SYFUWStL6p-5zBDsoGuP5tzJJYeEh0QnrSFoUNy1hX_tuW6zGfs9LDMswui6CpNy24vQrBE4a91kPMTFGWVl1KrLIgRIXZyagKSCjbuzgqUXhxvvBA1na-36OyuPIJQ5uKXDKQxXtRHKjDA4t8dQiVGqlSsg7uSg2b6GUzYrvZEqoKOMTHIWIgAgpxvDZOuGZbqSlWQzGXNPj_MlhQRCXE-_T53B48pqY0uoputQbGp8b0NCCluyEqxqwBbAKQf4Nma3dCs_zQdLOaBx4_Xe-HJ8TydGURBxGz_UQupjeSADgDpBeIHjWJG6fHVmF42ueKTnz",
+          "width": 1600
+        }
+      ],
+      "place_id": "ChIJf6NHGnxfa0cRL05RriwZd1g",
+      "plus_code": {
+        "compound_code": "9HHX+8H Trnava, Slovakia",
+        "global_code": "8FWV9HHX+8H"
+      },
+      "rating": 4.8,
+      "reference": "ChIJf6NHGnxfa0cRL05RriwZd1g",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 4
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Sokolská 30, 436 01 Litvínov 1, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.6061409,
+          "lng": 13.5938554
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.60748407989272,
+            "lng": 13.59520967989272
+          },
+          "southwest": {
+            "lat": 50.60478442010728,
+            "lng": 13.59251002010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "KVH Osada z.s.",
+      "photos": [
+        {
+          "height": 8000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100586889237805613448\">KVH Osada z.s.</a>"
+          ],
+          "photo_reference": "AWn5SU4EMODjNwKwEV7Iq6d2axiF_sH21AYNikvYwjM0lJh_dn_FCS-XRMExyA1P0YljgpA1G3O8IiD9CzZPOggys0XvybeNJ7-iRPU51zlMkn3Mhb_Rd4loQVG0mfvrkRAgfeEnPWhvRdmLmvkoMsVXMs0CG1hnCaGZpSSuCpaTDF_XZpgf4zACnjGI5VcMVpzHubqQxjhjkVv9xCvT8ZJ1aEeFvX9zUWkMqfjjuO6GSYwlJyKXvOL4Rf1IL6MxbP7N_NX9Eh8J9C3Kkb8Q7pc_4fIWx9NOd0vzrIQBfN1g4a79hDRcyn8",
+          "width": 6000
+        }
+      ],
+      "place_id": "ChIJldYjQIj1CUcRpPA24GOg-sE",
+      "plus_code": {
+        "compound_code": "JH4V+FG Litvínov, Czechia",
+        "global_code": "9F2MJH4V+FG"
+      },
+      "reference": "ChIJldYjQIj1CUcRpPA24GOg-sE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Jana Zajíce, 530 12 Pardubice III, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0439016,
+          "lng": 15.8056692
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.04524367989271,
+            "lng": 15.80702937989272
+          },
+          "southwest": {
+            "lat": 50.04254402010727,
+            "lng": 15.80432972010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Kluby vojenské historie",
+      "place_id": "ChIJTSYtT1fMDUcRSu6qwJfFMNM",
+      "reference": "ChIJTSYtT1fMDUcRSu6qwJfFMNM",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "967/187, Sokolovská, 190 00 Praha 9, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.1068199,
+          "lng": 14.4879493
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.10809432989272,
+            "lng": 14.48936842989272
+          },
+          "southwest": {
+            "lat": 50.10539467010727,
+            "lng": 14.48666877010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Kluby vojenské historie",
+      "place_id": "ChIJq41oVLLsC0cR6X-q2fs8uVc",
+      "plus_code": {
+        "compound_code": "4F4Q+P5 Prague, Czechia",
+        "global_code": "9F2P4F4Q+P5"
+      },
+      "reference": "ChIJq41oVLLsC0cR6X-q2fs8uVc",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    }
+  ],
+  "rekonstrukcja wojskowa": [],
+  "soviet reenactment club": [],
+  "red army reenactment": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Biskupství 156, 783 44 Náměšť na Hané, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 49.60629369999999,
+          "lng": 17.0700276
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.60756532989272,
+            "lng": 17.07143712989272
+          },
+          "southwest": {
+            "lat": 49.60486567010728,
+            "lng": 17.06873747010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "Armyproduct",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114400125572733816362\">Armyproduct</a>"
+          ],
+          "photo_reference": "AWn5SU4VRjf6tK7jvxUSRkO0C8hLCEuoj6bSxjTziulmDqIku75n92J_I7omemMQ071W9EUwY1-IHDzLGl8-GwBKapYOTtfDT2EtPejZGlvlBMH869Ig-7BTb8nric534Lgv-Uyyff71l2j3PKZbR9s_IFf8Hro-s6U6oNnvzNh1G2PyXFCfeo3ysD8ZoA2qYlGJqdLqfGoFyD5v-oJD1YZYGrLqxmBHzIoW7MHJEaQmOK5OWmDuuxM7wupZnT1wL8aqYKbD1nVMA7Kd_J-xNXiJTCm8GjIW5EMHW3W_QzHdz1zFeZSN",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJzRysVXBFEkcRDcnjK9p9U-s",
+      "plus_code": {
+        "compound_code": "J34C+G2 Náměšť na Hané, Czechia",
+        "global_code": "8FXVJ34C+G2"
+      },
+      "rating": 5,
+      "reference": "ChIJzRysVXBFEkcRDcnjK9p9U-s",
+      "types": [
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 342
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Celní 3369, 415 01 Teplice 1, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.64661719999999,
+          "lng": 13.8324969
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.64801512989272,
+            "lng": 13.83390907989272
+          },
+          "southwest": {
+            "lat": 50.64531547010728,
+            "lng": 13.83120942010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "MILITARY RANGE - Teplice",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104809084854033556932\">Константин Юзефович</a>"
+          ],
+          "photo_reference": "AWn5SU4j-sHVQaJjO6tx7CNiKkY000mM0C5VBwEmRREWi7oRo4-811mh4SzYETdiVjLW1k2diAZVi32LUlEG6SosQwpFjWE5sIx9yTGMK0ye0FON2-UhArqISDYk-ymbRADGaydQinCftmVQIYSqJ5np_pVR4Iwgy43Gb8lk6wp0aTdaHKCm4XLQVDwTSABIv88rS86BtbF8wcJmtjOvi_UI_ehx8L1KPJ2J_tS2qhnahVQyXU2HGWdwl6AyYn49Fl0bYoub0b8vtMmMwqCBRp6n_DWqd5FAqQLltfvIXe7gq6RzkdiuDiMwFgnGKhRszTz-0bpGF6ZUnou5c_61nCwM6PUjgYSWnLiHcyNy5KOPnJn_pcNRm0czNBkERtF1mNXaby79eboDCu-6ZnAeGmU39xk2BHacPGRgMTH0dYgFLcpeeNYvGp4d49Tg46e0ST9kkwSlS5fOQ0bZPOwGMft8Rzrvoxdx_Z25jluxSu21D4Zf0SrQLHC9KhtQnzVBQWyeJvSvffNDZnH2jfq6bDJb3h5kHWBNDMV_YwiEHB1LnPpEBhG5T8IhN5VfiIFaEuaNL0VxTbhj",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJm9pS3Y2OCUcRk3kGQv6Vfyo",
+      "plus_code": {
+        "compound_code": "JRWJ+JX Teplice, Czechia",
+        "global_code": "9F2MJRWJ+JX"
+      },
+      "rating": 4.5,
+      "reference": "ChIJm9pS3Y2OCUcRk3kGQv6Vfyo",
+      "types": [
+        "clothing_store",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 259
+    }
+  ],
+  "ww2 soviet reenactment": [],
+  "military history club": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Lešany, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 49.8551104,
+          "lng": 14.5440519
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.85644362989272,
+            "lng": 14.54539012989272
+          },
+          "southwest": {
+            "lat": 49.85374397010727,
+            "lng": 14.54269047010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Military History Institute in Prague",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1500,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105463918113543689842\">Zdenka Rehakova</a>"
+          ],
+          "photo_reference": "AWn5SU56I2S5wSV_JbjSJ1aEbXAdLSHEDetJNRpve8QAFJIN4zZrXg55OdcalTt-mwKlV3AFPzHsc9vHcB7HqnnEqkU-SVlb2df5Ig_ecgsRfoekHVDvEo0E6toUiqfMLCZ8Ib1GLk4cM69TDYfy9JSacqcGeAv3mcgoL9b58NOT-0LF7hkRr1hh0P2mpOEw67CPQizmEX15D088tFcvalITcipeq96tIQUxjnOBjkrVrSmwwKTdVhrBMaUa2sJRMHOyqi4eaRnMw6J9-WNZoOyBPN9uzvGOaxyJ4lRpxWvBFJPOL0v-RTIs7JhwUPOA1tqIpyuzFLChqMdYgAODyF3p9DoG6CqOGS_ErPGnSAUEFl6A21GjpfIV0qaqSrAOmtbY-_oASKxQIfA8KLMozdD9Kw5AnTmTfwBBVroxXKNVl0xS5LKyL-H9WVQOoAgVp63TUB0ktpIvPs9vXQAYIE5duJqop_IjWFwcwj0aRIZPT4MtJ2U9LH2NFNunH9Lx332O5HjUgocMgAykGQMGOyuSzNPdJLgpWtB_Ka1FPQe0sG37gy7wDhMNQcVDsx7SlAehjLhpD_AP",
+          "width": 2000
+        }
+      ],
+      "place_id": "ChIJtxLE6IiDC0cRbLoluoNNmhI",
+      "plus_code": {
+        "compound_code": "VG4V+3J Lešany, Netvořice, Czechia",
+        "global_code": "8FXPVG4V+3J"
+      },
+      "rating": 4.8,
+      "reference": "ChIJtxLE6IiDC0cRbLoluoNNmhI",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 216
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "U Památníku 1600/2, 130 00 Praha 3-Žižkov, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.08757079999999,
+          "lng": 14.4446676
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08895872989272,
+            "lng": 14.44596292989272
+          },
+          "southwest": {
+            "lat": 50.08625907010727,
+            "lng": 14.44326327010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Military History Institute in Prague: The Army Museum Žižkov",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114817748747739764377\">Andy Smith</a>"
+          ],
+          "photo_reference": "AWn5SU63gS8ebuxt4kYm-9qel03fKSUNftEcAYZKf4ajYuu_wQXhQQon-t-cwi8fLSc0YBgh8FVicF6YRW_1rRCzJVFTqNP-zXIibacDJ1tTojF5KQTbd5TJK6wOfiffPee6of9WerqmmcfJZJpSWYR5Q8MOQ25xcgxfbWFRt4BFsWuOHqWEOxJJMhhacIMuZaFrFDZZx6J858L-A_9MnGUYmOE63-DAvtSdZNpAw6-rsf2VkZbkFWb-FoXh4Ij7W4E2vu0wHZKoDvX12DTHIwA7a8c1a8tIqm5aPLp1WHO5NERtnARHG3XTG7PzNrAPlwz376eGE5kqc69JhcmMfwM45N13jkAAhtM3iplcI5WISN8s8TYZFeNbF8Hxs53NUD9UnTSm7Tf1hot0elJKkrOIh45ej6KHBt7Rl5jhs7ZIXL7BOaa7bzcwyLGrtw0-Ryba3GsazEzzDu-RMRxmWUh3NkuReV864e2C_4Tf5ZweXmhhh5IIBRtyRsoblBTF_S7uzsg-IygU7VuVO1CSFk8AnPxa7dRCR0UMuH4ZzAw0v1zpb19aj-zU2ct0vJJapS-ag7YnAw",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJA-MeHpiUC0cR4Wgcnqy9fh4",
+      "plus_code": {
+        "compound_code": "3CQV+2V Prague 3, Czechia",
+        "global_code": "9F2P3CQV+2V"
+      },
+      "rating": 4.9,
+      "reference": "ChIJA-MeHpiUC0cR4Wgcnqy9fh4",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3381
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Václavské nám. 45, 110 00 Nové Město, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.081152,
+          "lng": 14.428538
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08242627989272,
+            "lng": 14.42974997989272
+          },
+          "southwest": {
+            "lat": 50.07972662010727,
+            "lng": 14.42705032010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "The Cold War Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107598483439869341420\">Muzeum studené války</a>"
+          ],
+          "photo_reference": "AWn5SU4E3Jn2mCw540UhFSvQWyjSAJP_KuThP6mmH_OSUe6eBkNRiYSL3iPXXKmFMt-woi41xA1vKJSz97WntHainx8M8KQ0VkzYE9NK-4lhbrMT7gnJT5XE-O_kQdfZGKkeA81tEVp8A2EumbM64pt2Xs-QEnIZKme6iy2C5G2Yyyi43eqkAPRed7ux7QLpUOwlw57lvSAatWhjBFUKjSjg0L2hsH1XNmqvYnianbPALV-UX2gdDbh9hKo62QsA6pC-ro94s0Zs7g7d40fgLnRBwnUQI1McapGS1EIIsMKbBDF_zqhjJbo",
+          "width": 5184
+        }
+      ],
+      "place_id": "ChIJizwgv5KUC0cR1AwUi8-lXys",
+      "plus_code": {
+        "compound_code": "3CJH+FC Prague, Czechia",
+        "global_code": "9F2P3CJH+FC"
+      },
+      "rating": 4.7,
+      "reference": "ChIJizwgv5KUC0cR1AwUi8-lXys",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 532
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Resslova 9a, 120 00 Nové Město, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0759236,
+          "lng": 14.4166803
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.07721287989272,
+            "lng": 14.41803952989272
+          },
+          "southwest": {
+            "lat": 50.07451322010728,
+            "lng": 14.41533987010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "National Memorial to the Heroes of the Heydrich Terror",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3264,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113544936060826109176\">Adam Potocka</a>"
+          ],
+          "photo_reference": "AWn5SU4psOWqj0UxNwZxyIJkn6skVenDn8ULmiTDCI20Bl7InkTS5_Jf_HTQq2Tf7GHrJxdlKyVh07c-uctY2Ls1JcGEhCYEGTHtT6-HJiFAiBRpA3smJiMJEjdsB5xtj8dgyZ2rNmIm_m4VeHa4-y8cSo6sgV0iHFWDJMvfb9e_F4N-m4Q5cPfUQxHsqjMLKlZRSKLesYrbjvtUBsfNR5Q7PwLcRNoyN1kiVqwTKbtZQDui7du4-he7llc4x-TiHO0ZC_ed7xDDehYVP-JbBcSZrAfNi24MKdAPR7ejs-B_owyd8bgXDTfi-Xg5aaLhJPODy_2W401lfM3ofwjKvp9RQoJAn8ylDntUyWSIiIBNDy8SuqjnB5ES6LyYaXEsf3kySI11RuSKG_p5HL_UlQFdFUVBo2sLkwRO-vpnhALDfDhNw1fDJC0AL74uGldOZeKNPXaAxewgcqeJayZfXQWbOpo_oQFOH5pwgkrJxzQxm2qmKPacEVozyPU3w_5jczfAJcNHwhvGYaOtPJJmGZKsydXUHnhH4yZkuzTACRWCOQSI4zCw6QrlD7oXZDJ1fqTt3kLsels1UwbAuQ",
+          "width": 4928
+        }
+      ],
+      "place_id": "ChIJT_DiBvSUC0cRLPuDSuKtZ-I",
+      "plus_code": {
+        "compound_code": "3CG8+9M Prague 2, Czechia",
+        "global_code": "9F2P3CG8+9M"
+      },
+      "rating": 4.8,
+      "reference": "ChIJT_DiBvSUC0cRLPuDSuKtZ-I",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2387
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "23, Tavolníková 1850, Krč, 142 00 Praha 4, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.01907749999999,
+          "lng": 14.4608661
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.02042782989271,
+            "lng": 14.46216277989272
+          },
+          "southwest": {
+            "lat": 50.01772817010727,
+            "lng": 14.45946312010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub vojenské historie Wurm, o.s.",
+      "place_id": "ChIJi2ya42ORC0cR1ef19PR_l0k",
+      "plus_code": {
+        "compound_code": "2F96+J9 Prague 4, Czechia",
+        "global_code": "9F2P2F96+J9"
+      },
+      "rating": 5,
+      "reference": "ChIJi2ya42ORC0cR1ef19PR_l0k",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Pilotů 217/12, 161 00 Praha 6, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.08645300000001,
+          "lng": 14.307861
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08781697989272,
+            "lng": 14.30923082989272
+          },
+          "southwest": {
+            "lat": 50.08511732010727,
+            "lng": 14.30653117010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "Central Military Archives",
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101807114848283178436\">Michal Voska</a>"
+          ],
+          "photo_reference": "AWn5SU560U5rZIugkRMmpqNEymM2aYJTuYqUVzGW7jSrKAuhyxI31ueNVWL4H8iFRkC9-TctRTZuj-UYGxHs3S5sFYvQJeqDPDiqBDEJ_DVlkPrjqEw6cm8wDJAoDmo5Lk-unK4myg2CduiIf_-quq40yH0ScKZDptBV-Y67oiTsYTGH05huQ26vNUCVIhLGwfU8k08QtOWl13TaSyshsLLZdZUWJj1FyKNv1fw08adzvQtRE8P3QAwVfToQbgnTMETJplenS0xP0PMxmyCZj_MWUSt2Mths6d2Nwyq1fXOaUFB0AmYq2bkvpWQ0umqHrJM0uU6ykmuhus2as-rvHJLmUuOk1EEaFEp_-gUIzvgwM0KNoTtHtu2JQHpLjmycSG1W2Wpo_hMP1YM0Yp3u3ijAeRRh18glGbD3bmLA8F9Z_GDyU5JFQ6dMn9kJPN6rFKvQ4aE8i1my_2EsQ5Yxm8QcYjUzbZAm9pbiD9ArOXYLobqcFhxykn394_vtvbQd0m4wm5OuZKZ3zVu-QoeqkQHq9gA4F6C1HDrQXb-B8e01hrOVLvjS2RKYyb8Lv0GhuzgjCCUoqsn4",
+          "width": 4608
+        }
+      ],
+      "place_id": "ChIJK5Vt77S_C0cRDshGU7bODs8",
+      "plus_code": {
+        "compound_code": "38P5+J5 Prague 6, Czechia",
+        "global_code": "9F2P38P5+J5"
+      },
+      "rating": 4.6,
+      "reference": "ChIJK5Vt77S_C0cRDshGU7bODs8",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 56
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Rooseveltova 620/23, 160 00 Praha 6-Bubeneč, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.103834,
+          "lng": 14.4003341
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.10522607989272,
+            "lng": 14.40165887989272
+          },
+          "southwest": {
+            "lat": 50.10252642010727,
+            "lng": 14.39895922010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "Library of the Military History Institute in Prague",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJ6ze2kiWVC0cRg7-Aa9HkDvs",
+      "plus_code": {
+        "compound_code": "4C32+G4 Prague 6, Czechia",
+        "global_code": "9F2P4C32+G4"
+      },
+      "rating": 5,
+      "reference": "ChIJ6ze2kiWVC0cRg7-Aa9HkDvs",
+      "types": [
+        "library",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Březinka, 547 01 Náchod 1, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.4154871,
+          "lng": 16.19803
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.42078770000001,
+            "lng": 16.19876327989272
+          },
+          "southwest": {
+            "lat": 50.41347969999999,
+            "lng": 16.19606362010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Pěhotní srub Březinka",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3412,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111577383755932592220\">Ivo Weiss</a>"
+          ],
+          "photo_reference": "AWn5SU7qPFjtPN9n2LK1ZGu7lzkdUeRHyC7GMF92glWHgZmZpRogqtUW0KGc5NUhZ5Az17G0lWDRL6_VLDMfU5gr7yff-sTHJbNUge-vDw4kbHOwE7goGHxc3-zL3u2rLbE_8bcfqG0If-B1mONLMKgQEB-BQ-ZGjlCgxRfu3rwjgcNMEQzH4IauIB9D9yaOkGnXQhgPkii-GzHJ0ksa_jbijysLY601QzeLTSjW94308aCXls0ftFQre5WgDwVHypU-zYHP_DTH5oLkXPHZnklxF5UkyAzB0eZKljJgjIugSBV6NhoY5Vi3pCdA42I8MtGNyeHbSRo6aLgmKsmqFT95ouP1FaaXLsQ1JNktBCWtmsfP9TsGxxxdMJ9k7fSf80QXdATRkWkXVZJed8BgEmjKOhMGxDZ1mVygDl7OtNJmJLut1i8PMoYrOB0TG85nzdAIr6HlfE8Z6I30gK4roHZSvbKkZPl41dXahqAyeY5yit1WtM3a-9uCU9smB9DhFQ1sppjGtvXuo0O74HGqdev0fN-IwPIN1Q9rliFvYZPCAbJ3XZB65MjdyvNYPaplNEb1LYk_lyJAc_dAQQ",
+          "width": 5097
+        }
+      ],
+      "place_id": "ChIJzZT2wH1lDkcRWxA7vfocMBI",
+      "plus_code": {
+        "compound_code": "C58X+56 Nachod, Czechia",
+        "global_code": "9F2RC58X+56"
+      },
+      "rating": 4.9,
+      "reference": "ChIJzZT2wH1lDkcRWxA7vfocMBI",
+      "types": [
+        "tourist_attraction",
+        "park",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 522
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "17. listopadu 1938, 561 69 Králíky, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0883739,
+          "lng": 16.7695719
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08962897989272,
+            "lng": 16.77103892989272
+          },
+          "southwest": {
+            "lat": 50.08692932010727,
+            "lng": 16.76833927010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "stronghold Hurka",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116592145660443884148\">Mirek Brož</a>"
+          ],
+          "photo_reference": "AWn5SU7UgXiwIObdNUXTg0Cv5nSBatKfD3VKTLftT8aPHwDjPQMCW49hGm6lbOVNmtIHq_DVqNHhDIkcFSQyvgL34BMyx-ZSqhQVijMAxSSqI62dRts4-riDLnU2vZQcs5msiGxLbJsKA4QSMeX8UMdZHJcmMFW4si2D_a4SnhxAtxkpDpgPaiX12UTO9MROtBvGJSvcMBcu8wFGITQ2MMLzWRMBh5UZMLHCyAqfgjRoJsNSbfmI0qiq4vgHF1sv0JjqBNR8fOJHSpAYNYu4has2wlpf9KQ9w_Z76Uu-K4JnJTXBASURei9FstwGOwE8FelKmhKeXAWn9LtQ5LS5IpcHFaXLfpmRCP6LFhgmugRBE2E1FtpEkdt5yVpXtQaFluFeUMJv6U7tYNx1CU7evNsJjVaS8bO2OEdmMGESLI4-LWbEK2g2tgqEqd1JZqn7I_lpgnOhfa8LJWiZB5h2LbBiqb3d-qxcI9O1eUMZTqITO-USczoHOqPLQJaAmy5TixAbUnBjF2_9QCYso44HGmWV5bv9EBqZRz4gPh5iEAzT8U4TXaoynUyizsMd6gVnibzT-5rlDw",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJZazzR14AEkcRnH9XLg3Psas",
+      "plus_code": {
+        "compound_code": "3QQ9+8R Králíky, Czechia",
+        "global_code": "9F2R3QQ9+8R"
+      },
+      "rating": 4.7,
+      "reference": "ChIJZazzR14AEkcRnH9XLg3Psas",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "park",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2135
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Nad Okrouhlíkem 2294/11, 182 00 Praha 8, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.1217751,
+          "lng": 14.4670423
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.12315457989272,
+            "lng": 14.46838232989272
+          },
+          "southwest": {
+            "lat": 50.12045492010728,
+            "lng": 14.46568267010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Federace klubů historických vozidel ČR",
+      "photos": [
+        {
+          "height": 4016,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111581528080582717148\">Federace klubů historických vozidel ČR</a>"
+          ],
+          "photo_reference": "AWn5SU6Dnzpmwm4M_EbKfqW9RFfPS3kC_2AzibZfiJuIThrIgXyqteOccXg-ASHqO3lhBvnFiHmnZJia-lGGkSi59WEm7wGXQ8A7_BPVRAhdH6GqCnHa7RQ7dxMN0Fb2Ike8MQ2BLcC8Z0H7AUUcYr1VYRsyxmJE1IWrfg3jFTJU1H1m3zoDEwvw6nmeuRrkEg3TO0oFKpr5gp2G2czkMct8xuTjf5-V3KIXbk9VQHvP8NiEG-jMnbXVO5VBVR0kvZaCQkRkcIzM5kdPPNtdOlnBmEPRhDKHuILE2dA-Lar-x2xObFiY3tI",
+          "width": 6016
+        }
+      ],
+      "place_id": "ChIJY_BVg1vrC0cRQLozMhXiWgs",
+      "plus_code": {
+        "compound_code": "4FC8+MR Prague 8, Czechia",
+        "global_code": "9F2P4FC8+MR"
+      },
+      "rating": 5,
+      "reference": "ChIJY_BVg1vrC0cRQLozMhXiWgs",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 5
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Krajná 27, 821 04 Bratislava, Slovakia",
+      "geometry": {
+        "location": {
+          "lat": 48.1793219,
+          "lng": 17.1738025
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 48.18053687989273,
+            "lng": 17.17538067989272
+          },
+          "southwest": {
+            "lat": 48.17783722010728,
+            "lng": 17.17268102010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Vojenský historický ústav",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJKeTKgx2PbEcREd459bTPuw8",
+      "plus_code": {
+        "compound_code": "55HF+QJ Bratislava, Slovakia",
+        "global_code": "8FWV55HF+QJ"
+      },
+      "rating": 4.7,
+      "reference": "ChIJKeTKgx2PbEcREd459bTPuw8",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 22
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Karlovecká 2629, 747 07 Opava 7, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 49.95889039999999,
+          "lng": 17.8794904
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.96034752989272,
+            "lng": 17.88093857989272
+          },
+          "southwest": {
+            "lat": 49.95764787010727,
+            "lng": 17.87823892010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "\"Klub vojenské historie Opava\"",
+      "photos": [
+        {
+          "height": 3120,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116876600479855653736\">Petr Burda</a>"
+          ],
+          "photo_reference": "AWn5SU7-eKwlDOYfnfgA9x6qECb7ZaoE-irh44eTcd_tczkbt3aTpfwbnDW9i_U9Hj5pQuCPV0n9qWa0zlY9jsqP6MalQAuPEbm41SmbVzhh9zWYoeFH-gw5ikDrzpvlMuw0DbOY9LtVDEcERomG3RGFGOVrtP_jABVJqlzyek3_wVrr0Z2tS16kb9S7MqXROHOFFuZrWWUCQMFgEn4S1iD1bBefkDOh3DS_tp0r2ewlGRs9JwNiR3CujtIcZPeDy8S8x2KliZ_5KheEaneLmfFuvE6VLQZFs5GNPOS6TyqHSZaHOte2OPmuSU7-EtUhI64iuTMUY4-YXoMN4GjS20WvDlOrLamb1AkLGoHsCbpB3y04FhmzCofHfgEsX_b0g5Rhf3TTUDC4R1VYTAGU8bL24D7m3DGG00c2OadXXl25_vX0KI-5eLovdvC422cky75KqGo0QcbuxIXVzTkJYY-CbgUsXQ19at3TSgMDrceH64H0MW6303e_Qd88TmAxYlWCh53mtAlk8qtq4D9ej96PWriU7h9D7eeCvqlb87z1-Av-GYWzOgwGpbLNmiX8cdyfAPMTVP18WUgZlQ",
+          "width": 4160
+        }
+      ],
+      "place_id": "ChIJAa5If1Z9EUcRPewuBptJajM",
+      "plus_code": {
+        "compound_code": "XV5H+HR Opava, Czechia",
+        "global_code": "8FXVXV5H+HR"
+      },
+      "rating": 4.4,
+      "reference": "ChIJAa5If1Z9EUcRPewuBptJajM",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 7
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "9 Halkin St, London SW1X 7DR, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.500653,
+          "lng": -0.1528195
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.50201127989272,
+            "lng": -0.1514755201072778
+          },
+          "southwest": {
+            "lat": 51.49931162010728,
+            "lng": -0.1541751798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Military History Club",
+      "place_id": "ChIJ3SUMNDsFdkgRcmVHObtpCDg",
+      "plus_code": {
+        "compound_code": "GR2W+8R London, United Kingdom",
+        "global_code": "9C3XGR2W+8R"
+      },
+      "reference": "ChIJ3SUMNDsFdkgRcmVHObtpCDg",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Tychonova 1, 160 01 Praha 6-Hradčany, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.095325,
+          "lng": 14.4032614
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.09668552989272,
+            "lng": 14.40468737989272
+          },
+          "southwest": {
+            "lat": 50.09398587010728,
+            "lng": 14.40198772010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "Ministry of Defence of the Czech Republic",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105443566242195622461\">Yaroslav Kerget</a>"
+          ],
+          "photo_reference": "AWn5SU7J5S4w5x2WCUM8jaDDA_IXfA240Ea-ngAQCb8t8E_AkITqseF4IG0nExczxKrX8gAYQ4F0ywUandv63wBZjMWjXsWsB1XChc8p6deBRhnI1kjF6H6zrDsv0PM6GbWBRSHsVyXGIaDoWvKUx9hG46W74I58mMRA6hKrbIBsnz85DfaIa7gtzzwpqrsFxkdrsCnmeDVmhKvN4uW3djegepziTlk3hE6UWLvZ-musZboBGsEcY81tA7dsSlT_IxwegMZekYT12cSWDeS1Geux7iNSvW2gA9-2osGxBLHunRu0poPVIKoc_w7bUJPsl9IhMI6vS7obJw3Q-IkkVuFjCDSUtb35QnGYJZRDTijhoSdQiX7kW1CTyZO1cAOGo8_JZxx_khRAA9nvcNYDTj_UhbZ2yUcd9PKamFT-1FQB8RFlGPgFSHnSkEcNNc_Mzc3Vc9WoEegWN-vTnpPOdXUJvMgjmKjNCCi3oaXcwu1OJiRhLmcHLECAQTnlnVTJvAuYeAbUGUEQ8SpnSU7ml9gZIQHKESgJq7V3GnsKe47z2ZY3yNQW01MYrZ8EYQuqUTwWar9nJnDO",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJiVDtGySVC0cRzqTdacnVGiU",
+      "plus_code": {
+        "compound_code": "3CW3+47 Prague 6, Czechia",
+        "global_code": "9F2P3CW3+47"
+      },
+      "rating": 3.9,
+      "reference": "ChIJiVDtGySVC0cRzqTdacnVGiU",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 24
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Prostřední Lipka 1a, 561 69 Králíky, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0957599,
+          "lng": 16.7552047
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.09702212989272,
+            "lng": 16.75663922989272
+          },
+          "southwest": {
+            "lat": 50.09432247010728,
+            "lng": 16.75393957010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Pěchotní srub K-S 14 \"U Cihelny\" - Muzeum československého opevnění z let 1935-38",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102611337520826841695\">STANDA VORONKO.</a>"
+          ],
+          "photo_reference": "AWn5SU71f7RTqcjJPHUpyUxXw--gN2E0bth1sTc9pLsnOocwQe22kFDg42GP7t_YlhFfqnPQom98-u8n1Gk3nwa8b0mxtJlJqfMTfKnaAMx8oxiAOgLqC4cQpT9GdAW6QMfnlZo5ldHo3evqehD2B5LeQ06MHtDOH5-MaPrt4U4rCzKAKzw4vajOHzGdTtsza7cewob7UFyDHJzFza9qGkCyeqbt9gVhbItamIrdCH8MSeLE0WfhqDNNAYUY3-WTjpIxZHrynfY1zR0agGLEm1ItYE8mc5MDFOA4ED_uEC6vTewlIh11Va0As90iX0qZZCgG69-ro5yVHfBs3cvJMk4uasNuymUluRyY_ohneW8eFnqIB5a7i0Sm7mQtt1BQo9QQdZF-1KDf6JtI38aGGlJveTx4wVCHtdaQq7fL0kk1nPj5EvMa9OJOqYwPixcHBfqY0EK2nRS1KRqaKNAQJuzCg4K_Yr4No-eO6qPb0vS2uqdvew0bCh0n8ce28euX-GWXvYQ0TReYd3QoQ3_BnIp3-Df9IukvMADuL34nqo71OsYcFgvLm0nELM6Un0lf8TIrMJ4K-lYo",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJL0JCVooAEkcRRhLH0UaNKEI",
+      "plus_code": {
+        "compound_code": "3QW4+83 Králíky, Czechia",
+        "global_code": "9F2R3QW4+83"
+      },
+      "rating": 4.6,
+      "reference": "ChIJL0JCVooAEkcRRhLH0UaNKEI",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 266
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Chvalkovice 16, 552 04 Chvalkovice, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.40908,
+          "lng": 15.9936527
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.41043287989272,
+            "lng": 15.99499967989272
+          },
+          "southwest": {
+            "lat": 50.40773322010727,
+            "lng": 15.99230002010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub vojenské historie Soldateska Červený Kostelec, občanské sdružení",
+      "place_id": "ChIJDxsE0cxiDkcRSJSKvGQ5ha0",
+      "plus_code": {
+        "compound_code": "CX5V+JF Chvalkovice, Czechia",
+        "global_code": "9F2QCX5V+JF"
+      },
+      "rating": 3.3,
+      "reference": "ChIJDxsE0cxiDkcRSJSKvGQ5ha0",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Nám. 30. června 507, 289 24 Milovice nad Labem 3-Mladá, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.2294023,
+          "lng": 14.8770726
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.23052787989273,
+            "lng": 14.87862097989272
+          },
+          "southwest": {
+            "lat": 50.22782822010728,
+            "lng": 14.87592132010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Muzeum vojenského prostoru v Milovicích",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3472,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100107274693591319089\">made inthe</a>"
+          ],
+          "photo_reference": "AWn5SU5t2I6nv6FjPP2brK7p-2JRce0UU_y_-OeLZ-2X8nvvhXV4bSs0DCPid-F0d3Q8iL87_ouLEF6JJPqwAMn9GI9QvA7lzS2mig_ggq3o-MnhzX_sGSO9egaN7nr9m5gXBhuUSGJlqdhEygl2IbAi7Bsw38y_yr6zn4ODXfQgY-TP2WuuUcGa074mG4rA5Wd6qIeUR41g7yEpRQb5iVhVUwI62EtRuYWcHt2pMY9K-NZ3_Jlo4OhIya9i6tenX19ZNf9L-HC-WoyI7DnW4lfCOpa-vLDZ9ncb-xtvb4iJH7laWdWVt9Smkb5ND64rNYPQRCCeHbeyNi1HB4HDj75IbRgkKAJxYZlpABu1So9gIKeWN_h5qEE9fD0To6qh0koMuciquwCo8pvXo4V4P-2sEg3AXsaDFdub7shUH9aTcsx_A2nWPsEeZ3qOkqW96qmWHQoifxjiQXH0NmqGySnMc_lgr3aE2WpN_FI5fJae_Q-rWj2LuzgbhogjcLdRgQhfCV5sO2SvuIjVkU_Dl-AHFZH-dqMs4cfB9Pd04FCpbP2fjKy9_tEQTdldxyFqRdMOfrdDxX_n_7Tg5w",
+          "width": 4640
+        }
+      ],
+      "place_id": "ChIJdxMF4gD5C0cROvy84Jd0G5g",
+      "plus_code": {
+        "compound_code": "6VHG+QR Milovice, Czechia",
+        "global_code": "9F2P6VHG+QR"
+      },
+      "rating": 4.9,
+      "reference": "ChIJdxMF4gD5C0cROvy84Jd0G5g",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 27
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "687 03 Babice u Uherského Hradiště, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 49.1248897,
+          "lng": 17.4747579
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.12630522989271,
+            "lng": 17.47604397989272
+          },
+          "southwest": {
+            "lat": 49.12360557010727,
+            "lng": 17.47334432010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Armymuzeum",
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113593929400022731083\">archivservis</a>"
+          ],
+          "photo_reference": "AWn5SU7cfcxK55fA1ueajB457RwG9cMc2KaAo-1WCp6BSa8przIjb3SG4GxTYyyxpdTnvBgmc9mohPbEGZzW2uzeFb8vQPGkDfqFsTN5aoJwGBoW2pPUfTSKOvfkKKJJfX5AnzCm0B39HeqVApan1o35X3SXcbUqkmAeJoUd7pIkaK56cJ8cimtYiaiATTe4qrMZSegh4Oy5ABEuzKF2jQhQwVDhD4ATCKzrz0YVhHz3aGlSzzxqjakRQOmoiNlkKRiD4EPHiW6EqmAu4tI8jnqbn_EZBzP0wOZuA-H46JluoPQ2X1xuskUEQON_JuHPm5oZgIchs45Dh6XvIxIUcKqnjA_1U9sRfC9rozdORDZ_R-Rnqvv0VO4yENtqeEFqLBwD0gG0cKoSyCjuAPatVLmVfmHauSS8_kp-4xwW-jZqHBpEv_HYfAjpZ3pK_1AoLvkh2FYEiV2Q2V02-Jh_AkLBgVGb2xbw7-KgfBDLrUjhF9Z63OdMu5OdqzMfy8Ookqxlf5gYsPEOflW22GAy-kVGMoTtvjA9bdjrISN-DHZmur_ofbQd85cBd4Nw-JxgLwA6sGEvxbyV",
+          "width": 6000
+        }
+      ],
+      "place_id": "ChIJSx20k_ATE0cRclPG2xGrJ7Q",
+      "plus_code": {
+        "compound_code": "4FFF+XW Babice, Czechia",
+        "global_code": "8FXV4FFF+XW"
+      },
+      "rating": 4.8,
+      "reference": "ChIJSx20k_ATE0cRclPG2xGrJ7Q",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 26
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Hůlkova 896/31, 197 00 Kbely, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.12932439999999,
+          "lng": 14.529315
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.13023652989271,
+            "lng": 14.53052642989272
+          },
+          "southwest": {
+            "lat": 50.12753687010727,
+            "lng": 14.52782677010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Stará Aerovka",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110356323004251743465\">Ondřej Čtvrtečka</a>"
+          ],
+          "photo_reference": "AWn5SU5RPg16n_u5qVFOaP8ffGk8eZnvvgAfm1IlTYj6zRz9BnAXLoqHFiJFGAkH-yNZxYtzFUsXbfGJMaputqv9jZESFyHRKlACRxsPGZzi-rpofO7m7MhzK_p0PWzIwTejG8vPBLnZcWzeIIFo9YSEmMvkEgtZs23i4HlvVuxdv_mbP5z0tLrr15b_adNQ2sNKS2o2pO7PpK3_QQ_CTmlCkwqeWG5at2eYfKUJO9N43vKStxTDA72tWeEaOeUc12AEBpiQZUjKUEaA8uo_kH0561x18qAQHVc4Qajo4_kLWGWJugcesRdaiLTIrVRJJ3UGZGo8M7Wdc8UO_irhrUAKA8STB2gWNDhpfwwsxOfbzolovIqazb0nwex1dDzM5QmGWF52tKDDCtcJfupO6aEO4SRzlIiV0L-pws6wWM3iWLRJ5iG0azeqsDl2RV8RjPRIa7AO0XgzHn-rY6hu260B3ULyhbuERcVdX8jboSGnZ-chvBXbLS1FQGhz2Eb4SGw6_-RkcDnuimWutQORtZcK4Rq0zc8g8aCzfy1p4djpa9mmi4qdTtFpd3P0VT_ZPbg-NqKcIieIOKBvNA",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ9XUPJ-XsC0cR7YbZxFM5Pb0",
+      "plus_code": {
+        "compound_code": "4GHH+PP Prague, Czechia",
+        "global_code": "9F2P4GHH+PP"
+      },
+      "rating": 4.7,
+      "reference": "ChIJ9XUPJ-XsC0cR7YbZxFM5Pb0",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 301
+    },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "formatted_address": "Lešany 41, 257 41 Lešany, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 49.854981,
+          "lng": 14.544397
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.85614682989272,
+            "lng": 14.54618237989272
+          },
+          "southwest": {
+            "lat": 49.85344717010727,
+            "lng": 14.54348272010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Military Museum Lešany",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 2736,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114894379774443035023\">Ondřej Novotný</a>"
+          ],
+          "photo_reference": "AWn5SU4MNfVT8cbMwoDKiSiTBqH9jq87fYrJcS7eohhTT0qlzFFJEzCer5XoX0gz686Fm5T__iyIB7akUdmK4su9euBgwZRj4cCW5uCo6uX2l0KCFiQxKsZLZWGYx9T0dZ3LwRallib_ExUHGLn5IDr14yMma9nNCrQu1o4A1je_rhdFRmXqyzuAl0qBIUguVWs7e6hvCZjInSkMDfOo1wp-fmjCQT2S60SooS-zSkwbBbBTn96p-l_asUJdosW4D4wmVe9i_G3E3O8lpGnyc31rBNsjo3B2GD1qOQvWqdUHLzD6WKmHKm6QfD39_Ziymjw4IKhLDzdWaS3J0wePHa3VdhcIViLOd8IN11F5en-cISKffDHBr50cGMEmxAptB8m_Zz-mUwoMPkAZI8D_sv4wQ8YSO4-7RLEbZCmkdL-7PLfavV24k7HQF29Vn_cUEZur5X4prjjqJraNHTmEp4afgvTMYgaRRoV-oaEUW8yPzycnJre5sW74g1bzv_cRGoSgwrWA-HClWAawMOt39gE7AuvE9o4fiLP5EfmcLorbm7Gd0RvADYkYXa_IDGfqNj-mXCFN56d3LMJplg",
+          "width": 3648
+        }
+      ],
+      "place_id": "ChIJkcNnu4mDC0cRDVLyoRFxGi0",
+      "plus_code": {
+        "compound_code": "VG3V+XQ Lešany, Netvořice, Czechia",
+        "global_code": "8FXPVG3V+XQ"
+      },
+      "rating": 4.8,
+      "reference": "ChIJkcNnu4mDC0cRDVLyoRFxGi0",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2904
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Mladoboleslavská 300, 197 00 Kbely, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.1223458,
+          "lng": 14.5415795
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.12370055,
+            "lng": 14.54474075
+          },
+          "southwest": {
+            "lat": 50.11828155,
+            "lng": 14.54052575
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/airport-71.png",
+      "icon_background_color": "#10BDFF",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/airport_pinlet",
+      "name": "Praha-Kbely Airport",
+      "photos": [
+        {
+          "height": 1365,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107137261388006841764\">Tomas J. Kovarik</a>"
+          ],
+          "photo_reference": "AWn5SU5RtqyddLsQk6nS2gNyQ2IDE4CXxAUsfw8-Lvmjcp0vzBMpr4OTBt3OPoGlh9QGB7v94f4HxKeM9s6dLes1Z7e_x2PXsCNIFJj4XNA3dDuGpdg3Wnr51JPpgly0QTuCGlO6jc9okD5QtvKXeZ3QwcOyN4QUUG_mAkrDqs71zcTHBlSZTsToZYsxrqg4T175sBVMIOAjlAcJBHCcrO3KLIFEdk5qmjgxNRYmWuKh265iab1O-4MPX_fBfnnra-Azb2Zt0KOrmGIZuwynR_qGTnUTZ4i21EuKPNAyPkOSxbOY9Ab8piKUqYrQHJGOqmUnGy1nsWlSN9N0VHA-1SEllQmTOjUJwdvv0bhkZ_4f3cSA3Z8Lqo_yWU_WNvIjcaWkGKDy8EitfUcspRjyYyO8ODcNSwSk4U8YHTcLXR4F36YjIP-jbkuiH4FbNEuuoHU-RYODHu_keWqfbCETnAkfpzJkI6v0edibbwkM8Nh5NQF1KkuS_sBCCyGeOekuJKtwbQMG1NrOZgxdkk4Zx_umoXE4m3JSPheD4I2JmkdmGAzS4rT14vipLyC1upVSrYnukYAMUge8",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJHaIjkh7tC0cRlSLJuVcVpiY",
+      "plus_code": {
+        "compound_code": "4GCR+WJ Prague 9, Czechia",
+        "global_code": "9F2P4GCR+WJ"
+      },
+      "rating": 4.7,
+      "reference": "ChIJHaIjkh7tC0cRlSLJuVcVpiY",
+      "types": [
+        "airport",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 198
+    },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "formatted_address": "Mladoboleslavská 425/9, 197 00 Kbely, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.1252556,
+          "lng": 14.5355237
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.12682657989272,
+            "lng": 14.53669612989272
+          },
+          "southwest": {
+            "lat": 50.12412692010728,
+            "lng": 14.53399647010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Aircraft museum Prague-Kbely",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 463,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102854637754858710993\">Vojenský historický ústav Praha, Letecké muzeum Kbely</a>"
+          ],
+          "photo_reference": "AWn5SU6O7AC5_FfKAIYNDz1Uxu8IXhQSMZChPuWIxtFrGNhuW8t-GV0wingkfKfalhLF61KBB4ZHosFNUzg_oW7PFciY8UC1FyZsKQex0M1uYAZH7Xn1TzMnirEDC6NHjNbSAYcXqpNO8ALIDGIOr6qtB7u3f0SwBw5j63AkU73B9QKHvg1bbLj3eReT5ebxrQ38pH9HKLAf9YazF9gI8OK_zHHwm62MgGkF1wSO60HVkTt1o69AoD2gvpcQZ-HPuLm8Nqv6bXsPSjSJJTLyUEdun4vxeY-U2GoGVCoeM3ff3z7c9-c6r5k",
+          "width": 800
+        }
+      ],
+      "place_id": "ChIJu2niIWeTC0cRq-BNOHo-NWY",
+      "plus_code": {
+        "compound_code": "4GGP+46 Prague, Czechia",
+        "global_code": "9F2P4GGP+46"
+      },
+      "rating": 4.8,
+      "reference": "ChIJu2niIWeTC0cRq-BNOHo-NWY",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 4057
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Lublaňská 1729/23, 120 00 Nové Město, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.07147819999999,
+          "lng": 14.4319076
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.07281862989272,
+            "lng": 14.43338897989272
+          },
+          "southwest": {
+            "lat": 50.07011897010727,
+            "lng": 14.43068932010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "RANGER PRAGUE Shooting Range",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2040,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114262835548834083884\">RANGER PRAGUE Shooting Range</a>"
+          ],
+          "photo_reference": "AWn5SU78-L93jWdqGDcnbd4F69vfT5h1Ez7AN0jE5nB-a-92Bba8woum63X62MlHX3BKNBV4yypr6-fbvCNb9lDLCU6iYTZHV82BTlxSUVL4i66Rxu4hxJzP2TedjLHX190226TShczWDg00g8mdkMdF8JWzHBKnHg1JakjVpJN9CbAjXYBbANAItt0bJoGqFd4fbDg3YMjYl9J0mIazqZXgW0ZOyXowmLcpsPy5xj6rnLo1OU4dFg7JmszT7FrFxIVU93I8GbxZPfu-lloMvtLfgHiexSOI8AX7hCnSbKEOet1hfSs13wM",
+          "width": 3057
+        }
+      ],
+      "place_id": "ChIJz3Dn616TC0cRte641WyLH9Q",
+      "plus_code": {
+        "compound_code": "3CCJ+HQ Prague, Czechia",
+        "global_code": "9F2P3CCJ+HQ"
+      },
+      "rating": 4.9,
+      "reference": "ChIJz3Dn616TC0cRte641WyLH9Q",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2484
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Obchodní centrum Šestka, Fajtlova 1090 /1, 161 00 Praha 6, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0930516,
+          "lng": 14.2905908
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.09444417989273,
+            "lng": 14.29192842989272
+          },
+          "southwest": {
+            "lat": 50.09174452010728,
+            "lng": 14.28922877010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "GAME WORLD muzeum her Cibien's Corner",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 731,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108056604236240555779\">GAME WORLD muzeum her Cibien&#39;s Corner</a>"
+          ],
+          "photo_reference": "AWn5SU6Zz9TnNL36zVRUru8mT2YTGw00T9k05iOEZ0KY8RK2B7ccJyUsonRcDchSkPi0mC6XFbEXhvcF_oA1_BNjHu3VoFQI0YPgsTyycmYuxljMN89L-5603AaPic8cxeuhvSf8sWllXc1xBtLoY64_p_j2Z8RZNxp7QUTtwmENFnG3bqYYUeIZFrg3LHObisWGXQG8jXymn-vzRlZUBW5Eer94Ntj86T-my1aP49xvMCVv928NLkuwFNOEVQGFVUXXPZV5wgXe9Px08yGxeNjkqz1uYJJ1ETEtl6BL1C00UdJA3sHL",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJU3Nw7pSVC0cRQSUAhHCGjdI",
+      "plus_code": {
+        "compound_code": "37VR+66 Prague 6, Czechia",
+        "global_code": "9F2P37VR+66"
+      },
+      "rating": 4.7,
+      "reference": "ChIJU3Nw7pSVC0cRQSUAhHCGjdI",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 560
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Dlouhá 612/6, 110 00 Staré Město, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0889098,
+          "lng": 14.4221679
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.09029052989272,
+            "lng": 14.42343587989272
+          },
+          "southwest": {
+            "lat": 50.08759087010728,
+            "lng": 14.42073622010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Shooting Range Prague",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 768,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116252186510025691748\">Shooting Range Prague</a>"
+          ],
+          "photo_reference": "AWn5SU4e4sEOt11j-6QcZtvX0zcxn_PoK99RnDyAx7jtDRbftXzEmZo1D3B0lItqGDLPin5dRCClP2H-sIHUyCC4UUODNqO98i_yNe84EfBEVXt-9XG5eIZ_B-KFKy9WQE50lNNX3FseZqBIhkQyNqW3zSDgXN5rSMm1oau3AZtbiy_0rZtPpt1FU-AP0JbKOx_npi98keLBSMbYz1ch_IBhzPeHKTUSi1M_FW_rSFOsotOxrVGZ2oQFDGUW1l_6HjhmBlfkgk7RZvjFVYGU4gRPCYvJBWcZVVaoT6tiMOBI-OFTv4dIgoo",
+          "width": 1024
+        }
+      ],
+      "place_id": "ChIJ-5sL3IKVC0cRBhCvLiGmWIo",
+      "plus_code": {
+        "compound_code": "3CQC+HV Prague, Czechia",
+        "global_code": "9F2P3CQC+HV"
+      },
+      "rating": 4.9,
+      "reference": "ChIJ-5sL3IKVC0cRBhCvLiGmWIo",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1018
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Husova, 602 00 Brno-střed, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 49.19401620000001,
+          "lng": 16.6044112
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.19537022989273,
+            "lng": 16.60579052989272
+          },
+          "southwest": {
+            "lat": 49.19267057010729,
+            "lng": 16.60309087010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hotel_pinlet",
+      "name": "Bunker 10-Z",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3648,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102941476830172857473\">10-Z Bunker</a>"
+          ],
+          "photo_reference": "AWn5SU4Tdz8AdLK0APZ9jCo32vYqlBZi8wsE1ZSzQPRFm46K7u0Eyglpc3ATKEKHUErZEsoATZ1RxXEFUqhJRvk6JMWBgJPYT9t_vtGovXov-nqX0nF2USrdwSQYeRHgRvijmDnXTMniwarajl8iDGMNSDUJv8jq4ovIPhTA_wYwtksLEV7mBLZ0J-1FXj1IjPPH9J3NmEEKWd8HYca8RG7gKxwfVa5OQ_2DPwaEFzCRkWr-VoXvYuFy5vF4bceiX1cSNlMe_nUrKXiw39Hmqns03-JfsgF3BTi9oYUaqXUHeFyxcbMHKO8",
+          "width": 5472
+        }
+      ],
+      "place_id": "ChIJH1SSC1GUEkcRrqjx-NvUOD4",
+      "plus_code": {
+        "compound_code": "5JV3+JQ Brno, Czechia",
+        "global_code": "8FXR5JV3+JQ"
+      },
+      "rating": 4.5,
+      "reference": "ChIJH1SSC1GUEkcRrqjx-NvUOD4",
+      "types": [
+        "tourist_attraction",
+        "lodging",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2098
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "967/187, Sokolovská, 190 00 Praha 9, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.1068199,
+          "lng": 14.4879493
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.10809432989272,
+            "lng": 14.48936842989272
+          },
+          "southwest": {
+            "lat": 50.10539467010727,
+            "lng": 14.48666877010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Kluby vojenské historie",
+      "place_id": "ChIJq41oVLLsC0cR6X-q2fs8uVc",
+      "plus_code": {
+        "compound_code": "4F4Q+P5 Prague, Czechia",
+        "global_code": "9F2P4F4Q+P5"
+      },
+      "reference": "ChIJq41oVLLsC0cR6X-q2fs8uVc",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    },
+    {
+      "business_status": "CLOSED_PERMANENTLY",
+      "formatted_address": "Dlouhá 1635, 664 34 Kuřim-Hanušovice, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.11000199999999,
+          "lng": 16.8073919
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.1132083,
+            "lng": 16.80934659999999
+          },
+          "southwest": {
+            "lat": 50.1088367,
+            "lng": 16.8015278
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Klub vojenské historie Kralka, o. s.",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 399,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/118351148848405203999\">Jakub Vl</a>"
+          ],
+          "photo_reference": "AWn5SU5yeG5GgGYH-Nn2VaR924qvdhazTeBzYt-IYoFXlq-ipoQfjYrMBUmFNawFEQT7IhqKowElhgZbu1zlP-pP_VQgb8mGgEAybJE5ZQo7h1YMealkafZ6HZv5n3O_IFzItFrtwQoNGNjO8jv9VNQLtwAon4NXnKYXbA1KoQ5jEShDbn29NtZioc02QpdxYakpZLM-1FZLxqu2vUQIoxhY_MLvWH75ZK23yPFEE5TJTHTR4mwEyZcCZw0Erh_Eh5ROa8JwGjgW3fDDg0HEJgm0i42MULUB4vksXWiLSM_pKBmfTuaAaQXNn8ixnH0SX1mIWt8pIQfq9F6fmnHh9MIdqfU41NT1l3B--rRccLnAFdvKui_2opJDlaTiPONb-2bMshrEcc9--HWAwel-9NY8ql0MPDIeCGJXt2IDGsvu2QMq5RD1dFp6YtRShvKjOkdKQIhUf2e3tQWcM7dgE4l2pIrEtRMKMlHhwYmjyrF_vL4iI_YSUVX521hNvbQJxgaBH15wcPbARwgYNrVqz8R8tgNzP4OBkyZ8aKz03fdB4utQaHauv5thXoJH_N3w65sqdSrx3q5x",
+          "width": 600
+        }
+      ],
+      "place_id": "ChIJa0ZXfxoBEkcRBApoUn88ppo",
+      "plus_code": {
+        "compound_code": "4R64+2X Malá Morava, Czechia",
+        "global_code": "9F2R4R64+2X"
+      },
+      "rating": 4.3,
+      "reference": "ChIJa0ZXfxoBEkcRBApoUn88ppo",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 6
+    },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "formatted_address": "Vlašská 591/13, 118 00 Malá Strana, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0871606,
+          "lng": 14.399538
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08855947989272,
+            "lng": 14.40090032989272
+          },
+          "southwest": {
+            "lat": 50.08585982010728,
+            "lng": 14.39820067010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "KGB Museum",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 800,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115289992372522574855\">piment0</a>"
+          ],
+          "photo_reference": "AWn5SU7TluXDrhYjhGcXk1zMdjytu8drqnXr2JxL5_LOQ0yuG1OlyRQbrZ5z3tesWRydmCfY8GMgZQrLza_iWk7vArcWKQhjC_G20mm5IC_pAn_pftxEGgeKjihXAra5PfjwZ8lbkEqm6q_RYCyOQ35vgXDDLNC5N04MKwLmgXZ_iQuJqvytxZaktGxEfnp8AChqk_XXdABmwgVcP_Y4_-ClzoEF5bnnQo173eyhGBxvsMiT2MOP5XTPc90kN71G9y8kQfMrY6LGgHxX82RwRciT-T-0UhUEV1F6A8jG6DxuBFA1wiY8Ix1dnf0ePDzbr4PfGhI_450Fx1dPQKLrT9Sdf-SNbhNGWp5ssoH695yuaTL_P5NrEnc3uivE9BU4ioVu5vIne3xWV-3DN9fnb5ULR6_ZHKtvBpMmsWqcSFzbtrB4O4tlhDaNtqBn9alV-tHWHYgyukHCtCcgDB0STpMIagzeN6db06Wo32AJ-YvfRd7yzaYXDq8sD7l4exzonIkMMvVNtug9TuyRv_Ag08msMI2iVKb5t87pn4Ytg30DloxG1sMENBvS4n_aJlAbx9MUz6X2bw",
+          "width": 959
+        }
+      ],
+      "place_id": "ChIJC90lkR2VC0cRCFRtdtG0IXI",
+      "plus_code": {
+        "compound_code": "39PX+VR Prague, Czechia",
+        "global_code": "9F2P39PX+VR"
+      },
+      "rating": 4,
+      "reference": "ChIJC90lkR2VC0cRCFRtdtG0IXI",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1352
+    }
+  ],
+  "historical reenactment society": [],
+  "world war 2 reenactment": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Powder Gate, Staré Město, 110 00 Praha 1, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0873417,
+          "lng": 14.4283529
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08869107989273,
+            "lng": 14.42974727989272
+          },
+          "southwest": {
+            "lat": 50.08599142010728,
+            "lng": 14.42704762010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "WWII in Prague Tour",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1483,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110310654467587426753\">WWII in Prague Tour &amp; Operation Anthropoid Museum</a>"
+          ],
+          "photo_reference": "AWn5SU4b2Q5CoOn7NlZqdI3tgRTzwqogcAs3Qbj37AQTeD0MA8t3dT-jMS_0t-1c3l0Ge7bjh1b72mFhU9QZkKlX3YqrkDACUW7fBwI_b63PvPaBJZp4uwfC3Vu7HAIKBZqqWX2Somc0Z1nS8ePUENJE69s75v44B4V0A79uyb1Jed3VaNUSusfooiuXGrXo51S5rLjiE4GKJEUwRziOQX_Bw9DQhKO5sYMwwaaMMRhoEHLdCFthHLsZo3c3in0TQPh1DDisywee_julWrGujmsvp_Dr1x6UgjHfC7lPHJUGXpHSyS-eDko",
+          "width": 2374
+        }
+      ],
+      "place_id": "ChIJ18XlPe-UC0cRWM4DUWRBOQw",
+      "plus_code": {
+        "compound_code": "3CPH+W8 Prague, Czechia",
+        "global_code": "9F2P3CPH+W8"
+      },
+      "rating": 4.8,
+      "reference": "ChIJ18XlPe-UC0cRWM4DUWRBOQw",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 116
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Resslova 9a, 120 00 Nové Město, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0759236,
+          "lng": 14.4166803
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.07721287989272,
+            "lng": 14.41803952989272
+          },
+          "southwest": {
+            "lat": 50.07451322010728,
+            "lng": 14.41533987010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "National Memorial to the Heroes of the Heydrich Terror",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113599127111328576704\">Aleš Musil</a>"
+          ],
+          "photo_reference": "AWn5SU7k_9M80WTu6DzGpbF-6uxQ3AgLMigmRU_9A_YREBtXj1j2MjjsekGhYB2sOQeoRxI5iLHrtdRgm8GYJVXY8h4ygFKdxNBJCXK-b1bMmBh-MfXUuZ3hMm9ZyZJBWLcqctT-OA9RDGT-NSIrAmpPOiWOliPfqDGx3P9_F92dm6XFsPAGzqxkwy2vQdVPcqEr_ydD84B4sTgqaA7DHleyciUlLzfG0_Gn7CD9rxj-iRIxq9igM3uhhilEijmf3aVwgWg74yNLQ9J05T3Zlstgjdpz4pZs9sQ90FFGs1kXKZJMTsmeRRDS9BFFqJJSWErKLOWeygmKWM34VJ0Jg3mAysUVuKp500BFxZ32mK5VCh74asmt9skUWfjzuqEx5alvensVXD4BCADIYzLFh-fDTDfcbE8O7UiRawA2FamIO0tP-3xOh2DzeeZHMUX1YzcMHgAYc3h8fgEEumy2woGTVHckUdsigYNt86t6BuVux5PQ7X9H-zY4tziz4VZwmLJBPGYGYSwpM8nZ4TFlVPLpyRdJpdFNQYHB29z9yBc3V-Z-A8A27lr6rANz6Ct0HoV5GPP5TBJ3XYyr5A",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJT_DiBvSUC0cRLPuDSuKtZ-I",
+      "plus_code": {
+        "compound_code": "3CG8+9M Prague 2, Czechia",
+        "global_code": "9F2P3CG8+9M"
+      },
+      "rating": 4.8,
+      "reference": "ChIJT_DiBvSUC0cRLPuDSuKtZ-I",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2387
+    }
+  ],
+  "cold war reenactment": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Resslova 9a, 120 00 Nové Město, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0759236,
+          "lng": 14.4166803
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.07721287989272,
+            "lng": 14.41803952989272
+          },
+          "southwest": {
+            "lat": 50.07451322010728,
+            "lng": 14.41533987010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "National Memorial to the Heroes of the Heydrich Terror",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113599127111328576704\">Aleš Musil</a>"
+          ],
+          "photo_reference": "AWn5SU5CJRoGYARMRo1mdN-AsFtK2iAFvLvtig3BV6kmR7vmhc3gK_ZTQMW2qd914ZhFazmLlOipFPMqwM32rhz_i1RpAUz8JRNzIN_i7Nbb_8ewBx8dcMI9jy_nRD-9q3jH48dFRm-ZilHSk6gRqPxgbgbP3jmGgs1uxjZgxFN-zrV2F7UDBuH4HuVK60JVzRbbnibTYnefUaIWlAIV4V4Rtp9fGY-xCjNy2rkbd0sF3vh30e8Q-aVB0csNV_DNI5fk5XTDbYsTKkzvBExUMIssrg0ezawYki3wvQ77rxG2O_OzW_E3qKiwdHkVQlk86CK5ZI-AYFZnPo8BGc5gabHnTaduStEB-GlEnWLTDZ0_KM8yt1V-e2Yjm_Gi-rN1BZvdP0rlse1CeetV-3s_gdILunNqw8oiCe-8zf2nFCeV737Er8BWM4M2g55C_xYdn8JiTBKOJkfqukf2bpM6cU6K9dVallq7rARXubm7uP76wRyh2zf5qa3sACsV8FByRpLIs7r1eRFtNTobNILWjthzTPlEQsl3wgn90w1y18m1r4vfLLdM9h5VOyGzLZONoy68HwJtRAl630kjYA",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJT_DiBvSUC0cRLPuDSuKtZ-I",
+      "plus_code": {
+        "compound_code": "3CG8+9M Prague 2, Czechia",
+        "global_code": "9F2P3CG8+9M"
+      },
+      "rating": 4.8,
+      "reference": "ChIJT_DiBvSUC0cRLPuDSuKtZ-I",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2387
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "U Památníku 1600/2, 130 00 Praha 3-Žižkov, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.08757079999999,
+          "lng": 14.4446676
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08895872989272,
+            "lng": 14.44596292989272
+          },
+          "southwest": {
+            "lat": 50.08625907010727,
+            "lng": 14.44326327010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Military History Institute in Prague: The Army Museum Žižkov",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3060,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100771013763183792410\">Геннадій Петрович</a>"
+          ],
+          "photo_reference": "AWn5SU6x3UEGMBo0EE5Dl4SGZk-REvfpE_QJjRth8Qkb11Qj6WsH1FtVyTjfOm0q3F_nbpABoLMsNsBwECqnBUsxbr2K5RVcHfquMDHnVNNizhsVB1cw6jEb7omZkElIRbsFQGymQfgCNwQhYJkCcCEAUFeZHOmVj0BRU4t61vbMuv4qZMulLB3hErO73Ta6EfODxacIqsVMJc8NNCWA_XXO_EmCeuAQpSLif0wnEuFcEimSWQU7XIKzVgc54sS7mJFDRHXv0V2G5PxF0dcRI9bKqcQ9V6Ovg0lfFdp4S5eEXT-ZT8Tuw0p3-y6SUCx2o49zyCFthEjd0dDcDsRXAivn-mcVsi5-cTzcU-EzrAAFqnbStjIlbCnPg_FQs2BZQ6T-Ko76FaKa1JRI05tPMVKTHvdVfEfxZejERIicovY5OvxdjKlihiTtASyeJdFz0w5M8MldCjrTGFIWWCavLqHzqyCyA9R7Jo_DA1kFW1aWa-fBWt7cSDjQuMbxS9AlT6Hb1T8y460G3D9q2yrMlvI0F-HfW2tOcT0APAtFvfzSr_ABcMbKRa5Zeugcm9i0juXUsRz5nC89oekuQAtV7MwVXin_pUSfTA",
+          "width": 4080
+        }
+      ],
+      "place_id": "ChIJA-MeHpiUC0cR4Wgcnqy9fh4",
+      "plus_code": {
+        "compound_code": "3CQV+2V Prague 3, Czechia",
+        "global_code": "9F2P3CQV+2V"
+      },
+      "rating": 4.9,
+      "reference": "ChIJA-MeHpiUC0cR4Wgcnqy9fh4",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3381
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Václavské nám. 68, 110 00 Nové Město, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.0789704,
+          "lng": 14.4309369
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08078627989272,
+            "lng": 14.4321692
+          },
+          "southwest": {
+            "lat": 50.07808662010727,
+            "lng": 14.4291608
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "National Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 608,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101309179895225276037\">Václav Krhounek</a>"
+          ],
+          "photo_reference": "AWn5SU7cpr_hQLRz1xjfmQsiHR-fyhQ6nq_N0SQuJsHGV3i7kOFsAwQh06gYi8rQmOlwuUwAz6XVrnsrYG-aAkag4slr_QQ1JtX-UUt7OdLdQvjTp0qmnexlMNZm-BpH4bmZGT624ybAFCXJFLcgifuM3OCW2p_DZ7w0DQ-PcPmJmbYLr6W8bmXhuSUzYDc4mO7VHBGWEVo_IbzhuNivwLwN3OA5q9x2bAvecH93haJMXm-XcrGAl5o4kdkxOXVR7GG4t3bcr4uqr060T7fnleMD9Uv-Ji5G-JGPk48FCe8DBApe6VvPtxJyDknl8PsN2tlg5yVvaaFeYZUf429Mow7IZOM-Bl6DqauLKjJ1RMB0g4hsWBkGEGcOGS4IOpU9thZBR4wXUpV8dgVmX85JEDz4ITnU-dMgGp_1PjBhs5fgB5xAXIxMEId5PRWAHoe_UljFH2KqnvzKin7fZafDtOCpBxI8sSYFHDoX-31a4UXYn4gBhFQwKF0hzt8TiOPnK9lvFiXc5JmUw7FQQLsK3793g7kJQhXkhi_M1KcvqjFGP7snncb4N9Ex1R0Zg_a2J3yIvNeYzQmR",
+          "width": 876
+        }
+      ],
+      "place_id": "ChIJua9Ogo2UC0cRpkk9dANajkI",
+      "plus_code": {
+        "compound_code": "3CHJ+H9 Prague 1, Czechia",
+        "global_code": "9F2P3CHJ+H9"
+      },
+      "rating": 4.6,
+      "reference": "ChIJua9Ogo2UC0cRpkk9dANajkI",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 43907
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Betlémské nám. 269/1, 110 00 Staré Město, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 50.08404489999999,
+          "lng": 14.4166328
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08544232989271,
+            "lng": 14.41802537989272
+          },
+          "southwest": {
+            "lat": 50.08274267010727,
+            "lng": 14.41532572010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Náprstek Museum of Asian, African and American Cultures",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3072,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101462651738899388322\">Jaroslav Chour</a>"
+          ],
+          "photo_reference": "AWn5SU4m0dAxAWWiCjzd3h2Mgq0fsaQY3zxCMAxHkPUIw8oRz5FOS4AOFAcqKSUF7xz8Nzh47qKTT10V_cZ9aEUZZRUS1Tbpt6LN02QfE7iBK1wGcJOxT9L3Th-RtUC72iSPhQ-7yBFJzDvRiI14bI0ZUjMttNaWTrUNMH3FLV8y7zQ59m3Bq4FLBBMRWy3kuIdR2DzblN-KW_eMG88mkNXLJwKROnuWZw0uvnnZtHHABdqoK6QuFFDBY-rre1AR049CPHamThkUg-8S-XM93tOiVKQ7D4LbKKVquvGcuhtQAEOpCHpY-VsjCxmiCJZMcc5x828Hjvtm5C-VkvTpE7WD5qp55CGSPoi-cyNJBwJ-TR4sv3GSBNhRUCSC-1RFbqcfqXP209oLKwI0pp7G9AL3-AvFQO6mtfG9sk9obHzlNQhHhT3RUABFtcN6Fx0RdYqNrQli7VQNYMfVsV844SZi-Up8FYNStPtv_HVd_4WjN_meAdKT-XPwpU4iCJ1GN2BRaLhBVxiUrjhUOPtu-ZvhB_GdN74beRcK8vWaQsBhDMQX9l0f7EnAERr_aXW5gHDZ54QD_Q",
+          "width": 4096
+        }
+      ],
+      "place_id": "ChIJU3Lep--UC0cRM-iLeWQf5PY",
+      "plus_code": {
+        "compound_code": "3CM8+JJ Prague 1, Czechia",
+        "global_code": "9F2P3CM8+JJ"
+      },
+      "rating": 4.4,
+      "reference": "ChIJU3Lep--UC0cRM-iLeWQf5PY",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1297
+    }
+  ],
+  "soviet military history": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Lešany, Czechia",
+      "geometry": {
+        "location": {
+          "lat": 49.8551104,
+          "lng": 14.5440519
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.85644362989272,
+            "lng": 14.54539012989272
+          },
+          "southwest": {
+            "lat": 49.85374397010727,
+            "lng": 14.54269047010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Military History Institute in Prague",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1500,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105463918113543689842\">Zdenka Rehakova</a>"
+          ],
+          "photo_reference": "AWn5SU6vS7VUcXaimHrOkHcFFnRoVDV_b0GzK_96SETG_toQkDk-Ogl9yaTE__F1Sxq08liOiKB4bTm6gCNIIeX1TflXiYViPd85AbQqv0Bv8ob2rCvs7YLfiIodJbrTegnZ0nF23IG7d-_hW06zCaL-VGK4T2k1Nq95dLSTjs8OCa0ULOLED9qUIpjkTMJ-GzXAZPw9lXZ2DL6pmXNcJ7XoReo0pLj1KPYbYg_Qd6Ri8vsrb7-0Qe4zoGQpN3cyzEmALJuS248wNxypquTTAIt4oLlgp2_blS-SG-MspSvGfyraUQ-hYzTLISwY9SV1SJdXlQNJx2o9_6Vy4YXklI3wz43HIWgZd8AgchfaAHfJra1tbU8hCLsj_BwurhJUcWTWPjE7vVG7XyUoMXwO6S3UYm9vzIVSjbESLVniOtocbwoNP-1pWsmHlyQkBLXLC7Hs0qK0FnLzzGA6XXjD3CCyIZSGIuupwSeJoEPpHcFbdI2HRk3vGEaekntjaFUbu8le8OdkLprx7GlhzqLR5QgTaai3YYLk_mRyajYk-1JnJUo3f1PySzSJgw37Y9OVgC3zlXKpTGr1",
+          "width": 2000
+        }
+      ],
+      "place_id": "ChIJtxLE6IiDC0cRbLoluoNNmhI",
+      "plus_code": {
+        "compound_code": "VG4V+3J Lešany, Netvořice, Czechia",
+        "global_code": "8FXPVG4V+3J"
+      },
+      "rating": 4.8,
+      "reference": "ChIJtxLE6IiDC0cRbLoluoNNmhI",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 216
+    }
+  ]
+}

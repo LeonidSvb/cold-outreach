@@ -1,0 +1,3201 @@
+{
+  "klub rekonstrukcji historycznej": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Muzealna 5, 72-320 Trzebiatów, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.0591458,
+          "lng": 15.260862
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.06051892989272,
+            "lng": 15.26223542989272
+          },
+          "southwest": {
+            "lat": 54.05781927010728,
+            "lng": 15.25953577010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Stowarzyszenie Rekonstrukcji Historycznej REGA",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1868,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111947794540093344244\">A Google User</a>"
+          ],
+          "photo_reference": "AWn5SU6tcnvk1RN7i3WQQnkfcz0V5T0gqKTCe4zbo2_u5z8EjlZZmx5r_vR_bgJfwvas8KAC7Jh5KIS_Fzg91Z85jyVNylilS2UA44P_8Opt5sOcuuAqOT3bJtW9CEBb3c1hGF_jkZ4-oOBbOwu6C2mtaoOxkj3qQ7W1NgKG9zYQCBKgNMG8L_rH8yXLEOjkjcyofvEuUg4zD_zJHB427rT9-J0BLyJWBwyjsbpmvqx_-sjEf7gws4uDlf2t5gLY14k59iQIdF22BqhScZnkH1PqBn05YJHBgroiAhg3DZb-fpPY9GinAqk",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJ_8GJ3vtvAEcR6vDhe8p9c0M",
+      "plus_code": {
+        "compound_code": "3756+M8 Trzebiatów, Poland",
+        "global_code": "9F6Q3756+M8"
+      },
+      "rating": 5,
+      "reference": "ChIJ_8GJ3vtvAEcR6vDhe8p9c0M",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Młyńska 7, 31-469 Kraków, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.08270839999999,
+          "lng": 19.9700658
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.08413357989272,
+            "lng": 19.97163217989272
+          },
+          "southwest": {
+            "lat": 50.08143392010727,
+            "lng": 19.96893252010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Stowarzyszenie Rekonstrukcji Historycznej Wrzesień 39",
+      "place_id": "ChIJg7f4qsJaFkcRHAsTAp_QB-0",
+      "plus_code": {
+        "compound_code": "3XMC+32 Kraków, Poland",
+        "global_code": "9F2X3XMC+32"
+      },
+      "reference": "ChIJg7f4qsJaFkcRHAsTAp_QB-0",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Miejska 104h/2, 35-317 Rzeszów, Poland",
+      "geometry": {
+        "location": {
+          "lat": 49.9826406,
+          "lng": 21.9831621
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.98401272989272,
+            "lng": 21.98463562989272
+          },
+          "southwest": {
+            "lat": 49.98131307010728,
+            "lng": 21.98193597010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Zgraja Banitów i Renegatów - grupa rekonstrukcji historycznej Rzeszów",
+      "photos": [
+        {
+          "height": 761,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110874460641268315483\">Zgraja Banitów i Renegatów - grupa rekonstrukcji historycznej Rzeszów</a>"
+          ],
+          "photo_reference": "AWn5SU6arHjqIe8Dgi3laaheHQ0XpJXHkOs9HIcOp7n5FiwPDvtVX68WQIyRXMinAcA3pxnd3LwuuEwz5LOUaPvrUF_LlvyuF0Y7h5bXcx642Ue2OZlo9cCmnkd8t3r-keGq3xEdjzo_B4CDf-Gi3EwvVWYucy4C5COsMCTQADDqaGDb1Dvnlg122yNFyaQhR3x7GIvOiL0WWJmR-fHWW-cualRDW7EW3oS4Qd1Qt96HChWNsNSCniGJ8YM_ExnM8tS9XcjutwwSV0Frmkj88s7xNyLBa2QEbTe9SbXzJ0S99Am-qmuk4HI",
+          "width": 1500
+        }
+      ],
+      "place_id": "ChIJuxJUc6X7PEcRgaEHekvpFzg",
+      "plus_code": {
+        "compound_code": "XXMM+37 Rzeszów, Poland",
+        "global_code": "8GX3XXMM+37"
+      },
+      "rating": 5,
+      "reference": "ChIJuxJUc6X7PEcRgaEHekvpFzg",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 6
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Cegłowska 62, 01-809 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2850786,
+          "lng": 20.9534286
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.28642272989273,
+            "lng": 20.95476337989273
+          },
+          "southwest": {
+            "lat": 52.28372307010728,
+            "lng": 20.95206372010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Stowarzyszenie Grupa Rekonstrukcji Historycznej Bluszcz",
+      "place_id": "ChIJq6qeyNPLHkcR_eD_r00RZfw",
+      "plus_code": {
+        "compound_code": "7XP3+2C Warsaw, Poland",
+        "global_code": "9G427XP3+2C"
+      },
+      "reference": "ChIJq6qeyNPLHkcR_eD_r00RZfw",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Nowolipie 18B, 01-005 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2430224,
+          "lng": 20.9908268
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.24431602989272,
+            "lng": 20.99213882989272
+          },
+          "southwest": {
+            "lat": 52.24161637010727,
+            "lng": 20.98943917010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "EKKR. Stowarzyszenie Elitarny Klub Kota Rasowego",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 800,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112835968379047639650\">EKKR. Elitarny Klub Kota Rasowego</a>"
+          ],
+          "photo_reference": "AWn5SU55ajpdDlHTXXyvjx6GjSSCfWA5h0lxHzB7xEhOjsWEx2KPijl5dxd0kYTsnNcKHQ2VI-ytMZY9FzVj4kZorjc7gO9Rt_o0vO2YwVTJtHYaDkdQ4lobjeP578tLJEvqiCxUlr1mCxNnwgLa9xsvfqu2L193UyGNj3ONUodTTcuAQH9_YWa4OflqTkXY2oSpjVEzrJkhvtXz4DeiZ7Tr0LakNiqlUz24PJ5eEQLDDp_mc-AJJ7jy0rn6wbrMpjMWe-OTOUyOQrFymunPKmtT6Y3wwPjoRt4jqd-g0gBKsEmrybB_W8c",
+          "width": 800
+        }
+      ],
+      "place_id": "ChIJQzHEdX7MHkcRCa2Fuyi1gJI",
+      "plus_code": {
+        "compound_code": "6XVR+68 Warsaw, Poland",
+        "global_code": "9G426XVR+68"
+      },
+      "rating": 3.3,
+      "reference": "ChIJQzHEdX7MHkcRCa2Fuyi1gJI",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 12
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Ozimska 4/4, 45-057 Opole, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.6669414,
+          "lng": 17.9252176
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.66826272989272,
+            "lng": 17.92648947989272
+          },
+          "southwest": {
+            "lat": 50.66556307010728,
+            "lng": 17.92378982010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Grupa Rekonstrukcji Historycznych Wiwern",
+      "place_id": "ChIJ4aV9WQBTEEcRjvrLCeh9MOA",
+      "plus_code": {
+        "compound_code": "MW8G+Q3 Opole, Poland",
+        "global_code": "9F2VMW8G+Q3"
+      },
+      "reference": "ChIJ4aV9WQBTEEcRjvrLCeh9MOA",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    }
+  ],
+  "rekonstrukcja armii radzieckiej": [],
+  "klub historii wojskowej ZSRR": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Polska, Rafała Krajewskiego 3/5, 01-520 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2610301,
+          "lng": 20.9967529
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.26243082989272,
+            "lng": 20.99819627989272
+          },
+          "southwest": {
+            "lat": 52.25973117010728,
+            "lng": 20.99549662010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Club Types Operational Command of the Armed Forces",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104282700630794305941\">kazimierz s. ozog</a>"
+          ],
+          "photo_reference": "AWn5SU7Ifel9lEoBw0rOB7i3ITWwsPn2BwARqN_7S-KvqYSLq7YGbsISpxIhGBUQOt5vfGjsBARFKjlmr7gptNyRr-7unOXMKGZlTraV_jZ0H1wtNSrTBq27mEhd6bjPmvVCMPGpFt8gH6Q334Zg8Bv6dWoYZgImGvyRfO8sULegucA3KrcYfwxKjJ77XIdjhGFYKcfhve8Bem69GaVP67e2Ci46nSrXkDFy5URY6gW4Yvt5RmVcUiRCFAzAxrUVv8OF8RlmtUnLEejUR00cvEOThln9WCjoRUMWpVko1wOVTgvw4eEeVn6VDJk63e0AhX8QBeEyyCwMWNdtmmXjkp0ZrkqyPoEeaQs2jZ0Q6IvIN0vCE6tOODE1-Rd2d4Ez33eJhqDMzS3qv22sAswpaOJmPjgPEMo4Fqq0DeZHJfZBIoE4Cg9MupfpgSsYKIZioqiS-XfqFmsZOrkN18gGVsF27AsI-Xd_0g1HcrfesiZS3TQtyQaUex84Cpwz--4uO0vBJWMgdT19lvFLGBl07ljm0IRtimZ8WXc9N2n08DE5twNczzTHani23FQDU5bnxQhNTQQ7LBwI",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJQZoumYrLHkcRmQJsPH_QsIQ",
+      "plus_code": {
+        "compound_code": "7X6W+CP Warsaw, Poland",
+        "global_code": "9G427X6W+CP"
+      },
+      "rating": 4.6,
+      "reference": "ChIJQZoumYrLHkcRmQJsPH_QsIQ",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 105
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Wędrzyn 40, 69-200 Wędrzyn, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.4482124,
+          "lng": 15.1862732
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.44940147989272,
+            "lng": 15.18722692989272
+          },
+          "southwest": {
+            "lat": 52.44670182010727,
+            "lng": 15.18452727010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "MILITARY CLUB 17 WBZ",
+      "photos": [
+        {
+          "height": 1836,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111982510124028014812\">Arkadiusz Strembicki</a>"
+          ],
+          "photo_reference": "AWn5SU5gTCPeVm1m12RPa8iI6dEZj_-BSPT8KfS5HKLDxWqWNiBCxR_VS9WTp9bnm-DxwjDs5rggVWorGH-mQzokmX6zEZSFYnMVXvCG4GEUaXUo_eL87L_9txtT2Azot3o_UEbESIyM1lFCrSCN4FzPBHPBGCrRbPmaDllZVbqBvqCDTMUK2SI03uMDm7Rv5bSpkZN6Q31D4TZ-8jC2hWZDyCOngeOpcqY_HI_E6rLuY0bdJXByzY9ecO_FhR3G0CmP_24OvUGTHAW4rWABeyICKYzK5XQ64P5sZSDY5K7N_CHXlKhGeMiGrpXFlvDLdwLgjEmXctppVU5zCE7c8SP_UJewLx5nALtEt1IRQXNyDMYfMcTWAGLsxvPii5IwPdjP8ZQNWuC_v4tfz-oWH28g8deQvPipTCfj_XLya5QbQhLhmU08lI5scPDolnKs9egGRL0V-Wn58b9-NN8xVofCgxgHfJ5ThG43HStbrMghvzm2ILD0LBMDHGrWOcNttojy6yvqzFAvQwmdAa0u16898bbVZiejxAOEVfVBhyjPcX_exlr0X_yiCjmMutpwuzkOMHA4ftRtrgHIoA",
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJg0HenKn_BkcR5FOLz4umziM",
+      "plus_code": {
+        "compound_code": "C5XP+7G Wędrzyn, Poland",
+        "global_code": "9F4QC5XP+7G"
+      },
+      "rating": 4.5,
+      "reference": "ChIJg0HenKn_BkcR5FOLz4umziM",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 235
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Aleja Generała Antoniego Chruściela „Montera” 103, 00-910 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2679992,
+          "lng": 21.1740083
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.2737441,
+            "lng": 21.18530315
+          },
+          "southwest": {
+            "lat": 52.2584233,
+            "lng": 21.16482015
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "War Studies University",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1536,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116323024360689145595\">Akademia Obrony Narodowej</a>"
+          ],
+          "photo_reference": "AWn5SU71ubShKuxIZzdO3p5BhmbagqURXjD1cWWblYnbG-my_a8ARe82bQJNXo1NdR-aFOX0z40N6onX-WNatj8dI8KCvKsriatQda144dBRUfh5i65mbeIKO8-BqQvdIzmDr4zHI4zxjGdxO2gsYJb7FY9XZZfM2pc6AbOjXxEhE23YdYtSNBMIr2UZh7LJoizShy89IOU2R71h4ZYNNVXwqWzm2VWvIr-ZsSMrmhn7c4v_GqqinPKwXEfuExj6gj5RYuMhiHFAh5Ovr29A4XvxulRslbYr4xoJ-jyp1sxumUsNbRLAUCk",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJuT5a9-zRHkcRHUvLc2i6Ssw",
+      "plus_code": {
+        "compound_code": "759F+5J Warsaw, Poland",
+        "global_code": "9G43759F+5J"
+      },
+      "rating": 3.9,
+      "reference": "ChIJuT5a9-zRHkcRHUvLc2i6Ssw",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 407
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Cytadela Warszawska - Plac Gwardii Pieszej Koronnej - Pawilon Południowy, Dymińska 13, 01-519 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2643639,
+          "lng": 20.999578
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.26577922989272,
+            "lng": 21.00141637989272
+          },
+          "southwest": {
+            "lat": 52.26307957010727,
+            "lng": 20.99871672010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Polish Army Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 640,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103203841186283420926\">Muzeum Wojska Polskiego w Warszawie</a>"
+          ],
+          "photo_reference": "AWn5SU6gPjR3O62acvyFyozKThM5kiOsLM0RcffgzkAorH9P0A-EQyGl-8CyBQUBTtGVWDkMIFCsuKiqWh6bO28D-qCdFRo5zV2kY8dL8RcSDawHmwnWQViIp8y6fq34x0GskwbAgyfyEPCgCSHNeQQ03KTfYb63ECtjMhDlJeFFkSJhlKb1bm9eepVax5EAWDSw2H5nIC3XzGlG2hw6giGd36cxRc0I2jPA7dUXK_ezaD1sfRqgIvQB_vNfiuOGtzvGRB8c4HQmD9ZWNEU6zOGgN-HAHJ_lDEfoBgDbIG5gUSJajmvJQOA",
+          "width": 1571
+        }
+      ],
+      "place_id": "ChIJK6UEcvfMHkcRGDePQvvQqow",
+      "plus_code": {
+        "compound_code": "7X7X+PR Warsaw, Poland",
+        "global_code": "9G427X7X+PR"
+      },
+      "rating": 4.6,
+      "reference": "ChIJK6UEcvfMHkcRGDePQvvQqow",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 8919
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Rakowiecka 4A, 02-519 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.208562,
+          "lng": 21.0114999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.20986417989272,
+            "lng": 21.01260227989273
+          },
+          "southwest": {
+            "lat": 52.20716452010728,
+            "lng": 21.00990262010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "General Staff of the Polish Army",
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115102307186632409206\">Torben Mauch</a>"
+          ],
+          "photo_reference": "AWn5SU46InCQpsJVSDwy977wB7E0MxMgTFV9ffPSiVcchK5Tf8p6mZBPArvMsCMg4ak44nPXcKi43b3bSOPOs86ZJieBMghmnKbuTAhMvOGsl7K5XFJSlZvvdLotB5Cjt2yebfZTgXdxOYVm5AKdobE-e1HcEgiS7RW2SRKMtO3NSIG6wTqkDIZDIAHHufKPOO1cLu3z7p9_hZcMXM-b32xaI7wsgWA8IQHoWebiEtEjF4X7CLV5UKFH7l3Y-4mTq1JG9jdr8wMClzms-1I7dGtacc5nUMJaO7LtBm6p5zFKnbJSmD1FSHBYp8KQL1JuPXi6Fq6w6JLSbHttwJsylMtavRalzgAz5OJbH1sNwKQo-HDldxII5c_5y4Ir7D-l-L6Qcxkr4KARtQWVG9Qwj-CaD6Optx8JdnMDBWMnZKI2NTRyUQANe2-4GwjtMIsgxmMQ-DK1nVkeJmjHPhxG-lug7UpiuTMeH85CwddnK9jYdxjGoIyIGJLEpWUlteAPQLNUPXoCBLDg9bsy75pC2O_a95pGnIgTEIv0Tx9yemMbZiIMXCfMG8kBgc9Ci-6US2Mx06osqLJp",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "plus_code": {
+        "compound_code": "6256+CH Warsaw, Poland",
+        "global_code": "9G436256+CH"
+      },
+      "rating": 4.5,
+      "reference": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 28
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "al. Niepodległości 141a, 02-570 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2029759,
+          "lng": 21.0096189
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.20436412989272,
+            "lng": 21.01123932989272
+          },
+          "southwest": {
+            "lat": 52.20166447010727,
+            "lng": 21.00853967010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Club of the Warsaw Garrison Command",
+      "photos": [
+        {
+          "height": 3480,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106935176592326344585\">George Finger</a>"
+          ],
+          "photo_reference": "AWn5SU4SfBpi7suF13rz2aql-2dU170UiK7ZCWX8637ooBVEEJXGTPa4vAhHcu8jtHfm2RSqcdXGk4rAsM6lSwBODprLfTq3EV_TElMCwQrO5-GthdbExg-HbiU91ZjLCJI0Djv6UaS3fcYiIw4ACjXG6oiCzPiNU0BrxvkpTWTAjkvkwpEu2G8FooHzBT00XLaTkw7CvH5QYMHhXXmqHcnDv-o0DD2ZT3lLaWXKbNiNfpxDrGvBEJvNpqBI-EeZ8wBYekZe8Dm8Sci1uQXYL1HGQXZchblO1HmQyLsC2AjBoDZgLHU_oCuryC79ITWfdrtpGWQDNNIxiISD0gozxknSONmmYwR14iihLLCHktJYgSyTLd9XNC9TU3PGNKrSXMIN53SCIn_FbmBLmBfDCMqomDf9id3a9Wnpcwor3pdtLROlAYdx7iEQM97JP6rSklDzoXzBHb7Giey4cJ7jp3rOf2CtiVvYmxm7_tlLo0j4LTA--vv1f8Un62PWNZ3G7yBveC9zrhuC_osF2L-MhePiEFrDEqso805l9Xesi2ShceHb7Zzwma9Fq4hPWriFPPwSsmxaag",
+          "width": 4640
+        }
+      ],
+      "place_id": "ChIJu9fs7NDMHkcRAdMKada55Ug",
+      "plus_code": {
+        "compound_code": "6235+5R Warsaw, Poland",
+        "global_code": "9G436235+5R"
+      },
+      "rating": 4.6,
+      "reference": "ChIJu9fs7NDMHkcRAdMKada55Ug",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 505
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Warszawska 250/56, 05-300 Mińsk Mazowiecki, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.17792919999999,
+          "lng": 21.589117
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.17930912989272,
+            "lng": 21.59044122989272
+          },
+          "southwest": {
+            "lat": 52.17660947010727,
+            "lng": 21.58774157010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub Żandarmerii Wojskowej",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114380294370224263086\">Mariusz Piórkowski</a>"
+          ],
+          "photo_reference": "AWn5SU4AKWc2Uu7ILnsMxL2QS5CQeKoTKqQzOJZwzKsxPRZMiA6-_8lWSYU-0hoSTE2AEfhfyez11VQYY91P4pUPTQSjQozoa3LtXPexuulF5qLKAmttX69D5S0qvQn7p_Ur7-AQy7Wqm9ELEoecWfZJAIIEXDLRXyL0-qjV2W3drnYoW6ANpTxjRiKYzsFScHyPwGwB6fYabi7UTjwPptgLdbgeZE51_9Fsj6yobmU3sIaOe5kQ0b0RT1usHvOrQogAGHCn4Q_KwOocRJC31QdJrWPZj1_RRXXNxBzCV5k3E77Iqr4NPVE4kRcBxteGeuK5Y8QI4jwtVjh2dG5nU-ApcBlbYWnqyPU3zoT8Jziti4-DLEUkSU704VR07hfQF3BXBZ7CkOKlst7dnnwL_cLTQAJIUT1UnPZ1C1g2ukZn_2QK09_xwhLpGbxHRDWAqb5uUEIO0FtHNEsywMyuqKmoLX2y1a_rWchzXit8D-sIBIhjTxTQ6JtIQvBQUMC_f0KrcMbX_qEhHQfAejR_TibHTpwlXkwnTFGPMOZuK1rbVCgnq60sIg7tQ4RpSsU7vtvpj8XQX5D5",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJG00EEHQuH0cRv3L4TyPAPT8",
+      "plus_code": {
+        "compound_code": "5HHQ+4J Mińsk Mazowiecki, Poland",
+        "global_code": "9G435HHQ+4J"
+      },
+      "rating": 4.6,
+      "reference": "ChIJG00EEHQuH0cRv3L4TyPAPT8",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 25
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Czerwonych Beretów 56, 00-910 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2639574,
+          "lng": 21.1776348
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.26536037989271,
+            "lng": 21.17885082989272
+          },
+          "southwest": {
+            "lat": 52.26266072010727,
+            "lng": 21.17615117010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub Akademii Sztuki Wojennej",
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102429281766093235672\">Łukasz Zygmuntowicz</a>"
+          ],
+          "photo_reference": "AWn5SU4eHcoqg3ncv6LSyq0Ei_oiDQ2h6sasGMqFrk5iHr-xKX6c6HOb6Yiwzyn7LsxGXNmuLAnL3xbUbOs0rtYYV6TuwnSSjUXSQA7rQwxfhhNx-YIiAbQ6HC5Lui8QSxFVDI1sGe8nZAfMX9wHMWXxxZZ8lDYPDr-DBirRtjw8E6kh5lbkCqp9Ou6i8j1u3-m1v4dD83Hdj8FsVoYvkTKNuVhCP_Xefq51-eU-uzkH5KYVO3uZV-cZvVPBRojytLgcnl8M81HlyGu8dvRRlleL2TK8Y_BezBP1f0ghYuU-DljXGZcAWuXA4LmnP4X--LphJsXHl0Ous-PpNQbDlQsOwXiDe1tMmKcfzr8hWuSN6kRwOP0MxwY8ErgLTg54gcmoeyQtstTrz_vN2EovHgkwKZx9f_WCidRal5PIF2pwK4VezQl7MkVAnGiNpxM1yUefpUOafN7X9b50sztZ8226SzrUrEIXQcuurXfucsSLlw0So7bPc3G6bwvu6Qlxh9-gLdI2cxAt7hwsFLS7FZJv1hlC2zJevBD7db6rBfdvsE5wMlMkFEwRq829040swE0foiqHrRHJ",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJ3dLz7pLRHkcRBLLcrgmkUCs",
+      "plus_code": {
+        "compound_code": "757H+H3 Warsaw, Poland",
+        "global_code": "9G43757H+H3"
+      },
+      "rating": 4.6,
+      "reference": "ChIJ3dLz7pLRHkcRBLLcrgmkUCs",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 214
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Dymińska 13, 01-535 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.26140239999999,
+          "lng": 21.0017031
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.26275347989272,
+            "lng": 21.00306347989272
+          },
+          "southwest": {
+            "lat": 52.26005382010727,
+            "lng": 21.00036382010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Reprezentacyjny Zespół Artystyczny Wojska Polskiego",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2268,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108497096213241746791\">Reprezentacyjny Zespół Artystyczny Wojska Polskiego</a>"
+          ],
+          "photo_reference": "AWn5SU5tvBfHCvcuApmlC8hICYySTD-IlIDmYprIaPy7uplWU1nVQb9nnCwXxLWt6XlC7W7vZ6o1jxs-pKpEfwhKXElbNeggSu08Z4wEAno9PieCAk7aKxFyPIZXdGTELafdSo_jVNDKfauojpRqoH1jEFyczStlPtSWxQbHq1gNHmyEMzFRnASdaIngCecbU3UuLLSPcbgVycH2qCuYcEGPsiETjC5MUl18LcSruc92aupRxMZ1uGK_tQ5MLs4e5pLX6bVeZPmmoDTsNt7XpRGWzkgZvQv1ebbLkZq2uNYoghWVYAQ6kWU",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJm-csKGDMHkcRkwM_xuFZKB8",
+      "plus_code": {
+        "compound_code": "7262+HM Warsaw, Poland",
+        "global_code": "9G437262+HM"
+      },
+      "rating": 4.8,
+      "reference": "ChIJm-csKGDMHkcRkwM_xuFZKB8",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 29
+    }
+  ],
+  "rekonstrukcja wojskowa": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Rakowiecka 4A, 02-519 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.208562,
+          "lng": 21.0114999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.20986417989272,
+            "lng": 21.01260227989273
+          },
+          "southwest": {
+            "lat": 52.20716452010728,
+            "lng": 21.00990262010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "General Staff of the Polish Army",
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115102307186632409206\">Torben Mauch</a>"
+          ],
+          "photo_reference": "AWn5SU7rRc-q9UHNHlLC5IGgRLAxEe1glgEQK780ypCS_c91-F8ljTw9wKcgVblYdYtzibThrv1ezA0mNvCWmXF9bVFmV0_JsMvLnrWe7RBSrqbr3w6dzIZocyqCZRcJXepkL8Aa422pi29lxG7q7zfTkqXw78bFS22lEBkfIxuMpNJ-sGaTFVl0ssy5ZMeIFNJSc7AX25D31PjuHKCct_b9o3cnSWKSzFQ0coXHiz9T21Z30DZmZ_m6zrrNtZ3uOh81QBoIQtdNow7juv6omJwmsUd0OfUzs-A86jdrUOpYpGRSCyhmaKFV7L0-gb5D9qOJbt3rVn3xeX3CsxMOUIOgcCI_lOl9iZl82ycFUARIat-prLT-ZnSgZQtuXfbUobMtlGAgtlBet2WqXDaA_jtJ0a6wLyHh0qFDhIT_-CCUPMK6u26pt36719a77-RmUWX1JSYC2V8mCmNfxSp2CJwZF8aFmi1TUSyHtAzD6GBbiZddWT7K0RmEjsYKIcN7XzC-VUzbL6Mf6doumuJQbIcqoHLU3B-oAQ1Ag2YDFqESR2vvDGNldXzop-9NGgX6XjPstmGhSn7d",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "rating": 4.5,
+      "reference": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 28
+    }
+  ],
+  "soviet reenactment club": [],
+  "red army reenactment": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Płowiecka 72, 04-501 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2285119,
+          "lng": 21.1396677
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.22990727989272,
+            "lng": 21.14106977989272
+          },
+          "southwest": {
+            "lat": 52.22720762010728,
+            "lng": 21.13837012010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "Redberet ASG",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115240273031087668653\">Bartosz Stachowicz</a>"
+          ],
+          "photo_reference": "AWn5SU5gyL937icVSbRZI8JbbcMnERrYuQnzKNcPdtoeFpwnvjGtCHq7yr0AwbP-R2eKOxORfcV901fXntGzc7cVtxNEs9dO_OwjCrm-EYAvApuEhfaamKzA6QxSnM-DzvNQFu1NwxvIB06dA0db6DtrrNWAhE9biubkMvPhvpU0FdRTTASwCXyv7dC7TINnnuRs1_KFj6Q66v006nM2fu4hNeiVmekBI9vzAjn97Cy3CHVz4TmObhxMqjs5kYqXdgAz9AkR1mw1fMZ5j_dy9sQyW--FxkY6J3H_-W2KctjGQ-dvedD-dL2FnSqs5X9f6bRVrOkFo5BETzey8x87pJFo2dFAxMfpGLVobncSqFykATd7Ic4f-dYaYe2_REKyAsEArHIIAWVzwSdp7MVol_icH3VLBZqdjnjrsFWY2jGQZU2i0AXKuvLTsloD1ZLfskVc6CRyvzYU_L9ZGcSadSRC0e3FKrRsR9U2woxVzA73kGW__gxMsvMN80KbJmgOTol0rIaACApb7uNey-LWDMhXFIc0ifWwPr3uH4caYe85BiFQ1Q9LX-fYLUlpB-j4hTRyuU56cSXB",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJnf4kKE_NHkcRJr9cqozfnZc",
+      "plus_code": {
+        "compound_code": "64HQ+CV Warsaw, Poland",
+        "global_code": "9G4364HQ+CV"
+      },
+      "rating": 4.6,
+      "reference": "ChIJnf4kKE_NHkcRJr9cqozfnZc",
+      "types": [
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 323
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "78-220 Podborsko, Poland",
+      "geometry": {
+        "location": {
+          "lat": 53.9563087,
+          "lng": 16.1216841
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 53.95773582989272,
+            "lng": 16.12364627989272
+          },
+          "southwest": {
+            "lat": 53.95503617010728,
+            "lng": 16.12094662010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "logo Cold War Museum Podborsko 3001",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102902105784139404801\">Muzeum Zimnej Wojny w Podborsku</a>"
+          ],
+          "photo_reference": "AWn5SU6wsKfhYIU-UdgjoFIlfKUZUyQlsZR-aZ0ezG4LRELjpP6Mo8RGhDPykdJB_ma_aRfsDioy7c6e4TNw63JIY3qdGq3ycCex_LI-xW9tA_unHdxgJMUclfmFG3-gi8IwB_RzKtZCTPXItpxdmKOrUkrk3IZaICkEptyg3CHN_n56aFqM5_J3V_R6WTdaT79x2sALN6cysdkz5qx6UiT7WQ7hB7N5Mhp5x5g5HDnb5Tq-PFbYuM6AX9F0EaAeNP0RgAzUeglYwuMmnTZqk2Ol_zZhbLIHS2pUv01epZiRvzBX3_tpNog",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "plus_code": {
+        "compound_code": "X44C+GM Podborsko, Poland",
+        "global_code": "9F5RX44C+GM"
+      },
+      "rating": 4.8,
+      "reference": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1166
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "plac Władysława Bartoszewskiego 1, 80-862 Gdańsk, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.3560788,
+          "lng": 18.6599928
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.35732217989272,
+            "lng": 18.66133192989272
+          },
+          "southwest": {
+            "lat": 54.35462252010728,
+            "lng": 18.65863227010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of the Second World War",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108866335564563364195\">Małgorzata Matras</a>"
+          ],
+          "photo_reference": "AWn5SU5dQex-tC__-cy_imk1uzu8Q0LbTOsFmerZ_qwuQdHQs0M66hRgEYixoGslughQcxV22t4nK_Jn5Zckf91SUFY7vXaCVwPN8a6dzrV1Lbm_XIjGSts48tT6KHli8njmG5AXXB_VshBoRZDQIYVJ62cAavXNKyOcHvx8cWQISWF7NngDWYdhojxO70kbWwxEiWbf_ibm7sIN1wfxSg6NGNAv9K3Fzqql2XhI9bWGWOUD6vrZ-N3Fkp-nHciX1y2JPqZBQIj_uwV7LD0LCyisvjMRtqyVyGnE36if0LjRPErg0X6rnIZaLrhBYQfHRhikYwZigDEaFTN8rWdqmlz7Nw8Cs0FC2Rd_4gO553owNMiO_a1HqHixuDx5rS4Tg2SwVcXjNqZbHZvHouG3cR3na8BN0KvidMHyQB9tnEaavmLj5wL_gc9o_mSeOj8mLB-ZBwOLJeYYYvLsPB5Til5p0aCfa-kP8ZpY34tLuVVPvyHJuTjvNS7cV_84WsaCOADGraV4wRBYddxSkAMhKApxuwATFLU6_Zop8aRuD7bu9cJarw0HjOxJPc6DwQUcDidi3q2BG4fS",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJcyyBngxz_UYR4Drm0rTDtKA",
+      "plus_code": {
+        "compound_code": "9M45+CX Gdańsk, Poland",
+        "global_code": "9F6W9M45+CX"
+      },
+      "rating": 4.8,
+      "reference": "ChIJcyyBngxz_UYR4Drm0rTDtKA",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 49815
+    }
+  ],
+  "ww2 soviet reenactment": [],
+  "military history club": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Cytadela Warszawska - Plac Gwardii Pieszej Koronnej - Pawilon Południowy, Dymińska 13, 01-519 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2643639,
+          "lng": 20.999578
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.26577922989272,
+            "lng": 21.00141637989272
+          },
+          "southwest": {
+            "lat": 52.26307957010727,
+            "lng": 20.99871672010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Polish Army Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108658623934230932346\">Paweł Ciesielski</a>"
+          ],
+          "photo_reference": "AWn5SU5qMmfDo9V-NFwEHebLi-TDqY7eL-GJrJFMhdTO2hu9sIPCnp38PgnMdF9AH5Ot_ORAx-fGb5LpVr5zUjeqFG8Ia62ZJCRl8CV85_cdB3zZdsv33wKL5qF0WC71oVdL83iijBnuKoMyAZVA8ooBIL3n83nBoAY7D0Z1z3-IQ2rCtIoQjGHjIq6pBUhWdCm4QEMmqDTw6XDwSaicBT_YtM7RWhmbY2u3WfvrGpAqmYzlp78dJBMPOgMQFd1ddQr5r2SUwcPgwT30bhFwpdHkadCKQpCGPZVnWPQ9LjjeFi_bpu4Ht1WE37FuuuwiNeCB1KL2_0c7NnVuRtxoDX1Xj0uFgWKhgfOQvS-Gbh9AUmk5hFcZ4JhLQZkIxczTC1g3C2SPElO6-BBNlh5BvinU9c1GMtZoHlESBS0lhrsXOTJATsVOXLPyZ_UrU0oQ_B9vsE6YfUcKr8bYnTmbUf4bl2MXJc7ftBwrVnJLocY2PkdEp2BBhZ5DaCWEBYC1KQyztUqBdVsOV_qoUTA5CWB73WPmXSddGdSOA2XF66w56US4PvU4ALWZnuOJ17iWWVdBFwV1UIn12RWefw",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJK6UEcvfMHkcRGDePQvvQqow",
+      "plus_code": {
+        "compound_code": "7X7X+PR Warsaw, Poland",
+        "global_code": "9G427X7X+PR"
+      },
+      "rating": 4.6,
+      "reference": "ChIJK6UEcvfMHkcRGDePQvvQqow",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 8919
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Powsińska 13, 02-920 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.1827288,
+          "lng": 21.0668741
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.18447067989272,
+            "lng": 21.06812982989272
+          },
+          "southwest": {
+            "lat": 52.18177102010727,
+            "lng": 21.06543017010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Polish Military Technology",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113894278799502165159\">Piotr S.</a>"
+          ],
+          "photo_reference": "AWn5SU6Kkn6U76NT89aFTe5ncmzxi0PMrhWXX4OoTcjc9hL1e75FqRQMWWYvTdo2GepucYmlTChqP7IGRjEdOSE2K_bubVTE3KwyHcLaGIgiYfeMNVbpmsxGyE8zgs2_T0hVXU7rTermNOta2YvObzxMhu_wvSeu3yAOqgNQ4nYxHhIy97f1VNNYsXYsaSk5F3PFSrzL_T1GRf8JEBDxKEZVRCdN5qaMNUA0hCp9c10DXsQlIh3FoyuI0OYW5EtwikC6m-Ac_hXgPBt6O6o-9ja014LYsVQKaZHRvnTouugI5fbQj5sYj6oYe9daTP5CFvQQaZghfRpsgGpmeq7Ssvfwm4PV06sGOpa84WE8ERTFAQAG80B6I2OdNHvyI0qyFVX6btWL1yMn1sKtNo3T6qXDs699IDvONoCgwyon9QL1D6bIYP3lNDGrORSG-uO_7IxgRhyxthZAEY9Hkgly1d1toHlJPJHvawVPFqkzfiMqK4fSK54h8_Cv5uog72vTLa8W1vqQXT4vGNm7zx7A6SaPdk-LJhYwV-ezfxYFQW57y73WlEBvtMIjN5yVyc3wgWRGagFzod7M",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ6z_RSqsyGUcR9gxJlHLLTls",
+      "plus_code": {
+        "compound_code": "53M8+3P Warsaw, Poland",
+        "global_code": "9G4353M8+3P"
+      },
+      "rating": 4.6,
+      "reference": "ChIJ6z_RSqsyGUcR9gxJlHLLTls",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3334
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Rakowiecka 4A, 02-519 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.208562,
+          "lng": 21.0114999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.20986417989272,
+            "lng": 21.01260227989273
+          },
+          "southwest": {
+            "lat": 52.20716452010728,
+            "lng": 21.00990262010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "General Staff of the Polish Army",
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115102307186632409206\">Torben Mauch</a>"
+          ],
+          "photo_reference": "AWn5SU4UxK_R80f8N4jTQbtArn2m6qi05GelRZnmQkYOv9KBYEuFZ5fjgblZ7og_L4EyXe6zw2WlQyVFRZrhlY7L1LNA21RbBxIb4dD4aSLRLJJgI5ZsnKRwUfB-8EGh7ltf6bLTyfxRhpTYYp3TIq5U_3t6iWQx8owaCz6Sx3aatOYyjJPnTC0IejIqZEtWgDhpNlEynscoGbQxIcc-ROn0cE42HF3QAoubnijIRWAI-dBt4hI66gbwc4G2ZL7ZAFjuKDbHrwGiqHjD3cbBULgJGAVYuWCox2FOkSwQhOqBBCd_pmGbl9Lc8V7oLF2nO5soMzWQf_rGMEjWPCBAdi0Fr6ZoKYagbfQcAVJ8JjE6FdtyBBh3KJ0W2jtZZkpmeUnHQp3E3Kx0nj-Phj8b3Kb8YVkhj_rW39flCjQIUbEzWFDGVHjTLof_kfiwjFVQrM_Hku2X0PvMgtUjVxg6tLGIOvxPPAvt6-AsgquuwX948t5hKsCs5pRIzCppo4IfPCe76ng7rCip1U1Gml611YPEhiaNlEVlGRcxQqYzxCmNBqNMVB0HgBkpodjtuCLYHtxyMkYOQmMu",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "plus_code": {
+        "compound_code": "6256+CH Warsaw, Poland",
+        "global_code": "9G436256+CH"
+      },
+      "rating": 4.5,
+      "reference": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 28
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "plac Władysława Bartoszewskiego 1, 80-862 Gdańsk, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.3560788,
+          "lng": 18.6599928
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.35732217989272,
+            "lng": 18.66133192989272
+          },
+          "southwest": {
+            "lat": 54.35462252010728,
+            "lng": 18.65863227010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of the Second World War",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108866335564563364195\">Małgorzata Matras</a>"
+          ],
+          "photo_reference": "AWn5SU5XBvQaqDWTfRA3JKF8RaVCwjRfQ7Xwp7yEMUVluDYiOu4v0xxS8dtMPouSvdCE3NTI0gTCF6wcaUYcqAxyXc-ln0c82aYSnxXImAK9QzDaGiBp6KimFbRBSNPdLdB4bedJRtMxq0m7uCcBygXGghO8KNa6WQX6nefdvwA1gaiQSFhG9gmIwz7ht8U4L_RS8tTRy6E2BJKYiJAUq6NGVvp-PYGtXef8OV0QRxwdpUtDWWrAGY0Zb-gLVgbo2EbMQZ7bTs3NWhQVRC-FZy9kXaneRpKkgNAy2UcSs5nBKkU1FctIm3-nZBGHDSwtFIG536DTKZp8HhMYePmUmPAsnJ1MsTrVSzR0Ba3B202hIL6PJA35ATZhxMgoZ0ilCqnmAk8FtRFHBlveXeEB_QYqhAo_XQGMivklLqs2xt6cNFmfmQ-WVLVbadvygHuAWPnut_oaGd5-F5NfOvAzfW0ypjZsylXPDA4YNhlippKFmlssp9k5SSc07Qe2zoNONFX19CuqU6Egrag2iRNbwucoIK48DuZBuOfXckMauL3ORVRi9LdTbrkrpHH_1sgxIqf0b3fAoKH7",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJcyyBngxz_UYR4Drm0rTDtKA",
+      "plus_code": {
+        "compound_code": "9M45+CX Gdańsk, Poland",
+        "global_code": "9F6W9M45+CX"
+      },
+      "rating": 4.8,
+      "reference": "ChIJcyyBngxz_UYR4Drm0rTDtKA",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 49815
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Ppłk. R. Lubowiedzkiego 2, 84-242 Dąbrówka, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.5510812,
+          "lng": 18.1712149
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.55277522989272,
+            "lng": 18.1732675
+          },
+          "southwest": {
+            "lat": 54.55007557010727,
+            "lng": 18.1705307
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Military Technology \"GRYF\" (former JW1068)",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108280938210949212240\">Paweł Kołodziej</a>"
+          ],
+          "photo_reference": "AWn5SU7eCYLs0Kz4hloBabfnjctGmUufB4QfLZOlVMQtxElktlefR8qZ11TNTQw141bHCpq1r7mT8635qLmN3_rb0qb3LHDVfwBaaJtOiYAtwGKd1Cp2D3JckO3NU-22hNhmAFw37hjzbjtwK-oWd5Dx8pYmAcTJ_zrF6Qi1UCY4AKH6VtTqHZc-SLCl3co5fzKBmi-DGhdND5mLi3K-K1wM0seMrL1Qf7KDRl0fMGWQuqBkNNQmsF7rnHHEhGOvgXyakS7fM6nrMxyOosLZYlBY3Oi16I8r4ETaqcE5HARnNT1YDis3wg1oJ0k3Xp29wdLy-7RY-GQugZaZ0oXsMMgEASWJiTMYwHZoZGW9toy56FJf8XKRkiu66yRwejLWBJsCXPrMqsu1mAf8XdRqGViKQJzkdIDduTgw8RDmqZzlSFT6FvarnPE8V5055MkgCVLVJy2MUAogqzrPoFaa1sl-utx2rOCgG3Ev0Vvb8RWczupMZz44pdFJmVmvB6tYBPF4UIyVgMj_W5ZXrtdNhvkckojX6spAn3gDbx_KCO2b2ycSVjhji18DQC_32BD2PQNDGRG5vMkmGJUDjQ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJD5dPsrq-_UYRzJ8TN6kxvLY",
+      "plus_code": {
+        "compound_code": "H52C+CF Dąbrówka, Poland",
+        "global_code": "9F6WH52C+CF"
+      },
+      "rating": 4.9,
+      "reference": "ChIJD5dPsrq-_UYRzJ8TN6kxvLY",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2478
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Wita Stwosza 12, 31-511 Kraków, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.0722252,
+          "lng": 19.9484811
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.07353897989272,
+            "lng": 19.94981422989272
+          },
+          "southwest": {
+            "lat": 50.07083932010728,
+            "lng": 19.94711457010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Polish Army AK",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 720,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117201703153464953418\">marcineke1</a>"
+          ],
+          "photo_reference": "AWn5SU6aJ5Ev7SprQ-j_H36Q0eIQLmviK0cztMSmz4DGN6AJtAOqSX90AolLVGQZ3HZBrULVuUvX_niTqHfUrW5aE6rc1LMw0jmOMZ_cxjacwyt6KDdHdtZQFrgHSScADyJ7B7o0aPSWypm_6a1_ZtsGPMI2nArKWES4COg2V8JKa0haXp1x2YLWq0xSSVQFoE3pd2xM34z79q9W9iC4c0U7BkAemgKURflY8SgOs40wSX1InOPoKveHGOkU-SgqK9jfqH56Avc_nZ2Xv4NWWECWAbU1GgaVuUcXvjiIvIin6qK6C2LjjVrQaxYkduQj2ZBxamMN2R3LP79B4ZNgOkuLEQEcQvspaJ8UYuLPaZP11gbGqHDiouDae4wMucMANbZNDRqVJmeaANJFnufwBPMdxQVyssvaUfecfBSR3QvDQxKRR4pSQCXdVAkNqnfk9Ty8p5q70fPngwzvZkhww8AIreq04B4_T1u7ZwezFUrfKjoMTFaviRbnIQxUhqg6fjbajdIZY35R10RCVEe--JUsjT72ozoGHyQkTB7Fm158EEAaxsoNACHh4FisWbWvGVELIsMPobZA",
+          "width": 960
+        }
+      ],
+      "place_id": "ChIJIwORYhxbFkcRriIbGxAedaU",
+      "plus_code": {
+        "compound_code": "3WCX+V9 Kraków, Poland",
+        "global_code": "9F2X3WCX+V9"
+      },
+      "rating": 4.6,
+      "reference": "ChIJIwORYhxbFkcRriIbGxAedaU",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2527
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Helska 16, 84-150 Hel, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.6230102,
+          "lng": 18.8016881
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.62371567989273,
+            "lng": 18.80375545
+          },
+          "southwest": {
+            "lat": 54.62101602010728,
+            "lng": 18.79597764999999
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Coastal Defense Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1998,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115329722553591461861\">Muzeum Obrony Wybrzeża</a>"
+          ],
+          "photo_reference": "AWn5SU4UrtUaR_dNYMn90zyqJ4o6coDEULLmVLflMILIlYn-gB-FxJYTduOttdkZgQe9bzdmiVXJQLVxlwyd40cqdDrcCr4wXyjJQiF1Wp0E-iwhky7KAopcS4g9ocVFzfrMlikfqEyGdsC6rjxku5Ot5H0hVhfbTqF0U5igH_U8VyI5Kth41ZMDHYA0wQpDZZ06GiEfU-dCYYFTlZMC4lioJNotMfhX-iYfZ0rScmTUyEpxzKAlWXhSmT7kiN32yXIEBOSGc9UOVxzheq1NYw_Sh_HFY6I46qZsdLKj7FOaXrY7DYHDSsg",
+          "width": 2804
+        }
+      ],
+      "place_id": "ChIJ6YordKIG_UYRDi3BdpNLVSk",
+      "plus_code": {
+        "compound_code": "JRF2+6M Hel, Poland",
+        "global_code": "9F6WJRF2+6M"
+      },
+      "rating": 4.8,
+      "reference": "ChIJ6YordKIG_UYRDi3BdpNLVSk",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 5095
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Drzonów 54, 66-008 Świdnica, Poland",
+      "geometry": {
+        "location": {
+          "lat": 51.9445602,
+          "lng": 15.3184346
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.94580137989272,
+            "lng": 15.31973017989272
+          },
+          "southwest": {
+            "lat": 51.94310172010728,
+            "lng": 15.31703052010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Lubuskie Military Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2268,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109807547218842854821\">krzysztof chabior</a>"
+          ],
+          "photo_reference": "AWn5SU6y7DqoEYMNkI4re2NCgFP_2dh59euhND1Ee1v1DNanM7vFkQt9prHchnUql2hvTFmpZdmRVQpYe-D9x7e4Oij0AAdd0E-yaLnRjKthK2vTWliz9ZJKSV9TDaacrVMqrW-dTU5ZzISO1Xn3kISSJdAzF9de4p4zruOwL5KqFbvpx0ymNZkA4-elV_M3ke31gst5vsZL4twweiS1ILy3PjFq6YAvC6qVR7GZHAtKVd75nwWcjFEJT1Tuz5T3dR0orqrvBULtKoTHncMoL1JKXCtyjazVSh1M_YpROPbDtpsIEM3Lu1gmnF8tsfyTsxmUYNlWFMpCywefYpMO5kMqBduvQy4J3oxxDxx4cIFrmyu-moqBtAU5qgiY88CLYVAnYUfhjpgUbHZpODGVc7btk7a8pTr1I1MMpezr7xIZMg2e9lXagzAUIsQjqC2A5WhBCTICJ9lCCdfiqZILdr1soXaHvLkgxAfDXc_8uETUUqdHQsAj-c5ytxPGJwR4iWymMVpgQyo6lpqK-B5AzLQeahuhuXpuJVKmKWnGgg0pxdF4XPydZv-BASQJ_R459Vgu1cMUDgnpDI41cw",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJu3d3b8I9BkcRTKH_tPQk9I0",
+      "plus_code": {
+        "compound_code": "W8V9+R9 Drzonów, Poland",
+        "global_code": "9F3QW8V9+R9"
+      },
+      "rating": 4.7,
+      "reference": "ChIJu3d3b8I9BkcRTKH_tPQk9I0",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2030
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Przylesie 1A, 43-460 Wisła, Poland",
+      "geometry": {
+        "location": {
+          "lat": 49.66378049999999,
+          "lng": 18.8534108
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.66520402989271,
+            "lng": 18.85454862989272
+          },
+          "southwest": {
+            "lat": 49.66250437010726,
+            "lng": 18.85184897010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Muzeum Spadochroniarstwa i Wojsk Specjalnych",
+      "photos": [
+        {
+          "height": 2448,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104057617941794340379\">Kinga Warszawska</a>"
+          ],
+          "photo_reference": "AWn5SU7raAqafrFBpJwNJeDkAXg1xLn1RZu-_-n78cKI5-O7xOHhfN4NwcgMwd_1kRY3XYXaET3tuusTXTj91Qib9hcMavisXwES6bz3HVZ-RcbcwS4ibV9aGXBLbKzFB-lFz6FzwlYUPsDtPnA2Z7jOKoRrI-xvYcoqbxfoGJAMuU99PxR421jUseCOZr0cOhrQf3Tlr57_Afy1LmP1-l5BtPVYwl88z9dc-83HLqoSVzPY7aBAcnoWjMEvVfEYWB7adq29pS01SY2qQyPInr906O6k2Sg2EZhL4EZ914lZEYLJVaBT4iyPAvxlm3gSaDBqgTOxznbBgfdLKHzbmFT0Z_cQg1lB3-dUdXZ-YothI1fPUnLjEeiBfdxKSjRgBqpr1G4a_ajnYi-_gxy8NNhuCNojP6crckqrc6bAIWhGu5TBvwlIPInSs6-KY6_sGte1oBbd7hiksNY8AfGqGQK40dXmnbHc_1qCyvXnEy4E6nWTXb-0sDXp7FCNVI4C65dAT3-PxaeD1J0H1m1PXvITNHn5h1E67kznnI1Igrn76ivVzJkBthmQW5Nqsro3J-VqkdXVdmgPtAuCAw",
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJJVAAOaQZFEcRHfjJP-UD2r4",
+      "plus_code": {
+        "compound_code": "MV73+F9 Wisła, Poland",
+        "global_code": "8FXWMV73+F9"
+      },
+      "rating": 4.4,
+      "reference": "ChIJJVAAOaQZFEcRHfjJP-UD2r4",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 69
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Mikołaja Zyblikiewicza 1, 31-029 Kraków, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.060522,
+          "lng": 19.9438639
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.06192052989272,
+            "lng": 19.94527852989273
+          },
+          "southwest": {
+            "lat": 50.05922087010728,
+            "lng": 19.94257887010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Klub 2 Korpusu Polskiego",
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115938926772340521784\">Donald Ross</a>"
+          ],
+          "photo_reference": "AWn5SU6h8NqOmWEK-LgzH5p00a1v4crkyRIcE2fr-IpOIDzedFr7pOjfSNMDzcbWPIgAsGlPqUuOe6UOuYTOqZqioDHMSRogbSQiXWPKZmejEYO9bwjuEawW-4XJyPQWA-ZmM7Qy19IGJS2-iWgC57yBmnoLZW4Mm1SA9wxt1SCgeR6ECztROFd_FUgqhvjqW4KdoZd5GVF3wj2wiPeyzxCCeUKPPVavDiHqyngjBX_zDNUBPZjjWPvrVq29iOWZWnI2Lf9pDQgFPXezbv_vIN460sl-r0Rbi3QKOaMzWQavA9YAVGvchkehYyaxkpt7MRWRL2tET99E9mughmk32zrS4jYeb2NUu1ewR3nS7MM9Ooua0ZuTOIrqelT8ZVc1KZW3GlTVGhetJvC6k4whBRY7LkbKfVnzsQlQa_wm9INE1Ud6PrnFRO70ZR18cXyioPosKvIBNpArm9KchNdwv2K3xXZ-DpVX4VMfU-EnqgmErpIzrhArOt3uPM05ln22E4ru4uZf7B2w907OxoDIY6uC2GgyshUtx1KLCShkcp3G1Csz9ZpsGKBMqbdWQGvfa9NTleBqK57b",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJv6-wWBFbFkcRR09TYBR69LQ",
+      "plus_code": {
+        "compound_code": "3W6V+6G Kraków, Poland",
+        "global_code": "9F2X3W6V+6G"
+      },
+      "rating": 4.6,
+      "reference": "ChIJv6-wWBFbFkcRR09TYBR69LQ",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 100
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Pontonierów 2A, 00-910 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2640041,
+          "lng": 21.1744992
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.26559667989272,
+            "lng": 21.17585992989272
+          },
+          "southwest": {
+            "lat": 52.26289702010728,
+            "lng": 21.17316027010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Wojskowe Biuro Historyczne - Centralne Archiwum Wojskowe",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3120,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110904422027714439992\">Piotr Chmielewski</a>"
+          ],
+          "photo_reference": "AWn5SU4xVjr0Jga4MC8pA8nQgLlj2n_tWedgvlkXVL7YGiXGXa9NfghKsfvR5MiK7h9mAPkCWk43N55233J5RKRsInjABCCx2F8NG5JtVtYo19PF5qWSO0ZqDV7eiZZyFuintvgIzpONGlLGwtgpp4DDNluqh58Or4bqcPY8X3SA7sN0O5H2-9ZFiO9e8wcqdsKqm4N5_FBiXSrFcBl-X2t2nqzAOhXDXB41eKkb5F8Ija5hY3EanfEMuaNP-lMfQe-ql4R_5YqDIqgk9_sksYzEt5E5z6FGPWwOe_WKAlxikFwTYJfcxCdn6kGFxCNUKKHub9hMr93pq-DUUGf0dPivh2itOwunYhyqgskONNt5Q2MYzbAmDvajwWbD0VJZVF7xKxGmxEgtE3CrCpGfm53NaJHjVWpnHkzvHkiGDf_AAOo6Jp5SGcFESFIwYI21xIB3fQ3wXgjH-URezVTdyntutgi_dFZNa8yKQQtQ6qZbhgCbn-7RG6SDlTN1PBJRiOwp44XG9gXC5ToELRp7D37QjZAgnpJqoNm1TOtNz1j12vYv9HWwKn30VH4G-d0wcOUxkMR69Ns0",
+          "width": 4160
+        }
+      ],
+      "place_id": "ChIJ86ruSu3RHkcRVyz_1pv5BFY",
+      "plus_code": {
+        "compound_code": "757F+JQ Warsaw, Poland",
+        "global_code": "9G43757F+JQ"
+      },
+      "rating": 4.5,
+      "reference": "ChIJ86ruSu3RHkcRVyz_1pv5BFY",
+      "types": [
+        "storage",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 69
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Polska, 61-001 Poznań, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.41687899999999,
+          "lng": 16.8687904
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.41827617989272,
+            "lng": 16.87041547989272
+          },
+          "southwest": {
+            "lat": 52.41557652010728,
+            "lng": 16.86771582010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Muzeum Martyrologii Wielkopolan Fort VII Wielkopolskiego Muzeum Niepodległości",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2608,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109703156479710233933\">Jan Perkowski</a>"
+          ],
+          "photo_reference": "AWn5SU6f1FYQsjNfreZOQoJGkkvE2Wkuh80CK8OYyRIdQ1QVytC188vhirUmQTGuO7ybvJK72H_FZpEFG9qp-x-5uCod61pS9fGddUlg3ZXXpx1KKVxL7vWfg9hboytG6nSx_IMtuolQf1fQ-j2a38dO2HojO8YTzond2pS4N6t8VWMvrPx9RZhanmGsfc0Mtc46pJYRFwXjUweQbI5lZt06R0zWiikDD6AWEiGFiEcBQWlAzBVsxc2X091WVV36lb6I1XowGAbk964DKX-0HilOMAEaBSikJOFw61GuQBu7StAXK8YgVFPNCN0uimEqbssJvgz3sl7wS5YN-1ydxlicqlAqwtYBzcQ7HHER7DPIsG5sw80DBPzNPg0KKHfvjDvJtV6jaFVKO4yNobZs0M66jlZ-RtcmJTbbQYBCzhXgZmp904v3sjwmwDcxcWTHHEf3Axc7cb8KfCZ0P7iAsAE_KX5ALZ6lBxkBr72RuJAQJjnB3GqzJQMwsfphcOXW_UQwjQEeaw5lxBOXlIrU_kbHfBPciSWjKgF_IX5c6AQSSH202P0uqnSAaDohT0Vvgtbd-bIwDg",
+          "width": 4632
+        }
+      ],
+      "place_id": "ChIJ_SU1Pe1EBEcRkaA0fS5EMAQ",
+      "plus_code": {
+        "compound_code": "CV89+QG Poznań, Poland",
+        "global_code": "9F4RCV89+QG"
+      },
+      "rating": 4.7,
+      "reference": "ChIJ_SU1Pe1EBEcRkaA0fS5EMAQ",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1096
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "gen. Michała Tokarzewskiego-Karaszewicza 4, 00-068 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2413432,
+          "lng": 21.0148908
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.24270447989272,
+            "lng": 21.01623647989272
+          },
+          "southwest": {
+            "lat": 52.24000482010727,
+            "lng": 21.01353682010727
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "Ordynariat polowy Wojska Polskiego",
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115095962289814032944\">Paweł Izyk</a>"
+          ],
+          "photo_reference": "AWn5SU6OmAkKRh7M8XMJ7rZ6M6hSZ1Rnewd5_eODro0aGGnZEK4usB_yWRXeSTGT82t94bRi4ROYMLpEKP33yzxp-bZhuhQU8VD-xvNyx7cDLfZ0VpGr5d28JPYd8MPcc_Kg42Mk25wOwP4oQb9YBeSk8a6EEbREGOjCdIUawJWDbFPbjO5s6r9A0WdcsZIAVUXvHSFEVKMHVpGF4Pmc7uhefvhB7L3CUmfCUlo6nNVcKiYP3fZz_SKI2amRw2X4mcaKZLAbctRHjJlizbcJywFGQCKGxDDltwXoys3PVYVm1EUs4763VasmlORUlF3Mi1W1eQhcg-_Fy4F9_k-spqcA4VcLUnA_hTYgVTnxHrMp8v5ZJnvFyKEzpcshYsLBynkEwOMDjv6xPKJz6gJBhAFZjOuLvD8PwYAIitnEoqrrIEiWvjVqT1ncEJx8SrIKQIpcUONVQ7kSQ_3SolUoSqpCfcpZC-qp2_2Zo97F-Y96-Oxgat5dRiT_At_RRucNFSdMEW9gnPJNGSX90p2n8wfBpSEwaR0HwLn7pPs2pmVAyO0Pn3-3brr2Wmfs4VIuhTILEbMw9Je7",
+          "width": 4608
+        }
+      ],
+      "place_id": "ChIJj5yJvmDMHkcRa4jCEgfkMyk",
+      "plus_code": {
+        "compound_code": "62R7+FX Warsaw, Poland",
+        "global_code": "9G4362R7+FX"
+      },
+      "rating": 4.9,
+      "reference": "ChIJj5yJvmDMHkcRa4jCEgfkMyk",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 14
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Polska, Rafała Krajewskiego 3/5, 01-520 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2610301,
+          "lng": 20.9967529
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.26243082989272,
+            "lng": 20.99819627989272
+          },
+          "southwest": {
+            "lat": 52.25973117010728,
+            "lng": 20.99549662010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Club Types Operational Command of the Armed Forces",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104282700630794305941\">kazimierz s. ozog</a>"
+          ],
+          "photo_reference": "AWn5SU7DAexzPU5pB6fCAopVZ0lXOidfOuA_i6VaGs08q-loeq5wfcgHHzZX7y0TBazfsG69aHR8x8uyI8Tqd61-OX94WkFLFMCKwMZHOzLxUS7XxV_lqJB2IPu-yR1Fj26MwMtictKNTsjEO9JM8urb-Mp3SgxLpxx43Srzfjcm_6UnDDz3_7yL4ixwa9fDak8GxNVAaUXpxhHinJ9LlciYr8ovYZSkEPjMxd598PgZ9s9Ub3hxN-00lknq7dnvCWhfa3bplBXSUoYUZgFvbUEiO5x-em1MztA7cH5tehk2MITcShSG5EKiC7r_LfLEXugunSlVfofL8b78lLUe8MTr-nfxurLKMjZhbs0RJCQ4x8Q8WIUHBQqlL-Iit2JaDY7b0-rJW0DThjFcArEzyjl630oZgZMYyzTv8myU6knPXvwSWyN84h4sKu4D00lW_bF1Czls4zYB42FHiXSVuRp8sdW-oYVgkXKUJV5ZoNDklcd9qtrLvrlnT3iSQTeosg8f3jSj3oX9J8SrhSGgliBleqAg85B2lAtYX1q7EX52akHRq53eqnNBms4BwU_j7j7St4fQZO7a",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJQZoumYrLHkcRmQJsPH_QsIQ",
+      "plus_code": {
+        "compound_code": "7X6W+CP Warsaw, Poland",
+        "global_code": "9G427X6W+CP"
+      },
+      "rating": 4.6,
+      "reference": "ChIJQZoumYrLHkcRmQJsPH_QsIQ",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 105
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "9 Halkin St, London SW1X 7DR, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.500653,
+          "lng": -0.1528195
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.50201127989272,
+            "lng": -0.1514755201072778
+          },
+          "southwest": {
+            "lat": 51.49931162010728,
+            "lng": -0.1541751798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Military History Club",
+      "place_id": "ChIJ3SUMNDsFdkgRcmVHObtpCDg",
+      "plus_code": {
+        "compound_code": "GR2W+8R London, United Kingdom",
+        "global_code": "9C3XGR2W+8R"
+      },
+      "reference": "ChIJ3SUMNDsFdkgRcmVHObtpCDg",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ]
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "3 Pułku Lotniczego 4, 60-421 Poznań, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.42696369999999,
+          "lng": 16.8479631
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.42844842989272,
+            "lng": 16.8493172
+          },
+          "southwest": {
+            "lat": 52.42574877010728,
+            "lng": 16.84606399999999
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Armored Weapons",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2121,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113993880585163496243\">Andrzej Kietzmann</a>"
+          ],
+          "photo_reference": "AWn5SU586vfjKgjENSwJZu8k81uPSY1jq2sDRI4RnClfL8cwaAV1XXKRdybohsH__9n58izmydRDHxkxY-Ah5u5yo1QeS0E38KeBoriXCBjvEJJy1aqG7934FaWtF6Vb_DwM0a7IAXLbjLZq6WKYmRIiJpTWp4-7QA48Um4qLeMc2Rv2YrZQWE5mP-8aSwRjLlXQ76egGXbXmbFsHgSzY8ivFFdnx9Mk4HQEhl61lslREnIwdULti65MTmh50dfMVMskuL4TOJpxSb0-8tOEz5h32-oSHu9VacMx2WF76iKhWcWu8lUfOs8nJd-f5iDnUm_4JVLRmex74mt4JHeVTn2_njj2NKTXqJLtuu5GjT_scdPNfhGGS4ytUpeHMoP99ZQeqCMFwosFf9K3ipPVz_et7j9qZqOrSvO6zfLWsLWoHyLwA5Ea2nbaW-GU0q6B0d8tlF_3PIYgoN4TOWAtyTp1fYqRX6_yFJA1DU5WWda1YsmNkhwUWaJTnWyjKNLHVkCwbwT9BTAXwU12eACiq8W8pRjSYOtok81mAGQv9wOvlW1xGLIrGt9o5Gm5ae1WjIjUmNrK6ATBXEtz4w",
+          "width": 2969
+        }
+      ],
+      "place_id": "ChIJR5nmHKJEBEcR906V7NJ2-hY",
+      "plus_code": {
+        "compound_code": "CRGX+Q5 Poznań, Poland",
+        "global_code": "9F4RCRGX+Q5"
+      },
+      "rating": 4.9,
+      "reference": "ChIJR5nmHKJEBEcR906V7NJ2-hY",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3793
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Piaskowa, 42-674 Zbrosławice, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.4165526,
+          "lng": 18.7681968
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.41774682989272,
+            "lng": 18.76968842989272
+          },
+          "southwest": {
+            "lat": 50.41504717010728,
+            "lng": 18.76698877010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Muzeum Techniki Militarnej w Zbrosławicach",
+      "photos": [
+        {
+          "height": 1367,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102311722573456516794\">Muzeum Techniki Militarnej w Zbrosławicach</a>"
+          ],
+          "photo_reference": "AWn5SU6MUeeAgr-Xbz_vhjM2oJRNkjXoHqlpUGczgV9LdOxHnGtVXAjDXP89rHqfKECdFt3o0tQbt2sOAG0YTR9u0WWj13NBHoLdWvzTA8eZwXTDwGo9jPaR8-j15YZS4p0wXCkFhy1BbJeYoX4aKubIaSX6nHesjwbp4DY7KRFTwPJoLKzytJX_HbaFUr1PytPY-m5nK_piMlcZf0YsvZ5d9gOlB-WpIf3BeTdiV_9C8dbHIRziVQMmxcAQ_VK-_WV9RoUJWTiS9wRzBAkoQshnWrC0m7FRN4wOhJWbwLpq0ohYvw6lX7k",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJSXAWM2UpEUcRAAiS3U4uZFc",
+      "plus_code": {
+        "compound_code": "CQ89+J7 Zbrosławice, Poland",
+        "global_code": "9F2WCQ89+J7"
+      },
+      "rating": 4.7,
+      "reference": "ChIJSXAWM2UpEUcRAAiS3U4uZFc",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 108
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Stary Rynek 9, 61-772 Poznań, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.4083443,
+          "lng": 16.933676
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.40989727989272,
+            "lng": 16.93438822989272
+          },
+          "southwest": {
+            "lat": 52.40719762010728,
+            "lng": 16.93168857010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Military Museum of Wielkopolska",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2848,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107497929941253965529\">Henryk Machnik</a>"
+          ],
+          "photo_reference": "AWn5SU7vMhkJSVHixukTq6R6ds4bzzdm_EpT8_VT8a6Vx0nrXyr1ODbaLjQR5ts6LKMzXIT4UrE_Xm-mkVBQTS7xMuYbWGqJcU5RRplxI204mY_SbUNu8ANvbe0_z56-7vZ-0Kn7iZ9hBfApXs25VAghFQ9eiBcmkpFrUmJ6SLZIf90EcLCAb8WRfPIF1mT9qkNAWexD7huNp5sNBWnR2yT774BxZUZwfnx-pS29RAcbdEHnmYpKXxKU4Wf48txLVIbqbHfIfMvMr_GJ0l4DQuassSNq-3dlYketL618hIpWwEBAUkFXjEgBTzUqEhp4W8ploWktVF6aU2_YycOHrnwo72Rmes6rVqi70qysEkBGlyeKJCrpBNfM53hDf0Yj20Z-eecb-iR6JknnqUK3fJJmnuOfhpWfTsxGcUZ-nn7Mq8f3F-RFhv4uFXIiTcSvUC-3PvR_CABQBpvlJCUeEvEIivO2T4iOx0H2JaTNRRjQSOg3O_cAore98ityJZMJnY4r1d9ZdXSJmCAAOMm14zbjswjHnt7UYkbkG1c8QvuhrGxxSVwzH91W_vFExUR5yNPJjEZqOVFB2yrA6Q",
+          "width": 4288
+        }
+      ],
+      "place_id": "ChIJzbLLVD9bBEcRLQPO7h75KL8",
+      "plus_code": {
+        "compound_code": "CW5M+8F Poznań, Poland",
+        "global_code": "9F4RCW5M+8F"
+      },
+      "rating": 4.4,
+      "reference": "ChIJzbLLVD9bBEcRLQPO7h75KL8",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 316
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "20 Princes Gate, London SW7 1PT, United Kingdom",
+      "geometry": {
+        "location": {
+          "lat": 51.5015852,
+          "lng": -0.1729019
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.50292777989272,
+            "lng": -0.1715511201072778
+          },
+          "southwest": {
+            "lat": 51.50022812010728,
+            "lng": -0.1742507798927222
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Polish Institute and Sikorski Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4128,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100301305657306118737\">Anna S.</a>"
+          ],
+          "photo_reference": "AWn5SU7mpr6uK6MPw2as0jtPikOe7cXK8OQAWTl_CRDeo8-5sS-tQGaALfbgGaWUL1fD3XFI953cKXvNuP1u_4UjNJGipdvDsfksm7Hitkm-_o9a-GyjiYiu_RqjrIpmr4h5L7_la109fAzBwsSsOuE4KubCpYZoioLTn6QJhxI0h7g9r370WeMSe_RSL-V7AY7ND_b6HdjJAFJiVndH2XDtq55Bs7LqxBNy-33rviK3bUrLqGT_o92FDDEe5Zs-QQv4xxv0cXyhvMDF7-46xgxSn1GkoKXqlrfGipiFFxtuBvvFEfGzRESOXF3qRHs62IYQTF-Slwp56lxjIEHp5GfDZrTga_j4XEkhtpQxeQE7eaplM533x1zQBKbX4_jMy2gI2eF3AnpwzHropTepk5I_dZpW7TzYr0BHro3Mi7l_G0KjWZjjfUONDMx4T4mT2jXl06RRj8rxs_NfSC7rCt36LZHG2is67jvQQQnKvNOKcKqzIclqK-Sh10fLhREKjv0oHvk0o1BWPUjJqqk8GIzs8IyFHO-05rxzYoL0YzZ5lMOOGBZXXwVDyHibfcXPrMi1gRVhv_pF",
+          "width": 2322
+        }
+      ],
+      "place_id": "ChIJOcrJ-EQFdkgRfriBVbNkaTs",
+      "plus_code": {
+        "compound_code": "GR2G+HR London, United Kingdom",
+        "global_code": "9C3XGR2G+HR"
+      },
+      "rating": 4.8,
+      "reference": "ChIJOcrJ-EQFdkgRfriBVbNkaTs",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 127
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "mjr. Henryka Sucharskiego 70, 80-601 Gdańsk, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.4060549,
+          "lng": 18.676036
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.40752617989272,
+            "lng": 18.67773117989272
+          },
+          "southwest": {
+            "lat": 54.40482652010728,
+            "lng": 18.67503152010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Wartownia 1",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2268,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114090785633345052733\">Wojtek J</a>"
+          ],
+          "photo_reference": "AWn5SU6e3890hv7PBJ36yhIVDnjHbCptjurwVmyOBIDTtFLqTIK7zGlXS3T7Z_XMpFooKi-aSmVWMICdDQUvWb0jpcohS204sxZMHFOsd2gsj_ZFV1YNfcQ0j40V6gQ13x8Q5eEiWLC5c_D3aXiyV_K1VdfJlsBBjHiq2xWBS1Z4-Jox9HeEQA_Y_CMj_uWe4sRfXaRLRADeoHFcw-zTfb8u4EvML-I9jnxqYv-iIVkbcMc49hIAwx62omtCQ2u6iA_qH3RnVKEtY5VjUGKsv4frquOOTcgM5TadQrf2y7IZiAaFojoo5GxR26qhG_PKdnBF33-NpuhWBG6LE7uoos7fI0wxNzlhYPwV1GEyGoDdXrR5hkjG8QTY88WxwuBH75MvN73Ban3g0zE8ExhxKf-cOjF8uVSs9Nuh2wCeLWjERCd-zDBkChvZa4NaCUGY-WnVxd3QkQFPIXLwM_BVxpS4rjxzD-io26JfunFfdM3-0xxaBTpqllva7nPENap-WWqgBsdSWwgIjdC9IBeFWRbtfy63f4AqTE8b1RdMvJFGE9c9lY4N5K1ivmQ4x7y4elauOx5Hdg",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJnXLBy7oM_UYR469OANBRVY8",
+      "plus_code": {
+        "compound_code": "CM4G+CC Gdańsk, Poland",
+        "global_code": "9F6WCM4G+CC"
+      },
+      "rating": 4.6,
+      "reference": "ChIJnXLBy7oM_UYR469OANBRVY8",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 475
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Niepodległości 21, 78-449 Borne Sulinowo, Poland",
+      "geometry": {
+        "location": {
+          "lat": 53.5801022,
+          "lng": 16.5255933
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 53.58145422989272,
+            "lng": 16.52692092989273
+          },
+          "southwest": {
+            "lat": 53.57875457010728,
+            "lng": 16.52422127010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Międzynarodowy Zlot Pojazdów Militarnych „Gąsienice i Podkowy” Borne Sulinowo",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 947,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111871399042373745339\">iwonasfoto</a>"
+          ],
+          "photo_reference": "AWn5SU6AihdzL15w4nFWiMBAwwHrpGOlgpgQx91xmC1GGk4ycPjHNOGq30hkmAdFgkjxOc3BziidsGu0hvCmd7Mn07l4CZ-CjSMMvOPAaiOzTlQqvGGnr7-FLTH9xDwsWxhEG5DLsa7woLrigoWBOa-xbnLa13NAV63K5TLay8_15XJhdjEOdLtTn-Tp9PlA7dmpIA3qqKBMbsmpygK9gAoNZ9Wkj3iCGwwqoEeCcJEOHyn-YU_nST3hTAhCpMeSgXdQvWbKhLm_6aIPMCD7022lrJ3IsZPF_YnmOxMuFXCqWSkFKSpJGrHHFnwaJZdSv_yqUiJBbXALltZitKkOUuMpdkqgaQeGEsl1mbnF4ECgjwYopk4uZsSWh_-fJFSl4ZG2ibLuXD9M-3QIiSQB-yCgSDol1jJTsl2dZPTVhHxb9ep0-jaYPk6dF9OaPAakernJtfDsDj4qcYIGsLypXH_cyQvDakrFpKe98s1rbcoofsvETTXCCo-xyIYqVUyQDIUMbHA_qfFQmSPFKsJkGg-xnOQrdoQLESPZMyyaLKufrkweaJvgX7zNqEf_ZdqAKC6wqA0n8A",
+          "width": 1600
+        }
+      ],
+      "place_id": "ChIJlWAaVRp3AUcRYsaXuFhqyok",
+      "plus_code": {
+        "compound_code": "HGJG+26 Borne Sulinowo, Poland",
+        "global_code": "9F5RHGJG+26"
+      },
+      "rating": 4.7,
+      "reference": "ChIJlWAaVRp3AUcRYsaXuFhqyok",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1065
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Rakowiecka 37, 02-521 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.20769929999999,
+          "lng": 21.0109348
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.20928352989272,
+            "lng": 21.01253392989272
+          },
+          "southwest": {
+            "lat": 52.20658387010727,
+            "lng": 21.00983427010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Cursed Soldiers and Political Prisoners of the Polish People’s Republic",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2736,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/118148431821286795689\">Arkadiusz Róziewicz</a>"
+          ],
+          "photo_reference": "AWn5SU68c0UcsIxKMs0REOc5nyQuyws6yA_-h3S49MOznQx4NSa6Uh9yBdrZxrGoQconqrjmyAoYKMe1KEiI0HFWxXV93At48Igux2S9UZ4Vnq7TvBBDu_mRWMgOZJN3dDxRe9uFDCYlsX8No4H4ltuxU8e1E9jEU_cX6X1iy74QItct3Epr3NYHB_5MNkLwnde86Ay8zIuAmiG7Iv9kNLW4fpEChQKPP5OIGVjr5td0WmWFtcszltggJiyDUaTL9KjeTvn-N0YFTdr59zTlQWTAVm-plufnpjtEyAB-SKtXr3wHCLAU-wH_dT3srQmaaSTLEDPmFdA4vlkEGp3xBXzHZN3kBLI1Ks1BZr7sXut2ifqkkIzcSMdXMG_fVgVZjqbu5flEY1qe9Ous4vRSQh7-xvB9qXQ49szm-2SKDFlpKhNPpuG4OjyexEG0L-rCmNwr6BJfAweK4rFqNupdwnb-PlDm_EzLIH3IWKaivxNeMfUHg-LWnavH_kLukp1sxU3AtgI5WBxFW4xMfHd-i5HnmIF7wTqxGLyRtycIz6TDG5h6y00pESjBRw9lLOsErk1-8vwf5hUT5wHGwA",
+          "width": 3648
+        }
+      ],
+      "place_id": "ChIJNWoMFSTNHkcR85JaS7YPsX8",
+      "plus_code": {
+        "compound_code": "6256+39 Warsaw, Poland",
+        "global_code": "9G436256+39"
+      },
+      "rating": 4.8,
+      "reference": "ChIJNWoMFSTNHkcR85JaS7YPsX8",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1005
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Zaułek Prosowy 1, 87-100 Toruń, Poland",
+      "geometry": {
+        "location": {
+          "lat": 53.011945,
+          "lng": 18.607232
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 53.01333322989272,
+            "lng": 18.60852672989272
+          },
+          "southwest": {
+            "lat": 53.01063357010728,
+            "lng": 18.60582707010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Muzeum Historyczno-Wojskowe (Fundacja)",
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112600415649163746183\">Muzeum Historyczno-Wojskowe (Fundacja)</a>"
+          ],
+          "photo_reference": "AWn5SU7Ie18ykTxf9BF-FZwcZ74Q0EVshdBSMJXeE5DhnP5aiNHsh2lpLgOsVCw6hi_jRIMyWrzQFhX4tyO6ZsLNWH6vuUyONBk7XQz1LvypNDKDmj4hI-AV_MC8egKoiC_y7wtLHa0P9WcmLK_PoRxUnttbtIZ49eWXU8hxOKyNwA5HqI3w2WYOeSUZIGhEJVjEKH_iZBtUDXyVNEDmO00hIdzlBFU3LQt8ooQ-Wc3YOS9YiBwPpkzoyOn2IlbFuBhuBi35Bzpda6zjdXQAhAnWq6xTD0pg_nUkpcQ0YHZXKgCUfUHjsOE",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJGdBBG5Q1A0cRvceaWl6AwVc",
+      "plus_code": {
+        "compound_code": "2J64+QV Toruń, Poland",
+        "global_code": "9F5W2J64+QV"
+      },
+      "rating": 4.6,
+      "reference": "ChIJGdBBG5Q1A0cRvceaWl6AwVc",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 18
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Zgierska 147, 91-490 Łódź, Poland",
+      "geometry": {
+        "location": {
+          "lat": 51.809613,
+          "lng": 19.4386661
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.81091097989272,
+            "lng": 19.43979902989272
+          },
+          "southwest": {
+            "lat": 51.80821132010727,
+            "lng": 19.43709937010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Independence Traditions in Łódź. Radogoszcz Martyrdom Branch",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112382682938343874629\">Turan Furkan Topak</a>"
+          ],
+          "photo_reference": "AWn5SU4L6tVBSIIbJWf2ybaXb0cIZYpAyx1Fn4VFMQIInRxd8Rab7qkuVZ4P59Bh4LwPe8ReYr9lMISCOG6z-Dzud9B4_uH7qlICfHKahl60FRca6ERmE5sBYcz0A1N1DSty6V2pmFiNdIoYRO0yJeLn79prm67YsfRgc6BqU7AWqjx-q5qmKD9iFXAHNKtvxrkHdS9ojjSs3xK4ep6CzPxFNRoeDPRr4Y37bIrTUfVTDPFbbP5UcGHUh6MivfkTxheJH8jig8MkywQjFo_Hjyqr7b6qFJXEw3Kxmd-7O7CsJ716yoLayrrGptpob5J2MARlxmimwd9XZpLKLcM0vo0KHB2Lidn2uJCj8kz7SNOGNUOwfPQ8EHdNmJHhn1B_Ujhy9t0bWzbw974BKK45IoDHEjV6kJ_O8ESd2BGn5YYiyr1_gQbGbvzWWJBETVWN1-Jfq86Qm_HRS9PxL90UJJL6JJ-RP4NRSaka2Ip-FAt2otz0zZE10YF5MWq38QNsgwuI422f_aIDcmnpZV1ByME2Wovovpm9YEqUOUY1Y0Bp-qJ_JSbRIuwml2txagnE58exh5mAWKm0KAN2Uw",
+          "width": 2340
+        }
+      ],
+      "place_id": "ChIJecBD2IfKG0cRUuRCaJ_AM9M",
+      "plus_code": {
+        "compound_code": "RC5Q+VG Łódź, Poland",
+        "global_code": "9F3XRC5Q+VG"
+      },
+      "rating": 4.7,
+      "reference": "ChIJecBD2IfKG0cRUuRCaJ_AM9M",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 517
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Jerozolimska 3, 30-555 Kraków, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.033185,
+          "lng": 19.9663889
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.03457507989272,
+            "lng": 19.96783797989272
+          },
+          "southwest": {
+            "lat": 50.03187542010728,
+            "lng": 19.96513832010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "The Grey House",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107259163969935289328\">dr. Borku Csilla</a>"
+          ],
+          "photo_reference": "AWn5SU4RCvA82ZosVh-p1Me7tbZdYjnxEZZF5gTZfF699ljvpt-rV7fM0wc4XIiIKb_dXGTrgm5a22w34duUgD8tiO_u4GSg1SjSFq3LOREw0bTE-X6kpgxbmXXC5GhI6xgk1F_-M3K2y7HiCHXAfJIr8ev08JSdtwBq9aAHdhm22KKsHZHR8J3o5CgtdCzxfABn-zMtVK4S2qcWowSSoQGZ1dh7-SE94Cqppy0ssjSxasKQTj684NZ07kAodukmn5yaHif51i468o-c-REZZq5Gdu6CyVJPNvpUwE0vic3zCphqP44uGdE8_pHm2MY2NRMKOjtRp9xYnF6Bi8-XLGO_6ojXDKlV2DNAjfE7Vgeonku9uVcEAONfLUMBNzhBz8LZWhDUsLrhQx00cs_hsZLnBo137kiZ9CtlFI1es1cX92BPoKFYGUwGgglgrnp35n2-g2tUgymfsJ0Y5pxzJDbT6EZnFIuEdOUFM_41FazAe5k5pNDddHsz16QKnfnQSpLGsXVmw5RFaWcbWpBM3y-xoDoM6AcpcLH6ytKqXUj091-pbgOVXF2CnEN-eOjVI-FZKPyIJu_pZMPis8dGiB06ssgbLnm23g",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJC0NJMKtEFkcRkp32X0i9aUk",
+      "plus_code": {
+        "compound_code": "2XM8+7H Kraków, Poland",
+        "global_code": "9F2X2XM8+7H"
+      },
+      "rating": 4.4,
+      "reference": "ChIJC0NJMKtEFkcRkp32X0i9aUk",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 634
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Agrykola 1, 00-460 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2135173,
+          "lng": 21.039022
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.21454772989273,
+            "lng": 21.04142165
+          },
+          "southwest": {
+            "lat": 52.21184807010728,
+            "lng": 21.03771865
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Hunting and Horsemanship",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4318,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108554470704889005765\">Muzeum Łowiectwa i Jeździectwa</a>"
+          ],
+          "photo_reference": "AWn5SU7_wGqdOBulOZGkkn1aD51M1nwSzRp8O9IL7briczfqdnJONx0y0QAjTUTxe48YyUDZkxV91H1gOoBWz6tsqWBsTNGbQ9m1h3qFYeSc4x3PpFssAaOAyC379oUAjd66COZfYEBc7KlX7yBnpgsYfQL6Qq_UtrcGlxo9jGeqfFjDSRt8OBZhieK_Jgx0MGl6lEFVM5eixPO3xJ7K1pbgDOQfssbJonueHeDvIln0txj0YwMjvg1iPMf3zar8_XkcwG82wlQc1qlw93m-viI5MyFwfqUZIBWBkNJdNtiVqPiaZy8S5L8",
+          "width": 2593
+        }
+      ],
+      "place_id": "ChIJUUEGPBzNHkcRfRZs40JFofg",
+      "plus_code": {
+        "compound_code": "627Q+CJ Warsaw, Poland",
+        "global_code": "9G43627Q+CJ"
+      },
+      "rating": 4.5,
+      "reference": "ChIJUUEGPBzNHkcRfRZs40JFofg",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 438
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Aleja Generała Antoniego Chruściela „Montera” 103, 00-910 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2679992,
+          "lng": 21.1740083
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.2737441,
+            "lng": 21.18530315
+          },
+          "southwest": {
+            "lat": 52.2584233,
+            "lng": 21.16482015
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "War Studies University",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103550660899750229859\">Dimitradze Bortnovsky</a>"
+          ],
+          "photo_reference": "AWn5SU58ISY6bA4tWNcdX5KtbNs49AWFd0znzeqvMv5OyP7ZfyB36bQSgBJB_MGhGutXxE0SxWwRW_EPDiV69_b-ERBu5zboOXLDSwIpVsA6o7AkWGo-XxzMhYkQjZEjMREZrEx8GkIIvDFE1SHxWzWHRM50KdLXGBAvyIwADtl20JGDiiZMPuMcZYTCnYMEvKkEr6T_oFhlknF82NkwPj2axVI19iw5Tm60d3TCMmuFTiXczELXS70Crf-CCmDoRmMTJZu2-RffGe3pr7fvpJGwgv3KV5j65xJQYybpGk9z6JvFbIc5mEpswBSg_mQvebCkqXmc7LyD2cCO8ets2cV8xQNurWt2FtcOXosz900BUmtBEEGEg4m_z-90VEtxKIMTOznla-QsWP2r1gbYe30M2YGRXRZNO8IIjZ_G-N686XcvR1eQbwjhfQ19Mx7cnY4VX_WlG_YJWc19lpWFKmJftKKqkCMUcXfu1mSouesm5RFd6VqjuRSG_xcAyNhI_xK8NJTk3HcL3LZpF2YqP57v_pciiTR5wzwxlziVNHhZi9XmSbnpMbAkBdKMecSNPanYonZjQDInU_N1hQ",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJuT5a9-zRHkcRHUvLc2i6Ssw",
+      "plus_code": {
+        "compound_code": "759F+5J Warsaw, Poland",
+        "global_code": "9G43759F+5J"
+      },
+      "rating": 3.9,
+      "reference": "ChIJuT5a9-zRHkcRHUvLc2i6Ssw",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 407
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Legionów 11, 32-600 Oświęcim, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.0394746,
+          "lng": 19.2140665
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.04091037989272,
+            "lng": 19.21521697989272
+          },
+          "southwest": {
+            "lat": 50.03821072010728,
+            "lng": 19.21251732010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/hotel_pinlet",
+      "name": "International Youth Meeting Center in Oświęcim/Auschwitz",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 768,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107993333882644214993\">Międzynarodowy Dom Spotkań Młodzieży w Oświęcimiu (MDSM/IJBS)</a>"
+          ],
+          "photo_reference": "AWn5SU5pqgZ4baaBy9HA45F0C2nXEvhUT_kXK0CFnrl-M-gViKo54ehRY-q2xuWrBR9knnwW4ds2f1182zTpZ87W3Y4VtlWvtpd071gRxdX20YwdtlxqsvdEJLlKV51Jg23M99OfsF2wNKJ3WiNWFouH9vOKN2mW85RtvpA0m_AkUaNvnyiEVoio1mPRDJnLFq60oHr57DVkcZNu47t0s4P_xnX62HvCkvgiWY97hFajXy7sWMrezEc5IKXBok9SrdUPT2omOlbyit_GtaJUXQpVWebCkz3oaQ5hVf61WjUcDH-aIJ8frZ0",
+          "width": 1024
+        }
+      ],
+      "place_id": "ChIJ1cUcI3qVFkcRtDhTWaQWD4g",
+      "plus_code": {
+        "compound_code": "26Q7+QJ Oświęcim, Poland",
+        "global_code": "9F2X26Q7+QJ"
+      },
+      "rating": 4.6,
+      "reference": "ChIJ1cUcI3qVFkcRtDhTWaQWD4g",
+      "types": [
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 403
+    }
+  ],
+  "historical reenactment society": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Unnamed Road, Poland",
+      "geometry": {
+        "location": {
+          "lat": 49.54508999999999,
+          "lng": 21.794349
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 49.54646727989272,
+            "lng": 21.79577657989272
+          },
+          "southwest": {
+            "lat": 49.54376762010727,
+            "lng": 21.79307692010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Tablica - Świadkowie historii z mapą",
+      "photos": [
+        {
+          "height": 4160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113613337755962189849\">Jarowit</a>"
+          ],
+          "photo_reference": "AWn5SU7DzKrEH4ThtjYQcoovmxZY3V8eDgGCXk2VcDwF1e7H8aUTUe0rbVajEydRItDXDuXCkiB-7tEKmek9gRbSJutD9mIzyMMkOQmNcSZgUt8sfx5Wd-MGbYozh4qQ82kYFnZttSyMV2Q_1UqGb9fUaP2SW497lLxMcoEaSa4TniDaLpJXf3FIZpeEN9uEr6wwZoum9akeZgwDlDEF-2P6a4j4_CSquln8rAxoG0fYP5jvMcnEI71o_thXhke93xLgGqrwKZJNbyJguJm8njo8yPeTSQ45uea9sIFJhkTXe4MW0qbTYvNa34mp17_WUyicyq3gyICiFWvIoB1z554sW0LyjtjlXBnkf-CQBm0SkX17Ty3GnRlAmIppBOET6QvLS6RzcJ4U_rbcajnKEtEDZHgeqGdAepxD1ADyq5ofgTQasnrY_HxmooR73YvWqVc0DAEgApHeEYVhe3lV8EXDRZCrCNbFdKBTyORZSVrcoF0pIBPspI1Rwgj2534ELJYlfbriXZ-D9huZKeReAAN7feP-w-lY_2wEIBpB0yxGUBVhmIM28fVzAXsl4n6aR_EIBmp0RD88EOAdCw",
+          "width": 3120
+        }
+      ],
+      "place_id": "ChIJ0U3uxIs5PEcR-vpHQD-30n8",
+      "rating": 4.8,
+      "reference": "ChIJ0U3uxIs5PEcR-vpHQD-30n8",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 6
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "78-220 Podborsko, Poland",
+      "geometry": {
+        "location": {
+          "lat": 53.9563087,
+          "lng": 16.1216841
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 53.95773582989272,
+            "lng": 16.12364627989272
+          },
+          "southwest": {
+            "lat": 53.95503617010728,
+            "lng": 16.12094662010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "logo Cold War Museum Podborsko 3001",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102902105784139404801\">Muzeum Zimnej Wojny w Podborsku</a>"
+          ],
+          "photo_reference": "AWn5SU4IqpCznjzmURR45OHl9Td9HBvxhTLMK6Jp-IJoRdeQdLey2otEP0RHtld_N474lwnSsLSBcosk2-BmfFSR9tQZM0Dh3h-UzMtOTRkTFdi8leivhMFFwLNOcKXQWmGK-ooMeDzQd07Bwp4Cb_ts-dyb2lq5pjyS2KanhO06inVEwPzfI_VAbAA1-vkN_0gnj5j6iz6dOg45Bm4zwzhvSzwwT3ONoqE6O4JDpAR37AB5X_tZ6phYsr3BPOJEAdKHQsKrGw37TpNij2T2Y-nTdWiA9UXzF1mkd2gRNf8zVT7Qro-E2OU",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "rating": 4.8,
+      "reference": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1166
+    }
+  ],
+  "world war 2 reenactment": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "plac Władysława Bartoszewskiego 1, 80-862 Gdańsk, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.3560788,
+          "lng": 18.6599928
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.35732217989272,
+            "lng": 18.66133192989272
+          },
+          "southwest": {
+            "lat": 54.35462252010728,
+            "lng": 18.65863227010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of the Second World War",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3004,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113035408402397680969\">Adam Matuszek</a>"
+          ],
+          "photo_reference": "AWn5SU7qIRXl91u4dUzHFf25tA0WmDWRHqdGWAU0BLldkf6y2z8hA9wcyk42HSqvsm0GAptGlCk5H-i_ipoTNAkkEEDNkcQrEYKzpNK6t9fWbtCmBpg3HSwxoCC6DhivzZbyDUIzzjePsJFcSoa9iZ2ZW8Hjm3B6XtDJjHkinFUS1AUbTmgkUEhB1T56cJfko-lxAy_lyeqSWx6Yw3IGr8LKgiTn9Y2opHAHQuxQc--2Gzx3xmsJwQeIKSAx0vF9fBKYK5sJx_U6XKT77KaJzV2Lb8o3hSTJwY2Q0vTUn2QH7Thkt8al9W39NDm8HGjMHi594OUEkPyu3ZO2XMH1_pbE2i_wo3vY4FRtPdJKsj-MninNzekKBM2RolOHqs69edgBWwSuEpqGGCfsz9Ir_as8bbTf1leSdfvqiEgwMOFPAVvF5Lx99XU81YJTUFS97wnxrakDZFws495GH5BDM76OzQoBcJekeVZVusEd0PRIEynNNb7UDgp5I7tZwUmU2EvxoqAfwzYFhs8iC0wWdzOtZdAsVYKlGrGQ_v6RUe3nZxSroAdFScoDDbbGlBOKs7ftgZjvSlp2gTKWGg",
+          "width": 5325
+        }
+      ],
+      "place_id": "ChIJcyyBngxz_UYR4Drm0rTDtKA",
+      "plus_code": {
+        "compound_code": "9M45+CX Gdańsk, Poland",
+        "global_code": "9F6W9M45+CX"
+      },
+      "rating": 4.8,
+      "reference": "ChIJcyyBngxz_UYR4Drm0rTDtKA",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 49815
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Chmielna 73, 00-801 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2283692,
+          "lng": 20.9973774
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.22984857989272,
+            "lng": 20.99899162989272
+          },
+          "southwest": {
+            "lat": 52.22714892010728,
+            "lng": 20.99629197010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Poland At War Tours",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4284,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103879093202915834225\">A B</a>"
+          ],
+          "photo_reference": "AWn5SU4bqp-LSFmL3AVLih3-H-8tNdJheFE8GpWeO44-RdDUUtWF8WwJNtskfEpCUN4HOyJLvyjxy3qifxMLc25f1jyYw0sVTqaKac8DHZpRkH-12Qo4y_GacEVkLA4Q_3X9MHghNd7EDciA7rCUpBwLD9Bb50bM27StuOQgJKW4LO1YN7O5P2RdnBsNty35HXt4j1tIiyj4TDHHPni_AWnvgP2sEaqo3EqgFT1qqd6Uo4JW2tXztCf7DFLOcsKDRDqV1YIGX5lPzGaoCQ-RvxFspteWMiyosoLD3l4_8fYZ-zIXD54JM2QQjz7RlBnfc5ueTLTxv2aKd2oikco_0IzZUz8ZyUpqqY7yodDRFuRki-S_b-NmcAx3pJpLGlklFjsnd8VAHnbKOjkxf5HylWzlbcrK4Yii05gE0lUTYiApKwhLZjUGn_hCtCb0wxV0cdQkJ1CoRemdefoTY4jchDe0_s_wPPi4Lb0CGBY90uDHEmUi-cr_Yck8MRZW0GrUghInKd7U94Kawiqu_w8Uzq636owhYVoVc_0BVSCZX1_DQ1l0qpPfRsjpRS5e9gYVjv1J1aZVKbjc4xvOvFsBRFRWbnI73bVGSA",
+          "width": 5712
+        }
+      ],
+      "place_id": "ChIJ0-3QODXP5oURugbiCGFYkD4",
+      "plus_code": {
+        "compound_code": "6XHW+8X Warsaw, Poland",
+        "global_code": "9G426XHW+8X"
+      },
+      "rating": 5,
+      "reference": "ChIJ0-3QODXP5oURugbiCGFYkD4",
+      "types": [
+        "travel_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 27
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "80-001 Gdańsk, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.4066936,
+          "lng": 18.6669688
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.40785442989272,
+            "lng": 18.6816577
+          },
+          "southwest": {
+            "lat": 54.40515477010728,
+            "lng": 18.6620273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Westerplatte",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109113527967718882520\">Akobir Kurbonov</a>"
+          ],
+          "photo_reference": "AWn5SU5v5swKqECQzAfcMZJUTawvqlwOTOD7RhyQRQfrhBjzYuGUkl_wasExmmFUge18Vl7PVwXzuI1VSb1rA-ZS2MA7UAAEy5wJnuFVRJr4JnsmJxFDoaLpppt4P61TRAM211RWE6EqG-MztRH_g2MWxLvN0R8PaxrkroGWlLcPSh5klcClskSa_Uuih6Bi8TIXyUM0-XqxKegtewTANcEHmOfWRRF_4TDzcDE8r2t6cKNlWYk7xsHGJ1_CZCowGQA61ZoQqt-j8Il66Wj5sF9_5maUf_YEz78hu1BVz9zpx2_YFKeeOR9Fwn9RW4cnamSKU33lRx9UPgfjRo9vXGu6HL8mm2N09WQU-OVmUqYr0OLgAoAqN2_DhbA-iEc26pKiNuO9Urud39wgcXC7KwjIeOtTXUX8YKsRsKgF-qFd8KaO0FEiZ9FGFHMxb-L6iac4LqHkDON9p7cVOakr3885LVjWL0furu0dN39wVZ7VxO_j6rClegmBTrReHVb7dW6MSjtFfSNQGT7j2ztrIn5qrW25C--saufsNOWQ8ABoI_c0k3JDIqS2d0D43RW_ju8G0PtnK2h7D8PH5A",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ1yazczN1_UYRorW0dRJlp2k",
+      "plus_code": {
+        "compound_code": "CM48+MQ Gdańsk, Poland",
+        "global_code": "9F6WCM48+MQ"
+      },
+      "rating": 4.7,
+      "reference": "ChIJ1yazczN1_UYRorW0dRJlp2k",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 25570
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "78-220 Podborsko, Poland",
+      "geometry": {
+        "location": {
+          "lat": 53.9563087,
+          "lng": 16.1216841
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 53.95773582989272,
+            "lng": 16.12364627989272
+          },
+          "southwest": {
+            "lat": 53.95503617010728,
+            "lng": 16.12094662010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "logo Cold War Museum Podborsko 3001",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102902105784139404801\">Muzeum Zimnej Wojny w Podborsku</a>"
+          ],
+          "photo_reference": "AWn5SU5pP5NFmcjUDyhLnZWEvEkvOZJOF-VTbGkOZ9PHIf1eFeTpXeoZ3oUklpkC31fhL33GQyZ34Tu1bCIS973jQyFgL0fZ32FjcBzGEnO55GrVprA2k8qAETpBdO6g6_zXYJsi_D-acb9hkN_Rg7CiC3bVGxCvsoS0Q1UWCOuYxoJ-MWYPmx33aHwl1j1KFFkkHRKoTaKH6N7cpT3B_9RPhYD95kouMJUDrREEjskmFj5SBonzinIwsSWFB0ndrToTUSI6_XOpvxBtE1C1KT-AzZSH4ByXAipu_V0ayxLy9GyQHhznDNo",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "plus_code": {
+        "compound_code": "X44C+GM Podborsko, Poland",
+        "global_code": "9F5RX44C+GM"
+      },
+      "rating": 4.8,
+      "reference": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1166
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Kasztanowa 6, 05-420 Józefów, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.1399176,
+          "lng": 21.2424444
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.14132917989272,
+            "lng": 21.24426037989272
+          },
+          "southwest": {
+            "lat": 52.13862952010728,
+            "lng": 21.24156072010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Muzeum 2 Korpusu Polskiego w Józefowie",
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116565681619588833691\">Agnieszka</a>"
+          ],
+          "photo_reference": "AWn5SU6UZR7JKrQWSloBQGdU--OER2DSgwFzrykwUQ_D_TlWtb9Zo0xPvlibeVdOb2AZ16qfWZyub4Y38zcbSvdte3m7D9bxCGKJqTznDoNcUAmKpd1r8JhbIU1Z5iy_7fJg3t4nPuq9HTerNUKX_qNJNm8mb2MGH7LYc1-Inuf-7QPbejtdZHJYofZhGqsZ3eMhb_Cp-b92VgqL11eAURRLoAYBms4jLaNTXdxZbp8qoOV6Y73piUZoxEAqJerWogZGCQVau3Z24CFfTzyGP1dJKX5pDjr8eA2P489Sf8RrHm5f1QhMMAGCJM-gj8rLJlP4F_MZd8eBj7RUWaUIuGA748TR_03EnHt6l1UCXQz_6EETHZlRzo_chQhNYDpoB7lxDIcXnjgBa-m7xGE5Q94kYQ_6GyfyGc63zs--uocXQuK7_rumm2aETlZtIAjVbFgnQX7Qu-8miVWfpD3hRMj0IaOMF2-HBf5NltUp5gsMdHx5LCNBmdu2Peq61iUp6nFWikEGejZe-IV3vSDM_6yclGOWpE3qXhRpwiXAtaI28oQKF-3DtEnof08sspZAr-LkG0WkDiBTcNln6Q",
+          "width": 2250
+        }
+      ],
+      "place_id": "ChIJSd6DJZhLGUcRGfGB-9ZRHIQ",
+      "plus_code": {
+        "compound_code": "46QR+XX Józefów, Poland",
+        "global_code": "9G4346QR+XX"
+      },
+      "rating": 4.6,
+      "reference": "ChIJSd6DJZhLGUcRGfGB-9ZRHIQ",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 91
+    }
+  ],
+  "cold war reenactment": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "78-220 Podborsko, Poland",
+      "geometry": {
+        "location": {
+          "lat": 53.9563087,
+          "lng": 16.1216841
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 53.95773582989272,
+            "lng": 16.12364627989272
+          },
+          "southwest": {
+            "lat": 53.95503617010728,
+            "lng": 16.12094662010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "logo Cold War Museum Podborsko 3001",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102902105784139404801\">Muzeum Zimnej Wojny w Podborsku</a>"
+          ],
+          "photo_reference": "AWn5SU6AtzIN9iqecO4KIwGpYm5olIc5XE5vcGnms-j1vQ8aQugKjloZl-WHBd77S5Mt7_giorZ36-CeUiL0-OCt5mpp9cVapFITi3JoKLwxHDYUVa8x3Ka-ozejwR3x6FRKWXuF5AokPfwzUskJDxXmmsukQFq5rWG7nZnzO1QvGfg1QqiUKD5JQKJ676Teq8riBL-M-tIcRV_8-KsI5oHWYjnJTz3R8MujtGI0UPmZIUxr9sIKdqtGb4NNFyMMl8vhQZl_KhKprnLYcP8Tu8Zbz-TUkZKoMrKxsW6m83mGUf9S5hEf5A0",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "plus_code": {
+        "compound_code": "X44C+GM Podborsko, Poland",
+        "global_code": "9F5RX44C+GM"
+      },
+      "rating": 4.8,
+      "reference": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1166
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Rakowiecka 4A, 02-519 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.208562,
+          "lng": 21.0114999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.20986417989272,
+            "lng": 21.01260227989273
+          },
+          "southwest": {
+            "lat": 52.20716452010728,
+            "lng": 21.00990262010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "General Staff of the Polish Army",
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115102307186632409206\">Torben Mauch</a>"
+          ],
+          "photo_reference": "AWn5SU6XpeF17tViBvma7PybZFQQbmyivzFFnDHjgdahG-yNyZpIHOES5fhWMBqqA9Hy4tVmZzhPfgf8O2iogGoGYw1faKrbEpalFcflJm6u169G35k4OeuPs1k4BDLxSso8rZ7qIyIUF7sxmU-VwxzwP-P2ZB5OkwldaLunM7so_JRZQiEinJ_PClgEac0H1gucQUXVn6Vru9LvraYwhXKPuYVqaHpoe6vZ_DieHo7dvrDxzjoIY40w4wxwfAfus12h8KICNkoFcCD2jNb88yMqyWULvBj5gRzBgfpZURKq9-5lfMfnd94LKNJafj_FuHyij3YOBHcdaJNxsdRJJ4d8O524vojgvLN6MTsv3ILleAvNSlgj_b-OJxifzfumppoLhhQMfJUyreHOXUOf345k5DVKr1N6QvHv47pNV8OqyVBwJNCXEX8IvkebXpSvmKv_p6wXSSf7t8fKvoki6W41dsl3tehwTG66k_vO_rk511u-qBAx2je7nX0lODkEsciRn8DKze1bvVCg6KEq34t-hryHDOHNDo_qFICPJmwQtjYGZfmNiH9Sh3EHzZB0SfDRPoVW1P_h",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "plus_code": {
+        "compound_code": "6256+CH Warsaw, Poland",
+        "global_code": "9G436256+CH"
+      },
+      "rating": 4.5,
+      "reference": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 28
+    }
+  ],
+  "soviet military history": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Cytadela Warszawska - Plac Gwardii Pieszej Koronnej - Pawilon Południowy, Dymińska 13, 01-519 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2643639,
+          "lng": 20.999578
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.26577922989272,
+            "lng": 21.00141637989272
+          },
+          "southwest": {
+            "lat": 52.26307957010727,
+            "lng": 20.99871672010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Polish Army Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111412556038266785412\">Lajos Monoki</a>"
+          ],
+          "photo_reference": "AWn5SU67UZlndqh4KbpmJ4wc9-ks7rUkxMgWqCl5s9j67_uMOq2XJEzmx2LhGZw-RDCuDgNLxdu-vIylCHYQdZqMtuyLJgylWOggPn30cs6i5dyHMRJFNLJr2tLSCJ4OgZMgKrn85I0gf604myKZpiztCF2fZntiDQ0gKwkwj9-Yw7-jPK9hLT2d90PmyZPCwyWsRVBn-g8XQbP6mwAL98AW47e4USaVktTMGETWjRkExCfLjpNw7M28VfukVwL4H2ZtpuXQ_T0gPKmlNE8DMW9ShHG7SJArm1hLlY1H1aZrrGnhFLCpzX1eNPyX4SS1x1CAn94XQ9MxaLj05hbIQmMUP_eeEKx3KGxVE9bOo77jLBrCDXRLgb9Dmk_dESqM6FsYIzfVKckZut-2R5NEiXzpbD9IOCE7L0kW-ZVMfMtbt7sqNia8aKaYx_ii6kjj09DlQV_ombJXmEOE2QanYw37dyooigz4HLlThae_XIHkDmywkwa9Bf5YDP4aYPpJpzlE8h26NwiOdkOtYZ2ZOCHlrrzlFItv2CeEwy7f1HlZfLahgNN2FSpzXjH0wZ2cVohLZF6FI0YY",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJK6UEcvfMHkcRGDePQvvQqow",
+      "plus_code": {
+        "compound_code": "7X7X+PR Warsaw, Poland",
+        "global_code": "9G427X7X+PR"
+      },
+      "rating": 4.6,
+      "reference": "ChIJK6UEcvfMHkcRGDePQvvQqow",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 8919
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Powsińska 13, 02-920 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.1827288,
+          "lng": 21.0668741
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.18447067989272,
+            "lng": 21.06812982989272
+          },
+          "southwest": {
+            "lat": 52.18177102010727,
+            "lng": 21.06543017010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Polish Military Technology",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108693776152712910200\">ziqex</a>"
+          ],
+          "photo_reference": "AWn5SU4MKRYMZ10LWf_HH1fKVqB8Cp3MPeP3TdYEL0H4f0brs6eCAnAsgqlyh--FgTT696bF4UypXxlbbD9IzmalOvbMEAA9dIO2dOXR5U0NYX6lLeK946F2pGGfXTaI69uDSbYW1RjOtmftthEQSpwW1ELl_tnb-YWIMDj_mmTv3_YgvJihs_Y83Mi4dktGrO84JsEmYUNg8GJbGmUNmnSBEAKcW7GaxSbnmeM2PCUaVTUn0Fq-tt_v4ubjnwJHKxrleZGq9eby2dr8vTFqxg3p6PLvtX18xmFYxiUKfJgmdOMIBFYWVeXrbI8HjGNEtNnDW5z43tdjx4_JnBXv00d9HqYL87beJPWLisgHPK3eQvrg_2VaDDNRMknWYMh37wnCTDzbTjqst5AENHGOffnZwf_mDznUuevthqqZ-e_yTylRAktA6EnFy5JHrR9W_o_FJOLriKMowgUzs9fuYFZjN8TEJ5jxym8OH3k8H-RK8iuuRm-RqpDqQ-AwXwXDOGgtF0sXlrnXtVg5TbgQjkVW9vrHrpqBgLHuvU7gP3orymWFspJrayeqrbJqUXtcdPdKq2otyCEIr6A1Qw",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ6z_RSqsyGUcR9gxJlHLLTls",
+      "plus_code": {
+        "compound_code": "53M8+3P Warsaw, Poland",
+        "global_code": "9G4353M8+3P"
+      },
+      "rating": 4.6,
+      "reference": "ChIJ6z_RSqsyGUcR9gxJlHLLTls",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3334
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Żwirki i Wigury 51, 02-091 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.2027517,
+          "lng": 20.9877137
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.20422517989272,
+            "lng": 20.9887731
+          },
+          "southwest": {
+            "lat": 52.20152552010727,
+            "lng": 20.9846067
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cemetery_grave-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cemetery_pinlet",
+      "name": "Soviet Military Cemetery - Mausoleum Park",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107525515553212506976\">F M (Phill)</a>"
+          ],
+          "photo_reference": "AWn5SU49mu7qhchcVmO_VTGy1zvLVFHAfktLWnJY8EYlqB1lk6KnmasHbxZRs1yHZeQCHWQ5en6inzVe5N_GsvGNeLUazIKHcnAOv64NUIgYe8FKN9nT6uzw7mRLfBN9gURWePyxqxu-faKagis7btukRj6GMEcF2tmA7xes4GQ3o726cGibQEsnvnzacds8MHmCAdOEaz---Q_nD5EUN8-j1UU59w5az3866hmdE07AuJsLXe5XH8EOPZEylsG1wJSDMhdMCt0tv0VU_LYkZc0uxwDojNZEhUV47rg4igoXJ28sJKeXhOgKvd7Ol8SgNzzBnMIwlDQZ1rsRK-tSjuHGB65TaaUd2ALlQXpTVvcwjRHPfWLnV0_UWNDDT83B1HyzYEAhMrTqXoDIEnV7O9kw7ZkN0Q5fT5mzPPKixINzMLoGxDxrV6bNlok5MGb7s5bf_H5CvlrFsGEmVt5bmTbvbaFlul1VBaiSwg3zo8krjI0e3qF3DHVvQFHiiTBDMg-r19MIIId0HMUorZ0QHPfYSy2OBTL0JhAmlAngDz7O-_QqTVwBdt9AFME9rPNyJF6dXdr5iZBo",
+          "width": 1000
+        }
+      ],
+      "place_id": "ChIJ-bNnAbbMHkcRenFYrdpPGpI",
+      "plus_code": {
+        "compound_code": "6X3Q+43 Warsaw, Poland",
+        "global_code": "9G426X3Q+43"
+      },
+      "rating": 4,
+      "reference": "ChIJ-bNnAbbMHkcRenFYrdpPGpI",
+      "types": [
+        "cemetery",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 308
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Rakowiecka 4A, 02-519 Warszawa, Poland",
+      "geometry": {
+        "location": {
+          "lat": 52.208562,
+          "lng": 21.0114999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 52.20986417989272,
+            "lng": 21.01260227989273
+          },
+          "southwest": {
+            "lat": 52.20716452010728,
+            "lng": 21.00990262010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "General Staff of the Polish Army",
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115102307186632409206\">Torben Mauch</a>"
+          ],
+          "photo_reference": "AWn5SU7HsDe6S47lKff0Cnfn3XZ8hPUrZo5EapzacjqUPu63ffGB7cp032MHvLE6hW0I0f2QPrFza8z5IRpOpKy_z0NKDpz-lwRrmbm36mBjY6BCAXU-EtD4BUp2SxwfwMy6-Pp5dwfniITq3vb0j0Khf89oyqcyDO5rZVN9xnh3nM2FYPTfD1IjN84BZJkEnA5j-WjRdtDOjLoo2-2LdttQpNxgVnDv0WR1YUutfDXdPvk5mbwZigOW3sxVMXuBH-Bba0a6qqQ_xn10zLQ6XeOzvvFhRCkOkhp0V6quJB_kRZbm79LfSJ7V96Fwle--ncHt9RZ9GKB2wwR-SeYClFgwp1L9XAKL4KN9WrIUoLvsuOQB_Br5o-iwwK_DAb4Ga0cjxSxYE7mwCFUW7PPHD965D5ktW4b1Lo_pIvGuujknMaCwa81KaW9lyOZ0OsES9l-7MAAvHZNTv8rKsoh2eDQKqzK9X6WO1JDxyBa8UCaSSTreC5KT8t7bQfNyy4Q8qy6SyAVcx_ak_VNg6AfuKKsMJc-9T3qVnUA6DuiQVFZTEZgk6etyvYfJ7C2yej3sykbg5Cmxa1Nv",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "plus_code": {
+        "compound_code": "6256+CH Warsaw, Poland",
+        "global_code": "9G436256+CH"
+      },
+      "rating": 4.5,
+      "reference": "ChIJByRyctvMHkcRgR0taHXVgos",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 28
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "plac Władysława Bartoszewskiego 1, 80-862 Gdańsk, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.3560788,
+          "lng": 18.6599928
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.35732217989272,
+            "lng": 18.66133192989272
+          },
+          "southwest": {
+            "lat": 54.35462252010728,
+            "lng": 18.65863227010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of the Second World War",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108866335564563364195\">Małgorzata Matras</a>"
+          ],
+          "photo_reference": "AWn5SU7LDNOUQwk0SBYR0FuAhdRAeGiOUPXN3sX7k4Ien0FJrnST9UE03KKjHdg1vnfRpV6RKdVzm8fPcAHO5Mpk6QXzHfYvfEy095pSkrK5vBqEo3d2P7_j3vdR6M0kZZ5iRePzxBxxcXha2jUm_j9lkr3yGRprQ0t-DL2Smq-mnmCt62QkhnV9T26axB5MDibb7q-f6xbZozGeTi4Xlv-KQfn7GvFiFbfoU2GP8FPOiCIKTFgSFafBW3I7vJa1nIpLuaB4Ug6vK_eFlVzkTYMfATQlOND5Iwvh1oYjxPOvKP7-PZPJNY1AkDb8i7NI7Z6mjrWzNy6NT6HMXlJOyqZZUryS21mGCYUN6IezPs3zkykpgSkBNjU6cySprEd9lm0nsnlfVlwnINcNdW06giJRHZgS1ayH4CIDpuRQRUXkvZcqOo2teP9mWPvdS_PPB1mCTxRMQNoY1yguO0JShqenWFC_Byh5KkZLgT5fzYa7P6NfS7WigylJ-W6X-uscfZkR9Mgdm_GngY_GZMIX4f1Xi3zDRzzCeYUGVhve7jugqcbXVULWX0ZLBB4Rv3A105xMw4rH00L-",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJcyyBngxz_UYR4Drm0rTDtKA",
+      "plus_code": {
+        "compound_code": "9M45+CX Gdańsk, Poland",
+        "global_code": "9F6W9M45+CX"
+      },
+      "rating": 4.8,
+      "reference": "ChIJcyyBngxz_UYR4Drm0rTDtKA",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 49815
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Gierczak 5, 78-100 Kołobrzeg, Poland",
+      "geometry": {
+        "location": {
+          "lat": 54.1745434,
+          "lng": 15.5747758
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 54.17580862989272,
+            "lng": 15.57629732989272
+          },
+          "southwest": {
+            "lat": 54.17310897010728,
+            "lng": 15.57359767010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Muzeum Oręża Polskiego",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 671,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117750176949273794862\">Muzeum Oręża Polskiego w Kołobrzegu</a>"
+          ],
+          "photo_reference": "AWn5SU52EQdLXGN3os9_ax_cVhlHIM8GPJOxjVw5M7T6j9Wa9LuQ64E4NHQVOVHbHA10EZ8chAMbD13A0KJ4nNGvnCBB8tmiGlCEtLD9_7GECnTnxIgS1NQpQOzcpYKLeZSzNZGsdAvkCYVdacHumnqhZf7SWIgATSwe943OkZXX_MxN0R7Rc9LqK_s-7FeEk3HhprBHV-i5d2_dR7dVt_d25V4z0K-aoHYSHLCDp-pbgk3YlcX1eGeFv28XCvQYuKPyMK6cOojkST-epeZHZpOgMscPUsCRGx90yzvi45vS88Th3l06",
+          "width": 950
+        }
+      ],
+      "place_id": "ChIJ3SgcaZsVAEcRNEEfVBExYsg",
+      "plus_code": {
+        "compound_code": "5HFF+RW Kołobrzeg, Poland",
+        "global_code": "9F6Q5HFF+RW"
+      },
+      "rating": 4.7,
+      "reference": "ChIJ3SgcaZsVAEcRNEEfVBExYsg",
+      "types": [
+        "tourist_attraction",
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 9524
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Drzonów 54, 66-008 Świdnica, Poland",
+      "geometry": {
+        "location": {
+          "lat": 51.9445602,
+          "lng": 15.3184346
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 51.94580137989272,
+            "lng": 15.31973017989272
+          },
+          "southwest": {
+            "lat": 51.94310172010728,
+            "lng": 15.31703052010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Lubuskie Military Museum",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3096,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111842087529928966530\">Paweł Joniec</a>"
+          ],
+          "photo_reference": "AWn5SU7JvjYgFz8cmj7mmGx-Z8WSr3xnzwk3gzGbS1_WhVELRXNumZGB0fO5lQOus7QU4B0_NBVzfJznXS73OToBdAI3qjep3g5OlHuaCfib0YUQP-bwdbtzNhO9oEyT1nolEWDuN2PdxS4sG4OGWFVRv7EPMpjE6BvgAwJ7Ut30d7l9I1o2uPIqYo1r6VBgxAFlefcDxFDo_PC0Rn58abw1i6FxQ_JYeJGEeoO8Yua3N5pRL13lL_b0ATnitEjz1C7gj2tllMN4oHlWE1gsEvwePzpRtkRPzWW-o9tnCN9xCog66yuB8E-ngcGSeQr26awBcdt0z7zFC2UlDB6-plkHuoYvBJ411YI9CRojgVf5SLS858kejZmBD-H4ou6J5YEIZsWqOJomwsv9RepKNZRV22zwLLf3Bl5wChCvVCoqUTg8JbP1cmuDjPnDvUvBy4EhJg4lxTf0jKQ0vgybStTlM2p7QIsqYxu01JufkuYuE9CMeGEP6NRYMFMZOhh-9Kuo4O3Rq6QNr8I8qZLFoF3pfKjT7tsYGvTmdmfJd7JzZj7VTYVz7Xmqukb6mqjuF3s0A1eG-q9W",
+          "width": 4128
+        }
+      ],
+      "place_id": "ChIJu3d3b8I9BkcRTKH_tPQk9I0",
+      "plus_code": {
+        "compound_code": "W8V9+R9 Drzonów, Poland",
+        "global_code": "9F3QW8V9+R9"
+      },
+      "rating": 4.7,
+      "reference": "ChIJu3d3b8I9BkcRTKH_tPQk9I0",
+      "types": [
+        "museum",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2030
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "78-220 Podborsko, Poland",
+      "geometry": {
+        "location": {
+          "lat": 53.9563087,
+          "lng": 16.1216841
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 53.95773582989272,
+            "lng": 16.12364627989272
+          },
+          "southwest": {
+            "lat": 53.95503617010728,
+            "lng": 16.12094662010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "logo Cold War Museum Podborsko 3001",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102902105784139404801\">Muzeum Zimnej Wojny w Podborsku</a>"
+          ],
+          "photo_reference": "AWn5SU5QnH6GC0HksMgFYsYJ2vnwSEG1O8gihxuTBWkeUcEka1UOA5-bLCXed8YTDanUd806uS0SwBfUkarUF8qjuvs93SDJAiMX_dqw5CHrgbJP7tw1AeI7s8K6vzWMddBd9OlBRFTd6EIpzyuNdwz88DoMv2nFr9uSqjd0M22rAVvU_q4zhBX5hQYSKUQlT9dG8pnrrfaw3RBOaXPs4sTVv9gBDKnYb8Dk92io7fqaKwTDzh9hWNZXIS_zXkSjvAxdjixVb4viOWY1SJAMUBAd42babUGzdxRQIsArUYW2RYAT9b2hA3w",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "plus_code": {
+        "compound_code": "X44C+GM Podborsko, Poland",
+        "global_code": "9F5RX44C+GM"
+      },
+      "rating": 4.8,
+      "reference": "ChIJtSb9FvqzAUcRIsMOf2Mo1K8",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1166
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "Wita Stwosza 12, 31-511 Kraków, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.0722252,
+          "lng": 19.9484811
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.07353897989272,
+            "lng": 19.94981422989272
+          },
+          "southwest": {
+            "lat": 50.07083932010728,
+            "lng": 19.94711457010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+      "name": "Museum of Polish Army AK",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 720,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117201703153464953418\">marcineke1</a>"
+          ],
+          "photo_reference": "AWn5SU6TMVS8boMKit-kmtjusxeDwdBKxebXBr2U3MuWCQNC9-0k4oLurbli8v2TWwu1XqisvwxSMBBZ-N1Re0sHFFoY4PWkmqqCykWjqK0dn1m-BA2Jf_-816zig9AEm169DJoA2dI7obVxhpPpqhZomdkzj_6CvhfO4AjdiHb6v3GuaYUc9h_MzUaMNXPqE2PYShVw9LGmsEwFF2IzByXJnrO3F8PplHD-QvW2J5TMpb60CfNBPyiQ313a2oN6VUTAsbOoGpn_8FsKVrb--p8HpIYSndXQMqz-pimvvXOfSlYUMfzDw06h4WJFUtG7gTUQM5SHGSPkYfTlBCIoRbddmxC3sHsSnH5Fpy8qDxKu0AqxMZCacB_Y3cRvMah-eQP6E5lCdpLOQXspsjOK0ztanMBGhHvLYJ-3PkG6WvYU1zFDWzXAh47VYnIGyzWrMQn5oxvBtfIYJF5EgCYvHflKSxykUVQil8en2-BnMsGsO0Y_WGR6XU3dG4luCEE0j24Vq09jeqBZ7PHs59zVSFlXDvUtiT70dPO8XQA1cqE1yrSXhKicdtE3w9jtvr1EuIhoRmXStcL2",
+          "width": 960
+        }
+      ],
+      "place_id": "ChIJIwORYhxbFkcRriIbGxAedaU",
+      "plus_code": {
+        "compound_code": "3WCX+V9 Kraków, Poland",
+        "global_code": "9F2X3WCX+V9"
+      },
+      "rating": 4.6,
+      "reference": "ChIJIwORYhxbFkcRriIbGxAedaU",
+      "types": [
+        "museum",
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2527
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "aleja Ignacego Daszyńskiego, 31-534 Kraków, Poland",
+      "geometry": {
+        "location": {
+          "lat": 50.0549229,
+          "lng": 19.9539624
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 50.05626572989272,
+            "lng": 19.95521612989272
+          },
+          "southwest": {
+            "lat": 50.05356607010727,
+            "lng": 19.95251647010728
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Monument of Military Proletariat",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114246920663610692339\">Manas Kapoor</a>"
+          ],
+          "photo_reference": "AWn5SU7ieSqRfyj6EhCpz3yzJYwgDtLv2ajkvQaYlIS9YqFMLiyD80NDTao9z9ForrztkZh07U3CgWfV0YK8QbeXZEGNne1GwXwlYV_fPZ9KMWCez4xUJIFKZlpgnCi2LwNR867YtaixWa6V0LyNDDCylKDn8ReO__Vob4B_WmYmhaIYfGtetAb3pfBO3CGLleJ4mB294Dgy30tZtCIpwRVmgmOrxboluUlgYNyuNhbAoe_jMgYZt8Dt3tevvcYfiXNzc7CBu3KhNJkpXd9WnfpefCo_EWNObr5Jq-6IXTvAilma51_QrWi3kl9TY2KejtkLaYaEZnxhlC63jSwc2to2Y1cTPumD7sc_X-3sDZOGsPhEtE3qT22nfvLLkFmyh_PrU9yIK-NTpn2YLCIuuCz_a_mX8uDMrhtT_9TY7ckRfYqNNe24XUfuzEHbpo-9Y4E-p-K-oKJtc1GF2lZZl1lTkMWndyTj5jQRKkpYNQ0UT3oQZy4gPIxi-rUSmJLMw2PkJqdF_5q5_Q3HoojmszSVudvlT3W6fzF8Rqlo-tH-_foR38JFS279agAcl8laDfo13ELZVHesknIqTw",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJHYanDj9bFkcRUSdatEDL8f4",
+      "plus_code": {
+        "compound_code": "3X33+XH Kraków, Poland",
+        "global_code": "9F2X3X33+XH"
+      },
+      "rating": 4.1,
+      "reference": "ChIJHYanDj9bFkcRUSdatEDL8f4",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 93
+    }
+  ]
+}

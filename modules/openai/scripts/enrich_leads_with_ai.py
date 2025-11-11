@@ -34,12 +34,19 @@ from typing import Dict, Optional
 import time
 from openai import OpenAI
 from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
-from modules.logging.shared.universal_logger import get_logger
 
-logger = get_logger(__name__)
+# Setup logging
+import logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv(Path(__file__).parent.parent.parent.parent / '.env')
@@ -53,70 +60,62 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 MODEL = "gpt-4o-mini"  # Cost-effective for extraction ($0.150 / 1M input tokens)
 MAX_TOKENS = 1000
 TEMPERATURE = 0.1  # Low temperature for consistent extraction
-RATE_LIMIT_DELAY = 1.2  # 50 requests per minute = 1.2s delay
+PARALLEL_WORKERS = 15  # Parallel API requests (safe for Tier 1: 500 RPM)
 
 # Extraction Prompt Template
-EXTRACTION_PROMPT = """Analyze this HVAC/contractor business website content and extract structured information for Voice AI personalization.
+EXTRACTION_PROMPT = """Analyze this HVAC/contractor business website and create a personalization summary for Voice AI outreach.
 
-CONTEXT: We're selling Voice AI phone answering service. Extract signals that help personalize outreach.
+CONTEXT: We're selling Voice AI phone answering service. Extract key insights for personalized cold email.
 
-Extract the following in JSON format:
+Return JSON with:
 
-{
-  "business_profile": {
-    "business_type": "family-owned | franchise | corporate | independent | unknown",
-    "years_mentioned": "10+ years | established YYYY | new | unknown",
-    "service_area": "local | regional | statewide | multi-state | unknown",
-    "company_size_signals": "small team | growing | large operation | unknown"
-  },
+{{
+  "business_summary": "2-3 sentence paragraph describing: business type, size, target market, and key services. Natural and conversational.",
 
-  "pain_points": {
-    "emergency_service": true/false,
-    "call_handling_mentions": ["24/7 calls", "busy season", "overwhelmed", "missed calls"] or [],
-    "staffing_challenges": ["hiring", "small team", "family business"] or [],
-    "peak_season_mentions": ["summer rush", "winter heating", "busy season"] or []
-  },
+  "personalization_angle": "2-3 sentences explaining WHY they need Voice AI based on their business. Reference specific pain points or opportunities from their website. Use 'you' language.",
 
-  "ideal_customer_profile": {
-    "target_markets": ["residential", "commercial", "industrial", "new construction"] or [],
-    "service_specializations": ["installation", "repair", "maintenance", "emergency"] or [],
-    "pricing_positioning": "premium | competitive | budget-friendly | unknown"
-  },
+  "key_flags": {{
+    "has_emergency_service": true/false,
+    "has_online_booking": true/false,
+    "is_family_owned": true/false,
+    "is_growing": true/false,
+    "targets_residential": true/false,
+    "targets_commercial": true/false
+  }}
+}}
 
-  "technology_readiness": {
-    "online_booking": true/false,
-    "live_chat": true/false,
-    "automation_mentioned": ["CRM", "dispatch software", "online scheduling"] or [],
-    "growth_signals": ["hiring", "expanding", "new locations", "investing"] or []
-  },
+EXAMPLE OUTPUT:
+{{
+  "business_summary": "Family-owned HVAC company serving Tampa Bay area for 15+ years. Specializes in residential AC repair and maintenance with 24/7 emergency service. Small team with strong local reputation.",
 
-  "unique_differentiators": {
-    "certifications": ["licensed", "insured", "certified", "bonded"] or [],
-    "special_attributes": ["veteran-owned", "family-owned", "eco-friendly", "women-owned"] or [],
-    "guarantees": ["satisfaction guarantee", "warranty", "money-back"] or [],
-    "response_time": "same day | 2-hour | 24-hour | emergency | unknown"
-  },
+  "personalization_angle": "You mention offering 24/7 emergency service, which means late-night calls can be overwhelming for your small team. Voice AI can handle after-hours calls professionally, book appointments automatically, and ensure you never miss an urgent service request - all without hiring additional staff or disrupting your family time.",
 
-  "personalization_hooks": [
-    "1-2 key sentences that could be used for personalized outreach"
-  ]
-}
+  "key_flags": {{
+    "has_emergency_service": true,
+    "has_online_booking": false,
+    "is_family_owned": true,
+    "is_growing": false,
+    "targets_residential": true,
+    "targets_commercial": false
+  }}
+}}
 
 WEBSITE CONTENT:
 {content}
 
-Return ONLY valid JSON. Be concise. Use "unknown" if unclear. Extract maximum 3 items per array.
+Return ONLY valid JSON. Be specific and reference actual details from website. Write naturally.
 """
 
 
 class AIEnricher:
-    """OpenAI-powered lead enrichment processor"""
+    """OpenAI-powered lead enrichment processor with parallel processing"""
 
     def __init__(self, api_key: str):
         self.client = OpenAI(api_key=api_key)
         self.total_cost = 0.0
         self.processed_count = 0
         self.failed_count = 0
+        self._lock = threading.Lock()  # Thread-safe counters
 
     def enrich_lead(self, content: str, lead_name: str) -> Optional[Dict]:
         """
@@ -138,92 +137,79 @@ class AIEnricher:
 
         prompt = EXTRACTION_PROMPT.format(content=content_truncated)
 
-        try:
-            # Rate limiting
-            time.sleep(RATE_LIMIT_DELAY)
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                response = self.client.chat.completions.create(
+                    model=MODEL,
+                    messages=[
+                        {"role": "system", "content": "You are a business intelligence extraction specialist. Extract structured data accurately and concisely."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    max_tokens=MAX_TOKENS,
+                    temperature=TEMPERATURE,
+                    response_format={"type": "json_object"}
+                )
 
-            response = self.client.chat.completions.create(
-                model=MODEL,
-                messages=[
-                    {"role": "system", "content": "You are a business intelligence extraction specialist. Extract structured data accurately and concisely."},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=MAX_TOKENS,
-                temperature=TEMPERATURE,
-                response_format={"type": "json_object"}
-            )
+                # Parse response
+                result = json.loads(response.choices[0].message.content)
 
-            # Parse response
-            result = json.loads(response.choices[0].message.content)
+                # Calculate cost (thread-safe)
+                input_tokens = response.usage.prompt_tokens
+                output_tokens = response.usage.completion_tokens
+                cost = (input_tokens * 0.150 / 1_000_000) + (output_tokens * 0.600 / 1_000_000)
 
-            # Calculate cost
-            input_tokens = response.usage.prompt_tokens
-            output_tokens = response.usage.completion_tokens
-            cost = (input_tokens * 0.150 / 1_000_000) + (output_tokens * 0.600 / 1_000_000)
-            self.total_cost += cost
+                with self._lock:
+                    self.total_cost += cost
+                    self.processed_count += 1
 
-            self.processed_count += 1
+                    if self.processed_count % 50 == 0:
+                        logger.info(f"Progress: {self.processed_count} leads processed | Cost: ${self.total_cost:.2f}")
 
-            if self.processed_count % 10 == 0:
-                logger.info(f"Processed {self.processed_count} leads | Cost: ${self.total_cost:.2f}")
+                return result
 
-            return result
+            except json.JSONDecodeError as e:
+                logger.error(f"JSON parse error for {lead_name}: {e}")
+                with self._lock:
+                    self.failed_count += 1
+                return None
 
-        except json.JSONDecodeError as e:
-            logger.error(f"JSON parse error for {lead_name}: {e}")
-            self.failed_count += 1
-            return None
-        except Exception as e:
-            logger.error(f"API error for {lead_name}: {e}")
-            self.failed_count += 1
-            return None
+            except Exception as e:
+                # Rate limit or temporary error - retry
+                if "rate_limit" in str(e).lower() or attempt < max_retries - 1:
+                    wait_time = (attempt + 1) * 2  # Exponential backoff
+                    logger.warning(f"API error for {lead_name} (attempt {attempt+1}), retrying in {wait_time}s: {e}")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    logger.error(f"API error for {lead_name} after {max_retries} attempts: {e}")
+                    with self._lock:
+                        self.failed_count += 1
+                    return None
+
+        return None
 
 
 def flatten_enrichment_data(enrichment: Dict) -> Dict:
     """
     Flatten nested JSON into flat columns for DataFrame
 
-    Returns:
-        Dict with flattened keys (e.g., business_profile_type, pain_points_emergency)
+    New format: Simple structure with summary paragraphs + key flags
     """
     flat = {}
 
-    # Business Profile
-    bp = enrichment.get('business_profile', {})
-    flat['business_type'] = bp.get('business_type', 'unknown')
-    flat['years_mentioned'] = bp.get('years_mentioned', 'unknown')
-    flat['service_area'] = bp.get('service_area', 'unknown')
-    flat['company_size_signals'] = bp.get('company_size_signals', 'unknown')
+    # Main content - summary paragraphs
+    flat['business_summary'] = enrichment.get('business_summary', '')
+    flat['personalization_angle'] = enrichment.get('personalization_angle', '')
 
-    # Pain Points
-    pp = enrichment.get('pain_points', {})
-    flat['has_emergency_service'] = pp.get('emergency_service', False)
-    flat['call_handling_issues'] = ', '.join(pp.get('call_handling_mentions', []))
-    flat['staffing_challenges'] = ', '.join(pp.get('staffing_challenges', []))
-    flat['peak_season_mentions'] = ', '.join(pp.get('peak_season_mentions', []))
-
-    # ICP
-    icp = enrichment.get('ideal_customer_profile', {})
-    flat['target_markets'] = ', '.join(icp.get('target_markets', []))
-    flat['service_specializations'] = ', '.join(icp.get('service_specializations', []))
-    flat['pricing_positioning'] = icp.get('pricing_positioning', 'unknown')
-
-    # Tech Readiness
-    tech = enrichment.get('technology_readiness', {})
-    flat['has_online_booking'] = tech.get('online_booking', False)
-    flat['has_live_chat'] = tech.get('live_chat', False)
-    flat['automation_tools'] = ', '.join(tech.get('automation_mentioned', []))
-    flat['growth_signals'] = ', '.join(tech.get('growth_signals', []))
-
-    # Differentiators
-    diff = enrichment.get('unique_differentiators', {})
-    flat['certifications'] = ', '.join(diff.get('certifications', []))
-    flat['special_attributes'] = ', '.join(diff.get('special_attributes', []))
-    flat['guarantees'] = ', '.join(diff.get('guarantees', []))
-    flat['response_time'] = diff.get('response_time', 'unknown')
-
-    # Hooks
-    flat['personalization_hooks'] = ' | '.join(enrichment.get('personalization_hooks', []))
+    # Key flags for filtering
+    flags = enrichment.get('key_flags', {})
+    flat['has_emergency_service'] = flags.get('has_emergency_service', False)
+    flat['has_online_booking'] = flags.get('has_online_booking', False)
+    flat['is_family_owned'] = flags.get('is_family_owned', False)
+    flat['is_growing'] = flags.get('is_growing', False)
+    flat['targets_residential'] = flags.get('targets_residential', False)
+    flat['targets_commercial'] = flags.get('targets_commercial', False)
 
     return flat
 
@@ -249,29 +235,49 @@ def main():
         (df['content_length'] > 500)
     ].copy()
 
+    # PRODUCTION MODE: Process all leads
+    # df_to_enrich = df_to_enrich.head(50)  # Uncomment for testing
+
     logger.info(f"Total leads with email: {len(df[df['email'].notna()])}")
-    logger.info(f"Leads with sufficient content: {len(df_to_enrich)}")
+    logger.info(f"Leads to process: {len(df_to_enrich)}")
     logger.info(f"Estimated cost: ${len(df_to_enrich) * 0.015:.2f}")
 
     # Initialize enricher
     enricher = AIEnricher(api_key)
 
-    # Process leads
+    # Process leads in parallel
     enrichments = []
     start_time = time.time()
 
-    for idx, row in df_to_enrich.iterrows():
+    logger.info(f"Starting parallel processing with {PARALLEL_WORKERS} workers...")
+
+    def process_lead(row):
+        """Process single lead (for parallel execution)"""
         lead_name = row['name']
         content = row['website_content']
-
-        logger.info(f"Processing [{idx+1}/{len(df_to_enrich)}]: {lead_name}")
+        place_id = row['place_id']
 
         enrichment = enricher.enrich_lead(content, lead_name)
 
         if enrichment:
             flat_data = flatten_enrichment_data(enrichment)
-            flat_data['place_id'] = row['place_id']
-            enrichments.append(flat_data)
+            flat_data['place_id'] = place_id
+            return flat_data
+        return None
+
+    # Submit all tasks to thread pool
+    with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as executor:
+        # Submit all leads
+        future_to_row = {
+            executor.submit(process_lead, row): row
+            for _, row in df_to_enrich.iterrows()
+        }
+
+        # Process completed tasks
+        for future in as_completed(future_to_row):
+            result = future.result()
+            if result:
+                enrichments.append(result)
 
     # Create enrichment DataFrame
     df_enriched = pd.DataFrame(enrichments)
@@ -284,9 +290,20 @@ def main():
     output_file = OUTPUT_DIR / f"enriched_leads_{timestamp}.parquet"
     df_final.to_parquet(output_file, index=False)
 
-    # Export CSV sample
-    csv_file = OUTPUT_DIR / f"enriched_leads_{timestamp}_sample.csv"
-    df_final.head(100).to_csv(csv_file, index=False)
+    # Export FULL CSV for manual review
+    csv_file = OUTPUT_DIR / f"enriched_leads_{timestamp}.csv"
+
+    # Select only relevant columns for review
+    review_columns = [
+        'name', 'email', 'website', 'city', 'state',
+        'business_summary', 'personalization_angle',
+        'has_emergency_service', 'has_online_booking', 'is_family_owned',
+        'is_growing', 'targets_residential', 'targets_commercial'
+    ]
+
+    # Export with only available columns
+    available_columns = [col for col in review_columns if col in df_final.columns]
+    df_final[available_columns].to_csv(csv_file, index=False, encoding='utf-8-sig')
 
     # Final stats
     elapsed = time.time() - start_time
