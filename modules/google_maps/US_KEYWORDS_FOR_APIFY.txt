@@ -1,0 +1,106 @@
+=== KEYWORDS FOR US GOOGLE MAPS SEARCH (Apify) ===
+Based on reverse engineering of 282 high-quality European leads (relevance 7+)
+Generated: 2025-11-11
+
+GOOGLE MAPS CATEGORIES (use in Apify):
+- store
+- clothing_store
+- museum
+- tourist_attraction
+- establishment
+
+=== TOP 50 KEYWORDS (sorted by quality) ===
+
+# TIER 1 - Best performing (100+ high-quality leads in Europe)
+1. army surplus
+2. military collectibles
+
+# TIER 2 - Very strong (40-90 leads)
+3. military equipment museum
+4. military antiques
+5. Korean War museum
+6. Afghan War museum
+
+# TIER 3 - Strong (20-40 leads)
+7. military vehicle museum
+8. Red Army museum
+9. Eastern Front museum
+10. Vietnam War museum
+11. Militaria Shop
+12. Cold War museum
+13. military history club
+14. army museum
+
+# TIER 4 - Good (10-20 leads)
+15. military reenactment
+16. Soviet Army history
+17. war museum
+18. WWII museum
+19. World War 2 museum
+20. military museum
+
+# US-SPECIFIC KEYWORDS (American wars & conflicts)
+21. Civil War museum
+22. Revolutionary War museum
+23. Pearl Harbor museum
+24. D-Day museum
+25. Pacific War museum
+26. Battle of Gettysburg museum
+27. Fort memorabilia
+28. US Army surplus
+29. Navy collectibles
+30. Marine Corps memorabilia
+31. Airborne museum
+32. military patches store
+33. dog tags store
+34. combat boots store
+35. field gear store
+
+# REENACTMENT & LIVING HISTORY
+36. Civil War reenactment
+37. Revolutionary War reenactment
+38. WWII reenactment
+39. living history museum
+40. historical reenactment club
+
+# SPECIALTY STORES
+41. tactical gear store
+42. vintage military clothing
+43. military insignia store
+44. military medals store
+45. army navy store
+46. military antique dealer
+47. military memorabilia shop
+48. war relics store
+49. historical military artifacts
+50. military uniform store
+
+=== NOTES FOR APIFY SEARCH ===
+
+PRIMARY TARGET: militaria_store + museum (66% of high-quality leads)
+
+SEARCH STRATEGY:
+1. Start with Tier 1-2 keywords (highest ROI)
+2. Focus on categories: store, museum, tourist_attraction
+3. US states with high military history interest:
+   - Virginia (Pentagon, many military bases)
+   - Texas (Fort Hood, many bases)
+   - California (San Diego Navy, many bases)
+   - North Carolina (Fort Bragg, Camp Lejeune)
+   - Georgia (Fort Benning, Fort Stewart)
+   - Washington D.C. area (high density of museums)
+   - Pennsylvania (Gettysburg)
+   - Hawaii (Pearl Harbor)
+
+EXPECTED RESULTS:
+- ~50-60% will have emails (homepage scraping)
+- ~20-25% will be high relevance for Soviet boots (score 7+)
+- US market typically has better email coverage than Europe
+
+BONUS US-SPECIFIC ANGLES:
+- Cold War nostalgia is HUGE in US
+- Vietnam War memorabilia collectors
+- Many museums focus on "enemy equipment" (Soviet gear)
+- Reenactors need authentic boots (higher budget than EU)
+
+=== END ===
