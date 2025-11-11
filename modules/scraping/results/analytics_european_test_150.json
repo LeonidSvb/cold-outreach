@@ -1,0 +1,39 @@
+{
+  "overview": {
+    "total_leads": 150,
+    "processing_time_minutes": 1.82,
+    "avg_time_per_lead": 0.73
+  },
+  "scraping": {
+    "success": 125,
+    "failed": 25,
+    "no_website": 0,
+    "success_rate": 83.3
+  },
+  "email_discovery": {
+    "total_with_emails": 69,
+    "no_emails": 56,
+    "email_coverage": 55.2
+  },
+  "content_analysis": {
+    "ai_analysis_success": 124,
+    "ai_analysis_failed": 1,
+    "ai_success_rate": 82.7
+  },
+  "relevance": {
+    "avg_relevance_score": 4.15,
+    "high_relevance_7_plus": 47,
+    "medium_relevance_4_6": 28,
+    "low_relevance_0_3": 75
+  },
+  "lead_types": {
+    "militaria_store": 68,
+    "museum": 28,
+    "": 26,
+    "collector": 8,
+    "other": 7,
+    "reenactment_club": 6,
+    "historical_society": 5,
+    "research_center": 2
+  }
+}
