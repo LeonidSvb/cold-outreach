@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "timestamp": "20251111_154717",
+    "total_leads": 300,
+    "countries": [
+      "Australia",
+      "New Zealand"
+    ],
+    "stats": {
+      "total_runs": 23,
+      "successful_runs": 3,
+      "failed_runs": 20,
+      "total_leads": 300,
+      "estimated_cost": 0.5700000000000001,
+      "start_time": 

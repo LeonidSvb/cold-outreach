@@ -1,0 +1,23 @@
+# Correct category names for Apify actor (field services)
+# Based on allowed values list
+
+hvac_contractor
+air_conditioning_contractor
+air_conditioning_repair_service
+electrician
+plumber
+landscaper
+lawn_care_service
+pest_control_service
+roofing_contractor
+locksmith
+garage_door_supplier
+garage_builder
+tree_service
+pool_cleaning_service
+swimming_pool_contractor
+towing_service
+handyman
+carpenter
+house_cleaning_service
+window_cleaning_service
