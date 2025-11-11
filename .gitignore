@@ -75,3 +75,9 @@ data/processed/
 data/raw/
 data/temp/
 data/uploads/
+
+# Module temporary files (keep folders, ignore contents)
+modules/*/results/*
+modules/*/data/*
+!modules/*/results/.gitkeep
+!modules/*/data/.gitkeep
