@@ -1,42 +1,56 @@
-# Outreach - Ultra-Clean Cold Outreach Automation
+# Outreach - Cold Outreach Automation Platform
 
-**Simple, focused, powerful.** Process CSVs through OpenAI API and scrape websites for lead enrichment.
+**Modular, scalable, efficient.** Lead enrichment platform with Parquet-based data architecture.
+
+## 🚨 NEW ARCHITECTURE (2025-11-11)
+
+**IMPORTANT:** This project uses a **Parquet-based single source of truth** architecture.
+
+📖 **Read this first:** [DATA_ARCHITECTURE.md](DATA_ARCHITECTURE.md)
 
 ## Quick Start
 
-```bash
-# Process CSV through OpenAI
-python scripts/openai_mass_processor.py
+```python
+from modules.shared.parquet_manager import ParquetManager
 
-# Generate icebreakers
-python scripts/openai_icebreaker_generator.py
+# Load project data
+manager = ParquetManager(project='soviet_boots_europe')
+df = manager.load()
 
-# Scrape website for emails
-python scripts/scraping_parallel_website_email_extractor.py
+# Add new columns (incremental)
+manager.add_columns(enrichment_data, key='place_id')
 
-# Website personalization
-python scripts/scraping_website_personalization_enricher.py
+# Export for campaign
+manager.export_csv('exports/my_campaign.csv')
 ```
 
 ## Project Structure
 
 ```
 Outreach/
-├── scripts/                # All Python scripts (flat structure)
-│   ├── openai_*.py        # OpenAI API processing
-│   ├── scraping_*.py      # Website scraping
-│   └── shared_*.py        # Common utilities
-├── results/               # All outputs (centralized)
-│   ├── openai/           # AI processing results
-│   ├── scraping/         # Scraping results
-│   ├── raw/              # Input CSVs (put your files here)
-│   └── processed/        # Final output CSVs
-├── logger/                # Universal logging system
-│   └── universal_logger.py
-├── frontend/              # Next.js UI (optional, preserved for refactoring)
-├── .env                   # API keys (OpenAI, Google, etc.)
+├── data/
+│   ├── projects/          # ✅ Production data (Parquet, single source of truth)
+│   └── exports/           # ✅ Final CSV exports for campaigns
+│
+├── modules/
+│   ├── shared/
+│   │   └── parquet_manager.py   # ✅ Central data access layer (USE THIS!)
+│   ├── google_maps/scripts/     # Google Places API
+│   ├── scraping/scripts/        # Website scraping
+│   ├── openai/scripts/          # AI enrichment
+│   └── apify/scripts/           # Apify automation
+│
+├── archive/               # Old backups (gitignored)
+├── frontend/              # Next.js UI (WIP)
+├── .env                   # API keys
 └── CLAUDE.md              # Coding conventions
 ```
+
+## 📚 Documentation
+
+- 🏗️ [**DATA_ARCHITECTURE.md**](DATA_ARCHITECTURE.md) - **READ THIS FIRST!**
+- 🔄 [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) - Update old scripts
+- 📋 [REFACTORING_PLAN.md](REFACTORING_PLAN.md) - Architecture details
 
 ## Core Features
 
