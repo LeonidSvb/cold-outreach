@@ -39,8 +39,9 @@ logger = get_logger(__name__)
 CONFIG = {
     "API_KEY": "c6c76660-b774-4dcc-be3f-64cdb999e70f",
     "API_URL": "https://api.mails.so/v1/validate",
-    "INPUT_FILE": r"C:\Users\79818\Desktop\Outreach - new\modules\openai\results\museum_emails_20251115_153331.csv",
+    "INPUT_FILE": r"C:\Users\79818\Desktop\Outreach - new\modules\openai\results\museum_emails_20251115_155304.csv",
     "EMAIL_COLUMN": "email",  # Column name containing emails
+    "LIMIT": 100,  # Maximum number of emails to verify (None for all)
     "RATE_LIMIT_DELAY": 0.5,  # Delay between API requests in seconds
     "TIMEOUT": 10,  # API request timeout in seconds
 }
@@ -132,7 +133,13 @@ def process_csv(input_file: str) -> list:
             reader = csv.DictReader(f)
             rows = list(reader)
 
-        logger.info(f"Found {len(rows)} rows to process")
+        # Apply limit if specified
+        total_rows = len(rows)
+        if CONFIG.get("LIMIT") and CONFIG["LIMIT"] < total_rows:
+            rows = rows[:CONFIG["LIMIT"]]
+            logger.info(f"Found {total_rows} rows, processing first {len(rows)} (LIMIT applied)")
+        else:
+            logger.info(f"Found {len(rows)} rows to process")
 
         for idx, row in enumerate(rows, 1):
             email = row.get(CONFIG["EMAIL_COLUMN"], "").strip()
