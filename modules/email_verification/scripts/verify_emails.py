@@ -41,7 +41,7 @@ CONFIG = {
     "API_URL": "https://api.mails.so/v1/validate",
     "INPUT_FILE": r"C:\Users\79818\Desktop\Outreach - new\modules\openai\results\museum_emails_CLEAN_20251115_163418.csv",
     "EMAIL_COLUMN": "email",  # Column name containing emails
-    "OFFSET": 200,  # Skip first N emails (already verified)
+    "OFFSET": 500,  # Skip first N emails (already verified)
     "LIMIT": 300,  # Maximum number of emails to verify (None for all)
     "RATE_LIMIT_DELAY": 0.5,  # Delay between API requests in seconds
     "TIMEOUT": 10,  # API request timeout in seconds
