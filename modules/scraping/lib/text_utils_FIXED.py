@@ -88,10 +88,11 @@ def extract_emails(text: str) -> List[str]:
     - Improved regex with lookahead/lookbehind
     - TLD validation
     - Post-processing cleanup
+    - Numeric prefix removal
     """
     # Step 1: Find potential emails with improved regex
-    # Use negative lookahead to prevent capturing appended text
-    email_pattern = r'(?<![a-zA-Z0-9])([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})(?![a-zA-Z0-9])'
+    # Capture everything that looks like email (even broken ones)
+    email_pattern = r'(?<![a-zA-Z0-9])([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20})(?=\s|$|[^a-zA-Z0-9])'
 
     matches = re.findall(email_pattern, text)
 
@@ -101,9 +102,36 @@ def extract_emails(text: str) -> List[str]:
     for match in matches:
         email = match.strip().lower()
 
-        # Remove common appended text patterns
-        # Example: "info@site.comcontact" -> "info@site.com"
-        email = re.sub(r'(\.(?:com|org|net|de|uk|fr|it|es|nl|pl|ch|at|be|cz|dk|fi|gr|hu|ie|no|pt|ro|ru|se|sk|si|hr|bg|ee|lt|lv|lu|mt|cy|is|li|mc|rs|ua))[a-z]+$', r'\1', email)
+        # STEP 1: Remove numeric prefixes (e.g., "102info@" -> "info@")
+        # Pattern: digits at start followed by letters before @
+        email = re.sub(r'^[\d\-]+([a-z])', r'\1', email)
+
+        # STEP 2: Find and extract valid TLD from potentially concatenated domain
+        # Look for known TLDs in the domain part
+        if '@' in email:
+            local, domain = email.rsplit('@', 1)
+
+            # Try to find valid TLD in domain
+            # Check if domain ends with concatenated text after valid TLD
+            tld_found = None
+            for tld in sorted(VALID_TLDS, key=len, reverse=True):  # Check longer TLDs first
+                # Pattern: .tld followed by extra letters
+                pattern = rf'\.{re.escape(tld)}[a-z]+$'
+                if re.search(pattern, domain):
+                    # Remove extra letters after valid TLD
+                    domain = re.sub(pattern, f'.{tld}', domain)
+                    tld_found = tld
+                    break
+
+            # If no concatenation found, check if domain has valid TLD
+            if not tld_found:
+                # Check multi-part TLDs like .co.uk
+                for tld in VALID_TLDS:
+                    if domain.endswith(f'.{tld}'):
+                        tld_found = tld
+                        break
+
+            email = f'{local}@{domain}'
 
         # Validate
         if is_valid_email(email):
