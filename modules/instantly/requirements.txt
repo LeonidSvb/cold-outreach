@@ -1,0 +1,13 @@
+# Instantly Module Requirements
+# Install with: pip install -r modules/instantly/requirements.txt
+
+# HTTP requests
+requests>=2.31.0
+
+# Data processing
+pandas>=2.0.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Logging (using shared module - no external dependency)
