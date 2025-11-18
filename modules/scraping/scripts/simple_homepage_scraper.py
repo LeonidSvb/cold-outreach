@@ -1,48 +1,45 @@
 #!/usr/bin/env python3
 """
 === SIMPLE HOMEPAGE SCRAPER ===
-Version: 1.0.0 | Created: 2025-01-16
+Version: 2.0.0 | Updated: 2025-11-18
 
 PURPOSE:
-Fast homepage scraping - NO AI, just emails + text content
+Fast homepage scraping with multi-page fallback - NO AI, just emails + text content
 1. Scrape homepage content (clean text)
 2. Extract emails from homepage
-3. Detect site type (static/dynamic)
+3. If no emails - try 5 more pages (contact, about, team)
+4. Detect site type (static/dynamic)
 
 FEATURES:
-- Homepage-only scraping
-- Email extraction
+- Homepage + multi-page fallback
+- Email extraction (all emails)
 - Full text content extraction
 - Site type detection (static/dynamic)
 - Maximum parallel processing (50 workers)
 - NO AI analysis (fast & free)
+- 4 output files (success, failed_static, failed_dynamic, failed_other)
+- Detailed JSON analytics
 
 USAGE:
-python simple_homepage_scraper.py --input input.csv --workers 50
+python simple_homepage_scraper.py --input input.csv --workers 50 --max-pages 5
 
-INPUT CSV Required Columns:
-- name
-- website
-
-OUTPUT CSV Columns:
-- name
-- website
-- email (ONE EMAIL PER ROW - if 3 emails found, 3 rows created)
-- homepage_content (full text from homepage)
-- site_type (static | dynamic | unknown)
-- scrape_status (success | failed)
-- error_message
-
-NOTE: Each email gets its own row. If a site has 3 emails, you'll get 3 rows with the same content but different emails.
+OUTPUT FILES:
+1. success_emails.csv - Found emails
+2. failed_static.csv - Static sites, no email
+3. failed_dynamic.csv - Dynamic sites, no email
+4. failed_other.csv - Errors
+5. scraping_analytics.json - Performance metrics
 
 IMPROVEMENTS:
 v1.0.0 - Initial simple version (no AI, maximum speed)
+v2.0.0 - Added multi-page search, 4 output files, detailed analytics
 """
 
 import sys
 import time
 import argparse
 import pandas as pd
+import json
 import re
 from pathlib import Path
 from datetime import datetime
@@ -66,19 +63,23 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 try:
     from lib.http_utils import HTTPClient
     from lib.text_utils import extract_emails_from_html, clean_html_to_text
+    from lib.sitemap_utils import SitemapParser
 except ImportError:
     from modules.scraping.lib.http_utils import HTTPClient
     from modules.scraping.lib.text_utils import extract_emails_from_html, clean_html_to_text
+    from modules.scraping.lib.sitemap_utils import SitemapParser
 
 
 class SimpleHomepageScraper:
     """
-    Simple homepage scraper - emails + content only
+    Simple homepage scraper with multi-page fallback
     """
 
-    def __init__(self, workers: int = 50):
+    def __init__(self, workers: int = 50, max_pages: int = 5):
         self.http_client = HTTPClient(timeout=15, retries=3)
+        self.sitemap_parser = SitemapParser(timeout=15)
         self.workers = workers
+        self.max_pages = max_pages
 
         # Thread-safe stats
         self._lock = threading.Lock()
@@ -87,10 +88,16 @@ class SimpleHomepageScraper:
             "success": 0,
             "failed": 0,
             "emails_found": 0,
+            "emails_from_homepage": 0,
+            "emails_from_deep": 0,
             "no_emails": 0,
             "static_sites": 0,
             "dynamic_sites": 0,
+            "failed_static": 0,
+            "failed_dynamic": 0,
+            "failed_other": 0,
         }
+        self.start_time = time.time()
 
     def scrape_homepage(self, name: str, website: str) -> List[Dict]:
         """
@@ -164,46 +171,122 @@ class SimpleHomepageScraper:
                         row['homepage_content'] = clean_text
                         row['site_type'] = site_type
                         row['scrape_status'] = 'success'
+                        row['email_source'] = 'homepage'
                         results.append(row)
 
                     with self._lock:
                         self.stats['emails_found'] += len(clean_emails)
-                else:
-                    # No emails found - create one row with empty email
-                    row = base_result.copy()
-                    row['homepage_content'] = clean_text
-                    row['site_type'] = site_type
-                    row['scrape_status'] = 'success'
-                    results.append(row)
+                        self.stats['emails_from_homepage'] += len(clean_emails)
+                        self.stats['total_processed'] += 1
+                        self.stats['success'] += 1
+
+                    logger.info(f"✓ {name}: {len(clean_emails)} emails (homepage), {site_type}")
+                    return results
+
+                # No emails on homepage - try deep search
+                logger.info(f"⚠ {name}: No emails on homepage, trying deep search...")
+                deep_emails = self._deep_email_search(website)
+
+                if deep_emails:
+                    for email in deep_emails:
+                        row = base_result.copy()
+                        row['email'] = email
+                        row['homepage_content'] = clean_text
+                        row['site_type'] = site_type
+                        row['scrape_status'] = 'success'
+                        row['email_source'] = 'deep_search'
+                        results.append(row)
 
                     with self._lock:
-                        self.stats['no_emails'] += 1
+                        self.stats['emails_found'] += len(deep_emails)
+                        self.stats['emails_from_deep'] += len(deep_emails)
+                        self.stats['total_processed'] += 1
+                        self.stats['success'] += 1
+
+                    logger.info(f"✓ {name}: {len(deep_emails)} emails (deep search), {site_type}")
+                    return results
+
+                # No emails found anywhere
+                failure_type = 'dynamic' if site_type == 'dynamic' else 'static'
+                row = base_result.copy()
+                row['homepage_content'] = clean_text
+                row['site_type'] = site_type
+                row['scrape_status'] = 'failed'
+                row['error_message'] = f'no_email_found_{failure_type}'
+                row['email_source'] = 'none'
+                results.append(row)
 
                 with self._lock:
                     self.stats['total_processed'] += 1
-                    self.stats['success'] += 1
+                    self.stats['no_emails'] += 1
+                    if failure_type == 'dynamic':
+                        self.stats['failed_dynamic'] += 1
+                    else:
+                        self.stats['failed_static'] += 1
 
-                logger.info(f"✓ {name}: {len(clean_emails)} emails, {len(clean_text)} chars, {site_type}")
-
+                logger.warning(f"✗ {name}: No emails found, {site_type}")
                 return results
 
             else:
                 base_result['error_message'] = response.get('error', 'Unknown error')
+                base_result['email_source'] = 'none'
                 with self._lock:
                     self.stats['total_processed'] += 1
                     self.stats['failed'] += 1
+                    self.stats['failed_other'] += 1
 
                 logger.warning(f"✗ {name}: {base_result['error_message']}")
                 return [base_result]
 
         except Exception as e:
             base_result['error_message'] = str(e)
+            base_result['email_source'] = 'none'
             with self._lock:
                 self.stats['total_processed'] += 1
                 self.stats['failed'] += 1
+                self.stats['failed_other'] += 1
 
             logger.error(f"✗ {name}: {e}")
             return [base_result]
+
+    def _deep_email_search(self, website: str) -> List[str]:
+        """
+        Deep email search using sitemap + contact pages
+
+        Returns:
+            List of found emails (deduplicated)
+        """
+        all_emails = []
+
+        try:
+            # Get smart pages (sitemap or pattern-based)
+            discovery = self.sitemap_parser.get_smart_pages(website, max_pages=self.max_pages)
+
+            # Scrape discovered pages
+            for page_url in discovery['pages']:
+                try:
+                    response = self.http_client.fetch(page_url, check_content_length=False)
+
+                    if response['status'] == 'success':
+                        emails = extract_emails_from_html(response['content'])
+                        clean_emails = [self._clean_email(e) for e in emails if self._clean_email(e)]
+                        all_emails.extend(clean_emails)
+
+                except Exception:
+                    continue
+
+        except Exception:
+            pass
+
+        # Deduplicate and limit to reasonable number
+        unique_emails = list(set(all_emails))
+
+        # Filter out if too many emails (likely scraped wrong content)
+        if len(unique_emails) > 20:
+            logger.warning(f"Too many emails found ({len(unique_emails)}), likely scraped wrong content - ignoring")
+            return []
+
+        return unique_emails
 
     def _clean_email(self, email: str) -> Optional[str]:
         """Clean and validate email"""
@@ -213,7 +296,12 @@ class SimpleHomepageScraper:
         email = email.strip().lower()
 
         # Remove common junk
-        if any(x in email for x in ['example.com', 'domain.com', 'yoursite.com', 'test.com']):
+        fake_patterns = [
+            'example.com', 'domain.com', 'yoursite.com', 'test.com',
+            'filler@godaddy', 'noreply@', 'no-reply@', 'donotreply@'
+        ]
+
+        if any(pattern in email for pattern in fake_patterns):
             return None
 
         # Basic validation
@@ -225,6 +313,53 @@ class SimpleHomepageScraper:
             return None
 
         return email
+
+    def get_analytics(self) -> Dict:
+        """
+        Get comprehensive analytics in JSON format
+
+        Returns:
+            Dict with detailed metrics
+        """
+        elapsed = time.time() - self.start_time
+
+        return {
+            "summary": {
+                "total_sites": self.stats['total_processed'],
+                "success_rate": f"{(self.stats['success'] / self.stats['total_processed'] * 100):.2f}%" if self.stats['total_processed'] > 0 else "0%",
+                "duration_seconds": round(elapsed, 2),
+                "duration_minutes": round(elapsed / 60, 2),
+                "sites_per_second": round(self.stats['total_processed'] / elapsed, 2) if elapsed > 0 else 0
+            },
+            "results": {
+                "success": {
+                    "count": self.stats['success'],
+                    "percentage": f"{(self.stats['success'] / self.stats['total_processed'] * 100):.2f}%" if self.stats['total_processed'] > 0 else "0%",
+                    "total_emails": self.stats['emails_found'],
+                    "from_homepage": self.stats['emails_from_homepage'],
+                    "from_deep_search": self.stats['emails_from_deep']
+                },
+                "failed": {
+                    "total": self.stats['failed'],
+                    "static_no_email": {
+                        "count": self.stats['failed_static'],
+                        "percentage": f"{(self.stats['failed_static'] / self.stats['total_processed'] * 100):.2f}%" if self.stats['total_processed'] > 0 else "0%"
+                    },
+                    "dynamic_no_email": {
+                        "count": self.stats['failed_dynamic'],
+                        "percentage": f"{(self.stats['failed_dynamic'] / self.stats['total_processed'] * 100):.2f}%" if self.stats['total_processed'] > 0 else "0%"
+                    },
+                    "other_errors": {
+                        "count": self.stats['failed_other'],
+                        "percentage": f"{(self.stats['failed_other'] / self.stats['total_processed'] * 100):.2f}%" if self.stats['total_processed'] > 0 else "0%"
+                    }
+                }
+            },
+            "site_types": {
+                "static": self.stats['static_sites'],
+                "dynamic": self.stats['dynamic_sites']
+            }
+        }
 
     def _detect_site_type(self, html_content: str) -> str:
         """
@@ -333,8 +468,9 @@ class SimpleHomepageScraper:
 def main():
     parser = argparse.ArgumentParser(description='Simple Homepage Scraper - Emails + Content')
     parser.add_argument('--input', required=True, help='Input CSV file path')
-    parser.add_argument('--output', help='Output CSV file path (optional, auto-generated if not provided)')
+    parser.add_argument('--output', help='Output directory (optional, auto-generated if not provided)')
     parser.add_argument('--workers', type=int, default=50, help='Number of parallel workers (default: 50)')
+    parser.add_argument('--max-pages', type=int, default=5, help='Max pages to search per site (default: 5)')
     parser.add_argument('--limit', type=int, help='Limit number of leads to process (for testing)')
 
     args = parser.parse_args()
@@ -356,24 +492,71 @@ def main():
         logger.info(f"Limited to first {args.limit} leads")
 
     # Create scraper
-    scraper = SimpleHomepageScraper(workers=args.workers)
+    scraper = SimpleHomepageScraper(workers=args.workers, max_pages=args.max_pages)
 
     # Process batch
     df_results = scraper.process_batch(df)
 
-    # Generate output filename
+    # Generate output directory
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     if args.output:
-        output_path = args.output
+        output_dir = Path(args.output)
     else:
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_dir = Path(__file__).parent.parent / "results"
-        output_dir.mkdir(parents=True, exist_ok=True)
-        output_path = output_dir / f"reenactors_scraped_{timestamp}.csv"
+        output_dir = Path(__file__).parent.parent / "results" / f"scraped_{timestamp}"
 
-    # Save results
-    df_results.to_csv(output_path, index=False, encoding='utf-8-sig')
-    logger.info(f"Results saved to: {output_path}")
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Split results into 4 files
+    logger.info("="*70)
+    logger.info("SPLITTING RESULTS INTO 4 FILES")
+    logger.info("="*70)
+
+    # 1. Success - found emails
+    success_df = df_results[df_results['scrape_status'] == 'success'].copy()
+    success_path = output_dir / "success_emails.csv"
+    success_df.to_csv(success_path, index=False, encoding='utf-8-sig')
+    logger.info(f"1. Success emails: {len(success_df)} rows -> {success_path.name}")
+
+    # 2. Failed - static sites, no email
+    failed_static_df = df_results[
+        (df_results['scrape_status'] == 'failed') &
+        (df_results['error_message'].str.contains('no_email_found_static', na=False))
+    ].copy()
+    failed_static_path = output_dir / "failed_static.csv"
+    failed_static_df.to_csv(failed_static_path, index=False, encoding='utf-8-sig')
+    logger.info(f"2. Failed static: {len(failed_static_df)} rows -> {failed_static_path.name}")
+
+    # 3. Failed - dynamic sites, no email
+    failed_dynamic_df = df_results[
+        (df_results['scrape_status'] == 'failed') &
+        (df_results['error_message'].str.contains('no_email_found_dynamic', na=False))
+    ].copy()
+    failed_dynamic_path = output_dir / "failed_dynamic.csv"
+    failed_dynamic_df.to_csv(failed_dynamic_path, index=False, encoding='utf-8-sig')
+    logger.info(f"3. Failed dynamic: {len(failed_dynamic_df)} rows -> {failed_dynamic_path.name}")
+
+    # 4. Failed - other errors (connection errors, etc)
+    failed_other_df = df_results[
+        (df_results['scrape_status'] == 'failed') &
+        (~df_results['error_message'].str.contains('no_email_found', na=False))
+    ].copy()
+    failed_other_path = output_dir / "failed_other.csv"
+    failed_other_df.to_csv(failed_other_path, index=False, encoding='utf-8-sig')
+    logger.info(f"4. Failed other: {len(failed_other_df)} rows -> {failed_other_path.name}")
+
+    # 5. Save JSON analytics
+    analytics = scraper.get_analytics()
+    analytics_path = output_dir / "scraping_analytics.json"
+    with open(analytics_path, 'w', encoding='utf-8') as f:
+        json.dump(analytics, f, indent=2, ensure_ascii=False)
+    logger.info(f"5. Analytics: {analytics_path.name}")
+
+    logger.info("="*70)
+    logger.info("ALL FILES SAVED")
+    logger.info("="*70)
+    logger.info(f"Output directory: {output_dir}")
     logger.info(f"Total rows: {len(df_results)}")
+    logger.info("="*70)
 
 
 if __name__ == "__main__":
