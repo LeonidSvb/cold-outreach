@@ -490,12 +490,17 @@ def main():
     logger.info(f"Reading input file: {args.input}")
     df = pd.read_csv(args.input, encoding='utf-8-sig')
 
-    # Validate columns
-    required_cols = ['name', 'website']
-    missing_cols = [col for col in required_cols if col not in df.columns]
-    if missing_cols:
-        logger.error(f"Missing required columns: {missing_cols}")
+    # Validate only website column is required
+    if 'website' not in df.columns:
+        logger.error("Missing required column: 'website'")
         sys.exit(1)
+
+    # Auto-generate name from domain if not present
+    if 'name' not in df.columns:
+        logger.info("'name' column not found, generating from website domains")
+        df['name'] = df['website'].apply(
+            lambda x: x.split('//')[-1].split('/')[0] if isinstance(x, str) and x else 'Unknown'
+        )
 
     # Apply limit if specified
     if args.limit:

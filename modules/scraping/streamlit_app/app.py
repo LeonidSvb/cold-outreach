@@ -37,7 +37,7 @@ with st.sidebar:
     st.divider()
     st.markdown("""
     ### How it works:
-    1. Upload CSV (name, website)
+    1. Upload CSV (only 'website' required)
     2. Configure parameters
     3. Run scraper
     4. View results
@@ -59,25 +59,28 @@ if page == "📤 Upload & Run":
     uploaded_file = st.file_uploader(
         "Upload CSV with websites",
         type=['csv'],
-        help="CSV must have 'name' and 'website' columns"
+        help="CSV must have 'website' column. 'name' is optional (auto-generated from domain if missing)"
     )
 
     if uploaded_file:
         # Load and validate
         df = pd.read_csv(uploaded_file)
 
-        # Validate columns
-        required_cols = ['name', 'website']
-        missing_cols = [col for col in required_cols if col not in df.columns]
-
-        if missing_cols:
-            st.error(f"Missing required columns: {', '.join(missing_cols)}")
+        # Validate only website column is required
+        if 'website' not in df.columns:
+            st.error("Missing required column: 'website'")
         else:
+            # Auto-generate name if not present
+            if 'name' not in df.columns:
+                df['name'] = df['website'].apply(lambda x: x.split('//')[-1].split('/')[0] if isinstance(x, str) else 'Unknown')
+                st.info("Generated 'name' column from website domains")
+
             st.success(f"Loaded {len(df)} rows")
 
             # Preview
+            preview_cols = ['name', 'website'] if 'name' in df.columns else ['website']
             with st.expander("Preview (first 10 rows)"):
-                st.dataframe(df[['name', 'website']].head(10), use_container_width=True)
+                st.dataframe(df[preview_cols].head(10), width='stretch')
 
             # Settings
             st.subheader("Settings")
