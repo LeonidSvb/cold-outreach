@@ -295,13 +295,24 @@ class SimpleHomepageScraper:
 
         email = email.strip().lower()
 
-        # Remove common junk
+        # Fix truncated emails (.co -> .com)
+        if email.endswith('.co') and not email.endswith('.co.uk'):
+            email = email + 'm'
+
+        # Remove common junk and useless emails
         fake_patterns = [
             'example.com', 'domain.com', 'yoursite.com', 'test.com',
-            'filler@godaddy', 'noreply@', 'no-reply@', 'donotreply@'
+            'filler@godaddy', 'noreply@', 'no-reply@', 'donotreply@',
+            'webmaster@', 'postmaster@', 'mailer-daemon@',
+            'privacy@', 'abuse@', 'hostmaster@'
         ]
 
         if any(pattern in email for pattern in fake_patterns):
+            return None
+
+        # Remove NPS generic emails
+        nps_generic = ['abli_education@nps.gov', 'abli_interpretation@nps.gov', 'abli_administration@nps.gov']
+        if email in nps_generic:
             return None
 
         # Basic validation
@@ -513,9 +524,16 @@ def main():
 
     # 1. Success - found emails
     success_df = df_results[df_results['scrape_status'] == 'success'].copy()
+
+    # Deduplicate by email (keep first occurrence)
+    rows_before = len(success_df)
+    success_df = success_df.drop_duplicates(subset=['email'], keep='first')
+    rows_after = len(success_df)
+    duplicates_removed = rows_before - rows_after
+
     success_path = output_dir / "success_emails.csv"
     success_df.to_csv(success_path, index=False, encoding='utf-8-sig')
-    logger.info(f"1. Success emails: {len(success_df)} rows -> {success_path.name}")
+    logger.info(f"1. Success emails: {rows_after} unique emails ({duplicates_removed} duplicates removed) -> {success_path.name}")
 
     # 2. Failed - static sites, no email
     failed_static_df = df_results[
@@ -555,7 +573,9 @@ def main():
     logger.info("ALL FILES SAVED")
     logger.info("="*70)
     logger.info(f"Output directory: {output_dir}")
-    logger.info(f"Total rows: {len(df_results)}")
+    logger.info(f"Unique emails: {rows_after}")
+    logger.info(f"Unique companies: {success_df['name'].nunique()}")
+    logger.info(f"Duplicates removed: {duplicates_removed}")
     logger.info("="*70)
 
 
