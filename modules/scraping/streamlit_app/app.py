@@ -222,10 +222,11 @@ elif page == "📊 View Results":
                 csv_files = list(selected.glob("*.csv"))
 
                 for csv_file in csv_files:
+                    df = pd.read_csv(csv_file)
+
                     col1, col2 = st.columns([4, 1])
 
                     with col1:
-                        df = pd.read_csv(csv_file)
                         st.write(f"**{csv_file.name}** - {len(df)} rows")
 
                     with col2:
@@ -234,8 +235,12 @@ elif page == "📊 View Results":
                             data=csv_file.read_bytes(),
                             file_name=csv_file.name,
                             mime="text/csv",
-                            key=csv_file.name
+                            key=f"download_{csv_file.name}"
                         )
+
+                    # Preview data
+                    with st.expander(f"Preview {csv_file.name} (first 10 rows)"):
+                        st.dataframe(df.head(10), use_container_width=True)
             else:
                 st.warning("No analytics found for this folder")
         else:
