@@ -170,6 +170,39 @@ with st.sidebar:
 
     st.divider()
 
+    st.subheader("💾 Data to Save")
+    save_content = st.checkbox(
+        "Save homepage content",
+        value=True,
+        help="Save full text content from website (disable to save space)"
+    )
+
+    save_sitemap = st.checkbox(
+        "Save sitemap links",
+        value=False,
+        help="Extract and save all pages from sitemap"
+    )
+
+    save_social = st.checkbox(
+        "Save social media links",
+        value=False,
+        help="Extract Facebook, Twitter, LinkedIn, Instagram links"
+    )
+
+    save_links = st.checkbox(
+        "Save other links",
+        value=False,
+        help="Extract all other links from homepage"
+    )
+
+    save_deep_content = st.checkbox(
+        "Save deep pages content",
+        value=False,
+        help="Save raw content from all pages visited during deep search (requires Deep Search mode)"
+    )
+
+    st.divider()
+
     st.subheader("🔢 Processing Limit")
     limit_rows = st.checkbox("Limit rows to process", value=False)
     if limit_rows:
@@ -337,6 +370,21 @@ with tab1:
 
                 if not extract_emails:
                     cmd.append("--no-emails")
+
+                if not save_content:
+                    cmd.append("--no-content")
+
+                if save_sitemap:
+                    cmd.append("--save-sitemap")
+
+                if save_social:
+                    cmd.append("--save-social")
+
+                if save_links:
+                    cmd.append("--save-links")
+
+                if save_deep_content:
+                    cmd.append("--save-deep-content")
 
                 if row_limit > 0:
                     cmd.extend(["--limit", str(row_limit)])

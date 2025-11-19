@@ -77,7 +77,9 @@ class SimpleHomepageScraper:
 
     def __init__(self, workers: int = 50, max_pages: int = 5,
                  scraping_mode: str = 'deep_search', extract_emails: bool = True,
-                 email_format: str = 'separate'):
+                 email_format: str = 'separate', save_content: bool = True,
+                 save_sitemap: bool = False, save_social_links: bool = False,
+                 save_other_links: bool = False, save_deep_content: bool = False):
         self.http_client = HTTPClient(timeout=15, retries=3)
         self.sitemap_parser = SitemapParser(timeout=15)
         self.workers = workers
@@ -85,6 +87,11 @@ class SimpleHomepageScraper:
         self.scraping_mode = scraping_mode
         self.extract_emails = extract_emails
         self.email_format = email_format
+        self.save_content = save_content
+        self.save_sitemap = save_sitemap
+        self.save_social_links = save_social_links
+        self.save_other_links = save_other_links
+        self.save_deep_content = save_deep_content
 
         # Thread-safe stats
         self._lock = threading.Lock()
@@ -126,7 +133,11 @@ class SimpleHomepageScraper:
             'site_type': 'unknown',
             'scrape_status': 'failed',
             'error_message': '',
-            'email_source': ''
+            'email_source': '',
+            'sitemap_links': '' if self.save_sitemap else None,
+            'social_media_links': '' if self.save_social_links else None,
+            'other_links': '' if self.save_other_links else None,
+            'deep_pages_content': '' if self.save_deep_content else None
         })
 
         if not website or pd.isna(website):
@@ -147,8 +158,10 @@ class SimpleHomepageScraper:
             if response['status'] == 'success':
                 html_content = response['content']
 
-                # Extract full text content
-                clean_text = clean_html_to_text(html_content, max_length=50000)
+                # Extract full text content (conditional)
+                clean_text = ''
+                if self.save_content:
+                    clean_text = clean_html_to_text(html_content, max_length=50000)
 
                 # Detect site type
                 site_type = self._detect_site_type(html_content)
@@ -159,6 +172,48 @@ class SimpleHomepageScraper:
                 elif site_type == 'dynamic':
                     with self._lock:
                         self.stats['dynamic_sites'] += 1
+
+                # Extract sitemap links (conditional)
+                sitemap_links_str = ''
+                if self.save_sitemap:
+                    try:
+                        sitemap_result = self.sitemap_parser.get_smart_pages(website, max_pages=100)
+                        sitemap_links = sitemap_result.get('pages', [])
+                        if sitemap_links:
+                            sitemap_links_str = ' | '.join(sitemap_links[:50])  # Limit to 50 links
+                    except:
+                        pass
+
+                # Extract social media links (conditional)
+                social_links_str = ''
+                if self.save_social_links:
+                    social_links = self._extract_social_links(html_content)
+                    if social_links:
+                        social_links_str = ' | '.join(social_links)
+
+                # Extract other links (conditional)
+                other_links_str = ''
+                if self.save_other_links:
+                    all_links = self._extract_all_links(html_content)
+                    # Filter out social media links
+                    if self.save_social_links:
+                        social_domains = ['facebook.com', 'twitter.com', 'linkedin.com', 'instagram.com',
+                                        'youtube.com', 'tiktok.com', 'pinterest.com']
+                        other_links = [link for link in all_links if not any(domain in link.lower() for domain in social_domains)]
+                    else:
+                        other_links = all_links
+                    if other_links:
+                        other_links_str = ' | '.join(other_links[:50])  # Limit to 50 links
+
+                # Update base_result with extracted data
+                base_result['homepage_content'] = clean_text
+                base_result['site_type'] = site_type
+                if self.save_sitemap:
+                    base_result['sitemap_links'] = sitemap_links_str
+                if self.save_social_links:
+                    base_result['social_media_links'] = social_links_str
+                if self.save_other_links:
+                    base_result['other_links'] = other_links_str
 
                 # Extract emails if enabled
                 clean_emails = []
@@ -174,16 +229,12 @@ class SimpleHomepageScraper:
                     if self.email_format == 'all':
                         row = base_result.copy()
                         row['email'] = ', '.join(clean_emails)
-                        row['homepage_content'] = clean_text
-                        row['site_type'] = site_type
                         row['scrape_status'] = 'success'
                         row['email_source'] = 'homepage'
                         results.append(row)
                     elif self.email_format == 'primary':
                         row = base_result.copy()
                         row['email'] = clean_emails[0]
-                        row['homepage_content'] = clean_text
-                        row['site_type'] = site_type
                         row['scrape_status'] = 'success'
                         row['email_source'] = 'homepage'
                         results.append(row)
@@ -191,8 +242,6 @@ class SimpleHomepageScraper:
                         for email in clean_emails:
                             row = base_result.copy()
                             row['email'] = email
-                            row['homepage_content'] = clean_text
-                            row['site_type'] = site_type
                             row['scrape_status'] = 'success'
                             row['email_source'] = 'homepage'
                             results.append(row)
@@ -208,25 +257,26 @@ class SimpleHomepageScraper:
 
                 # No emails on homepage - try deep search if enabled
                 deep_emails = []
+                deep_pages_content = ''
                 if self.extract_emails and not clean_emails and self.scraping_mode == 'deep_search':
                     logger.info(f"⚠ {name}: No emails on homepage, trying deep search...")
-                    deep_emails = self._deep_email_search(website)
+                    deep_emails, deep_pages_content = self._deep_email_search(website)
+
+                # Update base_result with deep content if available
+                if self.save_deep_content and deep_pages_content:
+                    base_result['deep_pages_content'] = deep_pages_content
 
                 if deep_emails:
                     # Handle deep search results based on format
                     if self.email_format == 'all':
                         row = base_result.copy()
                         row['email'] = ', '.join(deep_emails)
-                        row['homepage_content'] = clean_text
-                        row['site_type'] = site_type
                         row['scrape_status'] = 'success'
                         row['email_source'] = 'deep_search'
                         results.append(row)
                     elif self.email_format == 'primary':
                         row = base_result.copy()
                         row['email'] = deep_emails[0]
-                        row['homepage_content'] = clean_text
-                        row['site_type'] = site_type
                         row['scrape_status'] = 'success'
                         row['email_source'] = 'deep_search'
                         results.append(row)
@@ -234,8 +284,6 @@ class SimpleHomepageScraper:
                         for email in deep_emails:
                             row = base_result.copy()
                             row['email'] = email
-                            row['homepage_content'] = clean_text
-                            row['site_type'] = site_type
                             row['scrape_status'] = 'success'
                             row['email_source'] = 'deep_search'
                             results.append(row)
@@ -253,8 +301,6 @@ class SimpleHomepageScraper:
                 if not self.extract_emails:
                     # Success: content extracted, emails not requested
                     row = base_result.copy()
-                    row['homepage_content'] = clean_text
-                    row['site_type'] = site_type
                     row['scrape_status'] = 'success'
                     row['email_source'] = 'none'
                     results.append(row)
@@ -269,8 +315,6 @@ class SimpleHomepageScraper:
                     # Failed: emails requested but not found
                     failure_type = 'dynamic' if site_type == 'dynamic' else 'static'
                     row = base_result.copy()
-                    row['homepage_content'] = clean_text
-                    row['site_type'] = site_type
                     row['scrape_status'] = 'failed'
                     row['error_message'] = f'no_email_found_{failure_type}'
                     row['email_source'] = 'none'
@@ -309,14 +353,17 @@ class SimpleHomepageScraper:
             logger.error(f"✗ {name}: {e}")
             return [base_result]
 
-    def _deep_email_search(self, website: str) -> List[str]:
+    def _deep_email_search(self, website: str):
         """
         Deep email search using sitemap + contact pages
 
         Returns:
-            List of found emails (deduplicated)
+            Tuple (List[str] emails, str pages_content)
+            - emails: deduplicated list of found emails
+            - pages_content: raw content from all pages (if save_deep_content=True)
         """
         all_emails = []
+        pages_content_list = []
 
         try:
             # Get smart pages (sitemap or pattern-based)
@@ -328,9 +375,18 @@ class SimpleHomepageScraper:
                     response = self.http_client.fetch(page_url, check_content_length=False)
 
                     if response['status'] == 'success':
-                        emails = extract_emails_from_html(response['content'])
+                        html_content = response['content']
+
+                        # Extract emails
+                        emails = extract_emails_from_html(html_content)
                         clean_emails = [self._clean_email(e) for e in emails if self._clean_email(e)]
                         all_emails.extend(clean_emails)
+
+                        # Save content if requested
+                        if self.save_deep_content:
+                            page_text = clean_html_to_text(html_content, max_length=10000)
+                            if page_text:
+                                pages_content_list.append(f"=== {page_url} ===\n{page_text}\n")
 
                 except Exception:
                     continue
@@ -344,9 +400,58 @@ class SimpleHomepageScraper:
         # Filter out if too many emails (likely scraped wrong content)
         if len(unique_emails) > 20:
             logger.warning(f"Too many emails found ({len(unique_emails)}), likely scraped wrong content - ignoring")
-            return []
+            unique_emails = []
 
-        return unique_emails
+        # Combine pages content
+        combined_content = '\n\n'.join(pages_content_list) if pages_content_list else ''
+
+        return unique_emails, combined_content
+
+    def _fill_links_fields(self, row: Dict, sitemap_links_str: str, social_links_str: str, other_links_str: str) -> Dict:
+        """Fill links fields in row dict"""
+        if self.save_sitemap:
+            row['sitemap_links'] = sitemap_links_str
+        if self.save_social_links:
+            row['social_media_links'] = social_links_str
+        if self.save_other_links:
+            row['other_links'] = other_links_str
+        return row
+
+    def _extract_social_links(self, html_content: str) -> List[str]:
+        """Extract social media links from HTML"""
+        import re
+        social_patterns = [
+            r'https?://(?:www\.)?facebook\.com/[^\s"\'>]+',
+            r'https?://(?:www\.)?twitter\.com/[^\s"\'>]+',
+            r'https?://(?:www\.)?linkedin\.com/[^\s"\'>]+',
+            r'https?://(?:www\.)?instagram\.com/[^\s"\'>]+',
+            r'https?://(?:www\.)?youtube\.com/[^\s"\'>]+',
+            r'https?://(?:www\.)?tiktok\.com/[^\s"\'>]+',
+            r'https?://(?:www\.)?pinterest\.com/[^\s"\'>]+',
+        ]
+
+        social_links = []
+        for pattern in social_patterns:
+            matches = re.findall(pattern, html_content, re.IGNORECASE)
+            social_links.extend(matches)
+
+        return list(set(social_links))  # Deduplicate
+
+    def _extract_all_links(self, html_content: str) -> List[str]:
+        """Extract all links from HTML"""
+        import re
+        from bs4 import BeautifulSoup
+
+        try:
+            soup = BeautifulSoup(html_content, 'html.parser')
+            links = []
+            for a_tag in soup.find_all('a', href=True):
+                href = a_tag['href']
+                if href and not href.startswith(('#', 'javascript:', 'mailto:')):
+                    links.append(href)
+            return list(set(links))  # Deduplicate
+        except:
+            return []
 
     def _clean_email(self, email: str) -> Optional[str]:
         """Clean and validate email"""
@@ -563,6 +668,11 @@ def main():
     parser.add_argument('--website-column', default='website', help='Column name containing website URLs (default: website)')
     parser.add_argument('--name-column', default='name', help='Column name containing company names (default: name)')
     parser.add_argument('--limit', type=int, help='Limit number of leads to process (for testing)')
+    parser.add_argument('--no-content', action='store_true', help='Do not save homepage content (save space)')
+    parser.add_argument('--save-sitemap', action='store_true', help='Save sitemap links')
+    parser.add_argument('--save-social', action='store_true', help='Save social media links')
+    parser.add_argument('--save-links', action='store_true', help='Save other links from homepage')
+    parser.add_argument('--save-deep-content', action='store_true', help='Save raw content from all deep search pages')
 
     args = parser.parse_args()
 
@@ -622,7 +732,12 @@ def main():
         max_pages=args.max_pages,
         scraping_mode=args.scraping_mode,
         extract_emails=not args.no_emails,
-        email_format=args.email_format
+        email_format=args.email_format,
+        save_content=not args.no_content,
+        save_sitemap=args.save_sitemap,
+        save_social_links=args.save_social,
+        save_other_links=args.save_links,
+        save_deep_content=args.save_deep_content
     )
 
     # Process batch
