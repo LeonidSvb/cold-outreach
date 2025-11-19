@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 === HOMEPAGE SCRAPER - UNIFIED STREAMLIT UI ===
-Version: 4.1.0 | Updated: 2025-11-20
+Version: 4.1.1 | Updated: 2025-11-20
 
 FEATURES:
 - Live real-time progress from subprocess
@@ -12,6 +12,10 @@ FEATURES:
 - Persistent results with historical browsing
 - Session state for immediate results
 - JSON analytics and detailed breakdowns
+
+NEW (v4.1.1):
+- Cross-platform Python executable (sys.executable instead of "py")
+- Now works on Windows, Linux, and macOS
 
 NEW (v4.1.0):
 - Beautiful completion stats: duration, success rate, emails found
@@ -35,6 +39,7 @@ FIXES (v4.0.1):
 - Better exception handling in results tab
 """
 
+import sys
 import streamlit as st
 import pandas as pd
 import subprocess
@@ -381,9 +386,9 @@ with tab1:
                 temp_input.parent.mkdir(parents=True, exist_ok=True)
                 df_valid.to_csv(temp_input, index=False, encoding='utf-8-sig')
 
-                # Build command
+                # Build command (cross-platform Python executable)
                 cmd = [
-                    "py",
+                    sys.executable,  # Works on both Windows and Linux
                     str(SCRIPT_PATH),
                     "--input", str(temp_input),
                     "--workers", str(workers),
@@ -713,4 +718,4 @@ with tab2:
         st.info("Try refreshing the page or check the results folder manually.")
 
 st.divider()
-st.caption("Homepage Scraper v4.1.0 (Beautiful Stats) | 2025-11-20")
+st.caption("Homepage Scraper v4.1.1 (Cross-Platform) | 2025-11-20")
