@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 === SIMPLE HOMEPAGE SCRAPER ===
-Version: 2.0.0 | Updated: 2025-11-18
+Version: 2.1.0 | Updated: 2025-11-19
 
 PURPOSE:
 Fast homepage scraping with multi-page fallback - NO AI, just emails + text content
@@ -9,12 +9,14 @@ Fast homepage scraping with multi-page fallback - NO AI, just emails + text cont
 2. Extract emails from homepage
 3. If no emails - try 5 more pages (contact, about, team)
 4. Detect site type (static/dynamic)
+5. Normalize company names (casual short versions)
 
 FEATURES:
 - Homepage + multi-page fallback
 - Email extraction (all emails)
 - Full text content extraction
 - Site type detection (static/dynamic)
+- Company name normalization (remove Ltd, Pty, etc)
 - Maximum parallel processing (50 workers)
 - NO AI analysis (fast & free)
 - 4 output files (success, failed_static, failed_dynamic, failed_other)
@@ -23,8 +25,12 @@ FEATURES:
 USAGE:
 python simple_homepage_scraper.py --input input.csv --workers 50 --max-pages 5
 
+INPUT CSV COLUMNS:
+- 'Business Name' or 'name' - Company name (will be normalized)
+- 'Website' or 'website' - Website URL
+
 OUTPUT FILES:
-1. success_emails.csv - Found emails
+1. success_emails.csv - Found emails with normalized names
 2. failed_static.csv - Static sites, no email
 3. failed_dynamic.csv - Dynamic sites, no email
 4. failed_other.csv - Errors
@@ -33,6 +39,7 @@ OUTPUT FILES:
 IMPROVEMENTS:
 v1.0.0 - Initial simple version (no AI, maximum speed)
 v2.0.0 - Added multi-page search, 4 output files, detailed analytics
+v2.1.0 - Added company name normalization for casual short names
 """
 
 import sys
@@ -68,6 +75,71 @@ except ImportError:
     from modules.scraping.lib.http_utils import HTTPClient
     from modules.scraping.lib.text_utils import extract_emails_from_html, clean_html_to_text
     from modules.scraping.lib.sitemap_utils import SitemapParser
+
+
+class CompanyNameNormalizer:
+    """
+    Normalize company names to casual short versions
+
+    Examples:
+    - "Devonport Historic Cottages Pty Ltd" -> "Devonport Historic Cottages"
+    - "503 On Princes Drive Motel Australia" -> "503 On Princes"
+    - "Luxury 5 Star Hotel - Gold Coast" -> "Luxury 5 Star"
+    """
+
+    COMPANY_SUFFIXES = [
+        r'\bPty\.?\s*Ltd\.?',
+        r'\bLtd\.?',
+        r'\bLimited',
+        r'\bInc\.?',
+        r'\bIncorporated',
+        r'\bLLC',
+        r'\bCorp\.?',
+        r'\bCorporation',
+        r'\bCo\.?',
+        r'\bCompany',
+    ]
+
+    LOCATION_MARKERS = [
+        r'\bAustralia\b',
+        r'\bAustralian\b',
+        r'\b-\s*[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?\s*$',
+    ]
+
+    ACCOMMODATION_TYPES = [
+        'Hotel', 'Motel', 'Resort', 'Lodge', 'Inn', 'Suites',
+        'Accommodation', 'Apartments', 'Holiday Home', 'Cottage',
+        'Villa', 'B&B', 'Bed and Breakfast', 'Hostel', 'Backpackers'
+    ]
+
+    @classmethod
+    def normalize(cls, business_name: str) -> str:
+        """
+        Normalize business name to casual short version
+        """
+        if not business_name or pd.isna(business_name):
+            return ""
+
+        name = business_name.strip()
+
+        for suffix in cls.COMPANY_SUFFIXES:
+            name = re.sub(suffix, '', name, flags=re.IGNORECASE)
+
+        for marker in cls.LOCATION_MARKERS:
+            name = re.sub(marker, '', name, flags=re.IGNORECASE)
+
+        name = re.sub(r'\s+', ' ', name).strip()
+        name = name.rstrip(' ,-–—')
+
+        words = name.split()
+        if len(words) > 4:
+            has_type = any(word in cls.ACCOMMODATION_TYPES for word in words)
+            if has_type:
+                name = ' '.join(words[:4])
+            else:
+                name = ' '.join(words[:3])
+
+        return name
 
 
 class SimpleHomepageScraper:
@@ -107,7 +179,8 @@ class SimpleHomepageScraper:
             List of dicts - one per email found (or one with empty email if none found)
             [
                 {
-                    'name': business name,
+                    'name': business name (original),
+                    'company_name_short': normalized casual name,
                     'website': website URL,
                     'email': email found,
                     'homepage_content': full text content,
@@ -117,8 +190,12 @@ class SimpleHomepageScraper:
                 }
             ]
         """
+        # Normalize company name
+        normalized_name = CompanyNameNormalizer.normalize(name)
+
         base_result = {
             'name': name,
+            'company_name_short': normalized_name,
             'website': website,
             'email': '',
             'homepage_content': '',
@@ -490,9 +567,21 @@ def main():
     logger.info(f"Reading input file: {args.input}")
     df = pd.read_csv(args.input, encoding='utf-8-sig')
 
-    # Validate only website column is required
+    # Normalize column names (support both 'website'/'Website' and 'name'/'Business Name')
+    column_mapping = {}
+    for col in df.columns:
+        col_lower = col.lower()
+        if col_lower == 'website':
+            column_mapping[col] = 'website'
+        elif col_lower in ['name', 'business name']:
+            column_mapping[col] = 'name'
+
+    if column_mapping:
+        df = df.rename(columns=column_mapping)
+
+    # Validate website column exists
     if 'website' not in df.columns:
-        logger.error("Missing required column: 'website'")
+        logger.error("Missing required column: 'website' or 'Website'")
         sys.exit(1)
 
     # Auto-generate name from domain if not present
