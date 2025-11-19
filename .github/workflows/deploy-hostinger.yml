@@ -1,0 +1,28 @@
+name: Deploy to Hostinger VPS
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'modules/scraping/**'
+      - 'requirements.txt'
+      - '.github/workflows/deploy-hostinger.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to Hostinger via SSH
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOSTINGER_HOST }}
+        username: ${{ secrets.HOSTINGER_USER }}
+        key: ${{ secrets.HOSTINGER_SSH_KEY }}
+        script: |
+          cd /opt/homepage-scraper
+          git pull origin master
+          source venv/bin/activate
+          pip install --upgrade -r requirements.txt
+          sudo supervisorctl restart homepage-scraper
+          echo "Deployment complete!"
