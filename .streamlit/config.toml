@@ -1,0 +1,24 @@
+[server]
+# Increase max upload size for large CSV files
+maxUploadSize = 200
+
+# Enable file watching for hot reload
+runOnSave = true
+
+# Headless mode for deployment
+headless = true
+
+# Port configuration
+port = 8501
+
+[browser]
+# Don't open browser automatically
+gatherUsageStats = false
+
+[theme]
+# Optional: customize colors
+primaryColor = "#667eea"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+font = "sans serif"
