@@ -27,29 +27,24 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 
 # Add project root to path
-project_root = Path(__file__).parent.parent.parent.parent
+project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(project_root))
 
+# Also add lib directory directly
+lib_path = Path(__file__).resolve().parent.parent / "lib"
+sys.path.insert(0, str(lib_path))
+
 try:
-    from modules.scraping.lib.http_utils import HTTPClient
-    from modules.scraping.lib.text_utils import extract_emails_from_html, clean_html_to_text
-    from modules.scraping.lib.sitemap_utils import SitemapParser
+    from http_utils import HTTPClient
+    from text_utils import extract_emails_from_html, clean_html_to_text
+    from sitemap_utils import SitemapParser
 except ImportError as e:
     st.error(f"Failed to import scraping modules: {e}")
     st.write(f"Project root: {project_root}")
-    st.write(f"sys.path: {sys.path[:3]}")
-
-    # Try alternative import
-    try:
-        lib_path = Path(__file__).parent.parent / "lib"
-        sys.path.insert(0, str(lib_path))
-        from http_utils import HTTPClient
-        from text_utils import extract_emails_from_html, clean_html_to_text
-        from sitemap_utils import SitemapParser
-        st.success("✅ Loaded modules via alternative path")
-    except ImportError as e2:
-        st.error(f"Alternative import also failed: {e2}")
-        st.stop()
+    st.write(f"Lib path: {lib_path}")
+    st.write(f"__file__: {__file__}")
+    st.write(f"sys.path: {sys.path[:5]}")
+    st.stop()
 
 # Page configuration
 st.set_page_config(
@@ -317,12 +312,15 @@ with tab1:
 
                     try:
                         # Fetch homepage
-                        html, site_type = http_client.fetch_with_detection(website)
-                        result['site_type'] = site_type
+                        fetch_result = http_client.fetch(website, check_content_length=True)
 
-                        if not html:
-                            result['error_message'] = 'Failed to fetch homepage'
-                            return result
+                        if fetch_result['status'] != 'success':
+                            result['error_message'] = fetch_result.get('error', fetch_result['status'])
+                            result['site_type'] = fetch_result['status']
+                            return [result]
+
+                        html = fetch_result['content']
+                        result['site_type'] = 'static'
 
                         # Extract content
                         content = clean_html_to_text(html)
@@ -335,11 +333,14 @@ with tab1:
                             # If no emails on homepage and deep search enabled
                             if not emails and scraping_mode == "Deep Search (Homepage + 5 pages)":
                                 # Try additional pages
-                                additional_pages = sitemap_parser.get_important_pages(website, max_pages=max_pages)
+                                smart_pages_result = sitemap_parser.get_smart_pages(website, max_pages=max_pages)
+                                additional_pages = smart_pages_result.get('pages', [])
+
                                 for page_url in additional_pages[:max_pages]:
                                     try:
-                                        page_html, _ = http_client.fetch_with_detection(page_url)
-                                        if page_html:
+                                        page_result = http_client.fetch(page_url, check_content_length=False)
+                                        if page_result['status'] == 'success':
+                                            page_html = page_result['content']
                                             page_emails = extract_emails_from_html(page_html)
                                             if page_emails:
                                                 emails.extend(page_emails)
