@@ -1,29 +1,30 @@
 #!/usr/bin/env python3
 """
 === SIMPLE HOMEPAGE SCRAPER ===
-Version: 2.1.0 | Updated: 2025-11-19
+Version: 2.2.0 | Updated: 2025-11-19
 
 PURPOSE:
 Fast homepage scraping with multi-page fallback - NO AI, just emails + text content
 1. Scrape homepage content (clean text)
 2. Extract emails from homepage
-3. If no emails - try 5 more pages (contact, about, team)
+3. If no emails - try sitemap + contact/about pages
 4. Detect site type (static/dynamic)
 5. Normalize company names (casual short versions)
 
 FEATURES:
-- Homepage + multi-page fallback
+- Homepage + smart multi-page fallback (sitemap-first)
 - Email extraction (all emails)
 - Full text content extraction
 - Site type detection (static/dynamic)
 - Company name normalization (remove Ltd, Pty, etc)
 - Maximum parallel processing (50 workers)
+- Checkpoint saves every 200 rows (crash recovery)
 - NO AI analysis (fast & free)
 - 4 output files (success, failed_static, failed_dynamic, failed_other)
 - Detailed JSON analytics
 
 USAGE:
-python simple_homepage_scraper.py --input input.csv --workers 50 --max-pages 5
+python simple_homepage_scraper.py --input input.csv --workers 50 --max-pages 3
 
 INPUT CSV COLUMNS:
 - 'Business Name' or 'name' - Company name (will be normalized)
@@ -35,11 +36,13 @@ OUTPUT FILES:
 3. failed_dynamic.csv - Dynamic sites, no email
 4. failed_other.csv - Errors
 5. scraping_analytics.json - Performance metrics
+6. checkpoints/*.csv - Incremental saves every 200 rows
 
 IMPROVEMENTS:
 v1.0.0 - Initial simple version (no AI, maximum speed)
 v2.0.0 - Added multi-page search, 4 output files, detailed analytics
 v2.1.0 - Added company name normalization for casual short names
+v2.2.0 - Added checkpoint saves every 200 rows for crash recovery
 """
 
 import sys
@@ -481,12 +484,13 @@ class SimpleHomepageScraper:
 
         return 'unknown'
 
-    def process_batch(self, df: pd.DataFrame) -> pd.DataFrame:
+    def process_batch(self, df: pd.DataFrame, checkpoint_dir: Optional[Path] = None) -> pd.DataFrame:
         """
         Process batch of leads with parallel scraping
 
         Args:
             df: DataFrame with 'name' and 'website' columns
+            checkpoint_dir: Directory for saving checkpoints (optional)
 
         Returns:
             DataFrame with scraping results (one row per email)
@@ -496,6 +500,8 @@ class SimpleHomepageScraper:
         logger.info("="*70)
         logger.info(f"Total leads: {len(df)}")
         logger.info(f"Workers: {self.workers}")
+        if checkpoint_dir:
+            logger.info(f"Checkpoints enabled: Every 200 rows -> {checkpoint_dir}")
         logger.info("="*70)
 
         start_time = time.time()
@@ -524,6 +530,13 @@ class SimpleHomepageScraper:
                     # Progress update every 50 leads
                     if processed_count % 50 == 0:
                         logger.info(f"Progress: {processed_count}/{len(df)} leads processed...")
+
+                    # Checkpoint save every 200 leads
+                    if checkpoint_dir and processed_count % 200 == 0:
+                        checkpoint_file = checkpoint_dir / f"checkpoint_{processed_count}.csv"
+                        temp_df = pd.DataFrame(all_rows)
+                        temp_df.to_csv(checkpoint_file, index=False, encoding='utf-8-sig')
+                        logger.info(f"✓ Checkpoint saved: {checkpoint_file.name} ({len(temp_df)} rows)")
 
                 except Exception as e:
                     logger.error(f"Task failed: {e}")
@@ -599,9 +612,6 @@ def main():
     # Create scraper
     scraper = SimpleHomepageScraper(workers=args.workers, max_pages=args.max_pages)
 
-    # Process batch
-    df_results = scraper.process_batch(df)
-
     # Generate output directory
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     if args.output:
@@ -610,6 +620,13 @@ def main():
         output_dir = Path(__file__).parent.parent / "results" / f"scraped_{timestamp}"
 
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Create checkpoints directory
+    checkpoint_dir = output_dir / "checkpoints"
+    checkpoint_dir.mkdir(exist_ok=True)
+
+    # Process batch with checkpoints
+    df_results = scraper.process_batch(df, checkpoint_dir=checkpoint_dir)
 
     # Split results into 4 files
     logger.info("="*70)
