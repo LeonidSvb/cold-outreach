@@ -27,15 +27,29 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 
 # Add project root to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+project_root = Path(__file__).parent.parent.parent.parent
+sys.path.insert(0, str(project_root))
 
 try:
     from modules.scraping.lib.http_utils import HTTPClient
     from modules.scraping.lib.text_utils import extract_emails_from_html, clean_html_to_text
     from modules.scraping.lib.sitemap_utils import SitemapParser
-except ImportError:
-    st.error("Failed to import scraping modules")
-    st.stop()
+except ImportError as e:
+    st.error(f"Failed to import scraping modules: {e}")
+    st.write(f"Project root: {project_root}")
+    st.write(f"sys.path: {sys.path[:3]}")
+
+    # Try alternative import
+    try:
+        lib_path = Path(__file__).parent.parent / "lib"
+        sys.path.insert(0, str(lib_path))
+        from http_utils import HTTPClient
+        from text_utils import extract_emails_from_html, clean_html_to_text
+        from sitemap_utils import SitemapParser
+        st.success("✅ Loaded modules via alternative path")
+    except ImportError as e2:
+        st.error(f"Alternative import also failed: {e2}")
+        st.stop()
 
 # Page configuration
 st.set_page_config(
