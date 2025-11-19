@@ -748,9 +748,11 @@ def main():
     if args.output:
         output_dir = Path(args.output)
     else:
-        output_dir = Path(__file__).parent.parent / "results" / f"scraped_{timestamp}"
+        # Save in homepage_email_scraper/results/ (not parent.parent)
+        output_dir = Path(__file__).parent / "results" / f"scraped_{timestamp}"
 
     output_dir.mkdir(parents=True, exist_ok=True)
+    logger.info(f"Output directory: {output_dir}")
 
     # Split results into 4 files
     logger.info("="*70)

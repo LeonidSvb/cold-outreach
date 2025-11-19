@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 === HOMEPAGE SCRAPER - UNIFIED STREAMLIT UI ===
-Version: 4.0.0 | Created: 2025-11-19
+Version: 4.1.0 | Updated: 2025-11-20
 
 FEATURES:
 - Live real-time progress from subprocess
@@ -12,6 +12,27 @@ FEATURES:
 - Persistent results with historical browsing
 - Session state for immediate results
 - JSON analytics and detailed breakdowns
+
+NEW (v4.1.0):
+- Beautiful completion stats: duration, success rate, emails found
+- Detailed breakdown: email sources, site types, failure reasons
+- Fixed results folder path (parent instead of parent.parent in scraper.py)
+
+FIXES (v4.0.3):
+- Added working directory (cwd) for subprocess
+- Debug info shows exact command and working dir
+- Should fix path resolution issues
+
+FIXES (v4.0.2):
+- Fixed duplicate subprocess runs using run_clicked flag
+- Optimized log updates (every 2 sec instead of every line)
+- Using st.empty() for logs to prevent full reruns
+- Better session state management
+
+FIXES (v4.0.1):
+- Fixed slow initial load by adding error handling
+- Optimized CSV preview (read only 10 rows)
+- Better exception handling in results tab
 """
 
 import streamlit as st
@@ -90,6 +111,8 @@ if 'live_stats' not in st.session_state:
         'emails_found': 0,
         'rate': 0.0
     }
+if 'run_clicked' not in st.session_state:
+    st.session_state.run_clicked = False
 
 # Helper function: Validate URL
 def validate_url(url):
@@ -347,7 +370,10 @@ with tab1:
                 st.metric("Extract emails", "Yes" if extract_emails else "No")
 
             # Run button
-            if st.button("🚀 Run Scraper", type="primary", disabled=st.session_state.scraping_active, use_container_width=True):
+            run_button = st.button("🚀 Run Scraper", type="primary", disabled=st.session_state.scraping_active, use_container_width=True)
+
+            if run_button and not st.session_state.run_clicked:
+                st.session_state.run_clicked = True
                 st.session_state.scraping_active = True
 
                 # Save uploaded file
@@ -394,22 +420,36 @@ with tab1:
                 progress_bar = st.progress(0)
                 status_text = st.empty()
                 live_stats_container = st.empty()
-                log_container = st.expander("📋 Scraper logs (live)", expanded=False)
+
+                # Log container with empty placeholder for updates without reruns
+                with st.expander("📋 Scraper logs (updates every 2sec)", expanded=False):
+                    log_placeholder = st.empty()
 
                 # Run scraper with real-time output
                 try:
+                    # Set working directory to scraper location for proper path resolution
+                    scraper_dir = SCRIPT_PATH.parent
+
+                    # Debug: show command
+                    st.info(f"**Command:**  \n`{' '.join(cmd)}`")
+                    st.info(f"**Working dir:** `{scraper_dir}`")
+
                     process = subprocess.Popen(
                         cmd,
                         stdout=subprocess.PIPE,
                         stderr=subprocess.STDOUT,
                         text=True,
                         bufsize=1,
-                        universal_newlines=True
+                        universal_newlines=True,
+                        cwd=str(scraper_dir)  # Set working directory
                     )
 
                     logs = []
+                    last_update = time.time()
+
                     for line in process.stdout:
                         logs.append(line)
+                        current_time = time.time()
 
                         # Parse progress from logs
                         if "Progress:" in line:
@@ -434,9 +474,13 @@ with tab1:
                             if emails_match:
                                 st.session_state.live_stats['emails_found'] = int(emails_match.group(1))
 
-                        # Update log display
-                        with log_container:
-                            st.code('\n'.join(logs[-50:]), language="text")  # Show last 50 lines
+                        # Update log display only every 2 seconds to reduce reruns
+                        if current_time - last_update > 2.0:
+                            log_placeholder.code('\n'.join(logs[-30:]), language="text")  # Show last 30 lines
+                            last_update = current_time
+
+                    # Show final logs after completion
+                    log_placeholder.code('\n'.join(logs[-100:]), language="text")
 
                     process.wait()
 
@@ -454,10 +498,65 @@ with tab1:
                             latest_result = result_folders[0]
                             st.session_state.current_results = latest_result
 
+                            # Load analytics for detailed stats
+                            analytics_file = latest_result / "scraping_analytics.json"
+                            if analytics_file.exists():
+                                with open(analytics_file) as f:
+                                    analytics = json.load(f)
+
+                                # Beautiful completion summary
+                                st.markdown("### 🎉 Scraping Complete!")
+
+                                # Main metrics in columns
+                                col1, col2, col3, col4 = st.columns(4)
+                                with col1:
+                                    st.metric(
+                                        "⏱️ Duration",
+                                        f"{analytics['summary']['duration_seconds']}s",
+                                        f"{analytics['summary']['sites_per_second']} sites/sec"
+                                    )
+                                with col2:
+                                    st.metric(
+                                        "✅ Success",
+                                        analytics['results']['success']['count'],
+                                        f"{analytics['results']['success']['percentage']}"
+                                    )
+                                with col3:
+                                    st.metric(
+                                        "📧 Emails Found",
+                                        analytics['results']['success']['total_emails'],
+                                        delta_color="off"
+                                    )
+                                with col4:
+                                    st.metric(
+                                        "❌ Failed",
+                                        analytics['results']['failed']['total'],
+                                        delta_color="inverse"
+                                    )
+
+                                # Detailed breakdown
+                                with st.expander("📊 Detailed Breakdown"):
+                                    col1, col2 = st.columns(2)
+
+                                    with col1:
+                                        st.markdown("**Email Sources:**")
+                                        st.write(f"- From homepage: {analytics['results']['success']['from_homepage']}")
+                                        st.write(f"- From deep search: {analytics['results']['success']['from_deep_search']}")
+
+                                        st.markdown("**Site Types:**")
+                                        st.write(f"- Static: {analytics['site_types']['static']}")
+                                        st.write(f"- Dynamic: {analytics['site_types']['dynamic']}")
+
+                                    with col2:
+                                        st.markdown("**Failure Reasons:**")
+                                        st.write(f"- Static (no email): {analytics['results']['failed']['static_no_email']['count']}")
+                                        st.write(f"- Dynamic (no email): {analytics['results']['failed']['dynamic_no_email']['count']}")
+                                        st.write(f"- Other errors: {analytics['results']['failed']['other_errors']['count']}")
+
                             st.markdown(f"""
                             <div class="success-box">
                                 <strong>📁 Results saved to:</strong> {latest_result.name}<br>
-                                <strong>👉 Switch to "View Results" tab to see analytics and download files</strong>
+                                <strong>👉 Switch to "View Results" tab to see full analytics and download files</strong>
                             </div>
                             """, unsafe_allow_html=True)
 
@@ -469,6 +568,7 @@ with tab1:
 
                 finally:
                     st.session_state.scraping_active = False
+                    st.session_state.run_clicked = False
                     # Cleanup temp file
                     if temp_input.exists():
                         temp_input.unlink()
@@ -479,12 +579,15 @@ with tab1:
 with tab2:
     st.header("📊 View Results")
 
-    # List result folders
-    if RESULTS_DIR.exists():
-        result_folders = sorted(
-            [f for f in RESULTS_DIR.iterdir() if f.is_dir() and f.name.startswith('scraped_')],
-            reverse=True
-        )
+    # List result folders with error handling
+    try:
+        if not RESULTS_DIR.exists():
+            st.info("📂 No results yet. Run scraper first in the 'Upload & Run' tab!")
+        else:
+            result_folders = sorted(
+                [f for f in RESULTS_DIR.iterdir() if f.is_dir() and f.name.startswith('scraped_')],
+                reverse=True
+            )
 
         if result_folders:
             # Select folder
@@ -562,48 +665,52 @@ with tab2:
                 # Download files
                 st.subheader("⬇️ Download Files")
 
-                csv_files = list(selected.glob("*.csv"))
+                csv_files = [f for f in selected.glob("*.csv") if 'temp_input' not in f.name]
 
                 for csv_file in csv_files:
-                    # Skip temp files
-                    if 'temp_input' in csv_file.name:
-                        continue
+                    try:
+                        df_file = pd.read_csv(csv_file, nrows=10)  # Read only first 10 rows for preview
+                        full_row_count = sum(1 for _ in open(csv_file, encoding='utf-8-sig')) - 1  # Count total rows
 
-                    df_file = pd.read_csv(csv_file)
+                        col1, col2, col3 = st.columns([3, 1, 1])
 
-                    col1, col2, col3 = st.columns([3, 1, 1])
+                        with col1:
+                            # Determine file type icon
+                            if 'success' in csv_file.name.lower():
+                                icon = "✅"
+                            elif 'failed' in csv_file.name.lower():
+                                icon = "❌"
+                            else:
+                                icon = "📄"
 
-                    with col1:
-                        # Determine file type icon
-                        if 'success' in csv_file.name.lower():
-                            icon = "✅"
-                        elif 'failed' in csv_file.name.lower():
-                            icon = "❌"
-                        else:
-                            icon = "📄"
+                            st.write(f"{icon} **{csv_file.name}** - {full_row_count} rows")
 
-                        st.write(f"{icon} **{csv_file.name}** - {len(df_file)} rows")
+                        with col2:
+                            st.download_button(
+                                "Download",
+                                data=csv_file.read_bytes(),
+                                file_name=csv_file.name,
+                                mime="text/csv",
+                                key=f"download_{csv_file.name}",
+                                use_container_width=True
+                            )
 
-                    with col2:
-                        st.download_button(
-                            "Download",
-                            data=csv_file.read_bytes(),
-                            file_name=csv_file.name,
-                            mime="text/csv",
-                            key=f"download_{csv_file.name}",
-                            use_container_width=True
-                        )
+                        with col3:
+                            with st.expander("👁️ Preview"):
+                                st.dataframe(df_file.head(10), use_container_width=True)
 
-                    with col3:
-                        with st.expander("👁️ Preview"):
-                            st.dataframe(df_file.head(10), use_container_width=True)
+                    except Exception as csv_error:
+                        st.warning(f"⚠️ Could not load {csv_file.name}: {csv_error}")
 
             else:
                 st.warning("⚠️ No analytics found for this folder")
-        else:
-            st.info("📂 No results yet. Run scraper first in the 'Upload & Run' tab!")
-    else:
-        st.info("📂 No results yet. Run scraper first in the 'Upload & Run' tab!")
+
+            if not result_folders:
+                st.info("📂 No results yet. Run scraper first in the 'Upload & Run' tab!")
+
+    except Exception as e:
+        st.error(f"❌ Error loading results: {e}")
+        st.info("Try refreshing the page or check the results folder manually.")
 
 st.divider()
-st.caption("Homepage Scraper v4.0.0 (Unified) | 2025-11-19")
+st.caption("Homepage Scraper v4.1.0 (Beautiful Stats) | 2025-11-20")
