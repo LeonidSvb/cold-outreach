@@ -75,11 +75,16 @@ class SimpleHomepageScraper:
     Simple homepage scraper with multi-page fallback
     """
 
-    def __init__(self, workers: int = 50, max_pages: int = 5):
+    def __init__(self, workers: int = 50, max_pages: int = 5,
+                 scraping_mode: str = 'deep_search', extract_emails: bool = True,
+                 email_format: str = 'separate'):
         self.http_client = HTTPClient(timeout=15, retries=3)
         self.sitemap_parser = SitemapParser(timeout=15)
         self.workers = workers
         self.max_pages = max_pages
+        self.scraping_mode = scraping_mode
+        self.extract_emails = extract_emails
+        self.email_format = email_format
 
         # Thread-safe stats
         self._lock = threading.Lock()
@@ -99,33 +104,30 @@ class SimpleHomepageScraper:
         }
         self.start_time = time.time()
 
-    def scrape_homepage(self, name: str, website: str) -> List[Dict]:
+    def scrape_homepage(self, row_data: Dict) -> List[Dict]:
         """
         Scrape homepage and extract emails + content
 
+        Args:
+            row_data: Full row data from CSV (preserves all original columns)
+
         Returns:
             List of dicts - one per email found (or one with empty email if none found)
-            [
-                {
-                    'name': business name,
-                    'website': website URL,
-                    'email': email found,
-                    'homepage_content': full text content,
-                    'site_type': 'static' | 'dynamic' | 'unknown',
-                    'scrape_status': 'success' | 'failed',
-                    'error_message': error if failed
-                }
-            ]
+            All original columns are preserved, new columns are added
         """
-        base_result = {
-            'name': name,
-            'website': website,
+        name = row_data.get('name', '')
+        website = row_data.get('website', '')
+
+        # Base result preserves ALL original columns
+        base_result = row_data.copy()
+        base_result.update({
             'email': '',
             'homepage_content': '',
             'site_type': 'unknown',
             'scrape_status': 'failed',
-            'error_message': ''
-        }
+            'error_message': '',
+            'email_source': ''
+        })
 
         if not website or pd.isna(website):
             base_result['error_message'] = 'No website provided'
@@ -145,10 +147,6 @@ class SimpleHomepageScraper:
             if response['status'] == 'success':
                 html_content = response['content']
 
-                # Extract emails
-                emails = extract_emails_from_html(html_content)
-                clean_emails = [self._clean_email(e) for e in emails if self._clean_email(e)]
-
                 # Extract full text content
                 clean_text = clean_html_to_text(html_content, max_length=50000)
 
@@ -162,17 +160,42 @@ class SimpleHomepageScraper:
                     with self._lock:
                         self.stats['dynamic_sites'] += 1
 
-                # Create one row per email
+                # Extract emails if enabled
+                clean_emails = []
+                if self.extract_emails:
+                    emails = extract_emails_from_html(html_content)
+                    clean_emails = [self._clean_email(e) for e in emails if self._clean_email(e)]
+
+                # Create results based on email format
                 results = []
-                if clean_emails:
-                    for email in clean_emails:
+
+                if self.extract_emails and clean_emails:
+                    # Found emails on homepage
+                    if self.email_format == 'all':
                         row = base_result.copy()
-                        row['email'] = email
+                        row['email'] = ', '.join(clean_emails)
                         row['homepage_content'] = clean_text
                         row['site_type'] = site_type
                         row['scrape_status'] = 'success'
                         row['email_source'] = 'homepage'
                         results.append(row)
+                    elif self.email_format == 'primary':
+                        row = base_result.copy()
+                        row['email'] = clean_emails[0]
+                        row['homepage_content'] = clean_text
+                        row['site_type'] = site_type
+                        row['scrape_status'] = 'success'
+                        row['email_source'] = 'homepage'
+                        results.append(row)
+                    else:  # separate
+                        for email in clean_emails:
+                            row = base_result.copy()
+                            row['email'] = email
+                            row['homepage_content'] = clean_text
+                            row['site_type'] = site_type
+                            row['scrape_status'] = 'success'
+                            row['email_source'] = 'homepage'
+                            results.append(row)
 
                     with self._lock:
                         self.stats['emails_found'] += len(clean_emails)
@@ -183,19 +206,39 @@ class SimpleHomepageScraper:
                     logger.info(f"✓ {name}: {len(clean_emails)} emails (homepage), {site_type}")
                     return results
 
-                # No emails on homepage - try deep search
-                logger.info(f"⚠ {name}: No emails on homepage, trying deep search...")
-                deep_emails = self._deep_email_search(website)
+                # No emails on homepage - try deep search if enabled
+                deep_emails = []
+                if self.extract_emails and not clean_emails and self.scraping_mode == 'deep_search':
+                    logger.info(f"⚠ {name}: No emails on homepage, trying deep search...")
+                    deep_emails = self._deep_email_search(website)
 
                 if deep_emails:
-                    for email in deep_emails:
+                    # Handle deep search results based on format
+                    if self.email_format == 'all':
                         row = base_result.copy()
-                        row['email'] = email
+                        row['email'] = ', '.join(deep_emails)
                         row['homepage_content'] = clean_text
                         row['site_type'] = site_type
                         row['scrape_status'] = 'success'
                         row['email_source'] = 'deep_search'
                         results.append(row)
+                    elif self.email_format == 'primary':
+                        row = base_result.copy()
+                        row['email'] = deep_emails[0]
+                        row['homepage_content'] = clean_text
+                        row['site_type'] = site_type
+                        row['scrape_status'] = 'success'
+                        row['email_source'] = 'deep_search'
+                        results.append(row)
+                    else:  # separate
+                        for email in deep_emails:
+                            row = base_result.copy()
+                            row['email'] = email
+                            row['homepage_content'] = clean_text
+                            row['site_type'] = site_type
+                            row['scrape_status'] = 'success'
+                            row['email_source'] = 'deep_search'
+                            results.append(row)
 
                     with self._lock:
                         self.stats['emails_found'] += len(deep_emails)
@@ -206,26 +249,43 @@ class SimpleHomepageScraper:
                     logger.info(f"✓ {name}: {len(deep_emails)} emails (deep search), {site_type}")
                     return results
 
-                # No emails found anywhere
-                failure_type = 'dynamic' if site_type == 'dynamic' else 'static'
-                row = base_result.copy()
-                row['homepage_content'] = clean_text
-                row['site_type'] = site_type
-                row['scrape_status'] = 'failed'
-                row['error_message'] = f'no_email_found_{failure_type}'
-                row['email_source'] = 'none'
-                results.append(row)
+                # No emails found (or email extraction disabled)
+                if not self.extract_emails:
+                    # Success: content extracted, emails not requested
+                    row = base_result.copy()
+                    row['homepage_content'] = clean_text
+                    row['site_type'] = site_type
+                    row['scrape_status'] = 'success'
+                    row['email_source'] = 'none'
+                    results.append(row)
 
-                with self._lock:
-                    self.stats['total_processed'] += 1
-                    self.stats['no_emails'] += 1
-                    if failure_type == 'dynamic':
-                        self.stats['failed_dynamic'] += 1
-                    else:
-                        self.stats['failed_static'] += 1
+                    with self._lock:
+                        self.stats['total_processed'] += 1
+                        self.stats['success'] += 1
 
-                logger.warning(f"✗ {name}: No emails found, {site_type}")
-                return results
+                    logger.info(f"✓ {name}: Content extracted (no email extraction), {site_type}")
+                    return results
+                else:
+                    # Failed: emails requested but not found
+                    failure_type = 'dynamic' if site_type == 'dynamic' else 'static'
+                    row = base_result.copy()
+                    row['homepage_content'] = clean_text
+                    row['site_type'] = site_type
+                    row['scrape_status'] = 'failed'
+                    row['error_message'] = f'no_email_found_{failure_type}'
+                    row['email_source'] = 'none'
+                    results.append(row)
+
+                    with self._lock:
+                        self.stats['total_processed'] += 1
+                        self.stats['no_emails'] += 1
+                        if failure_type == 'dynamic':
+                            self.stats['failed_dynamic'] += 1
+                        else:
+                            self.stats['failed_static'] += 1
+
+                    logger.warning(f"✗ {name}: No emails found, {site_type}")
+                    return results
 
             else:
                 base_result['error_message'] = response.get('error', 'Unknown error')
@@ -429,8 +489,7 @@ class SimpleHomepageScraper:
             futures = {
                 executor.submit(
                     self.scrape_homepage,
-                    row['name'],
-                    row['website']
+                    row.to_dict()
                 ): idx for idx, row in df.iterrows()
             }
 
@@ -476,12 +535,33 @@ class SimpleHomepageScraper:
         return df_results
 
 
+def validate_url(url: str) -> bool:
+    """Check if string looks like a valid URL"""
+    if not url or pd.isna(url):
+        return False
+    url_str = str(url).strip().lower()
+    if not url_str:
+        return False
+    # Check for valid URL patterns
+    has_domain = ('.' in url_str and len(url_str) > 4)
+    has_protocol = url_str.startswith(('http://', 'https://'))
+    looks_like_url = any(x in url_str for x in ['www.', '.com', '.org', '.net', '.io', '.co'])
+    return has_domain and (has_protocol or looks_like_url)
+
+
 def main():
     parser = argparse.ArgumentParser(description='Simple Homepage Scraper - Emails + Content')
     parser.add_argument('--input', required=True, help='Input CSV file path')
     parser.add_argument('--output', help='Output directory (optional, auto-generated if not provided)')
     parser.add_argument('--workers', type=int, default=50, help='Number of parallel workers (default: 50)')
     parser.add_argument('--max-pages', type=int, default=5, help='Max pages to search per site (default: 5)')
+    parser.add_argument('--scraping-mode', choices=['homepage_only', 'deep_search'], default='deep_search',
+                        help='Scraping mode: homepage_only or deep_search (default: deep_search)')
+    parser.add_argument('--no-emails', action='store_true', help='Disable email extraction (only get content)')
+    parser.add_argument('--email-format', choices=['all', 'primary', 'separate'], default='separate',
+                        help='Email output format: all (comma-separated), primary (first only), separate (one row per email)')
+    parser.add_argument('--website-column', default='website', help='Column name containing website URLs (default: website)')
+    parser.add_argument('--name-column', default='name', help='Column name containing company names (default: name)')
     parser.add_argument('--limit', type=int, help='Limit number of leads to process (for testing)')
 
     args = parser.parse_args()
@@ -490,28 +570,63 @@ def main():
     logger.info(f"Reading input file: {args.input}")
     df = pd.read_csv(args.input, encoding='utf-8-sig')
 
-    # Validate only website column is required
-    if 'website' not in df.columns:
-        logger.error("Missing required column: 'website'")
+    total_loaded = len(df)
+    logger.info(f"Loaded {total_loaded} rows from CSV")
+
+    # Validate website column exists
+    if args.website_column not in df.columns:
+        logger.error(f"Missing required column: '{args.website_column}'")
+        sys.exit(1)
+
+    # Validate URLs and filter out invalid ones
+    logger.info(f"Validating URLs in column '{args.website_column}'...")
+    df['_url_valid'] = df[args.website_column].apply(validate_url)
+    valid_count = df['_url_valid'].sum()
+    invalid_count = total_loaded - valid_count
+
+    logger.info(f"URL Validation Results:")
+    logger.info(f"  Valid URLs: {valid_count}")
+    logger.info(f"  Invalid URLs: {invalid_count}")
+
+    # Filter to only valid URLs
+    df_valid = df[df['_url_valid']].copy()
+    df_valid = df_valid.drop(columns=['_url_valid'])
+
+    if len(df_valid) == 0:
+        logger.error("No valid URLs found in CSV!")
         sys.exit(1)
 
     # Auto-generate name from domain if not present
-    if 'name' not in df.columns:
-        logger.info("'name' column not found, generating from website domains")
-        df['name'] = df['website'].apply(
-            lambda x: x.split('//')[-1].split('/')[0] if isinstance(x, str) and x else 'Unknown'
+    if args.name_column not in df_valid.columns:
+        logger.info(f"'{args.name_column}' column not found, generating from website domains")
+        df_valid[args.name_column] = df_valid[args.website_column].apply(
+            lambda x: str(x).replace('http://', '').replace('https://', '').replace('www.', '').split('/')[0] if pd.notna(x) else 'Unknown'
         )
+
+    # Rename columns for processing
+    df_valid = df_valid.rename(columns={
+        args.website_column: 'website',
+        args.name_column: 'name'
+    })
 
     # Apply limit if specified
     if args.limit:
-        df = df.head(args.limit)
+        df_valid = df_valid.head(args.limit)
         logger.info(f"Limited to first {args.limit} leads")
 
+    logger.info(f"Processing {len(df_valid)} valid websites")
+
     # Create scraper
-    scraper = SimpleHomepageScraper(workers=args.workers, max_pages=args.max_pages)
+    scraper = SimpleHomepageScraper(
+        workers=args.workers,
+        max_pages=args.max_pages,
+        scraping_mode=args.scraping_mode,
+        extract_emails=not args.no_emails,
+        email_format=args.email_format
+    )
 
     # Process batch
-    df_results = scraper.process_batch(df)
+    df_results = scraper.process_batch(df_valid)
 
     # Generate output directory
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
