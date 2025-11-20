@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 === HOMEPAGE SCRAPER - UNIFIED STREAMLIT UI ===
-Version: 4.1.1 | Updated: 2025-11-20
+Version: 4.1.2 | Updated: 2025-11-20
 
 FEATURES:
 - Live real-time progress from subprocess
@@ -12,6 +12,10 @@ FEATURES:
 - Persistent results with historical browsing
 - Session state for immediate results
 - JSON analytics and detailed breakdowns
+
+NEW (v4.1.2):
+- Streamlit Cloud deployment fix (absolute paths with .resolve())
+- Fixes "No such file or directory" on Linux deployment
 
 NEW (v4.1.1):
 - Cross-platform Python executable (sys.executable instead of "py")
@@ -381,16 +385,19 @@ with tab1:
                 st.session_state.run_clicked = True
                 st.session_state.scraping_active = True
 
-                # Save uploaded file
+                # Save uploaded file (use absolute paths for Streamlit Cloud)
                 temp_input = RESULTS_DIR / f"temp_input_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
                 temp_input.parent.mkdir(parents=True, exist_ok=True)
-                df_valid.to_csv(temp_input, index=False, encoding='utf-8-sig')
+                temp_input_absolute = temp_input.resolve()
+                df_valid.to_csv(temp_input_absolute, index=False, encoding='utf-8-sig')
 
                 # Build command (cross-platform Python executable)
+                # Use absolute path for Streamlit Cloud compatibility
+                script_path_absolute = SCRIPT_PATH.resolve()
                 cmd = [
                     sys.executable,  # Works on both Windows and Linux
-                    str(SCRIPT_PATH),
-                    "--input", str(temp_input),
+                    str(script_path_absolute),
+                    "--input", str(temp_input_absolute),
                     "--workers", str(workers),
                     "--max-pages", str(max_pages),
                     "--scraping-mode", scraping_mode_param,
