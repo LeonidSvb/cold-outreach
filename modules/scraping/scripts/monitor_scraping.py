@@ -141,10 +141,7 @@ def monitor_progress(results_dir: Path, refresh_interval: int = 10):
 
             # Summary bar
             print("\n" + "=" * 80)
-            progress_bar_width = 50
-            progress_filled = int((processed_urls / 10408) * progress_bar_width)
-            progress_bar = "█" * progress_filled + "░" * (progress_bar_width - progress_filled)
-            print(f"[{progress_bar}] {processed_urls:,}/10,408 URLs")
+            print(f"Progress: {processed_urls:,}/10,408 URLs ({(processed_urls/10408*100):.1f}% complete)")
 
             # Wait
             time.sleep(refresh_interval)
