@@ -835,65 +835,136 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f"Output directory: {output_dir}")
 
-    # Split results into 4 files
+    # Split results into 3 universal files
     logger.info("="*70)
-    logger.info("SPLITTING RESULTS INTO 4 FILES")
+    logger.info("SAVING RESULTS (UNIFIED FORMAT)")
     logger.info("="*70)
 
-    # 1. Success - found emails
+    # 1. SUCCESS - achieved goal (email OR content)
     success_df = df_results[df_results['scrape_status'] == 'success'].copy()
 
-    # Deduplicate by email (keep first occurrence)
-    rows_before = len(success_df)
-    success_df = success_df.drop_duplicates(subset=['email'], keep='first')
-    rows_after = len(success_df)
-    duplicates_removed = rows_before - rows_after
+    # Deduplicate by email if emails were extracted
+    if not args.no_emails and 'email' in success_df.columns:
+        rows_before = len(success_df)
+        success_df = success_df.drop_duplicates(subset=['email'], keep='first')
+        rows_after = len(success_df)
+        duplicates_removed = rows_before - rows_after
+    else:
+        rows_after = len(success_df)
+        duplicates_removed = 0
 
-    success_path = output_dir / "success_emails.csv"
-    success_df.to_csv(success_path, index=False, encoding='utf-8-sig')
-    logger.info(f"1. Success emails: {rows_after} unique emails ({duplicates_removed} duplicates removed) -> {success_path.name}")
+    # Save SUCCESS in multiple formats
+    success_path_csv = output_dir / "success.csv"
+    success_path_json = output_dir / "success.json"
+    success_path_excel = output_dir / "success.xlsx"
 
-    # 2. Failed - static sites, no email
-    failed_static_df = df_results[
-        (df_results['scrape_status'] == 'failed') &
-        (df_results['error_message'].str.contains('no_email_found_static', na=False))
-    ].copy()
-    failed_static_path = output_dir / "failed_static.csv"
-    failed_static_df.to_csv(failed_static_path, index=False, encoding='utf-8-sig')
-    logger.info(f"2. Failed static: {len(failed_static_df)} rows -> {failed_static_path.name}")
+    success_df.to_csv(success_path_csv, index=False, encoding='utf-8-sig')
+    success_df.to_json(success_path_json, orient='records', force_ascii=False, indent=2)
+    try:
+        success_df.to_excel(success_path_excel, index=False, engine='openpyxl')
+    except ImportError:
+        logger.warning("openpyxl not installed, skipping Excel export")
 
-    # 3. Failed - dynamic sites, no email
-    failed_dynamic_df = df_results[
-        (df_results['scrape_status'] == 'failed') &
-        (df_results['error_message'].str.contains('no_email_found_dynamic', na=False))
-    ].copy()
-    failed_dynamic_path = output_dir / "failed_dynamic.csv"
-    failed_dynamic_df.to_csv(failed_dynamic_path, index=False, encoding='utf-8-sig')
-    logger.info(f"3. Failed dynamic: {len(failed_dynamic_df)} rows -> {failed_dynamic_path.name}")
+    logger.info(f"1. SUCCESS: {rows_after} rows ({duplicates_removed} duplicates removed)")
+    logger.info(f"   - {success_path_csv.name}")
+    logger.info(f"   - {success_path_json.name}")
+    if success_path_excel.exists():
+        logger.info(f"   - {success_path_excel.name}")
 
-    # 4. Failed - other errors (connection errors, etc)
-    failed_other_df = df_results[
-        (df_results['scrape_status'] == 'failed') &
-        (~df_results['error_message'].str.contains('no_email_found', na=False))
-    ].copy()
-    failed_other_path = output_dir / "failed_other.csv"
-    failed_other_df.to_csv(failed_other_path, index=False, encoding='utf-8-sig')
-    logger.info(f"4. Failed other: {len(failed_other_df)} rows -> {failed_other_path.name}")
+    # 2. FAILED - did not achieve goal
+    failed_df = df_results[df_results['scrape_status'] == 'failed'].copy()
 
-    # 5. Save JSON analytics
+    # Add failure_reason column for clarity
+    def categorize_failure(row):
+        error_msg = str(row.get('error_message', ''))
+        if 'no_email_found_static' in error_msg:
+            return 'no_email_found_static'
+        elif 'no_email_found_dynamic' in error_msg:
+            return 'no_email_found_dynamic'
+        elif 'timeout' in error_msg.lower():
+            return 'connection_timeout'
+        elif '404' in error_msg or 'not found' in error_msg.lower():
+            return 'page_not_found'
+        elif error_msg:
+            return error_msg
+        else:
+            return 'unknown_error'
+
+    failed_df['failure_reason'] = failed_df.apply(categorize_failure, axis=1)
+
+    # Save FAILED in multiple formats
+    failed_path_csv = output_dir / "failed.csv"
+    failed_path_json = output_dir / "failed.json"
+    failed_path_excel = output_dir / "failed.xlsx"
+
+    failed_df.to_csv(failed_path_csv, index=False, encoding='utf-8-sig')
+    failed_df.to_json(failed_path_json, orient='records', force_ascii=False, indent=2)
+    try:
+        failed_df.to_excel(failed_path_excel, index=False, engine='openpyxl')
+    except ImportError:
+        pass
+
+    logger.info(f"2. FAILED: {len(failed_df)} rows")
+    logger.info(f"   - {failed_path_csv.name}")
+    logger.info(f"   - {failed_path_json.name}")
+    if failed_path_excel.exists():
+        logger.info(f"   - {failed_path_excel.name}")
+
+    # Breakdown by failure reason
+    failure_counts = failed_df['failure_reason'].value_counts()
+    for reason, count in failure_counts.items():
+        logger.info(f"     - {reason}: {count}")
+
+    # 3. ALL COMBINED - everything together
+    combined_df = df_results.copy()
+    if not args.no_emails and 'email' in combined_df.columns:
+        combined_df = combined_df.drop_duplicates(subset=['email', 'scrape_status'], keep='first')
+
+    # Add failure_reason to combined as well
+    combined_df['failure_reason'] = combined_df.apply(
+        lambda row: categorize_failure(row) if row['scrape_status'] == 'failed' else '',
+        axis=1
+    )
+
+    # Save COMBINED in multiple formats
+    combined_path_csv = output_dir / "all_combined.csv"
+    combined_path_json = output_dir / "all_combined.json"
+    combined_path_excel = output_dir / "all_combined.xlsx"
+
+    combined_df.to_csv(combined_path_csv, index=False, encoding='utf-8-sig')
+    combined_df.to_json(combined_path_json, orient='records', force_ascii=False, indent=2)
+    try:
+        combined_df.to_excel(combined_path_excel, index=False, engine='openpyxl')
+    except ImportError:
+        pass
+
+    logger.info(f"3. ALL COMBINED: {len(combined_df)} rows")
+    logger.info(f"   - {combined_path_csv.name}")
+    logger.info(f"   - {combined_path_json.name}")
+    if combined_path_excel.exists():
+        logger.info(f"   - {combined_path_excel.name}")
+
+    # 4. Save JSON analytics
     analytics = scraper.get_analytics()
     analytics_path = output_dir / "scraping_analytics.json"
     with open(analytics_path, 'w', encoding='utf-8') as f:
         json.dump(analytics, f, indent=2, ensure_ascii=False)
-    logger.info(f"5. Analytics: {analytics_path.name}")
+    logger.info(f"\n4. Analytics: {analytics_path.name}")
 
-    logger.info("="*70)
+    logger.info("\n" + "="*70)
     logger.info("ALL FILES SAVED")
     logger.info("="*70)
     logger.info(f"Output directory: {output_dir}")
-    logger.info(f"Unique emails: {rows_after}")
-    logger.info(f"Unique companies: {success_df['name'].nunique()}")
-    logger.info(f"Duplicates removed: {duplicates_removed}")
+    logger.info(f"\nSummary:")
+    logger.info(f"  Success: {rows_after} rows")
+    logger.info(f"  Failed: {len(failed_df)} rows")
+    logger.info(f"  Combined: {len(combined_df)} rows")
+    if not args.no_emails:
+        logger.info(f"  Unique emails: {rows_after}")
+        logger.info(f"  Duplicates removed: {duplicates_removed}")
+    if 'name' in success_df.columns:
+        logger.info(f"  Unique companies: {success_df['name'].nunique()}")
+    logger.info(f"\nFormats: CSV + JSON + Excel (if openpyxl installed)")
     logger.info("="*70)
 
 

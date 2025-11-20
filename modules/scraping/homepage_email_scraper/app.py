@@ -703,6 +703,7 @@ with tab2:
     try:
         if not RESULTS_DIR.exists():
             st.info("📂 No results yet. Run scraper first in the 'Upload & Run' tab!")
+            result_folders = []
         else:
             result_folders = sorted(
                 [f for f in RESULTS_DIR.iterdir() if f.is_dir() and f.name.startswith('scraped_')],
