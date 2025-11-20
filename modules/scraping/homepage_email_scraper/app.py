@@ -391,11 +391,30 @@ with tab1:
                         auto_url_col = col
                         confidence = min(best_score, 0.95)
 
+            # Auto-detect or create name column first (before URL selection)
+            auto_name_col = None
+            name_candidates = ['name', 'company_name', 'company', 'business_name']
+            for col in name_candidates:
+                if col in df.columns:
+                    auto_name_col = col
+                    break
+
             # Show/hide column selection based on confidence
             st.subheader("🔍 Column Selection")
 
             if auto_url_col and confidence > 0.7:
                 st.success(f"✅ Auto-detected URL column: **{auto_url_col}** (confidence: {confidence*100:.0f}%)")
+                url_col = auto_url_col
+
+                # If name column not found, generate it
+                if not auto_name_col:
+                    df['name'] = df[url_col].apply(lambda x: str(x).replace('http://', '').replace('https://', '').replace('www.', '').split('/')[0] if pd.notna(x) else '')
+                    auto_name_col = 'name'
+                    st.info(f"💡 Auto-generated 'name' column from website URLs")
+                else:
+                    st.info(f"💡 Auto-detected name column: **{auto_name_col}**")
+
+                name_col = auto_name_col
 
                 # Show manual selection in expander (optional)
                 with st.expander("🔧 Change column selection (optional)"):
@@ -409,12 +428,15 @@ with tab1:
                             help="Column containing website URLs"
                         )
                     with col2:
-                        # Name column selection moved here
-                        pass
-                else:
-                    url_col = auto_url_col
+                        default_name_idx = list(df.columns).index(auto_name_col) if auto_name_col in df.columns else 0
+                        name_col = st.selectbox(
+                            "Select name column",
+                            options=df.columns,
+                            index=default_name_idx,
+                            help="Column containing company/business name"
+                        )
             else:
-                st.warning("⚠️ Could not auto-detect URL column with high confidence")
+                st.warning("⚠️ Could not auto-detect URL column with high confidence. Please select manually.")
                 col1, col2 = st.columns(2)
                 with col1:
                     default_url_idx = list(df.columns).index(auto_url_col) if auto_url_col else 0
@@ -424,30 +446,19 @@ with tab1:
                         index=default_url_idx,
                         help="Column containing website URLs"
                     )
+                with col2:
+                    # If name column not found, generate it
+                    if not auto_name_col:
+                        df['name'] = df[url_col].apply(lambda x: str(x).replace('http://', '').replace('https://', '').replace('www.', '').split('/')[0] if pd.notna(x) else '')
+                        auto_name_col = 'name'
 
-            with col2:
-                # Auto-detect or create name column
-                auto_name_col = None
-                name_candidates = ['name', 'company_name', 'company', 'business_name']
-                for col in name_candidates:
-                    if col in df.columns:
-                        auto_name_col = col
-                        break
-
-                if not auto_name_col:
-                    # Generate name from website
-                    df['name'] = df[url_col].apply(lambda x: str(x).replace('http://', '').replace('https://', '').replace('www.', '').split('/')[0] if pd.notna(x) else '')
-                    auto_name_col = 'name'
-                    st.info(f"✅ Generated 'name' column")
-
-                default_name_idx = list(df.columns).index(auto_name_col) if auto_name_col in df.columns else 0
-
-                name_col = st.selectbox(
-                    "Select name column",
-                    options=df.columns,
-                    index=default_name_idx,
-                    help="Column containing company/business name"
-                )
+                    default_name_idx = list(df.columns).index(auto_name_col) if auto_name_col in df.columns else 0
+                    name_col = st.selectbox(
+                        "Select name column",
+                        options=df.columns,
+                        index=default_name_idx,
+                        help="Column containing company/business name"
+                    )
 
             # Validate URLs
             st.subheader("🔍 URL Validation")
@@ -872,23 +883,24 @@ with tab2:
                         json_file = csv_file.parent / f"{csv_file.stem}.json"
                         excel_file = csv_file.parent / f"{csv_file.stem}.xlsx"
 
-                        # Generate descriptive download names
+                        # Generate descriptive download names with timestamp
                         row_count = file_info['row_count']
                         filename = csv_file.stem
+                        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
 
                         # Create readable base name
                         if 'success' in filename:
-                            base_name = f"success_{row_count}_companies"
+                            base_name = f"success_{row_count}_companies_{timestamp}"
                         elif 'failed_static' in filename:
-                            base_name = f"failed_static_{row_count}_sites"
+                            base_name = f"failed_static_{row_count}_sites_{timestamp}"
                         elif 'failed_dynamic' in filename:
-                            base_name = f"failed_dynamic_{row_count}_sites"
+                            base_name = f"failed_dynamic_{row_count}_sites_{timestamp}"
                         elif 'failed' in filename:
-                            base_name = f"failed_other_{row_count}_sites"
+                            base_name = f"failed_other_{row_count}_sites_{timestamp}"
                         elif 'all_combined' in filename:
-                            base_name = f"all_results_{row_count}_sites"
+                            base_name = f"all_results_{row_count}_sites_{timestamp}"
                         else:
-                            base_name = f"{filename.replace('scraped_', '').replace('_', '-')}_{row_count}"
+                            base_name = f"{filename.replace('scraped_', '').replace('_', '-')}_{row_count}_{timestamp}"
 
                         # Preview and download buttons
                         col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
