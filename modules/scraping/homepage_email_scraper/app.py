@@ -159,14 +159,15 @@ with col1:
         <p><b>What it does:</b></p>
         <ul>
             <li>Scrapes homepage only</li>
-            <li>Extracts emails from homepage</li>
+            <li>Always saves homepage content</li>
+            <li>Optionally extracts emails</li>
             <li>Maximum speed</li>
         </ul>
         <p><b>When to use:</b></p>
         <ul>
+            <li>Need website content for analysis</li>
             <li>Emails are typically on homepage</li>
             <li>High speed needed (1000+ sites)</li>
-            <li>Simple websites</li>
         </ul>
         <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ Speed: ~2-5 sec per site</p>
     </div>
@@ -781,45 +782,117 @@ with tab2:
 
                 st.divider()
 
-                # Download files
+                # Download files - Show only non-empty files
                 st.subheader("⬇️ Download Files")
 
-                csv_files = [f for f in selected.glob("*.csv") if 'temp_input' not in f.name]
+                # Get all CSV files in folder
+                all_csv_files = list(selected.glob("*.csv"))
 
-                for csv_file in csv_files:
+                # Filter and organize files
+                file_categories = []
+                for csv_file in all_csv_files:
                     try:
-                        df_file = pd.read_csv(csv_file, nrows=10)  # Read only first 10 rows for preview
-                        full_row_count = sum(1 for _ in open(csv_file, encoding='utf-8-sig')) - 1  # Count total rows
+                        # Count rows (excluding header)
+                        row_count = sum(1 for _ in open(csv_file, encoding='utf-8-sig')) - 1
 
-                        col1, col2, col3 = st.columns([3, 1, 1])
-
-                        with col1:
-                            # Determine file type icon
-                            if 'success' in csv_file.name.lower():
+                        # Only show non-empty files
+                        if row_count > 0:
+                            # Determine category and icon
+                            filename = csv_file.stem
+                            if 'success' in filename:
                                 icon = "✅"
-                            elif 'failed' in csv_file.name.lower():
+                                category = "Success"
+                            elif 'failed_static' in filename:
                                 icon = "❌"
+                                category = "Failed (Static sites)"
+                            elif 'failed_dynamic' in filename:
+                                icon = "❌"
+                                category = "Failed (Dynamic sites)"
+                            elif 'failed' in filename:
+                                icon = "❌"
+                                category = "Failed (Other)"
+                            elif 'all_combined' in filename:
+                                icon = "📊"
+                                category = "All Combined"
                             else:
                                 icon = "📄"
+                                category = filename.replace('_', ' ').title()
 
-                            st.write(f"{icon} **{csv_file.name}** - {full_row_count} rows")
+                            file_categories.append({
+                                'icon': icon,
+                                'category': category,
+                                'csv_file': csv_file,
+                                'row_count': row_count
+                            })
+                    except Exception:
+                        continue
+
+                # Sort by row count (descending)
+                file_categories.sort(key=lambda x: x['row_count'], reverse=True)
+
+                if not file_categories:
+                    st.info("📂 No result files found")
+                else:
+                    for file_info in file_categories:
+                        st.markdown(f"### {file_info['icon']} {file_info['category']}")
+                        st.caption(f"Total rows: **{file_info['row_count']:,}**")
+
+                        # Check for additional formats
+                        csv_file = file_info['csv_file']
+                        json_file = csv_file.parent / f"{csv_file.stem}.json"
+                        excel_file = csv_file.parent / f"{csv_file.stem}.xlsx"
+
+                        # Preview and download buttons
+                        col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
+
+                        with col1:
+                            try:
+                                df_preview = pd.read_csv(csv_file, nrows=10, encoding='utf-8-sig')
+                                with st.expander("👁️ Preview first 10 rows"):
+                                    st.dataframe(df_preview, use_container_width=True)
+                            except Exception as e:
+                                st.caption(f"Preview unavailable: {e}")
 
                         with col2:
                             st.download_button(
-                                "Download",
+                                "📥 CSV",
                                 data=csv_file.read_bytes(),
                                 file_name=csv_file.name,
                                 mime="text/csv",
-                                key=f"download_{csv_file.name}",
-                                use_container_width=True
+                                key=f"download_csv_{csv_file.stem}",
+                                use_container_width=True,
+                                help="Download as CSV (Excel compatible)"
                             )
 
                         with col3:
-                            with st.expander("👁️ Preview"):
-                                st.dataframe(df_file.head(10), use_container_width=True)
+                            if json_file.exists():
+                                st.download_button(
+                                    "📥 JSON",
+                                    data=json_file.read_bytes(),
+                                    file_name=json_file.name,
+                                    mime="application/json",
+                                    key=f"download_json_{csv_file.stem}",
+                                    use_container_width=True,
+                                    help="Download as JSON (structured data)"
+                                )
+                            else:
+                                st.caption("JSON N/A")
 
-                    except Exception as csv_error:
-                        st.warning(f"⚠️ Could not load {csv_file.name}: {csv_error}")
+                        with col4:
+                            if excel_file.exists():
+                                st.download_button(
+                                    "📥 Excel",
+                                    data=excel_file.read_bytes(),
+                                    file_name=excel_file.name,
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key=f"download_excel_{csv_file.stem}",
+                                    use_container_width=True,
+                                    help="Download as Excel (.xlsx)"
+                                )
+                            else:
+                                st.caption("Excel N/A")
+
+                        st.divider()
 
             else:
                 st.warning("⚠️ No analytics found for this folder")
