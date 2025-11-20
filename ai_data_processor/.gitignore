@@ -1,0 +1,32 @@
+# Environment variables
+.env
+.env.local
+
+# Results directory (can be large)
+results/*.csv
+results/*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep results folder structure
+!results/.gitkeep
