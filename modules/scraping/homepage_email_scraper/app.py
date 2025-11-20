@@ -156,20 +156,9 @@ with col1:
     st.markdown("""
     <div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 20px; background: #f0f9f0;">
         <h3 style="color: #4CAF50; margin-top: 0;">⚡ Fast Mode</h3>
-        <p><b>What it does:</b></p>
-        <ul>
-            <li>Scrapes homepage only</li>
-            <li>Always saves homepage content</li>
-            <li>Optionally extracts emails</li>
-            <li>Maximum speed</li>
-        </ul>
-        <p><b>When to use:</b></p>
-        <ul>
-            <li>Need website content for analysis</li>
-            <li>Emails are typically on homepage</li>
-            <li>High speed needed (1000+ sites)</li>
-        </ul>
-        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ Speed: ~2-5 sec per site</p>
+        <p><b>What:</b> Homepage only + optional email extraction</p>
+        <p><b>Best for:</b> High volume (1000+ sites), content collection</p>
+        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ ~2-5 sec/site</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -177,20 +166,9 @@ with col2:
     st.markdown("""
     <div style="border: 2px solid #2196F3; border-radius: 10px; padding: 20px; background: #e3f2fd;">
         <h3 style="color: #2196F3; margin-top: 0;">🚀 Advanced Mode</h3>
-        <p><b>What it does:</b></p>
-        <ul>
-            <li>Scrapes homepage + up to 5 additional pages</li>
-            <li>Checks /contact, /about, /team via sitemap</li>
-            <li>Smart prioritization of contact pages</li>
-            <li>Fallback to homepage if email not found</li>
-        </ul>
-        <p><b>When to use:</b></p>
-        <ul>
-            <li>Emails often on /contact or /about</li>
-            <li>Complex sites (Shopify, WordPress)</li>
-            <li>Maximum accuracy over speed</li>
-        </ul>
-        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ Speed: ~10-20 sec per site</p>
+        <p><b>What:</b> Homepage + /contact, /about, /team (via sitemap)</p>
+        <p><b>Best for:</b> Maximum email accuracy, complex sites</p>
+        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ ~10-20 sec/site</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -362,39 +340,90 @@ with tab1:
         try:
             df = pd.read_csv(uploaded_file, encoding='utf-8-sig')
 
-            # Auto-detect website column
-            url_col_candidates = ['website', 'url', 'domain', 'link', 'site']
+            # Smart auto-detect website column
+            def score_url_column(series):
+                """Score how likely a column contains URLs"""
+                if series.dtype == 'object' or series.dtype == 'string':
+                    sample = series.dropna().astype(str).head(100)
+                    if len(sample) == 0:
+                        return 0
+
+                    score = 0
+                    for val in sample:
+                        val_lower = val.lower().strip()
+                        # Check for URL patterns
+                        if val_lower.startswith(('http://', 'https://')):
+                            score += 3
+                        elif val_lower.startswith('www.'):
+                            score += 2
+                        elif '.' in val_lower and len(val_lower) > 4:
+                            # Check if looks like domain: has TLD and no spaces
+                            parts = val_lower.split('.')
+                            if len(parts) >= 2 and ' ' not in val_lower:
+                                # Check for common TLDs
+                                tld = parts[-1]
+                                if tld in ['com', 'org', 'net', 'io', 'co', 'us', 'uk', 'ca', 'au', 'de', 'fr', 'info', 'biz']:
+                                    score += 2
+                                elif len(tld) <= 4:  # Likely TLD
+                                    score += 1
+
+                    return score / len(sample)
+                return 0
+
+            # Check by column name first
+            url_col_candidates = ['website', 'url', 'domain', 'link', 'site', 'web']
             auto_url_col = None
+            confidence = 0
+
             for col in url_col_candidates:
                 if col in df.columns:
                     auto_url_col = col
+                    confidence = 0.9
                     break
 
+            # If not found by name, check content
             if not auto_url_col:
-                # Find column with most URLs
+                best_score = 0
                 for col in df.columns:
-                    if df[col].astype(str).str.contains('http|www', case=False, na=False).sum() > len(df) * 0.5:
+                    col_score = score_url_column(df[col])
+                    if col_score > best_score:
+                        best_score = col_score
                         auto_url_col = col
-                        break
+                        confidence = min(best_score, 0.95)
 
-            # Manual column selection
+            # Show/hide column selection based on confidence
             st.subheader("🔍 Column Selection")
-            col1, col2 = st.columns(2)
 
-            with col1:
-                if auto_url_col:
-                    st.success(f"✅ Auto-detected URL column: **{auto_url_col}**")
-                    default_url_idx = list(df.columns).index(auto_url_col)
+            if auto_url_col and confidence > 0.7:
+                st.success(f"✅ Auto-detected URL column: **{auto_url_col}** (confidence: {confidence*100:.0f}%)")
+
+                # Show manual selection in expander (optional)
+                with st.expander("🔧 Change column selection (optional)"):
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        default_url_idx = list(df.columns).index(auto_url_col)
+                        url_col = st.selectbox(
+                            "Select website column",
+                            options=df.columns,
+                            index=default_url_idx,
+                            help="Column containing website URLs"
+                        )
+                    with col2:
+                        # Name column selection moved here
+                        pass
                 else:
-                    st.warning("⚠️ Could not auto-detect URL column")
-                    default_url_idx = 0
-
-                url_col = st.selectbox(
-                    "Select website column",
-                    options=df.columns,
-                    index=default_url_idx,
-                    help="Column containing website URLs"
-                )
+                    url_col = auto_url_col
+            else:
+                st.warning("⚠️ Could not auto-detect URL column with high confidence")
+                col1, col2 = st.columns(2)
+                with col1:
+                    default_url_idx = list(df.columns).index(auto_url_col) if auto_url_col else 0
+                    url_col = st.selectbox(
+                        "Select website column",
+                        options=df.columns,
+                        index=default_url_idx,
+                        help="Column containing website URLs"
+                    )
 
             with col2:
                 # Auto-detect or create name column
@@ -843,6 +872,24 @@ with tab2:
                         json_file = csv_file.parent / f"{csv_file.stem}.json"
                         excel_file = csv_file.parent / f"{csv_file.stem}.xlsx"
 
+                        # Generate descriptive download names
+                        row_count = file_info['row_count']
+                        filename = csv_file.stem
+
+                        # Create readable base name
+                        if 'success' in filename:
+                            base_name = f"success_{row_count}_companies"
+                        elif 'failed_static' in filename:
+                            base_name = f"failed_static_{row_count}_sites"
+                        elif 'failed_dynamic' in filename:
+                            base_name = f"failed_dynamic_{row_count}_sites"
+                        elif 'failed' in filename:
+                            base_name = f"failed_other_{row_count}_sites"
+                        elif 'all_combined' in filename:
+                            base_name = f"all_results_{row_count}_sites"
+                        else:
+                            base_name = f"{filename.replace('scraped_', '').replace('_', '-')}_{row_count}"
+
                         # Preview and download buttons
                         col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
 
@@ -858,7 +905,7 @@ with tab2:
                             st.download_button(
                                 "📥 CSV",
                                 data=csv_file.read_bytes(),
-                                file_name=csv_file.name,
+                                file_name=f"{base_name}.csv",
                                 mime="text/csv",
                                 key=f"download_csv_{csv_file.stem}",
                                 use_container_width=True,
@@ -870,7 +917,7 @@ with tab2:
                                 st.download_button(
                                     "📥 JSON",
                                     data=json_file.read_bytes(),
-                                    file_name=json_file.name,
+                                    file_name=f"{base_name}.json",
                                     mime="application/json",
                                     key=f"download_json_{csv_file.stem}",
                                     use_container_width=True,
@@ -884,7 +931,7 @@ with tab2:
                                 st.download_button(
                                     "📥 Excel",
                                     data=excel_file.read_bytes(),
-                                    file_name=excel_file.name,
+                                    file_name=f"{base_name}.xlsx",
                                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                                     key=f"download_excel_{csv_file.stem}",
                                     use_container_width=True,
