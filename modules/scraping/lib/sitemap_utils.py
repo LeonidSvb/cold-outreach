@@ -146,75 +146,91 @@ class SitemapParser:
 
     def filter_contact_pages(self, urls: List[str], keywords: List[str] = None) -> List[str]:
         """
-        Filter URLs to find contact-related pages
+        Filter URLs to find contact-related pages with priority scoring
 
         Args:
             urls: List of all URLs from sitemap
             keywords: Keywords to match (default: comprehensive industry-standard list)
 
         Returns:
-            Filtered list of URLs likely to contain contact info
+            Filtered list of URLs sorted by relevance (highest priority first)
         """
-        if keywords is None:
-            # Comprehensive industry-standard keywords dictionary
-            keywords = [
-                # Contact pages (primary)
-                'contact', 'contactus', 'contact-us', 'kontakt', 'contacto', 'contatto',
-                'get-in-touch', 'reach-us', 'reach-out', 'connect',
+        # Priority keywords (higher score = more relevant)
+        priority_keywords = {
+            # Priority 1 (100 points): Exact contact pages
+            'contact': 100, 'contactus': 100, 'contact-us': 100, 'kontakt': 100,
+            'contacto': 100, 'contatto': 100, 'get-in-touch': 100, 'reach-us': 100,
+            'contact-information': 100, 'contact-info': 100,
 
-                # Information & policies (often contain contact)
-                'contact-information', 'contact-info', 'info', 'information',
-                'policies', 'policy', 'privacy', 'terms', 'legal',
+            # Priority 2 (80 points): About & info pages
+            'about': 80, 'aboutus': 80, 'about-us': 80, 'our-story': 80,
+            'policies': 80, 'policy': 80, 'info': 80, 'information': 80,
 
-                # About & team pages
-                'about', 'aboutus', 'about-us', 'our-story', 'who-we-are',
-                'team', 'staff', 'leadership', 'management', 'people',
+            # Priority 3 (60 points): Team & support
+            'team': 60, 'staff': 60, 'leadership': 60, 'management': 60,
+            'support': 60, 'help': 60, 'customer-service': 60, 'customer-support': 60,
 
-                # Support & help
-                'support', 'help', 'customer-service', 'customer-support',
-                'service', 'services', 'faq', 'helpdesk',
+            # Priority 4 (40 points): Business pages
+            'quote': 40, 'quotes': 40, 'request-quote': 40, 'get-quote': 40,
+            'location': 40, 'locations': 40, 'find-us': 40, 'directions': 40,
+            'schedule': 40, 'appointment': 40, 'inquiry': 40, 'enquiry': 40,
 
-                # Sales & quotes
-                'quote', 'quotes', 'request-quote', 'get-quote', 'pricing',
-                'request', 'inquiry', 'enquiry', 'estimate',
+            # Priority 5 (20 points): Generic business terms
+            'office': 20, 'offices': 20, 'branch': 20, 'call': 20, 'phone': 20,
+            'email': 20, 'mail': 20, 'message': 20, 'feedback': 20,
+            'corporate': 20, 'business': 20, 'partner': 20, 'press': 20, 'media': 20,
 
-                # Location & directions
-                'location', 'locations', 'find-us', 'directions', 'map',
-                'visit', 'address', 'office', 'offices', 'branch',
+            # Low priority (10 points): Weak signals
+            'services': 10, 'faq': 10, 'helpdesk': 10, 'book': 10, 'reservation': 10
+        }
 
-                # Appointment & scheduling
-                'schedule', 'appointment', 'booking', 'book', 'reservation',
-                'consultation', 'meeting',
-
-                # Communication channels
-                'call', 'phone', 'email', 'mail', 'message', 'feedback',
-                'inquiry-form', 'contact-form', 'write-us',
-
-                # Business-specific
-                'corporate', 'business', 'enterprise', 'partner', 'vendor',
-                'wholesale', 'b2b', 'press', 'media', 'careers', 'jobs'
-            ]
-
-        filtered = []
+        scored_urls = []
         rejected = []
 
         for url in urls:
             url_lower = url.lower()
 
-            # Check if any keyword appears ANYWHERE in URL path (not just at start)
-            matched_keywords = [kw for kw in keywords if kw in url_lower]
-            if matched_keywords:
-                filtered.append(url)
+            # Skip product pages (very low priority for contact info)
+            if '/products/' in url_lower or '/collections/' in url_lower:
                 if self.debug_logger:
-                    self.debug_logger.debug(f"  ✓ MATCH: {url} (keywords: {', '.join(matched_keywords)})")
+                    self.debug_logger.debug(f"  ✗ SKIP: {url} (product/collection page)")
+                rejected.append(url)
+                continue
+
+            # Calculate priority score
+            score = 0
+            matched_keywords = []
+
+            for keyword, priority in priority_keywords.items():
+                if keyword in url_lower:
+                    score += priority
+                    matched_keywords.append(keyword)
+
+            # Bonus: /pages/ or /policies/ paths are more likely to have contact info
+            # (only if at least one keyword matched)
+            if score > 0 and ('/pages/' in url_lower or '/policies/' in url_lower):
+                score += 50
+
+            if score > 0:
+                scored_urls.append((url, score, matched_keywords))
+                if self.debug_logger:
+                    self.debug_logger.debug(f"  ✓ MATCH: {url} (score: {score}, keywords: {', '.join(matched_keywords)})")
             else:
                 rejected.append(url)
                 if self.debug_logger:
                     self.debug_logger.debug(f"  ✗ SKIP: {url}")
 
+        # Sort by score (highest first)
+        scored_urls.sort(key=lambda x: x[1], reverse=True)
+        filtered = [url for url, score, keywords in scored_urls]
+
         # Summary log
         if self.debug_logger:
-            self.debug_logger.info(f"Filtering results: {len(filtered)} matched, {len(rejected)} rejected")
+            self.debug_logger.info(f"Filtering results: {len(filtered)} matched (sorted by relevance), {len(rejected)} rejected")
+            if filtered and len(filtered) <= 10:
+                self.debug_logger.info("Top matches:")
+                for idx, (url, score, kw) in enumerate(scored_urls[:10], 1):
+                    self.debug_logger.info(f"  {idx}. [Score: {score}] {url}")
 
         return filtered
 
@@ -255,7 +271,8 @@ class SitemapParser:
                 self.debug_logger.info(f"Parsed {len(all_urls)} URLs from sitemap")
 
             # Check if this is a sitemap index (contains child sitemaps)
-            child_sitemaps = [url for url in all_urls if 'sitemap' in url.lower() and url.endswith('.xml')]
+            # Handle URLs with query parameters (e.g., sitemap_products_1.xml?from=123&to=456)
+            child_sitemaps = [url for url in all_urls if 'sitemap' in url.lower() and '.xml' in url]
 
             if child_sitemaps:
                 # This is a sitemap index - fetch ALL child sitemaps
