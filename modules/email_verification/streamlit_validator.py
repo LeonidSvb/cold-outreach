@@ -28,7 +28,7 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional
 
-from modules.email_verification.validator import MailsValidator
+from validator import MailsValidator
 
 
 def render_validation_tab(results_dir: Optional[str] = None, api_key: Optional[str] = None):
@@ -46,10 +46,84 @@ def render_validation_tab(results_dir: Optional[str] = None, api_key: Optional[s
     if not api_key:
         api_key = os.getenv('MAILS_API_KEY')
 
+    # API Key configuration section
+    st.subheader("🔑 API Configuration")
+
     if not api_key:
-        st.error("MAILS_API_KEY not found in .env file!")
-        st.info("Add MAILS_API_KEY=your-key to .env file")
-        return
+        st.warning("⚠️ API key not found in environment variables")
+
+        col1, col2 = st.columns([3, 1])
+
+        with col1:
+            api_key_input = st.text_input(
+                "Enter Mails.so API Key",
+                type="password",
+                placeholder="Enter your API key here...",
+                help="Get your API key from https://mails.so"
+            )
+
+        with col2:
+            st.markdown("<br>", unsafe_allow_html=True)
+            save_to_env = st.checkbox("Save to .env", value=False, help="Save API key to .env file for future use")
+
+        if api_key_input:
+            api_key = api_key_input
+
+            # Save to .env if requested
+            if save_to_env:
+                try:
+                    env_path = Path(__file__).parent.parent.parent / ".env"
+
+                    # Read existing .env
+                    if env_path.exists():
+                        with open(env_path, 'r') as f:
+                            env_content = f.read()
+                    else:
+                        env_content = ""
+
+                    # Check if MAILS_API_KEY already exists
+                    if 'MAILS_API_KEY' in env_content:
+                        # Update existing key
+                        import re
+                        env_content = re.sub(
+                            r'MAILS_API_KEY=.*',
+                            f'MAILS_API_KEY={api_key}',
+                            env_content
+                        )
+                    else:
+                        # Add new key
+                        env_content += f"\n\nMAILS_API_KEY={api_key}\n"
+
+                    # Write back
+                    with open(env_path, 'w') as f:
+                        f.write(env_content)
+
+                    st.success("✅ API key saved to .env file!")
+                    os.environ['MAILS_API_KEY'] = api_key
+
+                except Exception as e:
+                    st.error(f"Failed to save to .env: {e}")
+        else:
+            st.info("👆 Please enter your API key above to continue")
+            return
+    else:
+        st.success(f"✅ API key loaded from environment")
+
+        # Show option to change API key
+        with st.expander("🔄 Change API Key"):
+            new_api_key = st.text_input(
+                "Enter new API key",
+                type="password",
+                placeholder="Enter new API key...",
+                key="change_api_key"
+            )
+
+            if new_api_key and st.button("Update API Key"):
+                api_key = new_api_key
+                st.success("✅ API key updated for this session")
+                st.rerun()
+
+    st.divider()
 
     # Initialize validator
     validator = MailsValidator(api_key)

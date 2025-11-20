@@ -11,9 +11,8 @@ import sys
 import streamlit as st
 from pathlib import Path
 
-# Add project root to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from modules.email_verification.streamlit_validator import render_validation_tab
+# Import from same directory
+from streamlit_validator import render_validation_tab
 
 # Page configuration
 st.set_page_config(
@@ -45,7 +44,12 @@ st.markdown('<div class="subtitle">Validate emails using Mails.so API</div>', un
 st.divider()
 
 # Render validation component
-render_validation_tab(results_dir=str(Path(__file__).parent.parent / "scraping" / "homepage_email_scraper" / "results"))
+# Path to scraping results
+scraping_results = Path(__file__).parent.parent / "scraping" / "homepage_email_scraper" / "results"
+if scraping_results.exists():
+    render_validation_tab(results_dir=str(scraping_results))
+else:
+    render_validation_tab()
 
 st.divider()
 st.caption("Email Validator v1.0.0 | Powered by Mails.so")
