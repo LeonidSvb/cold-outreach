@@ -41,11 +41,17 @@ import argparse
 import pandas as pd
 import json
 import re
+import os
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
+
+try:
+    import psutil
+except ImportError:
+    psutil = None
 
 # Add project root
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
@@ -82,6 +88,23 @@ class SimpleHomepageScraper:
                  save_other_links: bool = False, save_deep_content: bool = False):
         # Set attributes first (needed by debug logger)
         self.workers = workers
+
+        # AUTO-TUNING: Optimize workers based on system resources
+        if workers == 50 and psutil:  # Only auto-tune if using default
+            cpu_count = os.cpu_count() or 4
+            available_ram_gb = psutil.virtual_memory().available / (1024**3)
+
+            # For I/O-bound scraping: 2x CPU cores is optimal
+            auto_workers = min(max(cpu_count * 2, 20), 200)
+
+            # If low RAM (< 2GB), reduce workers to prevent memory issues
+            if available_ram_gb < 2.0:
+                auto_workers = min(auto_workers, 40)
+                logger.warning(f"Low RAM detected ({available_ram_gb:.1f}GB), limiting workers to {auto_workers}")
+
+            self.workers = auto_workers
+            logger.info(f"Auto-tuned workers: {self.workers} (CPU cores: {cpu_count}, Available RAM: {available_ram_gb:.1f}GB)")
+
         self.max_pages = max_pages
         self.scraping_mode = scraping_mode
         self.extract_emails = extract_emails
@@ -103,6 +126,11 @@ class SimpleHomepageScraper:
 
         # Thread-safe stats
         self._lock = threading.Lock()
+
+        # Per-domain rate limiting (max 3 concurrent requests per domain)
+        self._domain_semaphores = {}
+        self._domain_lock = threading.Lock()
+
         self.stats = {
             "total_processed": 0,
             "success": 0,
@@ -157,6 +185,19 @@ class SimpleHomepageScraper:
         self.debug_logger.info(f"Save content: {self.save_content}, Save deep content: {self.save_deep_content}")
         self.debug_logger.info("-"*80)
 
+    def _get_domain_semaphore(self, url: str) -> threading.BoundedSemaphore:
+        """
+        Get or create a semaphore for a domain (max 3 concurrent requests per domain)
+        """
+        from urllib.parse import urlparse
+
+        domain = urlparse(url).netloc or url
+
+        with self._domain_lock:
+            if domain not in self._domain_semaphores:
+                self._domain_semaphores[domain] = threading.BoundedSemaphore(3)
+            return self._domain_semaphores[domain]
+
     def scrape_homepage(self, row_data: Dict) -> List[Dict]:
         """
         Scrape homepage and extract emails + content
@@ -197,9 +238,13 @@ class SimpleHomepageScraper:
         if not website.startswith('http'):
             website = f'https://{website}'
 
+        # Get domain semaphore to limit concurrent requests per domain
+        domain_semaphore = self._get_domain_semaphore(website)
+
         try:
-            # Fetch homepage
-            response = self.http_client.fetch(website, check_content_length=False)
+            # Fetch homepage (with per-domain rate limiting)
+            with domain_semaphore:
+                response = self.http_client.fetch(website, check_content_length=False)
 
             if response['status'] == 'success':
                 html_content = response['content']
@@ -306,7 +351,17 @@ class SimpleHomepageScraper:
                 deep_pages_content = ''
                 if self.extract_emails and not clean_emails and self.scraping_mode == 'deep_search':
                     logger.info(f"⚠ {name}: No emails on homepage, trying deep search...")
-                    deep_emails, deep_pages_content = self._deep_email_search(website)
+                    # Deep search with 90 second global timeout to prevent hanging
+                    try:
+                        with ThreadPoolExecutor(max_workers=1) as executor:
+                            future = executor.submit(self._deep_email_search, website)
+                            deep_emails, deep_pages_content = future.result(timeout=90)
+                    except TimeoutError:
+                        logger.warning(f"⏱ {name}: Deep search timed out after 90 seconds")
+                        deep_emails, deep_pages_content = [], ''
+                    except Exception as e:
+                        logger.error(f"✗ {name}: Deep search error: {e}")
+                        deep_emails, deep_pages_content = [], ''
 
                 # Update base_result with deep content if available
                 if self.save_deep_content and deep_pages_content:
@@ -411,6 +466,9 @@ class SimpleHomepageScraper:
         all_emails = []
         pages_content_list = []
 
+        # Get domain semaphore for rate limiting
+        domain_semaphore = self._get_domain_semaphore(website)
+
         # Debug logging
         if self.debug_logger:
             self.debug_logger.info(f"\n{'='*60}")
@@ -433,7 +491,9 @@ class SimpleHomepageScraper:
                     if self.debug_logger:
                         self.debug_logger.info(f"\n[{idx}/{len(discovery['pages'])}] Scraping: {page_url}")
 
-                    response = self.http_client.fetch(page_url, check_content_length=False)
+                    # Rate limit per domain
+                    with domain_semaphore:
+                        response = self.http_client.fetch(page_url, check_content_length=False)
 
                     if response['status'] == 'success':
                         html_content = response['content']

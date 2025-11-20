@@ -52,7 +52,7 @@ class IncrementalScraper(SimpleHomepageScraper):
         self.checkpoint_file = self.output_dir / "checkpoint.json"
         self.incremental_csv = self.output_dir / "incremental_results.csv"
         self.processed_urls = set()
-        self.all_results = []
+        # REMOVED: self.all_results = [] - MEMORY LEAK FIX
         self.emails_found_count = 0
 
         # Create output dir
@@ -146,8 +146,8 @@ class IncrementalScraper(SimpleHomepageScraper):
                         website = result_rows[0].get('website', '')
                         self.processed_urls.add(website)
 
-                        # Add to buffers
-                        self.all_results.extend(result_rows)
+                        # Add to buffer (save to CSV in batches, NOT to memory)
+                        # REMOVED: self.all_results.extend(result_rows) - MEMORY LEAK FIX
                         pending_rows.extend(result_rows)
 
                         # Count emails
@@ -188,8 +188,8 @@ class IncrementalScraper(SimpleHomepageScraper):
         logger.info(f"Output: {self.incremental_csv}")
         logger.info("="*70)
 
-        # Return full results
-        return pd.read_csv(self.incremental_csv) if self.incremental_csv.exists() else pd.DataFrame(self.all_results)
+        # Return full results from CSV (no longer stored in memory)
+        return pd.read_csv(self.incremental_csv) if self.incremental_csv.exists() else pd.DataFrame()
 
 
 def main():
