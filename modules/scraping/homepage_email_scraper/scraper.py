@@ -80,8 +80,14 @@ class SimpleHomepageScraper:
                  email_format: str = 'separate', save_content: bool = True,
                  save_sitemap: bool = False, save_social_links: bool = False,
                  save_other_links: bool = False, save_deep_content: bool = False):
+        # Setup debug logger first
+        self.debug_log_path = None
+        self.debug_logger = None
+        self._setup_debug_logger()
+
+        # Initialize with debug logger
         self.http_client = HTTPClient(timeout=15, retries=3)
-        self.sitemap_parser = SitemapParser(timeout=15)
+        self.sitemap_parser = SitemapParser(timeout=15, debug_logger=self.debug_logger)
         self.workers = workers
         self.max_pages = max_pages
         self.scraping_mode = scraping_mode
@@ -110,6 +116,44 @@ class SimpleHomepageScraper:
             "failed_other": 0,
         }
         self.start_time = time.time()
+
+    def _setup_debug_logger(self):
+        """Setup file logger for detailed debugging"""
+        import logging
+
+        # Create results directory if not exists
+        results_dir = Path(__file__).parent / "results"
+        results_dir.mkdir(parents=True, exist_ok=True)
+
+        # Create debug log file with timestamp
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        self.debug_log_path = results_dir / f"debug_logs_{timestamp}.txt"
+
+        # Create dedicated debug logger
+        self.debug_logger = logging.getLogger(f'debug_{timestamp}')
+        self.debug_logger.setLevel(logging.DEBUG)
+
+        # Clear any existing handlers
+        self.debug_logger.handlers = []
+
+        # File handler with detailed format
+        file_handler = logging.FileHandler(self.debug_log_path, encoding='utf-8')
+        file_handler.setLevel(logging.DEBUG)
+        formatter = logging.Formatter(
+            '%(asctime)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+        file_handler.setFormatter(formatter)
+        self.debug_logger.addHandler(file_handler)
+
+        # Log initial config
+        self.debug_logger.info("="*80)
+        self.debug_logger.info("SCRAPER DEBUG LOG STARTED")
+        self.debug_logger.info("="*80)
+        self.debug_logger.info(f"Config: workers={self.workers}, max_pages={self.max_pages}, mode={self.scraping_mode}")
+        self.debug_logger.info(f"Extract emails: {self.extract_emails}, Format: {self.email_format}")
+        self.debug_logger.info(f"Save content: {self.save_content}, Save deep content: {self.save_deep_content}")
+        self.debug_logger.info("-"*80)
 
     def scrape_homepage(self, row_data: Dict) -> List[Dict]:
         """
@@ -365,13 +409,28 @@ class SimpleHomepageScraper:
         all_emails = []
         pages_content_list = []
 
+        # Debug logging
+        if self.debug_logger:
+            self.debug_logger.info(f"\n{'='*60}")
+            self.debug_logger.info(f"DEEP SEARCH: {website}")
+            self.debug_logger.info(f"{'='*60}")
+
         try:
             # Get smart pages (sitemap or pattern-based)
             discovery = self.sitemap_parser.get_smart_pages(website, max_pages=self.max_pages)
 
+            # Debug log discovery results
+            if self.debug_logger:
+                self.debug_logger.info(f"Strategy: {discovery['strategy']}")
+                self.debug_logger.info(f"Sitemap found: {discovery['sitemap_found']}")
+                self.debug_logger.info(f"Pages to scrape ({len(discovery['pages'])}): {discovery['pages']}")
+
             # Scrape discovered pages
-            for page_url in discovery['pages']:
+            for idx, page_url in enumerate(discovery['pages'], 1):
                 try:
+                    if self.debug_logger:
+                        self.debug_logger.info(f"\n[{idx}/{len(discovery['pages'])}] Scraping: {page_url}")
+
                     response = self.http_client.fetch(page_url, check_content_length=False)
 
                     if response['status'] == 'success':
@@ -382,16 +441,26 @@ class SimpleHomepageScraper:
                         clean_emails = [self._clean_email(e) for e in emails if self._clean_email(e)]
                         all_emails.extend(clean_emails)
 
+                        if self.debug_logger:
+                            self.debug_logger.info(f"  Status: SUCCESS | Emails found: {len(clean_emails)} | {clean_emails if clean_emails else 'none'}")
+
                         # Save content if requested
                         if self.save_deep_content:
                             page_text = clean_html_to_text(html_content, max_length=10000)
                             if page_text:
                                 pages_content_list.append(f"=== {page_url} ===\n{page_text}\n")
+                    else:
+                        if self.debug_logger:
+                            self.debug_logger.info(f"  Status: FAILED | Reason: {response.get('error', 'unknown')}")
 
-                except Exception:
+                except Exception as e:
+                    if self.debug_logger:
+                        self.debug_logger.info(f"  Status: ERROR | {str(e)}")
                     continue
 
-        except Exception:
+        except Exception as e:
+            if self.debug_logger:
+                self.debug_logger.error(f"Deep search error: {str(e)}")
             pass
 
         # Deduplicate and limit to reasonable number
@@ -400,10 +469,20 @@ class SimpleHomepageScraper:
         # Filter out if too many emails (likely scraped wrong content)
         if len(unique_emails) > 20:
             logger.warning(f"Too many emails found ({len(unique_emails)}), likely scraped wrong content - ignoring")
+            if self.debug_logger:
+                self.debug_logger.warning(f"TOO MANY EMAILS ({len(unique_emails)}) - Filtering out as likely scraped wrong content")
             unique_emails = []
 
         # Combine pages content
         combined_content = '\n\n'.join(pages_content_list) if pages_content_list else ''
+
+        # Final debug summary
+        if self.debug_logger:
+            self.debug_logger.info(f"\nDEEP SEARCH RESULT:")
+            self.debug_logger.info(f"  Total emails found: {len(all_emails)} (before dedup)")
+            self.debug_logger.info(f"  Unique emails: {len(unique_emails)}")
+            self.debug_logger.info(f"  Final emails: {unique_emails if unique_emails else 'none'}")
+            self.debug_logger.info(f"{'='*60}\n")
 
         return unique_emails, combined_content
 

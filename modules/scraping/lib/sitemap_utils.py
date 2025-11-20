@@ -16,9 +16,10 @@ import re
 class SitemapParser:
     """Parse sitemaps and extract relevant URLs for email scraping"""
 
-    def __init__(self, timeout: int = 10):
+    def __init__(self, timeout: int = 10, debug_logger=None):
         self.timeout = timeout
         self.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        self.debug_logger = debug_logger
 
     def get_sitemap_from_robots(self, domain: str) -> Optional[str]:
         """
@@ -149,26 +150,71 @@ class SitemapParser:
 
         Args:
             urls: List of all URLs from sitemap
-            keywords: Keywords to match (default: contact, about, quote, etc.)
+            keywords: Keywords to match (default: comprehensive industry-standard list)
 
         Returns:
             Filtered list of URLs likely to contain contact info
         """
         if keywords is None:
+            # Comprehensive industry-standard keywords dictionary
             keywords = [
-                'contact', 'about', 'quote', 'reach', 'call', 'email',
-                'get-in-touch', 'reach-us', 'request-quote', 'schedule',
-                'appointment', 'service-request'
+                # Contact pages (primary)
+                'contact', 'contactus', 'contact-us', 'kontakt', 'contacto', 'contatto',
+                'get-in-touch', 'reach-us', 'reach-out', 'connect',
+
+                # Information & policies (often contain contact)
+                'contact-information', 'contact-info', 'info', 'information',
+                'policies', 'policy', 'privacy', 'terms', 'legal',
+
+                # About & team pages
+                'about', 'aboutus', 'about-us', 'our-story', 'who-we-are',
+                'team', 'staff', 'leadership', 'management', 'people',
+
+                # Support & help
+                'support', 'help', 'customer-service', 'customer-support',
+                'service', 'services', 'faq', 'helpdesk',
+
+                # Sales & quotes
+                'quote', 'quotes', 'request-quote', 'get-quote', 'pricing',
+                'request', 'inquiry', 'enquiry', 'estimate',
+
+                # Location & directions
+                'location', 'locations', 'find-us', 'directions', 'map',
+                'visit', 'address', 'office', 'offices', 'branch',
+
+                # Appointment & scheduling
+                'schedule', 'appointment', 'booking', 'book', 'reservation',
+                'consultation', 'meeting',
+
+                # Communication channels
+                'call', 'phone', 'email', 'mail', 'message', 'feedback',
+                'inquiry-form', 'contact-form', 'write-us',
+
+                # Business-specific
+                'corporate', 'business', 'enterprise', 'partner', 'vendor',
+                'wholesale', 'b2b', 'press', 'media', 'careers', 'jobs'
             ]
 
         filtered = []
+        rejected = []
 
         for url in urls:
             url_lower = url.lower()
 
-            # Check if any keyword appears in URL path
-            if any(keyword in url_lower for keyword in keywords):
+            # Check if any keyword appears ANYWHERE in URL path (not just at start)
+            matched_keywords = [kw for kw in keywords if kw in url_lower]
+            if matched_keywords:
                 filtered.append(url)
+                if self.debug_logger:
+                    self.debug_logger.debug(f"  ✓ MATCH: {url} (keywords: {', '.join(matched_keywords)})")
+            else:
+                rejected.append(url)
+                if self.debug_logger:
+                    self.debug_logger.debug(f"  ✗ SKIP: {url}")
+
+        # Summary log
+        if self.debug_logger:
+            self.debug_logger.info(f"Filtering results: {len(filtered)} matched, {len(rejected)} rejected")
 
         return filtered
 
@@ -187,6 +233,10 @@ class SitemapParser:
                 'sitemap_found': True/False
             }
         """
+        if self.debug_logger:
+            self.debug_logger.info(f"\n--- PAGE DISCOVERY START ---")
+            self.debug_logger.info(f"Attempting sitemap fetch for: {domain}")
+
         result = {
             'strategy': 'pattern',
             'pages': [],
@@ -197,30 +247,61 @@ class SitemapParser:
         sitemap_content = self.fetch_sitemap(domain)
 
         if sitemap_content:
+            if self.debug_logger:
+                self.debug_logger.info("✓ Sitemap found!")
+
             all_urls = self.parse_sitemap_xml(sitemap_content)
+            if self.debug_logger:
+                self.debug_logger.info(f"Parsed {len(all_urls)} URLs from sitemap")
 
             # Handle sitemap index (recursive fetch)
             if all_urls and 'sitemap' in all_urls[0].lower():
+                if self.debug_logger:
+                    self.debug_logger.info(f"Detected sitemap index, fetching child sitemap: {all_urls[0]}")
                 # This was a sitemap index, fetch first child sitemap
                 try:
                     child_response = requests.get(all_urls[0], timeout=self.timeout)
                     if child_response.status_code == 200:
                         all_urls = self.parse_sitemap_xml(child_response.text)
-                except Exception:
+                        if self.debug_logger:
+                            self.debug_logger.info(f"Child sitemap parsed: {len(all_urls)} URLs")
+                except Exception as e:
+                    if self.debug_logger:
+                        self.debug_logger.warning(f"Failed to fetch child sitemap: {str(e)}")
                     pass
 
             if all_urls:
+                if self.debug_logger:
+                    self.debug_logger.info(f"\nFiltering {len(all_urls)} URLs by keywords...")
+
                 contact_pages = self.filter_contact_pages(all_urls)
 
                 result['strategy'] = 'sitemap'
                 result['sitemap_found'] = True
                 result['pages'] = contact_pages[:max_pages]
 
+                if self.debug_logger:
+                    self.debug_logger.info(f"\nFinal selection (limited to {max_pages}): {len(result['pages'])} pages")
+                    for idx, page in enumerate(result['pages'], 1):
+                        self.debug_logger.info(f"  {idx}. {page}")
+
                 return result
+        else:
+            if self.debug_logger:
+                self.debug_logger.info("✗ No sitemap found")
 
         # Fallback: Pattern guessing
+        if self.debug_logger:
+            self.debug_logger.info("\nFalling back to pattern-based guessing...")
+
         result['strategy'] = 'pattern'
         result['pages'] = self._get_pattern_pages(domain)
+
+        if self.debug_logger:
+            self.debug_logger.info(f"Generated {len(result['pages'])} pattern-based URLs:")
+            for idx, page in enumerate(result['pages'], 1):
+                self.debug_logger.info(f"  {idx}. {page}")
+            self.debug_logger.info("--- PAGE DISCOVERY END ---\n")
 
         return result
 

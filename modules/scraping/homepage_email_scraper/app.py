@@ -565,6 +565,23 @@ with tab1:
                                         st.write(f"- Dynamic (no email): {analytics['results']['failed']['dynamic_no_email']['count']}")
                                         st.write(f"- Other errors: {analytics['results']['failed']['other_errors']['count']}")
 
+                                # Debug logs download button
+                                debug_logs = sorted(RESULTS_DIR.glob("debug_logs_*.txt"))
+                                if debug_logs:
+                                    latest_debug_log = debug_logs[-1]
+                                    with open(latest_debug_log, 'r', encoding='utf-8') as f:
+                                        debug_content = f.read()
+
+                                    st.markdown("### 🐛 Debug Logs")
+                                    st.download_button(
+                                        label="📥 Download Full Debug Logs",
+                                        data=debug_content,
+                                        file_name=latest_debug_log.name,
+                                        mime="text/plain",
+                                        help="Download detailed debug logs for troubleshooting"
+                                    )
+                                    st.info(f"📄 Debug log size: {len(debug_content):,} characters")
+
                             st.markdown(f"""
                             <div class="success-box">
                                 <strong>📁 Results saved to:</strong> {latest_result.name}<br>
