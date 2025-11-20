@@ -791,9 +791,6 @@ def main():
     rename_map = {args.website_column: 'website'}
     if args.name_column in df_valid.columns:
         rename_map[args.name_column] = 'name'
-    else:
-        logger.info(f"'{args.name_column}' column not found, will use website URLs as identifiers")
-        df_valid['name'] = df_valid[args.website_column]  # Use website as identifier
 
     df_valid = df_valid.rename(columns=rename_map)
 
