@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
 """
 === HOMEPAGE SCRAPER - UNIFIED STREAMLIT UI ===
-Version: 4.1.2 | Updated: 2025-11-20
+Version: 4.2.0 | Updated: 2025-11-20
 
 FEATURES:
 - Live real-time progress from subprocess
-- Flexible scraping modes (homepage-only vs deep search)
+- Two modes: Fast (homepage only) & Advanced (deep search with sitemap)
 - Email extraction toggle + 3 output formats
 - Auto-detect + manual column selection
 - URL validation before processing
 - Persistent results with historical browsing
 - Session state for immediate results
 - JSON analytics and detailed breakdowns
+
+NEW (v4.2.0):
+- NEW UI with 2 clear modes: Fast Mode and Advanced Mode
+- Fast Mode: Homepage only, 50-100 workers, minimal settings
+- Advanced Mode: Deep search, sitemap priority scoring, all features
+- Russian UI localization for better UX
+- Mode-specific settings visibility (hide advanced in fast mode)
 
 NEW (v4.1.2):
 - Streamlit Cloud deployment fix (absolute paths with .resolve())
@@ -140,17 +147,73 @@ def validate_url(url):
 st.markdown('<div class="big-title">🔍 Homepage Email Scraper</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">Extract emails from websites with real-time progress tracking</div>', unsafe_allow_html=True)
 
+# Mode Selection (Main Area)
+st.markdown("### 🎯 Выберите режим работы")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("""
+    <div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 20px; background: #f0f9f0;">
+        <h3 style="color: #4CAF50; margin-top: 0;">⚡ Быстрый режим</h3>
+        <p><b>Что делает:</b></p>
+        <ul>
+            <li>Скрапит только главную страницу (homepage)</li>
+            <li>Извлекает emails с homepage</li>
+            <li>Максимальная скорость</li>
+        </ul>
+        <p><b>Когда использовать:</b></p>
+        <ul>
+            <li>Email обычно на главной странице</li>
+            <li>Нужна высокая скорость (1000+ сайтов)</li>
+            <li>Простые сайты</li>
+        </ul>
+        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ Скорость: ~2-5 сек на сайт</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div style="border: 2px solid #2196F3; border-radius: 10px; padding: 20px; background: #e3f2fd;">
+        <h3 style="color: #2196F3; margin-top: 0;">🚀 Продвинутый режим</h3>
+        <p><b>Что делает:</b></p>
+        <ul>
+            <li>Скрапит homepage + до 5 дополнительных страниц</li>
+            <li>Проверяет /contact, /about, /team через sitemap</li>
+            <li>Умная приоритизация контактных страниц</li>
+            <li>Fallback на homepage если email не найден</li>
+        </ul>
+        <p><b>Когда использовать:</b></p>
+        <ul>
+            <li>Email часто на /contact или /about</li>
+            <li>Сложные сайты (Shopify, WordPress)</li>
+            <li>Максимальная точность важнее скорости</li>
+        </ul>
+        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ Скорость: ~10-20 сек на сайт</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+mode = st.radio(
+    "Режим работы",
+    ["⚡ Быстрый режим", "🚀 Продвинутый режим"],
+    horizontal=True,
+    label_visibility="collapsed"
+)
+
+is_fast_mode = mode == "⚡ Быстрый режим"
+scraping_mode_param = 'homepage_only' if is_fast_mode else 'deep_search'
+
+st.divider()
+
 # Sidebar - Configuration
 with st.sidebar:
-    st.header("⚙️ Configuration")
+    st.header("⚙️ Настройки")
 
-    st.subheader("🎯 Scraping Mode")
-    scraping_mode = st.radio(
-        "Choose scraping depth",
-        ["Homepage Only", "Deep Search (Homepage + 5 pages)"],
-        help="Homepage Only: Fast, only main page\nDeep Search: Slower, checks contact/about/team pages if no email on homepage"
-    )
-    scraping_mode_param = 'homepage_only' if scraping_mode == "Homepage Only" else 'deep_search'
+    if not is_fast_mode:
+        st.subheader("🔍 Продвинутые настройки")
+        st.caption("Доступно только в продвинутом режиме")
+    else:
+        st.info("💡 Быстрый режим - минимум настроек для максимальной скорости")
 
     st.divider()
 
@@ -182,68 +245,94 @@ with st.sidebar:
 
     st.divider()
 
-    st.subheader("⚡ Performance")
-    workers = st.slider(
-        "Parallel workers",
-        min_value=10,
-        max_value=100,
-        value=50,
-        step=10,
-        help="Higher = faster but more resource intensive"
-    )
+    st.subheader("⚡ Производительность")
 
-    max_pages = st.slider(
-        "Max pages to check (Deep Search)",
-        min_value=1,
-        max_value=10,
-        value=5,
-        help="Only applies to Deep Search mode"
-    )
+    if is_fast_mode:
+        workers = st.slider(
+            "Parallel workers (параллельные потоки)",
+            min_value=20,
+            max_value=100,
+            value=50,
+            step=10,
+            help="Быстрый режим: рекомендуется 50-100 для максимальной скорости"
+        )
+        max_pages = 1  # Fixed for fast mode
+        st.caption("⚡ Быстрый режим: скрапится только homepage")
+    else:
+        workers = st.slider(
+            "Parallel workers (параллельные потоки)",
+            min_value=10,
+            max_value=50,
+            value=20,
+            step=5,
+            help="Продвинутый режим: рекомендуется 10-20 для стабильности deep search"
+        )
 
-    st.divider()
-
-    st.subheader("💾 Data to Save")
-    save_content = st.checkbox(
-        "Save homepage content",
-        value=True,
-        help="Save full text content from website (disable to save space)"
-    )
-
-    save_sitemap = st.checkbox(
-        "Save sitemap links",
-        value=False,
-        help="Extract and save all pages from sitemap"
-    )
-
-    save_social = st.checkbox(
-        "Save social media links",
-        value=False,
-        help="Extract Facebook, Twitter, LinkedIn, Instagram links"
-    )
-
-    save_links = st.checkbox(
-        "Save other links",
-        value=False,
-        help="Extract all other links from homepage"
-    )
-
-    save_deep_content = st.checkbox(
-        "Save deep pages content",
-        value=False,
-        help="Save raw content from all pages visited during deep search (requires Deep Search mode)"
-    )
+        max_pages = st.slider(
+            "Макс. страниц для deep search",
+            min_value=1,
+            max_value=10,
+            value=5,
+            help="Сколько дополнительных страниц проверять (/contact, /about, etc.)"
+        )
 
     st.divider()
 
-    st.subheader("🔢 Processing Limit")
-    limit_rows = st.checkbox("Limit rows to process", value=False)
+    # Advanced settings - only in Advanced mode
+    if not is_fast_mode:
+        st.subheader("💾 Дополнительные данные")
+        st.caption("Что ещё сохранять кроме emails")
+
+        save_content = st.checkbox(
+            "Сохранять контент homepage",
+            value=True,
+            help="Полный текст с главной страницы"
+        )
+
+        save_sitemap = st.checkbox(
+            "Сохранять ссылки из sitemap",
+            value=False,
+            help="Извлечь все страницы из sitemap.xml"
+        )
+
+        save_social = st.checkbox(
+            "Сохранять соц. сети",
+            value=False,
+            help="Facebook, Twitter, LinkedIn, Instagram"
+        )
+
+        save_links = st.checkbox(
+            "Сохранять другие ссылки",
+            value=False,
+            help="Все остальные ссылки с homepage"
+        )
+
+        save_deep_content = st.checkbox(
+            "Сохранять контент всех страниц",
+            value=False,
+            help="Контент всех страниц из deep search (много данных!)"
+        )
+
+        st.divider()
+    else:
+        # Fast mode: minimal data saving
+        save_content = True  # Always save homepage content
+        save_sitemap = False
+        save_social = False
+        save_links = False
+        save_deep_content = False
+
+    st.divider()
+
+    st.subheader("🔢 Лимит обработки")
+    limit_rows = st.checkbox("Ограничить количество строк", value=False)
     if limit_rows:
         row_limit = st.number_input(
-            "Process first N rows",
+            "Обработать первые N строк",
             min_value=1,
             max_value=10000,
             value=100,
-            help="Useful for testing"
+            help="Полезно для тестирования на небольших батчах"
         )
     else:
         row_limit = 0
