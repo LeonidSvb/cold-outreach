@@ -254,21 +254,34 @@ class SitemapParser:
             if self.debug_logger:
                 self.debug_logger.info(f"Parsed {len(all_urls)} URLs from sitemap")
 
-            # Handle sitemap index (recursive fetch)
-            if all_urls and 'sitemap' in all_urls[0].lower():
+            # Check if this is a sitemap index (contains child sitemaps)
+            child_sitemaps = [url for url in all_urls if 'sitemap' in url.lower() and url.endswith('.xml')]
+
+            if child_sitemaps:
+                # This is a sitemap index - fetch ALL child sitemaps
                 if self.debug_logger:
-                    self.debug_logger.info(f"Detected sitemap index, fetching child sitemap: {all_urls[0]}")
-                # This was a sitemap index, fetch first child sitemap
-                try:
-                    child_response = requests.get(all_urls[0], timeout=self.timeout)
-                    if child_response.status_code == 200:
-                        all_urls = self.parse_sitemap_xml(child_response.text)
+                    self.debug_logger.info(f"Detected sitemap index with {len(child_sitemaps)} child sitemaps")
+
+                all_urls = []
+                for idx, child_sitemap_url in enumerate(child_sitemaps[:10], 1):  # Limit to 10 child sitemaps
+                    try:
                         if self.debug_logger:
-                            self.debug_logger.info(f"Child sitemap parsed: {len(all_urls)} URLs")
-                except Exception as e:
-                    if self.debug_logger:
-                        self.debug_logger.warning(f"Failed to fetch child sitemap: {str(e)}")
-                    pass
+                            self.debug_logger.info(f"  [{idx}/{min(len(child_sitemaps), 10)}] Fetching: {child_sitemap_url}")
+
+                        child_response = requests.get(child_sitemap_url, timeout=self.timeout)
+                        if child_response.status_code == 200:
+                            child_urls = self.parse_sitemap_xml(child_response.text)
+                            all_urls.extend(child_urls)
+
+                            if self.debug_logger:
+                                self.debug_logger.info(f"      Parsed {len(child_urls)} URLs")
+                    except Exception as e:
+                        if self.debug_logger:
+                            self.debug_logger.warning(f"      Failed to fetch: {str(e)}")
+                        continue
+
+                if self.debug_logger:
+                    self.debug_logger.info(f"\nTotal URLs from all child sitemaps: {len(all_urls)}")
 
             if all_urls:
                 if self.debug_logger:
@@ -276,7 +289,21 @@ class SitemapParser:
 
                 contact_pages = self.filter_contact_pages(all_urls)
 
-                result['strategy'] = 'sitemap'
+                # If not enough contact pages found, add pattern-based URLs as fallback
+                if len(contact_pages) < max_pages:
+                    if self.debug_logger:
+                        self.debug_logger.info(f"\nOnly {len(contact_pages)} contact pages found in sitemap")
+                        self.debug_logger.info("Adding pattern-based URLs as supplement...")
+
+                    pattern_urls = self._get_pattern_pages(domain)
+                    # Add pattern URLs that aren't already in contact_pages
+                    for url in pattern_urls:
+                        if url not in contact_pages and len(contact_pages) < max_pages:
+                            contact_pages.append(url)
+                            if self.debug_logger:
+                                self.debug_logger.info(f"  + Added pattern URL: {url}")
+
+                result['strategy'] = 'sitemap+pattern' if len(contact_pages) > len(self.filter_contact_pages(all_urls)) else 'sitemap'
                 result['sitemap_found'] = True
                 result['pages'] = contact_pages[:max_pages]
 
@@ -313,17 +340,36 @@ class SitemapParser:
             List of URLs to try
         """
         patterns = [
+            # Primary contact pages
             '/contact',
             '/contact-us',
             '/contactus',
             '/get-in-touch',
+            '/reach-us',
+
+            # Policies & info (often have contact info)
+            '/policies/contact-information',
+            '/pages/contact',
+            '/pages/contact-us',
+            '/pages/about',
+
+            # About pages
             '/about',
             '/about-us',
             '/our-story',
+            '/team',
+
+            # Sales & support
             '/get-quote',
             '/request-quote',
             '/schedule',
-            '/reach-us'
+            '/support',
+            '/customer-service',
+
+            # Location
+            '/locations',
+            '/find-us',
+            '/visit-us'
         ]
 
         return [urljoin(domain, path) for path in patterns]
