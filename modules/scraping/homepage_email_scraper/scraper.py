@@ -80,14 +80,7 @@ class SimpleHomepageScraper:
                  email_format: str = 'separate', save_content: bool = True,
                  save_sitemap: bool = False, save_social_links: bool = False,
                  save_other_links: bool = False, save_deep_content: bool = False):
-        # Setup debug logger first
-        self.debug_log_path = None
-        self.debug_logger = None
-        self._setup_debug_logger()
-
-        # Initialize with debug logger
-        self.http_client = HTTPClient(timeout=15, retries=3)
-        self.sitemap_parser = SitemapParser(timeout=15, debug_logger=self.debug_logger)
+        # Set attributes first (needed by debug logger)
         self.workers = workers
         self.max_pages = max_pages
         self.scraping_mode = scraping_mode
@@ -98,6 +91,15 @@ class SimpleHomepageScraper:
         self.save_social_links = save_social_links
         self.save_other_links = save_other_links
         self.save_deep_content = save_deep_content
+
+        # Setup debug logger (uses attributes above)
+        self.debug_log_path = None
+        self.debug_logger = None
+        self._setup_debug_logger()
+
+        # Initialize with debug logger
+        self.http_client = HTTPClient(timeout=15, retries=3)
+        self.sitemap_parser = SitemapParser(timeout=15, debug_logger=self.debug_logger)
 
         # Thread-safe stats
         self._lock = threading.Lock()
