@@ -829,6 +829,25 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     logger.info(f"Output directory: {output_dir}")
 
+    # Helper function to clean DataFrame for Excel export
+    def clean_dataframe_for_excel(df):
+        """
+        Remove illegal characters for Excel (openpyxl)
+        Excel does not accept control characters (0x00-0x1F) except tab, newline, carriage return
+        """
+        df_clean = df.copy()
+
+        # Pattern to match illegal characters (all control chars except \t, \n, \r)
+        illegal_chars = re.compile(r'[\x00-\x08\x0B\x0C\x0E-\x1F]')
+
+        for col in df_clean.columns:
+            if df_clean[col].dtype == 'object':  # String columns
+                df_clean[col] = df_clean[col].apply(
+                    lambda x: illegal_chars.sub('', str(x)) if pd.notna(x) else x
+                )
+
+        return df_clean
+
     # Split results into 3 universal files
     logger.info("="*70)
     logger.info("SAVING RESULTS (UNIFIED FORMAT)")
@@ -855,9 +874,12 @@ def main():
     success_df.to_csv(success_path_csv, index=False, encoding='utf-8-sig')
     success_df.to_json(success_path_json, orient='records', force_ascii=False, indent=2)
     try:
-        success_df.to_excel(success_path_excel, index=False, engine='openpyxl')
+        success_df_clean = clean_dataframe_for_excel(success_df)
+        success_df_clean.to_excel(success_path_excel, index=False, engine='openpyxl')
     except ImportError:
         logger.warning("openpyxl not installed, skipping Excel export")
+    except Exception as e:
+        logger.error(f"Excel export failed: {e}")
 
     logger.info(f"1. SUCCESS: {rows_after} rows ({duplicates_removed} duplicates removed)")
     logger.info(f"   - {success_path_csv.name}")
@@ -894,9 +916,12 @@ def main():
     failed_df.to_csv(failed_path_csv, index=False, encoding='utf-8-sig')
     failed_df.to_json(failed_path_json, orient='records', force_ascii=False, indent=2)
     try:
-        failed_df.to_excel(failed_path_excel, index=False, engine='openpyxl')
+        failed_df_clean = clean_dataframe_for_excel(failed_df)
+        failed_df_clean.to_excel(failed_path_excel, index=False, engine='openpyxl')
     except ImportError:
-        pass
+        logger.warning("openpyxl not installed, skipping Excel export")
+    except Exception as e:
+        logger.error(f"Excel export failed: {e}")
 
     logger.info(f"2. FAILED: {len(failed_df)} rows")
     logger.info(f"   - {failed_path_csv.name}")
@@ -928,9 +953,12 @@ def main():
     combined_df.to_csv(combined_path_csv, index=False, encoding='utf-8-sig')
     combined_df.to_json(combined_path_json, orient='records', force_ascii=False, indent=2)
     try:
-        combined_df.to_excel(combined_path_excel, index=False, engine='openpyxl')
+        combined_df_clean = clean_dataframe_for_excel(combined_df)
+        combined_df_clean.to_excel(combined_path_excel, index=False, engine='openpyxl')
     except ImportError:
-        pass
+        logger.warning("openpyxl not installed, skipping Excel export")
+    except Exception as e:
+        logger.error(f"Excel export failed: {e}")
 
     logger.info(f"3. ALL COMBINED: {len(combined_df)} rows")
     logger.info(f"   - {combined_path_csv.name}")
