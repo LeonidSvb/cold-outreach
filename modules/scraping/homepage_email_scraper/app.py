@@ -62,6 +62,10 @@ from datetime import datetime
 from threading import Thread
 from queue import Queue
 
+# Import validation component
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from modules.email_verification.streamlit_validator import render_validation_tab
+
 # Page configuration
 st.set_page_config(
     page_title="Homepage Email Scraper",
@@ -318,7 +322,7 @@ with st.sidebar:
         row_limit = 0
 
 # Main content
-tab1, tab2 = st.tabs(["📤 Upload & Run", "📊 View Results"])
+tab1, tab2, tab3 = st.tabs(["📤 Upload & Run", "📊 View Results", "✅ Email Validation"])
 
 with tab1:
     st.header("Upload CSV and run scraper")
@@ -949,6 +953,21 @@ with tab2:
     except Exception as e:
         st.error(f"❌ Error loading results: {e}")
         st.info("Try refreshing the page or check the results folder manually.")
+
+with tab3:
+    st.header("Email Validation")
+
+    st.info("""
+    **📋 Email Validation Features:**
+    - Upload CSV or select from scraped results
+    - Bulk validation via Mails.so API
+    - Real-time progress tracking
+    - Download validated results (all, deliverable, filtered)
+    - Corporate emails filtering (exclude Gmail, Yahoo, etc.)
+    """)
+
+    # Render the validation component
+    render_validation_tab(results_dir=str(RESULTS_DIR))
 
 st.divider()
 st.caption("Homepage Scraper v4.1.1 (Cross-Platform) | 2025-11-20")

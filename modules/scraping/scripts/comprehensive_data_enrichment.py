@@ -38,9 +38,10 @@ CONFIG = {
     "INPUT_FILE": r"C:\Users\79818\Downloads\All Australian Cafes - No Email for Upwork (2).csv",
     "OUTPUT_DIR": r"C:\Users\79818\Desktop\Outreach - new\modules\scraping\results",
     "TEST_SIZE": 500,
+    "OFFSET": 500,
     "RAPIDAPI_KEY": os.getenv("RAPIDAPI_KEY"),
     "RAPIDAPI_HOST": "google-search72.p.rapidapi.com",
-    "DELAY_BETWEEN_REQUESTS": (1, 2),
+    "DELAY_BETWEEN_REQUESTS": (1.0, 1.5),
     "SAVE_INTERVAL": 50,
 }
 
@@ -212,10 +213,10 @@ def enrich_company_data(business_name, city, phone):
         }
 
 
-def save_results(results_df, test_size):
+def save_results(results_df, suffix=""):
     """Save results to CSV"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"enriched_data_{test_size}_companies_{timestamp}.csv"
+    filename = f"enriched_data_{suffix}_{timestamp}.csv"
     filepath = os.path.join(CONFIG["OUTPUT_DIR"], filename)
 
     os.makedirs(CONFIG["OUTPUT_DIR"], exist_ok=True)
@@ -243,10 +244,11 @@ def main():
     df_no_website = df[df['website'].isna() | (df['website'] == '')].copy()
     print(f"Companies WITHOUT websites: {len(df_no_website)}")
 
-    # Take test sample
-    test_size = min(CONFIG['TEST_SIZE'], len(df_no_website))
-    sample_df = df_no_website.head(test_size).copy()
-    print(f"\nEnriching {test_size} companies")
+    # Take test sample with offset
+    offset = CONFIG.get('OFFSET', 0)
+    test_size = min(CONFIG['TEST_SIZE'], len(df_no_website) - offset)
+    sample_df = df_no_website.iloc[offset:offset + test_size].copy()
+    print(f"\nEnriching companies {offset+1} to {offset+test_size} ({test_size} total)")
     print(f"Estimated cost: ${test_size * 0.001:.2f}")
     print(f"Estimated time: ~{test_size * 1.5 / 60:.1f} minutes\n")
 
@@ -303,7 +305,9 @@ def main():
 
         # Save progress periodically
         if progress % CONFIG['SAVE_INTERVAL'] == 0:
-            save_results(sample_df, test_size)
+            offset = CONFIG.get('OFFSET', 0)
+            filename_suffix = f"{offset+1}-{offset+test_size}_companies"
+            save_results(sample_df, filename_suffix)
             print(f"\n[PROGRESS SAVED] {progress}/{test_size} companies processed")
 
         # Rate limiting
@@ -312,7 +316,9 @@ def main():
             time.sleep(delay)
 
     # Final save
-    output_file = save_results(sample_df, test_size)
+    offset = CONFIG.get('OFFSET', 0)
+    filename_suffix = f"{offset+1}-{offset+test_size}_companies"
+    output_file = save_results(sample_df, filename_suffix)
 
     # Summary statistics
     elapsed_time = time.time() - start_time

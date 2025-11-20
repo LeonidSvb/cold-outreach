@@ -39,7 +39,8 @@ CONFIG = {
     "MAX_RETRIES": 3,
     "RETRY_DELAY": 2,
     "PROCESS_ALL": False,
-    "TEST_SIZE": 100,
+    "TEST_SIZE": 500,
+    "OFFSET": 500,
     "SAVE_INTERVAL": 100,
 }
 
@@ -280,10 +281,12 @@ async def main():
         sample_df = df_no_website.copy()
         process_size = len(df_no_website)
     else:
-        sample_df = df_no_website.head(CONFIG['TEST_SIZE']).copy()
-        process_size = CONFIG['TEST_SIZE']
+        offset = CONFIG.get('OFFSET', 0)
+        sample_df = df_no_website.iloc[offset:offset + CONFIG['TEST_SIZE']].copy()
+        process_size = len(sample_df)
 
-    print(f"\nProcessing {process_size} companies")
+    offset = CONFIG.get('OFFSET', 0)
+    print(f"\nProcessing companies {offset+1} to {offset+process_size} ({process_size} total)")
     print(f"Concurrent requests: {CONFIG['CONCURRENT_REQUESTS']}")
     print(f"Estimated time: ~{process_size / (5 * 60):.1f} minutes")
     print(f"Estimated cost: ${process_size * 0.001:.2f}\n")
@@ -312,9 +315,10 @@ async def main():
 
     elapsed_time = time.time() - start_time
 
+    offset = CONFIG.get('OFFSET', 0)
     output_file = save_results(
         sample_df,
-        filename_suffix=f"_{process_size}_companies"
+        filename_suffix=f"_{offset+1}-{offset+process_size}"
     )
 
     print("\n" + "="*70)
