@@ -787,18 +787,15 @@ def main():
         logger.error("No valid URLs found in CSV!")
         sys.exit(1)
 
-    # Auto-generate name from domain if not present
-    if args.name_column not in df_valid.columns:
-        logger.info(f"'{args.name_column}' column not found, generating from website domains")
-        df_valid[args.name_column] = df_valid[args.website_column].apply(
-            lambda x: str(x).replace('http://', '').replace('https://', '').replace('www.', '').split('/')[0] if pd.notna(x) else 'Unknown'
-        )
-
     # Rename columns for processing
-    df_valid = df_valid.rename(columns={
-        args.website_column: 'website',
-        args.name_column: 'name'
-    })
+    rename_map = {args.website_column: 'website'}
+    if args.name_column in df_valid.columns:
+        rename_map[args.name_column] = 'name'
+    else:
+        logger.info(f"'{args.name_column}' column not found, will use website URLs as identifiers")
+        df_valid['name'] = df_valid[args.website_column]  # Use website as identifier
+
+    df_valid = df_valid.rename(columns=rename_map)
 
     # Apply limit if specified
     if args.limit:
