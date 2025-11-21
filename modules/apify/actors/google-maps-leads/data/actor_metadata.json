@@ -1,0 +1,143 @@
+{
+  "data": {
+    "id": "SO9xTra0rtb9NNVfw",
+    "userId": "1cVoldTWylgGpuZTh",
+    "name": "millions-us-businesses-leads-with-emails-from-google-maps",
+    "username": "xmiso_scrapers",
+    "description": "Don't have time to scrape google maps? Looking for affordable B2B data apollo.io alternative? Get recent data from continuously updated database of businesses worldwide with emails and social links scraped for you. Current number of businesses with unique emails :9.000.000+ in 1000+ categories",
+    "isPublic": true,
+    "createdAt": "2025-07-03T10:51:40.940Z",
+    "modifiedAt": "2025-11-19T09:50:26.205Z",
+    "taggedBuilds": {
+      "latest": {
+        "buildId": "q91IgcYcs5ve6A66i",
+        "finishedAt": "2025-11-19T09:49:57.868Z",
+        "buildNumberInt": 73,
+        "buildNumber": "0.0.73"
+      }
+    },
+    "stats": {
+      "totalBuilds": 73,
+      "totalRuns": 6637,
+      "totalUsers": 565,
+      "totalUsers7Days": 20,
+      "totalUsers30Days": 102,
+      "totalUsers90Days": 261,
+      "lastRunStartedAt": "2025-11-20T22:03:46.978Z",
+      "publicActorRunStats30Days": {
+        "ABORTED": 15,
+        "FAILED": 42,
+        "SUCCEEDED": 1597,
+        "TIMED-OUT": 0,
+        "TOTAL": 1655
+      },
+      "actorReviewCount": 2,
+      "actorReviewRating": 5,
+      "bookmarkCount": 21
+    },
+    "versions": [
+      {
+        "versionNumber": "0.0",
+        "sourceType": "SOURCE_FILES",
+        "buildTag": "latest"
+      }
+    ],
+    "defaultRunOptions": {
+      "build": "latest",
+      "memoryMbytes": 1024,
+      "timeoutSecs": 3600
+    },
+    "exampleRunInput": {
+      "body": "{ \"helloWorld\": 123 }",
+      "contentType": "application/json; charset=utf-8"
+    },
+    "categories": [
+      "LEAD_GENERATION",
+      "AUTOMATION"
+    ],
+    "isDeprecated": false,
+    "title": "9+ Million Business Leads With Emails (From Google Maps)",
+    "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/1cVoldTWylgGpuZTh-actor-SO9xTra0rtb9NNVfw-8dIsAWMoae-freepik__millions_of_us_business_leads_with_emails_%28fr_%281%29.png",
+    "seoTitle": null,
+    "seoDescription": null,
+    "pricingInfos": [
+      {
+        "pricingModel": "PRICE_PER_DATASET_ITEM",
+        "pricePerUnitUsd": 0.0035,
+        "unitName": "result",
+        "createdAt": "2025-07-04T04:41:47.365Z",
+        "startedAt": "2025-07-04T04:41:47.365Z",
+        "apifyMarginPercentage": 0.2,
+        "notifiedAboutChangeAt": "2025-07-04T05:05:16.975Z"
+      },
+      {
+        "pricingModel": "PRICE_PER_DATASET_ITEM",
+        "tieredPricing": {
+          "FREE": {
+            "tieredPricePerUnitUsd": 0.0035
+          },
+          "BRONZE": {
+            "tieredPricePerUnitUsd": 0.0029
+          },
+          "SILVER": {
+            "tieredPricePerUnitUsd": 0.0025
+          },
+          "GOLD": {
+            "tieredPricePerUnitUsd": 0.0019
+          },
+          "PLATINUM": {
+            "tieredPricePerUnitUsd": 0.0019
+          },
+          "DIAMOND": {
+            "tieredPricePerUnitUsd": 0.0019
+          }
+        },
+        "unitName": "result",
+        "reasonForChange": "Introducing the tiered pricing.",
+        "createdAt": "2025-07-08T12:58:02.914Z",
+        "startedAt": "2025-07-08T12:58:02.914Z",
+        "apifyMarginPercentage": 0.2,
+        "notifiedAboutChangeAt": "2025-07-08T13:05:16.707Z"
+      },
+      {
+        "tieredPricing": {
+          "FREE": {
+            "tieredPricePerUnitUsd": 0.0019
+          },
+          "BRONZE": {
+            "tieredPricePerUnitUsd": 0.0015
+          },
+          "SILVER": {
+            "tieredPricePerUnitUsd": 0.0013
+          },
+          "GOLD": {
+            "tieredPricePerUnitUsd": 0.0008
+          },
+          "PLATINUM": {
+            "tieredPricePerUnitUsd": 0.0008
+          },
+          "DIAMOND": {
+            "tieredPricePerUnitUsd": 0.0008
+          }
+        },
+        "unitName": "result",
+        "pricingModel": "PRICE_PER_DATASET_ITEM",
+        "isPriceChangeNotificationSuppressed": false,
+        "reasonForChange": "In order to allow access to this tool to as many users as possible, prices will be lowered substantially, now you can scrape leads from $0.8/1000 emails.",
+        "startedAt": "2025-08-27T00:00:00.000Z",
+        "createdAt": "2025-08-13T12:00:00.760Z",
+        "apifyMarginPercentage": 0.2,
+        "notifiedAboutFutureChangeAt": "2025-08-13T12:00:21.490Z",
+        "notifiedAboutChangeAt": "2025-08-27T00:05:18.311Z"
+      }
+    ],
+    "notice": "NONE",
+    "isCritical": false,
+    "isGeneric": false,
+    "hasNoDataset": false,
+    "isSourceCodeHidden": true,
+    "standbyUrl": null,
+    "actorPermissionLevel": "LIMITED_PERMISSIONS",
+    "deploymentKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCIQxSqlav5FhD3VVg/uqXopY+6haD0kAmD3lkTXFrbL0Hw//Qdk7x61TVIfW1TSKtEdqpdTi9rJg03HP/YbTEGPTEtRQsArpGW7l9xZW7HPEEydK8GIrCTPFmXsr8Drp0UO8ZNgtHhKClL0fleMurNOREk1iCleTHCHm228+pL+8Du33CENHqcy17ST0pU08X0CO3hsbIlkfuzW9LCIzvUO2GvnKJyGY2UJHpTGvWfxl32sbmN2rVj0+vf5lRQ9AleOTDb+2NEYE4ceUnwnHsJYuu/c4nLbqGbXtUCHIvAjVyQf7SQP6J/1PQY10iuJ6jA9QGZGyElZshgWYvOQ+I/ \n"
+  }
+}

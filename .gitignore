@@ -81,3 +81,40 @@ modules/*/results/*
 modules/*/data/*
 !modules/*/results/.gitkeep
 !modules/*/data/.gitkeep
+
+# Debug logs (huge files from scraping)
+debug_logs*.txt
+**/debug_logs*.txt
+
+# SSH keys (SECURITY: never commit)
+*hostinger_key*
+*.pub
+*.pem
+*.key
+
+# Temporary root scripts (cleanup candidates)
+add_*.py
+analyze_*.py
+check_*.py
+compare_*.py
+create_*.py
+enhance_*.py
+export_*.py
+fetch_*.py
+get_*.py
+merge_*.py
+show_*.py
+total_*.py
+au_cafes_*.py
+
+# Temporary CSV data files in root
+*.csv
+!modules/**/test_*.csv
+!data/raw/.gitkeep
+
+# Batch files (temporary monitoring)
+*.bat
+
+# WhatsApp messages and other temp files
+WhatsApp_*.txt
+*.md.backup*
