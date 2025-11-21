@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "total_sites": 1596,
+    "success_rate": "11.78%",
+    "duration_seconds": 3008.92,
+    "duration_minutes": 50.15,
+    "sites_per_second": 0.53
+  },
+  "results": {
+    "success": {
+      "count": 188,
+      "percentage": "11.78%",
+      "total_emails": 302,
+      "from_homepage": 190,
+      "from_deep_search": 112
+    },
+    "failed": {
+      "total": 423,
+      "static_no_email": {
+        "count": 719,
+        "percentage": "45.05%"
+      },
+      "dynamic_no_email": {
+        "count": 266,
+        "percentage": "16.67%"
+      },
+      "other_errors": {
+        "count": 423,
+        "percentage": "26.50%"
+      }
+    }
+  },
+  "site_types": {
+    "static": 801,
+    "dynamic": 369
+  }
+}

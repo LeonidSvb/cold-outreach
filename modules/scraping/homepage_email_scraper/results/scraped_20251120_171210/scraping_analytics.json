@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "total_sites": 1745,
+    "success_rate": "14.61%",
+    "duration_seconds": 0,
+    "duration_minutes": 0,
+    "sites_per_second": 0
+  },
+  "results": {
+    "success": {
+      "count": 255,
+      "percentage": "14.61%",
+      "total_emails": 255,
+      "from_homepage": 0,
+      "from_deep_search": 0
+    },
+    "failed": {
+      "total": 1490,
+      "static_no_email": {
+        "count": 0,
+        "percentage": "0.00%"
+      },
+      "dynamic_no_email": {
+        "count": 0,
+        "percentage": "0.00%"
+      },
+      "other_errors": {
+        "count": 0,
+        "percentage": "0.00%"
+      }
+    }
+  },
+  "site_types": {
+    "static": 0,
+    "dynamic": 0
+  },
+  "note": "Regenerated from CSV files on 2025-11-20T17:18:07.288801"
+}
