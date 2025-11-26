@@ -51,7 +51,7 @@ def render_email_validator_tab():
         df = render_file_uploader(
             label="Upload CSV with emails",
             with_results_browser=True,
-            results_dir="modules/email_verification/results",
+            results_dir="modules/ui/results/validator",
             key_prefix="validator_upload"
         )
 

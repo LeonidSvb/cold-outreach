@@ -2,8 +2,8 @@
 # Increase max upload size for large CSV files
 maxUploadSize = 200
 
-# Enable file watching for hot reload
-runOnSave = true
+# Enable file watching for hot reload (disable in production)
+runOnSave = false
 
 # Headless mode for deployment
 headless = true
@@ -11,9 +11,15 @@ headless = true
 # Port configuration
 port = 8501
 
+# Production settings
+enableCORS = false
+enableXsrfProtection = true
+address = "0.0.0.0"
+
 [browser]
 # Don't open browser automatically
 gatherUsageStats = false
+serverAddress = "0.0.0.0"
 
 [theme]
 # Optional: customize colors

@@ -98,7 +98,7 @@ def render_ai_processor_tab():
         df = render_file_uploader(
             label="Upload CSV",
             with_results_browser=True,
-            results_dir="modules/openai/results",
+            results_dir="modules/ui/results/ai_processor",
             key_prefix="ai_upload"
         )
 

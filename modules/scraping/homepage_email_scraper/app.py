@@ -62,10 +62,6 @@ from datetime import datetime
 from threading import Thread
 from queue import Queue
 
-# Import validation component
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from modules.email_verification.streamlit_validator import render_validation_tab
-
 # Page configuration
 st.set_page_config(
     page_title="Homepage Email Scraper",
@@ -160,9 +156,19 @@ with col1:
     st.markdown("""
     <div style="border: 2px solid #4CAF50; border-radius: 10px; padding: 20px; background: #f0f9f0;">
         <h3 style="color: #4CAF50; margin-top: 0;">⚡ Fast Mode</h3>
-        <p><b>What:</b> Homepage only + optional email extraction</p>
-        <p><b>Best for:</b> High volume (1000+ sites), content collection</p>
-        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ ~2-5 sec/site</p>
+        <p><b>What it does:</b></p>
+        <ul>
+            <li>Scrapes homepage only</li>
+            <li>Extracts emails from homepage</li>
+            <li>Maximum speed</li>
+        </ul>
+        <p><b>When to use:</b></p>
+        <ul>
+            <li>Emails are typically on homepage</li>
+            <li>High speed needed (1000+ sites)</li>
+            <li>Simple websites</li>
+        </ul>
+        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ Speed: ~2-5 sec per site</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -170,9 +176,20 @@ with col2:
     st.markdown("""
     <div style="border: 2px solid #2196F3; border-radius: 10px; padding: 20px; background: #e3f2fd;">
         <h3 style="color: #2196F3; margin-top: 0;">🚀 Advanced Mode</h3>
-        <p><b>What:</b> Homepage + /contact, /about, /team (via sitemap)</p>
-        <p><b>Best for:</b> Maximum email accuracy, complex sites</p>
-        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ ~10-20 sec/site</p>
+        <p><b>What it does:</b></p>
+        <ul>
+            <li>Scrapes homepage + up to 5 additional pages</li>
+            <li>Checks /contact, /about, /team via sitemap</li>
+            <li>Smart prioritization of contact pages</li>
+            <li>Fallback to homepage if email not found</li>
+        </ul>
+        <p><b>When to use:</b></p>
+        <ul>
+            <li>Emails often on /contact or /about</li>
+            <li>Complex sites (Shopify, WordPress)</li>
+            <li>Maximum accuracy over speed</li>
+        </ul>
+        <p style="color: #666; font-size: 0.9em; margin-bottom: 0;">⏱️ Speed: ~10-20 sec per site</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -322,7 +339,7 @@ with st.sidebar:
         row_limit = 0
 
 # Main content
-tab1, tab2, tab3 = st.tabs(["📤 Upload & Run", "📊 View Results", "✅ Email Validation"])
+tab1, tab2 = st.tabs(["📤 Upload & Run", "📊 View Results"])
 
 with tab1:
     st.header("Upload CSV and run scraper")
@@ -344,111 +361,63 @@ with tab1:
         try:
             df = pd.read_csv(uploaded_file, encoding='utf-8-sig')
 
-            # Smart auto-detect website column
-            def score_url_column(series):
-                """Score how likely a column contains URLs"""
-                if series.dtype == 'object' or series.dtype == 'string':
-                    sample = series.dropna().astype(str).head(100)
-                    if len(sample) == 0:
-                        return 0
-
-                    score = 0
-                    for val in sample:
-                        val_lower = val.lower().strip()
-                        # Check for URL patterns
-                        if val_lower.startswith(('http://', 'https://')):
-                            score += 3
-                        elif val_lower.startswith('www.'):
-                            score += 2
-                        elif '.' in val_lower and len(val_lower) > 4:
-                            # Check if looks like domain: has TLD and no spaces
-                            parts = val_lower.split('.')
-                            if len(parts) >= 2 and ' ' not in val_lower:
-                                # Check for common TLDs
-                                tld = parts[-1]
-                                if tld in ['com', 'org', 'net', 'io', 'co', 'us', 'uk', 'ca', 'au', 'de', 'fr', 'info', 'biz']:
-                                    score += 2
-                                elif len(tld) <= 4:  # Likely TLD
-                                    score += 1
-
-                    return score / len(sample)
-                return 0
-
-            # Check by column name first
-            url_col_candidates = ['website', 'url', 'domain', 'link', 'site', 'web']
+            # Auto-detect website column
+            url_col_candidates = ['website', 'url', 'domain', 'link', 'site']
             auto_url_col = None
-            confidence = 0
-
             for col in url_col_candidates:
                 if col in df.columns:
                     auto_url_col = col
-                    confidence = 0.9
                     break
 
-            # If not found by name, check content
             if not auto_url_col:
-                best_score = 0
+                # Find column with most URLs
                 for col in df.columns:
-                    col_score = score_url_column(df[col])
-                    if col_score > best_score:
-                        best_score = col_score
+                    if df[col].astype(str).str.contains('http|www', case=False, na=False).sum() > len(df) * 0.5:
                         auto_url_col = col
-                        confidence = min(best_score, 0.95)
+                        break
 
-            # Show/hide column selection based on confidence
+            # Manual column selection
             st.subheader("🔍 Column Selection")
+            col1, col2 = st.columns(2)
 
-            # Auto-detect name column
-            auto_name_col = None
-            name_candidates = ['name', 'company_name', 'company', 'business_name']
-            for col in name_candidates:
-                if col in df.columns:
-                    auto_name_col = col
-                    break
+            with col1:
+                if auto_url_col:
+                    st.success(f"✅ Auto-detected URL column: **{auto_url_col}**")
+                    default_url_idx = list(df.columns).index(auto_url_col)
+                else:
+                    st.warning("⚠️ Could not auto-detect URL column")
+                    default_url_idx = 0
 
-            if auto_url_col and confidence > 0.7:
-                st.success(f"✅ Auto-detected URL column: **{auto_url_col}** (confidence: {confidence*100:.0f}%)")
-                url_col = auto_url_col
-                name_col = auto_name_col if auto_name_col else 'name'
+                url_col = st.selectbox(
+                    "Select website column",
+                    options=df.columns,
+                    index=default_url_idx,
+                    help="Column containing website URLs"
+                )
 
-                # Show manual selection in expander (optional)
-                with st.expander("🔧 Advanced: Change column selection"):
-                    st.caption("Only needed if auto-detection is incorrect")
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        default_url_idx = list(df.columns).index(auto_url_col)
-                        url_col = st.selectbox(
-                            "Website column",
-                            options=df.columns,
-                            index=default_url_idx,
-                            help="Column containing website URLs"
-                        )
-                    with col2:
-                        default_name_idx = list(df.columns).index(auto_name_col) if auto_name_col else 0
-                        name_col = st.selectbox(
-                            "Name column (optional)",
-                            options=df.columns,
-                            index=default_name_idx,
-                            help="Column for company names (if exists)"
-                        )
-            else:
-                st.warning("⚠️ Could not auto-detect URL column with high confidence. Please select manually.")
-                col1, col2 = st.columns(2)
-                with col1:
-                    url_col = st.selectbox(
-                        "Select website column",
-                        options=df.columns,
-                        index=list(df.columns).index(auto_url_col) if auto_url_col else 0,
-                        help="Column containing website URLs"
-                    )
-                with col2:
-                    default_name_idx = list(df.columns).index(auto_name_col) if auto_name_col else 0
-                    name_col = st.selectbox(
-                        "Select name column (optional)",
-                        options=df.columns,
-                        index=default_name_idx,
-                        help="Column for company names (if exists)"
-                    )
+            with col2:
+                # Auto-detect or create name column
+                auto_name_col = None
+                name_candidates = ['name', 'company_name', 'company', 'business_name']
+                for col in name_candidates:
+                    if col in df.columns:
+                        auto_name_col = col
+                        break
+
+                if not auto_name_col:
+                    # Generate name from website
+                    df['name'] = df[url_col].apply(lambda x: str(x).replace('http://', '').replace('https://', '').replace('www.', '').split('/')[0] if pd.notna(x) else '')
+                    auto_name_col = 'name'
+                    st.info(f"✅ Generated 'name' column")
+
+                default_name_idx = list(df.columns).index(auto_name_col) if auto_name_col in df.columns else 0
+
+                name_col = st.selectbox(
+                    "Select name column",
+                    options=df.columns,
+                    index=default_name_idx,
+                    help="Column containing company/business name"
+                )
 
             # Validate URLs
             st.subheader("🔍 URL Validation")
@@ -733,7 +702,6 @@ with tab2:
     try:
         if not RESULTS_DIR.exists():
             st.info("📂 No results yet. Run scraper first in the 'Upload & Run' tab!")
-            result_folders = []
         else:
             result_folders = sorted(
                 [f for f in RESULTS_DIR.iterdir() if f.is_dir() and f.name.startswith('scraped_')],
@@ -813,136 +781,45 @@ with tab2:
 
                 st.divider()
 
-                # Download files - Show only non-empty files
+                # Download files
                 st.subheader("⬇️ Download Files")
 
-                # Get all CSV files in folder
-                all_csv_files = list(selected.glob("*.csv"))
+                csv_files = [f for f in selected.glob("*.csv") if 'temp_input' not in f.name]
 
-                # Filter and organize files
-                file_categories = []
-                for csv_file in all_csv_files:
+                for csv_file in csv_files:
                     try:
-                        # Count rows (excluding header)
-                        row_count = sum(1 for _ in open(csv_file, encoding='utf-8-sig')) - 1
+                        df_file = pd.read_csv(csv_file, nrows=10)  # Read only first 10 rows for preview
+                        full_row_count = sum(1 for _ in open(csv_file, encoding='utf-8-sig')) - 1  # Count total rows
 
-                        # Only show non-empty files
-                        if row_count > 0:
-                            # Determine category and icon
-                            filename = csv_file.stem
-                            if 'success' in filename:
-                                icon = "✅"
-                                category = "Success"
-                            elif 'failed_static' in filename:
-                                icon = "❌"
-                                category = "Failed (Static sites)"
-                            elif 'failed_dynamic' in filename:
-                                icon = "❌"
-                                category = "Failed (Dynamic sites)"
-                            elif 'failed' in filename:
-                                icon = "❌"
-                                category = "Failed (Other)"
-                            elif 'all_combined' in filename:
-                                icon = "📊"
-                                category = "All Combined"
-                            else:
-                                icon = "📄"
-                                category = filename.replace('_', ' ').title()
-
-                            file_categories.append({
-                                'icon': icon,
-                                'category': category,
-                                'csv_file': csv_file,
-                                'row_count': row_count
-                            })
-                    except Exception:
-                        continue
-
-                # Sort by row count (descending)
-                file_categories.sort(key=lambda x: x['row_count'], reverse=True)
-
-                if not file_categories:
-                    st.info("📂 No result files found")
-                else:
-                    for file_info in file_categories:
-                        st.markdown(f"### {file_info['icon']} {file_info['category']}")
-                        st.caption(f"Total rows: **{file_info['row_count']:,}**")
-
-                        # Check for additional formats
-                        csv_file = file_info['csv_file']
-                        json_file = csv_file.parent / f"{csv_file.stem}.json"
-                        excel_file = csv_file.parent / f"{csv_file.stem}.xlsx"
-
-                        # Generate descriptive download names with timestamp
-                        row_count = file_info['row_count']
-                        filename = csv_file.stem
-                        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-
-                        # Create readable base name
-                        if 'success' in filename:
-                            base_name = f"success_{row_count}_companies_{timestamp}"
-                        elif 'failed_static' in filename:
-                            base_name = f"failed_static_{row_count}_sites_{timestamp}"
-                        elif 'failed_dynamic' in filename:
-                            base_name = f"failed_dynamic_{row_count}_sites_{timestamp}"
-                        elif 'failed' in filename:
-                            base_name = f"failed_other_{row_count}_sites_{timestamp}"
-                        elif 'all_combined' in filename:
-                            base_name = f"all_results_{row_count}_sites_{timestamp}"
-                        else:
-                            base_name = f"{filename.replace('scraped_', '').replace('_', '-')}_{row_count}_{timestamp}"
-
-                        # Preview and download buttons
-                        col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
+                        col1, col2, col3 = st.columns([3, 1, 1])
 
                         with col1:
-                            try:
-                                df_preview = pd.read_csv(csv_file, nrows=10, encoding='utf-8-sig')
-                                with st.expander("👁️ Preview first 10 rows"):
-                                    st.dataframe(df_preview, use_container_width=True)
-                            except Exception as e:
-                                st.caption(f"Preview unavailable: {e}")
+                            # Determine file type icon
+                            if 'success' in csv_file.name.lower():
+                                icon = "✅"
+                            elif 'failed' in csv_file.name.lower():
+                                icon = "❌"
+                            else:
+                                icon = "📄"
+
+                            st.write(f"{icon} **{csv_file.name}** - {full_row_count} rows")
 
                         with col2:
                             st.download_button(
-                                "📥 CSV",
+                                "Download",
                                 data=csv_file.read_bytes(),
-                                file_name=f"{base_name}.csv",
+                                file_name=csv_file.name,
                                 mime="text/csv",
-                                key=f"download_csv_{csv_file.stem}",
-                                use_container_width=True,
-                                help="Download as CSV (Excel compatible)"
+                                key=f"download_{csv_file.name}",
+                                use_container_width=True
                             )
 
                         with col3:
-                            if json_file.exists():
-                                st.download_button(
-                                    "📥 JSON",
-                                    data=json_file.read_bytes(),
-                                    file_name=f"{base_name}.json",
-                                    mime="application/json",
-                                    key=f"download_json_{csv_file.stem}",
-                                    use_container_width=True,
-                                    help="Download as JSON (structured data)"
-                                )
-                            else:
-                                st.caption("JSON N/A")
+                            with st.expander("👁️ Preview"):
+                                st.dataframe(df_file.head(10), use_container_width=True)
 
-                        with col4:
-                            if excel_file.exists():
-                                st.download_button(
-                                    "📥 Excel",
-                                    data=excel_file.read_bytes(),
-                                    file_name=f"{base_name}.xlsx",
-                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                    key=f"download_excel_{csv_file.stem}",
-                                    use_container_width=True,
-                                    help="Download as Excel (.xlsx)"
-                                )
-                            else:
-                                st.caption("Excel N/A")
-
-                        st.divider()
+                    except Exception as csv_error:
+                        st.warning(f"⚠️ Could not load {csv_file.name}: {csv_error}")
 
             else:
                 st.warning("⚠️ No analytics found for this folder")
@@ -953,21 +830,6 @@ with tab2:
     except Exception as e:
         st.error(f"❌ Error loading results: {e}")
         st.info("Try refreshing the page or check the results folder manually.")
-
-with tab3:
-    st.header("Email Validation")
-
-    st.info("""
-    **📋 Email Validation Features:**
-    - Upload CSV or select from scraped results
-    - Bulk validation via Mails.so API
-    - Real-time progress tracking
-    - Download validated results (all, deliverable, filtered)
-    - Corporate emails filtering (exclude Gmail, Yahoo, etc.)
-    """)
-
-    # Render the validation component
-    render_validation_tab(results_dir=str(RESULTS_DIR))
 
 st.divider()
 st.caption("Homepage Scraper v4.1.1 (Cross-Platform) | 2025-11-20")

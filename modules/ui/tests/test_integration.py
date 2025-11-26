@@ -7,8 +7,8 @@ Tests all imports and basic functionality
 import sys
 from pathlib import Path
 
-# Add project root to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+# Add project root to path (modules/ui/tests/ → modules/ui/ → modules/ → root)
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 print("=" * 60)
 print("UNIFIED UI PLATFORM - INTEGRATION TEST")
@@ -65,7 +65,7 @@ required_dirs = [
 ]
 
 for dir_path in required_dirs:
-    full_path = Path(__file__).parent.parent.parent / dir_path
+    full_path = Path(__file__).parent.parent.parent.parent / dir_path
     if full_path.exists():
         print(f"  [OK] {dir_path}")
     else:
@@ -92,7 +92,7 @@ required_files = [
 ]
 
 for file_path in required_files:
-    full_path = Path(__file__).parent.parent.parent / file_path
+    full_path = Path(__file__).parent.parent.parent.parent / file_path
     if full_path.exists():
         print(f"  [OK] {file_path}")
     else:
