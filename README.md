@@ -126,7 +126,7 @@ GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json
 Universal logger automatically tracks all script execution:
 
 ```python
-from logger.universal_logger import get_logger
+from modules.shared.logging.universal_logger import get_logger
 
 logger = get_logger(__name__)
 logger.info("Processing started")

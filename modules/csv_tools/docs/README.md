@@ -197,7 +197,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
-from logger.universal_logger import get_logger
+from modules.shared.logging.universal_logger import get_logger
 from modules.csv_tools.scripts.csv_merger import CSVMerger
 
 logger = get_logger(__name__)
