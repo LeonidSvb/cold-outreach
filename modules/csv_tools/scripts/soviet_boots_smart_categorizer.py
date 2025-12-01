@@ -29,7 +29,7 @@ from datetime import datetime
 import sys
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
-from logger.universal_logger import get_logger
+from modules.shared.logging.universal_logger import get_logger
 
 logger = get_logger(__name__)
 

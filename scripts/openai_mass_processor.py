@@ -47,7 +47,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # Try to import logger, fall back to print if not available
 try:
-    from logger.universal_logger import get_logger
+    from modules.shared.logging.universal_logger import get_logger
     logger = get_logger(__name__)
     def auto_log(name):
         def decorator(func):

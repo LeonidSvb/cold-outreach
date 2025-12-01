@@ -77,7 +77,7 @@ except ImportError:
     from modules.scraping.lib.stats_tracker import StatsTracker, estimate_time
 
 try:
-    from logger.universal_logger import get_logger
+    from modules.shared.logging.universal_logger import get_logger
     logger = get_logger(__name__)
 except ImportError:
     import logging

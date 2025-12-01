@@ -321,7 +321,7 @@ python scripts/openai_mass_processor.py --help
 python scripts/scraping_website_scraper.py --help
 
 # Verify logger import
-python -c "from logger.universal_logger import get_logger; print('OK')"
+python -c "from modules.shared.logging.universal_logger import get_logger; print('OK')"
 
 # Verify frontend
 cd frontend && npm run dev
