@@ -28,7 +28,8 @@ from modules.ui.components.pipeline_status import render_pipeline_status
 from modules.ui.tabs import (
     render_email_scraper_tab,
     render_email_validator_tab,
-    render_ai_processor_tab
+    render_ai_processor_tab,
+    render_csv_merger_tab
 )
 
 # ========================
@@ -86,10 +87,11 @@ render_pipeline_status()
 
 st.markdown("---")
 
-tab1, tab2, tab3 = st.tabs([
+tab1, tab2, tab3, tab4 = st.tabs([
     "📧 Email Scraper",
     "✅ Email Validator",
-    "🤖 AI Processor"
+    "🤖 AI Processor",
+    "🔗 CSV Merger"
 ])
 
 with tab1:
@@ -100,6 +102,9 @@ with tab2:
 
 with tab3:
     render_ai_processor_tab()
+
+with tab4:
+    render_csv_merger_tab()
 
 # ========================
 # FOOTER
