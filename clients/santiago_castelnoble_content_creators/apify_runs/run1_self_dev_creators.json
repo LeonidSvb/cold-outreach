@@ -1,0 +1,85 @@
+{
+  "data": {
+    "id": "cgOCNSLG4Q8fbPees",
+    "actId": "IoSHqwTR9YGhzccez",
+    "userId": "aeaSLyzjSAdUJk3Nj",
+    "startedAt": "2025-12-03T04:57:40.046Z",
+    "finishedAt": "2025-12-03T05:02:38.669Z",
+    "status": "SUCCEEDED",
+    "statusMessage": "🚀 Success! self_dev_creators",
+    "isStatusMessageTerminal": true,
+    "meta": {
+      "origin": "WEB",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+    },
+    "stats": {
+      "inputBodyLen": 776,
+      "migrationCount": 0,
+      "rebootCount": 0,
+      "restartCount": 0,
+      "durationMillis": 298461,
+      "resurrectCount": 0,
+      "runTimeSecs": 298.461,
+      "metamorph": 0,
+      "computeUnits": 0.041452916666666666,
+      "memAvgBytes": 69656995.92445216,
+      "memMaxBytes": 74858496,
+      "memCurrentBytes": 0,
+      "cpuAvgUsage": 3.0264776738227623,
+      "cpuMaxUsage": 91.12964264082373,
+      "cpuCurrentUsage": 0,
+      "netRxBytes": 6402614,
+      "netTxBytes": 4793667
+    },
+    "options": {
+      "build": "latest",
+      "timeoutSecs": 3000,
+      "memoryMbytes": 512,
+      "maxItems": null,
+      "maxTotalChargeUsd": 21.458037,
+      "diskMbytes": 1024
+    },
+    "buildId": "iUUtskx8pIesV3wZe",
+    "exitCode": 0,
+    "defaultKeyValueStoreId": "WsfRDWoberdXrPQJQ",
+    "defaultDatasetId": "0iEW80aAafyr8YriI",
+    "defaultRequestQueueId": "n9GI9Mm74eLpa1P9X",
+    "pricingInfo": {
+      "minimalMaxTotalChargeUsd": 0.5,
+      "pricingModel": "PAY_PER_EVENT",
+      "isPriceChangeNotificationSuppressed": false,
+      "startedAt": "2025-09-28T19:57:24.413Z",
+      "createdAt": "2025-09-28T19:57:24.535Z",
+      "apifyMarginPercentage": 0,
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "eventPriceUsd": 0.02,
+            "isOneTimeEvent": true
+          },
+          "lead-fetched": {
+            "eventTitle": "Lead Fetched",
+            "eventDescription": "Price for fetching a lead.",
+            "eventPriceUsd": 0.002
+          }
+        }
+      }
+    },
+    "chargedEventCounts": {
+      "apify-actor-start": 1,
+      "lead-fetched": 1000
+    },
+    "platformUsageBillingModel": "DEVELOPER",
+    "accountedChargedEventCounts": {
+      "apify-actor-start": 1,
+      "lead-fetched": 1000
+    },
+    "generalAccess": "FOLLOW_USER_SETTING",
+    "buildNumber": "0.0.41",
+    "containerUrl": "https://rb3kxofsmwpl.runs.apify.net",
+    "usageTotalUsd": 2.02,
+    "consoleUrl": "https://console.apify.com/view/runs/cgOCNSLG4Q8fbPees"
+  }
+}

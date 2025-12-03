@@ -1,0 +1,108 @@
+# APIFY LEADS FINDER - ПОЛНЫЙ СПИСОК INDUSTRIES
+
+## Для Recruitment Agencies релевантные:
+
+✅ PRIMARY (главные):
+- staffing & recruiting
+- human resources
+
+✅ SECONDARY (если мало лидов):
+- professional training & coaching
+- management consulting
+- human resources services
+
+---
+
+## ПОЛНЫЙ СПИСОК ВСЕХ INDUSTRIES В APIFY:
+
+accounting
+apparel & fashion
+architecture & planning
+arts & crafts
+automotive
+aviation & aerospace
+building materials
+business supplies & equipment
+civil engineering
+computer software
+construction
+consumer goods
+consumer services
+cosmetics
+design
+education management
+electrical/electronic manufacturing
+entertainment
+environmental services
+events services
+facilities services
+financial services
+food & beverages
+food production
+furniture
+graphic design
+health, wellness & fitness
+higher education
+hospital & health care
+hospitality
+human resources
+individual & family services
+information technology & services
+insurance
+internet
+law practice
+legal services
+leisure, travel & tourism
+logistics & supply chain
+machinery
+management consulting
+marketing & advertising
+mechanical or industrial engineering
+media production
+medical devices
+medical practice
+mining & metals
+music
+nonprofit organization management
+oil & energy
+online media
+pharmaceuticals
+photography
+printing
+professional training & coaching
+public relations & communications
+publishing
+real estate
+religious institutions
+renewables & environment
+research
+restaurants
+retail
+sports
+staffing & recruiting
+telecommunications
+transportation/trucking/railroad
+wholesale
+
+---
+
+## ДЛЯ RECRUITMENT AGENCIES ИСПОЛЬЗУЙ:
+
+**Основной фильтр:**
+"company_industry": [
+  "staffing & recruiting",
+  "human resources"
+]
+
+**Если мало результатов, добавь:**
+"company_industry": [
+  "staffing & recruiting",
+  "human resources",
+  "professional training & coaching",
+  "management consulting"
+]
+
+**НЕ используй:**
+- "computer software" (это HR tech, не agencies)
+- "marketing & advertising" (не recruitment)
+- "consulting" (слишком широко)

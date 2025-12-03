@@ -1,0 +1,6 @@
+{
+  "error": {
+    "type": "page-not-found",
+    "message": "We have bad news: there is no API endpoint at this URL. Did you specify it correctly?"
+  }
+}

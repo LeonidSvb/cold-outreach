@@ -1,0 +1,118 @@
+{
+  "data": {
+    "id": "IoSHqwTR9YGhzccez",
+    "userId": "iJOSHWd9xfahG0SZm",
+    "name": "leads-finder",
+    "username": "code_crafter",
+    "description": "✅ Affordable alternative to ZoomInfo, Lusha & Apollo. ✅ Get Business email, 📞Mobile Number, Personal email, LinkedIn profiles, company details etc..",
+    "isPublic": true,
+    "createdAt": "2025-09-28T19:51:03.223Z",
+    "modifiedAt": "2025-11-23T20:11:44.491Z",
+    "taggedBuilds": {
+      "latest": {
+        "buildId": "iUUtskx8pIesV3wZe",
+        "finishedAt": "2025-11-23T20:11:44.491Z",
+        "buildNumberInt": 41,
+        "buildNumber": "0.0.41"
+      }
+    },
+    "stats": {
+      "totalBuilds": 42,
+      "totalRuns": 125401,
+      "totalUsers": 8628,
+      "totalUsers7Days": 1218,
+      "totalUsers30Days": 3354,
+      "totalUsers90Days": 5391,
+      "lastRunStartedAt": "2025-12-03T05:44:01.170Z",
+      "publicActorRunStats30Days": {
+        "ABORTED": 1317,
+        "FAILED": 541,
+        "SUCCEEDED": 73689,
+        "TIMED-OUT": 322,
+        "TOTAL": 76420
+      },
+      "actorReviewCount": 77,
+      "actorReviewRating": 3.190916716936492,
+      "bookmarkCount": 230
+    },
+    "versions": [
+      {
+        "versionNumber": "0.0",
+        "sourceType": "GIT_REPO",
+        "buildTag": "latest"
+      }
+    ],
+    "defaultRunOptions": {
+      "build": "latest",
+      "timeoutSecs": 3000,
+      "memoryMbytes": 512,
+      "maxItems": null,
+      "maxTotalChargeUsd": null
+    },
+    "exampleRunInput": {
+      "body": "{ \"helloWorld\": 123 }",
+      "contentType": "application/json; charset=utf-8"
+    },
+    "categories": [
+      "LEAD_GENERATION",
+      "AGENTS"
+    ],
+    "isDeprecated": false,
+    "title": "✨Leads Finder - $1.5/1k leads with Emails [Apollo Alternative]",
+    "pictureUrl": "https://apify-image-uploads-prod.s3.us-east-1.amazonaws.com/iJOSHWd9xfahG0SZm-actor-IoSHqwTR9YGhzccez-bgLr7Onj4C-company_scraper.png",
+    "seoTitle": null,
+    "seoDescription": null,
+    "pricingInfos": [
+      {
+        "minimalMaxTotalChargeUsd": 0.5,
+        "pricingModel": "PAY_PER_EVENT",
+        "isPriceChangeNotificationSuppressed": false,
+        "pricingPerEvent": {
+          "actorChargeEvents": {
+            "apify-actor-start": {
+              "eventTitle": "Actor Start",
+              "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+              "eventPriceUsd": 0.02,
+              "isOneTimeEvent": true
+            },
+            "lead-fetched": {
+              "eventTitle": "Lead Fetched",
+              "eventDescription": "Price for fetching a lead.",
+              "eventTieredPricingUsd": {
+                "FREE": {
+                  "tieredEventPriceUsd": 0.002
+                },
+                "BRONZE": {
+                  "tieredEventPriceUsd": 0.002
+                },
+                "SILVER": {
+                  "tieredEventPriceUsd": 0.0018
+                },
+                "GOLD": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "PLATINUM": {
+                  "tieredEventPriceUsd": 0.0015
+                },
+                "DIAMOND": {
+                  "tieredEventPriceUsd": 0.0015
+                }
+              }
+            }
+          }
+        },
+        "startedAt": "2025-09-28T19:57:24.413Z",
+        "createdAt": "2025-09-28T19:57:24.535Z",
+        "apifyMarginPercentage": 0
+      }
+    ],
+    "notice": "NONE",
+    "isCritical": false,
+    "isGeneric": false,
+    "hasNoDataset": false,
+    "isSourceCodeHidden": true,
+    "standbyUrl": null,
+    "actorPermissionLevel": "FULL_PERMISSIONS",
+    "deploymentKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC94T+WpTn2KkjeR0T6Q8WmC4zGXQb4U5noO3yEbrW2Ej68H26xliQrNe41CQK7b+Y4Wd+Qdgs1wfNhiU5bvnuucGHztvRZCMRy/NxAD9ItI/DNsnQWHJhb38yHEsKzGMTdr77BwhfLFJA0pkoW4wLCYJU9cRzQcyjShzQwly9vQy9qZ8GTv/T1BpZGJ+857nWXvKkNe+Z2iFP08CMkcNjhnrFGZ4uPTxxD3OJDTvuN7p7DMEoRFy3sMNww62jSNYCWzfCfkOAv8iYFlGKw/Y1T3NbPkzrhvTSu4XTjZcmcVahYvs5y3R5+Uaa+VvEB+xYPJ8SllPL1sphoARWelId7 \n"
+  }
+}

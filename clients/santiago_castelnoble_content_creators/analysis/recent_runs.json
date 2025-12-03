@@ -1,0 +1,103 @@
+{
+  "data": {
+    "total": 5,
+    "count": 5,
+    "offset": 0,
+    "limit": 5,
+    "desc": false,
+    "items": [
+      {
+        "id": "cgOCNSLG4Q8fbPees",
+        "actId": "IoSHqwTR9YGhzccez",
+        "status": "SUCCEEDED",
+        "startedAt": "2025-12-03T04:57:40.046Z",
+        "finishedAt": "2025-12-03T05:02:38.669Z",
+        "buildId": "iUUtskx8pIesV3wZe",
+        "buildNumber": "0.0.41",
+        "buildNumberInt": 41,
+        "meta": {
+          "origin": "WEB"
+        },
+        "defaultKeyValueStoreId": "WsfRDWoberdXrPQJQ",
+        "defaultDatasetId": "0iEW80aAafyr8YriI",
+        "defaultRequestQueueId": "n9GI9Mm74eLpa1P9X",
+        "usageTotalUsd": 2.02,
+        "userId": "aeaSLyzjSAdUJk3Nj"
+      },
+      {
+        "id": "9JvAhByBQAVA6xwtS",
+        "actId": "IoSHqwTR9YGhzccez",
+        "status": "SUCCEEDED",
+        "startedAt": "2025-12-03T05:09:20.677Z",
+        "finishedAt": "2025-12-03T05:10:24.561Z",
+        "buildId": "iUUtskx8pIesV3wZe",
+        "buildNumber": "0.0.41",
+        "buildNumberInt": 41,
+        "meta": {
+          "origin": "WEB"
+        },
+        "defaultKeyValueStoreId": "U6oFXhIWCazEAjhc2",
+        "defaultDatasetId": "mu9gpzdkrlswYbEwM",
+        "defaultRequestQueueId": "pBfs6GsLscQp1SGth",
+        "usageTotalUsd": 0.07200000000000001,
+        "userId": "aeaSLyzjSAdUJk3Nj"
+      },
+      {
+        "id": "Ydme2bO8QsJItZ5uP",
+        "actId": "IoSHqwTR9YGhzccez",
+        "actorTaskId": "aFAzid9r5gbde8FiB",
+        "status": "SUCCEEDED",
+        "startedAt": "2025-12-03T05:21:40.085Z",
+        "finishedAt": "2025-12-03T05:22:03.743Z",
+        "buildId": "iUUtskx8pIesV3wZe",
+        "buildNumber": "0.0.41",
+        "buildNumberInt": 41,
+        "meta": {
+          "origin": "WEB"
+        },
+        "defaultKeyValueStoreId": "2yiZph9GQqef7WrQt",
+        "defaultDatasetId": "4v4faN6fkzYrarFEX",
+        "defaultRequestQueueId": "2MOHaOo2pML3SjiaC",
+        "usageTotalUsd": 0.08,
+        "userId": "aeaSLyzjSAdUJk3Nj"
+      },
+      {
+        "id": "bdGt28J1cpkYqLHQf",
+        "actId": "IoSHqwTR9YGhzccez",
+        "actorTaskId": "aFAzid9r5gbde8FiB",
+        "status": "SUCCEEDED",
+        "startedAt": "2025-12-03T05:25:36.784Z",
+        "finishedAt": "2025-12-03T05:26:07.795Z",
+        "buildId": "iUUtskx8pIesV3wZe",
+        "buildNumber": "0.0.41",
+        "buildNumberInt": 41,
+        "meta": {
+          "origin": "WEB"
+        },
+        "defaultKeyValueStoreId": "y2Uv89bAgSV7FE2ui",
+        "defaultDatasetId": "aAceSF3u4YYBgKhbz",
+        "defaultRequestQueueId": "jNXcSAWO8vS6Qh118",
+        "usageTotalUsd": 0.08,
+        "userId": "aeaSLyzjSAdUJk3Nj"
+      },
+      {
+        "id": "j4M5RIPKyWNqhUXWv",
+        "actId": "IoSHqwTR9YGhzccez",
+        "status": "SUCCEEDED",
+        "startedAt": "2025-12-03T05:34:07.207Z",
+        "finishedAt": "2025-12-03T05:34:19.887Z",
+        "buildId": "iUUtskx8pIesV3wZe",
+        "buildNumber": "0.0.41",
+        "buildNumberInt": 41,
+        "meta": {
+          "origin": "WEB"
+        },
+        "defaultKeyValueStoreId": "caQekUHwrOcCzdPTg",
+        "defaultDatasetId": "tzG96nolaU1maWZsT",
+        "defaultRequestQueueId": "dpfhCnHlrGko9Z84R",
+        "usageTotalUsd": 0.04,
+        "userId": "aeaSLyzjSAdUJk3Nj"
+      }
+    ]
+  }
+}

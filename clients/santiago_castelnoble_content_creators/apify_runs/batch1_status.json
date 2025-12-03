@@ -1,0 +1,85 @@
+{
+  "data": {
+    "id": "OaXx7Fqth3ByVFVuh",
+    "actId": "IoSHqwTR9YGhzccez",
+    "userId": "aeaSLyzjSAdUJk3Nj",
+    "startedAt": "2025-12-03T05:56:46.108Z",
+    "finishedAt": "2025-12-03T05:57:19.133Z",
+    "status": "SUCCEEDED",
+    "statusMessage": "🚀 Success! batch1_test",
+    "isStatusMessageTerminal": true,
+    "meta": {
+      "origin": "API",
+      "userAgent": "curl/8.14.1"
+    },
+    "stats": {
+      "inputBodyLen": 509,
+      "migrationCount": 0,
+      "rebootCount": 0,
+      "restartCount": 0,
+      "durationMillis": 32876,
+      "resurrectCount": 0,
+      "runTimeSecs": 32.876,
+      "metamorph": 0,
+      "computeUnits": 0.004566111111111111,
+      "memAvgBytes": 52905761.6004374,
+      "memMaxBytes": 58310656,
+      "memCurrentBytes": 58179584,
+      "cpuAvgUsage": 1.4026420115087712,
+      "cpuMaxUsage": 79.88904142011835,
+      "cpuCurrentUsage": 7.283717561858781,
+      "netRxBytes": 206656,
+      "netTxBytes": 131879
+    },
+    "options": {
+      "build": "latest",
+      "timeoutSecs": 3000,
+      "memoryMbytes": 512,
+      "maxItems": null,
+      "maxTotalChargeUsd": 19.163604,
+      "diskMbytes": 1024
+    },
+    "buildId": "iUUtskx8pIesV3wZe",
+    "exitCode": 0,
+    "defaultKeyValueStoreId": "8M0YRI44dBDOWZ8Jf",
+    "defaultDatasetId": "7ofkj4pVOUUZ6O9Dj",
+    "defaultRequestQueueId": "7KW9fSbu1r8BDOd6H",
+    "pricingInfo": {
+      "minimalMaxTotalChargeUsd": 0.5,
+      "pricingModel": "PAY_PER_EVENT",
+      "isPriceChangeNotificationSuppressed": false,
+      "startedAt": "2025-09-28T19:57:24.413Z",
+      "createdAt": "2025-09-28T19:57:24.535Z",
+      "apifyMarginPercentage": 0,
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "apify-actor-start": {
+            "eventTitle": "Actor Start",
+            "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+            "eventPriceUsd": 0.02,
+            "isOneTimeEvent": true
+          },
+          "lead-fetched": {
+            "eventTitle": "Lead Fetched",
+            "eventDescription": "Price for fetching a lead.",
+            "eventPriceUsd": 0.002
+          }
+        }
+      }
+    },
+    "chargedEventCounts": {
+      "apify-actor-start": 1,
+      "lead-fetched": 20
+    },
+    "platformUsageBillingModel": "DEVELOPER",
+    "accountedChargedEventCounts": {
+      "apify-actor-start": 1,
+      "lead-fetched": 20
+    },
+    "generalAccess": "FOLLOW_USER_SETTING",
+    "buildNumber": "0.0.41",
+    "containerUrl": "https://9rlqn9g8gzde.runs.apify.net",
+    "usageTotalUsd": 0.06,
+    "consoleUrl": "https://console.apify.com/view/runs/OaXx7Fqth3ByVFVuh"
+  }
+}
