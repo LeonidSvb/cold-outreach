@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 === YOUTUBE CHANNELS EMAIL SCRAPER ===
-Version: 1.0.0 | Created: 2025-12-02
+Version: 1.1.0 | Created: 2025-12-02 | Updated: 2025-12-02
 
 PURPOSE:
 Extract emails from YouTube channels' websites using ultra-fast scraper
@@ -11,13 +11,20 @@ FEATURES:
 - Extracts website URLs from channel bio links
 - Scrapes emails using async ultra-fast scraper
 - Filters out link aggregators (linktr.ee, patreon, etc.)
+- Advanced email cleaning with compound TLD support (.co.uk, .com.au, etc.)
+- Removes malformed emails with text appended after TLD
 
 USAGE:
 python youtube_channels_email_scraper.py --input dataset.json --limit 50
+
+IMPROVEMENTS:
+v1.1.0 - Fixed email extraction to handle compound TLDs and remove text appended after domain
+v1.0.0 - Initial version
 """
 
 import sys
 import json
+import re
 import asyncio
 import pandas as pd
 from pathlib import Path
@@ -48,6 +55,82 @@ SKIP_DOMAINS = [
     'youtube.com',
     'tiktok.com'
 ]
+
+# Compound TLDs (check first)
+COMPOUND_TLDS = [
+    'co.uk', 'com.au', 'co.za', 'co.nz', 'com.br', 'co.in',
+    'com.mx', 'co.jp', 'com.cn', 'co.kr', 'com.ar', 'co.il'
+]
+
+# Single TLDs
+SINGLE_TLDS = [
+    'com', 'net', 'org', 'edu', 'gov', 'mil', 'io', 'ai', 'co',
+    'uk', 'ca', 'au', 'de', 'fr', 'jp', 'cn', 'ru', 'br', 'in',
+    'biz', 'info', 'me', 'tv', 'us', 'tech', 'online', 'store', 'dev'
+]
+
+# Spam patterns
+SPAM_PATTERNS = [
+    r'^test\d*@',
+    r'^example\d*@',
+    r'@sentry',
+    r'@example\.com',
+    r'bootcamp@',
+    r'advisors\d+'
+]
+
+def clean_email_properly(email_str: str) -> str:
+    """
+    Clean emails with proper TLD extraction and spam filtering.
+    Handles compound TLDs like .co.uk and removes text appended after domain.
+    """
+    if not email_str or pd.isna(email_str):
+        return ''
+
+    # Find all potential emails
+    pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'
+    matches = re.findall(pattern, str(email_str))
+
+    clean_emails = []
+
+    for match in matches:
+        email = match.lower().strip()
+
+        # Check spam
+        if any(re.search(p, email, re.I) for p in SPAM_PATTERNS):
+            continue
+
+        if '@' not in email:
+            continue
+
+        local, domain = email.split('@', 1)
+
+        # Try compound TLDs first
+        found = False
+        for tld in COMPOUND_TLDS:
+            if f'.{tld}' in domain:
+                idx = domain.find(f'.{tld}')
+                clean_domain = domain[:idx + len(tld) + 1]
+                clean_email = f'{local}@{clean_domain}'
+                if re.match(r'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\.[a-z]{2,}$', clean_email):
+                    clean_emails.append(clean_email)
+                    found = True
+                    break
+
+        if found:
+            continue
+
+        # Try single TLDs
+        for tld in SINGLE_TLDS:
+            if f'.{tld}' in domain:
+                idx = domain.find(f'.{tld}')
+                clean_domain = domain[:idx + len(tld) + 1]
+                clean_email = f'{local}@{clean_domain}'
+                if re.match(r'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$', clean_email):
+                    clean_emails.append(clean_email)
+                    break
+
+    return ', '.join(list(set(clean_emails)))
 
 def extract_channel_data(json_path: str) -> List[Dict]:
     """
@@ -169,9 +252,17 @@ def save_results(df: pd.DataFrame, input_file: str) -> str:
     # Save success only (with emails)
     success_df = df[df['scrape_status'] == 'success'].copy()
     if len(success_df) > 0:
-        success_file = results_dir / f"youtube_emails_{input_name}_{timestamp}_SUCCESS.csv"
-        success_df.to_csv(success_file, index=False, encoding='utf-8-sig')
-        logger.info(f"Success results saved: {success_file}")
+        # Clean emails properly (handle compound TLDs and remove appended text)
+        success_df['email'] = success_df['email'].apply(clean_email_properly)
+
+        # Remove rows with no clean emails
+        success_df = success_df[success_df['email'] != ''].copy()
+
+        if len(success_df) > 0:
+            success_file = results_dir / f"youtube_emails_{input_name}_{timestamp}_SUCCESS.csv"
+            success_df.to_csv(success_file, index=False, encoding='utf-8-sig')
+            logger.info(f"Success results saved: {success_file}")
+            logger.info(f"Clean emails: {len(success_df)} channels")
 
     # Print sample results
     logger.info("\n" + "="*70)
