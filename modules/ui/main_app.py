@@ -29,7 +29,8 @@ from modules.ui.tabs import (
     render_email_scraper_tab,
     render_email_validator_tab,
     render_ai_processor_tab,
-    render_csv_merger_tab
+    render_csv_merger_tab,
+    render_web_scraper_ai_tab
 )
 
 # ========================
@@ -75,6 +76,10 @@ if 'ai_processed_data' not in st.session_state:
 if 'ai_working_data' not in st.session_state:
     st.session_state['ai_working_data'] = None
 
+# Web Scraper + AI data
+if 'web_scraper_ai_data' not in st.session_state:
+    st.session_state['web_scraper_ai_data'] = None
+
 # ========================
 # SIDEBAR: PIPELINE STATUS
 # ========================
@@ -87,11 +92,12 @@ render_pipeline_status()
 
 st.markdown("---")
 
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📧 Email Scraper",
     "✅ Email Validator",
     "🤖 AI Processor",
-    "🔗 CSV Merger"
+    "🔗 CSV Merger",
+    "🌐 Web Scraper + AI"
 ])
 
 with tab1:
@@ -105,6 +111,9 @@ with tab3:
 
 with tab4:
     render_csv_merger_tab()
+
+with tab5:
+    render_web_scraper_ai_tab()
 
 # ========================
 # FOOTER
