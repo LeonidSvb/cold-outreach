@@ -550,6 +550,12 @@ async def process_csv_async(input_file: str) -> str:
                 pass
 
         logger.info(f"✅ Generated {successful_ai}/{len(scraped_contents)} summaries in {ai_time:.1f}s")
+    else:
+        # No AI processing, mark all scraped as success
+        if not CONFIG['AI_PROCESSING']:
+            logger.info(f"\n[AI PROCESSING DISABLED] Marking {len(scraped_contents)} scraped sites as success")
+            for idx, _ in scraped_contents:
+                df.at[idx, 'scrape_status'] = 'success'
 
     total_time = time.time() - start_time
 

@@ -52,9 +52,18 @@ with st.sidebar:
     homepage_only = st.checkbox("Homepage Only", value=True, help="Don't scrape additional pages")
 
     st.subheader("AI Settings")
-    ai_processing = st.checkbox("Enable AI Summaries", value=True)
+    ai_processing = st.checkbox("Enable AI Summaries", value=True, help="Uncheck to scrape text only (no OpenAI needed)")
 
     if ai_processing:
+        st.info("💡 **OpenAI API Key Required** - Enter your key below or set in .env file")
+
+        openai_key = st.text_input(
+            "OpenAI API Key",
+            type="password",
+            placeholder="sk-proj-...",
+            help="Your OpenAI API key. Leave empty to use key from .env file"
+        )
+
         model = st.selectbox(
             "OpenAI Model",
             ["gpt-4o-mini", "gpt-4o", "gpt-4-turbo"],
@@ -79,6 +88,11 @@ Be thorough but concise. Extract the most important information."""
             placeholder=default_prompt,
             help="Leave empty to use default prompt"
         )
+    else:
+        st.success("✅ **Scraping Only Mode** - No OpenAI key needed, just extracting text")
+        openai_key = None
+        model = None
+        custom_prompt = None
 
 # Main content
 col1, col2 = st.columns([2, 1])
@@ -142,11 +156,29 @@ if uploaded_file:
             "TEST_MODE": test_mode,
             "HOMEPAGE_ONLY": homepage_only,
             "AI_PROCESSING": ai_processing,
+            # If AI disabled, include scraped content column
+            "ADD_CONTENT_COLUMN": not ai_processing,
+            "ADD_SUMMARY_COLUMN": ai_processing,
         }
+
+        # Set OpenAI API key if provided
+        if ai_processing and openai_key:
+            os.environ['OPENAI_API_KEY'] = openai_key
+            st.info(f"✅ Using custom OpenAI API key (starts with {openai_key[:10]}...)")
+        elif ai_processing and not openai_key:
+            # Check if .env has key
+            from dotenv import load_dotenv
+            load_dotenv()
+            env_key = os.getenv('OPENAI_API_KEY')
+            if env_key:
+                st.info(f"✅ Using OpenAI API key from .env file")
+            else:
+                st.error("❌ No OpenAI API key found! Enter key above or add to .env file")
+                st.stop()
 
         if ai_processing:
             config_updates["OPENAI_MODEL"] = model
-            if custom_prompt.strip():
+            if custom_prompt and custom_prompt.strip():
                 config_updates["AI_PROMPT"] = custom_prompt.strip()
 
         # Run ASYNC scraper
@@ -206,6 +238,9 @@ if uploaded_file:
                     st.metric("⚡ Speed", f"{scrape_time / len(result_df):.2f}s/site")
 
                 # Show data
+                if not ai_processing:
+                    st.info("💡 **Tip:** Enable 'AI Summaries' to get AI-generated summaries. Currently showing scraped text only.")
+
                 st.dataframe(result_df, use_container_width=True, height=400)
 
                 # Download button
