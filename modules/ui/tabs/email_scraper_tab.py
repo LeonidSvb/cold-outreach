@@ -9,8 +9,6 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import subprocess
-import time
-import json
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
@@ -99,7 +97,6 @@ def render_email_scraper_tab():
 
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
             temp_input = temp_dir / f"temp_input_{timestamp}.csv"
-            progress_file = temp_dir / f"scraping_progress_{timestamp}.json"
 
             df.to_csv(temp_input, index=False)
 
@@ -112,8 +109,7 @@ def render_email_scraper_tab():
                 "--workers", str(workers),
                 "--max-pages", str(max_pages),
                 "--scraping-mode", scraping_mode,
-                "--email-format", email_format,
-                "--progress-file", str(progress_file)
+                "--email-format", email_format
             ]
 
             if name_column != "-- Auto-generate --":
@@ -125,137 +121,64 @@ def render_email_scraper_tab():
             if limit > 0:
                 cmd.extend(["--limit", str(limit)])
 
-            # Real-time progress tracking
-            progress_bar = st.progress(0)
-            status_container = st.container()
+            # Show processing indicator
+            with st.spinner(f"🚀 Scraping {len(df)} websites... This may take a few minutes."):
+                try:
+                    # Start scraper
+                    process = subprocess.Popen(
+                        cmd,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        text=True
+                    )
 
-            with status_container:
-                col1, col2, col3, col4 = st.columns(4)
-                processed_metric = col1.empty()
-                emails_metric = col2.empty()
-                speed_metric = col3.empty()
-                eta_metric = col4.empty()
+                    # Wait for completion
+                    stdout, stderr = process.communicate()
+                    result_code = process.returncode
 
-                stats_expander = st.expander("📊 Detailed Stats", expanded=False)
-                with stats_expander:
-                    stats_text = st.empty()
+                    if result_code == 0:
+                        st.success("✅ Scraping completed!")
 
-            try:
-                # Start scraper in background
-                process = subprocess.Popen(
-                    cmd,
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.PIPE,
-                    text=True
-                )
+                        # Parse output to find results directory
+                        output_lines = stdout.split('\n')
+                        results_dir = None
 
-                # Monitor progress in real-time
-                while process.poll() is None:
-                    # Read progress file
-                    if progress_file.exists():
-                        try:
-                            with open(progress_file, 'r') as f:
-                                progress_data = json.load(f)
+                        for line in output_lines:
+                            if "Results saved to:" in line:
+                                results_dir = line.split("Results saved to:")[-1].strip()
+                                break
 
-                            # Update progress bar
-                            progress_pct = progress_data.get('progress_pct', 0) / 100
-                            progress_bar.progress(min(progress_pct, 1.0))
+                        if results_dir:
+                            # Load success results
+                            success_file = Path(results_dir) / "success_emails.csv"
 
-                            # Update metrics
-                            processed = progress_data.get('processed', 0)
-                            total = progress_data.get('total', 0)
-                            processed_metric.metric(
-                                "Processed",
-                                f"{processed}/{total}",
-                                delta=f"{progress_data.get('progress_pct', 0):.1f}%"
-                            )
+                            if success_file.exists():
+                                success_df = pd.read_csv(success_file)
 
-                            custom_stats = progress_data.get('custom_stats', {})
-                            emails_metric.metric(
-                                "Emails Found",
-                                custom_stats.get('emails_found', 0)
-                            )
+                                # Save to session state
+                                st.session_state['scraped_data'] = success_df
 
-                            speed_metric.metric(
-                                "Speed",
-                                f"{progress_data.get('speed', 0):.1f}/sec"
-                            )
+                                # Show results
+                                render_results_viewer(
+                                    success_df,
+                                    title=f"✅ Success Results ({len(success_df)} rows)",
+                                    download_filename="scraped_emails.csv"
+                                )
 
-                            eta_metric.metric(
-                                "ETA",
-                                progress_data.get('eta_str', 'Calculating...')
-                            )
+                                # Show option to proceed to validation
+                                st.markdown("---")
+                                st.info("💡 Results saved to session. Go to 'Email Validator' tab to validate these emails!")
 
-                            # Detailed stats
-                            stats_text.markdown(f"""
-**Status:** {progress_data.get('status', 'running')}
-**Elapsed Time:** {progress_data.get('elapsed_str', '0:00:00')}
-**Success:** {custom_stats.get('success', 0)}
-**Failed:** {custom_stats.get('failed', 0)}
-**Static Sites:** {custom_stats.get('static_sites', 0)}
-**Dynamic Sites:** {custom_stats.get('dynamic_sites', 0)}
-                            """)
-
-                        except (json.JSONDecodeError, IOError):
-                            pass
-
-                    # Wait before next check
-                    time.sleep(0.5)
-
-                # Get final result
-                stdout, stderr = process.communicate()
-                result_code = process.returncode
-
-                # Clean up progress file
-                if progress_file.exists():
-                    try:
-                        progress_file.unlink()
-                    except:
-                        pass
-
-                if result_code == 0:
-                    st.success("✅ Scraping completed!")
-
-                    # Parse output to find results directory
-                    output_lines = stdout.split('\n')
-                    results_dir = None
-
-                    for line in output_lines:
-                        if "Results saved to:" in line:
-                            results_dir = line.split("Results saved to:")[-1].strip()
-                            break
-
-                    if results_dir:
-                        # Load success results
-                        success_file = Path(results_dir) / "success_emails.csv"
-
-                        if success_file.exists():
-                            success_df = pd.read_csv(success_file)
-
-                            # Save to session state
-                            st.session_state['scraped_data'] = success_df
-
-                            # Show results
-                            render_results_viewer(
-                                success_df,
-                                title=f"✅ Success Results ({len(success_df)} rows)",
-                                download_filename="scraped_emails.csv"
-                            )
-
-                            # Show option to proceed to validation
-                            st.markdown("---")
-                            st.info("💡 Results saved to session. Go to 'Email Validator' tab to validate these emails!")
-
+                            else:
+                                st.warning("Success file not found")
                         else:
-                            st.warning("Success file not found")
+                            st.warning("Could not parse results directory from output")
+
                     else:
-                        st.warning("Could not parse results directory from output")
+                        st.error(f"Scraping failed: {stderr}")
 
-                else:
-                    st.error(f"Scraping failed: {stderr}")
-
-            except Exception as e:
-                st.error(f"Error running scraper: {e}")
+                except Exception as e:
+                    st.error(f"Error running scraper: {e}")
 
     # Show data from session state if available
     elif 'scraped_data' in st.session_state and st.session_state['scraped_data'] is not None:
