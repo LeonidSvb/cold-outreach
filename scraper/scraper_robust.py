@@ -109,6 +109,29 @@ class ErrorStats:
 # Global stats object
 error_stats = ErrorStats()
 
+# Progress tracking
+progress_data = {
+    "phase": "initializing",
+    "total": 0,
+    "processed": 0,
+    "successful": 0,
+    "failed": 0,
+    "percent": 0,
+    "elapsed_time": 0,
+    "eta_seconds": 0,
+    "current_url": ""
+}
+
+def update_progress(progress_file: str, **kwargs):
+    """Update progress file for real-time UI updates."""
+    global progress_data
+    progress_data.update(kwargs)
+    try:
+        with open(progress_file, 'w') as f:
+            json.dump(progress_data, f)
+    except:
+        pass  # Ignore errors in progress updates
+
 # ========================
 # CONFIG
 # ========================
@@ -116,6 +139,7 @@ error_stats = ErrorStats()
 CONFIG = {
     "INPUT_FILE": "scraper/input/recruitment_batch1.csv",
     "WEBSITE_COLUMN": "Company Website",
+    "PROGRESS_FILE": None,  # Set dynamically from UI
 
     "TEST_MODE": True,
     "TEST_ROWS": 50,
@@ -378,14 +402,53 @@ async def scrape_with_retry(
 async def scrape_batch_robust(
     session: aiohttp.ClientSession,
     urls: List[Tuple[int, str]],
-    semaphore: asyncio.Semaphore
+    semaphore: asyncio.Semaphore,
+    progress_file: Optional[str] = None,
+    start_time: float = None
 ) -> List[Tuple[int, Optional[str], str, str]]:
-    """Scrape batch with retry logic."""
-    async def scrape_with_semaphore(idx, url):
-        async with semaphore:
-            return await scrape_with_retry(session, url, idx)
+    """Scrape batch with retry logic and progress updates."""
+    total_urls = len(urls)
+    completed = 0
+    successful = 0
+    failed = 0
 
-    tasks = [scrape_with_semaphore(idx, url) for idx, url in urls]
+    async def scrape_with_semaphore_and_progress(idx, url):
+        nonlocal completed, successful, failed
+
+        async with semaphore:
+            result = await scrape_with_retry(session, url, idx)
+
+            # Update counters
+            completed += 1
+            if result[2].startswith('success'):
+                successful += 1
+            else:
+                failed += 1
+
+            # Update progress file
+            if progress_file and start_time:
+                elapsed = time.time() - start_time
+                percent = (completed / total_urls) * 100
+                avg_time = elapsed / completed if completed > 0 else 0
+                remaining = total_urls - completed
+                eta = remaining * avg_time if avg_time > 0 else 0
+
+                update_progress(
+                    progress_file,
+                    phase="scraping",
+                    total=total_urls,
+                    processed=completed,
+                    successful=successful,
+                    failed=failed,
+                    percent=percent,
+                    elapsed_time=elapsed,
+                    eta_seconds=eta,
+                    current_url=url
+                )
+
+            return result
+
+    tasks = [scrape_with_semaphore_and_progress(idx, url) for idx, url in urls]
     return await asyncio.gather(*tasks, return_exceptions=False)
 
 
@@ -430,14 +493,50 @@ async def get_ai_summary(
 async def process_ai_batch(
     client: AsyncOpenAI,
     contents: List[Tuple[int, str]],
-    semaphore: asyncio.Semaphore
+    semaphore: asyncio.Semaphore,
+    progress_file: Optional[str] = None,
+    start_time: float = None
 ) -> List[Tuple[int, Optional[str]]]:
-    """Process AI summaries in batch."""
-    async def ai_with_semaphore(idx, content):
-        async with semaphore:
-            return await get_ai_summary(client, content, idx)
+    """Process AI summaries in batch with progress updates."""
+    total = len(contents)
+    completed = 0
+    successful = 0
 
-    tasks = [ai_with_semaphore(idx, content) for idx, content in contents]
+    async def ai_with_semaphore_and_progress(idx, content):
+        nonlocal completed, successful
+
+        async with semaphore:
+            result = await get_ai_summary(client, content, idx)
+
+            # Update counters
+            completed += 1
+            if result[1]:  # If summary generated
+                successful += 1
+
+            # Update progress
+            if progress_file and start_time:
+                elapsed = time.time() - start_time
+                percent = (completed / total) * 100
+                avg_time = elapsed / completed if completed > 0 else 0
+                remaining = total - completed
+                eta = remaining * avg_time if avg_time > 0 else 0
+
+                update_progress(
+                    progress_file,
+                    phase="ai_processing",
+                    total=total,
+                    processed=completed,
+                    successful=successful,
+                    failed=total - successful,
+                    percent=percent,
+                    elapsed_time=elapsed,
+                    eta_seconds=eta,
+                    current_url=""
+                )
+
+            return result
+
+    tasks = [ai_with_semaphore_and_progress(idx, content) for idx, content in contents]
     return await asyncio.gather(*tasks, return_exceptions=False)
 
 
@@ -493,6 +592,22 @@ async def process_csv_async(input_file: str) -> str:
 
     start_time = time.time()
 
+    # Initialize progress
+    progress_file = CONFIG.get('PROGRESS_FILE')
+    if progress_file:
+        update_progress(
+            progress_file,
+            phase="initializing",
+            total=len(urls_to_scrape),
+            processed=0,
+            successful=0,
+            failed=0,
+            percent=0,
+            elapsed_time=0,
+            eta_seconds=0,
+            current_url=""
+        )
+
     # PHASE 1: Scrape all websites with retry logic
     logger.info("\n[PHASE 1/2] Scraping websites with retry + fallback...")
 
@@ -501,7 +616,13 @@ async def process_csv_async(input_file: str) -> str:
     scrape_semaphore = asyncio.Semaphore(CONFIG['CONCURRENT_SCRAPERS'])
 
     async with aiohttp.ClientSession(timeout=timeout, connector=connector) as session:
-        scrape_results = await scrape_batch_robust(session, urls_to_scrape, scrape_semaphore)
+        scrape_results = await scrape_batch_robust(
+            session,
+            urls_to_scrape,
+            scrape_semaphore,
+            progress_file=progress_file,
+            start_time=start_time
+        )
 
     scrape_time = time.time() - start_time
     error_stats.total_time = scrape_time
@@ -535,7 +656,13 @@ async def process_csv_async(input_file: str) -> str:
         client = AsyncOpenAI(api_key=os.getenv('OPENAI_API_KEY'))
         ai_semaphore = asyncio.Semaphore(CONFIG['CONCURRENT_AI_CALLS'])
 
-        ai_results = await process_ai_batch(client, scraped_contents, ai_semaphore)
+        ai_results = await process_ai_batch(
+            client,
+            scraped_contents,
+            ai_semaphore,
+            progress_file=progress_file,
+            start_time=ai_start
+        )
 
         ai_time = time.time() - ai_start
 

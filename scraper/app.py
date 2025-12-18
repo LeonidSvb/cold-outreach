@@ -149,6 +149,9 @@ if uploaded_file:
         input_file = input_dir / f"temp_input_{timestamp}.csv"
         df.to_csv(input_file, index=False)
 
+        # Create progress file
+        progress_file = input_dir / f"progress_{timestamp}.json"
+
         # Update config
         config_updates = {
             "INPUT_FILE": str(input_file),
@@ -156,6 +159,7 @@ if uploaded_file:
             "TEST_MODE": test_mode,
             "HOMEPAGE_ONLY": homepage_only,
             "AI_PROCESSING": ai_processing,
+            "PROGRESS_FILE": str(progress_file),
             # If AI disabled, include scraped content column
             "ADD_CONTENT_COLUMN": not ai_processing,
             "ADD_SUMMARY_COLUMN": ai_processing,
@@ -181,16 +185,18 @@ if uploaded_file:
             if custom_prompt and custom_prompt.strip():
                 config_updates["AI_PROMPT"] = custom_prompt.strip()
 
-        # Run ASYNC scraper
+        # Run ASYNC scraper with real-time progress
         progress_container = st.container()
 
         with progress_container:
             progress_bar = st.progress(0, text="Initializing...")
             status_text = st.empty()
             phase_text = st.empty()
+            metrics_placeholder = st.empty()
 
             try:
                 import asyncio
+                import threading
                 sys.path.insert(0, str(Path(__file__).parent))
                 from scraper_robust import CONFIG, process_csv_async
                 import scraper_robust as scraper_module
@@ -199,19 +205,73 @@ if uploaded_file:
                 for key, value in config_updates.items():
                     scraper_module.CONFIG[key] = value
 
-                # Phase 1: Scraping
-                phase_text.info("🔍 **PHASE 1/2:** Scraping websites...")
-                progress_bar.progress(10, text="Scraping websites in parallel...")
-
                 start_time = time.time()
 
-                # Run async scraper
-                output_file = asyncio.run(process_csv_async(str(input_file)))
+                # Run scraper in thread
+                output_file_result = [None]
+                scraper_error = [None]
 
+                def run_scraper():
+                    try:
+                        result = asyncio.run(process_csv_async(str(input_file)))
+                        output_file_result[0] = result
+                    except Exception as e:
+                        scraper_error[0] = e
+
+                scraper_thread = threading.Thread(target=run_scraper)
+                scraper_thread.start()
+
+                # Monitor progress in real-time
+                while scraper_thread.is_alive():
+                    if progress_file.exists():
+                        try:
+                            with open(progress_file, 'r') as f:
+                                progress = json.load(f)
+
+                            # Update progress bar
+                            percent = progress.get('percent', 0)
+                            progress_bar.progress(min(int(percent), 99), text=f"Processing... {percent:.1f}%")
+
+                            # Update phase
+                            phase = progress.get('phase', 'processing')
+                            total = progress.get('total', 0)
+                            processed = progress.get('processed', 0)
+                            successful = progress.get('successful', 0)
+                            failed = progress.get('failed', 0)
+                            elapsed = progress.get('elapsed_time', 0)
+                            eta = progress.get('eta_seconds', 0)
+
+                            if phase == "scraping":
+                                phase_text.info(f"🔍 **PHASE 1/2:** Scraping websites... ({processed}/{total})")
+                            elif phase == "ai_processing":
+                                phase_text.info(f"🤖 **PHASE 2/2:** Generating AI summaries... ({processed}/{total})")
+
+                            # Show real-time metrics
+                            col1, col2, col3, col4 = metrics_placeholder.columns(4)
+                            with col1:
+                                st.metric("Processed", f"{processed}/{total}")
+                            with col2:
+                                st.metric("Success", successful)
+                            with col3:
+                                st.metric("Elapsed", f"{elapsed:.1f}s")
+                            with col4:
+                                if eta > 0:
+                                    st.metric("ETA", f"{eta:.0f}s")
+
+                        except:
+                            pass
+
+                    time.sleep(0.5)  # Update every 500ms
+
+                # Wait for thread to complete
+                scraper_thread.join()
+
+                # Check for errors
+                if scraper_error[0]:
+                    raise scraper_error[0]
+
+                output_file = output_file_result[0]
                 scrape_time = time.time() - start_time
-
-                # Phase 2 done in scraper
-                progress_bar.progress(90, text="Finalizing results...")
 
                 # Load results
                 result_df = pd.read_csv(output_file)
@@ -226,10 +286,10 @@ if uploaded_file:
 
                 col1, col2, col3, col4 = st.columns(4)
                 with col1:
-                    success_count = len(result_df[result_df['scrape_status'] == 'success'])
+                    success_count = len(result_df[result_df['scrape_status'].str.startswith('success', na=False)])
                     st.metric("✅ Successful", success_count)
                 with col2:
-                    failed_count = len(result_df[result_df['scrape_status'] != 'success'])
+                    failed_count = len(result_df) - success_count
                     st.metric("❌ Failed", failed_count)
                 with col3:
                     success_rate = (success_count / len(result_df) * 100) if len(result_df) > 0 else 0
@@ -255,6 +315,8 @@ if uploaded_file:
 
                 # Cleanup
                 input_file.unlink(missing_ok=True)
+                progress_file.unlink(missing_ok=True)
+                metrics_placeholder.empty()  # Clear metrics after completion
 
             except Exception as e:
                 st.error(f"❌ Error: {str(e)}")
