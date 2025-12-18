@@ -48,7 +48,20 @@ with st.sidebar:
     st.header("⚙️ Configuration")
 
     st.subheader("Scraping Settings")
-    test_mode = st.checkbox("Test Mode (10 rows)", value=True, help="Only process first 10 rows")
+    test_mode = st.checkbox("Test Mode", value=True, help="Process limited number of rows for testing")
+
+    if test_mode:
+        test_rows = st.number_input(
+            "Number of rows to process",
+            min_value=1,
+            max_value=1000,
+            value=10,
+            step=5,
+            help="How many rows to process in test mode"
+        )
+    else:
+        test_rows = None
+
     homepage_only = st.checkbox("Homepage Only", value=True, help="Don't scrape additional pages")
 
     st.subheader("AI Settings")
@@ -128,7 +141,10 @@ with col2:
     st.subheader("📊 Status")
 
     if uploaded_file:
-        rows_to_process = min(10 if test_mode else len(df), len(df))
+        if test_mode:
+            rows_to_process = min(test_rows, len(df))
+        else:
+            rows_to_process = len(df)
         st.metric("Rows to Process", rows_to_process)
         st.metric("Total Rows", len(df))
 
@@ -157,6 +173,7 @@ if uploaded_file:
             "INPUT_FILE": str(input_file),
             "WEBSITE_COLUMN": website_column,
             "TEST_MODE": test_mode,
+            "TEST_ROWS": test_rows if test_mode else len(df),
             "HOMEPAGE_ONLY": homepage_only,
             "AI_PROCESSING": ai_processing,
             "PROGRESS_FILE": str(progress_file),
@@ -303,7 +320,66 @@ if uploaded_file:
 
                 st.dataframe(result_df, use_container_width=True, height=400)
 
-                # Download button
+                # Session Logs (collapsible)
+                st.markdown("---")
+                with st.expander("📋 Session Logs (Copy for debugging)"):
+                    # Build log summary
+                    failed_df = result_df[~result_df['scrape_status'].str.startswith('success', na=False)]
+
+                    log_output = f"""SCRAPING SESSION LOG
+{'=' * 60}
+
+CONFIGURATION:
+- Input: {len(df)} rows
+- Test Mode: {test_mode}
+- AI Processing: {ai_processing}
+- Model: {model if ai_processing else 'N/A'}
+- Concurrent Workers: 50
+
+RESULTS:
+- Total Processed: {len(result_df)}
+- Successful: {success_count} ({success_rate:.1f}%)
+- Failed: {failed_count}
+- Total Time: {scrape_time:.1f}s
+- Avg Speed: {scrape_time / len(result_df):.2f}s per site
+
+ERROR BREAKDOWN:"""
+
+                    if failed_count > 0:
+                        error_counts = failed_df['error_reason'].value_counts()
+                        for error, count in error_counts.items():
+                            log_output += f"\n- {error}: {count}"
+
+                        log_output += f"\n\nFAILED URLS:"
+                        for idx, row in failed_df.head(20).iterrows():
+                            url = row.get(website_column, 'N/A')
+                            error = row.get('error_reason', 'Unknown')
+                            log_output += f"\n- {url} → {error}"
+
+                        if len(failed_df) > 20:
+                            log_output += f"\n... and {len(failed_df) - 20} more"
+                    else:
+                        log_output += "\nNo errors! 🎉"
+
+                    log_output += f"""
+
+{'=' * 60}
+Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+Session ID: {timestamp}
+"""
+
+                    st.code(log_output, language=None)
+
+                    # Download logs button
+                    st.download_button(
+                        label="📥 Download Session Logs (.txt)",
+                        data=log_output,
+                        file_name=f"scraper_logs_{timestamp}.txt",
+                        mime="text/plain",
+                        use_container_width=True
+                    )
+
+                # Download CSV button
                 csv = result_df.to_csv(index=False).encode('utf-8-sig')
                 st.download_button(
                     label="📥 Download Results CSV",
