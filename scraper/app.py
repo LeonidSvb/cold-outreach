@@ -202,131 +202,62 @@ if uploaded_file:
             if custom_prompt and custom_prompt.strip():
                 config_updates["AI_PROMPT"] = custom_prompt.strip()
 
-        # Run ASYNC scraper with real-time progress
-        progress_container = st.container()
+        # Run scraper
+        try:
+            import asyncio
+            sys.path.insert(0, str(Path(__file__).parent))
+            from scraper_robust import CONFIG, process_csv_async
+            import scraper_robust as scraper_module
 
-        with progress_container:
-            progress_bar = st.progress(0, text="Initializing...")
-            status_text = st.empty()
-            phase_text = st.empty()
-            metrics_placeholder = st.empty()
+            # Update config
+            for key, value in config_updates.items():
+                scraper_module.CONFIG[key] = value
 
-            try:
-                import asyncio
-                import threading
-                sys.path.insert(0, str(Path(__file__).parent))
-                from scraper_robust import CONFIG, process_csv_async
-                import scraper_robust as scraper_module
+            start_time = time.time()
 
-                # Update config
-                for key, value in config_updates.items():
-                    scraper_module.CONFIG[key] = value
+            # Run scraper with spinner
+            with st.spinner(f"🚀 Scraping {rows_to_process} websites with retry logic... This may take a few minutes."):
+                output_file = asyncio.run(process_csv_async(str(input_file)))
 
-                start_time = time.time()
+            scrape_time = time.time() - start_time
 
-                # Run scraper in thread
-                output_file_result = [None]
-                scraper_error = [None]
+            # Load results
+            result_df = pd.read_csv(output_file)
 
-                def run_scraper():
-                    try:
-                        result = asyncio.run(process_csv_async(str(input_file)))
-                        output_file_result[0] = result
-                    except Exception as e:
-                        scraper_error[0] = e
+            # Show completion message
+            st.success(f"✅ Completed in {scrape_time:.1f}s!")
+            st.info(f"⚡ **{scrape_time:.1f}s total** • {scrape_time / len(result_df):.2f}s per site")
 
-                scraper_thread = threading.Thread(target=run_scraper)
-                scraper_thread.start()
+            # Show results
+            st.markdown("---")
+            st.subheader("📊 Results")
 
-                # Monitor progress in real-time
-                while scraper_thread.is_alive():
-                    if progress_file.exists():
-                        try:
-                            with open(progress_file, 'r') as f:
-                                progress = json.load(f)
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                success_count = len(result_df[result_df['scrape_status'].str.startswith('success', na=False)])
+                st.metric("✅ Successful", success_count)
+            with col2:
+                failed_count = len(result_df) - success_count
+                st.metric("❌ Failed", failed_count)
+            with col3:
+                success_rate = (success_count / len(result_df) * 100) if len(result_df) > 0 else 0
+                st.metric("📊 Success Rate", f"{success_rate:.1f}%")
+            with col4:
+                st.metric("⚡ Speed", f"{scrape_time / len(result_df):.2f}s/site")
 
-                            # Update progress bar
-                            percent = progress.get('percent', 0)
-                            progress_bar.progress(min(int(percent), 99), text=f"Processing... {percent:.1f}%")
+            # Show data
+            if not ai_processing:
+                st.info("💡 **Tip:** Enable 'AI Summaries' to get AI-generated summaries. Currently showing scraped text only.")
 
-                            # Update phase
-                            phase = progress.get('phase', 'processing')
-                            total = progress.get('total', 0)
-                            processed = progress.get('processed', 0)
-                            successful = progress.get('successful', 0)
-                            failed = progress.get('failed', 0)
-                            elapsed = progress.get('elapsed_time', 0)
-                            eta = progress.get('eta_seconds', 0)
+            st.dataframe(result_df, use_container_width=True, height=400)
 
-                            if phase == "scraping":
-                                phase_text.info(f"🔍 **PHASE 1/2:** Scraping websites... ({processed}/{total})")
-                            elif phase == "ai_processing":
-                                phase_text.info(f"🤖 **PHASE 2/2:** Generating AI summaries... ({processed}/{total})")
+            # Session Logs (collapsible)
+            st.markdown("---")
+            with st.expander("📋 Session Logs (Copy for debugging)"):
+                # Build log summary
+                failed_df = result_df[~result_df['scrape_status'].str.startswith('success', na=False)]
 
-                            # Show real-time metrics
-                            col1, col2, col3, col4 = metrics_placeholder.columns(4)
-                            with col1:
-                                st.metric("Processed", f"{processed}/{total}")
-                            with col2:
-                                st.metric("Success", successful)
-                            with col3:
-                                st.metric("Elapsed", f"{elapsed:.1f}s")
-                            with col4:
-                                if eta > 0:
-                                    st.metric("ETA", f"{eta:.0f}s")
-
-                        except:
-                            pass
-
-                    time.sleep(0.5)  # Update every 500ms
-
-                # Wait for thread to complete
-                scraper_thread.join()
-
-                # Check for errors
-                if scraper_error[0]:
-                    raise scraper_error[0]
-
-                output_file = output_file_result[0]
-                scrape_time = time.time() - start_time
-
-                # Load results
-                result_df = pd.read_csv(output_file)
-
-                progress_bar.progress(100, text="Complete!")
-                phase_text.success(f"✅ Completed in {scrape_time:.1f}s!")
-                status_text.success(f"⚡ **{scrape_time:.1f}s total** • {scrape_time / len(result_df):.2f}s per site • ~{int(40 * 60 / scrape_time)}x faster!")
-
-                # Show results
-                st.markdown("---")
-                st.subheader("📊 Results")
-
-                col1, col2, col3, col4 = st.columns(4)
-                with col1:
-                    success_count = len(result_df[result_df['scrape_status'].str.startswith('success', na=False)])
-                    st.metric("✅ Successful", success_count)
-                with col2:
-                    failed_count = len(result_df) - success_count
-                    st.metric("❌ Failed", failed_count)
-                with col3:
-                    success_rate = (success_count / len(result_df) * 100) if len(result_df) > 0 else 0
-                    st.metric("📊 Success Rate", f"{success_rate:.1f}%")
-                with col4:
-                    st.metric("⚡ Speed", f"{scrape_time / len(result_df):.2f}s/site")
-
-                # Show data
-                if not ai_processing:
-                    st.info("💡 **Tip:** Enable 'AI Summaries' to get AI-generated summaries. Currently showing scraped text only.")
-
-                st.dataframe(result_df, use_container_width=True, height=400)
-
-                # Session Logs (collapsible)
-                st.markdown("---")
-                with st.expander("📋 Session Logs (Copy for debugging)"):
-                    # Build log summary
-                    failed_df = result_df[~result_df['scrape_status'].str.startswith('success', na=False)]
-
-                    log_output = f"""SCRAPING SESSION LOG
+                log_output = f"""SCRAPING SESSION LOG
 {'=' * 60}
 
 CONFIGURATION:
@@ -345,60 +276,58 @@ RESULTS:
 
 ERROR BREAKDOWN:"""
 
-                    if failed_count > 0:
-                        error_counts = failed_df['error_reason'].value_counts()
-                        for error, count in error_counts.items():
-                            log_output += f"\n- {error}: {count}"
+                if failed_count > 0:
+                    error_counts = failed_df['error_reason'].value_counts()
+                    for error, count in error_counts.items():
+                        log_output += f"\n- {error}: {count}"
 
-                        log_output += f"\n\nFAILED URLS:"
-                        for idx, row in failed_df.head(20).iterrows():
-                            url = row.get(website_column, 'N/A')
-                            error = row.get('error_reason', 'Unknown')
-                            log_output += f"\n- {url} → {error}"
+                    log_output += f"\n\nFAILED URLS:"
+                    for idx, row in failed_df.head(20).iterrows():
+                        url = row.get(website_column, 'N/A')
+                        error = row.get('error_reason', 'Unknown')
+                        log_output += f"\n- {url} → {error}"
 
-                        if len(failed_df) > 20:
-                            log_output += f"\n... and {len(failed_df) - 20} more"
-                    else:
-                        log_output += "\nNo errors! 🎉"
+                    if len(failed_df) > 20:
+                        log_output += f"\n... and {len(failed_df) - 20} more"
+                else:
+                    log_output += "\nNo errors!"
 
-                    log_output += f"""
+                log_output += f"""
 
 {'=' * 60}
 Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 Session ID: {timestamp}
 """
 
-                    st.code(log_output, language=None)
+                st.code(log_output, language=None)
 
-                    # Download logs button
-                    st.download_button(
-                        label="📥 Download Session Logs (.txt)",
-                        data=log_output,
-                        file_name=f"scraper_logs_{timestamp}.txt",
-                        mime="text/plain",
-                        use_container_width=True
-                    )
-
-                # Download CSV button
-                csv = result_df.to_csv(index=False).encode('utf-8-sig')
+                # Download logs button
                 st.download_button(
-                    label="📥 Download Results CSV",
-                    data=csv,
-                    file_name=f"scraped_{timestamp}.csv",
-                    mime="text/csv",
+                    label="📥 Download Session Logs (.txt)",
+                    data=log_output,
+                    file_name=f"scraper_logs_{timestamp}.txt",
+                    mime="text/plain",
                     use_container_width=True
                 )
 
-                # Cleanup
-                input_file.unlink(missing_ok=True)
-                progress_file.unlink(missing_ok=True)
-                metrics_placeholder.empty()  # Clear metrics after completion
+            # Download CSV button
+            csv = result_df.to_csv(index=False).encode('utf-8-sig')
+            st.download_button(
+                label="📥 Download Results CSV",
+                data=csv,
+                file_name=f"scraped_{timestamp}.csv",
+                mime="text/csv",
+                use_container_width=True
+            )
 
-            except Exception as e:
-                st.error(f"❌ Error: {str(e)}")
-                status_text.error("Failed to complete scraping")
-                import traceback
-                st.code(traceback.format_exc())
+            # Cleanup
+            input_file.unlink(missing_ok=True)
+            progress_file.unlink(missing_ok=True)
+
+        except Exception as e:
+            st.error(f"❌ Error: {str(e)}")
+            import traceback
+            st.code(traceback.format_exc())
 
 # Footer
 st.markdown("---")
